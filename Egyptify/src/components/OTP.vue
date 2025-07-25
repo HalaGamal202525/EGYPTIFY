@@ -1,3 +1,5 @@
 <template>
-    <h1>yasmine Emad</h1>
+    <otp>
+        <h1>yasmine Emad</h1>
+    </otp>
 </template>
