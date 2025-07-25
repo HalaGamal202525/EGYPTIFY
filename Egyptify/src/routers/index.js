@@ -12,7 +12,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
-  {path: '/OTP', component: OTPPage },
+{ path: '/OTP', component: OTPPage },
 
   {path: '/Signup', component: Signup},
   {
