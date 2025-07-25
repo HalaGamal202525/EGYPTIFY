@@ -1,16 +1,12 @@
 <template>
-  <div class="page">
-    <FiltersSidebar />
-    <!-- باقي محتوى الصفحة -->
+  <div>
+    <Hero
+      title="Destinations"
+      description="Discover the magic of Egypt's diverse landscapes, rich history, and unforgettable experiences."
+    />
   </div>
 </template>
 
 <script setup>
-import FiltersSidebar from '../components/FiltersSidebar.vue'
+import Hero from '../components/Hero.vue'
 </script>
-
-<style scoped>
-.page {
-  display: flex;
-}
-</style>
