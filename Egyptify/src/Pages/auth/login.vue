@@ -1,33 +1,50 @@
-<template>
-  <div class="p-8 max-w-md mx-auto">
-    <h2 class="text-xl font-bold mb-4">Login</h2>
-    <input v-model="email" placeholder="Email" class="border p-2 w-full mb-2" />
-    <input v-model="password" type="password" placeholder="Password" class="border p-2 w-full mb-2" />
-    <!-- <button @click="handleLogin" class="text-white px-4 py-2 rounded">Login</button> -->
-     <BaseButton>Click Me</BaseButton>
+ <template>
+  <div class="flex h-screen bg-[#fefaf2] ">
+   
+    <div class="w-full md:w-1/2 h-full flex justify-center items-center p-8">
+      <AuthForm
+        formTitle="Log in"
+        buttonLabel="Log in"
+        :showUsername="false"
+        :showConfirmPassword="false"
+        :showForgotPassword="true"
+        @submit="handleLogin"
+      />
+    </div>
+
+    
+    <div class=" md:block md:w-1/2 bg-gray-100">
+      <img
+        src="../../assets/signup .png"
+        alt="Login visual"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <div v-if="showForgotPassword" class="text-right mt-1 mb-4">
+    <router-link
+      to="/auth/forgot-password"
+      class="text-sm text-yellow-500 hover:text-yellow-600 font-medium"
+    >
+      Forgot Password?
+    </router-link>
+  </div>
+    
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import BaseButton from '../../components/BaseButton.vue'
-
-
-const email = ref('')
-const password = ref('')
-const router = useRouter()
+import AuthForm from '../../components/AuthForm.vue'
 
 function handleLogin() {
-  if (email.value === 'test@example.com' && password.value === '123456') {
-    userStore.login({
-      name: 'Test User',
-      email: email.value,
-      avatar: `https://ui-avatars.com/api/?name=Test+User`,
-    })
-    router.push('/')
-  } else {
-    alert('Wrong email or password!')
-  }
+  alert('Login submitted')
 }
-</script>
+</script> 
+
+
+
+
+
+
+
+

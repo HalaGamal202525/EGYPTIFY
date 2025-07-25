@@ -4,12 +4,37 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   background-color: #FFFDF9;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --btn-color:#ffc340;
+}
+#App{
+    background-color: #FFFDF9;
+}
+i{
+  color: var(--btn-color);
+}
+.icons button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.icons button i {
+  color: black !important;
+}
+.links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #8e44ec;
 }
