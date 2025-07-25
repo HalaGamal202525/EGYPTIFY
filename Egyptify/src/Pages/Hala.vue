@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import OTPInput from '../components/OtpInput.vue' // عدلي المسار حسب مكان الكومبوننت
+import OTPInput from '../components/OtpInput.vue' // تأكد إن المسار صحيح
 </script>
 
 <style scoped>
@@ -17,5 +17,7 @@ import OTPInput from '../components/OtpInput.vue' // عدلي المسار حس�
   align-items: center;
   justify-content: center;
   background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
 }
 </style>
