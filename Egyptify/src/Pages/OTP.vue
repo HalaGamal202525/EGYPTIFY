@@ -1,7 +1,6 @@
 <template>
   <div class="w-full">
     <Navbar /> 
-    
 
         <otp />
 
