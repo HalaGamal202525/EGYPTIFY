@@ -1,10 +1,10 @@
 <template>
   <div class="w-full">
     <Navbar /> 
-    <section class="p-8">
+    
 
         <otp />
-    </section>
+
     <Footer />
   </div>
 </template>
