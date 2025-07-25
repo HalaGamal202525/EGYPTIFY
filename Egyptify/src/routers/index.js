@@ -8,6 +8,9 @@ import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
 import ExplorePage from '../Pages/ExplorePage.vue'
 import BlogPage from '../Pages/BlogsPage.vue'
+import BlogDetailPage from '../Pages/BlogDetails.vue'
+import TripPlanner from '../Pages/TripPlanner.vue'
+
 
 
    
@@ -19,12 +22,19 @@ const routes = [
 
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
-  {path: '/blog', component: BlogPage},
+  { path: '/blog', component: BlogPage },
+  {path: '/blogdetail', component: BlogDetailPage},
   {
     path: '/Hala',
     name: 'Hala',
     component: Hala
   },
+    {
+    path: '/TripPlanner',
+    name: 'TripPlanner',
+    component: TripPlanner 
+  },
+
    {
     path: '/Sara',
     name: 'Sara',

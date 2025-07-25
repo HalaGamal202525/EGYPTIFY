@@ -1,3 +1,4 @@
+<!-- src/pages/Blogs.vue -->
 <script setup>
 import navbar from '../components/navbar.vue'
 import Hero from '../components/Hero.vue'
@@ -5,46 +6,64 @@ import HeroImage from '../assets/BlogPageHero.jpg'
 import BaseButton from '../components/BaseButton.vue'
 import Footer from '../components/Footer.vue'
 import PaginationComponent from "../components/PaginationComponent.vue"
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { blogs } from '../BlogData.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const currentPage = ref(1)
-const totalPages = ref(5) // عدد الصفحات
+const perPage = 9 // نعرض 9 بوستات في الصفحة
+
+const totalPages = computed(() => Math.ceil(blogs.length / perPage))
+
+const paginatedBlogs = computed(() => {
+  const start = (currentPage.value - 1) * perPage
+  return blogs.slice(start, start + perPage)
+})
 
 function handlePageChange(newPage) {
   currentPage.value = newPage
-  // تقدر تجيب الداتا الجديدة هنا حسب الصفحة الجديدة
+}
+
+function goToDetails(id) {
+  router.push(`/blogs/${id}`)
 }
 </script>
 
 <template>
   <navbar />
-  
+
   <Hero
     title="Travel Blog"
     description="Recent Travel Blog Posts"
     :image="HeroImage"
   />
 
-  <!-- هنا تحطي المحتوى بتاع البوستات -->
-
   <div class="container mx-auto px-4 mt-8 text-black mb-10">
-    <!-- مثلاً هنا كاردات البوستات -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <!-- Loop للبوستات -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div
-        v-for="i in 6"
-        :key="i"
-        class="p-4 border rounded shadow text-center"
+        v-for="blog in paginatedBlogs"
+        :key="blog.id"
+        class="flex flex-col justify-between p-4 border rounded shadow hover:shadow-lg transition duration-300 bg-white"
       >
-        Blog Post {{ i }} - Page {{ currentPage }}
+        <div>
+          <img :src="blog.image" alt="blog image" class="w-full h-40 object-cover rounded mb-4" />
+          <h2 class="text-xl font-bold mb-2">{{ blog.title }}</h2>
+          <p class="text-gray-700 text-sm mb-2">By {{ blog.author }}</p>
+          <p class="text-sm text-gray-600 mb-4">{{ blog.summary }}</p>
+        </div>
+        <div class="mt-auto text-center">
+          <BaseButton text="Read More" @click="goToDetails(blog.id)" />
+        </div>
       </div>
     </div>
 
-    <!-- Pagination -->
     <PaginationComponent
       :currentPage="currentPage"
       :totalPages="totalPages"
       @page-changed="handlePageChange"
+      class="mt-10"
     />
   </div>
 
