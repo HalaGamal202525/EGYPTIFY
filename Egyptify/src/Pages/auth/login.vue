@@ -1,10 +1,10 @@
  <template>
   <div class="flex h-screen bg-[#fefaf2] ">
    
-    <div class="w-full md:w-1/2 flex justify-center items-center p-8">
+    <div class="w-full md:w-1/2 h-full flex justify-center items-center p-8">
       <AuthForm
         formTitle="Log in"
-        buttonLabel="Login"
+        buttonLabel="Log in"
         :showUsername="false"
         :showConfirmPassword="false"
         :showForgotPassword="true"
@@ -20,6 +20,7 @@
         class="w-full h-full object-cover"
       />
     </div>
+    
   </div>
 </template>
 

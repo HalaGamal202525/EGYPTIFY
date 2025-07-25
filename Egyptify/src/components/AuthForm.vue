@@ -123,7 +123,7 @@
 <script setup>
 defineProps({
 
-  title: { type: String, default: 'Log In' },
+  title: { type: String, default: 'Log in' },
   subtitle: { type: String, default: 'Welcome back! Please enter your details' },
   buttonText: { type: String, default: 'Login' },
   showUsername: { type: Boolean, default: false },
@@ -132,7 +132,7 @@ defineProps({
   showSocialIcons: { type: Boolean, default: true },
   showAuthLink: { type: Boolean, default: true },
   authLinkText: { type: String, default: "Don't you have an account?" },
-  authLinkAction: { type: String, default: 'Sign Up' },
+  authLinkAction: { type: String, default: 'Sign up' },
   authLinkRoute: { type: String, default: '/auth/signup' }
 })
 

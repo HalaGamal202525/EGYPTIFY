@@ -3,9 +3,9 @@
    
     <div class="w-full md:w-1/2 flex justify-center items-center p-8">
       <AuthForm
-        title="Sign Up"
+        title="Sign up"
         subtitle="Welcome to Egyptify! Please enter your details"
-        buttonText="Sign Up"
+        buttonText="Sign up"
         :showUsername="true"
         :showConfirmPassword="true"
         :showForgotPassword="false"
