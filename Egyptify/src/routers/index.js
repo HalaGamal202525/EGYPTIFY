@@ -7,6 +7,8 @@ import Home from '../Pages/Home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
 import ExplorePage from '../Pages/ExplorePage.vue'
+import BlogPage from '../Pages/BlogsPage.vue'
+
 
    
 const routes = [
@@ -16,7 +18,8 @@ const routes = [
 { path: '/OTP', component: OTPPage },
 
   { path: '/Signup', component: Signup },
-  {path: '/explore', component: ExplorePage},
+  { path: '/explore', component: ExplorePage },
+  {path: '/blog', component: BlogPage},
   {
     path: '/Hala',
     name: 'Hala',
