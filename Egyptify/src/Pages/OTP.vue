@@ -1,10 +1,8 @@
 <template>
   <div class="w-full">
-    <Navbar />
     <div style="margin-top: 80px;">
       <OtpInput />
     </div>
-    <Footer />
   </div>
 </template>
 
