@@ -1,5 +1,8 @@
 <template>
-    <otp>
+    <div>
         <h1>yasmine Emad</h1>
-    </otp>
+    </div>
 </template>
+<script setup>
+// ... comments ...
+</script>
