@@ -1,10 +1,11 @@
 <template>
   <div class="w-full">
-    <Navbar /> <!-- هنستخدم الكمبوننت هنا -->
+    <Navbar /> 
 
-    <!-- باقي محتوى الصفحة -->
     <section class="p-8">
-      <!-- Content... -->
+
+
+
     </section>
     <Footer />
   </div>
@@ -13,5 +14,5 @@
 <script setup>
 import Navbar from '../components/navbar.vue'
 import Footer from "../components/footer.vue"
-
+import btn from "../components/BaseButton.vue"
 </script>
