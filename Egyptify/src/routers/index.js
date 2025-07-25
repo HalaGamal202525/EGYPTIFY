@@ -5,15 +5,14 @@ import Home from '../Pages/home.vue'
 import Signup from '../Pages/auth/signup.vue'
 import Sara from '../Pages/sara.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
-import OTP from '../Pages/OTP.vue'
+import otp from '../Pages/OTP.vue'
 
    
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
-  {
-     path: '/OTP', component: OTP },
+  {path: '/OTP', component: otp },
 
   {path: '/Signup', component: Signup},
   {
