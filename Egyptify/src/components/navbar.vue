@@ -9,7 +9,7 @@
     </div>
 
     <!-- Links -->
-    <div class="hidden md:flex space-x-8 items-center">
+    <div class="hidden md:flex space-x-8 items-center text-[24px]">
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Explore</a>
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Trips</a>
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Reviews</a>
@@ -26,7 +26,7 @@
           v-show="isDropdownOpen"
           class="absolute top-full left-0 mt-2 bg-white text-black rounded shadow-md py-2 w-40 z-50"
         >
-          <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold text-[32px]">About</a>
+          <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold ">About</a>
           <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold">Contact</a>
           <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold">FAQ</a>
         </div>
