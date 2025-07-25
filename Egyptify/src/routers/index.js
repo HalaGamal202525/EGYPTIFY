@@ -23,7 +23,7 @@ const routes = [
     name: 'Sara',
     component: Sara
   },
-  
+
 ]
 
 const router = createRouter({

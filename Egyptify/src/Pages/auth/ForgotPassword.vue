@@ -39,7 +39,7 @@
           >
             <i class="fas fa-arrow-left mr-2"></i>
             Back to Login
-          </router-link>
+        </router-link>
         </div>
       </form>
     </div>
