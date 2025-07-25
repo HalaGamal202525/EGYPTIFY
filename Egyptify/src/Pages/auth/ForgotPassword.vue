@@ -34,7 +34,7 @@
         <!-- Back to Login Link -->
         <div class="text-center">
           <router-link 
-            to="/auth/login"
+            to="/login"
             class="text-yellow-500 hover:text-yellow-600 font-medium"
           >
             <i class="fas fa-arrow-left mr-2"></i>
