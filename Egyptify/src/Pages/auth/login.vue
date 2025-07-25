@@ -20,6 +20,15 @@
         class="w-full h-full object-cover"
       />
     </div>
+
+    <div v-if="showForgotPassword" class="text-right mt-1 mb-4">
+    <router-link
+      to="/auth/forgot-password"
+      class="text-sm text-yellow-500 hover:text-yellow-600 font-medium"
+    >
+      Forgot Password?
+    </router-link>
+  </div>
     
   </div>
 </template>
@@ -31,7 +40,6 @@ function handleLogin() {
   alert('Login submitted')
 }
 </script> 
-
 
 
 
