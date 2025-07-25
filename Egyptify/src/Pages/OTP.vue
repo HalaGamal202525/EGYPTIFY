@@ -12,5 +12,5 @@
 import Navbar from '../components/navbar.vue'
 import Footer from "../components/footer.vue"
 import btn from "../components/BaseButton.vue"
-import otp from '../components/OTP.vue'
+import OtpInput from '../components/OtpInput.vue'
 </script>
