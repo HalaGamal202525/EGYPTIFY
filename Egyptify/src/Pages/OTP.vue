@@ -1,9 +1,7 @@
 <template>
   <div class="w-full">
     <Navbar /> 
-
         <otp />
-
     <Footer />
   </div>
 </template>
