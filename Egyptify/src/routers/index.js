@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../Pages/auth/login.vue'
 import Hala from '../Pages/Hala.vue'
+import Tabs from '../Pages/auth/tabs.vue'
+import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
 import Sara from '../Pages/sara.vue'
 import Home from '../Pages/Home.vue'
@@ -29,18 +31,26 @@ const routes = [
     name: 'Hala',
     component: Hala
   },
+
     {
     path: '/TripPlanner',
     name: 'TripPlanner',
     component: TripPlanner 
   },
 
+
+  { path: '/tabs', component: Tabs },
+
+  {
+  path: '/dropdownDemo',
+  name: 'DropdownDemo',
+  component: DropdownMenu
+},
    {
     path: '/Sara',
     name: 'Sara',
     component: Sara
-  },
-
+  }
 ]
 
 const router = createRouter({
