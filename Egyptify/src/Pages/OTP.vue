@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full">
+  <div class="w-full" style="padding-top: 64px;"> 
     <Navbar />
-    <OtpInput />  
+    <OtpInput />
     <Footer />
   </div>
 </template>
