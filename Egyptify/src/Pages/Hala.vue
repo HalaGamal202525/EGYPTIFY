@@ -1,9 +1,16 @@
-<script setup>
-import footer from '../components/footer.vue';
-</script>
-
 <template>
-  <div class="w-full">
-    <footer/>
+  <div class="page">
+    <FiltersSidebar />
+    <!-- باقي محتوى الصفحة -->
   </div>
 </template>
+
+<script setup>
+import FiltersSidebar from '../components/FiltersSidebar.vue'
+</script>
+
+<style scoped>
+.page {
+  display: flex;
+}
+</style>
