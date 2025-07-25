@@ -5,17 +5,18 @@ import Signup from '../Pages/auth/signup.vue'
 import Sara from '../Pages/sara.vue'
 import Home from '../Pages/Home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
-import OTP from '../Pages/OTP.vue'
+import OTPPage from '../Pages/OTP.vue'
+import ExplorePage from '../Pages/ExplorePage.vue'
 
    
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
-  {
-     path: '/OTP', component: OTP },
+{ path: '/OTP', component: OTPPage },
 
-  {path: '/Signup', component: Signup},
+  { path: '/Signup', component: Signup },
+  {path: '/explore', component: ExplorePage},
   {
     path: '/Hala',
     name: 'Hala',
