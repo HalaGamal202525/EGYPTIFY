@@ -1,7 +1,8 @@
 <template>
   <div class="w-full">
     <Navbar />
-    <OtpInput />  <Footer />
+    <OtpInput />  
+    <Footer />
   </div>
 </template>
 
