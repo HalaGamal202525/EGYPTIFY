@@ -1,18 +1,26 @@
 <template>
-  <div class="flex h-screen justify-center items-center bg-[#fefaf2] px-4">
-    <AuthForm
-      formTitle="Sign Up"
-      buttonLabel="Register"
-      :showUsername="true"
-      :showConfirmPassword="true"
-      :showForgotPassword="false"
-      @submit="handleSignup"
-    />
+  <div class="flex h-screen bg-[#fefaf2]">
+   
+    <div class="w-full md:w-1/2 flex justify-center items-center p-8">
+      <AuthForm
+        title="Sign Up"
+        subtitle="Welcome to Egyptify! Please enter your details"
+        buttonText="Sign Up"
+        :showUsername="true"
+        :showConfirmPassword="true"
+        :showForgotPassword="false"
+        :showSocialIcons="true"
+        authLinkText="Already have an account?"
+        authLinkAction="Log in"
+        authLinkRoute="/auth/login"
+      />
+    </div>
 
-    <div class="w-1/2 hidden md:block">
+   
+    <div class="hidden md:block md:w-1/2 bg-gray-100">
       <img
         src="../../assets/signup .png"
-        alt="Login visual"
+        alt="Signup visual"
         class="w-full h-full object-cover"
       />
     </div>
@@ -21,8 +29,4 @@
 
 <script setup>
 import AuthForm from '../../components/AuthForm.vue'
-
-function handleSignup() {
-  alert('Signup submitted') // replace with actual logic
-}
 </script>

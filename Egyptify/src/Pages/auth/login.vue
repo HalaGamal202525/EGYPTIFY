@@ -1,7 +1,7 @@
  <template>
   <div class="flex h-screen bg-[#fefaf2] ">
    
-    <div class="w-1/2 flex justify-center items-center p-8">
+    <div class="w-full md:w-1/2 flex justify-center items-center p-8">
       <AuthForm
         formTitle="Log in"
         buttonLabel="Login"
@@ -13,7 +13,7 @@
     </div>
 
     
-    <div class="w-1/2 hidden md:block">
+    <div class=" md:block md:w-1/2 bg-gray-100">
       <img
         src="../../assets/signup .png"
         alt="Login visual"
