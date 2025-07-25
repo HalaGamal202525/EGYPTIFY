@@ -1,8 +1,9 @@
 <template>
-  <div class="w-full"> 
+  <div class="w-full">
     <Navbar />
-    <otp style="margin-top: 80px; color: blue;"> <OtpInput />
-    </otp>
+    <div style="margin-top: 80px;">
+      <OtpInput />
+    </div>
     <Footer />
   </div>
 </template>
