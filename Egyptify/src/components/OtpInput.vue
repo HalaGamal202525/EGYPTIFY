@@ -1,7 +1,7 @@
 <template>
-    <otp>
+    <OtpInput>
         <h1>yasmine Emad</h1>
-    </otp>
+    </OtpInput>
 </template>
 <script setup>
 // ... comments ...
