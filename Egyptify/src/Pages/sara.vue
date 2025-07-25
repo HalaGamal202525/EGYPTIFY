@@ -3,6 +3,7 @@
     <Navbar /> 
 
     <section class="p-8">
+        <Form/>
         <Card
   image="../assets/signup.png"
   title="Trip to Aswan"
@@ -25,5 +26,5 @@
 import Navbar from '../components/navbar.vue'
 import Footer from "../components/footer.vue"
 import Card from "../components/card.vue"
-
+import Form from "../components/TicketForm.vue"
 </script>
