@@ -1,10 +1,11 @@
 <template>
+  <div class="w-full">
 
-
+    <div style="margin-top: 80px;">
       <OtpInput />
-    
+    </div>
 
-
+  </div>
 </template>
 
 <script setup>

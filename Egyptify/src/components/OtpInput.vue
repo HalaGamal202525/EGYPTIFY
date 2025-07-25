@@ -1,8 +1,9 @@
 <template>
-    <OtpInput>
+    <div> 
         <h1>yasmine Emad</h1>
-    </OtpInput>
+    </div>
 </template>
+
 <script setup>
-// ... comments ...
+// No script section needed if you only have static content
 </script>
