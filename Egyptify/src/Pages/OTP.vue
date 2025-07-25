@@ -1,7 +1,7 @@
 <template>
   <div class="w-full"> 
     <Navbar />
-    <otp style="margin-top: 80px;"> <OtpInput />
+    <otp style="margin-top: 80px; color: blue;"> <OtpInput />
     </otp>
     <Footer />
   </div>
