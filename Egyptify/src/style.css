@@ -21,24 +21,3 @@ button i{
   color: white;
   padding-right: 10px;
 }
-.icons button {
-  background-color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
-.icons button i {
-  color: black !important;
-}
-.links a {
-  text-decoration: none;
-  color: black;
-  transition: color 0.2s ease;
-}
-
-.links a:hover {
-  color: #8e44ec;
-}
