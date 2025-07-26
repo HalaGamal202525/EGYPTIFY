@@ -165,31 +165,31 @@ const generateItinerary = () => {
             day: 'Day 1',
             title: 'Arrival in Cairo & Pyramid Tour',
             accommodation: 'Hotel in Cairo',
-            image: '/images/TripPlanner/Pyramids2.jpeg'
+            image: '/TripPlanner/Pyramids2.jpeg'
         },
         {
             day: 'Day 2',
             title: 'Luxor - Valley of the Kings',
             accommodation: 'Hotel in Luxor',
-            image: '/images/TripPlanner/luxor-vally of the kings.jpg'
+            image: '/TripPlanner/luxor-vally of the kings.jpg'
         },
         {
             day: 'Day 3',
             title: 'Nile Cruise',
             accommodation: 'Nile Cruise',
-            image: '/images/TripPlanner/Nile-River.jpg'
+            image: '/TripPlanner/Nile-River.jpg'
         },
         {
             day: 'Day 4',
             title: 'Aswan - Abu Simbel Temples',
             accommodation: 'Nile Cruise',
-            image: '/images/TripPlanner/Aswan-Abu-Simple-Tour.jpg'
+            image: '/TripPlanner/Aswan-Abu-Simple-Tour.jpg'
         },
         {
             day: 'Day 5',
             title: 'Departure from Aswan',
             accommodation: 'N/A',
-            image: '/images/TripPlanner/Aswan-Night.jpeg'
+            image: '/TripPlanner/Aswan-Night.jpeg'
         },
     ];
 };
