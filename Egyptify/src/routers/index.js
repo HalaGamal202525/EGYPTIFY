@@ -11,12 +11,9 @@ import OTPPage from '../Pages/OTP.vue'
 import ExplorePage from '../Pages/ExplorePage.vue'
 import BlogPage from '../Pages/BlogsPage.vue'
 import BlogDetailPage from '../Pages/BlogDetails.vue'
-// import TripPlanner from '../Pages/TripPlanner.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
-
-
-
+import TripPlanner from '../Pages/TripPlanner.vue'
 
    
 const routes = [
@@ -34,12 +31,6 @@ const routes = [
     name: 'Hala',
     component: Hala
   },
-
-  //   {
-  //   path: '/TripPlanner',
-  //   name: 'TripPlanner',
-  //   component: TripPlanner 
-  // },
 
 
   { path: '/tabs', component: Tabs },
@@ -60,6 +51,11 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
+    {
+    path: '/tripplanner',
+    name: 'TripPlanner',
+    component: TripPlanner
+  }
 ]
 
 const router = createRouter({

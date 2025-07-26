@@ -17,6 +17,10 @@
 i{
   color: var(--btn-color);
 }
+button i{
+  color: white;
+  padding-right: 10px;
+}
 .icons button {
   background-color: white;
   border: none;
