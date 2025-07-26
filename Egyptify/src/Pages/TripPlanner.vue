@@ -1,6 +1,6 @@
 <template>
-    <div class="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <div class="min-h-screen bg-[#FFFDF9] py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto -[#FFFDF9] p-8 rounded-lg shadow-md">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">Trip Planner</h1>
 
             <div class="mb-10 text-center">
@@ -84,8 +84,7 @@
                 </div>
 
                 <div class="text-center">
-                    <BaseButton @click="generateItinerary"
->
+                    <BaseButton @click="generateItinerary">
                         Generate Itinerary
                     </BaseButton>
                 </div>
