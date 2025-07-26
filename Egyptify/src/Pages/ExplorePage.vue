@@ -4,7 +4,7 @@ import Hero from "../components/Hero.vue";
 import HeroImage from "../assets/ExplorePageHero.jpg";
 import BaseButton from "../components/BaseButton.vue";
 import CTAImage from "../assets/ExplorePage/CTA.jpg";
-import Footer from "../components/footer.vue";
+import foot from "../components/footer.vue";
 </script>
 
 <template>
@@ -204,5 +204,5 @@ import Footer from "../components/footer.vue";
       </div>
     </div>
   </section>
-  <Footer />
+  <foot />
 </template>
