@@ -12,7 +12,7 @@
         :showSocialIcons="true"
         authLinkText="Already have an account?"
         authLinkAction="Log in"
-        authLinkRoute="/auth/login"
+        authLinkRoute="/login"
       />
     </div>
 

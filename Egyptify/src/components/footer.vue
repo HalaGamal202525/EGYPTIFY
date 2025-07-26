@@ -1,12 +1,12 @@
 <template>
   <footer class="footer">
     <div class="footer-section logo">
-      <h2 class="logo-text">EGYPTIFY</h2>
+      <img class="logo-img" src="../assets/logo.png" alt="EGYPTIFY Logo" />
       <p class="slogan">"Discover the magic of Egypt"</p>
     </div>
 
     <div class="footer-section social">
-      <h3>Find Us In<br />Social media</h3>
+      <h3 class="nowrap">Find Us In Social Media</h3>
       <div class="icons">
         <button><i class="fab fa-instagram"></i></button>
         <button><i class="fab fa-facebook-f"></i></button>
@@ -19,34 +19,34 @@
     <div class="footer-section links">
       <h4>About Us</h4>
       <ul>
-        <li>Mission</li>
-        <li>Story</li>
-        <li>Team</li>
-        <li>Partners</li>
-        <li>Press</li>
+        <li><a href="#">Mission</a></li>
+        <li><a href="#">Story</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Press</a></li>
       </ul>
     </div>
 
     <div class="footer-section links">
       <h4>Contact Us</h4>
       <ul>
-        <li>Contact</li>
-        <li>Form</li>
-        <li>Email</li>
-        <li>Social</li>
-        <li>LiveChat</li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Form</a></li>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">Social</a></li>
+        <li><a href="#">LiveChat</a></li>
       </ul>
     </div>
 
     <div class="footer-section links">
       <h4>Policies</h4>
       <ul>
-        <li>FAQ</li>
-        <li>Support</li>
-        <li>Feedback</li>
-        <li>Blog</li>
-        <li>Terms</li>
-        <li>Complaints</li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Complaints</a></li>
       </ul>
     </div>
   </footer>
@@ -55,7 +55,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
-const router = useRouter;
+const router = useRouter();
 </script>
 
 <style scoped>
@@ -64,27 +64,39 @@ const router = useRouter;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  border: 2px solid #8e44ec;
   flex-wrap: wrap;
   gap: 1rem;
+  color: black;
+  font-size: 1.05rem;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* لينكات عالشمال */
 }
 
-.logo-text {
-  color: #f4a623;
-  font-weight: bold;
-  font-size: 2rem;
-  letter-spacing: 1px;
+.logo-img {
+  width: 180px;
+  max-width: 100%; /* يخليه responsive */
+  height: auto;
 }
+
+
 
 .slogan {
   font-style: italic;
   font-size: 1rem;
+  text-align: center;
+}
+
+h3, h4 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.nowrap {
+  white-space: nowrap; /* علشان العنوان ما ينزلش سطر تاني */
 }
 
 .social .icons {
@@ -94,21 +106,36 @@ const router = useRouter;
 }
 
 .icons button {
-  background-color: white;
-  border: 1px solid black;
+  background-color: #ddd;
+  border: 1px solid black; /* ستروك أسود */
   border-radius: 8px;
   padding: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   cursor: pointer;
+  color: black;
 }
 
 .links ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* اللينكات تبقى شمال */
 }
 
 .links li {
   margin: 0.25rem 0;
 }
+
+.links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #FFC340;
+}
+
+
 </style>
