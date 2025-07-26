@@ -8,8 +8,8 @@
   v-bind="$attrs"
   :type="type"
   :placeholder="placeholder"
-  class="w-full pl-10 pr-10 py-3 rounded-full border-2 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-sm
-         placeholder-gray-500 placeholder-opacity-100 placeholder:text-base"
+  class="w-full pl-10 pr-10 py-3 text-gray-800 rounded-full border-2 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-sm
+         placeholder-gray-500 placeholder-opacity-100 placeholder:text-gray-800"
 />
     <slot name="suffix-icon" />
   </div>
