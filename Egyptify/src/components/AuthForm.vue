@@ -133,7 +133,7 @@ defineProps({
   showAuthLink: { type: Boolean, default: true },
   authLinkText: { type: String, default: "Don't you have an account?" },
   authLinkAction: { type: String, default: 'Sign up' },
-  authLinkRoute: { type: String, default: '/auth/signup' }
+  authLinkRoute: { type: String, default: '/signup' }
 })
 
 
