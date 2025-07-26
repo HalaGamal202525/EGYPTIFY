@@ -11,8 +11,8 @@
                     <div class="flex flex-wrap gap-2">
                         <button v-for="interest in interests" :key="interest" @click="toggleInterest(interest)" :class="{
                             'px-4 py-2 rounded-full border text-sm font-medium transition-colors duration-200': true,
-                            'bg-yellow-400 text-black border-yellow-500': selectedInterests.includes(interest),
-                            'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': !selectedInterests.includes(interest)
+                            'bg-yellow-400  text-black border-yellow-500': selectedInterests.includes(interest),
+                            'bg-[#F6F4EC] text-gray-700 border-yellow-300 hover:bg-yellow-100': !selectedInterests.includes(interest)
                         }">
                             {{ interest }}
                         </button>
@@ -84,10 +84,10 @@
                 </div>
 
                 <div class="text-center">
-                    <button @click="generateItinerary"
-                        class="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition-colors duration-200 shadow">
+                    <BaseButton @click="generateItinerary"
+>
                         Generate Itinerary
-                    </button>
+                    </BaseButton>
                 </div>
             </div>
 
@@ -107,14 +107,13 @@
                 </div>
 
                 <div class="mt-8 flex justify-center gap-4">
-                    <button
-                        class="px-6 py-3 border border-yellow-400 text-yellow-600 font-semibold rounded-full hover:bg-yellow-50 transition-colors duration-200">
+                    <BaseButton
+                        class="border border-yellow-300 bg-yellow-50 text-black  hover:bg-[#e6ac20] ">
                         Customize Itinerary
-                    </button>
-                    <button
-                        class="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition-colors duration-200 shadow">
+                    </BaseButton>
+                    <BaseButton>
                         Save & Share
-                    </button>
+                    </BaseButton>
                 </div>
             </div>
         </div>
@@ -123,9 +122,10 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import BaseButton from '../components/BaseButton.vue'
 
 // Step 1: Interests
-const interests = ['Icon', 'Nature & Outdoor', 'Entertainment', 'Food & Drinks', 'Cultural & Historic Places'];
+const interests = ['Tour', 'Nature & Outdoor', 'Entertainment', 'Food & Drinks', 'Cultural & Historic Places'];
 const selectedInterests = ref([]);
 
 const toggleInterest = (interest) => {
