@@ -1,13 +1,27 @@
 <template>
-  <Navbar />
-  <Hero title="Activity" :image="Heroimage" />
-  <Footer />
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
+    <CardComponent
+      v-for="item in historicalData"
+      :key="item.id"
+      :title="item.name"
+      :description="item.description"
+      :image="item.image"
+:rating="item.rate"
+      :showHeart="true"  
+    />
+  </section>
 </template>
 
 <script setup>
-import Navbar from '../../components/navbar.vue'
-import Hero from "../../components/Hero.vue"
-import Footer from "../../components/Footer.vue"
+import { ref, onMounted } from 'vue'
+import CardComponent from '../../components/card.vue'
+import historicalJson from '../../data/natural.json' 
+import heronatural from "../../../public/natural/sea2.jpg"
 
-import  Heroimage from "/sara/pyramids (3).jpg"
+
+const historicalData = ref([])
+
+onMounted(() => {
+  historicalData.value = historicalJson
+})
 </script>

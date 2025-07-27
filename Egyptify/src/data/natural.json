@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Siwa Oasis",
+    "image": "public/natural/siwa.jpg",
+    "rate": 4,
+    "description": "Located in Egypt’s Western Desert, Siwa is known for its salt lakes, hot springs, palm groves."
+  },
+  {
+    "id": 2,
+    "name": "White Desert",
+    "image": "public/natural/white.jpg",
+    "rate": 5,
+    "description": "A protected area in Farafra featuring stunning white rock. A surreal landscape perfect for camping and stargazing."
+  },
+  {
+    "id": 3,
+    "name": "Ras Mohammed National",
+    "image": "public/natural/Rasmohamed.jpg",
+    "rate": 3.5,
+    "description": "Located in South Sinai, this marine protected area is one of the top diving spots in the world with vibrant coral reef."
+  },
+  {
+    "id": 4,
+    "name": "Blue Hole",
+    "image": "public/natural/blue hole.jpg",
+    "rate": 4,
+    "description": "A world-famous diving site on the Red Sea, ideal for experienced divers and underwater photography lovers."
+  },
+  {
+    "id": 5,
+    "name": "Wadi El Rayan",
+    "image": "public/natural/wadi alrayan.jpg",
+    "rate": 4,
+    "description": "A natural reserve with Egypt’s only waterfalls, large lakes, and surrounding sand dunes great for swimming and sandboarding."
+  },
+  {
+    "id": 6,
+    "name": "Mount Sinai",
+    "image": "public/natural/سانت كاترين.jpg",
+    "rate": 5,
+    "description": "A sacred mountain with religious significance, popular for sunrise hikes and panoramic desert views."
+  },
+  {
+    "id": 7,
+    "name": "Gebel Elba",
+    "image": "public/natural/elba.jpg",
+    "rate": 3.5,
+    "description": "A remote mountain range in southeastern Egypt, rich in biodiversity and home to rare wildlife."
+  },
+  {
+    "id": 8,
+    "name": "Fayoum Oasis",
+    "image": "public/natural/fayom.jpg",
+    "rate": 4,
+    "description": "Famous for its lakes, bird-watching, and traditional pottery villages like Tunis Village."
+  },
+  {
+    "id": 9,
+    "name": "Valley of the Whales",
+    "image": "public/natural/vally.jpg",
+    "rate": 5,
+    "description": "A UNESCO World Heritage site in Wadi Al-Hitan featuring fossilized remains of ancient whales."
+  },
+  {
+    "id": 10,
+    "name": "Dahab Blue Lagoon",
+    "image": "public/natural/logoon.jpg",
+    "rate": 4.5,
+    "description": "A tranquil, clear-water beach in Dahab ideal for relaxing, kite surfing, and snorkeling."
+  },
+  {
+    "id": 11,
+    "name": "Bahariya Oasis",
+    "image": "public/natural/Bahariya Oasis.jpg",
+    "rate": 4,
+    "description": "A lush oasis in the desert surrounded by black desert hills and ancient tombs."
+  },
+  {
+    "id": 12,
+    "name": "St. Catherine’s Monastery",
+    "image": "public/natural/St. Catherine’s Monastery.jpg",
+    "rate": 5,
+    "description": "One of the oldest working Christian monasteries, located at the foot of Mount Sinai."
+  }
+]

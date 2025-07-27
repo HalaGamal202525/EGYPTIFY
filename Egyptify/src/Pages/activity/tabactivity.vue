@@ -12,11 +12,9 @@
 />
 
 
-
     <!-- Tabs Section -->
-    <section class="px-4 md:px-16">
-      <Tabs :tabs="tabsWithComponents" v-model:activeTab="activeTab" />
-    </section>
+    <section class="px-4 md:px-16 border ">
+<Tabs :tabs="tabsWithComponents" v-model:activeTab="activeTab" />    </section>
 
     <!-- Footer -->
     <foot />
@@ -37,6 +35,7 @@ import Entertainment from '../activity/entertainment.vue'
 import Food from '../activity/food.vue'
 
 import herohistorical from"../../../public/historical/Rectangle 2.png"
+import heronatural from "../../../public/natural/sea2.jpg"
 
 
 // 🟡 Tabs array with hero data
@@ -56,7 +55,7 @@ const tabsWithComponents = [
     hero: {
       title: 'Nature Wonders',
       description: 'Relax in oases, mountains, and the Nile valley.',
-      image: '/images/nature.jpg'
+      image: heronatural
     }
   },
   {

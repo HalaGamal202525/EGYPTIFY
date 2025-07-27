@@ -1,9 +1,9 @@
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-6 p-8">
     <CardComponent
       v-for="item in historicalData"
       :key="item.id"
-      :title="item.title"
+      :title="item.name"
       :description="item.description"
       :image="item.image"
 :rating="item.rate"
