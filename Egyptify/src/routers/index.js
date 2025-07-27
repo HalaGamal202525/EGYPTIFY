@@ -49,13 +49,6 @@ const routes = [
     component: Hala
   },
 
-  //   {
-  //   path: '/TripPlanner',
-  //   name: 'TripPlanner',
-  //   component: TripPlanner 
-  // },
-
-
   { path: '/tabs', component: Tabs },
 
   {
