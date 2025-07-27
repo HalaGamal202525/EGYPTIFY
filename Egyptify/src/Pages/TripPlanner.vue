@@ -1,7 +1,7 @@
 <template>
     <Navbar />
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto mt-7 bg-[#FFFDF9] p-8 rounded-lg shadow-xl">
+        <div class="max-w-4xl mx-auto mt-7 bg-[#fffefd] p-8 rounded-lg shadow-2xl">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-16">Trip Planner</h1>
 
             <div class="mb-10 text-center">
@@ -52,7 +52,7 @@
                     <h3 class="text-m font-medium text-yellow-500 mb-3">Step 4: Select Your Travel Dates</h3>
                     <div class="flex justify-center gap-8 mt-16">
                         <div class="flex flex-col items-center"> 
-                            <div class="calendar h-[250px] p-4 border rounded-lg bg-gray-50 shadow-xl">
+                            <div class="calendar h-[250px] p-4 border border-yellow-300 rounded-lg bg-gray-50 shadow-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <button @click="changeMonth(calendar1.month, calendar1.year, -1)" class="text-yellow-500 hover:text-yellow-600 font-extrabold cursor-pointer">&lt;</button>
                                     <span class="font-semibold text-yellow-500">{{ getMonthName(calendar1.month) }} {{ calendar1.year }}</span>
@@ -79,7 +79,7 @@
 
 
                         <div class="flex flex-col items-center"> 
-                            <div class="calendar h-[250px] p-4 border rounded-lg bg-gray-50 shadow-xl">
+                            <div class="calendar h-[250px] p-4 border border-yellow-300 rounded-lg bg-gray-50 shadow-xl">
                                 <div class="flex justify-between items-center mb-2">
                                     <button @click="changeMonth(calendar2.month, calendar2.year, -1)" class="text-yellow-500 hover:text-yellow-600 font-extrabold cursor-pointer">&lt;</button>
                                     <span class="font-semibold text-yellow-500">{{ getMonthName(calendar2.month) }} {{ calendar2.year }}</span>
