@@ -3,7 +3,7 @@
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto mt-7 bg-white p-8 rounded-lg shadow-xl">
             <div class="flex items-center mb-8">
-                <img src="../../public/profile/girl-4.png" alt="Profile Avatar"
+                <img src="/path/to/profile-avatar.png" alt="Profile Avatar"
                     class="w-20 h-20 rounded-full mr-4 object-cover">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-800">Yasmine Emad</h1>
@@ -44,25 +44,14 @@
             <div v-if="activeTab === 'personal'">
                 <h2 class="text-xl font-bold text-gray-800 mb-6">Personal Details</h2>
                 <form @submit.prevent="saveChanges">
-                    <InputField id="username" label="User Name*" v-model="user.username" placeholder="Yasmine Emad" type="text" required>
-                        <template #icon>
-                            <UserIcon class="h-5 w-5" /> </template>
-                    </InputField>
-
-                    <InputField id="email" label="E-mail*" v-model="user.email" placeholder="yasmineemad2023@gmail.com" type="email" required>
-                        <template #icon>
-                            <MailIcon class="h-5 w-5" /> </template>
-                    </InputField>
-
-                    <InputField id="password" label="Password*" v-model="user.password" placeholder="********" type="password" required>
-                        <template #icon>
-                            <LockClosedIcon class="h-5 w-5" /> </template>
-                    </InputField>
-
-                    <InputField id="phone" label="Phone*" v-model="user.phone" placeholder="01289373141" type="tel" required>
-                        <template #icon>
-                            <PhoneIcon class="h-5 w-5" /> </template>
-                    </InputField>
+                    <InputField id="username" label="User Name*" v-model="user.username" placeholder="Yasmine Emad"
+                        type="text" required :icon="UserIcon" />
+                    <InputField id="email" label="E-mail*" v-model="user.email" placeholder="yasmineemad2023@gmail.com"
+                        type="email" required :icon="MailIcon" />
+                    <InputField id="password" label="Password*" v-model="user.password" placeholder="********"
+                        type="password" required :icon="LockClosedIcon" />
+                    <InputField id="phone" label="Phone*" v-model="user.phone" placeholder="01289373141" type="tel"
+                        required :icon="PhoneIcon" />
 
                     <div class="mt-8 text-right">
                         <BaseButton type="submit"
@@ -71,7 +60,8 @@
                         </BaseButton>
                     </div>
                 </form>
-            </div>            <div v-else-if="activeTab === 'saved'">
+            </div>
+            <div v-else-if="activeTab === 'saved'">
                 <h2 class="text-xl font-bold text-gray-800 mb-6">Saved Trips / Bookings</h2>
                 <p class="text-gray-600">Content for saved trips and bookings will go here.</p>
             </div>
@@ -98,6 +88,7 @@ import Navbar from '../components/navbar.vue';
 import Footer from '../components/footer.vue';
 import BaseButton from '../components/BaseButton.vue';
 import InputField from '../components/InputField.vue';
+import { UserIcon, MailIcon, LockClosedIcon, PhoneIcon } from '@heroicons/vue/solid';
 
 const activeTab = ref('personal');
 
