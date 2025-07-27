@@ -38,7 +38,7 @@
       <span class="text-yellow-400 text-xl">
         <i class="fa-solid fa-earth-asia"></i>
       </span>
-      <button class="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500">
+      <button class="bg-yellow-400 text-black font-bold cursor-pointer px-4 py-2 rounded hover:bg-yellow-500">
         Login
       </button>
     </div>
