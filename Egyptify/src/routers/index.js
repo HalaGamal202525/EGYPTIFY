@@ -19,13 +19,25 @@ import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
+import profilePersonalDetails from '../Pages/profile-personal-details.vue'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
-{ path: '/OTP', component: OTPPage },
 
+  { path: '/OTP', component: OTPPage },
+  {
+    path: '/tripplanner',
+    name: 'TripPlanner',
+    component: TripPlanner
+  },   
+  {
+    path: '/profile-personal-details',
+    name: 'ProfilePersonalDetails',
+    component: profilePersonalDetails
+  },
+  
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
   { path: '/blog', component: BlogPage },
@@ -55,11 +67,7 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
-    {
-    path: '/tripplanner',
-    name: 'TripPlanner',
-    component: TripPlanner
-  },   
+
   {
     path: '/activity',
     name: 'Activity',
