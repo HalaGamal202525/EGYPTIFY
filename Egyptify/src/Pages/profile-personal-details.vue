@@ -3,7 +3,7 @@
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto mt-7 bg-white p-8 rounded-lg shadow-xl">
             <div class="flex items-center mb-8">
-                <img src="/path/to/profile-avatar.png" alt="Profile Avatar"
+                <img src="../../public/profile/girl-4.png" alt="Profile Avatar"
                     class="w-20 h-20 rounded-full mr-4 object-cover">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-800">Yasmine Emad</h1>
@@ -88,7 +88,6 @@ import Navbar from '../components/navbar.vue';
 import Footer from '../components/footer.vue';
 import BaseButton from '../components/BaseButton.vue';
 import InputField from '../components/InputField.vue';
-import { UserIcon, MailIcon, LockClosedIcon, PhoneIcon } from '@heroicons/vue/solid';
 
 const activeTab = ref('personal');
 
