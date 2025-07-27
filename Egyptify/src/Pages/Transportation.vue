@@ -156,7 +156,7 @@ src/pages/Transportation.vue
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9l.5 6m4-6l-.5 6m4.5-10.5H6.75a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75V5.25a.75.75 0 00-.75-.75z" />
         </svg>
-        Free Cancellation
+        Free Canellation
       </div>
     </div>
   </div>
