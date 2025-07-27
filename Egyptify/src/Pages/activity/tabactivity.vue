@@ -25,7 +25,7 @@
 import { ref, computed } from 'vue'
 
 import Navbar from '../../components/navbar.vue'
-import Tabs from '../../components/Tabs.vue'
+import Tabs from '../../components/tabactivity.vue'
 import Hero from '../../components/Hero.vue'
 import foot from '../../components/footer.vue'
 
@@ -34,13 +34,12 @@ import Natural from '../activity/natural.vue'
 import Entertainment from '../activity/entertainment.vue'
 import Food from '../activity/food.vue'
 
-import herohistorical from"../../../public/historical/Rectangle 2.png"
-import heronatural from "../../../public/natural/sea2.jpg"
-import heroenter from "../../../public/entertainment/hero.png"
-import herofood from "../../../public/foood/hero.png"
+// import herohistorical from"../../../public/historical/Rectangle 2.png"
+// import heronatural from "../../../public/natural/sea2.jpg"
+// import heroenter from "../../../public/entertainment/hero.png"
+// import herofood from "../../../public/food/hero.png"
 
 
-// 🟡 Tabs array with hero data
 const tabsWithComponents = [
   {
     label: 'Historical & Cultural Sites',
@@ -48,7 +47,7 @@ const tabsWithComponents = [
     hero: {
       title: 'Attractions & Activities',
       description: 'Explore monuments and cultural sites in Egypt.',
-      image:herohistorical
+      image:"/historical/Rectangle2.png"
     }
   },
   {
@@ -57,7 +56,7 @@ const tabsWithComponents = [
     hero: {
       title: 'Nature Wonders',
       description: 'Relax in oases, mountains, and the Nile valley.',
-      image: heronatural
+      image: "/natural/sea2.jpg"
     }
   },
    {
@@ -66,7 +65,7 @@ const tabsWithComponents = [
     hero: {
       title: 'Fun & Entertainment',
       description: 'Find amusement parks, beaches, and nightlife.',
-      image: heroenter
+      image: "/entertainment/hero.png"
     }
   },
   {
@@ -75,15 +74,13 @@ const tabsWithComponents = [
     hero: {
       title: 'Taste Egypt',
       description: 'From koshari to stuffed vine leaves, taste it all!',
-      image: herofood
+      image: "/food/hero.png"
     }
   },
  
 ]
 
-// 🟢 Selected tab
 const activeTab = ref(0)
 
-// 🟢 Current hero section
 const currentHero = computed(() => tabsWithComponents[activeTab.value].hero)
 </script>
