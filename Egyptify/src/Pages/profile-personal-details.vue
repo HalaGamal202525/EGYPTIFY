@@ -191,8 +191,8 @@
                     </div>
                     <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
                         <div class="flex-grow">
-                            <p class="text-gray-700 font-semibold mb-1">Cairo</p>
-                            <p class="text-sm text-gray-500 mb-1">2 months ago</p>
+                            <p class="text-gray-700 font-semibold mb-1">Aswan</p>
+                            <p class="text-sm text-gray-500 mb-1">3 months ago</p>
                             <div class="flex items-center mb-2">
                                 <i class="fas fa-star text-yellow-400"></i>
                                 <i class="fas fa-star text-yellow-400"></i>
@@ -202,7 +202,7 @@
                             <p class="text-gray-700 text-sm">Review: Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.</p>
                         </div>
                         <div class="ml-4 flex-shrink-0">
-                            <img src="../../public/profile/Pyramids2.jpeg" alt="Cairo Pyramids" class="w-24 h-24 object-cover rounded-md" />
+                            <img src="../../public/profile/" alt="Cairo Pyramids" class="w-24 h-24 object-cover rounded-md" />
                         </div>
                     </div>
                     <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
