@@ -12,8 +12,8 @@ import ExplorePage from '../Pages/ExplorePage.vue'
 import BlogPage from '../Pages/BlogsPage.vue'
 import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
+import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
-
 
    
 const routes = [
@@ -50,12 +50,12 @@ const routes = [
     name: 'Transportation',
     component: Transportation
   },
+   { path: '/NavBarMenu', component: NavBarMenu },
     {
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
-  },
-
+  }
 ]
 
 const router = createRouter({
