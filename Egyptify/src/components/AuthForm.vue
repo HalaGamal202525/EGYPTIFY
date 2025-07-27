@@ -1,6 +1,6 @@
 <template>
    <form class="bg-white rounded-xl w-full max-w-md p-8">
-    <h2 class="text-3xl font-bold mb-4 text-black text-center">
+    <h2 class="text-3xl font-bold mb-4 text-gray-900 text-center">
       {{ title }}
     </h2>
     <p class="text-center text-gray-500 mb-6">
@@ -9,7 +9,7 @@
 
     <!-- Username -->
     <div v-if="showUsername" class="mb-4">
-      <label class="block text-black font-semibold mb-1">User Name*</label>
+      <label class="block text-gray font-semibold mb-1">User Name*</label>
       <InputField
         type="text"
         placeholder="Enter Your User Name"
@@ -22,7 +22,7 @@
 
     <!-- Email -->
     <div class="mb-4">
-      <label class="block text-black font-semibold mb-1">E-mail*</label>
+      <label class="block text-black font-medium mb-1">E-mail*</label>
       <InputField
         type="email"
         placeholder="Enter Your E-mail"
