@@ -202,7 +202,7 @@
                             <p class="text-gray-700 text-sm">Review: Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.</p>
                         </div>
                         <div class="ml-4 flex-shrink-0">
-                            <img src="../../public/profile/" alt="Cairo Pyramids" class="w-24 h-24 object-cover rounded-md" />
+                            <img src="../../public/profile/Aswan-Abu-Simple-Tour.jpg" alt="Cairo Pyramids" class="w-24 h-24 object-cover rounded-md" />
                         </div>
                     </div>
                     <div class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
