@@ -44,18 +44,71 @@
             <div v-if="activeTab === 'personal'">
                 <h2 class="text-xl font-bold text-gray-800 mb-6">Personal Details</h2>
                 <form @submit.prevent="saveChanges">
-                    <InputField id="username" label="User Name*" v-model="user.username" placeholder="Yasmine Emad"
-                        type="text" required :icon="UserIcon" />
-                    <InputField id="email" label="E-mail*" v-model="user.email" placeholder="yasmineemad2023@gmail.com"
-                        type="email" required :icon="MailIcon" />
-                    <InputField id="password" label="Password*" v-model="user.password" placeholder="********"
-                        type="password" required :icon="LockClosedIcon" />
-                    <InputField id="phone" label="Phone*" v-model="user.phone" placeholder="01289373141" type="tel"
-                        required :icon="PhoneIcon" />
+
+                    <div class="mb-4">
+                        <label for="username" class="block text-black font-semibold mb-1">User Name*</label>
+                        <InputField
+                            id="username"
+                            type="text"
+                            placeholder="Yasmine Emad"
+                            v-model="user.username"
+                            required
+                        >
+                            <template #icon>
+                                <i class="fas fa-user" />
+                            </template>
+                        </InputField>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email" class="block text-black font-semibold mb-1">E-mail*</label>
+                        <InputField
+                            id="email"
+                            type="email"
+                            placeholder="yasmineemad2023@gmail.com"
+                            v-model="user.email"
+                            required
+                        >
+                            <template #icon>
+                                <i class="fas fa-envelope" />
+                            </template>
+                        </InputField>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="block text-black font-semibold mb-1">Password*</label>
+                        <InputField
+                            id="password"
+                            type="password"
+                            placeholder="********"
+                            v-model="user.password"
+                            required
+                        >
+                            <template #icon>
+                                <i class="fas fa-lock" />
+                            </template>
+                            <template #suffix-icon>
+                                <i class="fas fa-eye-slash absolute right-4 top-3 text-gray-400" />
+                            </template>
+                        </InputField>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="phone" class="block text-black font-semibold mb-1">Phone*</label>
+                        <InputField
+                            id="phone"
+                            type="tel"
+                            placeholder="01289373141"
+                            v-model="user.phone"
+                            required
+                        >
+                            <template #icon>
+                                <i class="fas fa-phone" /> </template>
+                        </InputField>
+                    </div>
 
                     <div class="mt-8 text-right">
-                        <BaseButton type="submit"
-                            class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-6 rounded-md transition-colors duration-200">
+                        <BaseButton type="submit">
                             Save Changes
                         </BaseButton>
                     </div>
@@ -83,18 +136,21 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'; // Removed 'computed' as it's not used in this specific component
+import { ref, reactive } from 'vue';
 import Navbar from '../components/navbar.vue';
 import Footer from '../components/footer.vue';
 import BaseButton from '../components/BaseButton.vue';
 import InputField from '../components/InputField.vue';
+
+// Remove Heroicons imports as you're now using Font Awesome through `<i>` tags
+// import { UserIcon, MailIcon, LockClosedIcon, PhoneIcon } from '@heroicons/vue/24/solid';
 
 const activeTab = ref('personal');
 
 const user = reactive({
     username: 'Yasmine Emad',
     email: 'yasmineemad2023@gmail.com',
-    password: 'password123', // In a real app, you wouldn't pre-fill this like this
+    password: 'password123',
     phone: '01289373141'
 });
 
