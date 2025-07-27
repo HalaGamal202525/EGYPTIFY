@@ -1,8 +1,86 @@
-<!-- src/pages/Transportation.vue
+src/pages/Transportation.vue
 <template>
   <div class="bg-[#fefaf2] min-h-screen flex flex-col">
    
     <NavBar />
+
+  <!-- Hero Section with Search -->
+<section
+  class="relative bg-cover bg-center text-white py-24 px-4"
+  style="background-image: url('/src/assets/ExplorePageHero.jpg')"
+>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black opacity-60"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto text-center">
+    <!-- Title and Description -->
+    <h1 class="text-4xl md:text-5xl font-extrabold">
+      Explore Egypt <span class="text-yellow-400">Every Way</span>
+    </h1>
+    <p class="mt-4 text-lg max-w-3xl mx-auto text-white">
+      From high-speed trains to enchanting Nile cruises, choose the perfect
+      transportation for your journey through the land of the Pharaohs
+    </p>
+
+    <!-- Search Box -->
+    <div
+      class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-left text-white">
+        <!-- From -->
+        <div>
+          <label class="block text-sm font-semibold mb-1">From</label>
+          <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option>Choose city</option>
+            <option>Cairo</option>
+            <option>Giza</option>
+            <option>Alexandria</option>
+          </select>
+        </div>
+
+        <!-- To -->
+        <div>
+          <label class="block text-sm font-semibold mb-1">To</label>
+         <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option>Choose destination</option>
+            <option>Luxor</option>
+            <option>Aswan</option>
+            <option>Hurghada</option>
+          </select>
+        </div>
+
+        <!-- Travel Date -->
+        <div>
+          <label class="block text-sm font-semibold mb-1">Travel Date</label>
+          <input
+            type="date"
+            class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          />
+        </div>
+
+        <!-- Passengers -->
+        <div>
+          <label class="block text-sm font-semibold mb-1">Passengers</label>
+        <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option>Select number</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Search Button -->
+<div class="mt-6 flex justify-center">
+  <BaseButton class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-6 rounded-xl">
+    Search Trips
+  </BaseButton>
+</div>
+
+    </div>
+  </div>
+</section>
+
 
   
     <section class="text-center py-12">
@@ -13,7 +91,7 @@
     </section>
 
     
-    <section class="flex flex-wrap justify-center gap-8 px-4 pb-16">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 pb-20 max-w-6xl mx-auto">
       <TransportationCard
         title="Tourist Buses"
         description="Economic choice with excellent service"
@@ -40,7 +118,49 @@
         :features="['Air Conditioning', 'Comfortable seats', 'Regular stops']"
         :routes="['Cairo - Alexandria', 'Cairo - Luxor']"
       />
+
+      <TransportationCard
+        title="Nile Cruise"
+        description="Unique experience on the banks of the eternal Nile"
+        price="From 2,500 EGP"
+        duration="3 - 7 days"
+        :features="['Nile views', 'Heritage experience', 'Ultimate comfort']"
+        :routes="['Luxor - Aswan', 'Cairo - Luxor']"
+      />
     </section>
+
+  
+
+    <!-- Special Offers Section -->
+<section class="px-6 pb-20 w-full">
+  <div
+    class="rounded-xl bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 text-white py-10 px-6 text-center shadow-lg"
+  >
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">
+      Special Offers for Early Bookings
+    </h2>
+    <p class="text-md md:text-lg text-white mb-6">
+      Book your trip 30 days in advance and get up to 25% discount
+    </p>
+
+    <!-- Offer Badges -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex items-center gap-2 bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-white font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.955c.3.921-.755 1.688-1.538 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.955a1 1 0 00-.364-1.118L2.465 9.382c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.955z" />
+        </svg>
+        25% Off
+      </div>
+
+      <div class="flex items-center gap-2 bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-white font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9l.5 6m4-6l-.5 6m4.5-10.5H6.75a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75V5.25a.75.75 0 00-.75-.75z" />
+        </svg>
+        Free Cancellation
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <Footer />
@@ -51,119 +171,5 @@
 import NavBar from '../components/navbar.vue'
 import Footer from '../components/footer.vue'
 import TransportationCard from '../components/TransportationCard.vue'
-</script> -->
-
-<template>
-  <section class="py-20 bg-gradient-to-b from-background to-muted/30">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">
-          Choose Your Transportation
-        </h2>
-        <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-          We offer you a variety of transportation options to suit your budget, time, and preferences.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <TransportationCard
-          v-for="(option, index) in transportationOptions"
-          :key="option.id"
-          :option="option"
-          :index="index"
-        />
-      </div>
-
-      <div class="mt-20">
-        <Card class="bg-gradient-egypt text-white p-8 text-center">
-          <h3 class="text-3xl font-bold mb-4">Special Offers for Early Bookings</h3>
-          <p class="text-lg mb-6 opacity-90">
-            Book your trip 30 days in advance and get up to 25% discount
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <Badge class="bg-white/20 text-white text-sm px-4 py-2">
-              <Star class="w-4 h-4 mr-1" />
-              25% Off
-            </Badge>
-            <Badge class="bg-white/20 text-white text-sm px-4 py-2">
-              <Shield class="w-4 h-4 mr-1" />
-              Free Cancellation
-            </Badge>
-            <Badge class="bg-white/20 text-white text-sm px-4 py-2">
-              <Wifi class="w-4 h-4 mr-1" />
-              Free WiFi
-            </Badge>
-          </div>
-        </Card>
-      </div>
-    </div>
-  </section>
-</template>
-
-<script setup>
-import TransportationCard from '../TransportationCard.vue';
-import { Star, Shield, Wifi } from 'lucide-vue-next';
-import { Card } from '../components/secondary-card.vue';
-import { Badge } from '../components/badge.vue';
-
-const transportationOptions = [
-  // {
-  //   id: 'flights',
-  //   title: 'Domestic Flights',
-  //   description: 'Fastest way to travel between Egyptian cities',
-  //   icon: 'Plane',
-  //   color: 'nile',
-  //   features: ['Daily flights', 'Time saving', 'Comfortable seats'],
-  //   price: 'From 1,200 EGP',
-  //   duration: '45 minutes - 2 hours',
-  //   routes: ['Cairo - Aswan', 'Cairo - Luxor', 'Cairo - Sharm El Sheikh']
-  // },
-  {
-    id: 'trains',
-    title: 'Trains',
-    description: 'Travel in comfort and enjoy scenic views',
-    icon: 'Train',
-    color: 'egypt',
-    features: ['Spacious seats', 'Great views', 'Reasonable prices'],
-    price: 'From 200 EGP',
-    duration: '3 - 12 hours',
-    routes: ['Cairo - Alexandria', 'Cairo - Luxor', 'Cairo - Aswan']
-  },
-  {
-    id: 'buses',
-    title: 'Tourist Buses',
-    description: 'Economic choice with excellent service',
-    icon: 'Bus',
-    color: 'secondary',
-    features: ['Air conditioning', 'Comfortable seats', 'Regular stops'],
-    price: 'From 150 EGP',
-    duration: '4 - 8 hours',
-    routes: ['Cairo - Hurghada', 'Cairo - Dahab', 'Alexandria - Marsa Matrouh']
-  },
-  {
-    id: 'cars',
-    title: 'Car Rental',
-    description: 'Complete freedom to move and explore',
-    icon: 'Car',
-    color: 'default',
-    features: ['Total flexibility', 'Privacy', 'Free exploration'],
-    price: 'From 300 EGP/day',
-    duration: 'Your choice',
-    routes: ['All over Egypt', 'Safe highways', 'Parking available']
-  },
-  {
-    id: 'nile',
-    title: 'Nile Cruises',
-    description: 'Unique experience on the banks of the eternal Nile',
-    icon: 'Ship',
-    color: 'nile',
-    features: ['Nile views', 'Heritage experience', 'Ultimate comfort'],
-    price: 'From 2,500 EGP',
-    duration: '3 - 7 days',
-    routes: ['Luxor - Aswan', 'Cairo - Luxor', 'Day tours']
-  }
-];
+import BaseButton from '../components/BaseButton.vue'
 </script>
-
-<style scoped>
-</style>
