@@ -5,7 +5,7 @@ import Tabs from '../Pages/auth/tabs.vue'
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
 import Sara from '../Pages/sara.vue'
-import Home from '../Pages/Home.vue'
+import Home from '../Pages/home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
 import ExplorePage from '../Pages/ExplorePage.vue'
@@ -14,8 +14,12 @@ import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
+import Activity from "../Pages/activity/tabactivity.vue"
+import Historical from '../Pages/activity/historicalactivity.vue'
+import Natural from '../Pages/activity/natural.vue'
+import Entertainment from '../Pages/activity/entertainment.vue'
+import Food from '../Pages/activity/food.vue'
 
-   
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
@@ -55,7 +59,20 @@ const routes = [
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
+  },   
+  {
+    path: '/activity',
+    name: 'Activity',
+    component: Activity,
+    children: [
+{ path: 'historical', component: Historical },
+      { path: 'natural', component: Natural },
+      { path: 'entertainment', component: Entertainment },
+      { path: 'food', component: Food },
+      { path: '/', redirect: 'historical' } // التب الإفتراضي
+    ]
   }
+
 ]
 
 const router = createRouter({

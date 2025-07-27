@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Pyramids of Giza",
+    "image": "public/historical/pyramids (4).jpg",
+    "rate": 4,
+    "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza"
+  },
+  {
+    "id": 2,
+    "name": "Karnak Temple",
+    "image": "public/historical/karnak.webp",
+    "rate": 5,
+    "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods."
+  },
+  {
+    "id": 3,
+    "name": "  Valley of the Kings",
+    "image": "public/historical/vaiiy.webp",
+    "rate": 3.5,
+    "description": "The burial site of ancient pharaohs, including Tutankhamun, hidden in the"
+  },
+  {
+    "id": 4,
+    "name": "   Citadel of Saladin",
+    "image": "public/historical/castdel.webp",
+    "rate": 4,
+    "description": "vA medieval Islamic fort with panoramic views of Cairo and the iconic Mosque"
+  },
+  {
+    "id": 5,
+    "name": "Philae Temple",
+    "image": "public/historical/philia.webp",
+    "rate": 4,
+    "description": "A picturesque temple on an island in Aswan, dedicated to the goddess Isis"
+  },
+  {
+    "id": 6,
+    "name": "Egyptian Museum",
+    "image": "public/historical/The-Grand-Egyptian.jpg",
+    "rate": 4,
+    "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun."
+  },
+  {
+    "id": 7,
+    "name": "  Abu Simbel Temples",
+    "image": "public/historical/planner.jpeg",
+    "rate": 4,
+    "description": "Massive rock temples of Ramses II relocated to save them from flooding"
+  },
+  {
+    "id": 8,
+    "name": "Al-Muizz Street",
+    "image": "public/historical/ALMOUZ.jpg",
+    "rate": 4,
+    "description": " A historic area full of mosques, markets, and medieval architecture reflecting"
+  },
+  {
+    "id": 9,
+    "name": "Abu Serga",
+    "image": "public/historical/elserag.webp",
+    "rate": 4,
+    "description": "One of the oldest Coptic churches, believed to be visited by the Holy Family"
+  },
+  {
+    "id": 10,
+    "name": "  Al-Azhar Mosque",
+    "image": "public/historical/الازهر (2).webp",
+    "rate": 4,
+    "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world."
+  },
+  {
+    "id": 11,
+    "name": "Hatshepsut Temple",
+    "image": "public/historical/vaiiy.webp",
+    "rate": 4.5,
+    "description": "A mortuary temple built for the powerful Queen Hatshepsut, located beneath the cliffs at Deir el-Bahari."
+  },
+  {
+    "id": 12,
+    "name": "Saqqara Step Pyramid",
+    "image": "public/historical/Saqqara Step Pyramid.jpg",
+    "rate": 4,
+    "description": "The oldest known pyramid in Egypt, built for Pharaoh Djoser in the 27th century BC."
+  }
+]
