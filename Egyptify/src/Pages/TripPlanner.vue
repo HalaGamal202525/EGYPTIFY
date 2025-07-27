@@ -136,11 +136,9 @@
                 </div>
 
                 <div class="mt-8 flex justify-center gap-4">
-                    <BaseButton
-                        class="border border-yellow-300 bg-yellow-50 hover:bg-[#e6ac20]"
-                        textColor="text-black">
+                    <DisabledButton>
                         Customize Itinerary
-                    </BaseButton>
+                    </DisabledButton>
                     <BaseButton>
                         Save & Share
                     </BaseButton>
@@ -156,6 +154,7 @@ import { ref, reactive, computed } from 'vue';
 import BaseButton from '../components/BaseButton.vue';
 import Navbar from '../components/navbar.vue';
 import Footer from '../components/footer.vue';
+import DisabledButton from '../components/DisabledButton.vue';
 
 // --- Calendar Logic ---
 const today = new Date();
