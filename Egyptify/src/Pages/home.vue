@@ -1,7 +1,9 @@
 <template>
   <div class="w-full">
     <Navbar />
-
+<Slide v-for="(img, index) in images" :key="index">
+  <img :src="img.default" :alt="'Slide ' + (index + 1)" class="slide-img" />
+</Slide>
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
@@ -281,6 +283,8 @@ import btn from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
+import Slide from "../components/ImageSlider.vue"
+
 
 const popular = [
   {

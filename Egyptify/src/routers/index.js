@@ -13,8 +13,11 @@ import BlogPage from '../Pages/BlogsPage.vue'
 import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
-
-
+import Activity from "../Pages/activity/tabactivity.vue"
+import Historical from '../Pages/activity/historicalactivity.vue'
+import Natural from '../Pages/activity/natural.vue'
+import Entertainment from '../Pages/activity/entertainment.vue'
+import Food from '../Pages/activity/food.vue'
    
 const routes = [
   { path: '/', component: Home },
@@ -54,7 +57,19 @@ const routes = [
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
-  },
+  },   
+  {
+    path: '/activity',
+    name: 'Activity',
+    component: Activity,
+    children: [
+{ path: 'historical', component: Historical },
+      { path: 'natural', component: Natural },
+      { path: 'entertainment', component: Entertainment },
+      { path: 'food', component: Food },
+      { path: '/', redirect: 'historical' } // التب الإفتراضي
+    ]
+  }
 
 ]
 
