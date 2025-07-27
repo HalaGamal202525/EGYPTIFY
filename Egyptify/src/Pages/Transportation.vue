@@ -35,6 +35,9 @@ src/pages/Transportation.vue
             <option>Cairo</option>
             <option>Giza</option>
             <option>Alexandria</option>
+            <option>Luxor</option>
+            <option>North Coast</option>
+            <option>Sharm El-Sheikh</option>
           </select>
         </div>
 
@@ -46,6 +49,9 @@ src/pages/Transportation.vue
             <option>Luxor</option>
             <option>Aswan</option>
             <option>Hurghada</option>
+            <option>Cairo</option>
+            <option>North Coast</option>
+            <option>Sharm El-Sheikh</option>
           </select>
         </div>
 
@@ -63,9 +69,11 @@ src/pages/Transportation.vue
           <label class="block text-sm font-semibold mb-1">Passengers</label>
         <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <option>Select number</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3+</option>
+            <option>1 Passenger</option>
+            <option>2 Passengers</option>
+            <option>3 Passengers</option>
+            <option>4 Passengers</option>
+            <option>5 Passengers</option>
           </select>
         </div>
       </div>

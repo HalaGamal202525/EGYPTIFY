@@ -20,7 +20,7 @@ import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
-// import profilePersonalDetails from '../Pages/profile-personal-details.vue'
+import profilePersonalDetails from '../Pages/profile-personal-details.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -86,12 +86,7 @@ const routes = [
       { path: 'food', component: Food },
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
-  },
-  //  {
-  //   path: '/booking',
-  //   name: 'Booking',
-  //   component: Booking
-  // },
+  }
 
 ]
 
