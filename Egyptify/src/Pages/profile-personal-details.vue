@@ -1,5 +1,5 @@
 <template>
-    <Navbar />
+    <NavBarBlack />
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl">
             <div class="flex items-center mb-8">
@@ -298,7 +298,7 @@
                 <!-- <h2 class="text-xl font-bold text-yellow-500 mb-6">Settings</h2> -->
 
                 <div class="mb-8">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Display</h3>
+                    <h3 class="text-xl font-bold text-yellow-500 mb-4">Display</h3>
                     <div class="flex items-center justify-between mb-4">
                         <label for="language-select" class="text-gray-700">Language</label>
                         <select id="language-select" v-model="settings.language" class="border rounded-md px-3 py-2 text-gray-800">
@@ -317,7 +317,7 @@
                 </div>
 
                 <div class="mb-8">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Notifications</h3>
+                    <h3 class="text-xl font-bold text-yellow-500 mb-4">Notifications</h3>
                     <div class="flex items-center justify-between mb-4">
                         <div>
                             <p class="text-gray-700">Booking notifications</p>
@@ -341,7 +341,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Account</h3>
+                    <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
                     <a href="#" class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150">
                         <span class="text-gray-700 font-medium">Change Password</span>
                         <i class="fas fa-arrow-right text-gray-400"></i>
@@ -363,10 +363,12 @@
 
 <script setup>
 import { ref, reactive } from 'vue';
-import Navbar from '../components/navbar.vue';
+// import Navbar from '../components/navbar.vue';
+import NavBarBlack from '../components/NavBar-Black.vue';
 import Footer from '../components/footer.vue';
 import BaseButton from '../components/BaseButton.vue';
 import InputField from '../components/InputField.vue';
+
 
 const activeTab = ref('personal');
 
