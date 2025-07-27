@@ -36,6 +36,8 @@ import Food from '../activity/food.vue'
 
 import herohistorical from"../../../public/historical/Rectangle 2.png"
 import heronatural from "../../../public/natural/sea2.jpg"
+import heroenter from "../../../public/entertainment/hero.png"
+import herofood from "../../../public/foood/hero.png"
 
 
 // 🟡 Tabs array with hero data
@@ -58,24 +60,25 @@ const tabsWithComponents = [
       image: heronatural
     }
   },
+   {
+    label: 'Entertainment Venues',
+    component: Entertainment,
+    hero: {
+      title: 'Fun & Entertainment',
+      description: 'Find amusement parks, beaches, and nightlife.',
+      image: heroenter
+    }
+  },
   {
     label: 'Food & Dining',
     component: Food,
     hero: {
       title: 'Taste Egypt',
       description: 'From koshari to stuffed vine leaves, taste it all!',
-      image: '/images/food.jpg'
+      image: herofood
     }
   },
-  {
-    label: 'Entertainment Venues',
-    component: Entertainment,
-    hero: {
-      title: 'Fun & Entertainment',
-      description: 'Find amusement parks, beaches, and nightlife.',
-      image: '/images/entertainment.jpg'
-    }
-  }
+ 
 ]
 
 // 🟢 Selected tab

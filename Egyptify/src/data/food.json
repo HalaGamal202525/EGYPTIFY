@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "name": "Sobhy Kaber",
+    "image": "public/food/sobhy.webp",
+    "rate": 4,
+    "description": "Very popular for grilled meats, kebda, and oriental salads. Busy, authentic Egyptian atmosphere."
+  },
+  {
+    "id": 2,
+    "name": "Sachi ",
+    "image": "public/food/suchi.webp",
+    "rate": 5,
+    "description": "Sachi is a high-end restaurant offering a blend of Mediterranean and Asian cuisines in a luxurious atmosphere."
+  },
+  {
+    "id": 3,
+    "name": "Abou Tarek",
+    "image": "public/food/tark.webp",
+    "rate": 3.5,
+    "description": "The most iconic koshari restaurant in Egypt, known for fast service and authentic flavor."
+  },
+  {
+    "id": 4,
+    "name": "Crave",
+    "image": "public/food/cearve.jpg",
+    "rate": 4,
+    "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist."
+  },
+  {
+    "id": 5,
+    "name": "Zooba",
+    "image": "public/food/zooba.webp",
+    "rate": 4,
+    "description": "Trendy Egyptian street food with a modern twist — koshari, taameya, liver sandwiches, and more."
+  },
+  {
+    "id": 6,
+    "name": "Tamara Lebanese Bistro  ",
+    "image": "public/food/tamara.webp",
+    "rate": 5,
+    "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh."
+  },
+  {
+    "id": 7,
+    "name": "Lucille’s",
+    "image": "public/food/lusills.webp",
+    "rate": 3.5,
+    "description": "LClassic American diner known for huge burgers, pancakes, and milkshakes."
+  },
+  {
+    "id": 8,
+    "name": "Kazoku ",
+    "image": "public/food/kazuka.png",
+    "rate": 4,
+    "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance."
+  },
+  {
+    "id": 9,
+    "name": "Pier 88",
+    "image": "public/food/pier.webp",
+    "rate": 5,
+    "description": "Elegant Mediterranean/Italian restaurant with great views and a celebrity vibe."
+  },
+  {
+    "id": 10,
+    "name": "Abou El Sid",
+    "image": "public/food/abou elsid.webp",
+    "rate": 4.5,
+    "description": "A nostalgic Egyptian dining experience with traditional recipes and Oriental decor."
+  },
+ {
+  "id": 11,
+  "name": "Sequoia",
+  "image": "public/food/Sequoia.webp",
+  "rate": 4.5,
+  "description": "Upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting."
+},
+{
+  "id": 12,
+  "name": "Naguib Mahfouz Cafe",
+  "image": "public/food/Naguib Mahfouz Cafe.webp",
+  "rate": 4,
+  "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes."
+}
+
+]

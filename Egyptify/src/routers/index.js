@@ -19,7 +19,7 @@ import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
-import profilePersonalDetails from '../Pages/profile-personal-details.vue'
+// import profilePersonalDetails from '../Pages/profile-personal-details.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -32,11 +32,11 @@ const routes = [
     name: 'TripPlanner',
     component: TripPlanner
   },   
-  {
-    path: '/profile-personal-details',
-    name: 'ProfilePersonalDetails',
-    component: profilePersonalDetails
-  },
+  // {
+  //   path: '/profile-personal-details',
+  //   name: 'ProfilePersonalDetails',
+  //   component: profilePersonalDetails
+  // },
   
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },

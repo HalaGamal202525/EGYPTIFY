@@ -16,7 +16,6 @@
 import { ref, onMounted } from 'vue'
 import CardComponent from '../../components/card.vue'
 import historicalJson from '../../data/natural.json' 
-import heronatural from "../../../public/natural/sea2.jpg"
 
 
 const historicalData = ref([])
