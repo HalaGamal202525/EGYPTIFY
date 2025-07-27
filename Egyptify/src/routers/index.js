@@ -21,6 +21,7 @@ import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import profilePersonalDetails from '../Pages/profile-personal-details.vue'
+import TermsOfUse from '../Pages/Terms-of-use.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -86,6 +87,12 @@ const routes = [
       { path: 'food', component: Food },
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
+  },
+  {
+    path:'/Terms-of-use',
+    name:'Terms of use',
+    component: TermsOfUse
+
   }
 
 ]
