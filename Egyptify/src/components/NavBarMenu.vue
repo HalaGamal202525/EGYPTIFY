@@ -1,12 +1,15 @@
 <template>
-  <div class="relative" @click="toggleDropdown">
-    <button class="px-4 py-2 font-semibold hover:text-[#FFC340]">
+  <div ref="menuRef" class="relative">
+    <button
+      @click="toggleMenu"
+      class="px-4 py-2 font-semibold hover:text-[#FFC340] cursor-pointer"
+    >
       More
     </button>
 
     <div
-      v-show="isOpen"
-      class="absolute right-0 top-full mt-2 w-[650px] bg-white shadow-lg rounded-xl transition duration-300 z-50 p-6 grid grid-cols-3 gap-4"
+      v-if="isOpen"
+      class="absolute right-0 top-full mt-2 w-[650px] bg-white shadow-lg rounded-xl z-50 p-6 grid grid-cols-3 gap-4"
     >
       <!-- العمود الأيسر للصورة -->
       <div class="col-span-1 flex items-center justify-center">
@@ -17,7 +20,7 @@
         />
       </div>
 
-      <!-- العمودين الآخرين للروابط -->
+      <!-- العمودين الآخرين -->
       <div class="col-span-2 grid grid-cols-2 gap-4">
         <div class="space-y-2">
           <a href="#" class="block hover:text-[#FFC340] font-medium">Explore Egypt</a>
@@ -37,12 +40,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import menuImg from '/src/assets/BlogPageHero.jpg'
 
 const isOpen = ref(false)
+const menuRef = ref(null)
 
-function toggleDropdown() {
+const toggleMenu = () => {
   isOpen.value = !isOpen.value
 }
+
+const handleClickOutside = (event) => {
+  if (menuRef.value && !menuRef.value.contains(event.target)) {
+    isOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>
