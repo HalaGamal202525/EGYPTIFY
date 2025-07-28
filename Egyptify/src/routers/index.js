@@ -22,12 +22,12 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
+import aboutUs from '../Pages/About-Us.vue'
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
 import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
-
-
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import path from 'path'
 
 const routes = [
   { path: '/', component: Home },
@@ -35,17 +35,23 @@ const routes = [
   { path: '/auth/Forgot-Password', component: ForgotPassword },
 
   { path: '/OTP', component: OTPPage },
-  {
+   {
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
-  },   
+  },  
   {
     path: '/profile-personal-details',
     name: 'ProfilePersonalDetails',
     component: profilePersonalDetails
   },
   
+   {
+    path: '/about-us',
+    name: 'AboutUs',
+    component: AboutUs
+  },
+
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
   { path: '/blog', component: BlogPage },
@@ -81,11 +87,7 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
-    {
-    path: '/tripplanner',
-    name: 'TripPlanner',
-    component: TripPlanner
-  },
+   
   {
   path: '/contact',
   name: 'ContactUs',
