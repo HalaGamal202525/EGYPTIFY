@@ -14,6 +14,7 @@ import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
+import ContactUs from '../Pages/ContactUs.vue'
 import Activity from "../Pages/activity/tabactivitypage.vue"
 import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
@@ -80,6 +81,16 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
+    {
+    path: '/tripplanner',
+    name: 'TripPlanner',
+    component: TripPlanner
+  },
+  {
+  path: '/contact',
+  name: 'ContactUs',
+  component: ContactUs
+},
 
   {
     path: '/activity',
