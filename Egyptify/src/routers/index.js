@@ -21,6 +21,7 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
+import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 
 const routes = [
   { path: '/', component: Home },
@@ -33,11 +34,11 @@ const routes = [
     name: 'TripPlanner',
     component: TripPlanner
   },   
-  // {
-  //   path: '/profile-personal-details',
-  //   name: 'ProfilePersonalDetails',
-  //   component: profilePersonalDetails
-  // },
+  {
+    path: '/profile-personal-details',
+    name: 'ProfilePersonalDetails',
+    component: profilePersonalDetails
+  },
   
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
