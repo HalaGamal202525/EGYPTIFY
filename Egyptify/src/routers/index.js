@@ -19,9 +19,6 @@ import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
-import activitydatail from '../Pages/activity/place details/food/place detailspage.vue'
-// import profilePersonalDetails from '../Pages/profile-personal-details.vue'
-
 
 const routes = [
   { path: '/', component: Home },
@@ -39,10 +36,7 @@ const routes = [
   //   name: 'ProfilePersonalDetails',
   //   component: profilePersonalDetails
   // },
-
-
-    { path: '/detail', component: activitydatail },
-
+  
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
   { path: '/blog', component: BlogPage },
@@ -52,7 +46,6 @@ const routes = [
     name: 'Hala',
     component: Hala
   },
-
 
   { path: '/tabs', component: Tabs },
 
@@ -84,6 +77,12 @@ const routes = [
       { path: 'food', component: Food },
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
+  },
+  {
+    path:'/Terms-of-use',
+    name:'Terms of use',
+    component: TermsOfUse
+
   }
 
 ]

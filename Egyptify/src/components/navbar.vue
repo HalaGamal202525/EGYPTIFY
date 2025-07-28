@@ -1,15 +1,15 @@
 <template>
   <nav
-    class="w-full flex items-center justify-between px-[137px] py-4 h-28 
+    class="w-full flex items-center justify-between px-[137px] py-4 h-20 
            bg-transparent absolute top-0 left-0 z-50"
   >
     <!-- Logo -->
     <div class="flex items-center">
-      <img src="../assets/logo.png" alt="Logo" class="w-40 h-40 object-contain" />
+      <img src="../assets/logo.png" alt="Logo" class="w-30 h-30 object-contain" />
     </div>
 
     <!-- Links -->
-    <div class="hidden md:flex space-x-8 items-center text-[24px]">
+    <div class="hidden md:flex space-x-8 items-center text-[16px]">
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Explore</a>
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Trips</a>
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Reviews</a>
@@ -44,3 +44,8 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+const isDropdownOpen = ref(false);
+</script>
