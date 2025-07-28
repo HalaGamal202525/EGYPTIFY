@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Dream Park",
+    "image": "public/entertainment/dream.jpg",
+    "rate": 4,
+    "description": "One of the largest amusement parks in Egypt. Offers thrill rides, family-friendly zones, and live shows."
+  },
+  {
+    "id": 2,
+    "name": "KidZania ",
+    "image": "public/entertainment/kidzaina.jpg",
+    "rate": 5,
+    "description": "An educational entertainment city where kids role-play real-life jobs in a safe and fun environment"
+  },
+  {
+    "id": 3,
+    "name": "Magic Planet",
+    "image": "public/entertainment/magic.jpg",
+    "rate": 3.5,
+    "description": "Indoor fun center with arcade games, bumper cars, and 7D cinema."
+  },
+  {
+    "id": 4,
+    "name": "Vox Cinemas",
+    "image": "public/entertainment/vox.webp",
+    "rate": 4,
+    "description": "Modern cinemas featuring IMAX, VIP lounges, and the latest movies."
+  },
+  {
+    "id": 5,
+    "name": "Mall of Egypt",
+    "image": "public/entertainment/mallegypt.webp",
+    "rate": 4,
+    "description": "A full entertainment mall with shopping, restaurants, and Ski Egypt – the first indoor ski slope in Africa."
+  },
+  {
+    "id": 6,
+    "name": "ZED Park ",
+    "image": "public/entertainment/zed.webp",
+    "rate": 5,
+    "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events."
+  },
+  {
+    "id": 7,
+    "name": "Family Park ",
+    "image": "public/entertainment/family.webp",
+    "rate": 3.5,
+    "description": "Large open park with water play areas, a train ride, and various kids' activities."
+  },
+  {
+    "id": 8,
+    "name": "Al-Azhar Park ",
+    "image": "public/entertainment/alazhar.webp",
+    "rate": 4,
+    "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails"
+  },
+  {
+    "id": 9,
+    "name": "Giza Zoo",
+    "image": "public/entertainment/zoo.webp",
+    "rate": 5,
+    "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids."
+  },
+  {
+    "id": 10,
+    "name": "Butterfly Garden",
+    "image": "public/entertainment/buttterfly.jpeg",
+    "rate": 4.5,
+    "description": "An interactive experience where visitors can walk among free-flying butterflies in a natural habitat."
+  },{
+  "id": 11,
+  "name": "Africa Safari Park",
+  "image": "public/entertainment/afrcaina.jpg",
+  "rate": 4.5,
+  "description": "A unique drive-thru safari experience where visitors can see wild animals up close in a natural environment."
+},
+{
+  "id": 12,
+  "name": "Aqua Park Cairo",
+  "image": "public/entertainment/Aqua Park Cairo.webp",
+  "rate": 4,
+  "description": "A large water park featuring pools, slides, and attractions suitable for all ages."
+}
+ 
+]

@@ -1,7 +1,9 @@
 <template>
   <div class="w-full">
     <Navbar />
-
+<Slide v-for="(img, index) in images" :key="index">
+  <img :src="img.default" :alt="'Slide ' + (index + 1)" class="slide-img" />
+</Slide>
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
@@ -238,7 +240,7 @@
   buttonText="Explore"
             class="!bg-[#D9D9D9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
           />
-
+     
         </div>
       </div>
     </section>
@@ -266,7 +268,7 @@
   buttonText="View offer"
             class="bg-[#FFFDF9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
           />
-
+     
         </div>
       </div>
     </section>
@@ -281,6 +283,8 @@ import btn from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
+import Slide from "../components/ImageSlider.vue"
+
 
 const popular = [
   {
@@ -445,7 +449,7 @@ const offer = [
     title: "Luxor & Aswan",
     description: "Bundle deal – Cruise + Hotels",
   },
-
+ 
 ];
 
 import { ref, onMounted, nextTick } from "vue";
