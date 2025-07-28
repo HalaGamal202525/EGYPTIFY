@@ -19,6 +19,8 @@ import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
+import TermsOfUse from '../Pages/Terms-of-use.vue'
+import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -47,7 +49,8 @@ const routes = [
     component: Hala
   },
 
-  { path: '/tabs', component: Tabs },
+  { path: '/tabs', component: Tabs },  { path: '/fooddetail', component: FoodDetail },
+
 
   {
   path: '/dropdownDemo',
@@ -78,6 +81,7 @@ const routes = [
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
   },
+
   {
     path:'/Terms-of-use',
     name:'Terms of use',
