@@ -14,6 +14,8 @@ import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
+import ContactUs from '../Pages/ContactUs.vue'
+
 
    
 const routes = [
@@ -55,7 +57,13 @@ const routes = [
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
-  }
+  },
+  {
+  path: '/contact',
+  name: 'ContactUs',
+  component: ContactUs
+},
+
 ]
 
 const router = createRouter({
