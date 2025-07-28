@@ -41,14 +41,14 @@ const reviews = ref([
   {
     name: 'Sarah A.',
     date: 'July 2025',
-    content: 'Great for families. Kids loved it. Camel ride was fun but overpriced',
+    content: 'Siwa is magical — stunning salt lakes, friendly locals, and a deep connection to nature.',
     rating: 5,
     avatar: '/sara/person.jpeg'
   },
   {
     name: 'Ahmed M.',
     date: 'June 2025',
-    content: 'Absolutely breathtaking! A must-see. Go early to avoid crowds',
+    content: ' stunning salt lakes, friendly locals, and a deep connection to nature.',
     rating: 4,
     avatar: '/sara/person2.jpeg'
   }

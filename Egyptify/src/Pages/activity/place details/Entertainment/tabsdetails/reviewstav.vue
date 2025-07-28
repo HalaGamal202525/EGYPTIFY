@@ -41,7 +41,7 @@ const reviews = ref([
   {
     name: 'Sarah A.',
     date: 'July 2025',
-    content: 'Great for families. Kids loved it. Camel ride was fun but overpriced',
+    content: 'Great for families. Kids loved it. Camel ride was fun but overpriced.',
     rating: 5,
     avatar: '/sara/person.jpeg'
   },

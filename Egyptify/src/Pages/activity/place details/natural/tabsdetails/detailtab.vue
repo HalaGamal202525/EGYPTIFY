@@ -43,9 +43,13 @@
     <h3 class="text-xl font-bold text-yellow-700">Tips</h3>
   </div>
   <ul class="list-disc pl-6 text-gray-700 space-y-1">
-    <li>Wear a hat and sunglasses.</li>
-    <li>Bring water.</li>
-    <li>Avoid aggressive street vendors.</li>
+    <li>Bring sunscreen, sunglasses, and a scarf (for sand/dust)
+  .</li>
+    <li>Keep a water bottle with you at all times
+.</li>
+    <li> Internet coverage can be limited — prepare offline maps or guides
+</li>
+    <li>Try the 4x4 desert safari — it’s one of Siwa’s best experiences.</li>
   </ul>
 </div>
 
@@ -54,11 +58,11 @@
 
 <script setup>
 const place ={
-        "visitingHours": "8:00AM-5:00PM",
-    "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
-    "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
-    "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
-    "tips": "Go early "
+        "visitingHours": "9:00AM-5:00PM",
+    "entryFees": "Around EGP 30",
+    "bestTimeToVisit": "October to March (15°C to 28°C)",
+    "howToGet": "From Cairo:🚗 By Car: 750 km (about 10 hours)🚌 By Bus:  (12–14 hours)",
+    "tips": "Go early to avoid queues"
 }
 defineProps({
   place: Object

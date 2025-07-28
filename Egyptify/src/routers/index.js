@@ -21,6 +21,11 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
+import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
+import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
+import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
+
+
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 
 const routes = [
@@ -50,7 +55,13 @@ const routes = [
     component: Hala
   },
 
-  { path: '/tabs', component: Tabs },  { path: '/fooddetail', component: FoodDetail },
+  { path: '/tabs', component: Tabs },
+
+// activity detail
+    { path: '/fooddetail', component: FoodDetail },
+    { path: '/historicaldetail', component: HistoricalDetail },
+   { path: '/naturaldetail', component: NaturalDetail },
+    { path: '/entertainmentdetail', component: EntertainmentDetail },
 
 
   {
