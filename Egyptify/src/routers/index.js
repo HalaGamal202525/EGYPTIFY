@@ -4,7 +4,6 @@ import Hala from '../Pages/Hala.vue'
 import Tabs from '../Pages/auth/tabs.vue'
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
-import Sara from '../Pages/sara.vue'
 import Home from '../Pages/home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
@@ -25,7 +24,7 @@ import FoodDetail from '../Pages/activity/place details/food/place detailspage.v
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
 import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
-
+import Roomtype from "../Pages/Roomtype.vue"
 
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 
@@ -70,10 +69,8 @@ const routes = [
   name: 'DropdownDemo',
   component: DropdownMenu
 },
-   {
-    path: '/Sara',
-    name: 'Sara',
-    component: Sara
+  {
+    path:"/roomtype",component:Roomtype
   },
   {
     path: '/transportation',
