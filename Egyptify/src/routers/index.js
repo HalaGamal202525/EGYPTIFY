@@ -14,12 +14,14 @@ import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
-import Activity from "../Pages/activity/tabactivity.vue"
+import Activity from "../Pages/activity/tabactivitypage.vue"
 import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
 import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
+import activitydatail from '../Pages/activity/place details/food/place detailspage.vue'
 // import profilePersonalDetails from '../Pages/profile-personal-details.vue'
+
 
 const routes = [
   { path: '/', component: Home },
@@ -37,7 +39,10 @@ const routes = [
   //   name: 'ProfilePersonalDetails',
   //   component: profilePersonalDetails
   // },
-  
+
+
+    { path: '/detail', component: activitydatail },
+
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
   { path: '/blog', component: BlogPage },
