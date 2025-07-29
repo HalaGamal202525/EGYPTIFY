@@ -4,7 +4,6 @@ import Hala from '../Pages/Hala.vue'
 import Tabs from '../Pages/auth/tabs.vue'
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
-import Sara from '../Pages/sara.vue'
 import Home from '../Pages/home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
@@ -29,11 +28,18 @@ import NaturalDetail from '../Pages/activity/place details/natural/place details
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import path from 'path'
+import ContactUs from '../Pages/ContactUs.vue'
+import Roomtype from "../Pages/Roomtype.vue"
+import offergrid from "../Pages/offer/gridpage.vue"
+import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import HotelPage from '../Pages/HotelPage.vue'
+import UserReview from '../Pages/UserReview.vue'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
+  { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
    {
@@ -52,8 +58,12 @@ const routes = [
 
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
-  { path: '/blog', component: BlogPage },
-  {path: '/blogdetail', component: BlogDetailPage},
+  { path: '/blogs', component: BlogPage },
+   {
+    path: '/blogs/:id',
+    name: 'blogdetail',
+    component: BlogDetailPage
+  },
   {
     path: '/Hala',
     name: 'Hala',
@@ -74,10 +84,8 @@ const routes = [
   name: 'DropdownDemo',
   component: DropdownMenu
 },
-   {
-    path: '/Sara',
-    name: 'Sara',
-    component: Sara
+  {
+    path:"/roomtype",component:Roomtype
   },
   {
     path: '/transportation',
@@ -110,7 +118,15 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
-  }
+  },
+  {
+    path:"/offerpage",component:offergrid
+  },
+  {
+  path: '/user-review',
+  name: 'User Review',
+  component: UserReview
+},
 
 ]
 

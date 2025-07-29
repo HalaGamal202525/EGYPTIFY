@@ -1,0 +1,98 @@
+[
+    {
+        "id":1,
+        "imageurl":"/roomtype/single.jpg",
+        "name":"Sigle Room",
+        "description":"One single bed for one person",
+        "guestno":1,
+        "price":200 
+    }
+    , {
+        "id":2,
+        "imageurl":"/roomtype/douple.jpg",
+                "name":"Double Room",
+
+        "description":"One queen/king bed, ideal for couples",
+        "guestno":2,
+        "price":350 
+    }, {
+        "id":3,
+        "imageurl":"/roomtype/twin.jpg",    
+                    "name":"Twin Room",
+
+        "description":"Two separate single beds",
+        "guestno":2,
+        "price":400 
+    }, {
+        "id":4,
+        "imageurl":"/roomtype/triple.jpg",
+           "name":"Triple Room",
+        "description":"Three single beds or 1 double + 1 single",
+        "guestno":3,
+        "price":500 
+    }, {
+        "id":5,
+        "imageurl":"/roomtype/family.jpg",
+                   "name":"Family Room",
+
+        "description":"Large room for family (multiple beds)",
+        "guestno":4,
+        "price":700 
+    }, {
+        "id":6,
+        "imageurl":"/roomtype/studio.jpg",
+                           "name":"Studio Room",
+
+        "description":"Open-plan with bed + small kitchen",
+        "guestno":1,
+        "price":800 
+    }, {
+        "id":7,
+        "imageurl":"/roomtype/deluxe.jpeg",                      
+             "name":"Deluxe Room",
+
+        "description":"Upgraded room with better view or space",
+        "guestno":2,
+        "price":900 
+    }, {
+        "id":8,
+        "imageurl":"/roomtype/superior.jpeg",
+                     "name":"Superior Room",
+
+        "description":"Enhanced amenities and decor over standard room",
+        "guestno":2,
+        "price":1200 
+    }, {
+        "id":9,
+        "imageurl":"/roomtype/junior.jpeg",
+                     "name":"Junior Suite",
+
+        "description":"Bedroom with small living area (open layout)",
+        "guestno":3,
+        "price":1500 
+    }, {
+        "id":10,
+        "imageurl":"/roomtype/suite.jpeg",
+                     "name":"Suite",
+
+        "description":"Bedroom + separate living room, often luxurious",
+        "guestno":4,
+        "price":1700 
+    }, {
+        "id":11,
+        "imageurl":"/roomtype/president.jpeg",
+                     "name":"Presidential Suite",
+
+        "description":"Luxurious suite with multiple rooms and exclusive features",
+        "guestno":6,
+        "price":3000 
+    }, {
+        "id":12,
+        "imageurl":"/roomtype/connecting.jpeg",
+                     "name":"Connecting Rooms",
+
+        "description":"Two rooms with an internal door, great for families/friends",
+        "guestno":6,
+        "price":2500 
+    }
+]
