@@ -25,7 +25,7 @@ import HistoricalDetail from '../Pages/activity/place details/historical/place d
 import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
 import Roomtype from "../Pages/Roomtype.vue"
-
+import offergrid from "../Pages/offer/gridpage.vue"
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 
 const routes = [
@@ -107,7 +107,13 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
-  }
+  },
+  {
+    path:"/offergrid",
+    component: offergrid
+  },
+
+
 
 ]
 
