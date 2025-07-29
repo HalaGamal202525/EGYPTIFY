@@ -27,6 +27,7 @@ import EntertainmentDetail from '../Pages/activity/place details/Entertainment/p
 import Roomtype from "../Pages/Roomtype.vue"
 
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import HotelPage from '../Pages/HotelPage.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -107,7 +108,12 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
-  }
+  },
+  {
+  path:'/hotelpage',
+  name:'HotelPage',
+  component: HotelPage
+  },
 
 ]
 
