@@ -10,23 +10,24 @@
     <!-- Content Section -->
     <div class="flex-1">
       <!-- Toggle View -->
-      <div class="flex justify-start gap-2 mb-6">
-        <button
-          @click="viewMode = 'grid'"
-          :class="viewMode === 'grid' ? 'bg-[#ffc340] text-black' : 'bg-white text-gray-500 border'"
-          class="px-4 py-1 rounded-2xl border"
-        >
-          Grid
-        </button>
+        <!-- أزرار التبديل -->
+<div class="flex justify-center gap-2 my-6 bg-[#ffc340] w-35 rounded-3xl py-1 ">
+  <button
+    @click="viewMode = 'grid'"
+    :class="viewMode === 'grid' ? 'bg-white text-black rounded-2xl' : ' border border-[#ffc340] rounded-2xl text-white'"
+    class="px-4 py-1 rounded text-sm"
+  >
+    Grid
+  </button>
 
-        <button
-          @click="viewMode = 'list'"
-          :class="viewMode === 'list' ? 'bg-[#ffc340] text-black' : 'bg-white text-gray-500 border'"
-          class="px-4 py-1 rounded-2xl border"
-        >
-          List
-        </button>
-      </div>
+  <button
+    @click="viewMode = 'list'"
+    :class="viewMode === 'list' ? 'bg-white text-black rounded-2xl' : 'border border-[#ffc340] rounded-2xl text-white'"
+    class="px-4 py-1 rounded text-sm"
+  >
+    List
+  </button>
+</div>
 
       <!-- Cards -->
       <div v-if="viewMode === 'grid'" class="grid grid-cols-2 md:grid-cols-3 gap-6">

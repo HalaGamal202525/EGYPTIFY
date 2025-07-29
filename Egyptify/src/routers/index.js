@@ -28,10 +28,8 @@ import NaturalDetail from '../Pages/activity/place details/natural/place details
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import path from 'path'
-import ContactUs from '../Pages/ContactUs.vue'
 import Roomtype from "../Pages/Roomtype.vue"
 import offergrid from "../Pages/offer/offerpage.vue"
-import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
 
