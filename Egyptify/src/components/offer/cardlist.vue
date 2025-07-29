@@ -27,18 +27,22 @@
 
         <!-- التقييم والسعر -->
         <div class="flex justify-between items-end">
-          <div class="text-sm font-medium text-yellow-400">
-            ⭐ {{ data.rate }}
-            <span class="text-gray-500">({{ data.numofreviews }})</span>
-          </div>
+           <div class="text-sm font-medium" style="color: #ffc340;">
+         {{ data.review }} ⭐
+        <span class="text-gray-500">({{ data.numofreviews }})</span>
+      </div>
+        <p class="text-gray-800 font-bold text-base">Trip time: {{ data.howlong }}</p>
+
 
           <div class="text-right text-sm">
             <p class="text-green-700 font-semibold">{{ data.afterdesc }}</p>
             <p class="line-through text-gray-400">{{ data.beforedesc }}</p>
           </div>
+        
         </div>
       </div>
-
+                 <p class="text-gray-800 text-base">spot left: {{ data.numoflocation }}</p>
+        <p class="text-gray-800 text-base">Type: {{ data.type }}</p>
       <!-- الجزء السفلي -->
       <div class="mt-4">
         <div class="text-base font-medium text-gray-700 mb-2">

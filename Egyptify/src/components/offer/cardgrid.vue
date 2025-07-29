@@ -19,21 +19,24 @@
       </div>
 
       <!-- الوصف -->
-      <p class="text-gray-700 text-sm h-15 leading-relaxed">
+      <p class="text-gray-700 text-sm h-20 leading-relaxed">
         {{ data.descripation }}
       </p>
 
       <!-- التقييم والمراجعات -->
       <div class="text-sm font-medium" style="color: #ffc340;">
-        ⭐ {{ data.rate }} 
+         {{ data.review }} ⭐
         <span class="text-gray-500">({{ data.numofreviews }})</span>
       </div>
+        <p class="text-gray-800 font-bold text-base">Trip time: {{ data.howlong }}</p>
 
       <!-- السعر -->
       <div class="flex flex-col gap-1">
         <p class="text-green-700 font-bold text-base">{{ data.afterdesc }}</p>
         <p class="line-through text-sm text-gray-400">{{ data.beforedesc }}</p>
       </div>
+        <p class="text-gray-800 text-base">spot left: {{ data.numoflocation }}</p>
+        <p class="text-gray-800 text-base">Type: {{ data.type }}</p>
 
       <!-- زر التفاصيل -->
         <div
