@@ -171,6 +171,7 @@ import reviews from '../components/reviews.vue'
 import BaseButton from '../components/BaseButton.vue'
 
 
+
 </script>
 
 <style scoped>
