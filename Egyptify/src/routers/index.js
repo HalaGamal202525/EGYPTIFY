@@ -28,6 +28,7 @@ import Roomtype from "../Pages/Roomtype.vue"
 import offergrid from "../Pages/offer/gridpage.vue"
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import HotelPage from '../Pages/HotelPage.vue'
+import UserReview from '../Pages/UserReview.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -112,7 +113,12 @@ const routes = [
   },
   {
     path:"/offerpage",component:offergrid
-  }
+  },
+  {
+  path: '/user-review',
+  name: 'User Review',
+  component: UserReview
+},
 
 ]
 

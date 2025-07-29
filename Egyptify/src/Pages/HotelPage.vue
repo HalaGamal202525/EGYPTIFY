@@ -155,7 +155,10 @@
 />
         </div>
         <div class="mt-4">
-          <BaseButton class="text-white">Read all reviews</BaseButton>/>
+          <router-link to="/user-review">
+   <BaseButton class="text-white">Write a review</BaseButton>/>
+</router-link>
+         
         </div>
       </div>
     </section>
@@ -165,7 +168,7 @@
 </template>
 
 <script setup>
-import Navbar from '../components/navbar.vue'
+import Navbar from '../components/navbar-black.vue'
 import Footer from '../components/footer.vue'
 import reviews from '../components/reviews.vue'
 import BaseButton from '../components/BaseButton.vue'
