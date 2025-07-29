@@ -79,26 +79,80 @@
           </div>
 
           
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <div class="flex justify-between items-center mb-3">
-              <h3 class="text-lg font-medium text-black">Write your review</h3>
-              <button class="flex items-center gap-1 text-gray-500 text-sm hover:text-blue-500">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 1010 10A10 10 0 0012 2z"/>
-                </svg>
-                <span>Review Tips</span>
-              </button>
-            </div>
-            <textarea
-              v-model="reviewText"
-              class="w-full p-3 border border-gray-300 rounded-md h-32 text-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"
-              placeholder="Share details of your experience..."
-            ></textarea>
-            <div class="text-right text-xs mt-1" :class="{'text-red-500': reviewText.length < 100, 'text-gray-500': reviewText.length >= 100}">
-              {{ reviewText.length }}/100 min characters
-            </div>
-          </div>
+           <div class="bg-white p-6 rounded-lg shadow-sm">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="text-lg font-medium text-black">Write your review</h3>
+      <button 
+        class="flex items-center gap-1 text-gray-500 text-sm hover:text-blue-500"
+        @click="showTips = true"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 1010 10A10 10 0 0012 2z"/>
+        </svg>
+        <span>Review Tips</span>
+      </button>
+    </div>
+    <textarea
+      v-model="reviewText"
+      class="w-full p-3 border border-gray-300 rounded-md h-32 text-gray-500 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400"
+      placeholder="Share details of your experience..."
+    ></textarea>
+    <div class="text-right text-xs mt-1" :class="{'text-red-500': reviewText.length < 100, 'text-gray-500': reviewText.length >= 100}">
+      {{ reviewText.length }}/100 min characters
+    </div>
+  </div>
 
+
+  
+  <div v-if="showTips" class="fixed inset-0 z-50 flex items-center justify-center">
+  
+    <div class="absolute inset-0" @click="showTips = false"></div>
+    
+    
+    <div class="relative bg-white rounded-lg shadow-xl max-w-md w-full p-6 mx-4 border border-gray-200">
+      <button 
+        @click="showTips = false" 
+        class="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <h3 class="text-xl font-bold text-black mb-4">What makes a great review?</h3>
+      
+      <div class="space-y-4">
+        <div>
+          <h4 class="font-semibold text-green-600 mb-2">Do</h4>
+          <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+            <li>Get specific - the more details, the better</li>
+            <li>Share the good, the bad, and just OK</li>
+            <li>Tell us stuff you'd tell your friends</li>
+            <li>Sprinkle in a few tips and recs</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold text-red-600 mb-2">Don't</h4>
+          <ul class="list-disc list-inside space-y-1 text-sm text-gray-700">
+            <li>Use profanity, threats, or personal insults</li>
+            <li>Include personal info like email or phone numbers</li>
+            <li>Write in ALL CAPS</li>
+            <li>Share someone else's experience</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-6 text-right">
+        <button 
+          @click="showTips = false"
+          class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-500 transition-colors"
+        >
+          Got it!
+        </button>
+      </div>
+    </div>
+  </div>
           
           <div class="bg-white p-6 rounded-lg shadow-sm">
             <h3 class="text-lg font-medium text-black mb-3">Title your review</h3>
@@ -162,6 +216,7 @@ const reviewText = ref('')
 const reviewTitle = ref('')
 const selectedCompanion = ref('')
 const companionOptions = ['Business', 'Family', 'Couples', 'Friends', 'Solo']
+const showTips = ref(false)
 
 const getRatingText = (value) => {
   const texts = {
