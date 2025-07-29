@@ -11,9 +11,8 @@ import { blogs } from '../BlogData.js'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-
 const currentPage = ref(1)
-const perPage = 9 // نعرض 9 بوستات في الصفحة
+const perPage = 9
 
 const totalPages = computed(() => Math.ceil(blogs.length / perPage))
 
@@ -54,7 +53,9 @@ function goToDetails(id) {
           <p class="text-sm text-gray-600 mb-4">{{ blog.summary }}</p>
         </div>
         <div class="mt-auto text-center">
-          <BaseButton text="Read More" @click="goToDetails(blog.id)" />
+          
+             <BaseButton  @click="() => goToDetails(blog.id)" >Read More</BaseButton>
+
         </div>
       </div>
     </div>

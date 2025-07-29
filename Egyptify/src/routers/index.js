@@ -41,8 +41,12 @@ const routes = [
   
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
-  { path: '/blog', component: BlogPage },
-  {path: '/blogdetail', component: BlogDetailPage},
+  { path: '/blogs', component: BlogPage },
+   {
+    path: '/blogs/:id',
+    name: 'blogdetail',
+    component: BlogDetailPage
+  },
   {
     path: '/Hala',
     name: 'Hala',
