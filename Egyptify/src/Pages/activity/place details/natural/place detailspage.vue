@@ -8,26 +8,26 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
             <button @click="$router.back()" class="text-gray-900 hover:text-black text-xl"><i class="fa-solid fa-arrow-left !text-black"></i></button>
-            <h1 class="text-2xl text-black  font-bold">Pyramids of Giza</h1>
+            <h1 class="text-2xl text-black  font-bold">Siwa Oasis</h1>
           </div>
-          <p class="text-lg text-gray-500 font-medium">Historical</p>
+          <p class="text-lg text-gray-500 font-medium">Natural</p>
         </div>
 
         <div class="grid grid-cols-4 gap-4">
           <img
-            src="../../../../../public/Details/historical/1753012412581.jpg"
+            src="../../../../../public/Details/natural/4986c5c252739f7d5d843dcc1ae7f626.jpg"
             alt="Main Image"
             class="col-span-3 row-span-3 w-full h-[400px] object-cover rounded-xl shadow"
           />
           <div class="col-span-1 flex flex-col gap-4">
              <img
-            src="../../../../../public/Details/historical/camel-1839616_1920.jpg"
+            src="../../../../../public/Details/natural/4775dd72eeebef46d23da7124ccc17df.jpg"
             alt="Main Image"
 class="w-full h-[120px] object-cover rounded-xl shadow"          />  <img
-            src=   "../../../../../public/Details/historical/pyramids (3).jpg"
+            src=   "../../../../../public/Details/natural/Rasmohamed.jpg"
             alt="Main Image"
 class="w-full h-[120px] object-cover rounded-xl shadow"          />  <img
-            src= "../../../../../public/Details/historical/pyramids (4).jpg"
+            src= "../../../../../public/Details/natural/siwa.jpg"
 
             alt="Main Image"
 class="w-full h-[120px] object-cover rounded-xl shadow"          />
@@ -58,7 +58,7 @@ import foot from '../../../../components/footer.vue'
 import TabComponent from './activitydatail.vue'
 import overviewtab from './tabsdetails/overviewtab.vue'
 
-import data from '../../../../data/historical.json'
+import data from '../../../../data/natural.json'
 import fooddetail from '../../../../data/detail/food.json'
 
 // بيانات المكان

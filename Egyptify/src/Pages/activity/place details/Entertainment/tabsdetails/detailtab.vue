@@ -43,9 +43,9 @@
     <h3 class="text-xl font-bold text-yellow-700">Tips</h3>
   </div>
   <ul class="list-disc pl-6 text-gray-700 space-y-1">
-    <li>Wear a hat and sunglasses.</li>
-    <li>Bring water.</li>
-    <li>Avoid aggressive street vendors.</li>
+    <li>Bring snacks – food inside is affordable but queues may form </li>
+    <li>Check ride maintenance; some visitors mention occasional ride closures .</li>
+    <li>Ideal for family trips, school visits, corporate outing.</li>
   </ul>
 </div>
 
@@ -54,11 +54,11 @@
 
 <script setup>
 const place ={
-        "visitingHours": "8:00AM-5:00PM",
-    "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
-    "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
-    "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
-    "tips": "Go early "
+        "visitingHours": "10 AM – 9/10 PM",
+    "entryFees": "EGP 120–239",
+    "bestTimeToVisit": "Spring (March–May) and Autumn (October–November",
+    "howToGet": "From Downtown Cairo: approx. 45–60 minutes",
+    "tips": "Go early to avoid queues"
 }
 defineProps({
   place: Object

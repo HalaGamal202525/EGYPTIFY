@@ -44,11 +44,11 @@
 
 <script setup>
 const overviewData ={
-      "description": "The Giza Plateau features three legendary pyramids: The Great Pyramid of Khufu, the largest and only surviving Wonder of the Ancient World;  the Pyramid of Khafre, known for its elevated base and proximity to the Great Sphinx; and the Pyramid of Menkaure, the smallest yet refined in design.Together, they reflect the engineering mastery and spiritual depth of ancient Egypt.",
-    "rating": 4.9,
-    "address": "Al Haram, Giza Governorate 3512201, Egypt",
-    "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
-    "mapImage": " public/Details/historical/Rectangle 7.png",
+      "description": "Siwa Oasis is one of Egypt’s most remote and enchanting destinations, located near the Libyan border in the heart of the Western Desert. Known for its serene landscapes, Siwa offers a unique blend of natural beauty, historical significance, and indigenous Amazigh (Berber) culture.The oasis is home to crystal-clear salt lakes, hot and cold springs, golden sand dunes, and thousands of date palm trees. One of its most famous spots is Cleopatra’s Pool, a natural spring where legend says the queen herself once bathed..",
+    "rating": 4.8,
+    "address": "Siwa Oasis, Matrouh Governorate, Western Desert, Egypt",
+    "mapLink": "https://maps.app.goo.gl/SRqoKNggiac9QwYy5",
+    "mapImage": "/public/Details/natural/image 9.png",
 }
 
 import BaseButton from '../../../../../components/BaseButton.vue';

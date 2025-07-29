@@ -4,7 +4,6 @@ import Hala from '../Pages/Hala.vue'
 import Tabs from '../Pages/auth/tabs.vue'
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
-import Sara from '../Pages/sara.vue'
 import Home from '../Pages/home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
@@ -14,6 +13,7 @@ import BlogDetailPage from '../Pages/BlogDetails.vue'
 import Transportation from '../Pages/Transportation.vue'
 import NavBarMenu from '../Pages/auth/NavBarMenu.vue'
 import TripPlanner from '../Pages/TripPlanner.vue'
+import ContactUs from '../Pages/ContactUs.vue'
 import Activity from "../Pages/activity/tabactivitypage.vue"
 import Historical from '../Pages/activity/historicalactivity.vue'
 import Natural from '../Pages/activity/natural.vue'
@@ -21,11 +21,19 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
+import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
+import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
+import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
+import Roomtype from "../Pages/Roomtype.vue"
+import offergrid from "../Pages/offer/gridpage.vue"
+import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import HotelPage from '../Pages/HotelPage.vue'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
+  { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
   {
@@ -33,11 +41,11 @@ const routes = [
     name: 'TripPlanner',
     component: TripPlanner
   },   
-  // {
-  //   path: '/profile-personal-details',
-  //   name: 'ProfilePersonalDetails',
-  //   component: profilePersonalDetails
-  // },
+  {
+    path: '/profile-personal-details',
+    name: 'ProfilePersonalDetails',
+    component: profilePersonalDetails
+  },
   
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
@@ -53,7 +61,13 @@ const routes = [
     component: Hala
   },
 
-  { path: '/tabs', component: Tabs },  { path: '/fooddetail', component: FoodDetail },
+  { path: '/tabs', component: Tabs },
+
+// activity detail
+    { path: '/fooddetail', component: FoodDetail },
+    { path: '/historicaldetail', component: HistoricalDetail },
+   { path: '/naturaldetail', component: NaturalDetail },
+    { path: '/entertainmentdetail', component: EntertainmentDetail },
 
 
   {
@@ -61,10 +75,8 @@ const routes = [
   name: 'DropdownDemo',
   component: DropdownMenu
 },
-   {
-    path: '/Sara',
-    name: 'Sara',
-    component: Sara
+  {
+    path:"/roomtype",component:Roomtype
   },
   {
     path: '/transportation',
@@ -72,6 +84,16 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
+    {
+    path: '/tripplanner',
+    name: 'TripPlanner',
+    component: TripPlanner
+  },
+  {
+  path: '/contact',
+  name: 'ContactUs',
+  component: ContactUs
+},
 
   {
     path: '/activity',
@@ -91,6 +113,9 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
+  },
+  {
+    path:"/offerpage",component:offergrid
   }
 
 ]

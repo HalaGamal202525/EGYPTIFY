@@ -44,11 +44,11 @@
 
 <script setup>
 const overviewData ={
-      "description": "The Giza Plateau features three legendary pyramids: The Great Pyramid of Khufu, the largest and only surviving Wonder of the Ancient World;  the Pyramid of Khafre, known for its elevated base and proximity to the Great Sphinx; and the Pyramid of Menkaure, the smallest yet refined in design.Together, they reflect the engineering mastery and spiritual depth of ancient Egypt.",
-    "rating": 4.9,
-    "address": "Al Haram, Giza Governorate 3512201, Egypt",
-    "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
-    "mapImage": " public/Details/historical/Rectangle 7.png",
+      "description": "Dream Park is one of Egypt’s largest and most popular amusement parks, located on Wahat Road in the Dreamland Compound, 6th of October City, Giza. Established in 1999 and spanning over 150 acres, the park is divided into three main zones: Kids Zone, Family Zone, and Thrill Zone — offering more than 30 attractions ranging from gentle rides to intense roller coasters. It features an inverted roller coaster with five loops, 5D and 7D simulators, bumper cars, a Ferris wheel, Go-Karts, and a famous Horror House.",
+    "rating": 4.8,
+    "address": "Wahat Road, Dreamland Compound, 6th of October City, Giza, Egypt",
+    "mapLink": "https://maps.app.goo.gl/nzmydsifoXZ6iEQe7",
+    "mapImage": "/public/Details/entetainment/3.png",
 }
 
 import BaseButton from '../../../../../components/BaseButton.vue';
