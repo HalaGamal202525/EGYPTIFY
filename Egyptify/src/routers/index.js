@@ -23,6 +23,7 @@ import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
 import aboutUs from '../Pages/About-Us.vue'
+import Map from '../Pages/Map.vue'
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
 import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
@@ -46,11 +47,8 @@ const routes = [
     component: profilePersonalDetails
   },
   
-   {
-    path: '/about-us',
-    name: 'AboutUs',
-    component: AboutUs
-  },
+  { path: '/about-us', component: aboutUs},
+  { path: '/map', component: Map },
 
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
