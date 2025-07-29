@@ -1,8 +1,8 @@
+// src/BlogData.js
 import post1 from './assets/blogs/post1.jpg'
 import post2 from './assets/blogs/post2.jpg'
-import person1 from './assets/blogs/person1.png'  // <-- هنا الامتداد الصحيح
-import person2 from './assets/blogs/person2.png'  // <-- لو التانية برضو .png
-
+import person1 from './assets/blogs/person1.png'
+import person2 from './assets/blogs/person2.png'
 
 export const blogs = [
   {
@@ -14,6 +14,7 @@ export const blogs = [
     image: post1,
     authorImage: person1,
     authorBio: "Egyptologist and travel writer.",
+    content: `Luxor is often referred to as the world's greatest open-air museum...`
   },
   {
     id: 2,
@@ -24,46 +25,7 @@ export const blogs = [
     image: post2,
     authorImage: person2,
     authorBio: "Photographer and Nile explorer.",
+    content: `Aswan offers more than just its famous High Dam...`
   },
-  // ضيفي باقي البوستات بنفس الشكل
-  {
-    id: 3,
-    title: "A Day in Cairo",
-    author: "Nour El-Din",
-    date: "May 2025",
-    summary: "Enjoy the hustle and history of Cairo in one day.",
-   image: post1,
-    authorImage: person1,
-    authorBio: "Journalist and travel blogger.",
-  },
-  {
-    id: 4,
-    title: "Relaxing in Siwa",
-    author: "Laila Hassan",
-    date: "April 2025",
-    summary: "Discover the beauty and calm of Siwa Oasis.",
-  image: post1,
-    authorImage: person1,
-    authorBio: "Wellness coach and nature lover.",
-  },
-  {
-    id: 5,
-    title: "Snorkeling in Marsa Alam",
-    author: "Ahmed Selim",
-    date: "March 2025",
-    summary: "Explore the stunning coral reefs of Marsa Alam.",
-    image: post1,
-    authorImage: person1,
-    authorBio: "Marine biologist and diver.",
-  },
-  {
-    id: 6,
-    title: "Alexandria: Mediterranean Charm",
-    author: "Yasmine Fouad",
-    date: "February 2025",
-    summary: "Take a walk along the corniche and into history.",
-   image: post1,
-    authorImage: person1,
-    authorBio: "Historian and storyteller.",
-  },
+  // باقي البوستات بنفس الشكل...
 ]
