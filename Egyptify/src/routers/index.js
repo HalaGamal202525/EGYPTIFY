@@ -33,6 +33,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
+  { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
   {
@@ -108,6 +109,9 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
+  },
+  {
+    path:"/offerpage",component:offergrid
   }
 
 ]
