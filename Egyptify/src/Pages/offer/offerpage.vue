@@ -3,7 +3,7 @@
   <div class="flex gap-6 px-6 my-16">
     
     <!-- Sidebar Filters -->
-    <div class="w-64">
+    <div class="w-64 mt-17">
       <PlaceFilters :allPlaces="places" @update:filters="applyFilters" />
     </div>
 
