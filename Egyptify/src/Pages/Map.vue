@@ -20,13 +20,13 @@
             </a>
 
             <div class="absolute bottom-4 right-2 flex flex-col space-y-2">
-                <button class="bg-gray-200 p-2 rounded-t-xl shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center">
+                <button class="bg-gray-200 p-2 rounded-t-xl shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center cursor-pointer">
                     <Plus class="w-5 h-5" />
                 </button>
-                <button class="bg-gray-200 p-2 rounded-b-xl shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center">
+                <button class="bg-gray-200 p-2 rounded-b-xl shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center cursor-pointer">
                     <Minus class="w-5 h-5" />
                 </button>
-                <button class="bg-gray-200 p-2 rounded-full shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center" @click="openGoogleMapsForCurrentLocation">
+                <button class="bg-gray-200 p-2 rounded-full shadow-3xl border border-gray-400 text-gray-700 font-bolder hover:bg-gray-300 focus:outline-none flex items-center justify-center cursor-pointer" @click="openGoogleMapsForCurrentLocation">
                     <MapPin class="w-5 h-5" />
                 </button>
             </div>

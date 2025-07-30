@@ -5,7 +5,8 @@
       :placeholder="placeholder"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
-      class="w-full py-3 px-4 pl-12 text-gray-700 border border-yellow-400 rounded-[16px] focus:outline-none focus:ring-1 focus:ring-yellow-400"
+      class="w-full h-[40px]  pl-10 pr-10 py-3 text-gray-800 rounded-[16px] border-1 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-sm
+         placeholder-gray-500 placeholder-opacity-100 placeholder:text-gray-400 placeholder:text-sm"
     />
     <div v-if="iconName" class="absolute left-4 top-1/2 -translate-y-1/2 text-yellow-400">
       <component :is="getIconComponent(iconName)" class="w-5 h-5" />
