@@ -29,7 +29,7 @@ import NaturalDetail from '../Pages/activity/place details/natural/place details
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
 import path from 'path'
 import Roomtype from "../Pages/Roomtype.vue"
-import offergrid from "../Pages/offer/gridpage.vue"
+// import offergrid from "../Pages/offer/gridpage.vue"
 import offergrid from "../Pages/offer/offerpage.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
