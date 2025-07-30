@@ -30,6 +30,7 @@ import EntertainmentDetail from '../Pages/activity/place details/Entertainment/p
 import path from 'path'
 import Roomtype from "../Pages/Roomtype.vue"
 import offergrid from "../Pages/offer/gridpage.vue"
+import offergrid from "../Pages/offer/offerpage.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
 
@@ -40,7 +41,7 @@ const routes = [
   { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
-   {
+  {
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
