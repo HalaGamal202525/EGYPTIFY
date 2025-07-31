@@ -49,7 +49,7 @@ const routes = [
     component: TripPlanner
   },  
   {
-    path: '/profile-personal-details',
+    path: '/profile',
     name: 'ProfilePersonalDetails',
     component: profilePersonalDetails
   },

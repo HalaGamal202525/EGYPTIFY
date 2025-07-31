@@ -13,6 +13,7 @@
         authLinkText="Already have an account?"
         authLinkAction="Log in"
         authLinkRoute="/login"
+        @submit="handleSignUp"
       />
     </div>
 
@@ -29,4 +30,20 @@
 
 <script setup>
 import AuthForm from '../../components/AuthForm.vue'
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+// دي الدالة الصح اللي بتتنفذ عند الضغط على الزر
+async function handleSignUp({ email, password }) {
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("Sign up successful!");
+    router.push("/"); // غيري الصفحة لو حبيتي
+  } catch (error) {
+    alert("Sign up failed: " + error.message);
+  }
+}
 </script>
