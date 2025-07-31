@@ -39,11 +39,9 @@
 </div>
 
           <!-- Pagination -->
-          <div class="flex justify-center space-x-2 mt-6">
-            <button>← Previous</button>
-            <button v-for="n in 10" :key="n" class="px-2">{{ n }}</button>
-            <button>Next →</button>
-          </div>
+          
+ 
+
         </div>
       </div>
     </div>
