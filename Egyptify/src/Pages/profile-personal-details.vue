@@ -300,14 +300,14 @@
                 <div class="mb-8">
                     <h3 class="text-xl font-bold text-yellow-500 mb-4">Display</h3>
                     <div class="flex items-center justify-between mb-4">
-                        <label for="language-select" class="text-gray-700">Language</label>
+                        <label for="language-select" class="text-gray-700" style="color:#364153; font-size: medium; font-weight: normal;">Language</label>
                         <select id="language-select" v-model="settings.language" class="border rounded-md px-3 py-2 text-gray-800">
                             <option value="english">English</option>
                             <option value="arabic">العربية</option>
                         </select>
                     </div>
                     <div class="flex items-center justify-between">
-                        <label for="currency-select" class="text-gray-700">Currency</label>
+                        <label for="currency-select" class="text-gray-700" style="color:#364153; font-size: medium; font-weight: normal;">Currency</label>
                         <select id="currency-select" v-model="settings.currency" class="border rounded-md px-3 py-2 text-gray-800">
                             <option value="egp">EGP</option>
                             <option value="usd">USD</option>
@@ -325,7 +325,7 @@
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" v-model="settings.bookingNotifications" class="sr-only peer">
-                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-600"></div>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
                         </label>
                     </div>
                     <div class="flex items-center justify-between">
@@ -335,7 +335,7 @@
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" v-model="settings.promotionalOffers" class="sr-only peer">
-                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-600"></div>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
                         </label>
                     </div>
                 </div>

@@ -24,6 +24,18 @@ app.get('/api/Data/places', (req, res) => {
   });
 });
 
+
+// Express Example
+app.get('/api/Data/places/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const place = places.find(p => p.id === id);
+  if (place) {
+    res.json(place);
+  } else {
+    res.status(404).json({ error: 'Place not found' });
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`✅ Server is running on http://localhost:${PORT}`);
