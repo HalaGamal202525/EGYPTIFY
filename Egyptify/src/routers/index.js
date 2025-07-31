@@ -29,6 +29,7 @@ import offergrid from "../Pages/offer/gridpage.vue"
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
+import DestinationPage from '../Pages/DestinationPage.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -123,6 +124,11 @@ const routes = [
   name: 'User Review',
   component: UserReview
 },
+{
+  path: '/destination',
+  name:'Destination Page',
+  component: DestinationPage
+}
 
 ]
 
