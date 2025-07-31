@@ -32,6 +32,8 @@ import Roomtype from "../Pages/Roomtype.vue"
 import offergrid from "../Pages/offer/offerpage.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
+import payment from "../Pages/payment/payment.vue"
+import form from "../Pages/payment/paymentform.vue"
 
 const routes = [
   { path: '/', component: Home },
@@ -125,6 +127,13 @@ const routes = [
   name: 'User Review',
   component: UserReview
 },
+{
+  path: '/place/:id',
+  name: 'PlaceDetails',
+  component: () => import('../Pages/offer/placeofferdetail.vue')
+},{
+  path:"/payment", component :payment
+},{path:"/form",component:form}
 
 ]
 

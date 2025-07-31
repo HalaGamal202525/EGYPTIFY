@@ -10,7 +10,12 @@
     <!-- Content Section -->
     <div class="flex-1">
       <!-- Toggle View -->
-        <!-- أزرار التبديل -->
+ <div class="flex flex-row justify-between items-center px-3">
+         <p class="mt-4 text-lg font-bold ">
+  {{ filteredPlaces.length }} results found
+</p>
+
+
 <div class="flex justify-center gap-2 my-6 bg-[#ffc340] w-35 rounded-3xl py-1 ">
   <button
     @click="viewMode = 'grid'"
@@ -28,6 +33,7 @@
     List
   </button>
 </div>
+</div>
 
       <!-- Cards -->
       <div v-if="viewMode === 'grid'" class="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -36,6 +42,7 @@
 
       <div v-else class="grid grid-cols-1 gap-4">
         <cardlist v-for="place in filteredPlaces" :key="place.id" :data="place" />
+        
       </div>
     </div>
   </div>
