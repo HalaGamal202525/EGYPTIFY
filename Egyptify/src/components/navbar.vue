@@ -10,9 +10,9 @@
 
     <!-- Links -->
     <div class="hidden md:flex space-x-8 items-center text-[16px]">
-      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Explore</a>
-      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Trips</a>
-      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400">Reviews</a>
+      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400"  @click="goToexplore">Explore</a>
+      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400"  @click="goTotripplaner">Trips</a>
+      <a href="#" class="px-4 text-white font-bold hover:text-yellow-400" @click="goTotripreviews">Reviews</a>
 
       <!-- More Dropdown -->
       <div class="relative px-4" @mouseleave="isDropdownOpen = false">
@@ -90,5 +90,11 @@ router.push("../../../login")}
 function goTohome(){
     router.push("/")}
 
+function goToexplore(){
+    router.push("/explore")}
 
+    function goTotripplaner(){
+    router.push("/tripplanner")}
+            function goTotripreviews(){
+    router.push("/user-review")}
 </script>
