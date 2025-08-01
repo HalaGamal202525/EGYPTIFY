@@ -1,9 +1,12 @@
 <template>
   <div class="w-full">
     <Navbar />
-<Slide v-for="(img, index) in images" :key="index">
-  <img :src="img.default" :alt="'Slide ' + (index + 1)" class="slide-img" />
-</Slide>
+<!-- <Slide v-for="(img, index) in images" :key="index">
+  <img :src="img" :alt="'Slide ' + (index + 1)" class="slide-img" />
+</Slide> -->
+
+<slide></slide>
+
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
@@ -257,7 +260,7 @@
         <div
           v-for="card in offer"
           :key="card.id"
-          class=" group py-2  transition-transform duration-300 hover:scale-110 flex justify-center items-center overflow-hidden"
+          class=" group py-2  transition-transform duration-300 hover:scale-110 flex justify-center items-center text-center overflow-hidden"
         >
           <!-- Card -->
           <Card
@@ -284,6 +287,8 @@ import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
 import Slide from "../components/ImageSlider.vue"
+import 'vue3-carousel/dist/carousel.css'
+const userInput = ref('');
 
 
 const popular = [

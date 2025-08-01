@@ -1,18 +1,11 @@
 <template>
   <section class="slider-section">
-    <Carousel
-      :autoplay="true"
-      :loop="true"
-      :autoplayTimeout="15000"
-      :transition="2000"
-      :pauseAutoplayOnHover="false"
-      :wrapAround="true"
-      class="carousel"
-    >
-      <Slide v-for="(img, index) in images" :key="index">
-        <img :src="img.default" class="slide-img" />
-      </Slide>
-    </Carousel>
+<Carousel :autoplay="3000" :loop="true" :wrapAround="true">
+  <Slide v-for="(img, index) in images" :key="index">
+    <img :src="img" class="slide-img" />
+  </Slide>
+</Carousel>
+
 
     <div class="overlay">
       <div class="text-content">
@@ -29,9 +22,17 @@
 import { Carousel, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
-const images = Object.values(
-  import.meta.glob('../assets/slider/*.jpg', { eager: true })
-)
+const images = [
+  '/public/hero/40996b0ea58ec14d349bd07f20fac572.jpg',
+  '/hero/bluehole.jpg',
+  '/hero/luxor,aswan.webp',
+    '/hero/sailing.jpg',
+  '/hero/seasunset.jpg'
+
+]
+// const images = Object.values(
+//   import.meta.glob('../assets/slider/*.jpg', { eager: true })
+// )
 </script>
 
 <style scoped>
@@ -50,7 +51,9 @@ const images = Object.values(
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
+
 
 .overlay {
   position: absolute;

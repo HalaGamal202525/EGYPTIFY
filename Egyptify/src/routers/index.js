@@ -34,6 +34,8 @@ import offergrid from "../Pages/offer/offerpage.vue"
 import HotelPage from '../Pages/HotelPage.vue'
 import UserReview from '../Pages/UserReview.vue'
 import DestinationPage from '../Pages/DestinationPage.vue'
+import form from "../Pages/payment/paymentform.vue"
+import payment from "../Pages/payment/payment.vue"
 
 const routes = [
   { path: '/', component: Home },
@@ -42,6 +44,10 @@ const routes = [
   { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
+    { path: '/form', component: form },
+      { path: '/payment', component: payment },
+
+
   {
     path: '/tripplanner',
     name: 'TripPlanner',
