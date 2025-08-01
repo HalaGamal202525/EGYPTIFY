@@ -18,7 +18,6 @@
         <span v-else>{{ index + 1 }}</span>
       </div>
 
-      <!-- اسم الخطوة -->
       <p
         class="mt-2 text-sm font-medium transition-all duration-300"
         :class="{
@@ -31,9 +30,7 @@
     </div>
   </div>
 
-  <!-- محتوى كل خطوة -->
   <div class="mt-10 px-6">
-    <!-- step 1 -->
     <div v-if="currentStep === 1">
       <div class="h-1 w-full bg-[#ffc340]"></div>
       <!-- كروت النقل والفندق -->

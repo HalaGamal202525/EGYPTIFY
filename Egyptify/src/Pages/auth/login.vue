@@ -1,5 +1,6 @@
  <template>
   <div class="flex h-screen bg-[#fefaf2] ">
+  
    
     <div class="w-full md:w-1/2 h-full flex justify-center items-center p-8">
       <AuthForm
@@ -35,10 +36,24 @@
 
 <script setup>
 import AuthForm from '../../components/AuthForm.vue'
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { useRouter } from "vue-router";
+import { ref } from "vue";
 
-function handleLogin() {
-  alert('Login submitted')
+const router = useRouter();
+
+async function handleLogin({ email, password }) {
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    alert("Login successful!");
+    router.push("/"); // او الصفحة اللي عايزاها
+  } catch (error) {
+    alert("Login failed: " + error.message);
+  }
 }
+// function handleLogin() {
+// router.push("../home.vue")}
 </script> 
 
 
