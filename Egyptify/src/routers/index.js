@@ -27,7 +27,6 @@ import Map from '../Pages/Map.vue'
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
 import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
 import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
-import path from 'path'
 import Roomtype from "../Pages/Roomtype.vue"
 // import offergrid from "../Pages/offer/gridpage.vue"
 import offergrid from "../Pages/offer/offerpage.vue"
@@ -37,6 +36,10 @@ import DestinationPage from '../Pages/DestinationPage.vue'
 import form from "../Pages/payment/paymentform.vue"
 import payment from "../Pages/payment/payment.vue"
 import searchresult from '../Pages/searchresult.vue'
+import TransportationBooking from "../Pages/TransportationBooking.vue"
+import PassengerInfo from '../Pages/PassengerInfo.vue'
+import TransportationPayment from '../Pages/TransportationPayment.vue'
+import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -138,7 +141,27 @@ const routes = [
   path: '/destination',
   name: 'Destination Page',
   component: DestinationPage
-}
+},
+{
+  path: '/transportation-booking',
+  name: '/TransportationBooking',
+  component: TransportationBooking
+},
+{
+  path: '/passenger-info',
+  name: '/Passenger Info',
+  component: PassengerInfo
+},
+{
+  path: '/transportation-payment',
+  name: '/Transportation Payment',
+  component: TransportationPayment
+},
+{
+  path: '/transportation-confirmation',
+  name: '/TransportationConfirmation',
+  component: TransportationConfirmation
+},
 
 ]
 
