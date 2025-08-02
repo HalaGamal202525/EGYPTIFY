@@ -36,6 +36,10 @@ import UserReview from '../Pages/UserReview.vue'
 import DestinationPage from '../Pages/DestinationPage.vue'
 import form from "../Pages/payment/paymentform.vue"
 import payment from "../Pages/payment/payment.vue"
+import TransportationBooking from "../Pages/TransportationBooking.vue"
+import PassengerInfo from '../Pages/PassengerInfo.vue'
+import TransportationPayment from '../Pages/TransportationPayment.vue'
+import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -137,7 +141,27 @@ const routes = [
   path: '/destination',
   name: 'Destination Page',
   component: DestinationPage
-}
+},
+{
+  path: '/transportation-booking',
+  name: '/TransportationBooking',
+  component: TransportationBooking
+},
+{
+  path: '/passenger-info',
+  name: '/Passenger Info',
+  component: PassengerInfo
+},
+{
+  path: '/transportation-payment',
+  name: '/Transportation Payment',
+  component: TransportationPayment
+},
+{
+  path: '/transportation-confirmation',
+  name: '/TransportationConfirmation',
+  component: TransportationConfirmation
+},
 
 ]
 
