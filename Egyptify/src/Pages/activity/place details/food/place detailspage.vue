@@ -52,7 +52,7 @@ class="w-full h-[120px] object-cover rounded-xl shadow"          />
 
 <script setup>
 import { ref, computed } from 'vue'
-import Navbar from '../../../../components/navbar.vue'
+import Navbar from '../../../../components/NavBar-Black.vue'
 import sidecard from '../../../../components/activity detail/sidecard.vue'
 import foot from '../../../../components/footer.vue'
 import TabComponent from './activitydatail.vue'

@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- التبويبات -->
-    <div class="flex gap-4 mb-6 border-b">
+    <div class="flex gap-4 mb-6 ">
       <button
         v-for="(tab, index) in tabs"
         :key="index"
         @click="activeTab = index"
         :class="[ 
-          'py-2 px-4 font-semibold',
+          'py-2 px-4 font-semibold cursor-pointer',
           activeTab === index ? ' bg-[#ffc340] rounded-md text-black' : 'text-gray-500'
         ]"
       >

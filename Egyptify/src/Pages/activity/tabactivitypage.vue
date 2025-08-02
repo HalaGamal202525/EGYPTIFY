@@ -12,8 +12,8 @@
     />
 
     <!-- Tabs Section -->
-    <section class="px-4 md:px-16 border">
-      <Tabs :tabs="tabsWithComponents" v-model:activeTab="activeTab" />
+    <section class="px-4 md:px-16 border ">
+      <Tabs :tabs="tabsWithComponents" v-model:activeTab="activeTab"  class="cursor-pointer"/>
     </section>
 
     <!-- Footer -->
