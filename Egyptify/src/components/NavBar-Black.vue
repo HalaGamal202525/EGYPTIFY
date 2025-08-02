@@ -13,18 +13,24 @@
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goTotripreviews">Reviews</a>
 
             <!-- More Dropdown -->
-            <div class="relative px-4" @mouseleave="isDropdownOpen = false">
-                <button @mouseenter="isDropdownOpen = true"
-                    class="text-white font-bold hover:text-yellow-400 focus:outline-none">
-                    More
-                </button>
-                <div v-show="isDropdownOpen"
-                    class="absolute top-full left-0 mt-2 bg-white text-black rounded shadow-md py-2 w-40 z-50">
-                    <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold ">About</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold">Contact</a>
-                    <a href="#" class="block px-4 py-2 hover:bg-yellow-100 font-bold">FAQ</a>
-                </div>
-            </div>
+            <div class="relative px-4">
+  <button
+    @click="toggleMenu"
+    class=" font-bold text-gray-800 hover:text-yellow-400 focus:outline-none"
+  >
+    More
+  </button>
+
+  <transition name="fade">
+    <div
+      v-if="isMenuOpen"
+      class="absolute top-full left-0 mt-2 bg-white rounded shadow-md py-2 z-50"
+    >
+<Menubar :isOpen="true" />
+    </div>
+  </transition>
+</div>
+
         </div>
 
       <div class="flex items-center space-x-4">
@@ -74,7 +80,17 @@ const auth = getAuth();
 onAuthStateChanged(auth, (currentUser) => {
   user.value = currentUser;
 });
-const isDropdownOpen = ref(false);
+import Menubar from "./NavBarMenu.vue"
+
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
 function gologin() {
 router.push("../../../login")}
 function goTohome(){

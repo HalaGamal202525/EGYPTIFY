@@ -36,9 +36,10 @@ import UserReview from '../Pages/UserReview.vue'
 import DestinationPage from '../Pages/DestinationPage.vue'
 import form from "../Pages/payment/paymentform.vue"
 import payment from "../Pages/payment/payment.vue"
+import searchresult from '../Pages/searchresult.vue'
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
   { path: '/hotelpage', component: HotelPage },

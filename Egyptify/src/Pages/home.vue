@@ -1,11 +1,11 @@
 <template>
   <div class="w-full">
     <Navbar />
-<!-- <Slide v-for="(img, index) in images" :key="index">
+    <!-- <Slide v-for="(img, index) in images" :key="index">
   <img :src="img" :alt="'Slide ' + (index + 1)" class="slide-img" />
 </Slide> -->
 
-<slide></slide>
+    <slide></slide>
 
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
@@ -14,35 +14,75 @@
       >
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Location -->
-          <div class="flex flex-col gap-2">
-            <label class="text-gray-700 font-semibold text-lg">Where to?</label>
-            <InputField placeholder="Enter Location">
-              <i class="fa-solid fa-location-dot mr-2"></i>
-            </InputField>
-          </div>
+           <div class="flex flex-col gap-2 relative w-full max-w-md mx-auto">
+    <!-- Label -->
+    <label class="text-gray-700 font-semibold text-lg">Where to?</label>
+
+    <!-- InputField -->
+    <InputField
+      v-model="searchText"
+      type="text"
+      placeholder="Enter Location"
+      @input="filterPlaces"
+      @focus="showSuggestions = true"
+      @blur="hideSuggestions"
+    >
+      <!-- Icon -->
+      <template #icon>
+        <i class="fa-solid fa-location-dot mr-2 text-[#ffc340] text-xl"></i>
+      </template>
+    </InputField>
+
+    <!-- Suggestions -->
+    <ul
+      v-if="showSuggestions && filteredPlaces.length"
+      class="absolute top-[82px] left-0 w-full bg-white border border-yellow-300 rounded-lg shadow-lg z-10 max-h-[200px] overflow-y-auto"
+    >
+      <li
+        v-for="place in filteredPlaces"
+        :key="place"
+        class="px-4 py-2 text-gray-700 hover:bg-yellow-100 cursor-pointer"
+        @mousedown.prevent="selectPlace(place)"
+      >
+        {{ place }}
+      </li>
+    </ul>
+  </div>
 
           <!-- Date -->
           <div class="flex flex-col gap-2">
             <label class="text-gray-700 font-semibold text-lg"
               >When to go?</label
             >
-            <InputField type="date">
-              <i class="fa-solid fa-calendar"></i>
+            <InputField v-model="date" type="date">
+              <template #icon> <i class="fa-solid fa-calendar"></i> </template>
             </InputField>
           </div>
+          
 
           <!-- Guests -->
           <div class="flex flex-col gap-2">
             <label class="text-gray-700 font-semibold text-lg">Guests?</label>
-            <InputField type="number" placeholder="No of Guests">
-              <i class="fa-solid fa-user-group"></i>
+            <InputField
+              v-model="guests"
+              type="number"
+              placeholder="No of Guests"
+            >
+              <template #icon>
+                <i class="fa-solid fa-user-group"></i>
+              </template>
             </InputField>
           </div>
         </div>
-
+<div
+  v-if="showModal"
+  class="fixed top-6 left-1/2 transform -translate-x-1/2 bg-red-100 border border-red-400 text-red-700 px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300"
+>
+  Please fill in all fields before searching.
+</div>
         <!-- Search Button -->
         <div class="flex justify-center w-full">
-          <btn class="w-full">
+          <btn class="w-full" @click="handleSearch">
             <i class="fa-solid fa-magnifying-glass mr-2"></i> Search
           </btn>
         </div>
@@ -206,10 +246,10 @@
           v-model="userInput"
           type="text"
           placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 text-white w-[250px] h-full focus:outline-none focus:ring-2 focus:ring-[#FFC340] "
+          class="rounded-lg px-4 py-2 text-white w-[250px] h-full focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
           style="height: 50px"
         >
-        <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-envelope"></i>
         </InputField>
 
         <btn @click="handleJoin" class="my-2" style="height: 50px">Join</btn>
@@ -219,7 +259,7 @@
     </section>
 
     <!-- recommended -->
-<section class="py-16 bg-[#FFFDF9]">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-12">
         <h2 class="special-heading">Recommended</h2>
         <p class="text-xl text-gray-700">Discover top-rated adventures</p>
@@ -231,7 +271,7 @@
         <div
           v-for="card in recommended"
           :key="card.id"
-          class=" group py-2 transition-transform duration-300 hover:scale-110 flex justify-center items-center overflow-hidden"
+          class="group py-2 transition-transform duration-300 hover:scale-110 flex justify-center items-center overflow-hidden"
         >
           <!-- Card -->
           <Card
@@ -240,15 +280,14 @@
             :rating="card.rate"
             :description="card.description"
             :showButton="true"
-  buttonText="Explore"
+            buttonText="Explore"
             class="!bg-[#D9D9D9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
           />
-     
         </div>
       </div>
     </section>
- <!-- offer -->
-<section class="py-16 bg-[#FFFDF9]">
+    <!-- offer -->
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-12">
         <h2 class="special-heading">offers</h2>
         <p class="text-xl text-gray-700">special offer</p>
@@ -260,7 +299,7 @@
         <div
           v-for="card in offer"
           :key="card.id"
-          class=" group py-2  transition-transform duration-300 hover:scale-110 flex justify-center items-center text-center overflow-hidden"
+          class="group py-2 transition-transform duration-300 hover:scale-110 flex justify-center items-center text-center overflow-hidden"
         >
           <!-- Card -->
           <Card
@@ -268,10 +307,9 @@
             :title="card.title"
             :description="card.description"
             :showButton="true"
-  buttonText="View offer"
+            buttonText="View offer"
             class="bg-[#FFFDF9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
           />
-     
         </div>
       </div>
     </section>
@@ -286,10 +324,9 @@ import btn from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
-import Slide from "../components/ImageSlider.vue"
-import 'vue3-carousel/dist/carousel.css'
-const userInput = ref('');
-
+import Slide from "../components/ImageSlider.vue";
+import "vue3-carousel/dist/carousel.css";
+const userInput = ref("");
 
 const popular = [
   {
@@ -408,14 +445,14 @@ const recommended = [
     id: 1,
     image: "sara/tour.jpg",
     title: "Pyramids Tour",
-    rate:5,
+    rate: 5,
     description: "Pyramids Tour",
   },
   {
     id: 2,
     image: "hero/sailing.jpg",
     title: "Nile Sailing",
-        rate:4,
+    rate: 4,
 
     description: "Luxor, Egypt",
   },
@@ -423,14 +460,14 @@ const recommended = [
     id: 3,
     image: "hero/mouz.jpg",
     title: "Market Tour",
-        rate:4.5,
+    rate: 4.5,
     description: "Cairo, Egypt",
   },
   {
     id: 4,
     image: "hero/alazhar1.jpg",
     title: "Al-Azhar Mosque",
-            rate:5,
+    rate: 5,
 
     description: "Cairo, Egypt",
   },
@@ -454,7 +491,6 @@ const offer = [
     title: "Luxor & Aswan",
     description: "Bundle deal – Cruise + Hotels",
   },
- 
 ];
 
 import { ref, onMounted, nextTick } from "vue";
@@ -491,6 +527,67 @@ function handleJoin() {
     // You can send the input to an API here
   }
 }
+
+const location = ref("");
+const date = ref("");
+const guests = ref("");
+
+// function handleSearch() {
+//   console.log("Location:", location.value);
+//   console.log("Date:", date.value);
+//   console.log("Guests:", guests.value);
+
+//   // هنا ممكن تبحثي أو تنتقلي لصفحة جديدة وتحطي البيانات في Firebase أو في URL
+// }
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+
+const showModal = ref(false)
+
+const handleSearch = () => {
+  if (!searchText.value || !date.value || !people.value) {
+    showModal.value = true
+
+    // نخليه يختفي بعد 3 ثواني
+    setTimeout(() => {
+      showModal.value = false
+    }, 3000)
+
+    return
+  }
+
+  router.push({
+    path: '/search-results',
+    query: {
+      location: searchText.value,
+      date: date.value,
+      people: people.value,
+    }
+  })
+}
+const searchText = ref("");
+const showSuggestions = ref(false);
+const allPlaces = ["Cairo", "Aswan", "Luxor", "Alexandria", "Siwa", "Dahab"];
+const filteredPlaces = ref([]);
+
+const filterPlaces = () => {
+  filteredPlaces.value = allPlaces.filter((place) =>
+    place.toLowerCase().includes(searchText.value.toLowerCase())
+  );
+};
+
+const selectPlace = (place) => {
+  searchText.value = place;
+  showSuggestions.value = false;
+};
+
+const hideSuggestions = () => {
+  setTimeout(() => {
+    showSuggestions.value = false;
+  }, 200);
+};
 </script>
 <style>
 label {
