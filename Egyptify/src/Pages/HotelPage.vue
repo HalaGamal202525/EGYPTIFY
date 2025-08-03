@@ -1,12 +1,11 @@
-<template>
+ <template>
   <div class="font-sans">
     <Navbar />
 
     <section class="container mx-auto px-4 py-8 mt-16">
-      <!-- عنوان الفندق و زر الحجز -->
-      <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
-      >
+
+    
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 class="text-2xl font-bold text-black">Iberotel Luxor</h1>
           <p class="text-sm text-black">⭐️⭐️⭐️⭐️⭐️</p>
@@ -30,7 +29,7 @@
         </div>
       </div>
 
-      <!-- صور الفندق -->
+     
       <section class="mt-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
           <div class="md:col-span-8">
@@ -64,7 +63,7 @@
         </div>
       </section>
 
-      <!-- الوصف -->
+     
       <div class="mt-8">
         <h2 class="text-black font-semibold mb-2">Description</h2>
         <p class="text-gray-700 leading-6">
@@ -85,7 +84,7 @@
         </p>
       </div>
 
-      <!-- المرافق -->
+   
       <div class="mt-6">
         <h2 class="text-black font-semibold mb-2">Most popular facilities</h2>
         <ul class="flex flex-wrap gap-4 text-gray-600 text-sm">
@@ -101,7 +100,7 @@
         </ul>
       </div>
 
-      <!-- نموذج الحجز -->
+      
       <div class="mt-8 border p-4 rounded-lg bg-gray-50">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
@@ -149,7 +148,7 @@
         </div>
       </div>
 
-      <!-- التقييمات -->
+     
       <div class="mt-8">
         <h2 class="text-black font-semibold mb-4">Guest Reviews</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -188,21 +187,14 @@
 </template>
 
 <script setup>
-import Navbar from "../components/navbar-black.vue";
-import Footer from "../components/footer.vue";
-import reviews from "../components/reviews.vue";
-import BaseButton from "../components/BaseButton.vue";
-
-import { useRouter } from "vue-router";
-const router = useRouter();
-
-const roomdetail = () => {
-  router.push("./roomtype");
-};
+import Navbar from '../components/navbar-black.vue'
+import Footer from '../components/footer.vue'
+import reviews from '../components/reviews.vue'
+import BaseButton from '../components/BaseButton.vue'
 </script>
 
 <style scoped>
 .container {
   max-width: 1200px;
 }
-</style>
+</style> 
