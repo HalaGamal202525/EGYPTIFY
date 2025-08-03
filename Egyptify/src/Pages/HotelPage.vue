@@ -1,10 +1,10 @@
-<template>
+<!-- <template>
   <div class="font-sans">
     <Navbar />
 
     <section class="container mx-auto px-4 py-8 mt-16">
 
-      <!-- عنوان الفندق و زر الحجز -->
+      
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 class="text-2xl font-bold text-black">Iberotel Luxor</h1>
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <!-- صور الفندق -->
+     
       <section class="mt-8">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
           <div class="md:col-span-8">
@@ -44,7 +44,7 @@
         </div>
       </section>
 
-      <!-- الوصف -->
+     
       <div class="mt-8">
         <h2 class="text-black font-semibold mb-2">Description</h2>
         <p class="text-gray-700 leading-6">
@@ -58,7 +58,7 @@
         </p>
       </div>
 
-      <!-- المرافق -->
+   
       <div class="mt-6">
         <h2 class="text-black font-semibold mb-2">Most popular facilities</h2>
         <ul class="flex flex-wrap gap-4 text-gray-600 text-sm">
@@ -72,7 +72,7 @@
         </ul>
       </div>
 
-      <!-- نموذج الحجز -->
+      
       <div class="mt-8 border p-4 rounded-lg bg-gray-50">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
@@ -93,7 +93,7 @@
         </div>
       </div>
 
-      <!-- نوع الغرف -->
+      
       <div class="mt-6">
         <h2 class="text-xl font-semibold mb-2 text-black">Room Type</h2>
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
@@ -105,7 +105,7 @@
         </div>
       </div>
 
-      <!-- التقييمات -->
+     
       <div class="mt-8">
         <h2 class="text-black font-semibold mb-4">Guest Reviews</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -148,6 +148,147 @@ import Navbar from '../components/navbar-black.vue'
 import Footer from '../components/footer.vue'
 import reviews from '../components/reviews.vue'
 import BaseButton from '../components/BaseButton.vue'
+</script>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+}
+</style> -->
+
+<template>
+  <div class="font-sans">
+    <Navbar />
+
+    <section class="container mx-auto px-4 py-8 mt-16">
+      <!-- عنوان الوجهة -->
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h1 class="text-2xl font-bold text-black">{{ destination.title }}</h1>
+          <p class="text-sm text-black" v-if="destination.rating">⭐️{{ destination.rating }}</p>
+          <p class="text-black mt-1">
+            <i class="fas fa-map-marker-alt"></i> {{ destination.address }}
+            <a href="#" class="text-blue-600 underline ml-2">Show Map</a>
+          </p>
+        </div>
+
+        <div class="flex gap-4 items-center">
+          <i class="far fa-heart text-2xl cursor-pointer"></i>
+          <i class="fas fa-share-alt text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition-colors"></i>
+          <BaseButton class="text-white" v-if="destination.type === 'hotel'">Reserve</BaseButton>
+        </div>
+      </div>
+
+      <!-- الصور -->
+      <section class="mt-8" v-if="destination.images && destination.images.length">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div class="md:col-span-8">
+            <img :src="destination.images[0]" alt="Main" class="w-full h-[310px] object-cover rounded-lg" />
+          </div>
+          <div class="md:col-span-4 flex flex-col gap-4">
+            <img :src="destination.images[1]" class="w-full h-[150px] object-cover rounded-lg" />
+            <img :src="destination.images[2]" class="w-full h-[150px] object-cover rounded-lg" />
+          </div>
+          <div class="col-span-12 grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+            <img
+              v-for="(thumb, i) in destination.thumbnails"
+              :key="i"
+              :src="thumb"
+              class="w-full h-[150px] object-cover rounded-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- الوصف -->
+      <div class="mt-8">
+        <h2 class="text-black font-semibold mb-2">Description</h2>
+        <p class="text-gray-700 leading-6" v-for="(para, i) in destination.description" :key="i">{{ para }}</p>
+      </div>
+
+      <!-- المرافق -->
+      <div v-if="destination.facilities && destination.facilities.length" class="mt-6">
+        <h2 class="text-black font-semibold mb-2">Most popular facilities</h2>
+        <ul class="flex flex-wrap gap-4 text-gray-600 text-sm">
+          <li v-for="(facility, i) in destination.facilities" :key="i">
+            <i :class="facility.icon + ' mr-1'"></i> {{ facility.name }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- نموذج الحجز للفنادق فقط -->
+      <div v-if="destination.type === 'hotel'" class="mt-8 border p-4 rounded-lg bg-gray-50">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div>
+            <label class="text-black">Check-in Date</label>
+            <input type="date" class="border w-full p-2 rounded-md text-black" />
+          </div>
+          <div>
+            <label class="text-black">Check-out Date</label>
+            <input type="date" class="border w-full p-2 rounded-md text-black" />
+          </div>
+          <div>
+            <label class="text-black">Guests</label>
+            <input type="text" class="border w-full p-2 rounded-md text-black" placeholder="2 Adults - 0 Children - 1 Room" />
+          </div>
+          <div class="flex items-end">
+            <BaseButton class="text-white w-full">Search</BaseButton>
+          </div>
+        </div>
+      </div>
+
+      <!-- نوع الغرف للفنادق فقط -->
+      <div v-if="destination.type === 'hotel'" class="mt-6">
+        <h2 class="text-xl font-semibold mb-2 text-black">Room Type</h2>
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+          <div class="flex gap-4">
+            <p class="text-black flex items-center"><i class="fas fa-city mr-1"></i> City View</p>
+            <p class="text-black flex items-center"><i class="fas fa-smoking-ban mr-1"></i> Non-Smoking rooms</p>
+          </div>
+          <a href="#" class="text-blue-600 underline">Show Details</a>
+        </div>
+      </div>
+
+      <!-- التقييمات -->
+      <div v-if="destination.reviews && destination.reviews.length" class="mt-8">
+        <h2 class="text-black font-semibold mb-4">Guest Reviews</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <reviews
+            v-for="(review, i) in destination.reviews"
+            :key="i"
+            :name="review.name"
+            :avatar="review.avatar"
+            :date="review.date"
+            :rating="review.rating"
+            :comment="review.comment"
+          />
+        </div>
+        <div class="mt-4">
+          <router-link to="/user-review">
+            <BaseButton class="text-white">Write a review</BaseButton>
+          </router-link>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+</template>
+
+<script setup>
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+import Navbar from '../components/navbar-black.vue'
+import Footer from '../components/footer.vue'
+import reviews from '../components/reviews.vue'
+import BaseButton from '../components/BaseButton.vue'
+import destinations from '../data/destinations'
+
+const route = useRoute()
+
+const destination = computed(() =>
+  destinations.find((item) => item.slug === route.params.slug)
+)
 </script>
 
 <style scoped>

@@ -40,6 +40,7 @@ import TransportationBooking from "../Pages/TransportationBooking.vue"
 import PassengerInfo from '../Pages/PassengerInfo.vue'
 import TransportationPayment from '../Pages/TransportationPayment.vue'
 import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
+import DestinationDetailsPage from '../Pages/DestinationDetailsPage.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -161,6 +162,11 @@ const routes = [
   path: '/transportation-confirmation',
   name: '/TransportationConfirmation',
   component: TransportationConfirmation
+},
+{
+  path: '/destination/:slug',
+  name: '/DestinationDetails',
+  component: DestinationDetailsPage
 },
 
 ]
