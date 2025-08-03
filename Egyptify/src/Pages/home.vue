@@ -90,40 +90,45 @@
     </div>
 
     <!-- Destination Section -->
-    <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
-        <h2 class="special-heading">Destination</h2>
-        <p class="text-xl text-gray-700">Popular Destination</p>
-      </div>
+   <section class="py-16 bg-[#FFFDF9]">
+  <div class="text-center mb-12">
+    <h2 class="special-heading">Destination</h2>
+    <p class="text-xl text-gray-700">Popular Destination</p>
+  </div>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+  >
+    <div
+      v-for="card in popular"
+      :key="card.id"
+      class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
+    >
+      <!-- عند الضغط على الكارت => صفحة تفاصيل -->
+      <router-link :to="`/popular/${card.id}`" class="w-full max-w-xs">
+        <Card
+          :image="card.image"
+          :title="card.title"
+          :description="card.description"
+          class="bg-white shadow-2xl rounded-xl w-full"
+        />
+      </router-link>
+
+      <!-- عند الضغط على السهم => صفحة الأماكن كلها -->
+      <router-link
+        to="/destination"
+        class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
       >
         <div
-          v-for="card in popular"
-          :key="card.id"
-          class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
+          class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
         >
-          <!-- Card -->
-          <Card
-            :image="card.image"
-            :title="card.title"
-            :description="card.description"
-            class="bg-white shadow-2xl rounded-xl w-full max-w-xs"
-          />
-          <router-link
-            to="/details"
-            class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
-          >
-            <div
-              class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
-            >
-              <i class="fa-solid fa-arrow-right text-white !text-white"></i>
-            </div>
-          </router-link>
+          <i class="fa-solid fa-arrow-right !text-white"></i>
         </div>
-      </div>
-    </section>
+      </router-link>
+    </div>
+  </div>
+</section>
+
     <!-- trip planner -->
     <div class="planner flex flex-col justify-center items-center">
       <h2 class="text-white text-4xl font-bold">Plan your perfect trip</h2>
@@ -165,7 +170,7 @@
     </section>
 
     <!-- top rated -->
-    <section class="py-16 bg-[#FFFDF9] relative" style="height: 600px">
+    <section class="py-16 bg-[#FFFDF9] relative" style="height: 650px">
       <div class="text-center mb-12">
         <h2 class="special-heading">Top rated</h2>
         <p class="text-xl text-gray-700">Chosen by explorers like you</p>
@@ -326,6 +331,7 @@ import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
 import Slide from "../components/ImageSlider.vue";
 import "vue3-carousel/dist/carousel.css";
+import populardestaion from "./populardestaion.vue";
 const userInput = ref("");
 
 const popular = [
@@ -333,25 +339,25 @@ const popular = [
     id: 1,
     image: "hero/alazhar.jpg",
     title: "Cairo",
-    description: "1000 Properties",
+    description: "Al-Azhar Mosque",
   },
   {
     id: 2,
     image: "hero/aswan.jpg",
     title: "Aswan",
-    description: "1000 Properties",
+    description: "Philae Temple",
   },
   {
     id: 3,
     image: "hero/bluehole.jpg",
     title: "Dahab",
-    description: "1000 Properties",
+    description: "Blue Hole",
   },
   {
     id: 4,
-    image: "hero/ala.webp",
-    title: "El Alamin",
-    description: "1000 Properties",
+    image: "/sara/Alexandria Library1.webp",
+    title: "Alexandria",
+    description: "Alexandria Library",
   },
 ];
 const discover = [
@@ -577,7 +583,9 @@ const filterPlaces = () => {
     place.toLowerCase().includes(searchText.value.toLowerCase())
   );
 };
-
+const gotopuplar =()=>{
+  router.push("/destination")
+}
 const selectPlace = (place) => {
   searchText.value = place;
   showSuggestions.value = false;

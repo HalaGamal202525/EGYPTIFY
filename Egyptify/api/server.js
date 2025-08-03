@@ -12,7 +12,6 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(cors());
 
-// ✅ Endpoint الصحيح
 app.get('/api/Data/places', (req, res) => {
   fs.readFile(path.join(__dirname, 'Data', 'places.json'), 'utf8', (err, data) => {
     if (err) {
@@ -25,16 +24,24 @@ app.get('/api/Data/places', (req, res) => {
 });
 
 
-// Express Example
+
 app.get('/api/Data/places/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  const place = places.find(p => p.id === id);
-  if (place) {
-    res.json(place);
-  } else {
-    res.status(404).json({ error: 'Place not found' });
-  }
+  fs.readFile(path.join(__dirname, 'Data', 'places.json'), 'utf8', (err, data) => {
+    if (err) {
+      res.status(500).send({ error: 'Error reading data' });
+    } else {
+      const places = JSON.parse(data); // دلوقتي places متعرفة
+      const id = parseInt(req.params.id);
+      const place = places.find(p => p.id === id);
+      if (place) {
+        res.json(place);
+      } else {
+        res.status(404).json({ error: 'Place not found' });
+      }
+    }
+  });
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -3,10 +3,11 @@
   <Navbar />
 
   <div class="p-14">
-    <div class="flex flex-row mt-4 justify-around items-center">
-        
+    <div class="flex flex-row mt-4 justify-around items-center cursor-pointer">
+      <div class="flex flex-row gap-3 items-center justify-center">
+        <i class="fa-solid fa-arrow-left text-2xl " @click="goback"></i>
       <h3 class="font-bold text-xl d-inline">Filtered By:</h3>
-
+</div>
       <RoomFilter @filter-price="setPrice" @filter-guest="setGuests"  class="flex justify-center my-4 items-center"/>
     </div>
 
@@ -38,6 +39,12 @@ import RoomCard from "../components/card.vue";
 import Navbar from "../components/NavBar-Black.vue";
 import dropdown from "../components/DropdownMenu.vue";
 import foot from "../components/footer.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const goback=()=>{
+  router.back()
+}
+
 
 import roomsData from "../data/room.json"; 
 

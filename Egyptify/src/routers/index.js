@@ -40,7 +40,8 @@ import TransportationBooking from "../Pages/TransportationBooking.vue"
 import PassengerInfo from '../Pages/PassengerInfo.vue'
 import TransportationPayment from '../Pages/TransportationPayment.vue'
 import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
-
+import placedetails from '../Pages/placedetails.vue'
+import popular from "../Pages/populardetails.vue"
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
@@ -52,11 +53,25 @@ const routes = [
       { path: '/payment', component: payment },
 
 
+
   {
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
   },  
+  
+  {
+  path: '/popular/:id',
+  name: 'PlaceDetails',
+  component:()=> import("../Pages/populardetails.vue")
+}
+,
+  
+  {
+  path: '/puplor',
+  name: 'Destination',
+  component: () => import('../Pages/populardestaion.vue')
+},
   {
     path: '/profile',
     name: 'ProfilePersonalDetails',
@@ -122,7 +137,7 @@ const routes = [
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
   },
-
+{path:'/populardest',component:popular},
   {
     path:'/Terms-of-use',
     name:'Terms of use',
