@@ -189,6 +189,8 @@
         <div
           v-for="card in top"
           :key="card.id"
+                    @click="gotopuplar"
+
           class="shrink-0 w-[260px] flex justify-center items-center transition-transform duration-300 hover:scale-105"
         >
           <Card
@@ -598,7 +600,7 @@ const filterPlaces = () => {
   );
 };
 const gotopuplar =()=>{
-  router.push("/destination")
+  router.push("/puplor")
 }
 const gotoplanner =()=>{
   router.push("/tripplanner")
