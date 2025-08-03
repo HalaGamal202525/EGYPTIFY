@@ -41,6 +41,9 @@ import PassengerInfo from '../Pages/PassengerInfo.vue'
 import TransportationPayment from '../Pages/TransportationPayment.vue'
 import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
 import DestinationDetailsPage from '../Pages/DestinationDetailsPage.vue'
+import adventure from '../Pages/adventure.vue'
+import adventuredatail from '../Pages/adventuredetail.vue'
+
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -72,9 +75,9 @@ const routes = [
   name: 'Destination',
   component: () => import('../Pages/populardestaion.vue')
 },
-{path:"/adventures",component:adventure},{path:"/adventure/:id",component:adventuredetail},
-{path:"/food",component:Foodcategoray},{path:"/food/:id",component:Fooddetails},
-{path:"/culture",component:Culture},{path:"/culture/:id",component:Culturedetail},
+{path:"/adventures",component:adventure},{path:"/adventure/:id",component: adventuredetail},
+{path:"/food",component:Foodcategoray},{path:"/food/:id",component: Fooddetails},
+{path:"/culture",component:Culture},{path:"/culture/:id",component: Culturedetail},
 
   {
     path: '/profile',
