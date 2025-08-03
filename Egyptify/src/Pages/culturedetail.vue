@@ -4,7 +4,7 @@
 <div class="px-8 py-6 text-base text-gray-600 mt-20">
     <router-link to="/" class="text-blue-600 hover:underline">Home</router-link>
     <span> &gt; </span>
-    <router-link to="/adventures" class="text-blue-600 hover:underline">Adventure</router-link>
+    <router-link to="/culture" class="text-blue-600 hover:underline">Culture</router-link>
     <span> &gt; </span>
     <span class="text-gray-800 font-semibold">{{ place.title }}</span>
   </div>
@@ -56,43 +56,65 @@ import BaseButton from '../components/BaseButton.vue'
 
 const places = [
   {
-    id: '1',
-    title: "Desert Safari in Siwa",
-    image: "/sara/Desert Safari in Siwa.jpg",
-    images: ["/sara/Desert Safari in Siwa2.jpeg", "/sara/Desert Safari in Siwa3.webp","/sara/Desert Safari in Siwa4.webp","/sara/Desert Safari in Siwa5.webp","/sara/Desert Safari in Siwa6.webp"],
-    description: "Explore the desert dunes in a 4x4 safari.",
-    location: "Siwa Oasis",
-    date: "Available All Year",
-    duration: "6 Hours",
-    people: "2-6 People",
-    price: "500"
+    id: '7',
+    title: "Egyptian Museum Visit",
+    category: "Culture",
+    image: "/sara/Egyptian Museum.jpeg",
+    images: [
+      "/sara/Egyptian Museum2.webp",
+      "/sara/Egyptian Museum3.jpeg",
+      "/sara/Egyptian Museum4.webp",
+      "/sara/Egyptian Museum5.jpg",
+      "/sara/Egyptian Museum6.jpeg"
+    ],
+    description: "Discover ancient artifacts at the world-famous Egyptian Museum.",
+    location: "Cairo",
+    date: "Open Daily",
+    duration: "3 Hours",
+    people: "1-20 People",
+    price: "200"
   },
   {
-    id: '2',
-    title: "Sinai Mountain Hiking",
-    image: "/sara/Sinai Mountain Hiking.jpeg",
-    images: ["/sara/Sinai Mountain Hiking.webp", "/sara/Sinai Mountain Hiking2.webp","/sara/Sinai Mountain Hiking3.webp","/sara/Sinai Mountain Hiking4.webp","/sara/Sinai Mountain Hiking5.webp","/sara/Sinai Mountain Hiking6.webp"],
-    description: "Climb Mount Sinai and enjoy breathtaking sunrise views.",
-    location: "South Sinai",
-    date: "October - April",
-    duration: "1 Day",
+    id: '8',
+    title: "Abu Simbel Temples",
+    category: "Culture",
+    image: "/sara/Abu Simbel Temples.jpeg",
+    images: [
+      "/sara/Abu Simbel Temples2.webp",
+      "/sara/Abu Simbel Temples3.jpg",
+      "/sara/Abu Simbel Temples4.webp",
+      "/sara/Abu Simbel Temples5.webp",
+      "/sara/Abu Simbel Temples6.jpeg"
+    ],
+    description: "Explore the grand Abu Simbel Temples Temple complex and learn about ancient Theban history.",
+    location: "Luxor",
+    date: "Daily Guided Tours",
+    duration: "2 Hours",
+    people: "1-15 People",
+    price: "250"
+  },
+  {
+    id: '9',
+    title: "Islamic Cairo Walking Tour",
+    category: "Culture",
+    image: "/sara/Islamic Cairo.webp",
+    images: [
+      "/sara/Islamic Cairo2.jpeg",
+      "/sara/Islamic Cairo3.webp",
+      "/sara/Islamic Cairo4.jpeg",
+      "/sara/Islamic Cairo5.jpg",
+      "/sara/Islamic Cairo6.webp",
+      "/sara/Islamic Cairo7.webp"
+    ],
+    description: "Walk through centuries of Islamic architecture and history in Old Cairo.",
+    location: "Cairo",
+    date: "Fridays & Saturdays",
+    duration: "4 Hours",
     people: "1-10 People",
-    price: "700"
-  },{
-  id: '3',
-  title: "Camping by Wadi El-Rayan",
-  category: "Adventure",
-  image: "/sara/Camping by Wadi El-Rayan.webp",
-  images: ["/sara/Camping by Wadi El-Rayan2.webp", "/sara/Camping by Wadi El-Rayan3.webp","/sara/Camping by Wadi El-Rayan4.jpeg","/sara/Camping by Wadi El-Rayan5.webp","/sara/Camping by Wadi El-Rayan6.webp","/sara/wadi alrayan.jpg"],
-  description: "Enjoy an overnight camping experience by the waterfalls of Wadi El-Rayan.",
-  location: "Fayoum",
-  date: "October - March",
-  duration: "2 Days / 1 Night",
-  people: "2-12 People",
-  price: "850"
-}
+    price: "180"
+  }
+];
 
-]
 
 const route = useRoute()
 const placeId = route.params.id

@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     goToDetails(id) {
-      this.$router.push(`/detail/${id}`);
+      this.$router.push(`/adventure/${id}`);
     }
   }
 }

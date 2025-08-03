@@ -4,7 +4,7 @@
 <div class="px-8 py-6 text-base text-gray-600 mt-20">
     <router-link to="/" class="text-blue-600 hover:underline">Home</router-link>
     <span> &gt; </span>
-    <router-link to="/adventures" class="text-blue-600 hover:underline">Adventure</router-link>
+    <router-link to="/food" class="text-blue-600 hover:underline">Food</router-link>
     <span> &gt; </span>
     <span class="text-gray-800 font-semibold">{{ place.title }}</span>
   </div>
@@ -56,43 +56,62 @@ import BaseButton from '../components/BaseButton.vue'
 
 const places = [
   {
-    id: '1',
-    title: "Desert Safari in Siwa",
-    image: "/sara/Desert Safari in Siwa.jpg",
-    images: ["/sara/Desert Safari in Siwa2.jpeg", "/sara/Desert Safari in Siwa3.webp","/sara/Desert Safari in Siwa4.webp","/sara/Desert Safari in Siwa5.webp","/sara/Desert Safari in Siwa6.webp"],
-    description: "Explore the desert dunes in a 4x4 safari.",
-    location: "Siwa Oasis",
+    id: '4',
+    title: "Koshari El Tahrir",
+    category: "Food",
+    image: "/sara/Koshari El Tahrir.webp",
+    images: [
+      "/sara/kahri tahria.webp",
+      "/sara/Koshari El Tahrir2.webp",
+      "/sara/Koshari El Tahrir2.webp",
+      "/sara/Koshari El Tahrir3.webp"
+    ],
+    description: "Taste the authentic Egyptian Koshari in the heart of downtown Cairo.",
+    location: "Cairo",
     date: "Available All Year",
-    duration: "6 Hours",
-    people: "2-6 People",
-    price: "500"
+    duration: "1 Hour",
+    people: "1-20 People",
+    price: "50"
   },
   {
-    id: '2',
-    title: "Sinai Mountain Hiking",
-    image: "/sara/Sinai Mountain Hiking.jpeg",
-    images: ["/sara/Sinai Mountain Hiking.webp", "/sara/Sinai Mountain Hiking2.webp","/sara/Sinai Mountain Hiking3.webp","/sara/Sinai Mountain Hiking4.webp","/sara/Sinai Mountain Hiking5.webp","/sara/Sinai Mountain Hiking6.webp"],
-    description: "Climb Mount Sinai and enjoy breathtaking sunrise views.",
-    location: "South Sinai",
-    date: "October - April",
-    duration: "1 Day",
-    people: "1-10 People",
-    price: "700"
-  },{
-  id: '3',
-  title: "Camping by Wadi El-Rayan",
-  category: "Adventure",
-  image: "/sara/Camping by Wadi El-Rayan.webp",
-  images: ["/sara/Camping by Wadi El-Rayan2.webp", "/sara/Camping by Wadi El-Rayan3.webp","/sara/Camping by Wadi El-Rayan4.jpeg","/sara/Camping by Wadi El-Rayan5.webp","/sara/Camping by Wadi El-Rayan6.webp","/sara/wadi alrayan.jpg"],
-  description: "Enjoy an overnight camping experience by the waterfalls of Wadi El-Rayan.",
-  location: "Fayoum",
-  date: "October - March",
-  duration: "2 Days / 1 Night",
-  people: "2-12 People",
-  price: "850"
-}
+    id: '5',
+    title: "Seafood in Alexandria",
+    category: "Food",
+    image: "/sara/Seafood in Alexandria.jpeg",
+    images: [
+      "/sara/Seafood in Alexandria.webp",
+      "/sara/Fish Market Alexandria.webp",
+      "/sara/Fish Market Alexandria2.webp",
+      "/sara/Fish Market Alexandria3.webp",
+      "/sara/Fish Market Alexandria4.webp"
+    ],
+    description: "Fresh seafood dishes by the Mediterranean at a local favorite.",
+    location: "Alexandria",
+    date: "Available All Year",
+    duration: "1.5 Hours",
+    people: "1-15 People",
+    price: "150"
+  },
+  {
+    id: '6',
+    title: "Traditional Nubian Dinner",
+    category: "Food",
+    image: "/sara/Nubian House.jpeg",
+    images: [
+      "/sara/Nubian House2.webp",
+      "/sara/Nubian House3.jpeg",
+      "/sara/Nubian House4.jpeg",
+      "/sara/Traditional Nubian Dinner.webp"
+    ],
+    description: "Home-cooked Nubian dinner with traditional music and culture.",
+    location: "Aswan",
+    date: "Available All Year",
+    duration: "2 Hours",
+    people: "2-10 People",
+    price: "120"
+  }
+];
 
-]
 
 const route = useRoute()
 const placeId = route.params.id

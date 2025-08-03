@@ -154,8 +154,7 @@
         <div
           v-for="card in discover"
           :key="card.id"
-          @click="gotoadventure"
-          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
+@click="goToCategory(card.title)"          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
         >
           <img
             :src="card.image"
@@ -554,6 +553,15 @@ const guests = ref("");
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const goToCategory = (title) => {
+  const routes = {
+    "Adventures": "/adventures",
+    "Food": "/food",
+    "Culture": "/culture",
+  };
+
+  router.push(routes[title]);
+};
 
 
 const showModal = ref(false)
@@ -597,6 +605,9 @@ const gotoplanner =()=>{
 }
 const gotoadventure=()=>{
   router.push("/adventure")
+}
+const gotofood=()=>{
+  router.push("/food")
 }
 const selectPlace = (place) => {
   searchText.value = place;

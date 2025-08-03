@@ -44,6 +44,10 @@ import placedetails from '../Pages/placedetails.vue'
 import popular from "../Pages/populardetails.vue"
 import adventure from "../Pages/adventure.vue"
 import adventuredetail from '../Pages/adventuredetail.vue'
+import Foodcategoray from '../Pages/foodcategoray.vue'
+import Fooddetails from '../Pages/fooddetails.vue'
+import Culture from '../Pages/culture.vue'
+import Culturedetail from '../Pages/culturedetail.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -70,13 +74,15 @@ const routes = [
 }
 ,
   
-{path:"/detail/:id",component:adventuredetail},
   {
   path: '/puplor',
   name: 'Destination',
   component: () => import('../Pages/populardestaion.vue')
 },
-{path:"/adventure",component:adventure},
+{path:"/adventures",component:adventure},{path:"/adventure/:id",component:adventuredetail},
+{path:"/food",component:Foodcategoray},{path:"/food/:id",component:Fooddetails},
+{path:"/culture",component:Culture},{path:"/culture/:id",component:Culturedetail},
+
   {
     path: '/profile',
     name: 'ProfilePersonalDetails',
