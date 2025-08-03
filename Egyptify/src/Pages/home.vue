@@ -82,56 +82,66 @@
 </div>
         <!-- Search Button -->
         <div class="flex justify-center w-full">
-          <btn class="w-full" @click="handleSearch">
+          <basebutton class="w-full" @click="handleSearch">
             <i class="fa-solid fa-magnifying-glass mr-2"></i> Search
-          </btn>
+          </basebutton>
         </div>
       </div>
     </div>
 
     <!-- Destination Section -->
-    <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
-        <h2 class="special-heading">Destination</h2>
-        <p class="text-xl text-gray-700">Popular Destination</p>
-      </div>
+   <section class="py-16 bg-[#FFFDF9]">
+  <div class="text-center mb-12">
+    <h2 class="special-heading">Destination</h2>
+    <p class="text-xl text-gray-700">Popular Destination</p>
+  </div>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+  >
+    <div
+      v-for="card in popular"
+      :key="card.id"
+      class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
+    >
+      <!-- عند الضغط على الكارت => صفحة تفاصيل -->
+      <router-link :to="`/popular/${card.id}`" class="w-full max-w-xs">
+        <Card
+          :image="card.image"
+          :title="card.title"
+          :description="card.description"
+          class="bg-white shadow-2xl rounded-xl w-full"
+        />
+      </router-link>
+
+      <!-- عند الضغط على السهم => صفحة الأماكن كلها -->
+      <router-link
+        to="/destination"
+        class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
       >
         <div
-          v-for="card in popular"
-          :key="card.id"
-          class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
+          class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
         >
-          <!-- Card -->
-          <Card
-            :image="card.image"
-            :title="card.title"
-            :description="card.description"
-            class="bg-white shadow-2xl rounded-xl w-full max-w-xs"
-          />
-          <router-link
-            to="/details"
-            class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
-          >
-            <div
-              class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
-            >
-              <i class="fa-solid fa-arrow-right text-white !text-white"></i>
-            </div>
-          </router-link>
+          <i class="fa-solid fa-arrow-right !text-white"></i>
         </div>
-      </div>
-    </section>
-    <!-- trip planner -->
-    <div class="planner flex flex-col justify-center items-center">
-      <h2 class="text-white text-4xl font-bold">Plan your perfect trip</h2>
-      <p class="text-white py-4">
-        Pick a destination, choose your dates, and let us do the rest!
-      </p>
-      <btn class="py-4">Start planning</btn>
+      </router-link>
     </div>
+  </div>
+</section>
+
+    <!-- trip planner -->
+ <div class="planner flex flex-col justify-center items-center relative z-10 text-center">
+  <div class="flex flex-col justify-center items-center cont">
+  <h2 class="text-white text-4xl font-bold">Plan your perfect trip</h2>
+  <p class="text-white py-4">
+    Pick a destination, choose your dates, and let us do the rest!
+  </p>
+  <basebutton @click="gotoplanner" class="  py-3 rounded-full cursor-pointer  transition">
+    Start planning
+  </basebutton>
+  </div>
+</div>
+
 
     <!-- discover -->
     <section class="py-16 bg-[#FFFDF9]">
@@ -144,7 +154,7 @@
         <div
           v-for="card in discover"
           :key="card.id"
-          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
+@click="goToCategory(card.title)"          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
         >
           <img
             :src="card.image"
@@ -165,7 +175,7 @@
     </section>
 
     <!-- top rated -->
-    <section class="py-16 bg-[#FFFDF9] relative" style="height: 600px">
+    <section class="py-16 bg-[#FFFDF9] relative" style="height: 650px">
       <div class="text-center mb-12">
         <h2 class="special-heading">Top rated</h2>
         <p class="text-xl text-gray-700">Chosen by explorers like you</p>
@@ -179,6 +189,8 @@
         <div
           v-for="card in top"
           :key="card.id"
+                    @click="gotopuplar"
+
           class="shrink-0 w-[260px] flex justify-center items-center transition-transform duration-300 hover:scale-105"
         >
           <Card
@@ -234,29 +246,45 @@
     </section>
 
     <!-- join -->
-    <section
-      class="py-16 bg-stone-400 text-center flex flex-col md:flex-row items-center"
+    <section class="py-16 px-6 bg-[#1E293B] text-center flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- Text -->
+  <div class="md:w-1/2 text-white text-left">
+    <h2 class="text-4xl font-bold mb-4">Join Our Journey</h2>
+    <p class="text-lg">Subscribe and get <span class="text-[#FFC340] font-semibold">5% off</span> your first trip!</p>
+  </div>
+
+  <!-- Form -->
+  <div class="flex flex-wrap gap-4 items-center">
+    <InputField
+      v-model="mailinput"
+      type="email"
+      placeholder="Enter your email"
+      class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
+      style="height: 50px"
+    />
+    <basebutton
+      @click="handleJoin"
+      class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg transition"
+      style="height: 50px"
     >
-      <div class="flex flex-col w-1/2">
-        <h2 class="text-4xl text-white font-bold mb-4">Join Our Journey</h2>
-        <p class="text-white mb-6">Stay updated with our latest adventures</p>
-      </div>
-      <div class="flex justify-center gap-4 flex-wrap h-15">
-        <InputField
-          v-model="userInput"
-          type="text"
-          placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 text-white w-[250px] h-full focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
-          style="height: 50px"
-        >
-          <i class="fa-solid fa-envelope"></i>
-        </InputField>
+      Join
+    </basebutton>
+  </div>
 
-        <btn @click="handleJoin" class="my-2" style="height: 50px">Join</btn>
-      </div>
-
-      <p v-if="joined" class="text-green-600 mt-4">Thanks for joining!</p>
-    </section>
+  <!-- Modal -->
+  <div v-if="Modelsubscribe" class="fixed inset-0 bg-gray-200 !bg-opacity-90 flex justify-center items-center z-50"   style="background-color: rgba(0, 0, 0, 0.3);">
+    <div class="bg-white rounded-2xl p-6 w-[90%] max-w-md text-center flex flex-col justify-center items-center shadow-xl border border-gray-200">
+      <h3 class="text-2xl font-bold text-green-600 mb-4">🎉 Thank You!</h3>
+      <p class="text-gray-700 mb-6">Thanks for subscribing! You’ve received a <strong>5% discount</strong> on your first trip.</p>
+      <basebutton
+        @click="Modelsubscribe = false"
+        class="bg-[#1E293B] hover:bg-gray-800 text-white px-4 py-2 rounded-md"
+      >
+        Close
+      </basebutton>
+    </div>
+  </div>
+</section>
 
     <!-- recommended -->
     <section class="py-16 bg-[#FFFDF9]">
@@ -281,7 +309,8 @@
             :description="card.description"
             :showButton="true"
             buttonText="Explore"
-            class="!bg-[#D9D9D9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
+            @click="gotoactivity"
+            class="!bg-gray-50 shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
       </div>
@@ -308,7 +337,8 @@
             :description="card.description"
             :showButton="true"
             buttonText="View offer"
-            class="bg-[#FFFDF9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
+            @click="gotooffer"
+            class="!bg-gray-50  shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
       </div>
@@ -320,12 +350,13 @@
 <script setup>
 import Navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
-import btn from "../components/BaseButton.vue";
+import basebutton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
 import Slide from "../components/ImageSlider.vue";
 import "vue3-carousel/dist/carousel.css";
+// import populardestaion from "./populardestaion.vue";
 const userInput = ref("");
 
 const popular = [
@@ -333,25 +364,25 @@ const popular = [
     id: 1,
     image: "hero/alazhar.jpg",
     title: "Cairo",
-    description: "1000 Properties",
+    description: "Al-Azhar Mosque",
   },
   {
     id: 2,
     image: "hero/aswan.jpg",
     title: "Aswan",
-    description: "1000 Properties",
+    description: "Philae Temple",
   },
   {
     id: 3,
     image: "hero/bluehole.jpg",
     title: "Dahab",
-    description: "1000 Properties",
+    description: "Blue Hole",
   },
   {
     id: 4,
-    image: "hero/ala.webp",
-    title: "El Alamin",
-    description: "1000 Properties",
+    image: "/sara/Alexandria Library1.webp",
+    title: "Alexandria",
+    description: "Alexandria Library",
   },
 ];
 const discover = [
@@ -518,30 +549,56 @@ onMounted(() => {
   nextTick(() => checkScroll());
 });
 
-const joined = ref(false);
+//join section
 
-function handleJoin() {
-  if (userInput.value.trim()) {
-    console.log("Joined with:", userInput.value);
-    joined.value = true;
-    // You can send the input to an API here
+import { db } from '../firebase.js'
+import { collection, addDoc } from 'firebase/firestore'
+
+const mailinput = ref('')
+const joined = ref(false)
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const Modelsubscribe = ref(false)
+const handleJoin = async () => {
+if (!emailRegex.test(mailinput.value)) {
+  alert('Please enter a valid email address.')
+  return
+}
+
+  try {
+    await addDoc(collection(db, 'subscribers'), {
+      email: mailinput.value,
+      discount: '5%',
+      joinedAt: new Date()
+    })
+
+    joined.value = true
+     Modelsubscribe.value = true
+    mailinput.value = ''
+  } catch (error) {
+    console.error('Error saving to Firebase:', error)
+    alert('Something went wrong. Please try again.')
   }
 }
+
 
 const location = ref("");
 const date = ref("");
 const guests = ref("");
 
-// function handleSearch() {
-//   console.log("Location:", location.value);
-//   console.log("Date:", date.value);
-//   console.log("Guests:", guests.value);
 
-//   // هنا ممكن تبحثي أو تنتقلي لصفحة جديدة وتحطي البيانات في Firebase أو في URL
-// }
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const goToCategory = (title) => {
+  const routes = {
+    "Adventures": "/adventures",
+    "Food": "/food",
+    "Culture": "/culture",
+  };
+
+  router.push(routes[title]);
+};
 
 
 const showModal = ref(false)
@@ -577,7 +634,25 @@ const filterPlaces = () => {
     place.toLowerCase().includes(searchText.value.toLowerCase())
   );
 };
+const gotopuplar =()=>{
+  router.push("/puplor")
+}
+const gotoplanner =()=>{
+  router.push("/tripplanner")
+}
+const gotoadventure=()=>{
+  router.push("/adventure")
+}
+const gotofood=()=>{
+  router.push("/food")
+}
+const gotoactivity=()=>{
+  router.push("/activity")
+}
+const gotooffer=()=>{
+    router.push("/offerpage")
 
+}
 const selectPlace = (place) => {
   searchText.value = place;
   showSuggestions.value = false;
@@ -589,7 +664,7 @@ const hideSuggestions = () => {
   }, 200);
 };
 </script>
-<style>
+<style scoped>
 label {
   color: black;
   display: inline-block;
@@ -629,7 +704,9 @@ label {
   width: 100%;
   height: 600px;
   position: relative;
+  z-index: 1;
 }
+
 .planner::before {
   content: "";
   position: absolute;
@@ -637,8 +714,11 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
+  background-color: rgba(119, 118, 118, 0.38);
+}
+.planner .cont{
   z-index: 100;
-  background-color: rgba(99, 99, 99, 0.38);
 }
 .discover {
   height: 400px;

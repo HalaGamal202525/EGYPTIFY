@@ -13,14 +13,13 @@
     <div class="col-span-2 grid grid-cols-2 gap-4">
       <div class="space-y-2">
         <a href="#" class="block hover:text-[#FFC340] font-medium">Explore Egypt</a>
-        <a href="#" class="block hover:text-[#FFC340] font-medium">Destinations</a>
-        <a href="#" class="block hover:text-[#FFC340] font-medium">Trip Planner</a>
-        <a href="#" class="block hover:text-[#FFC340] font-medium">Travel Blog</a>
+        <a href="#" class="block hover:text-[#FFC340] font-medium" @click="goTodestination">Destinations</a>
+        <a href="#" class="block hover:text-[#FFC340] font-medium" @click="goToblogs">Travel Blog</a>
       </div>
 
       <div class="space-y-2">
-        <a href="#" class="block hover:text-[#FFC340] font-medium">Offers</a>
-        <a href="#" class="block hover:text-[#FFC340] font-medium">Attractions & Activities</a>
+        <a href="#" class="block hover:text-[#FFC340] font-medium" @click="goTooffers">Offers</a>
+        <a href="#" class="block hover:text-[#FFC340] font-medium" @click="goToactivity">Attractions & Activities</a>
         <a href="#" class="block hover:text-[#FFC340] font-medium">Event Calendar</a>
       </div>
     </div>
@@ -30,6 +29,8 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import menuImg from '/src/assets/BlogPageHero.jpg'
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 const props = defineProps({
   isOpen: Boolean
@@ -43,7 +44,18 @@ const handleClickOutside = (event) => {
     emit('close')
   }
 }
-
+function goTooffers() {
+  router.push("/offerpage");
+}
+function goToactivity() {
+  router.push("/activity");
+}
+function goTodestination() {
+  router.push("/destination");
+}
+function goToblogs() {
+  router.push("/blogs");
+}
 onMounted(() => {
   document.addEventListener('click', handleClickOutside)
 })
