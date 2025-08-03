@@ -2,53 +2,53 @@
   <div>
     <navbar />
     
-   <div class="relative h-96 bg-cover bg-center" style="background-image: url('/src/assets/BlogPageHero.jpg')">
-  <h1 class="absolute inset-0 flex justify-center items-center text-white text-4xl font-bold">
-    Destinations
-  </h1>
-</div>
+    <div class="relative h-64 md:h-96 bg-cover bg-center" style="background-image: url('/src/assets/BlogPageHero.jpg')">
+      <h1 class="absolute inset-0 flex justify-center items-center text-white text-2xl md:text-4xl font-bold">
+        Destinations
+      </h1>
+    </div>
 
-
-    <div class="p-6">
+    <div class="p-4 md:p-6">
       <div class="flex justify-end mb-4">
-        <select class="border p-2 rounded">
+        <select class="border p-2 rounded text-sm">
           <option>Sort by: Top Rated</option>
         </select>
       </div>
 
-      <div class="flex gap-6">
-        <FilterSidebar />
+      <div class="flex flex-col lg:flex-row gap-6">
+        <FilterSidebar class="text-sm" />
 
         <div class="flex-1 space-y-6">
-          <div v-for="destination in destinations" :key="destination.title" class="flex bg-gray-100 rounded-lg overflow-hidden shadow min-h-[240px]">
-  <img :src="destination.image" class="w-1/3 object-cover" />
-  <div class="p-4 flex flex-col justify-between w-2/3">
-    <div>
-      <h3 class="font-bold text-lg text-black">{{ destination.title }}</h3>
-      <div class="text-yellow-500 mb-1">★★★★★</div>
-      <div class="text-sm text-gray-700 mb-2">{{ destination.location }}</div>
-      <p class="text-sm text-black">{{ destination.description }}</p>
-    </div>
-   <div class="flex justify-end mt-4">
-      <router-link v-if="destination.title === 'Iberotel Luxor'" to="/hotelpage">
-        <BaseButton>Show Details</BaseButton>
-      </router-link>
-      <BaseButton v-else>Show Details</BaseButton>
-    </div>
-  </div>
-</div>
-
-          <!-- Pagination -->
-          
- 
-
+          <div v-for="destination in destinations" :key="destination.title"
+            class="flex flex-col md:flex-row bg-gray-100 rounded-lg overflow-hidden shadow min-h-[240px]">
+            
+            <img :src="destination.image" class="w-full md:w-1/3 h-48 md:h-auto object-cover" />
+            
+            <div class="p-4 flex flex-col justify-between w-full md:w-2/3">
+              <div>
+                <h3 class="font-bold text-lg text-black">{{ destination.title }}</h3>
+                <div class="text-yellow-500 mb-1">★★★★★</div>
+                <div class="text-sm text-gray-700 mb-2">{{ destination.location }}</div>
+                <p class="text-sm text-black">{{ destination.description }}</p>
+              </div>
+              <div class="flex justify-end mt-4">
+                <router-link v-if="destination.title === 'Iberotel Luxor'" to="/hotelpage">
+                  <BaseButton>Show Details</BaseButton>
+                </router-link>
+                <BaseButton v-else>Show Details</BaseButton>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- pagination -->
+
     <Footer />
   </div>
 </template>
+
 
 
 <script setup>
