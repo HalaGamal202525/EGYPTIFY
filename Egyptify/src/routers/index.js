@@ -41,9 +41,14 @@ import PassengerInfo from '../Pages/PassengerInfo.vue'
 import TransportationPayment from '../Pages/TransportationPayment.vue'
 import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
 import DestinationDetailsPage from '../Pages/DestinationDetailsPage.vue'
+import populardestaion from '../Pages/populardestaion.vue'
+import popular from "../Pages/populardetails.vue"
 import adventure from '../Pages/adventure.vue'
 import adventuredatail from '../Pages/adventuredetail.vue'
-
+import Foodcategoray from "../Pages/foodcategoray.vue"
+import Fooddetail from "../Pages/fooddetails.vue"
+import Culture from "../Pages/culture.vue"
+import Culturedetail from "../Pages/culturedetail.vue"
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -75,9 +80,9 @@ const routes = [
   name: 'Destination',
   component: () => import('../Pages/populardestaion.vue')
 },
-{path:"/adventures",component:adventure},{path:"/adventure/:id",component: adventuredetail},
-{path:"/food",component:Foodcategoray},{path:"/food/:id",component: Fooddetails},
-{path:"/culture",component:Culture},{path:"/culture/:id",component: Culturedetail},
+{path:"/adventures",component:adventure},{path:"/adventure/:id",component: adventuredatail},
+{path:"/food",component:Foodcategoray},{path:"/food/:id",component: Fooddetail},
+{path:"/culture",component:Culture},{path:"/culture/:id",component:Culturedetail },
 
   {
     path: '/profile',

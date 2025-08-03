@@ -12,7 +12,7 @@
       <div
         class="bg-gray-100 rounded-xl w-full max-w-5xl p-8 shadow-lg flex flex-col gap-6"
       >
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 w-full md:grid-cols-3 gap-6">
           <!-- Location -->
            <div class="flex flex-col gap-2 relative w-full max-w-md mx-auto">
     <!-- Label -->
