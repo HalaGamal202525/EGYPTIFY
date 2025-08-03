@@ -82,9 +82,9 @@
 </div>
         <!-- Search Button -->
         <div class="flex justify-center w-full">
-          <btn class="w-full" @click="handleSearch">
+          <basebutton class="w-full" @click="handleSearch">
             <i class="fa-solid fa-magnifying-glass mr-2"></i> Search
-          </btn>
+          </basebutton>
         </div>
       </div>
     </div>
@@ -130,13 +130,18 @@
 </section>
 
     <!-- trip planner -->
-    <div class="planner flex flex-col justify-center items-center">
-      <h2 class="text-white text-4xl font-bold">Plan your perfect trip</h2>
-      <p class="text-white py-4">
-        Pick a destination, choose your dates, and let us do the rest!
-      </p>
-      <btn class="py-4">Start planning</btn>
-    </div>
+ <div class="planner flex flex-col justify-center items-center relative z-10 text-center">
+  <div class="flex flex-col justify-center items-center cont">
+  <h2 class="text-white text-4xl font-bold">Plan your perfect trip</h2>
+  <p class="text-white py-4">
+    Pick a destination, choose your dates, and let us do the rest!
+  </p>
+  <basebutton @click="gotoplanner" class="  py-3 rounded-full cursor-pointer  transition">
+    Start planning
+  </basebutton>
+  </div>
+</div>
+
 
     <!-- discover -->
     <section class="py-16 bg-[#FFFDF9]">
@@ -257,7 +262,7 @@
           <i class="fa-solid fa-envelope"></i>
         </InputField>
 
-        <btn @click="handleJoin" class="my-2" style="height: 50px">Join</btn>
+        <basebutton @click="handleJoin" class="my-2" style="height: 50px">Join</basebutton>
       </div>
 
       <p v-if="joined" class="text-green-600 mt-4">Thanks for joining!</p>
@@ -325,13 +330,13 @@
 <script setup>
 import Navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
-import btn from "../components/BaseButton.vue";
+import basebutton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/card.vue";
 import ReviewCard from "../components/reviews.vue";
 import Slide from "../components/ImageSlider.vue";
 import "vue3-carousel/dist/carousel.css";
-import populardestaion from "./populardestaion.vue";
+// import populardestaion from "./populardestaion.vue";
 const userInput = ref("");
 
 const popular = [
@@ -586,6 +591,9 @@ const filterPlaces = () => {
 const gotopuplar =()=>{
   router.push("/destination")
 }
+const gotoplanner =()=>{
+  router.push("/tripplanner")
+}
 const selectPlace = (place) => {
   searchText.value = place;
   showSuggestions.value = false;
@@ -597,7 +605,7 @@ const hideSuggestions = () => {
   }, 200);
 };
 </script>
-<style>
+<style scoped>
 label {
   color: black;
   display: inline-block;
@@ -637,7 +645,9 @@ label {
   width: 100%;
   height: 600px;
   position: relative;
+  z-index: 1;
 }
+
 .planner::before {
   content: "";
   position: absolute;
@@ -645,8 +655,11 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
+  background-color: rgba(119, 118, 118, 0.38);
+}
+.planner .cont{
   z-index: 100;
-  background-color: rgba(99, 99, 99, 0.38);
 }
 .discover {
   height: 400px;
