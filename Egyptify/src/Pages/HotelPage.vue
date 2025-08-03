@@ -1,10 +1,10 @@
-<!-- <template>
+ <template>
   <div class="font-sans">
     <Navbar />
 
     <section class="container mx-auto px-4 py-8 mt-16">
 
-      <!-- عنوان الفندق و زر الحجز -->
+    
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 class="text-2xl font-bold text-black">Iberotel Luxor</h1>
@@ -131,7 +131,6 @@
         </div>
       </div>
 
-      <!-- نوع الغرف -->
       <div class="mt-6">
         <h2 class="text-xl font-semibold mb-2 text-black">Room Type</h2>
         <div class="flex flex-wrap justify-between items-center">
@@ -198,4 +197,4 @@ import BaseButton from '../components/BaseButton.vue'
 .container {
   max-width: 1200px;
 }
-</style>
+</style> 
