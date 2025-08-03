@@ -337,12 +337,48 @@
             :description="card.description"
             :showButton="true"
             buttonText="View offer"
-            @click="gotooffer"
+            @click="gotoffer"
             class="!bg-gray-50  shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
       </div>
     </section>
+    <!-- package -->
+        <section class="py-16 bg-[#F9FAFB]">
+     <div class="text-center mb-12">
+        <h2 class="special-heading"> Packages</h2>
+        <p class="text-xl text-gray-700">Explore Packages</p>
+      </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-12">
+      <div
+        v-for="category in categories"
+        :key="category.slug"
+        class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
+      >
+        <img :src="category.image" :alt="category.name" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ category.name }}</h3>
+          <p class="text-gray-600 text-sm h-13">{{ category.description }}</p>
+          <router-link
+            :to="`/packages/${category.slug}`"
+            class="inline-block mt-4 text-blue-600 font-medium hover:underline"
+          >
+            View Packages →
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <!-- <router-link
+        to="/packages"
+        class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+      >
+        View All Packages
+      </router-link> -->
+    </div>
+  </section>
     <Footer />
   </div>
 </template>
@@ -358,6 +394,12 @@ import Slide from "../components/ImageSlider.vue";
 import "vue3-carousel/dist/carousel.css";
 // import populardestaion from "./populardestaion.vue";
 const userInput = ref("");
+
+import rawData from '../data/packages_data.json';
+
+const categories = Object.values(rawData.packageCategories);
+
+
 
 const popular = [
   {
