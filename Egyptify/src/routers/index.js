@@ -42,6 +42,9 @@ import TransportationPayment from '../Pages/TransportationPayment.vue'
 import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
 import placedetails from '../Pages/placedetails.vue'
 import popular from "../Pages/populardetails.vue"
+import adventure from "../Pages/adventure.vue"
+import adventuredetail from '../Pages/adventuredetail.vue'
+
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
@@ -67,11 +70,13 @@ const routes = [
 }
 ,
   
+{path:"/detail/:id",component:adventuredetail},
   {
   path: '/puplor',
   name: 'Destination',
   component: () => import('../Pages/populardestaion.vue')
 },
+{path:"/adventure",component:adventure},
   {
     path: '/profile',
     name: 'ProfilePersonalDetails',

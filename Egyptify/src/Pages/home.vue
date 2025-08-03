@@ -154,6 +154,7 @@
         <div
           v-for="card in discover"
           :key="card.id"
+          @click="gotoadventure"
           class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
         >
           <img
@@ -593,6 +594,9 @@ const gotopuplar =()=>{
 }
 const gotoplanner =()=>{
   router.push("/tripplanner")
+}
+const gotoadventure=()=>{
+  router.push("/adventure")
 }
 const selectPlace = (place) => {
   searchText.value = place;
