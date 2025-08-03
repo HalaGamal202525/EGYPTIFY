@@ -246,29 +246,45 @@
     </section>
 
     <!-- join -->
-    <section
-      class="py-16 bg-stone-400 text-center flex flex-col md:flex-row items-center"
+    <section class="py-16 px-6 bg-[#1E293B] text-center flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- Text -->
+  <div class="md:w-1/2 text-white text-left">
+    <h2 class="text-4xl font-bold mb-4">Join Our Journey</h2>
+    <p class="text-lg">Subscribe and get <span class="text-[#FFC340] font-semibold">5% off</span> your first trip!</p>
+  </div>
+
+  <!-- Form -->
+  <div class="flex flex-wrap gap-4 items-center">
+    <InputField
+      v-model="mailinput"
+      type="email"
+      placeholder="Enter your email"
+      class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
+      style="height: 50px"
+    />
+    <basebutton
+      @click="handleJoin"
+      class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg transition"
+      style="height: 50px"
     >
-      <div class="flex flex-col w-1/2">
-        <h2 class="text-4xl text-white font-bold mb-4">Join Our Journey</h2>
-        <p class="text-white mb-6">Stay updated with our latest adventures</p>
-      </div>
-      <div class="flex justify-center gap-4 flex-wrap h-15">
-        <InputField
-          v-model="userInput"
-          type="text"
-          placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 text-white w-[250px] h-full focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
-          style="height: 50px"
-        >
-          <i class="fa-solid fa-envelope"></i>
-        </InputField>
+      Join
+    </basebutton>
+  </div>
 
-        <basebutton @click="handleJoin" class="my-2" style="height: 50px">Join</basebutton>
-      </div>
-
-      <p v-if="joined" class="text-green-600 mt-4">Thanks for joining!</p>
-    </section>
+  <!-- Modal -->
+  <div v-if="Modelsubscribe" class="fixed inset-0 bg-gray-200 !bg-opacity-90 flex justify-center items-center z-50"   style="background-color: rgba(0, 0, 0, 0.3);">
+    <div class="bg-white rounded-2xl p-6 w-[90%] max-w-md text-center flex flex-col justify-center items-center shadow-xl border border-gray-200">
+      <h3 class="text-2xl font-bold text-green-600 mb-4">🎉 Thank You!</h3>
+      <p class="text-gray-700 mb-6">Thanks for subscribing! You’ve received a <strong>5% discount</strong> on your first trip.</p>
+      <basebutton
+        @click="Modelsubscribe = false"
+        class="bg-[#1E293B] hover:bg-gray-800 text-white px-4 py-2 rounded-md"
+      >
+        Close
+      </basebutton>
+    </div>
+  </div>
+</section>
 
     <!-- recommended -->
     <section class="py-16 bg-[#FFFDF9]">
@@ -293,7 +309,8 @@
             :description="card.description"
             :showButton="true"
             buttonText="Explore"
-            class="!bg-[#D9D9D9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
+            @click="gotoactivity"
+            class="!bg-gray-50 shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
       </div>
@@ -320,7 +337,8 @@
             :description="card.description"
             :showButton="true"
             buttonText="View offer"
-            class="bg-[#FFFDF9] shadow-2xl rounded-xl flex justify-center items-center text-center w-full max-w-xs"
+            @click="gotooffer"
+            class="!bg-gray-50  shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
       </div>
@@ -531,27 +549,44 @@ onMounted(() => {
   nextTick(() => checkScroll());
 });
 
-const joined = ref(false);
+//join section
 
-function handleJoin() {
-  if (userInput.value.trim()) {
-    console.log("Joined with:", userInput.value);
-    joined.value = true;
-    // You can send the input to an API here
+import { db } from '../firebase.js'
+import { collection, addDoc } from 'firebase/firestore'
+
+const mailinput = ref('')
+const joined = ref(false)
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const Modelsubscribe = ref(false)
+const handleJoin = async () => {
+if (!emailRegex.test(mailinput.value)) {
+  alert('Please enter a valid email address.')
+  return
+}
+
+  try {
+    await addDoc(collection(db, 'subscribers'), {
+      email: mailinput.value,
+      discount: '5%',
+      joinedAt: new Date()
+    })
+
+    joined.value = true
+     Modelsubscribe.value = true
+    mailinput.value = ''
+  } catch (error) {
+    console.error('Error saving to Firebase:', error)
+    alert('Something went wrong. Please try again.')
   }
 }
+
 
 const location = ref("");
 const date = ref("");
 const guests = ref("");
 
-// function handleSearch() {
-//   console.log("Location:", location.value);
-//   console.log("Date:", date.value);
-//   console.log("Guests:", guests.value);
 
-//   // هنا ممكن تبحثي أو تنتقلي لصفحة جديدة وتحطي البيانات في Firebase أو في URL
-// }
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -610,6 +645,13 @@ const gotoadventure=()=>{
 }
 const gotofood=()=>{
   router.push("/food")
+}
+const gotoactivity=()=>{
+  router.push("/activity")
+}
+const gotooffer=()=>{
+    router.push("/offerpage")
+
 }
 const selectPlace = (place) => {
   searchText.value = place;
