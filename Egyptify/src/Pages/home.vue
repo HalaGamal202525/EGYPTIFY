@@ -360,12 +360,12 @@
         <div class="p-4">
           <h3 class="text-xl font-semibold text-gray-800 mb-1">{{ category.name }}</h3>
           <p class="text-gray-600 text-sm h-13">{{ category.description }}</p>
-          <router-link
-            :to="`/packages/${category.slug}`"
-            class="inline-block mt-4 text-blue-600 font-medium hover:underline"
-          >
-            View Packages →
-          </router-link>
+         <router-link
+  :to="`/packages/${category.slug}`"
+  class="inline-block mt-4 text-blue-600 font-medium hover:underline"
+>
+  View Packages →
+</router-link>
         </div>
       </div>
     </div>

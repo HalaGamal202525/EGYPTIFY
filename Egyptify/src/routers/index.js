@@ -49,7 +49,8 @@ import Foodcategoray from "../Pages/foodcategoray.vue"
 import Fooddetail from "../Pages/fooddetails.vue"
 import Culture from "../Pages/culture.vue"
 import Culturedetail from "../Pages/culturedetail.vue"
-
+import packages from '../Pages/packages.vue'
+import PackageDetails from '../Pages/PackageDetails.vue'
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
@@ -83,6 +84,17 @@ const routes = [
 {path:"/adventures",component:adventure},{path:"/adventure/:id",component: adventuredatail},
 {path:"/food",component:Foodcategoray},{path:"/food/:id",component: Fooddetail},
 {path:"/culture",component:Culture},{path:"/culture/:id",component:Culturedetail },
+{
+  path: '/packages/:category',
+  name: 'CategoryPackages',
+  component: packages,
+}
+,
+{
+  path: '/packages/:category/:slug',
+  name: 'PackageDetails',
+  component: PackageDetails
+},
 
   {
     path: '/profile',

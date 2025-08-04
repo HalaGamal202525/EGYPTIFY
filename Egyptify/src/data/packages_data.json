@@ -9,7 +9,7 @@
         "sharm-honeymoon": {
           "name": "Sharm Honeymoon",
           "slug": "sharm-honeymoon",
-          "image": "/images/packages/sharm.jpg",
+          "image": "/package/honeymoon/Sharm Honeymoon.webp",
           "shortDescription": "5 days of romantic luxury in Sharm El Sheikh.",
           "price": "8000 EGP",
           "duration": "5 Days / 4 Nights",
@@ -22,14 +22,14 @@
           ],
           "activities": ["Snorkeling", "Camel ride", "Private boat tour"],
           "gallery": [
-            "/images/packages/sharm1.jpg",
-            "/images/packages/sharm2.jpg"
+            "/package/honeymoon/sharm-honeymoon.webp",
+            "/package/honeymoon/sharm-honeymoon3.jpg"
           ]
         },
         "luxor-honeymoon": {
           "name": "Luxor Honeymoon",
           "slug": "luxor-honeymoon",
-          "image": "/images/packages/luxor.jpg",
+          "image": "/package/honeymoon/Luxor Honeymoon.jpg",
           "shortDescription": "Romantic Nile-side honeymoon in Luxor.",
           "price": "7500 EGP",
           "duration": "4 Days / 3 Nights",
@@ -37,14 +37,14 @@
           "includes": ["Nile view hotel", "Dinner cruise", "Private guide"],
           "activities": ["Temple visits", "Horse carriage ride", "Museum tour"],
           "gallery": [
-            "/images/packages/luxor1.jpg",
-            "/images/packages/luxor2.jpg"
+            "/package/honeymoon/Luxor Honeymoon2.webp",
+            "/package/honeymoon/Luxor Honeymoon3.webp"
           ]
         },
         "aswan-honeymoon": {
           "name": "Aswan Honeymoon",
           "slug": "aswan-honeymoon",
-          "image": "/images/packages/aswan.jpg",
+          "image": "/package/honeymoon/Aswan Honeymoon.webp",
           "shortDescription": "Experience Nubian charm and Nile sunsets in Aswan.",
           "price": "7000 EGP",
           "duration": "4 Days / 3 Nights",
@@ -61,14 +61,14 @@
             "Spice market shopping"
           ],
           "gallery": [
-            "/images/packages/aswan1.jpg",
-            "/images/packages/aswan2.jpg"
+            "/package/honeymoon/aswan-honeymoon2.webp",
+            "/package/honeymoon/aswan-honeymoon3.webp"
           ]
         },
         "hurghada-honeymoon": {
           "name": "Hurghada Honeymoon",
           "slug": "hurghada-honeymoon",
-          "image": "/images/packages/hurghada.jpg",
+          "image": "/package/honeymoon/Hurghada Honeymoon.webp",
           "shortDescription": "Beachfront romance and underwater adventure.",
           "price": "8200 EGP",
           "duration": "5 Days / 4 Nights",
@@ -81,8 +81,8 @@
           ],
           "activities": ["Snorkeling", "Desert safari", "Spa treatment"],
           "gallery": [
-            "/images/packages/hurghada1.jpg",
-            "/images/packages/hurghada2.jpg"
+            "/package/honeymoon/hurghada-honeymoon2.webp",
+            "/package/honeymoon/hurghada-honeymoon3.webp"
           ]
         }
       }
@@ -96,7 +96,7 @@
         "giza-funday": {
           "name": "Giza Funday",
           "slug": "giza-funday",
-          "image": "/images/packages/funday-giza.jpg",
+          "image": "/package/funday/Giza Funday.jpg",
           "shortDescription": "A fun day in Giza with games and food.",
           "price": "1200 EGP",
           "duration": "1 Day",
@@ -104,14 +104,14 @@
           "includes": ["Lunch", "Games", "Transport"],
           "activities": ["Paintball", "Beach games"],
           "gallery": [
-            "/images/packages/giza1.jpg",
-            "/images/packages/giza2.jpg"
+            "/package/funday/giza-funday.webp",
+            "/package/funday/giza-funday2.webp"
           ]
         },
         "fayoum-funday": {
           "name": "Fayoum Funday",
           "slug": "fayoum-funday",
-          "image": "/images/packages/funday-fayoum.jpg",
+          "image": "/package/funday/Fayoum Funday.webp",
           "shortDescription": "Adventure and nature escape in Fayoum.",
           "price": "1300 EGP",
           "duration": "1 Day",
@@ -123,14 +123,14 @@
             "Lakeside games"
           ],
           "gallery": [
-            "/images/packages/fayoum1.jpg",
-            "/images/packages/fayoum2.jpg"
+            "/package/funday/fayoum-funday.webp",
+            "/package/funday/fayoum-funday3.webp"
           ]
         },
         "wadi-degla-funday": {
           "name": "Wadi Degla Funday",
           "slug": "wadi-degla-funday",
-          "image": "/images/packages/funday-wadidegla.jpg",
+          "image": "/package/funday/Wadi Degla Funday.webp",
           "shortDescription": "A sporty day of hiking and team games.",
           "price": "1100 EGP",
           "duration": "1 Day",
@@ -138,14 +138,14 @@
           "includes": ["Snacks & BBQ lunch", "Hiking guide", "Transport"],
           "activities": ["Hiking", "Treasure hunt", "Team games"],
           "gallery": [
-            "/images/packages/wadi1.jpg",
-            "/images/packages/wadi2.jpg"
+            "/package/funday/wadi-degla-funday.webp",
+            "/package/funday/wadi-degla-funday3.webp"
           ]
         },
         "cairo-parks-funday": {
           "name": "Cairo Parks Funday",
           "slug": "cairo-parks-funday",
-          "image": "/images/packages/funday-cairoparks.jpg",
+          "image": "/package/funday/Cairo Parks Funday.webp",
           "shortDescription": "Relaxing day in Cairo’s top parks.",
           "price": "1000 EGP",
           "duration": "1 Day",
@@ -153,8 +153,8 @@
           "includes": ["Entrance tickets", "Snacks & lunch", "Transport"],
           "activities": ["Park games", "Picnic", "Photo sessions"],
           "gallery": [
-            "/images/packages/cairo1.jpg",
-            "/images/packages/cairo2.jpg"
+            "/package/funday/cairo-parks-funday.webp",
+            "/package/funday/cairo-parks-funday3.webp"
           ]
         }
       }
@@ -168,7 +168,7 @@
         "hurghada-family": {
           "name": "Hurghada Family",
           "slug": "hurghada-family",
-          "image": "/images/packages/hurghada.jpg",
+          "image": "/package/family/Hurghada Family.webp",
           "shortDescription": "A beach escape with kid-friendly fun.",
           "price": "4500 EGP",
           "duration": "3 Days / 2 Nights",
@@ -176,14 +176,14 @@
           "includes": ["Family room", "Meals", "Kids activities"],
           "activities": ["Mini zoo", "Water park"],
           "gallery": [
-            "/images/packages/hurghada1.jpg",
-            "/images/packages/hurghada2.jpg"
+            "/package/family/hurghada-family.jpeg",
+            "/package/family/hurghada-family2.webp"
           ]
         },
         "sharm-family": {
           "name": "Sharm El Sheikh Family",
           "slug": "sharm-family",
-          "image": "/images/packages/sharm.jpg",
+          "image": "/package/family/Sharm El Sheikh Family.webp",
           "shortDescription": "All-inclusive resort for the whole family.",
           "price": "5000 EGP",
           "duration": "4 Days / 3 Nights",
@@ -195,14 +195,14 @@
             "Evening shows"
           ],
           "gallery": [
-            "/images/packages/sharm1.jpg",
-            "/images/packages/sharm2.jpg"
+            "/package/family/sharm-family.webp",
+            "/package/family/harm-family.webp"
           ]
         },
         "alex-family": {
           "name": "Alexandria Family Weekend",
           "slug": "alex-family",
-          "image": "/images/packages/alex.jpg",
+          "image": "/package/family/Alexandria Family Weekend.webp",
           "shortDescription": "Cultural and beach fun for families.",
           "price": "3000 EGP",
           "duration": "2 Days / 1 Night",
@@ -210,14 +210,14 @@
           "includes": ["Hotel stay", "Breakfast & Dinner", "Museum entry"],
           "activities": ["Beach games", "Aquarium visit", "Family boat ride"],
           "gallery": [
-            "/images/packages/alex1.jpg",
-            "/images/packages/alex2.jpg"
+            "/package/family/alex-family.webp",
+            "/package/family/alex-family2.jpeg"
           ]
         },
         "fayoum-family": {
           "name": "Fayoum Nature Family Trip",
           "slug": "fayoum-family",
-          "image": "/images/packages/fayoum-family.jpg",
+          "image": "/package/family/Fayoum Nature Family Trip.webp",
           "shortDescription": "Nature and bonding for families.",
           "price": "3500 EGP",
           "duration": "2 Days / 1 Night",
@@ -225,8 +225,8 @@
           "includes": ["Lodging", "Meals", "Guided activities"],
           "activities": ["Safari ride", "Campfire games", "Star watching"],
           "gallery": [
-            "/images/packages/fayoumfamily1.jpg",
-            "/images/packages/fayoumfamily2.jpg"
+            "/package/family/fayom.webp",
+            "/package/family/fayom2.webp"
           ]
         }
       }
@@ -240,7 +240,7 @@
         "cairo-luxury": {
           "name": "Cairo Luxury",
           "slug": "cairo-luxury",
-          "image": "/images/packages/cairo-luxury.jpg",
+          "image": "/package/luxuray/Cairo Luxury.webp",
           "shortDescription": "Explore Cairo in VIP style.",
           "price": "15,000 EGP",
           "duration": "4 Days / 3 Nights",
@@ -248,14 +248,14 @@
           "includes": ["VIP hotel", "Chauffeur", "Spa", "Private museum tours"],
           "activities": ["Yacht trip", "Helicopter tour"],
           "gallery": [
-            "/images/packages/cairo1.jpg",
-            "/images/packages/cairo2.jpg"
+            "/package/luxuray/cairo-luxury.webp",
+            "/package/luxuray/cairo-luxury2.webp"
           ]
         },
         "luxor-luxury": {
           "name": "Luxor Royal Retreat",
           "slug": "luxor-luxury",
-          "image": "/images/packages/luxor-luxury.jpg",
+          "image": "/package/luxuray/Luxor Royal Retreat.webp",
           "shortDescription": "Discover ancient wonders in first-class luxury.",
           "price": "18,000 EGP",
           "duration": "3 Days / 2 Nights",
@@ -272,14 +272,14 @@
             "Temple access after hours"
           ],
           "gallery": [
-            "/images/packages/luxor1.jpg",
-            "/images/packages/luxor2.jpg"
+            "/package/luxuray/luxor-luxury.webp",
+            "/package/luxuray/luxor-luxury3.webp"
           ]
         },
         "aswan-luxury": {
           "name": "Aswan Elegance",
           "slug": "aswan-luxury",
-          "image": "/images/packages/aswan-luxury.jpg",
+          "image": "/package/luxuray/Aswan Elegance.webp",
           "shortDescription": "Tranquil escape with elite service.",
           "price": "17,000 EGP",
           "duration": "3 Days / 2 Nights",
@@ -296,14 +296,14 @@
             "Spa & yoga sessions"
           ],
           "gallery": [
-            "/images/packages/aswan1.jpg",
-            "/images/packages/aswan2.jpg"
+            "/package/luxuray/aswan-luxury.webp",
+            "/package/luxuray/aswan-luxury2.webp"
           ]
         },
         "sharm-luxury": {
           "name": "Sharm El Sheikh Deluxe",
           "slug": "sharm-luxury",
-          "image": "/images/packages/sharm-luxury.jpg",
+          "image": "/package/luxuray/Sharm El Sheikh Deluxe.webp",
           "shortDescription": "Beachfront excellence with 5-star experience.",
           "price": "20,000 EGP",
           "duration": "5 Days / 4 Nights",
@@ -320,8 +320,8 @@
             "Underwater photography"
           ],
           "gallery": [
-            "/images/packages/sharm-lux1.jpg",
-            "/images/packages/sharm-lux2.jpg"
+            "/package/luxuray/sharmluxury.webp",
+            "/package/luxuray/sharmluxury2.webp"
           ]
         }
       }
