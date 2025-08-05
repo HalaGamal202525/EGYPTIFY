@@ -15,8 +15,10 @@
         </select>
       </div>
 
-      <div class="flex flex-col lg:flex-row gap-6">
-        <FilterSidebar class="text-sm" />
+      <!-- <div class="flex flex-col lg:flex-row gap-6">
+        <FilterSidebar class="text-sm" /> -->
+        <div class="flex flex-col lg:flex-row gap-6 items-start">
+  <FilterSidebar class="text-sm sticky top-4 self-start min-h-full" />
 
         <div class="flex-1 space-y-6">
           <div
