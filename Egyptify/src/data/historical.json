@@ -2,85 +2,536 @@
   {
     "id": 1,
     "name": "Pyramids of Giza",
-    "image": "public/historical/pyramids (4).jpg",
+    "category": "Historical",
+    "image": "/historical/pyramids (4).jpg",
     "rate": 4,
-    "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza"
+    "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza",
+    "images": [
+      "/Details/historical/1753012412581.jpg",
+      "/Details/historical/camel-1839616_1920.jpg",
+      "/Details/historical/pyramids (3).jpg",
+      "/Details/historical/pyramids (4).jpg"
+    ],
+    "overview": {
+      "description": "The Giza Plateau features three legendary pyramids: The Great Pyramid of Khufu, the largest and only surviving Wonder of the Ancient World;  the Pyramid of Khafre, known for its elevated base and proximity to the Great Sphinx; and the Pyramid of Menkaure, the smallest yet refined in design.Together, they reflect the engineering mastery and spiritual depth of ancient Egypt.",
+      "rating": 4.9,
+      "address": "Al Haram, Giza Governorate 3512201, Egypt",
+      "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
+      "mapImage": " /Details/historical/Rectangle 7.png"
+    },
+    "detail": {
+      "visitingHours": "8:00AM-5:00PM",
+      "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
+      "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
+      "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
+      "tips": "Go early "
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah A.",
+        "date": "July 2025",
+        "content": "Great for families. Kids loved it. Camel ride was fun but overpriced",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": "June 2025",
+        "content": "Absolutely breathtaking! A must-see. Go early to avoid crowds",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 2,
     "name": "Karnak Temple",
-    "image": "public/historical/karnak.webp",
+    "category": "Historical",
+    "image": "/historical/karnak.webp",
     "rate": 5,
-    "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods."
+    "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods.",
+    "images": [
+      "/imagesdatabase/historical/Karnak Temple2.webp",
+      "/imagesdatabase/historical/Karnak Temple1.webp",
+      "/imagesdatabase/historical/Karnak Temple3.webp",
+      "/imagesdatabase/historical/Karnak Temple4.webp"
+    ],
+    "overview": {
+      "description": "Karnak Temple is one of the largest religious buildings ever constructed, covering over 100 hectares. Located in Luxor, it features a vast mix of decayed temples, chapels, pylons, and other buildings. It was primarily dedicated to the Theban triad of Amun, Mut, and Khonsu.",
+      "rating": 4.8,
+      "address": "Luxor City, Luxor Governorate 85958, Egypt",
+      "mapLink": "https://maps.app.goo.gl/iRYPZTi26niwpH389",
+      "mapImage": "/imagesdatabase/historical/Karnak Templemap.webp"
+    },
+    "detail": {
+      "visitingHours": "6:00AM-5:30PM",
+      "entryFees": "EGP 150 for Egyptians, EGP 300 for foreigners",
+      "bestTimeToVisit": "November to March (pleasant weather)",
+      "howToGet": "Fly to Luxor or take a train from Cairo, then use local transport to the temple.",
+      "tips": "Visit early in the morning to avoid heat and crowds. Wear comfortable shoes."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona H.",
+        "date": "May 2025",
+        "content": "A place full of history. The Hypostyle Hall is simply stunning!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "April 2025",
+        "content": "Huge and impressive. Great guide helped bring the place to life.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
+
   {
     "id": 3,
-    "name": "  Valley of the Kings",
-    "image": "public/historical/vaiiy.webp",
+    "name": "Valley of the Kings",
+    "category": "Historical",
+
+    "image": "/historical/vaiiy.webp",
     "rate": 3.5,
-    "description": "The burial site of ancient pharaohs, including Tutankhamun, hidden in the"
+    "description": "The burial site of ancient pharaohs, including Tutankhamun, hidden in the Theban hills of Luxor.",
+    "images": [
+      "/imagesdatabase/historical/Valley of the Kings1.webp",
+      "/imagesdatabase/historical/Valley of the Kings2.webp",
+      "/imagesdatabase/historical/Valley of the Kings3.webp",
+      "/imagesdatabase/historical/Valley of the Kings4.jpeg"
+    ],
+    "overview": {
+      "description": "The Valley of the Kings is a royal burial ground for pharaohs and powerful nobles of the New Kingdom. It includes over 60 tombs, most famously that of Tutankhamun. The tombs are carved deep into the desert rock, decorated with scenes from Egyptian mythology.",
+      "rating": 4.7,
+      "address": "Luxor West Bank, Luxor Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XSsouHLM1ZvUkz7R6",
+      "mapImage": "/imagesdatabase/historical/Valley of the Kingsmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "6:00AM-4:00PM",
+      "entryFees": "EGP 160 for Egyptians, EGP 240 for foreigners (general ticket)",
+      "bestTimeToVisit": "October to March (cooler temperatures)",
+      "howToGet": "Accessible by car, minibus, or tour groups from Luxor. Located on the west bank of the Nile.",
+      "tips": "Bring water, wear a hat, and consider hiring a guide for detailed insights into each tomb."
+    },
+    "review": {
+      "review1": {
+        "name": "Layla R.",
+        "date": "March 2025",
+        "content": "The tombs were incredible to see. Photography isn’t allowed inside, but the memories stay.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Tamer F.",
+        "date": "February 2025",
+        "content": "Deeply impressive. Some tombs are closed, but those open are amazing!",
+        "rating": 3.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
+
   {
     "id": 4,
-    "name": "   Citadel of Saladin",
-    "image": "public/historical/castdel.webp",
+    "name": "Citadel of Saladin",
+    "category": "Historical",
+    "image": "/historical/castdel.webp",
     "rate": 4,
-    "description": "vA medieval Islamic fort with panoramic views of Cairo and the iconic Mosque"
+    "description": "A medieval Islamic fort with panoramic views of Cairo and the iconic Mosque",
+    "images": [
+      "/imagesdatabase/historical/Citadel of Saladin1.webp",
+      "/imagesdatabase/historical/Citadel of Saladin2.webp",
+      "/imagesdatabase/historical/Citadel of Saladin3.jpeg",
+      "/imagesdatabase/historical/Citadel of Saladin4.jpeg"
+    ],
+    "overview": {
+      "description": "The Citadel of Saladin is a historic Islamic fortification in Cairo. Built in the 12th century by Salah al-Din, it served as Egypt's seat of government for over 700 years. The Citadel offers panoramic views of Cairo and houses several mosques and museums, including the famous Mosque of Muhammad Ali.",
+      "rating": 4.6,
+      "address": "Al Abageyah, El Khalifa, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mCy99jTqRHGtQ6Hs6",
+      "mapImage": "/imagesdatabase/historical/Citadel of Saladinmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "8:00AM - 5:00PM",
+      "entryFees": "EGP 60 for Egyptians, EGP 180 for foreigners",
+      "bestTimeToVisit": "October to April (pleasant weather)",
+      "howToGet": "Easily accessible by taxi, Uber, or local transportation from central Cairo.",
+      "tips": "Wear comfortable shoes, bring a camera for panoramic shots, and visit early to avoid crowds."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine A.",
+        "date": "April 2025",
+        "content": "The view of Cairo from the top was breathtaking. The mosque inside is beautiful.",
+        "rating": 4.5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Karim H.",
+        "date": "January 2025",
+        "content": "Rich in history and very well preserved. A must-see for any visitor to Cairo.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 5,
     "name": "Philae Temple",
-    "image": "public/historical/philia.webp",
+    "category": "Historical",
+    "image": "/historical/philia.webp",
     "rate": 4,
-    "description": "A picturesque temple on an island in Aswan, dedicated to the goddess Isis"
+    "description": "A picturesque temple on an island in Aswan, dedicated to the goddess Isis.",
+    "images": [
+      "/imagesdatabase/historical/Philae Temple1.jpeg",
+      "/imagesdatabase/historical/Philae Temple2.webp",
+      "/imagesdatabase/historical/Philae Temple3.webp",
+      "/imagesdatabase/historical/Philae Temple4.webp"
+    ],
+    "overview": {
+      "description": "Philae Temple is one of Egypt’s most beautiful temples, located on Agilkia Island in Aswan. It was moved from its original location to avoid flooding after the construction of the High Dam. The temple is dedicated to the goddess Isis and is known for its stunning reliefs and sound-and-light show.",
+      "rating": 4.5,
+      "address": "Agilkia Island, Aswan Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/rEt5SH4iqe3bD5LD9",
+      "mapImage": "/imagesdatabase/historical/Philae Templemap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "7:00AM-4:00PM",
+      "entryFees": "EGP 40 for Egyptians, EGP 140 for foreigners",
+      "bestTimeToVisit": "October to April (cool and pleasant weather)",
+      "howToGet": "Reachable by boat from the Marina Philae Temple in Aswan.",
+      "tips": "Visit early in the morning to avoid heat, and consider staying for the evening sound-and-light show."
+    },
+    "review": {
+      "review1": {
+        "name": "Noura M.",
+        "date": "March 2025",
+        "content": "Absolutely breathtaking location and history. The boat ride made the experience special.",
+        "rating": 4.5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed T.",
+        "date": "February 2025",
+        "content": "A magical place full of myths and beauty. Must visit when in Aswan.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
+
   {
     "id": 6,
     "name": "Egyptian Museum",
-    "image": "public/historical/The-Grand-Egyptian.jpg",
+    "category": "Historical",
+    "image": "/historical/The-Grand-Egyptian.jpg",
     "rate": 4,
-    "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun."
+    "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun.",
+    "images": [
+      "/imagesdatabase/historical/Egyptian Museum2.avif",
+      "/imagesdatabase/historical/Egyptian Museum1.jpeg",
+      "/imagesdatabase/historical/Egyptian Museum3.avif",
+      "/imagesdatabase/historical/Egyptian Museum4.avif"
+    ],
+    "overview": {
+      "description": "Located in Tahrir Square, Cairo, the Egyptian Museum houses an extensive collection of ancient Egyptian antiquities. Among the most famous exhibits are the golden mask and treasures of King Tutankhamun, mummies of pharaohs, and countless statues and relics spanning thousands of years.",
+      "rating": 4.6,
+      "address": "Tahrir Square, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/FVoj927V2wrNsUu96",
+      "mapImage": "/imagesdatabase/historical/Egyptian Museummap.avif"
+    },
+    "detail": {
+      "visitingHours": "9:00AM–5:00PM",
+      "entryFees": "EGP 30 for Egyptians, EGP 200 for foreigners",
+      "bestTimeToVisit": "Weekdays in the morning to avoid crowds",
+      "howToGet": "Easily reachable via Cairo Metro (Sadat Station) or taxi to Tahrir Square.",
+      "tips": "Allow at least 2 hours for your visit; guided tours enhance the experience."
+    },
+    "review": {
+      "review1": {
+        "name": "Hana K.",
+        "date": "April 2025",
+        "content": "Incredible collection! Seeing Tutankhamun’s mask in person is unforgettable.",
+        "rating": 4.5,
+        "avatar": "/sara/person11.jpeg"
+      },
+      "review2": {
+        "name": "Omar Z.",
+        "date": "March 2025",
+        "content": "So much to see, it's overwhelming! Wish there were more labels in English.",
+        "rating": 4,
+        "avatar": "/sara/person12.jpeg"
+      }
+    }
   },
   {
     "id": 7,
-    "name": "  Abu Simbel Temples",
-    "image": "public/historical/planner.jpeg",
+    "name": "Abu Simbel Temples",
+    "category": "Historical",
+    "image": "/historical/planner.jpeg",
     "rate": 4,
-    "description": "Massive rock temples of Ramses II relocated to save them from flooding"
+    "description": "Massive rock temples of Ramses II relocated to save them from flooding.",
+    "images": [
+      "/imagesdatabase/historical/Abu Simbel Temples1.avif",
+      "/imagesdatabase/historical/Abu Simbel Temples2.jpeg",
+      "/imagesdatabase/historical/Abu Simbel Temples3.webp",
+      "/imagesdatabase/historical/Abu Simbel Temples4.jpeg"
+    ],
+    "overview": {
+      "description": "Located in southern Egypt near the Sudanese border, Abu Simbel Temples are two massive rock temples built by Pharaoh Ramses II. They were relocated in a historic UNESCO operation to avoid submersion due to the Aswan High Dam. The temples are dedicated to Ramses II and his queen Nefertari, and aligned to allow sunlight to illuminate the inner sanctuary twice a year.",
+      "rating": 4.7,
+      "address": "Abu Simbel, Aswan Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/5qfEtYAgyEjSjRN98",
+      "mapImage": "/imagesdatabase/historical/Abu Simbel Templesmap.webp"
+    },
+    "detail": {
+      "visitingHours": "6:00AM–5:00PM",
+      "entryFees": "EGP 40 for Egyptians, EGP 255 for foreigners",
+      "bestTimeToVisit": "February and October during the Sun Festival",
+      "howToGet": "Accessible by road (approx. 3.5 hours from Aswan) or via domestic flight to Abu Simbel Airport.",
+      "tips": "Visit during sunrise for the best lighting and fewer crowds; wear sun protection."
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah M.",
+        "date": "March 2025",
+        "content": "A breathtaking site with incredible history. The scale of the temples is amazing.",
+        "rating": 4.8,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ali F.",
+        "date": "April 2025",
+        "content": "Long trip but totally worth it! Highly recommend catching the Sun Festival if you can.",
+        "rating": 4.6,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 8,
     "name": "Al-Muizz Street",
-    "image": "public/historical/ALMOUZ.jpg",
+    "category": "Historical",
+
+    "image": "/historical/ALMOUZ.jpg",
     "rate": 4,
-    "description": " A historic area full of mosques, markets, and medieval architecture reflecting"
+    "description": "A historic area full of mosques, markets, and medieval architecture reflecting Islamic Cairo’s rich heritage.",
+     "images": [
+      "/imagesdatabase/historical/Al-Muizz Street1.jpeg",
+      "/imagesdatabase/historical/Al-Muizz Street2.jpeg",
+      "/imagesdatabase/historical/Al-Muizz Street3.webp",
+      "/imagesdatabase/historical/Al-Muizz Street4.webp"
+    ],
+    "overview": {
+      "description": "Al-Muizz Street is one of the oldest streets in Cairo and is often called an open-air museum. It's lined with stunning examples of Islamic architecture, including mosques, madrasas, and sabils. The street comes alive with local markets, traditional crafts, and vibrant cultural life.",
+      "rating": 4.6,
+      "address": "El-Gamaleya, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mT3yZPNq4mmHWEuF6",
+      "mapImage": "/imagesdatabase/historical/Al-Muizz Streetmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "Open 24 hours (best visited during daylight)",
+      "entryFees": "Free access; some monuments may charge small fees",
+      "bestTimeToVisit": "Late afternoon or evening for cooler weather and ambiance",
+      "howToGet": "Located in central Cairo; accessible via metro (Al-Azhar station) or taxi.",
+      "tips": "Wear comfortable shoes; visit early to avoid crowds and enjoy photography opportunities."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona E.",
+        "date": "May 2025",
+        "content": "Walking through Al-Muizz feels like a journey back in time. The buildings are full of character.",
+        "rating": 4.7,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef K.",
+        "date": "June 2025",
+        "content": "Perfect for history and culture lovers. Lots of beautiful spots to take photos.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 9,
     "name": "Abu Serga",
-    "image": "public/historical/elserag.webp",
+    "category": "Historical",
+    "image": "/historical/elserag.webp",
     "rate": 4,
-    "description": "One of the oldest Coptic churches, believed to be visited by the Holy Family"
+    "description": "One of the oldest Coptic churches, believed to be visited by the Holy Family during their stay in Egypt.",
+         "images": [
+      "/imagesdatabase/historical/Abu Serga1.webp",
+      "/imagesdatabase/historical/Abu Serga2.jpeg",
+      "/imagesdatabase/historical/Abu Serga3.webp",
+      "/imagesdatabase/historical/Abu Serga4.jpeg"
+    ],
+    "overview": {
+      "description": "Abu Serga Church, also known as Saints Sergius and Bacchus Church, is located in Old Cairo and is considered one of the oldest Coptic churches in Egypt. It holds great religious significance as it is believed to have sheltered the Holy Family during their flight into Egypt. The church features beautiful wooden ceilings, ancient icons, and a crypt where the Holy Family stayed.",
+      "rating": 4.5,
+      "address": "Mar Girgis Street, Old Cairo, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/LChvuuHsBnULr6T96",
+      "mapImage": "/imagesdatabase/historical/Abu Sergamap.webp"
+    },
+    "detail": {
+      "visitingHours": "9 AM – 5 PM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Morning hours during weekdays",
+      "howToGet": "Take the Cairo Metro to Mar Girgis Station; the church is a short walk from the station.",
+      "tips": "Dress modestly; photography may be restricted in some areas."
+    },
+    "review": {
+      "review1": {
+        "name": "Nermine S.",
+        "date": "April 2025",
+        "content": "A deeply spiritual place. The atmosphere is peaceful and full of history. Highly recommend a visit.",
+        "rating": 4.8,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Peter A.",
+        "date": "May 2025",
+        "content": "The crypt is a must-see. It's humbling to stand in a place believed to have sheltered the Holy Family.",
+        "rating": 4.6,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 10,
-    "name": "  Al-Azhar Mosque",
-    "image": "public/historical/الازهر (2).webp",
+    "name": "Al-Azhar Mosque",
+    "category": "Historical",
+
+    "image": "/historical/الازهر (2).webp",
     "rate": 4,
-    "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world."
+    "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world.",
+         "images": [
+      "/imagesdatabase/historical/Al-Azhar Mosque1.jpg",
+      "/imagesdatabase/historical/Al-Azhar Mosque2.webp",
+      "/imagesdatabase/historical/Al-Azhar Mosque3.webp",
+      "/imagesdatabase/historical/Al-Azhar Mosque4.webp"
+    ],
+    "overview": {
+      "description": "Founded in 970 AD, Al-Azhar Mosque is not only one of the most iconic mosques in Cairo but also a prominent university and one of the world's oldest centers for Islamic education. The mosque's architecture showcases a blend of Fatimid, Mamluk, and Ottoman styles. It remains a spiritual and intellectual hub for Muslims around the globe.",
+      "rating": 4.6,
+      "address": "Al-Azhar Street, Islamic Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/79os6b7bwKzaVRJq7",
+      "mapImage": "/imagesdatabase/historical/Al-Azhar Mosquemap.jpg"
+    },
+    "detail": {
+      "visitingHours": "9 AM – 5 PM (non-prayer times)",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Early morning or late afternoon",
+      "howToGet": "Located near Al-Azhar Street; easily accessible by taxi or by walking from El-Hussein area.",
+      "tips": "Dress modestly, women may need to cover their heads, and respect prayer times."
+    },
+    "review": {
+      "review1": {
+        "name": "Ahmed Z.",
+        "date": "June 2025",
+        "content": "The mosque is breathtaking! Rich in history and still active with students and worshippers. A must-visit in Cairo.",
+        "rating": 4.7,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Fatima R.",
+        "date": "July 2025",
+        "content": "Al-Azhar is more than a mosque — it's a symbol of knowledge and heritage. The courtyards are stunning.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 11,
     "name": "Hatshepsut Temple",
-    "image": "public/historical/vaiiy.webp",
+    "category": "Historical",
+
+    "image": "/historical/vaiiy.webp",
     "rate": 4.5,
-    "description": "A mortuary temple built for the powerful Queen Hatshepsut, located beneath the cliffs at Deir el-Bahari."
+    "description": "A mortuary temple built for the powerful Queen Hatshepsut, located beneath the cliffs at Deir el-Bahari.",
+   "images": [
+      "/imagesdatabase/historical/Valley of the Kings1.webp",
+      "/imagesdatabase/historical/Valley of the Kings2.webp",
+      "/imagesdatabase/historical/Valley of the Kings3.webp",
+      "/imagesdatabase/historical/Valley of the Kings4.jpeg"
+    ],
+    "overview": {
+      "description": "The Temple of Hatshepsut, also known as Djeser-Djeseru, is a stunning mortuary temple built for the female pharaoh Hatshepsut. It is nestled at the base of the towering cliffs of Deir el-Bahari near the Valley of the Kings. The temple is famous for its unique architecture, terraces, and colonnades that blend beautifully into the surrounding desert landscape.",
+      "rating": 4.8,
+      "address": "Deir el-Bahari, Luxor, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XSsouHLM1ZvUkz7R6",
+      "mapImage": "/imagesdatabase/historical/Valley of the Kingsmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "6 AM – 5 PM",
+      "entryFees": "160 EGP for adults, 80 EGP for students",
+      "bestTimeToVisit": "Early morning to avoid the heat",
+      "howToGet": "Located in Luxor's West Bank, can be reached via taxi, bus, or organized tours.",
+      "tips": "Wear comfortable shoes, bring water, and try to arrive early to avoid crowds."
+    },
+    "review": {
+      "review1": {
+        "name": "Lena M.",
+        "date": "May 2025",
+        "content": "Incredible architecture and fascinating history. The temple feels surreal, especially in the morning light.",
+        "rating": 4.9,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef T.",
+        "date": "April 2025",
+        "content": "One of the highlights of my visit to Luxor! You can really feel the grandeur of ancient Egypt here.",
+        "rating": 4.7,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 12,
     "name": "Saqqara Step Pyramid",
-    "image": "public/historical/Saqqara Step Pyramid.jpg",
+    "category": "Historical",
+    "image": "/historical/Saqqara Step Pyramid.jpg",
     "rate": 4,
-    "description": "The oldest known pyramid in Egypt, built for Pharaoh Djoser in the 27th century BC."
+    "description": "The oldest known pyramid in Egypt, built for Pharaoh Djoser in the 27th century BC.",
+     "images": [
+      "/Details/historical/1753012412581.jpg",
+      "/Details/historical/camel-1839616_1920.jpg",
+      "/Details/historical/pyramids (3).jpg",
+      "/Details/historical/pyramids (4).jpg"
+    ],
+    "overview": {
+      "description": "The Saqqara Step Pyramid, also known as the Pyramid of Djoser, is considered the earliest colossal stone structure in Egypt. Built during the 27th century BC, it marks a major advancement in ancient Egyptian architecture. It consists of six mastaba-like layers stacked on top of each other and is located in the vast necropolis of Saqqara.",
+      "rating": 4.6,
+      "address": "Saqqara Necropolis, south of Cairo, Egypt",
+       "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
+      "mapImage": " /Details/historical/Rectangle 7.png"
+    },
+    "detail": {
+      "visitingHours": "8 AM – 5 PM",
+      "entryFees": "180 EGP for adults, 90 EGP for students",
+      "bestTimeToVisit": "Morning hours, especially in cooler months",
+      "howToGet": "Located around 30 km south of Cairo; accessible by taxi or guided tours.",
+      "tips": "Carry water and sun protection; consider combining with nearby tomb visits."
+    },
+    "review": {
+      "review1": {
+        "name": "Daniel K.",
+        "date": "March 2025",
+        "content": "A must-see if you're interested in ancient history. The site is less crowded and gives a raw, authentic feel.",
+        "rating": 4.5,
+        "avatar": "/sara/person23.jpeg"
+      },
+      "review2": {
+        "name": "Salma H.",
+        "date": "February 2025",
+        "content": "The oldest pyramid in Egypt is impressive and full of hidden history. Highly recommend a guide.",
+        "rating": 4.7,
+        "avatar": "/sara/person24.jpeg"
+      }
+    }
   }
 ]

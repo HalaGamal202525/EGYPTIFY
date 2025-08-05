@@ -123,7 +123,7 @@ const routes = [
 
 // activity detail
     { path: '/fooddetail', component: FoodDetail },
-    { path: '/historicaldetail', component: HistoricalDetail },
+    { path: '/historicaldetail/:id', component: HistoricalDetail },
    { path: '/naturaldetail', component: NaturalDetail },
     { path: '/entertainmentdetail', component: EntertainmentDetail },
 

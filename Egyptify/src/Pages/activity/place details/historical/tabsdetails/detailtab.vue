@@ -1,7 +1,5 @@
 <template>
   <div class="grid md:grid-cols-2 gap-6 p-6">
-    <!-- الكارت الأول: Visiting Hours -->
-     <!-- الكارت الأول: Visiting Hours -->
     <div class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl">
     <i class="fa-solid fa-clock"></i>
       <div>
@@ -10,7 +8,6 @@
       </div>
     </div>
 
-    <!-- الكارت التاني: Entry Fees -->
     <div class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl">
      <i class="fa-solid fa-dollar-sign"></i>
       <div>
@@ -19,7 +16,6 @@
       </div>
     </div>
 
-    <!-- الكارت الثالث: Best Time to Visit -->
     <div class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl">
       <i class="fa-solid fa-sun"></i>
       <div>
@@ -27,8 +23,6 @@
         <p class="text-gray-600 mt-1">{{ place.bestTimeToVisit }}</p>
       </div>
     </div>
-
-    <!-- الكارت الرابع: How to Get There -->
     <div class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl">
     <i class="fa-solid fa-car"></i>
       <div>
@@ -36,7 +30,6 @@
         <p class="text-gray-600 mt-1">{{ place.howToGet }}</p>
       </div>
     </div>
-    <!-- قسم النصائح -->
 <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md">
   <div class="flex items-center gap-2 mb-2">
 <i class="fa-solid fa-lightbulb"></i>
@@ -50,17 +43,25 @@
 </div>
 
   </div>
+
+
+    <div>
+    <img :src="data.image" alt="Overview Image" />
+    <p>{{ data.description }}</p>
+  </div>
 </template>
 
 <script setup>
-const place ={
-        "visitingHours": "8:00AM-5:00PM",
-    "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
-    "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
-    "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
-    "tips": "Go early "
-}
-defineProps({
-  place: Object
-});
+// const place ={
+//         "visitingHours": "8:00AM-5:00PM",
+//     "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
+//     "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
+//     "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
+//     "tips": "Go early "
+// }
+import places from "../../../../../data/historical.json"
+defineProps({ data: Object });
+// defineProps({
+//   place: Object
+// });
 </script>

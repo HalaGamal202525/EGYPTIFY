@@ -1,6 +1,6 @@
 <template>
   <div class="sticky top-24 h-fit">
-    <div class="border border-black p-4 w-full bg-gray-100 rounded-lg">
+    <div class="  p-4 w-full bg-gray-100 rounded-lg">
       <h1 class="text-2xl font-bold mb-4 text-black">{{ title }}</h1>
 
       <div

@@ -299,112 +299,110 @@
       "image": "/package/family/family.webp",
       "description": "Perfect vacations for families with kids.",
       "packages": {
-      "hurghada-family": {
-  "name": "Hurghada Family",
-  "slug": "hurghada-family",
-  "image": "/package/family/Hurghada Family.webp",
-  "shortDescription": "A beach escape with kid-friendly fun.",
-  "price": "4500 EGP",
-  "duration": "3 Days / 2 Nights",
-  "fullDescription": "Beachside hotel with playgrounds and kids' activities.",
-  "includes": ["Family room", "Meals", "Kids activities"],
-  "activities": ["Mini zoo", "Water park"],
-  "gallery": [
-    "/package/family/hurghada-family.jpeg",
-    "/package/family/hurghada-family2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival in Hurghada, hotel check-in, beach time & dinner",
-    "Day 2 - Visit water park in the morning, kids' club activities in the afternoon",
-    "Day 3 - Morning at the mini zoo, check-out and return trip"
-  ]
-},
-  "hurghada-family": {
-  "name": "Hurghada Family",
-  "slug": "hurghada-family",
-  "image": "/package/family/Hurghada Family.webp",
-  "shortDescription": "A beach escape with kid-friendly fun.",
-  "price": "4500 EGP",
-  "duration": "3 Days / 2 Nights",
-  "fullDescription": "Beachside hotel with playgrounds and kids' activities.",
-  "includes": ["Family room", "Meals", "Kids activities"],
-  "activities": ["Mini zoo", "Water park"],
-  "gallery": [
-    "/package/family/hurghada-family.jpeg",
-    "/package/family/hurghada-family2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival in Hurghada, hotel check-in, beach relaxation & dinner",
-    "Day 2 - Visit water park in the morning, family games in the afternoon",
-    "Day 3 - Mini zoo tour, check-out and return to Cairo"
-  ]
-}
-,
-       "sharm-family": {
-  "name": "Sharm El Sheikh Family",
-  "slug": "sharm-family",
-  "image": "/package/family/Sharm El Sheikh Family.webp",
-  "shortDescription": "All-inclusive resort for the whole family.",
-  "price": "5000 EGP",
-  "duration": "4 Days / 3 Nights",
-  "fullDescription": "Relax at a family-friendly resort with pools and kids shows.",
-  "includes": ["Resort stay", "All meals", "Entertainment shows"],
-  "activities": [
-    "Kids club",
-    "Snorkeling for beginners",
-    "Evening shows"
-  ],
-  "gallery": [
-    "/package/family/sharm-family.webp",
-    "/package/family/harm-family.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival in Sharm, check-in, pool time & welcome dinner",
-    "Day 2 - Morning kids club activities, afternoon snorkeling session",
-    "Day 3 - Relax at resort, optional family tour, evening entertainment show",
-    "Day 4 - Breakfast, check-out and travel back"
-  ]
-},
+        "hurghada-family": {
+          "name": "Hurghada Family",
+          "slug": "hurghada-family",
+          "image": "/package/family/Hurghada Family.webp",
+          "shortDescription": "A beach escape with kid-friendly fun.",
+          "price": "4500 EGP",
+          "duration": "3 Days / 2 Nights",
+          "fullDescription": "Beachside hotel with playgrounds and kids' activities.",
+          "includes": ["Family room", "Meals", "Kids activities"],
+          "activities": ["Mini zoo", "Water park"],
+          "gallery": [
+            "/package/family/hurghada-family.jpeg",
+            "/package/family/hurghada-family2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival in Hurghada, hotel check-in, beach time & dinner",
+            "Day 2 - Visit water park in the morning, kids' club activities in the afternoon",
+            "Day 3 - Morning at the mini zoo, check-out and return trip"
+          ]
+        },
+        "hurghada-family": {
+          "name": "Hurghada Family",
+          "slug": "hurghada-family",
+          "image": "/package/family/Hurghada Family.webp",
+          "shortDescription": "A beach escape with kid-friendly fun.",
+          "price": "4500 EGP",
+          "duration": "3 Days / 2 Nights",
+          "fullDescription": "Beachside hotel with playgrounds and kids' activities.",
+          "includes": ["Family room", "Meals", "Kids activities"],
+          "activities": ["Mini zoo", "Water park"],
+          "gallery": [
+            "/package/family/hurghada-family.jpeg",
+            "/package/family/hurghada-family2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival in Hurghada, hotel check-in, beach relaxation & dinner",
+            "Day 2 - Visit water park in the morning, family games in the afternoon",
+            "Day 3 - Mini zoo tour, check-out and return to Cairo"
+          ]
+        },
+        "sharm-family": {
+          "name": "Sharm El Sheikh Family",
+          "slug": "sharm-family",
+          "image": "/package/family/Sharm El Sheikh Family.webp",
+          "shortDescription": "All-inclusive resort for the whole family.",
+          "price": "5000 EGP",
+          "duration": "4 Days / 3 Nights",
+          "fullDescription": "Relax at a family-friendly resort with pools and kids shows.",
+          "includes": ["Resort stay", "All meals", "Entertainment shows"],
+          "activities": [
+            "Kids club",
+            "Snorkeling for beginners",
+            "Evening shows"
+          ],
+          "gallery": [
+            "/package/family/sharm-family.webp",
+            "/package/family/harm-family.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival in Sharm, check-in, pool time & welcome dinner",
+            "Day 2 - Morning kids club activities, afternoon snorkeling session",
+            "Day 3 - Relax at resort, optional family tour, evening entertainment show",
+            "Day 4 - Breakfast, check-out and travel back"
+          ]
+        },
 
-     "alex-family": {
-  "name": "Alexandria Family Weekend",
-  "slug": "alex-family",
-  "image": "/package/family/Alexandria Family Weekend.webp",
-  "shortDescription": "Cultural and beach fun for families.",
-  "price": "3000 EGP",
-  "duration": "2 Days / 1 Night",
-  "fullDescription": "Visit museums, play on the beach, and enjoy seafood by the sea.",
-  "includes": ["Hotel stay", "Breakfast & Dinner", "Museum entry"],
-  "activities": ["Beach games", "Aquarium visit", "Family boat ride"],
-  "gallery": [
-    "/package/family/alex-family.webp",
-    "/package/family/alex-family2.jpeg"
-  ],
-  "itinerary": [
-    "Day 1 - Arrive in Alexandria, visit aquarium & enjoy seafood dinner",
-    "Day 2 - Morning beach games, museum tour, family boat ride, return home"
-  ]
-}
-,"fayoum-family": {
-  "name": "Fayoum Nature Family Trip",
-  "slug": "fayoum-family",
-  "image": "/package/family/Fayoum Nature Family Trip.webp",
-  "shortDescription": "Nature and bonding for families.",
-  "price": "3500 EGP",
-  "duration": "2 Days / 1 Night",
-  "fullDescription": "Stay in a camp with family activities and star gazing.",
-  "includes": ["Lodging", "Meals", "Guided activities"],
-  "activities": ["Safari ride", "Campfire games", "Star watching"],
-  "gallery": [
-    "/package/family/fayom.webp",
-    "/package/family/fayom2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival and camp check-in, afternoon safari, evening campfire games",
-    "Day 2 - Morning nature walk, star watching activity, return after lunch"
-  ]
-}
-
+        "alex-family": {
+          "name": "Alexandria Family Weekend",
+          "slug": "alex-family",
+          "image": "/package/family/Alexandria Family Weekend.webp",
+          "shortDescription": "Cultural and beach fun for families.",
+          "price": "3000 EGP",
+          "duration": "2 Days / 1 Night",
+          "fullDescription": "Visit museums, play on the beach, and enjoy seafood by the sea.",
+          "includes": ["Hotel stay", "Breakfast & Dinner", "Museum entry"],
+          "activities": ["Beach games", "Aquarium visit", "Family boat ride"],
+          "gallery": [
+            "/package/family/alex-family.webp",
+            "/package/family/alex-family2.jpeg"
+          ],
+          "itinerary": [
+            "Day 1 - Arrive in Alexandria, visit aquarium & enjoy seafood dinner",
+            "Day 2 - Morning beach games, museum tour, family boat ride, return home"
+          ]
+        },
+        "fayoum-family": {
+          "name": "Fayoum Nature Family Trip",
+          "slug": "fayoum-family",
+          "image": "/package/family/Fayoum Nature Family Trip.webp",
+          "shortDescription": "Nature and bonding for families.",
+          "price": "3500 EGP",
+          "duration": "2 Days / 1 Night",
+          "fullDescription": "Stay in a camp with family activities and star gazing.",
+          "includes": ["Lodging", "Meals", "Guided activities"],
+          "activities": ["Safari ride", "Campfire games", "Star watching"],
+          "gallery": [
+            "/package/family/fayom.webp",
+            "/package/family/fayom2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival and camp check-in, afternoon safari, evening campfire games",
+            "Day 2 - Morning nature walk, star watching activity, return after lunch"
+          ]
+        }
       }
     },
     "luxury": {
@@ -414,119 +412,115 @@
       "description": "High-end packages with exclusive services.",
       "packages": {
         "cairo-luxury": {
-  "name": "Cairo Luxury",
-  "slug": "cairo-luxury",
-  "image": "/package/luxuray/Cairo Luxury.webp",
-  "shortDescription": "Explore Cairo in VIP style.",
-  "price": "15,000 EGP",
-  "duration": "4 Days / 3 Nights",
-  "fullDescription": "5-star suite, private guide, fine dining and spa.",
-  "includes": ["VIP hotel", "Chauffeur", "Spa", "Private museum tours"],
-  "activities": ["Yacht trip", "Helicopter tour"],
-  "gallery": [
-    "/package/luxuray/cairo-luxury.webp",
-    "/package/luxuray/cairo-luxury2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - VIP airport pickup, check-in at 5-star suite, welcome dinner",
-    "Day 2 - Private museum tours, fine dining lunch, spa session",
-    "Day 3 - Helicopter tour over Cairo, yacht sunset cruise",
-    "Day 4 - Shopping at luxury boutiques, chauffeur to airport"
-  ]
-}
-,
-       "luxor-luxury": {
-  "name": "Luxor Royal Retreat",
-  "slug": "luxor-luxury",
-  "image": "/package/luxuray/Luxor Royal Retreat.webp",
-  "shortDescription": "Discover ancient wonders in first-class luxury.",
-  "price": "18,000 EGP",
-  "duration": "3 Days / 2 Nights",
-  "fullDescription": "Enjoy a private Nile cruise, guided historical tours, and royal treatment.",
-  "includes": [
-    "5-star cruise",
-    "Gourmet meals",
-    "Private tours",
-    "Spa access"
-  ],
-  "activities": [
-    "Hot air balloon ride",
-    "Sunset felucca",
-    "Temple access after hours"
-  ],
-  "gallery": [
-    "/package/luxuray/luxor-luxury.webp",
-    "/package/luxuray/luxor-luxury3.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival in Luxor, check-in to 5-star Nile cruise, welcome gourmet dinner",
-    "Day 2 - Hot air balloon ride, private guided tour to Karnak & Luxor Temples, spa evening",
-    "Day 3 - Sunset felucca cruise, after-hours temple access, farewell dinner"
-  ]
-}
-,
-    "aswan-luxury": {
-  "name": "Aswan Elegance",
-  "slug": "aswan-luxury",
-  "image": "/package/luxuray/Aswan Elegance.webp",
-  "shortDescription": "Tranquil escape with elite service.",
-  "price": "17,000 EGP",
-  "duration": "3 Days / 2 Nights",
-  "fullDescription": "Luxury stay with private felucca ride, Nubian culture, and fine cuisine.",
-  "includes": [
-    "Luxury resort",
-    "Cultural guide",
-    "Private transfers",
-    "Dinner cruise"
-  ],
-  "activities": [
-    "Private felucca ride",
-    "Visit Nubian village",
-    "Spa & yoga sessions"
-  ],
-  "gallery": [
-    "/package/luxuray/aswan-luxury.webp",
-    "/package/luxuray/aswan-luxury2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival in Aswan, resort check-in, sunset spa session",
-    "Day 2 - Visit Nubian village with cultural guide, private felucca ride on the Nile",
-    "Day 3 - Morning yoga, relaxing breakfast, dinner cruise before departure"
-  ]
-}
-,
-      "sharm-luxury": {
-  "name": "Sharm El Sheikh Deluxe",
-  "slug": "sharm-luxury",
-  "image": "/package/luxuray/Sharm El Sheikh Deluxe.webp",
-  "shortDescription": "Beachfront excellence with 5-star experience.",
-  "price": "20,000 EGP",
-  "duration": "5 Days / 4 Nights",
-  "fullDescription": "Indulge in sea view suites, private beach, diving, and spa.",
-  "includes": [
-    "5-star beachfront suite",
-    "Private beach access",
-    "Butler service",
-    "Diving experience"
-  ],
-  "activities": [
-    "Scuba diving",
-    "Private yacht rental",
-    "Underwater photography"
-  ],
-  "gallery": [
-    "/package/luxuray/sharmluxury.webp",
-    "/package/luxuray/sharmluxury2.webp"
-  ],
-  "itinerary": [
-    "Day 1 - Arrival and check-in, sunset beachside dinner",
-    "Day 2 - Scuba diving session with instructor, relaxing spa",
-    "Day 3 - Private yacht cruise and underwater photography",
-    "Day 4 - Leisure day on private beach, optional butler-led excursion",
-    "Day 5 - Breakfast with sea view, checkout and farewell"
-  ]
-}
-
+          "name": "Cairo Luxury",
+          "slug": "cairo-luxury",
+          "image": "/package/luxuray/Cairo Luxury.webp",
+          "shortDescription": "Explore Cairo in VIP style.",
+          "price": "15,000 EGP",
+          "duration": "4 Days / 3 Nights",
+          "fullDescription": "5-star suite, private guide, fine dining and spa.",
+          "includes": ["VIP hotel", "Chauffeur", "Spa", "Private museum tours"],
+          "activities": ["Yacht trip", "Helicopter tour"],
+          "gallery": [
+            "/package/luxuray/cairo-luxury.webp",
+            "/package/luxuray/cairo-luxury2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - VIP airport pickup, check-in at 5-star suite, welcome dinner",
+            "Day 2 - Private museum tours, fine dining lunch, spa session",
+            "Day 3 - Helicopter tour over Cairo, yacht sunset cruise",
+            "Day 4 - Shopping at luxury boutiques, chauffeur to airport"
+          ]
+        },
+        "luxor-luxury": {
+          "name": "Luxor Royal Retreat",
+          "slug": "luxor-luxury",
+          "image": "/package/luxuray/Luxor Royal Retreat.webp",
+          "shortDescription": "Discover ancient wonders in first-class luxury.",
+          "price": "18,000 EGP",
+          "duration": "3 Days / 2 Nights",
+          "fullDescription": "Enjoy a private Nile cruise, guided historical tours, and royal treatment.",
+          "includes": [
+            "5-star cruise",
+            "Gourmet meals",
+            "Private tours",
+            "Spa access"
+          ],
+          "activities": [
+            "Hot air balloon ride",
+            "Sunset felucca",
+            "Temple access after hours"
+          ],
+          "gallery": [
+            "/package/luxuray/luxor-luxury.webp",
+            "/package/luxuray/luxor-luxury3.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival in Luxor, check-in to 5-star Nile cruise, welcome gourmet dinner",
+            "Day 2 - Hot air balloon ride, private guided tour to Karnak & Luxor Temples, spa evening",
+            "Day 3 - Sunset felucca cruise, after-hours temple access, farewell dinner"
+          ]
+        },
+        "aswan-luxury": {
+          "name": "Aswan Elegance",
+          "slug": "aswan-luxury",
+          "image": "/package/luxuray/Aswan Elegance.webp",
+          "shortDescription": "Tranquil escape with elite service.",
+          "price": "17,000 EGP",
+          "duration": "3 Days / 2 Nights",
+          "fullDescription": "Luxury stay with private felucca ride, Nubian culture, and fine cuisine.",
+          "includes": [
+            "Luxury resort",
+            "Cultural guide",
+            "Private transfers",
+            "Dinner cruise"
+          ],
+          "activities": [
+            "Private felucca ride",
+            "Visit Nubian village",
+            "Spa & yoga sessions"
+          ],
+          "gallery": [
+            "/package/luxuray/aswan-luxury.webp",
+            "/package/luxuray/aswan-luxury2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival in Aswan, resort check-in, sunset spa session",
+            "Day 2 - Visit Nubian village with cultural guide, private felucca ride on the Nile",
+            "Day 3 - Morning yoga, relaxing breakfast, dinner cruise before departure"
+          ]
+        },
+        "sharm-luxury": {
+          "name": "Sharm El Sheikh Deluxe",
+          "slug": "sharm-luxury",
+          "image": "/package/luxuray/Sharm El Sheikh Deluxe.webp",
+          "shortDescription": "Beachfront excellence with 5-star experience.",
+          "price": "20,000 EGP",
+          "duration": "5 Days / 4 Nights",
+          "fullDescription": "Indulge in sea view suites, private beach, diving, and spa.",
+          "includes": [
+            "5-star beachfront suite",
+            "Private beach access",
+            "Butler service",
+            "Diving experience"
+          ],
+          "activities": [
+            "Scuba diving",
+            "Private yacht rental",
+            "Underwater photography"
+          ],
+          "gallery": [
+            "/package/luxuray/sharmluxury.webp",
+            "/package/luxuray/sharmluxury2.webp"
+          ],
+          "itinerary": [
+            "Day 1 - Arrival and check-in, sunset beachside dinner",
+            "Day 2 - Scuba diving session with instructor, relaxing spa",
+            "Day 3 - Private yacht cruise and underwater photography",
+            "Day 4 - Leisure day on private beach, optional butler-led excursion",
+            "Day 5 - Breakfast with sea view, checkout and farewell"
+          ]
+        }
       }
     }
   }
