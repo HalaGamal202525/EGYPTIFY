@@ -2,14 +2,14 @@
 <script setup>
 import { blogs } from '../BlogData.js'
 import { useRoute, useRouter } from 'vue-router'
-import navbar from '../components/navbar.vue'
+import navbar from '../components/NavBar-Black.vue'
 import Footer from '../components/Footer.vue'
 import BaseButton from '../components/BaseButton.vue'
 
 const route = useRoute()
 const router = useRouter()
 const blog = blogs.find(b => b.id === parseInt(route.params.id))
-const related = blogs.filter(b => b.id !== blog.id)
+const related = blogs.filter(b => b.id !== blog.id).slice(0, 3) // عرض 3 فقط
 
 function goToDetails(id) {
   router.push(`/blogs/${id}`)
@@ -20,22 +20,18 @@ function goToDetails(id) {
   <div class="text-black">
     <navbar />
 
-    <!-- Hero Section -->
-    <div class="relative w-full h-[300px] md:h-[400px]">
-      <img
-        :src="blog.image"
-        alt="Blog Hero"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <h1 class="text-3xl md:text-5xl font-bold text-white px-4 text-center">
-          {{ blog.title }}
-        </h1>
-      </div>
-    </div>
-
+   <div class="max-w-4xl mx-auto mt-24 px-4">
+  <div class="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg">
+    <img
+      :src="blog.image"
+      alt="Blog Image"
+      class="w-full h-80 object-cover rounded-xl"
+    />
+  </div>
+</div>
     <!-- Blog Content -->
     <div class="max-w-4xl mx-auto px-4 py-12">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">{{ blog.title }}</h1>
       <p class="text-sm text-gray-500 mb-2">By {{ blog.author }} • {{ blog.date }}</p>
 
       <div class="flex items-center gap-4 mb-6">
@@ -66,9 +62,8 @@ function goToDetails(id) {
             <p class="text-sm text-gray-600 mb-2">By {{ item.author }}</p>
             <p class="text-sm text-gray-600 mb-4">{{ item.summary }}</p>
           </div>
-          <div class="mt-auto text-center ">
-            <BaseButton  @click="() => goToDetails(item.id)" >Read More</BaseButton>
-
+          <div class="mt-auto text-center">
+            <BaseButton @click="() => goToDetails(item.id)">Read More</BaseButton>
           </div>
         </div>
       </div>
