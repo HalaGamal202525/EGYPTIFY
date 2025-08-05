@@ -259,8 +259,7 @@ const allDestinations = [
 
   //sharm
   {
-    title: "Rixos Premium Seagate",location: "Sharm El Sheikh",type: "Luxury Resort",activities: ["Beach", "Scuba Diving", "Spa"],budget: "Elite",duration: "More than 3 days",bestTime: "Summer",suitableFor: ["Couples", "Families"],description: "All‑inclusive beachfront resort with private beach, diving center and spa services.",image: "/public/hotel/rixos-premium-seagate.jpg"
-  },
+    title: "Rixos Premium Seagate",location: "Sharm El Sheikh",type: "Luxury Resort",activities: ["Beach", "Scuba Diving", "Spa"],budget: "Elite",duration: "More than 3 days",bestTime: "Summer",suitableFor: ["Couples", "Families"],description: "All‑inclusive beachfront resort with private beach, diving center and spa services.",image: "/public/hotel/rixos-premium-seagate.jpg"},
   {
     title: "Naama Bay",location: "Sharm El Sheikh",type: "Beach District",activities: ["Beach", "Shopping", "Nightlife"],budget: "$500‑1000",duration: "1‑2 days",bestTime: "Summer",suitableFor: ["Families", "Solo Travelers"],description: "Souvenir shops, cafes, water‑sports and vibrant nightlife along a sandy bay.",image: "/public/hotel/neaamabay.jpg"
   },
