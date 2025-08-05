@@ -147,7 +147,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import Navbar from '../components/navbar-black.vue'
+import Navbar from '../components/Navbar-Black.vue'
 import Footer from '../components/footer.vue'
 import BaseButton from '../components/BaseButton.vue'
 import reviews from '../components/reviews.vue'
@@ -460,8 +460,8 @@ const destinations = [
     stars: '',
     address: 'Luxor, Egypt',
     images: {
-      main: '/Destination/valley of kings.jpg',
-      img1: '/Destination/valley of kings3.jpg',
+      main: '/Destination/valley of kings3.jpg',
+      img1: '/Destination/valley of kings.jpg',
       img2: '/Destination/Valley-of-the-Kings.jpg',
       thumbs: [],
     },
