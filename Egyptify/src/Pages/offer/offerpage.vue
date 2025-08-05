@@ -53,7 +53,7 @@
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 
-import Navbar from "../../components/NavBar-Black.vue"
+import Navbar from '../../components/Navbar-Black.vue';
 import cardgrid  from "../../components/offer/cardgrid.vue";
 import cardlist from "../../components/offer/cardlist.vue";
 import PlaceFilters from '../../components/offer/filterplaces.vue';

@@ -2,7 +2,7 @@
   <div>
     <navbar />
 
-    <div class="relative h-64 md:h-96 bg-cover bg-center" style="background-image: url('/src/assets/BlogPageHero.jpg')">
+    <div class="relative h-64 md:h-110 bg-cover bg-center" style="background-image: url('/public/Destination/background.jpg')">
       <h1 class="absolute inset-0 flex justify-center items-center text-white text-2xl md:text-4xl font-bold">
         Destinations
       </h1>
