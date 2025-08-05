@@ -57,23 +57,57 @@
     </li>
   </ul>
 </div>
+<!-- Back Button -->
+<button
+ @click="$router.back()"
+  class="inline-flex items-center gap-2 px-8 py-3 mr-8 text-[#ffb703] hover:text-white bg-white border border-[#ffb703] hover:bg-[#ffb703] transition duration-300 px-4 py-2 rounded-full shadow-sm mb-6"
+>
+  <i class="fa-solid fa-arrow-left hover:!text-white"></i>
+  <span>Back</span>
+</button>
 
         <!-- Book Button -->
         <button class="mt-8 bg-[#ffc340] text-white px-8 py-3 rounded-full shadow hover:bg-yellow-400 transition">
           Book Now
         </button>
+        
       </div>
 
-      <!-- Right: Gallery -->
-      <div class="grid grid-cols-2 gap-4">
-        <img
-          v-for="(img, index) in pkg.gallery"
-          :key="index"
-          :src="img"
-          class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition"
-        />
+<!-- Right: Gallery -->
+<div class="grid grid-cols-2 gap-4">
+  <img
+    v-for="(img, index) in pkg.gallery"
+    :key="index"
+    :src="img"
+    class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition"
+  />
+</div>
+</div> <!-- إغلاق الـ grid -->
+
+<!-- Itinerary Section -->
+<div v-if="pkg.itinerary && pkg.itinerary.length" class="mt-12 px-5 py-8 bg-gradient-to-b from-[#fffaf0] to-white rounded-3xl shadow-lg border border-yellow-200">
+  <h3 class="text-3xl font-semibold text-[#ffb703] mb-6 px- flex items-center gap-3">
+    <i class="fa-solid fa-map-signs text-[#ffb703] text-xl"></i>
+    Trip Itinerary
+  </h3>
+
+  <ol class="space-y-5 relative border-l-4 border-[#ffb703] pl-6 px-12 ">
+    <li
+      v-for="(item, index) in pkg.itinerary"
+      :key="index"
+      class="relative"
+    >
+      <span class="absolute -left-[1.2rem] top-1 w-4 h-4 bg-[#ffb703] rounded-full border-2 border-white shadow"></span>
+      <div class="text-lg text-gray-800 leading-relaxed  font-medium hover:text-[#e07b00] transition duration-200 cursor-default">
+        {{ item }}
       </div>
-    </div>
+    </li>
+  </ol>
+</div>
+
+
+
+
 
     <!-- Reviews Section (Optional) -->
     <div class="max-w-6xl mx-auto mt-20 px-6">
