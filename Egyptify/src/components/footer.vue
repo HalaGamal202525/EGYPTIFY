@@ -63,7 +63,7 @@ const gotoabout=()=>{
 router.push({ path: '/about-us', hash: '#start' });
 }
 const gototerms=()=>{
-router.push({ path: '/about-us', hash: '#start' });
+router.push({ path: '/Terms-of-use', hash: '#start' });
 }
 const gotohome=()=>{
   router.push('/')
