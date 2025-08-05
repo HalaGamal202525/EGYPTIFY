@@ -1,52 +1,51 @@
 <template>
   <footer class="footer">
     <div class="footer-section logo">
-      <img class="logo-img" src="../assets/logo.png" alt="EGYPTIFY Logo" />
+      <img class="logo-img cursor-pointer" src="../assets/logo.png" alt="EGYPTIFY Logo" @click="gotohome" />
       <p class="slogan">"Discover the magic of Egypt"</p>
     </div>
 
     <div class="footer-section social">
       <h3 class="nowrap">Find Us In Social Media</h3>
       <div class="icons">
-        <button><i class="fab fa-instagram"></i></button>
-        <button><i class="fab fa-facebook-f"></i></button>
-        <button><i class="fab fa-whatsapp"></i></button>
-        <button><i class="fab fa-x-twitter"></i></button>
-        <button><i class="fab fa-linkedin-in"></i></button>
+        <p><i class="fab fa-instagram"></i></p>
+        <p><i class="fab fa-facebook-f"></i></p>
+        <p><i class="fab fa-whatsapp"></i></p>
+        <p><i class="fab fa-x-twitter"></i></p>
+        <p><i class="fab fa-linkedin-in"></i></p>
       </div>
     </div>
 
     <div class="footer-section links">
-      <h4>About Us</h4>
+      <h4 @click="gotoabout">About Us</h4>
       <ul>
-        <li><a href="#">Mission</a></li>
-        <li><a href="#">Story</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Press</a></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">Mission</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#story' }">Story</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#team' }">Team</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">Partenrs</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">press</router-link></li>
       </ul>
     </div>
 
     <div class="footer-section links">
-      <h4>Contact Us</h4>
+      <h4 @click="gotocontact">Contact Us</h4>
       <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Form</a></li>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Social</a></li>
-        <li><a href="#">LiveChat</a></li>
+        <li><a href="#" @click="gotocontact">Contact</a></li>
+        <li><router-link :to="{ path: '/contact', hash: '#form' }">Form</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#email'}">Email</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#contactway'}">Social</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#livechat'}">Livechat</router-link></li>
       </ul>
     </div>
 
     <div class="footer-section links">
-      <h4>Policies</h4>
+      <h4 @click="gototerms">Policies</h4>
       <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Feedback</a></li>
+        <li><a href="#" @click="gototerms">FAQ</a></li>
+        <li><a href="#" @click="gototerms">Support</a></li>
+        <li><a href="#" @click="gototerms">Feedback</a></li>
         <li><a href="#">Blog</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Complaints</a></li>
+        <li><a href="#" @click="gototerms">Terms</a></li>
       </ul>
     </div>
   </footer>
@@ -56,6 +55,20 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 const router = useRouter();
+const gotocontact=()=>{
+  router.push('./contact')
+}
+
+const gotoabout=()=>{
+router.push({ path: '/about-us', hash: '#start' });
+}
+const gototerms=()=>{
+router.push({ path: '/Terms-of-use', hash: '#start' });
+}
+const gotohome=()=>{
+  router.push('/')
+}
+
 </script>
 
 <style scoped>
@@ -105,12 +118,13 @@ h3, h4 {
   margin-top: 0.5rem;
 }
 
-.icons button {
+.icons p {
   background-color: #ddd;
   border: 1px solid black; /* ستروك أسود */
-  border-radius: 8px;
-  padding: 0.5rem;
+  border-radius: 50%;
+  padding: 10px;
   font-size: 1.3rem;
+  text-align: center;
   cursor: pointer;
   color: black;
 }

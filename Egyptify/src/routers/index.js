@@ -4,7 +4,6 @@ import Hala from '../Pages/Hala.vue'
 import Tabs from '../Pages/auth/tabs.vue'
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue'
 import Signup from '../Pages/auth/signup.vue'
-import Sara from '../Pages/sara.vue'
 import Home from '../Pages/home.vue'
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue'
 import OTPPage from '../Pages/OTP.vue'
@@ -30,45 +29,118 @@ import EventCalendarPage from '../Pages/EventCalendarPage.vue'
 
 
 
+
+import profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import aboutUs from '../Pages/About-Us.vue'
+import Map from '../Pages/Map.vue'
+import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
+import NaturalDetail from '../Pages/activity/place details/natural/place detailspage.vue'
+import EntertainmentDetail from '../Pages/activity/place details/Entertainment/place detailspage.vue'
+import Roomtype from "../Pages/Roomtype.vue"
+// import offergrid from "../Pages/offer/gridpage.vue"
+import offergrid from "../Pages/offer/offerpage.vue"
+import HotelPage from '../Pages/HotelPage.vue'
+import UserReview from '../Pages/UserReview.vue'
+import DestinationPage from '../Pages/DestinationPage.vue'
+import form from "../Pages/payment/paymentform.vue"
+import payment from "../Pages/payment/payment.vue"
+import searchresult from '../Pages/searchresult.vue'
+import TransportationBooking from "../Pages/TransportationBooking.vue"
+import PassengerInfo from '../Pages/PassengerInfo.vue'
+import TransportationPayment from '../Pages/TransportationPayment.vue'
+import TransportationConfirmation from '../Pages/TransportationConfirmation.vue'
+import DestinationDetailsPage from '../Pages/DestinationDetailsPage.vue'
+import populardestaion from '../Pages/populardestaion.vue'
+import popular from "../Pages/populardetails.vue"
+import adventure from '../Pages/adventure.vue'
+import adventuredatail from '../Pages/adventuredetail.vue'
+import Foodcategoray from "../Pages/foodcategoray.vue"
+import Fooddetail from "../Pages/fooddetails.vue"
+import Culture from "../Pages/culture.vue"
+import Culturedetail from "../Pages/culturedetail.vue"
+import packages from '../Pages/packages.vue'
+import PackageDetails from '../Pages/PackageDetails.vue'
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
   { path: '/auth/Forgot-Password', component: ForgotPassword },
+  { path: '/hotelpage', component: HotelPage },
 
   { path: '/OTP', component: OTPPage },
+    { path: '/form', component: form },
+      { path: '/payment', component: payment },
+
   {
     path: '/tripplanner',
     name: 'TripPlanner',
     component: TripPlanner
-  },   
+  },  
+  
   {
-    path: '/profile-personal-details',
+  path: '/popular/:id',
+  name: 'PlaceDetails',
+  component:()=> import("../Pages/populardetails.vue")
+}
+,
+  
+  {
+  path: '/puplor',
+  name: 'Destination',
+  component: () => import('../Pages/populardestaion.vue')
+},
+{path:"/adventures",component:adventure},{path:"/adventure/:id",component: adventuredatail},
+{path:"/food",component:Foodcategoray},{path:"/food/:id",component: Fooddetail},
+{path:"/culture",component:Culture},{path:"/culture/:id",component:Culturedetail },
+{
+  path: '/packages/:category',
+  name: 'CategoryPackages',
+  component: packages,
+}
+,
+{
+  path: '/packages/:category/:slug',
+  name: 'PackageDetails',
+  component: PackageDetails
+},
+
+  {
+    path: '/profile',
     name: 'ProfilePersonalDetails',
     component: profilePersonalDetails
   },
   
+  { path: '/about-us', component: aboutUs},
+  { path: '/map', component: Map },
+
   { path: '/Signup', component: Signup },
   { path: '/explore', component: ExplorePage },
-  { path: '/blog', component: BlogPage },
-  {path: '/blogdetail', component: BlogDetailPage},
+  { path: '/blogs', component: BlogPage },
+   {
+    path: '/blogs/:id',
+    name: 'blogdetail',
+    component: BlogDetailPage
+  },
   {
     path: '/Hala',
     name: 'Hala',
     component: Hala
   },
 
-  { path: '/tabs', component: Tabs },  { path: '/fooddetail', component: FoodDetail },
+  { path: '/tabs', component: Tabs },
 
+// activity detail
+    { path: '/fooddetail/:id', component: FoodDetail },
+    { path: '/historicaldetail/:id', component: HistoricalDetail },
+   { path: '/naturaldetail/:id', component: NaturalDetail },
+{path :'/entertainmentdetail/:id',component:EntertainmentDetail},
 
   {
   path: '/dropdownDemo',
   name: 'DropdownDemo',
   component: DropdownMenu
 },
-   {
-    path: '/Sara',
-    name: 'Sara',
-    component: Sara
+  {
+    path:"/roomtype",component:Roomtype
   },
   {
     path: '/transportation',
@@ -76,11 +148,7 @@ const routes = [
     component: Transportation
   },
    { path: '/NavBarMenu', component: NavBarMenu },
-    {
-    path: '/tripplanner',
-    name: 'TripPlanner',
-    component: TripPlanner
-  },
+   
   {
   path: '/contact',
   name: 'ContactUs',
@@ -99,13 +167,14 @@ const routes = [
       { path: '/', redirect: 'historical' } // التب الإفتراضي
     ]
   },
-
+{path:'/populardest',component:popular},
   {
     path:'/Terms-of-use',
     name:'Terms of use',
     component: TermsOfUse
 
   },
+
 
   {
   path: '/booking',
@@ -117,7 +186,46 @@ const routes = [
     path: '/events', 
     name: 'EventCalendar',
     component: EventCalendarPage
-  }
+  },
+
+  {
+    path:"/offerpage",component:offergrid
+  },
+  {
+  path: '/user-review',
+  name: 'User Review',
+  component: UserReview
+},
+{
+  path: '/destination',
+  name: 'Destination Page',
+  component: DestinationPage
+},
+{
+  path: '/transportation-booking',
+  name: '/TransportationBooking',
+  component: TransportationBooking
+},
+{
+  path: '/passenger-info',
+  name: '/Passenger Info',
+  component: PassengerInfo
+},
+{
+  path: '/transportation-payment',
+  name: '/Transportation Payment',
+  component: TransportationPayment
+},
+{
+  path: '/transportation-confirmation',
+  name: '/TransportationConfirmation',
+  component: TransportationConfirmation
+},
+{
+  path: '/destination/:slug',
+  name: '/DestinationDetails',
+  component: DestinationDetailsPage
+},
 
 
 ]

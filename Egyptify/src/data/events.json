@@ -1,0 +1,194 @@
+[
+  {
+    "title": "Music Concert",
+    "location": "Opera House",
+    "date": "2025-02-15",
+     "people": 3000,
+
+    "price": 1200,
+
+    "image": "concert.jpg",
+    "description": "A musical night filled with classical melodies and vibrant performances."
+  },
+  {
+    "title": "Abu Simbel Sun Festival",
+    "location": "Abu Simbel, Aswan",
+    "date": "2025-02-22",
+    "people": 100,
+
+    "price": 1200,
+    "image": "abu-simbel.jpg",
+    "description": "Witness the magical alignment of the sun at Abu Simbel temple."
+  },
+  {
+    "title": "Alexandria Lighthouse Tour",
+    "location": "Alexandria",
+    "date": "2025-02-09",
+     "people": 150,
+
+    "price": 500,
+
+    "image": "alexandria.jpg",
+    "description": "A historic journey exploring the remnants of the ancient lighthouse."
+  },
+  {
+    "title": "Sound & Light at the Pyramids",
+    "location": "Giza",
+    "date": "2025-01-14",
+     "people": 1200,
+
+    "price": 900,
+    "image": "sound-light.jpg",
+    "description": "Enjoy a spectacular sound and light show at the Giza Pyramids."
+  },
+  {
+    "title": "Nile Sunset Cruise",
+    "location": "Luxor",
+    "date": "2025-01-19",
+     "people": 100,
+
+    "price": 500,
+    "image": "nile-cruise.jpg",
+    "description": "Relax with a scenic sunset cruise along the Nile River."
+  },
+  {
+    "title": "Aswan Spice Market Experience",
+    "location": "Aswan",
+    "date": "2025-01-31",
+     "people": 300,
+
+    "price": 250,
+    "image": "spice-market.jpg",
+    "description": "Explore the vibrant colors and aromas of Aswan’s spice market."
+  },
+  {
+    "title": "Siwa Oasis Safari",
+    "location": "Siwa",
+    "date": "2025-01-25",
+     "people": 80,
+
+    "price": 950,
+    "image": "siwa.jpg",
+    "description": "Discover the remote beauty of Siwa in a guided safari tour."
+  },
+  {
+    "title": "Khan El Khalili Bazaar Walk",
+    "location": "Cairo",
+    "date": "2025-01-23",
+     "people": 400,
+
+    "price": 300,
+    "image": "khan.jpg",
+    "description": "Walk through Cairo’s historic market and experience local culture."
+  },
+  {
+    "title": "Camel Ride by the Pyramids",
+    "location": "Giza",
+    "date": "2025-02-01",
+     "people": 100,
+
+    "price": 400,
+    "image": "camel.jpg",
+    "description": "Enjoy a camel ride with views of the majestic pyramids."
+  },
+  {
+    "title": "Egyptian Museum Guided Tour",
+    "location": "Cairo",
+    "date": "2025-01-20",
+     "people": 100,
+
+    "price": 600,
+    "image": "museum.jpg",
+    "description": "Guided tour showcasing ancient Egyptian artifacts and treasures."
+  },
+  {
+    "title": "Red Sea Snorkeling Adventure",
+    "location": "Hurghada",
+    "date": "2025-02-10",
+     "people": 150,
+
+    "price": 800,
+    "image": "snorkeling.jpg",
+    "description": "Dive into the Red Sea and explore colorful coral reefs."
+  },
+  {
+    "title": "Luxor Temple Night Visit",
+    "location": "Luxor",
+    "date": "2025-01-30",
+     "people": 300,
+
+    "price": 550,
+    "image": "luxor.jpg",
+    "description": "Visit Luxor Temple under the stars in a magical night setting."
+  },
+  {
+    "title": "Saint Catherine Hiking Trip",
+    "location": "South Sinai",
+    "date": "2025-02-05",
+     "people": 120,
+
+    "price": 700,
+    "image": "catherine.jpg",
+    "description": "Climb Mount Sinai and witness a breathtaking sunrise."
+  },
+  {
+    "title": "Philae Temple Sound & Light",
+    "location": "Aswan",
+    "date": "2025-02-12",
+     "people": 250,
+
+    "price": 600,
+    "image": "philae.jpg",
+    "description": "Enjoy a sound and light spectacle at Philae Temple."
+  },
+  {
+    "title": "Cairo International Book Fair",
+    "location": "Cairo",
+    "date": "2025-01-23",
+     "people": 5000,
+
+    "price": 100,
+    "image": "book-fair.jpg",
+    "description": "Explore thousands of titles and cultural events at the annual book fair in Cairo."
+  },
+  {
+    "title": "El Gouna Film Festival",
+    "location": "El Gouna",
+    "date": "2025-10-20",
+     "people": 3500,
+
+    "price": 1500,
+    "image": "elgouna.jpg",
+    "description": "A prestigious film festival showcasing regional and international cinema at the Red Sea."
+  },
+  {
+    "title": "Cairo International Film Festival (CIFF)",
+    "location": "Cairo",
+    "date": "2025-11-12",
+     "people": 3000,
+
+    "price": 1200,
+    "image": "ciff.jpg",
+    "description": "One of the oldest and most respected film festivals in the Arab world and Africa."
+  },
+  {
+    "title": "Downtown Contemporary Arts Festival",
+    "location": "Downtown Cairo",
+    "date": "2025-03-25",
+     "people": 900,
+
+    "price": 400,
+    "image": "d-arts.jpg",
+    "description": "A vibrant festival celebrating performing and visual arts in Cairo’s downtown."
+  },
+  {
+    "title": "Tour d’Égypte (Cycling Race)",
+    "location": "Across Egypt",
+    "date": "2025-02-15",
+     "people": 200,
+
+    "price": "free", 
+    "image": "tour-egypt.jpg",
+    "description": "A major international cycling event covering scenic routes across Egypt."
+  }
+]

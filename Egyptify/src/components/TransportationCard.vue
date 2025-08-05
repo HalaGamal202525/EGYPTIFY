@@ -35,10 +35,11 @@
         <li v-for="route in routes" :key="route">{{ route }}</li>
       </ul>
     </div>
-
+    <router-link to="/transportation-booking">
     <div class="mt-4">
       <BaseButton class="w-full">Book Now</BaseButton>
     </div>
+    </router-link>
   </div>
 </template>
 

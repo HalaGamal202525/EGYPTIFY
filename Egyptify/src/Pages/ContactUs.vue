@@ -44,8 +44,8 @@
     </div>
 
     <!--border -->
-    <div class=" p-6 rounded-b-xl bg-white shadow">
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class=" p-6 rounded-b-xl bg-white shadow" id="form">
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-4" >
         <!-- Full Name -->
         <div>
           <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Full Name*</label>
@@ -89,8 +89,8 @@
 </section>
 
 <!-- Contact Info -->
-    <section class="bg-white py-10">
-      <div class="container mx-auto  border border-[#FFC340] rounded-lg max-w-6xl p-6 shadow-md">
+    <section class="bg-white py-10" id="email">
+      <div class="container mx-auto  border border-[#FFC340] rounded-lg max-w-6xl p-6 shadow-md" >
         <h2 class="text-xl font-bold mb-10 px-15">Contact Information</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div><i class="fas fa-envelope mr-2 text-blue-500"></i>info@egyptify.com</div>
@@ -101,8 +101,8 @@
     </section>
 
     <!-- Section: Connect With Us -->
-<section class="bg-white py-10">
-  <div class="max-w-6xl mx-auto border border-[#FFC340] rounded-lg shadow-md p-6">
+<section class="bg-white py-10" id="contactway">
+  <div class="max-w-6xl mx-auto border border-[#FFC340] rounded-lg shadow-md p-6" >
     <h2 class="text-xl font-bold py-2 px-15 rounded mb-4 inline-block">
       Connect With Us
     </h2>
@@ -129,7 +129,7 @@
 
 
 <!-- Live Support Section -->
-<section class="bg-white py-10">
+<section class="bg-white py-10" id="livechat">
   <div class="max-w-6xl mx-auto px-4">
     <div class="bg-yellow-50 rounded-xl p-6 shadow-md text-center">
       <!-- Icon -->
