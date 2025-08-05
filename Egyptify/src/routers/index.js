@@ -21,7 +21,7 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
-import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import aboutUs from '../Pages/About-Us.vue'
 import Map from '../Pages/Map.vue'
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
@@ -60,8 +60,6 @@ const routes = [
   { path: '/OTP', component: OTPPage },
     { path: '/form', component: form },
       { path: '/payment', component: payment },
-
-
 
   {
     path: '/tripplanner',
@@ -122,11 +120,10 @@ const routes = [
   { path: '/tabs', component: Tabs },
 
 // activity detail
-    { path: '/fooddetail', component: FoodDetail },
+    { path: '/fooddetail/:id', component: FoodDetail },
     { path: '/historicaldetail/:id', component: HistoricalDetail },
    { path: '/naturaldetail/:id', component: NaturalDetail },
-    { path: '/entertainmentdetail', component: EntertainmentDetail },
-
+{path :'/entertainmentdetail/:id',component:EntertainmentDetail},
 
   {
   path: '/dropdownDemo',

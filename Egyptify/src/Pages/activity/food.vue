@@ -8,7 +8,9 @@
       :image="item.image"
 :rating="item.rate"
       :showHeart="true"  
-            @click="eventclick" 
+         :showButton="true"
+          buttonText="Show Details"
+         @click="() => router.push(`/fooddetail/${item.id}`)"
       
     />
   </section>
