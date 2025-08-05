@@ -35,9 +35,9 @@
     
 <section class="bg-gray-50 py-10">
   <div class="container mx-auto border border-[#FFC340] rounded-lg mx-50 max-w-6xl">
-    
     <div class="bg-gray-50  px-6 py-4 rounded-t-xl">
-      <h2 class="text-xl font-bold mt-3 mb-3"><i class="fa-solid fa-paper-plane fa-lg mr-4" style="color: #FFD43B;"></i>Send Us a Message</h2>
+      <h2 class="text-xl font-bold mt-3 mb-3"><i class="fa-solid fa-paper-plane fa-lg mr-4" style="color: #FFD43B;"></i>
+        Send Us a Message</h2>
       <p class="text-gray-700 mb-3">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
       

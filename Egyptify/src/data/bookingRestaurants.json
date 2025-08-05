@@ -1,0 +1,96 @@
+ {
+ "bookings": [
+  {
+    "id": 1,
+    "name": "Mediterranean Restaurant",
+    "cuisine": "Italian",
+    "location": "Zamalek",
+    "rating": 4.6,
+    "price": "$$$",
+    "image": "../public/bookingRestaurants/mediterranean.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Khufu’s Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza Plateau",
+    "rating": 5.0,
+    "price": "$$$",
+    "image": "../public/bookingRestaurants/khufu.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "$$",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Romanov Restaurant (Kempinski Royal Maxim)",
+    "cuisine": "European grill (steaks, seafood)",
+    "location": "2nd Settlement – New Cairo",
+    "rating": 4.8,
+    "price": "$$$$",
+    "image": "../public/bookingRestaurants/the-view-at-romanov.jpg"
+  },
+  {
+    "id": 5,
+    "name": "La Gourmandise (Ritz-Carlton)",
+    "cuisine": "Classic French fine dining",
+    "location": "Nile Corniche, Garden City, Cairo",
+    "rating": 4.6,
+    "price": "$$$$",
+    "image": "../public/bookingRestaurants/la-gourmandise-restaurant.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Café Riche",
+    "cuisine": "Egyptian & international café fare",
+    "location": "Talaat Harb St., Downtown Cairo",
+    "rating": 4.2,
+    "price": "$$",
+    "image": "../public/bookingRestaurants/cafe riche.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Moby Dick / Starfish Seafood",
+    "cuisine": "Fresh seafood, Mediterranean style",
+    "location": "Hurghada, Red Sea Coast",
+    "rating": 4.5,
+    "price": "$$$",
+    "image": "../public/bookingRestaurants/starfish.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Koshary Abou Tarek",
+    "cuisine": "Egyptian street food (Koshari)",
+    "location": "Downtown Cairo, near Tahrir Square",
+    "rating": 4.5,
+    "price": "$",
+    "image": "../public/bookingRestaurants/kosharyabutarek.jpg"
+  }
+  ],
+
+   
+  "history": [
+    {
+      "id": 101,
+      "title": "Mövenpick Resort",
+      "city": "Aswan",
+      "date": "2025-03-05",
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": 102,
+      "title": "Khufu’s Restaurant",
+      "city": "Giza Plateau",
+      "date": "2025-04-12",
+      "price": "$$$",
+      "status": "Completed"
+    }
+  ]
+  }

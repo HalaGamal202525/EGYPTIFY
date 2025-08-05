@@ -23,6 +23,12 @@ import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
 import  profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import Booking from '../Pages/Booking.vue'
+import EventCalendarPage from '../Pages/EventCalendarPage.vue' 
+
+
+
+
 
 const routes = [
   { path: '/', component: Home },
@@ -99,7 +105,20 @@ const routes = [
     name:'Terms of use',
     component: TermsOfUse
 
+  },
+
+  {
+  path: '/booking',
+  name: 'Booking',
+  component: Booking
+},
+
+{
+    path: '/events', 
+    name: 'EventCalendar',
+    component: EventCalendarPage
   }
+
 
 ]
 

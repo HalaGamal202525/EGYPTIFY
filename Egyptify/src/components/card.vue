@@ -2,7 +2,7 @@
  <div class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
     <!-- الصورة -->
     <div class="w-full relative">
-      <img :src="image" alt="Card image" class="h-48 w-full object-cover rounded-t-xl" />
+      <img v-if="showImage" :src="image" alt="Card image" class="h-48 w-full object-cover rounded-t-xl" />
 
       <!-- زر القلب -->
       <button
@@ -24,7 +24,17 @@
 
     <div class="p-4 flex flex-col justify-between flex-1">
       <div>
+
+        <div class="flex items-center gap-2 flex-wrap">
+          
         <h2 class="text-lg font-bold text-gray-800 ">{{ title }}</h2>
+
+        <div v-if="type" class="bg-yellow-400 text-white text-xs font-semibold px-2 py-0.5 rounded">
+                  {{ type }}
+                </div>
+              </div>
+
+
         <p class="text-sm text-gray-500 mb-2 py-2">{{ description }}</p>
         <div v-if="rating" class="text-yellow-500 text-sm mb-1 py-4">
           <span v-for="n in Math.floor(rating)" :key="n"><i class="fa-solid fa-star" style="color: #ffc340;"></i></span>
@@ -35,7 +45,7 @@
           <span v-if="location"><i class="fa-solid fa-location-dot" style="color: #ffc340;"></i> {{ location }}</span>
           <span v-if="date"><i class="fa-solid fa-calendar" style="color: #ffc340;"></i> {{ date }}</span>
           <span v-if="duration"><i class="fa-solid fa-clock" style="color: #ffc340;"></i> {{ duration }}</span>
-                    <span v-if="people"><i class="fa-solid fa-user-group" style="color: #ffc340;"></i> {{ people }}</span>
+          <span v-if="people"><i class="fa-solid fa-user-group" style="color: #ffc340;"></i> {{ people }}</span>
 
         </div>
       </div>
@@ -64,6 +74,7 @@ defineProps({
   people:String,
   price: String,
   rating: Number,
+  type: String,
   showButton: {
     type: Boolean,
     default: false
@@ -76,6 +87,10 @@ defineProps({
     type: Boolean,
     default: false
   },
+  showImage: {
+    type: Boolean,
+    default: true
+  }
 })
 
 const slots = useSlots()
