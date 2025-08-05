@@ -2,48 +2,233 @@
   <Navbar />
 
   <div class="flex px-6 my-20 py-4 gap-6 flex-col sm:flex-row">
-    <!-- اليسار: التفاصيل -->
-     <div class="flex-1  rounded-md border border-black"> 
+    <div class="flex-1 rounded-md border border-black">
       <div class="px-6 py-4 space-y-6">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <button @click="$router.back()" class="text-gray-900 hover:text-black text-xl"><i class="fa-solid fa-arrow-left !text-black"></i></button>
-            <h1 class="text-2xl text-black  font-bold">Siwa Oasis</h1>
+            <div class="flex items-center gap-4">
+              <button
+                @click="$router.back()"
+                class="text-gray-900 hover:text-black text-xl"
+              >
+                <i class="fa-solid fa-arrow-left !text-black"></i>
+              </button>
+            </div>
+            <h1 class="text-2xl font-bold text-black">
+              {{ place?.name || "Place not found" }}
+            </h1>
           </div>
-          <p class="text-lg text-gray-500 font-medium">Natural</p>
+          <p class="text-lg text-gray-500 font-medium">
+            {{ place?.category || "" }}
+          </p>
         </div>
 
-        <div class="grid grid-cols-4 gap-4">
-          <img
-            src="../../../../../public/Details/natural/4986c5c252739f7d5d843dcc1ae7f626.jpg"
-            alt="Main Image"
-            class="col-span-3 row-span-3 w-full h-[400px] object-cover rounded-xl shadow"
-          />
-          <div class="col-span-1 flex flex-col gap-4">
-             <img
-            src="../../../../../public/Details/natural/4775dd72eeebef46d23da7124ccc17df.jpg"
-            alt="Main Image"
-class="w-full h-[120px] object-cover rounded-xl shadow"          />  <img
-            src=   "../../../../../public/Details/natural/Rasmohamed.jpg"
-            alt="Main Image"
-class="w-full h-[120px] object-cover rounded-xl shadow"          />  <img
-            src= "../../../../../public/Details/natural/siwa.jpg"
+<div class="grid grid-cols-4 gap-4" v-if="place && place.images && place.images.length">
+  <!-- الصورة الرئيسية -->
+  <img
+    :src="place.images[0]"
+    alt="Main Image"
+    class="col-span-3 row-span-3 w-full h-[400px] object-cover rounded-xl shadow"
+  />
 
-            alt="Main Image"
-class="w-full h-[120px] object-cover rounded-xl shadow"          />
+  <!-- باقي الصور -->
+  <div class="col-span-1 flex flex-col gap-4">
+    <img
+      v-for="(img, index) in place.images.slice(1)"
+      :key="index"
+      :src="img"
+      alt="Sub Image"
+      class="w-full h-[120px] object-cover rounded-xl shadow"
+    />
+  </div>
+</div>
+
+
+        <section class="px-4 md:px-16 rounded-md">
+          <div class="p-4">
+            <div class="flex gap-4 shadow-xl h-14 rounded-md mb-6">
+              <button
+                v-for="(tab, index) in tabs"
+                :key="index"
+                @click="activeTab = index"
+                :class="[
+                  'py-2 px-4 font-semibold cursor-pointer',
+                  activeTab === index
+                    ? 'bg-[#ffc340] rounded-md text-black'
+                    : 'text-gray-500',
+                ]"
+              >
+                {{ tab }}
+              </button>
+            </div>
+
+            <div v-if="activeTab === 0">
+              <div class="flex flex-col md:flex-row gap-8 p-4">
+                <div class="md:w-2/3 space-y-6">
+                  <div>
+                    <h2 class="text-3xl font-bold text-gray-800">
+                      {{ overviewData.name }}
+                    </h2>
+                    <p class="mt-2 text-gray-600">
+                      {{ overviewData.description }}
+                    </p>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <span class="text-lg text-black"
+                      >Rate: {{ overviewData.rating }}
+                    </span>
+                    <span class="text-yellow-500 text-xl"
+                      ><i class="fa-solid fa-star"></i
+                    ></span>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <BaseButton
+                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
+                    >
+                      Book Now
+                    </BaseButton>
+                    <BaseButton
+                      class="bg-white border border-[#FFC340] !text-[#FFC340] hover:bg-[#fff6dc] font-bold py-2 px-4 rounded-xl shadow"
+                    >
+                      Add to Favorite
+                    </BaseButton>
+                  </div>
+                </div>
+
+                <div class="md:w-1/3 space-y-4">
+                  <h3 class="text-xl font-bold text-gray-800">Map Location</h3>
+                  <div class="flex items-start gap-2 text-gray-700">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>{{ overviewData.address }}</span>
+                  </div>
+
+                  <a
+                    :href="overviewData.mapLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      :src="overviewData.mapImage"
+                      alt="Map"
+                      class="rounded-lg shadow-md w-full hover:opacity-90 transition duration-300"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div v-if="activeTab === 1">
+              <div class="grid md:grid-cols-2 gap-6 p-6">
+                <div
+                  class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl"
+                >
+                  <i class="fa-solid fa-clock"></i>
+                  <div>
+                    <h3 class="font-bold text-gray-800">Visiting Hours</h3>
+                    <p class="text-gray-600 mt-1">
+                      {{ detailsData.visitingHours }}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl"
+                >
+                  <i class="fa-solid fa-dollar-sign"></i>
+                  <div>
+                    <h3 class="font-bold text-gray-800">Entry Fees</h3>
+                    <p class="text-gray-600 mt-1">
+                      {{ detailsData.entryFees }}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl"
+                >
+                  <i class="fa-solid fa-sun"></i>
+                  <div>
+                    <h3 class="font-bold text-gray-800">Best Time to Visit</h3>
+                    <p class="text-gray-600 mt-1">
+                      {{ detailsData.bestTimeToVisit }}
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-4 bg-white shadow-md p-4 rounded-xl"
+                >
+                  <i class="fa-solid fa-car"></i>
+                  <div>
+                    <h3 class="font-bold text-gray-800">How to Get There</h3>
+                    <p class="text-gray-600 mt-1">{{ detailsData.howToGet }}</p>
+                  </div>
+                </div>
+                <div
+                  class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-md"
+                >
+                  <div class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3 class="text-xl font-bold text-yellow-700">Tips</h3>
+                  </div>
+                  <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                    <li>Wear a hat and sunglasses.</li>
+                    <li>Bring water.</li>
+                    <li>Avoid aggressive street vendors.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div v-if="activeTab === 2">
+              <div
+                v-for="(review, index) in reviewsData"
+                :key="index"
+                class="mb-4 flex items-start gap-4 bg-white shadow p-4 rounded-lg"
+              >
+                <img
+                  :src="review.avatar"
+                  alt="Avatar"
+                  class="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <div class="font-semibold text-lg">{{ review.name }}</div>
+                  <div class="text-sm text-gray-500 mb-1">
+                    {{ review.date }}
+                  </div>
+                  <div class="text-gray-700">{{ review.content }}</div>
+                  <div class="text-yellow-500">
+                    <i class="fa-solid fa-star"></i> {{ review.rating }}
+                  </div>
+                </div>
+              </div>
+              <div class="border-t pt-6 mt-6 space-y-4">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Add Your Review
+                </h3>
+
+                <InputField v-model="newComment" />
+
+                <BaseButton
+                  @click="submitComment"
+                  class="bg-yellow-400 hover:bg-yellow-500 transition-colors"
+                >
+                  Submit Review
+                </BaseButton>
+
+                <p class="text-gray-500 text-sm">
+                  Your feedback helps others discover great places!
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
-
-   <section class="px-4 md:px-16 border rounded-md">
-<TabComponent :tabs="tabs" v-model:activeTab="selectedTab" />
-    </section>
-
-
+        </section>
       </div>
-    </div> 
-    <div class=" sticky top-24 h-fit md:w-1/3 w-full ">
-      <sidecard title="Related Places" :items="data.slice(1)" />
+    </div>
+
+    <div class="sticky top-24 h-fit md:w-1/3 w-full">
+      <sidecard title="Related Places" :items="relatedPlaces" />
     </div>
   </div>
 
@@ -51,22 +236,34 @@ class="w-full h-[120px] object-cover rounded-xl shadow"          />
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import Navbar from '../../../../components/NavBar-Black.vue'
-import sidecard from '../../../../components/activity detail/sidecard.vue'
-import foot from '../../../../components/footer.vue'
-import TabComponent from './activitydatail.vue'
-import overviewtab from './tabsdetails/overviewtab.vue'
+import { ref, computed } from "vue";
+import { useRoute } from "vue-router";
 
-import data from '../../../../data/natural.json'
-import fooddetail from '../../../../data/detail/food.json'
+import Navbar from "../../../../components/NavBar-Black.vue";
+import sidecard from "../../../../components/activity detail/sidecard.vue";
+import foot from "../../../../components/footer.vue";
 
-// بيانات المكان
-const place = fooddetail[0]
-const activeTab = ref(0)
-const tabs= [
-  {label :'overview',component : overviewtab}
-]
+import data from "../../../../data/natural.json";
+import BaseButton from "../../../../components/BaseButton.vue";
+import InputField from "../../../../components/InputField.vue";
 
-const selectedTab = ref(0)
+const route = useRoute();
+const placeId = Number(route.params.id);
+
+const place = computed(() => data.find((p) => p.id === placeId) || {});
+
+const overviewData = computed(() => place.value?.overview || {});
+const detailsData = computed(() => place.value?.detail || {});
+const reviewsData = computed(() => place.value?.review || []);
+
+const tabs = ["Overview", "Details", "Reviews"];
+const activeTab = ref(0);
+
+console.log("Overview Data", overviewData.value);
+console.log("Details Data", detailsData.value);
+console.log("Reviews Data", reviewsData.value);
+
+const relatedPlaces = computed(() =>
+  data.filter((p) => p.id !== placeId).slice(4, 10)
+);
 </script>

@@ -124,7 +124,7 @@ const routes = [
 // activity detail
     { path: '/fooddetail', component: FoodDetail },
     { path: '/historicaldetail/:id', component: HistoricalDetail },
-   { path: '/naturaldetail', component: NaturalDetail },
+   { path: '/naturaldetail/:id', component: NaturalDetail },
     { path: '/entertainmentdetail', component: EntertainmentDetail },
 
 
