@@ -122,11 +122,10 @@ const routes = [
   { path: '/tabs', component: Tabs },
 
 // activity detail
-    { path: '/fooddetail', component: FoodDetail },
+    { path: '/fooddetail/:id', component: FoodDetail },
     { path: '/historicaldetail/:id', component: HistoricalDetail },
    { path: '/naturaldetail/:id', component: NaturalDetail },
-    { path: '/entertainmentdetail', component: EntertainmentDetail },
-
+{path :'/entertainmentdetail/:id',component:EntertainmentDetail},
 
   {
   path: '/dropdownDemo',

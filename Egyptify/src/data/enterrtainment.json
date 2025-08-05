@@ -2,85 +2,541 @@
   {
     "id": 1,
     "name": "Dream Park",
-    "image": "public/entertainment/dream.jpg",
+    "image": "/entertainment/dream.jpg",
+    "category": "Entertainment",
+
     "rate": 4,
-    "description": "One of the largest amusement parks in Egypt. Offers thrill rides, family-friendly zones, and live shows."
+    "description": "One of the largest amusement parks in Egypt. Offers thrill rides, family-friendly zones, and live shows.",
+    "images": [
+      "/imagesdatabase/entertainment/Dream Park.webp",
+      "/imagesdatabase/entertainment/Dream Park2.webp",
+      "/imagesdatabase/entertainment/Dream Park3.webp",
+      "/imagesdatabase/entertainment/Dream Park4.webp"
+    ],
+    "overview": {
+      "description": "Dream Park is one of Egypt’s largest and most popular amusement parks, located on Wahat Road in the Dreamland Compound, 6th of October City, Giza. Established in 1999 and spanning over 150 acres, the park is divided into three main zones: Kids Zone, Family Zone, and Thrill Zone — offering more than 30 attractions ranging from gentle rides to intense roller coasters. It features an inverted roller coaster with five loops, 5D and 7D simulators, bumper cars, a Ferris wheel, Go-Karts, and a famous Horror House.",
+      "rating": 4.8,
+      "address": "Wahat Road, Dreamland Compound, 6th of October City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/vmcvMWv8Dv4SeL566",
+      "mapImage": "/imagesdatabase/entertainment/Dream Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10 AM – 9/10 PM",
+      "entryFees": "EGP 120–239",
+      "bestTimeToVisit": "Spring (March–May) and Autumn (October–November",
+      "howToGet": "From Downtown Cairo: approx. 45–60 minutes",
+      "tips": "Go early to avoid queues"
+    },
+    "review": {
+      "review1": {
+        "user": "Sarah A.",
+        "date": "July 2025",
+        "content": "Great for families. Kids loved it. Camel ride was fun but overpriced.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": " Ahmed M.",
+        "date": "June 2025",
+        "content": "Absolutely breathtaking! A must-see. Go early to avoid crowds",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 2,
-    "name": "KidZania ",
-    "image": "public/entertainment/kidzaina.jpg",
+    "name": "KidZania",
+    "image": "/entertainment/kidzaina.jpg",
+    "category": "Entertainment",
+
     "rate": 5,
-    "description": "An educational entertainment city where kids role-play real-life jobs in a safe and fun environment"
+    "description": "An educational entertainment city where kids role-play real-life jobs in a safe and fun environment",
+    "images": [
+      "/imagesdatabase/entertainment/KidZania.webp",
+      "/imagesdatabase/entertainment/KidZania2.webp",
+      "/imagesdatabase/entertainment/KidZania3.webp",
+      "/imagesdatabase/entertainment/KidZania4.webp"
+    ],
+    "overview": {
+      "description": "KidZania is a miniature city built for children, offering interactive role-play experiences where kids can try out real-world professions like doctors, firefighters, chefs, and more in a safe and fun environment.",
+      "rating": 5,
+      "address": "Cairo Festival City Mall, New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/LXDWjz7WEuEf8Sza7",
+      "mapImage": "/imagesdatabase/entertainment/KidZaniamap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 8:00 PM",
+      "entryFees": "Children: EGP 300, Adults: EGP 100",
+      "bestTimeToVisit": "Weekdays for less crowd or weekends for full experience",
+      "howToGet": "Accessible via car or taxi to Cairo Festival City Mall",
+      "tips": "Let your kids explore independently; wear comfortable shoes; book tickets online to skip queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Noha M.",
+        "date": "2025-07-15",
+        "content": "A fantastic place for kids to learn and play! My daughter loved being a mini doctor.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Ahmed R.",
+        "date": "2025-07-10",
+        "content": "Great concept and very well organized. My son had an amazing time role-playing as a firefighter.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 3,
     "name": "Magic Planet",
-    "image": "public/entertainment/magic.jpg",
+    "image": "/entertainment/magic.jpg",
+    "category": "Entertainment",
+
     "rate": 3.5,
-    "description": "Indoor fun center with arcade games, bumper cars, and 7D cinema."
+    "description": "Indoor fun center with arcade games, bumper cars, and 7D cinema.",
+    "images": [
+      "/imagesdatabase/entertainment/Magic Planet.webp",
+      "/imagesdatabase/entertainment/Magic Planet2.webp",
+      "/imagesdatabase/entertainment/Magic Planet3.webp",
+      "/imagesdatabase/entertainment/Magic Planet4.webp"
+    ],
+    "overview": {
+      "description": "Magic Planet is an indoor amusement center featuring arcade games, bumper cars, and thrilling 7D cinema experiences. It's a great destination for families and kids looking for indoor fun.",
+      "rating": 3.5,
+      "address": "Citystars, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/vrjQesnYFF4iqRt98",
+      "mapImage": "/imagesdatabase/entertainment/Magic Planetmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 10:00 PM",
+      "entryFees": "Free entry, games priced individually",
+      "bestTimeToVisit": "Afternoons and weekends",
+      "howToGet": "Accessible by car or  transportation to Citystars Mall",
+      "tips": "Top up your game card in advance to save time. Great place for birthday parties."
+    },
+    "review": {
+      "review1": {
+        "user": "Ahmed",
+        "date": "2025-05-20",
+        "content": "Kids loved the games and 7D cinema! Very entertaining for a few hours.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Salma",
+        "date": "2025-06-10",
+        "content": "Fun place but a bit crowded on weekends. Games are slightly expensive.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 4,
     "name": "Vox Cinemas",
-    "image": "public/entertainment/vox.webp",
+    "image": "/entertainment/vox.webp",
+    "category": "Entertainment",
+
     "rate": 4,
-    "description": "Modern cinemas featuring IMAX, VIP lounges, and the latest movies."
+    "description": "Modern cinemas featuring IMAX, VIP lounges, and the latest movies.",
+    "images": [
+      "/imagesdatabase/entertainment/Vox Cinemas.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas2.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas3.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas4.webp"
+    ],
+    "overview": {
+      "description": "Vox Cinemas is a state-of-the-art movie theater offering a premium cinema experience with IMAX screens, VIP seating, gourmet snacks, and the latest blockbuster films. Located in top malls across Egypt, it's the go-to destination for movie lovers.",
+      "rating": 4.2,
+      "address": "Mall of Egypt, 6th of October City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/4guMxTxnS3adSYgX7",
+      "mapImage": "/imagesdatabase/entertainment/Vox Cinemasmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM – 12:00 AM",
+      "entryFees": "EGP 100–250 depending on seat type and movie format",
+      "bestTimeToVisit": "Evenings and weekends for new releases",
+      "howToGet": "Accessible via Ring Road to Mall of Egypt, with on-site parking available",
+      "tips": "Book VIP or MAX screens online in advance for the best seats and avoid long queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Mona",
+        "date": "2025-06-22",
+        "content": "Great sound and picture quality! The VIP lounge is very comfortable.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Tarek",
+        "date": "2025-07-01",
+        "content": "Nice experience overall, but snacks are overpriced.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 5,
     "name": "Mall of Egypt",
-    "image": "public/entertainment/mallegypt.webp",
+    "image": "/entertainment/mallegypt.webp",
+    "category": "Entertainment",
+
     "rate": 4,
-    "description": "A full entertainment mall with shopping, restaurants, and Ski Egypt – the first indoor ski slope in Africa."
+    "description": "A full entertainment mall with shopping, restaurants, and Ski Egypt – the first indoor ski slope in Africa.",
+    "images": [
+      "/imagesdatabase/entertainment/Mall of Egypt.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt2.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt3.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt4.webp"
+    ],
+    "overview": {
+      "description": "Mall of Egypt offers a wide range of shopping, dining, and entertainment options, including Africa's first indoor ski slope – Ski Egypt.",
+      "rating": 4,
+      "address": "Al Wahat Road, 6th of October City, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mwbY3ijrYq8paYV46",
+      "mapImage": "/imagesdatabase/entertainment/Mall of Egyptmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free (additional charges for Ski Egypt and entertainment zones)",
+      "bestTimeToVisit": "Weekdays to avoid crowd",
+      "howToGet": "By car, Uber, or taxi from anywhere in Cairo",
+      "tips": "Plan your visit to include both shopping and indoor skiing for a full experience."
+    },
+    "review": {
+      "review1": {
+        "user": "Nada Hassan",
+        "date": "2025-07-15",
+        "content": "A great place to hang out, shop, and enjoy Ski Egypt. Loved the food court too!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Sherif Adel",
+        "date": "2025-07-11",
+        "content": "Very spacious and clean mall. A bit pricey but worth visiting.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 6,
-    "name": "ZED Park ",
-    "image": "public/entertainment/zed.webp",
+    "name": "ZED Park",
+    "image": "/entertainment/zed.webp",
+    "category": "Entertainment",
     "rate": 5,
-    "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events."
+    "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events.",
+    "images": [
+      "/imagesdatabase/entertainment/ZED Park.webp",
+      "/imagesdatabase/entertainment/ZED Park2.webp",
+      "/imagesdatabase/entertainment/ZED Park3.webp",
+      "/imagesdatabase/entertainment/ZED Park4.webp"
+    ],
+    "overview": {
+      "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events.",
+      "rating": 5,
+      "address": "Sheikh Zayed City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/bVAPDEfJFumAicQk8",
+      "mapImage": "/imagesdatabase/entertainment/ZED Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 11:00 PM",
+      "entryFees": "$5 (some activities not included)",
+      "bestTimeToVisit": "Afternoons and event days",
+      "howToGet": "By car, Uber, or taxi",
+      "tips": "Check the schedule for concerts and shows before visiting."
+    },
+    "review": {
+      "review1": {
+        "user": "Salma H.",
+        "date": "2025-06-20",
+        "content": "Loved the rides and the concert was amazing!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Khaled R.",
+        "date": "2025-06-15",
+        "content": "Perfect for families, especially in the evening.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 7,
-    "name": "Family Park ",
-    "image": "public/entertainment/family.webp",
+    "name": "Family Park",
+    "image": "/entertainment/family.webp",
+    "category": "Entertainment",
+
     "rate": 3.5,
-    "description": "Large open park with water play areas, a train ride, and various kids' activities."
+    "description": "Large open park with water play areas, a train ride, and various kids' activities.",
+    "images": [
+      "/imagesdatabase/entertainment/Family Park.webp",
+      "/imagesdatabase/entertainment/Family Park2.webp",
+      "/imagesdatabase/entertainment/Family Park3.webp",
+      "/imagesdatabase/entertainment/Family Park4.webp"
+    ],
+    "overview": {
+      "description": "A spacious family park with playgrounds, a kids' train ride, and interactive play zones. Ideal for relaxed outdoor fun.",
+      "rating": 3.5,
+      "address": "New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/eMMA4RhhuGTjkVvN9",
+      "mapImage": "/imagesdatabase/entertainment/Family Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 10:00 PM",
+      "entryFees": "$3 per person",
+      "bestTimeToVisit": "Early morning or late afternoon",
+      "howToGet": "Easily accessible via car or Uber in New Cairo",
+      "tips": "Bring snacks and water, limited food vendors inside. Great for picnics."
+    },
+    "review": {
+      "review1": {
+        "user": "Sara H.",
+        "date": "2025-07-01",
+        "content": "Nice green space, affordable, and my kids enjoyed the train!",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Mohamed T.",
+        "date": "2025-06-15",
+        "content": "Could use more activities, but it's peaceful and great for families.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
   },
   {
     "id": 8,
-    "name": "Al-Azhar Park ",
-    "image": "public/entertainment/alazhar.webp",
+    "name": "Al-Azhar Park",
+    "image": "/entertainment/alazhar.webp",
+    "category": "Entertainment",
+
     "rate": 4,
-    "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails"
+    "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails",
+    "images": [
+      "/imagesdatabase/entertainment/Al-Azhar Park.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park2.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park3.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park4.webp"
+    ],
+    "overview": {
+      "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails",
+      "rating": 4,
+      "address": "Salah Salem Street, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/UZzhLjxCw6cz8EeJ8",
+      "mapImage": "/imagesdatabase/entertainment/Al-Azhar Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 10:00 PM",
+      "entryFees": "$1.5 for locals, $3 for foreigners",
+      "bestTimeToVisit": "Late afternoon for sunset view",
+      "howToGet": "By taxi or Uber from central Cairo",
+      "tips": "Bring your camera, and enjoy a meal at the lakefront restaurant."
+    },
+    "review": {
+      "review1": {
+        "user": "Mona",
+        "date": "2025-03-18",
+        "content": "Wonderful park with amazing views. A perfect place to relax away from the city's chaos.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Ahmed Z.",
+        "date": "2025-05-04",
+        "content": "Loved the ambiance and food. Great for couples and families alike.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
   },
   {
     "id": 9,
     "name": "Giza Zoo",
-    "image": "public/entertainment/zoo.webp",
+    "image": "/entertainment/zoo.webp",
+    "category": "Entertainment",
+
     "rate": 5,
-    "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids."
+    "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids.",
+    "images": [
+      "/imagesdatabase/entertainment/Giza Zoo.webp",
+      "/imagesdatabase/entertainment/Giza Zoo2.webp",
+      "/imagesdatabase/entertainment/Giza Zoo3.webp",
+      "/imagesdatabase/entertainment/Giza Zoo4.webp"
+    ],
+    "overview": {
+      "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids.",
+      "rating": 5,
+      "address": "Charles De Gaulle Street, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/BRyizrghuHS3M6nu6",
+      "mapImage": "/imagesdatabase/entertainment/Giza Zoomap.webp"
+    },
+    "detail": {
+      "visitingHours": "8:30 AM - 4:00 PM",
+      "entryFees": "$1",
+      "bestTimeToVisit": "Weekdays in the morning",
+      "howToGet": "By metro to Giza station, then short walk",
+      "tips": "Bring your own water and wear comfortable shoes."
+    },
+    "review": {
+      "review1": {
+        "name": "Hassan Ali",
+        "date": "2025-07-03",
+        "content": "Very enjoyable experience with lots of animals to see.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "name": "Aya Gamal",
+        "date": "2025-07-15",
+        "content": "Great for kids but needs some renovation in areas.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
   },
   {
     "id": 10,
     "name": "Butterfly Garden",
-    "image": "public/entertainment/buttterfly.jpeg",
+    "image": "/entertainment/buttterfly.jpeg",
+    "category": "Entertainment",
+
     "rate": 4.5,
-    "description": "An interactive experience where visitors can walk among free-flying butterflies in a natural habitat."
-  },{
-  "id": 11,
-  "name": "Africa Safari Park",
-  "image": "public/entertainment/afrcaina.jpg",
-  "rate": 4.5,
-  "description": "A unique drive-thru safari experience where visitors can see wild animals up close in a natural environment."
-},
-{
-  "id": 12,
-  "name": "Aqua Park Cairo",
-  "image": "public/entertainment/Aqua Park Cairo.webp",
-  "rate": 4,
-  "description": "A large water park featuring pools, slides, and attractions suitable for all ages."
-}
- 
+    "description": "An interactive experience where visitors can walk among free-flying butterflies in a natural habitat.",
+    "images": [
+      "/imagesdatabase/entertainment/Butterfly Garden.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden2.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden3.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden4.webp"
+    ],
+    "overview": {
+      "description": "Butterfly Garden offers a serene and magical environment where you can walk among hundreds of colorful butterflies in a climate-controlled dome. It's an educational and relaxing experience for all ages.",
+      "rating": 4.5,
+      "address": "Zabeel Park, Dubai, UAE",
+      "mapLink": "https://maps.app.goo.gl/zmQDs4KQm66LjhqE8",
+      "mapImage": "/imagesdatabase/entertainment/Butterfly Gardenmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 6:00 PM",
+      "entryFees": "$15",
+      "bestTimeToVisit": "November to April",
+      "howToGet": "Accessible by taxi or Metro (Al Jafiliya Station)",
+      "tips": "Wear light clothing, and bring a camera for amazing butterfly shots."
+    },
+    "review": {
+      "review1": {
+        "user": "Sarah M.",
+        "date": "2025-07-20",
+        "content": "A peaceful and beautiful place. The butterflies were everywhere! Great for kids too.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Omar T.",
+        "date": "2025-07-18",
+        "content": "Loved the experience, but it was a bit crowded during the weekend.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+
+  {
+    "id": 11,
+    "name": "Africa Safari Park",
+    "image": "/entertainment/afrcaina.jpg",
+    "category": "Entertainment",
+
+    "rate": 4.5,
+    "description": "A unique drive-thru safari experience where visitors can see wild animals up close in a natural environment.",
+    "images": [
+      "/imagesdatabase/entertainment/Africa Safari Park.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park2.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park3.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park4.webp"
+    ],
+    "overview": {
+      "description": "Africa Safari Park offers a thrilling drive-thru safari where visitors can encounter lions, giraffes, zebras, and more in a natural-style habitat. Ideal for families and wildlife enthusiasts.",
+      "rating": 4.5,
+      "address": "Cairo-Alexandria Desert Road, Egypt",
+      "mapLink": "https://maps.app.goo.gl/erArrxwMSi4CtKxj9",
+      "mapImage": "/imagesdatabase/entertainment/Africa Safari Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 5:00 PM",
+      "entryFees": "Adults: EGP 250, Children: EGP 150",
+      "bestTimeToVisit": "October to April",
+      "howToGet": "Accessible by private car or taxi via the Cairo-Alex Desert Road.",
+      "tips": "Bring a camera, stay inside your vehicle during safari, and avoid feeding the animals."
+    },
+    "review": {
+      "review1": {
+        "name": "Salma A.",
+        "date": "2025-06-15",
+        "content": "A wonderful adventure for the whole family! The animals are well cared for and the park is clean.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-05-28",
+        "content": "Loved the close encounters with giraffes! It's a bit pricey but definitely worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "name": "Aqua Park Cairo",
+    "image": "/entertainment/Aqua Park Cairo.webp",
+    "category": "Entertainment",
+
+    "rate": 4,
+    "description": "A large water park featuring pools, slides, and attractions suitable for all ages.",
+    "images": [
+      "/imagesdatabase/entertainment/Aqua Park Cairo.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo2.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo3.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo4.webp"
+    ],
+    "overview": {
+      "description": "Aqua Park Cairo offers a thrilling water adventure with multiple pools, high-speed slides, and attractions for all ages, perfect for family fun and summer excitement.",
+      "rating": 4,
+      "address": "Ismailia Desert Road, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/JiFkK7Arj3W581ueA",
+      "mapImage": "/imagesdatabase/entertainment/Aqua Park Cairomap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 6:00 PM",
+      "entryFees": "Adults: EGP 200, Children: EGP 150",
+      "bestTimeToVisit": "June to September",
+      "howToGet": "By car or local transportation from Cairo center towards Ismailia Road.",
+      "tips": "Bring sunscreen, swimwear, and arrive early to enjoy all rides without long queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Hassan M.",
+        "date": "2024-07-12",
+        "content": "Great water park with plenty of attractions for kids and adults. Very clean and well-maintained.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "user": "Dina F.",
+        "date": "2024-08-01",
+        "content": "Fun place but gets really crowded on weekends. Go on weekdays if possible!",
+        "rating": 3.5,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
+  }
 ]
