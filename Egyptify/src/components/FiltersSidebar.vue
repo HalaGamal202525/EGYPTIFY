@@ -66,7 +66,9 @@ const resetFilters = () => {
 .filter-option {
   margin-left: 1rem;
   font-size: 14px;
+  margin-bottom: 0.5rem; /* Space between checkboxes */
 }
+
 
 .reset-button {
   background-color: #ffa726; 
