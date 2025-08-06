@@ -36,7 +36,7 @@
               </div>
 
 
-          <div v-if="class" class="grid grid-col gap-1 text-sm text-gray-600 mt-3 font-bold">{{ class }}</div>
+          <div v-if="kind" class="grid grid-col gap-1 text-sm text-gray-600 mt-3 font-bold">{{ kind }}</div>
 
 
 
@@ -89,7 +89,7 @@ defineProps({
   title: String,
   description: String,
   location: String,
-  class: String,
+  kind: String,
   location: String, 
   departure: String,
   arrival: String,
