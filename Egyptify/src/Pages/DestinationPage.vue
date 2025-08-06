@@ -159,13 +159,13 @@ function handlePageChange(newPage) {
 
     <div class="p-4 md:p-6">
       <div class="flex justify-between mb-4">
-        <!-- فلتر المدن -->
+        <!-- cities filteration-->
         <select v-model="selectedLocation" class="border p-2 rounded text-sm">
           <option value="">All Locations</option>
           <option v-for="loc in uniqueLocations" :key="loc" :value="loc">{{ loc }}</option>
         </select>
 
-        <!-- فرز -->
+        <!-- sort-->
         <select class="border p-2 rounded text-sm">
           <option>Sort by: Top Rated</option>
         </select>
@@ -197,7 +197,7 @@ function handlePageChange(newPage) {
             </div>
           </div>
 
-          <!-- الباجينيشن -->
+          <!-- Pagination-->
         <div class="flex justify-center mt-10 mb-16 text-black">
   <PaginationComponent
     :currentPage="currentPage"
@@ -225,7 +225,7 @@ function slugify(text) {
   return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
 }
 
-// كل الوجهات (8 لكل مدينة)
+// all destinations
 const allDestinations = [
   // Luxor
   { title: 'Steigenberger Nile Palace', location: 'Luxor',type: 'Luxury', activities: ['Spa', 'Pools'], budget: 'Elite', duration: 'More than 3 days', bestTime: 'Winter', suitableFor: ['Couples', 'Families'], description: 'The 5-star Steigenberger Nile Palace is situated in the heart of Luxor and provides modern accommodation with stunning views of the Nile.', image: '/public/Destination/steignberger.jpg' },
@@ -241,7 +241,7 @@ const allDestinations = [
   { title: 'Pyramids of Giza', location: 'Cairo',type: 'Historic',activities: ['Museums'],  budget: 'Economy', duration: 'Less than 3 days', bestTime: 'Winter', suitableFor: ['Families'],  description: 'Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza', image: '/public/historical/pyramids.jpg' },
   { title: 'Egyptian Museum', location: 'Cairo',type: 'Historic', activities: ['Museums'], budget: 'Economy', duration: 'Less than 3 days', bestTime: 'Winter', suitableFor: ['Families'], description: 'Home to thousands of ancient artifacts including the treasures of King Tutankhamun.', image: '/public/historical/The-Grand-Egyptian.jpg' },
   { title: 'Khan El Khalili', location: 'Cairo',type: 'Shopping', activities: ['Markets'], budget: 'Economy', duration: 'Less than 3 days', bestTime: 'Spring', description: 'This vibrant open-air bazaar is a treasure trove of Egyptian culture, with bustling streets filled with local artisans and vendors. Here, you can pick up unique souvenirs like spices and perfumes, or simply soak up the local atmosphere.', image: '/public/historical/khan-elkhalili1.jpg' },
-  { title: 'Intercontinental Cairo Semiramis', location: 'Cairo', description: 'On the historic Semiramis hotel site, guests can enjoy modern luxury by the river Nile. Semiramis InterContinental Cairo is located in the heart of downtown Cairo, next to the Egyptian Museum and Khan el Khalili.', image: '/public/hotel/samiramis.jpg' },
+  { title: 'Intercontinental Cairo Semiramis', type:'Luxury', activities:['Pools', 'Restaurants','Spa'],location: 'Cairo', description: 'On the historic Semiramis hotel site, guests can enjoy modern luxury by the river Nile. Semiramis InterContinental Cairo is located in the heart of downtown Cairo, next to the Egyptian Museum and Khan el Khalili.', image: '/public/hotel/samiramis.jpg' },
   { title: 'Al Azhar Mosque', location: 'Cairo', description: 'Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world.', image: '/public/historical/alazhar.jpg' },
   { title: 'The Citadel', location: 'Cairo', description: 'A medieval Islamic fort with panoramic views of Cairo and the iconic Mosque', image: '/public/historical/citadel.jpg' },
   { title: 'Le Passage Cairo Hotel & Casino', location: 'Cairo', description: 'Le Passage Cairo Hotel & Casino is located in Heliopolis, an elegant business and residential district in Cairo and it is considered one of the safest area in town. The hotel is only five minutes from Cairo International Airport and ten minutes from the Cairo International Convention Centre and Fair Grounds, with free shuttle bus service, free wifi and free internet. Great design is the key to this urban, cosmopolitan business and leisure base, providing a sophisticated and stylish environment in the throbbing heart of Egypt and the Middle East.', image: '/public/historical/lepassage.jpg' },
@@ -250,7 +250,7 @@ const allDestinations = [
   //Aswan
     { title: 'Sofitel Legend Old Cataract Aswan', location: 'Aswan',type: 'Luxury', activities: ['Spa', 'Pools'], budget: 'Elite', duration: 'More than 3 days', bestTime: 'Winter', suitableFor: ['Couples', 'Families'], description: 'Hotel Complex encompassing famous Victorian-style Cataract Hotel & adjacent high-rise New Cataract Hotel (1963).', image: '/public/hotel/sofitel-legend.jpg' },
   { title: 'Movenpick Resort Aswan', location: 'Aswan',type: 'Luxury', activities: ['Pool','Boating'], budget: 'Elite', duration: 'Less than 3 days', bestTime: 'Winter', suitableFor: ['Families'], description: 'Mövenpick Resort Aswan provides a tranquil environment of lush tropical gardens and magnificent views of the River Nile . Located on its own island , the hotel offers 404 rooms & suites , 6 restaurants & bars , two swimming pools , recreation facilities and lavish landscape.', image: '/public/hotel/movenpick-resort-aswan.jpg' },
-  { title: 'Nubian Museum', location: 'Aswan', description: 'This museum traces the history from the earliest settlements to present day of Nubia, the region defined as the area between Aswan in Egypt and Khartoum in the Sudan.', image: '/public/historical/nubian-museum.jpg' },
+  { title: 'Nubian Museum', location: 'Aswan', type: 'Museum', description: 'This museum traces the history from the earliest settlements to present day of Nubia, the region defined as the area between Aswan in Egypt and Khartoum in the Sudan.', image: '/public/historical/nubian-museum.jpg' },
   { title: 'Unfinished Obelisk',location: 'Aswan', description: 'This gigantic semi-finished obelisk, dating from the New Kingdom, would have weighed a staggering 1,197 tons if completed.', image: '/public/historical/obelisk.jpg' },
   { title: 'Temple of Philae', location: 'Aswan',type: 'Historic', activities: ['Museums'], budget: '$500-1000', duration: '2-3 days', bestTime: 'Winter', suitableFor: ['Families', 'Solo Travelers'], description: 'This large temple complex, relocated to the island of Agilika with the building of the High Dam in Aswan, features the magnificent Temple of Isis that was built in the late Ptolemaic and early Roman periods.', image: '/public/hotel/temple-of-philae.jpg' },
   { title: '1902 Restaurant', location: 'Aswan', description: 'A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.', image: '/public/hotel/img1.jpg' },
@@ -279,23 +279,23 @@ const allDestinations = [
     title: "Old Market Sharm",location: "Sharm El Sheikh",type: "Traditional Market",activities: ["Shopping", "Local Food"],budget: "Economy", duration: "1‑2 hours",bestTime: "Evening",suitableFor: ["Families", "Solo Travelers"],description: "Colorful bazaar with local crafts, spices and casual dining options.",image: "/public/hotel/oldmarket.jpg"
   },
   {
-    title: "Al Mustafa Mosque",location: "Sharm El Sheikh",type: "Religious Site",activities: ["Sightseeing"],budget: "Free",duration: "30 min",bestTime: "All year",suitableFor: ["Families", "Cultural Tourists"],description: "Beautiful Ottoman‑style mosque located near the marina area.",image: "/public/hotel/mosque.jpeg"
+    title: "Al Mustafa Mosque",location: "Sharm El Sheikh",type: "Historic",activities: ["Sightseeing"],budget: "Free",duration: "30 min",bestTime: "All year",suitableFor: ["Families", "Cultural Tourists"],description: "Beautiful Ottoman‑style mosque located near the marina area.",image: "/public/hotel/mosque.jpeg"
   },
 ]
 
-// قيمة الفلتر المختارة
+
 const selectedLocation = ref("")
 
-// المواقع المميزة
+
 const uniqueLocations = computed(() => [...new Set(allDestinations.map(d => d.location))])
 
-// الفلترة
+//filteration
 const filteredDestinations = computed(() => {
   if (!selectedLocation.value) return allDestinations
   return allDestinations.filter(d => d.location === selectedLocation.value)
 })
 
-// الباجينيشن
+// pagination
 const itemsPerPage = 4
 const currentPage = ref(1)
 const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
