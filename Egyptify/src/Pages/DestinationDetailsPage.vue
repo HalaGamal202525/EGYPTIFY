@@ -858,6 +858,7 @@ const destinations = [
   },
 
   //Aswan
+
   // Sofitel Legend Old Cataract Aswan
 {
    slug: 'sofitel-legend-old-cataract-aswan',
