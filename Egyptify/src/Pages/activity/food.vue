@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-4 gap-6 p-8 cursor-pointer">
+  <section class="grid grid-cols-1 md:grid-cols-4 gap-6 px-8 cursor-pointer">
     <CardComponent
       v-for="item in fooddata"
       :key="item.id"
