@@ -154,8 +154,9 @@
         <div
           v-for="card in discover"
           :key="card.id"
-@click="goToCategory(card.title)"          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
-        >
+          @click="goToCategory(card.title)"          
+          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
+          >
           <img
             :src="card.image"
             alt="Card Image"
