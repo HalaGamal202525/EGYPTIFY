@@ -48,21 +48,23 @@
         v-for="item in filteredTransportation"
         :key="item.id"
         :title="`${item.provider}  |  ${item.type}`"
-        :type="item.class"
+        :class="item.class"
+        :amenities="item.amenities"
         :price="item.price"        
-        :features="item.features"
-        :icon="item.icon"
         :showButton="true"
         :buttonText="'Book Now'"
         :showHeart="true"
         :showImage="false"
         :location="item.type === 'Car' ? 'From: Flexible → To: As requested' : `From: ${item.from} → To: ${item.to}`"
-        :description="item.type === 'Car' ? `Departure: Upon request | Arrival: Upon request (Duration: Based on distance) | (${item.features})` : `Departure: ${item.departure} | Arrival: ${item.arrival} (Duration: ${item.duration}) | (${item.features})`"
-        @book-now="$emit('book-now', item)"
+        :departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
+        :arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
+        :duration="item.type === 'Car' ? 'Duration: Based on distance' : `${item.duration}`"
 
+        @book-now="$emit('book-now', item)"
 
       />
     </section>
+
 
     <!-- Booking Calendar -->
     <BookingCalendar
@@ -146,10 +148,5 @@ const handleBooking = (data) => {
 }
 
 
-
-
-
-import { defineEmits } from 'vue'
-
-const emit = defineEmits(['book-now'])
+const emit = defineEmits(['book-now']) 
 </script>

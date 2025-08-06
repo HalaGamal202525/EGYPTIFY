@@ -11,9 +11,9 @@
       "arrival": "5:45 AM+1",
       "duration": "6h 45m",
       "stops": "3 Stops",
-      "price": "$25",
+      "price": "250",
       "per": "Per night",
-      "features": ["WiFi", "Rest Stops"],
+      "amenities": ["WiFi", "Rest Stops"],
       "icon": "bus"
     },
     {
@@ -27,9 +27,9 @@
       "arrival": "8:00 AM+1",
       "duration": "12h 30m",
       "stops": "5 Stops",
-      "price": "$85",
+      "price": "900",
       "per": "Per night",
-      "features": ["Meals", "Bedding", "Private Cabin"],
+      "amenities": ["Meals", "Bedding", "Private Cabin"],
       "icon": "train"
     },
     {
@@ -43,9 +43,9 @@
       "arrival": "7:15 PM",
       "duration": "9h 45m",
       "stops": "8 Stops",
-      "price": "$65",
+      "price": "400",
       "per": "Per night",
-      "features": ["AC", "Meals", "Comfortable"],
+      "amenities": ["AC", "Meals", "Comfortable"],
       "icon": "train"
     },
     {
@@ -57,9 +57,9 @@
       "capacity": "5 passengers",
       "fuel": "Petrol",
       "gear": "Manual",
-      "price": "$30/day",
+      "price": "1500/day",
       "per": "Per night",
-      "features": ["GPS", "Insurance", "Fuel Efficient"],
+      "amenities": ["GPS", "Insurance", "Fuel Efficient"],
       "icon": "car"
     },
     {
@@ -73,9 +73,9 @@
       "arrival": "3:45 PM",
       "duration": "3h 45m",
       "stops": "6 Stops",
-      "price": "1200 EGP",
+      "price": "800",
       "per": "Per night",
-      "features": ["AC", "Basic Seats"],
+      "amenities": ["AC", "Basic Seats"],
       "icon": "train"
     },
     {
@@ -89,9 +89,9 @@
       "arrival": "7:30 PM",
       "duration": "5h 30m",
       "stops": "2 Stops",
-      "price": "$30",
+      "price": "700",
       "per": "Per night",
-      "features": ["AC", "Snacks", "Entertainment"],
+      "amenities": ["AC", "Snacks", "Entertainment"],
       "icon": "bus"
     },
     {
@@ -105,9 +105,9 @@
       "arrival": "11:30 AM",
       "duration": "3h 30m",
       "stops": "3 stops",
-      "price": "$18",
+      "price": "700",
       "per": "Per night",
-      "features": ["AC", "Basic Seats"],
+      "amenities": ["AC", "Basic Seats"],
       "icon": "bus"
     },
     {
@@ -121,9 +121,9 @@
       "arrival": "8:30 AM",
       "duration": "2h 30m",
       "stops": "1 Stop",
-      "price": "$25",
+      "price": "1000",
       "per": "Per night",
-      "features": ["WiFi", "Premium", "Breakfast"],
+      "amenities": ["WiFi", "Premium", "Breakfast"],
       "icon": "train" 
     },
     {
@@ -135,9 +135,9 @@
       "capacity": "5 passengers",
       "fuel": "Petrol",
       "gear": "Automatic",
-      "price": "$55/day",
+      "price": "2500/day",
       "per": "Per night",
-      "features": ["GPS", "Bluetooth", "Premium Insurance"],
+      "amenities": ["GPS", "Bluetooth", "Premium Insurance"],
       "icon": "car"
     },
     {
@@ -149,9 +149,9 @@
       "capacity": "5 passengers",
       "fuel": "Petrol",
       "gear": "Automatic",
-      "price": "$45/day",
+      "price": "2000/day",
       "per": "Per night",
-      "features": ["GPS", "Insurance", "Bluetooth"],
+      "amenities": ["GPS", "Insurance", "Bluetooth"],
       "icon": "car"
     }
   ],
