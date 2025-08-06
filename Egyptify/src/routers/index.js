@@ -21,6 +21,8 @@ import Entertainment from '../Pages/activity/entertainment.vue'
 import Food from '../Pages/activity/food.vue'
 import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
+import Booking from '../Pages/Booking.vue'
+import EventCalendarPage from '../Pages/EventCalendarPage.vue' 
 import profilePersonalDetails from "../Pages/profile-personal-details.vue"
 import aboutUs from '../Pages/About-Us.vue'
 import Map from '../Pages/Map.vue'
@@ -165,6 +167,20 @@ const routes = [
     component: TermsOfUse
 
   },
+
+
+  {
+  path: '/booking',
+  name: 'Booking',
+  component: Booking
+},
+
+{
+    path: '/events', 
+    name: 'EventCalendar',
+    component: EventCalendarPage
+  },
+
   {
     path:"/offerpage",component:offergrid
   },
@@ -203,6 +219,7 @@ const routes = [
   name: '/DestinationDetails',
   component: DestinationDetailsPage
 },
+
 
 ]
 

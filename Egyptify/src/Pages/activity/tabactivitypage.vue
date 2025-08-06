@@ -12,7 +12,7 @@
     />
 
     <!-- Tabs Section -->
-    <section class="px-4 md:px-16 border ">
+    <section class="px-4 md:px-16  mt-6">
       <Tabs :tabs="tabsWithComponents" v-model:activeTab="activeTab"  class="cursor-pointer"/>
     </section>
 

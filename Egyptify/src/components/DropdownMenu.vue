@@ -1,9 +1,9 @@
 <!-- src/components/DropdownMenu.vue -->
 <template>
-  <div class="relative inline-block text-left">
+  <div ref="dropdownRef" class="relative inline-block text-left">
     <button
       @click="isOpen = !isOpen"
-      class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-[#FFC340] rounded-md shadow-sm hover:bg-gray-50 focus:outline-none"
+      class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-[#FFC340] rounded-md shadow-sm hover:bg-gray-50 focus:outline-none cursor-pointer"
     >
       {{ label }}
       <svg
@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
   label: { type: String, default: 'Menu' },
@@ -49,9 +49,24 @@ const props = defineProps({
 const emit = defineEmits(['select'])
 
 const isOpen = ref(false)
+const dropdownRef = ref(null)
 
 function handleSelect(item) {
   emit('select', item)
   isOpen.value = false
 }
+
+function handleClickOutside(event) {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+    isOpen.value = false
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>

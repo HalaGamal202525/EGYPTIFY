@@ -1,0 +1,212 @@
+{
+"bookings": [
+  {
+    "id": "1",
+    "title": "Music Concert",
+    "location": "Opera House",
+    "date": "2025-02-15",
+    "people": 3000,
+    "price": 1200,
+    "type": "Music",
+    "image": "../public/bookingEvents/music concert.jpeg",
+    "description": "A musical night filled with classical melodies and vibrant performances."
+  },
+  {
+    "id": "2",
+    "title": "Abu Simbel Sun Festival",
+    "location": "Abu Simbel, Aswan",
+    "date": "2025-01-22",
+    "people": 100,
+    "price": 1200,
+    "type": "Culture",
+    "image": "../public/bookingEvents/Abu Simbel Sun Festival Event.jpeg",
+    "description": "Witness the magical alignment of the sun at Abu Simbel temple."
+  },
+  {
+    "id": "3",
+    "title": "Alexandria Lighthouse Tour",
+    "location": "Alexandria",
+    "date": "2025-04-09",
+    "people": 150,
+    "price": 500,
+    "type": "Heritage",
+    "image": "../public/bookingEvents/Lighthouse Alexandria Governorate.jpeg",
+    "description": "A historic journey exploring the remnants of the ancient lighthouse."
+  },
+  {
+    "id": "4",
+    "title": "Sound & Light at the Pyramids",
+    "location": "Giza",
+    "date": "2025-01-14",
+    "people": 1200,
+    "price": 900,
+    "type": "Show",
+    "image": "../public/bookingEvents/sound and light.jpeg",
+    "description": "Enjoy a spectacular sound and light show at the Giza Pyramids."
+  },
+  {
+    "id": "5",
+    "title": "Nile Sunset Cruise",
+    "location": "Luxor",
+    "date": "2025-01-19",
+    "people": 100,
+    "price": 500,
+    "type": "Nature",
+    "image": "../public/bookingEvents/Egypt Nile Cruise.jpeg",
+    "description": "Relax with a scenic sunset cruise along the Nile River."
+  },
+  {
+    "id": "6",
+    "title": "Aswan Spice Market Experience",
+    "location": "Aswan",
+    "date": "2025-05-31",
+    "people": 300,
+    "price": 250,
+    "type": "Local",
+    "image": "../public/bookingEvents/Spice Market.jpeg",
+    "description": "Explore the vibrant colors and aromas of Aswan’s spice market."
+  },
+  {
+    "id": "7",
+    "title": "Siwa Oasis Safari",
+    "location": "Siwa",
+    "date": "2025-06-25",
+    "people": 80,
+    "price": 950,
+    "type": "Adventure",
+    "image": "../public/bookingEvents/siwa safari.jpg",
+    "description": "Discover the remote beauty of Siwa in a guided safari tour."
+  },
+  {
+    "id": "8",
+    "title": "Khan El Khalili Bazaar Walk",
+    "location": "Cairo",
+    "date": "2025-07-23",
+    "people": 400,
+    "price": 300,
+    "type": "Local",
+    "image": "../public/bookingEvents/khanel-khalili.jpg",
+    "description": "Walk through Cairo’s historic market and experience local culture."
+  },
+  {
+    "id": "9",
+    "title": "Camel Ride by the Pyramids",
+    "location": "Giza",
+    "date": "2025-08-01",
+    "people": 100,
+    "price": 400,
+    "type": "Adventure",
+    "image": "../public/bookingEvents/camelride.jpg",
+    "description": "Enjoy a camel ride with views of the majestic pyramids."
+  },
+  {
+    "id": "10",
+    "title": "Egyptian Museum Guided Tour",
+    "location": "Cairo",
+    "date": "2025-08-20",
+    "people": 100,
+    "price": 600,
+    "type": "Heritage",
+    "image": "../public/bookingEvents/musuem.jpg",
+    "description": "Guided tour showcasing ancient Egyptian artifacts and treasures."
+  },
+  {
+    "id": "11",
+    "title": "Red Sea Snorkeling Adventure",
+    "location": "Hurghada",
+    "date": "2025-08-10",
+    "people": 150,
+    "price": 800,
+    "type": "Adventure",
+    "image": "../public/bookingEvents/red sea.jpg",
+    "description": "Dive into the Red Sea and explore colorful coral reefs."
+  },
+  {
+    "id": "12",
+    "title": "Luxor Temple Night Visit",
+    "location": "Luxor",
+    "date": "2025-09-30",
+    "people": 300,
+    "price": 550,
+    "type": "Culture",
+    "image": "../public/bookingEvents/luxor temple.jpg",
+    "description": "Visit Luxor Temple under the stars in a magical night setting."
+  },
+  {
+    "id": "13",
+    "title": "Saint Catherine Hiking Trip",
+    "location": "South Sinai",
+    "date": "2025-10-05",
+    "people": 120,
+    "price": 700,
+    "type": "Adventure",
+    "image": "../public/bookingEvents/saint catherine.jpg",
+    "description": "Climb Mount Sinai and witness a breathtaking sunrise."
+  },
+  {
+    "id": "14",
+    "title": "Philae Temple Sound & Light",
+    "location": "Aswan",
+    "date": "2025-11-12",
+    "people": 250,
+    "price": 600,
+    "type": "Show",
+    "image": "../public/bookingEvents/philae.jpg",
+    "description": "Enjoy a sound and light spectacle at Philae Temple."
+  },
+  {
+    "id": "15",
+    "title": "Cairo International Book Fair",
+    "location": "Cairo",
+    "date": "2025-12-23",
+    "people": 5000,
+    "price": 100,
+    "type": "Culture",
+    "image": "../public/bookingEvents/book fair.jpeg",
+    "description": "Explore thousands of titles and cultural events at the annual book fair in Cairo."
+  },
+  
+  {
+    "id": "18",
+    "title": "Downtown Contemporary Arts Festival",
+    "location": "Downtown Cairo",
+    "date": "2025-03-25",
+    "people": 900,
+    "price": 400,
+    "type": "Arts",
+    "image": "../public/bookingEvents/downtown festival.jpg",
+    "description": "A vibrant festival celebrating performing and visual arts in Cairo’s downtown."
+  },
+  {
+    "id": "19",
+    "title": "Tour d’Égypte (Cycling Race)",
+    "location": "Across Egypt",
+    "date": "2025-04-15",
+    "people": 200,
+    "price": "free",
+    "type": "Sports",
+    "image": "../public/bookingEvents/egypt cycling.png",
+    "description": "A major international cycling event covering scenic routes across Egypt."
+  }
+],
+
+
+  "history": [
+    {
+      "id": 101,
+      "title": "Mövenpick Resort",
+      "city": "Aswan",
+      "date": "2025-03-05",
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": 102,
+      "title": "Khufu’s Restaurant",
+      "city": "Giza Plateau",
+      "date": "2025-04-12",
+      "price": "$$$",
+      "status": "Completed"
+    }
+  ]
+  }
