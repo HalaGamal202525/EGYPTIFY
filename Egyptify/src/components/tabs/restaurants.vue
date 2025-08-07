@@ -21,7 +21,7 @@
         @select="filters.location = $event" />
       </div>
     </div>
-<!-- v-model="filters.location -->
+
     <!-- Cards Section -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 p-4">
       <CardComponent
@@ -40,6 +40,9 @@
 
       />
     </div>
+
+
+
   </div>
 </template>
 
