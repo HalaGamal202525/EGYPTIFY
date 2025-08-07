@@ -41,7 +41,6 @@
 
           
         <h2 class="text-lg font-bold text-gray-800 ">{{ title }}</h2>
-          <h2 class="text-lg font-bold text-gray-800">{{ title }}</h2>
 
           <div
             v-if="type"
