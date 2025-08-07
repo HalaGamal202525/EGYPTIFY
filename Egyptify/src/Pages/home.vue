@@ -161,12 +161,12 @@
           />
 
           <div
-            class="absolute inset-0 b flex flex-col items-start justify-end text-center px-4 py-4"
+            class="absolute inset-0 b flex flex-col items-start justify-end text-center px-4 py-4 z-100"
           >
-            <h3 class="text-xl text-white font-semibold mb-2">
+            <h3 class="text-xl !text-white font-semibold mb-2">
               {{ card.title }}
             </h3>
-            <p class="text-sm text-white">{{ card.description }}</p>
+            <p class="text-sm !text-white">{{ card.description }}</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col md:flex-row h-150">
-    <!-- ✅ الجزء الأبيض في اليسار -->
     <div
       class="w-full md:w-1/2 h-1/2 md:h-full bg-white flex justify-center items-center p-6 md:p-8"
     >
@@ -14,7 +13,6 @@
       />
     </div>
 
-    <!-- ✅ الجزء الأيمن (الصورة) -->
     <div class="w-full md:w-1/2 h-150 md:h-full bg-gray-100">
       <img
         src="../../assets/signup .png"
@@ -22,7 +20,6 @@
         class="w-full h-full object-cover"
       />
     </div>
-    <!-- model success -->
     <div
       class="fixed inset-0 bg-gray-400 flex items-center justify-center z-50 model"
       v-if="showModal"
@@ -38,7 +35,6 @@
       </div>
     </div>
 
-    <!-- رابط نسيت كلمة المرور -->
     <div
       v-if="showForgotPassword"
       class="text-center md:text-right mt-2 md:mt-1 mb-4 px-4"
