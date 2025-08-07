@@ -18,7 +18,7 @@
 <div class="relative px-4">
   <button
     @click="toggleMenu"
-    class="text-white font-bold hover:text-yellow-400 focus:outline-none"
+    class="text-white font-bold hover:text-yellow-400 focus:outline-none cursor-pointer"
   >
     More
   </button>

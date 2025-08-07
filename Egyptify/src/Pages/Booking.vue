@@ -49,7 +49,7 @@
     </p>
     <p class="text-gray-600">Price: {{ item.price }} EGP</p>
     <p 
-      class="inline-block mt-2 px-4 py-1 text-sm font-medium rounded-full bg-[#FFC340] text-white border border-[#FFC340]"
+      class="inline-block mt-2 px-4 py-1 text-sm font-medium rounded-full text-green-500 border border-green-500"
     >
       {{ item.status }}
     </p>

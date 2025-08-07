@@ -54,6 +54,8 @@ import Culturedetail from "../Pages/culturedetail.vue"
 import packages from '../Pages/packages.vue'
 import PackageDetails from '../Pages/PackageDetails.vue'
 import favorite from '../Pages/favorite.vue'
+import EventList from '../Pages/EventList.vue'
+import EventDetails from '../Pages/EventDetails.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -70,7 +72,16 @@ const routes = [
     name: 'TripPlanner',
     component: TripPlanner
   },  
-  
+  {
+  path: '/events',
+  name: 'EventList',
+  component: EventList
+},
+{
+  path: '/event/:id',
+  name: 'EventDetails',
+  component:EventDetails
+},
   {
   path: '/popular/:id',
   name: 'PlaceDetails',

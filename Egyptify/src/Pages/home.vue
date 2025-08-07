@@ -4,9 +4,7 @@
     <!-- <Slide v-for="(img, index) in images" :key="index">
   <img :src="img" :alt="'Slide ' + (index + 1)" class="slide-img" />
 </Slide> -->
-
     <slide></slide>
-
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
@@ -32,7 +30,6 @@
         <i class="fa-solid fa-location-dot mr-2 text-[#ffc340] text-xl"></i>
       </template>
     </InputField>
-
     <!-- Suggestions -->
     <ul
       v-if="showSuggestions && filteredPlaces.length"
@@ -154,8 +151,9 @@
         <div
           v-for="card in discover"
           :key="card.id"
-@click="goToCategory(card.title)"          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
-        >
+          @click="goToCategory(card.title)"          
+          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
+          >
           <img
             :src="card.image"
             alt="Card Image"
