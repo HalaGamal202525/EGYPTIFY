@@ -30,7 +30,6 @@
         <i class="fa-solid fa-location-dot mr-2 text-[#ffc340] text-xl"></i>
       </template>
     </InputField>
-
     <!-- Suggestions -->
     <ul
       v-if="showSuggestions && filteredPlaces.length"
