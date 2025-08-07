@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
   <div class="w-full">
-    <div style="margin-top: 100px;">
+    <div style="margin-top: 150px;">
       <OtpInput />
     </div>
   </div>
@@ -11,5 +11,6 @@
 <script setup>
 import NavBarBlack from "../components/NavBar-Black.vue"
 import Footer from "../components/footer.vue"
+
 import OtpInput from '../components/OtpInput.vue'
 </script>

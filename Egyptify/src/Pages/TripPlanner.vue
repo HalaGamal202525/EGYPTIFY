@@ -1,5 +1,5 @@
 <template>
-    <Navbar />
+    <NavBarBlack />
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto mt-7 bg-[#fffefd] p-8 rounded-lg shadow-2xl">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-16">Trip Planner</h1>
@@ -151,10 +151,10 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue';
+import NavBarBlack from '../components/NavBar-Black.vue';
 import BaseButton from '../components/BaseButton.vue';
-import Navbar from '../components/navbar.vue';
-import Footer from '../components/footer.vue';
 import DisabledButton from '../components/DisabledButton.vue';
+import Footer from '../components/footer.vue';
 
 // --- Calendar Logic ---
 const today = new Date();
