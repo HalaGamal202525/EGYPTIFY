@@ -12,19 +12,19 @@
     />
 
     <!-- Contact Types Section -->
-    <section class="py-10 bg-white text-center ml-3">
-      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mx-15 ml-40">
-        <div class="border border-[#FFC340] rounded-xl h-40 w-70 shadow">
+    <section class="py-10 bg-white text-center">
+      <div class="container mx-auto max-w-6xl flex justify-between gap-8 ">
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
           <i class="fa-solid fa-clock text-3xl text-[#FFC340] mb-4 mt-4"></i>
           <h3 class="font-bold h-8">24/7 Support</h3>
           <p>Available around the clock for your <br> convenience.</p>
         </div>
-        <div class="border border-[#FFC340] rounded-xl h-40 w-70 shadow">
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
           <i class="fa-solid fa-users text-3xl text-[#FFC340] mb-4 mt-4"></i>
           <h3 class="font-bold h-8">Expert Team</h3>
           <p>Experienced professionals ready to <br> assist.</p>
         </div>
-        <div class="border border-[#FFC340] rounded-xl h-40 w-70 shadow">
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
           <i class="fas fa-headset text-3xl text-[#FFC340] mb-4 mt-4"></i>
           <h3 class="font-bold h-8">Quick Response</h3>
           <p>Fast replies within 2 hours <br> guaranteed.</p>
@@ -33,11 +33,18 @@
     </section>
 
     
+
+
+
+
+
+
+
 <section class="bg-gray-50 py-10">
-  <div class="container mx-auto border border-[#FFC340] rounded-lg mx-50 max-w-6xl">
-    
+  <div class="container mx-auto border border-[#FFC340] rounded-lg max-w-6xl">
     <div class="bg-gray-50  px-6 py-4 rounded-t-xl">
-      <h2 class="text-xl font-bold mt-3 mb-3"><i class="fa-solid fa-paper-plane fa-lg mr-4" style="color: #FFD43B;"></i>Send Us a Message</h2>
+      <h2 class="text-xl font-bold mt-3 mb-3"><i class="fa-solid fa-paper-plane fa-lg mr-4" style="color: #FFD43B;"></i>
+        Send Us a Message</h2>
       <p class="text-gray-700 mb-3">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
       
@@ -46,35 +53,112 @@
     <!--border -->
     <div class=" p-6 rounded-b-xl bg-white shadow" id="form">
       <form class="grid grid-cols-1 md:grid-cols-2 gap-4" >
+        
+        
         <!-- Full Name -->
         <div>
-          <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Full Name*</label>
-          <input type="text" class="w-full border border-[#FFC340] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow" placeholder="Your name" />
-        </div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Full Name*
+        </label>
 
-        <!-- Email Address -->
-        <div>
-          <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Email Address*</label>
-          <input type="email" class="w-full border border-[#FFC340] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow" placeholder="you@example.com" />
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fa-solid fa-user absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            type="email" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your Full Name" 
+          />
         </div>
+      </div>
+
+
+
+        
+        <!-- Email Address -->
+      <div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Email Address*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fas fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            type="email" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your E-mail" 
+          />
+        </div>
+      </div>
+
+
 
         <!-- Phone Number -->
         <div>
-          <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Phone Number</label>
-          <input type="text" class="w-full border border-[#FFC340] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow" placeholder="+20..." />
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Phone Number*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fa-solid fa-phone absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            type="email" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your Phone Number" 
+          />
         </div>
+      </div>
 
         <!-- Subject -->
         <div>
-          <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Subject*</label>
-          <input type="text" class="w-full border border-[#FFC340] p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow" placeholder="Subject" />
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Subject*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fas fa-pen-to-square absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            type="text" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Subject" 
+          />
         </div>
+      </div>
+
 
         <!-- Message-->
-        <div class="col-span-1 md:col-span-2">
-          <label class="block mb-1 text-gray-700" style="font-size: 18px !important;">Message*</label>
-          <textarea class="w-full border border-[#FFC340] p-2 rounded h-32 focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow" placeholder="Write your message..."></textarea>
+              <div class="col-span-1 md:col-span-2">
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Message*
+        </label>
+
+        <div class="relative">
+          <i class="fas fa-comment-dots absolute left-4 top-3"></i>
+
+          <textarea 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded h-32 
+                  focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm" 
+            placeholder="Write Your Message..."></textarea>
         </div>
+      </div>
+
+
 
         <!-- Send -->
         <div class="col-span-1 md:col-span-2">
@@ -130,8 +214,8 @@
 
 <!-- Live Support Section -->
 <section class="bg-white py-10" id="livechat">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="bg-yellow-50 rounded-xl p-6 shadow-md text-center">
+  <div class="max-w-6xl mx-auto px-2">
+    <div class="bg-yellow-20 border border-[#FFC340] rounded-lg p-6 shadow-md text-center">
       <!-- Icon -->
       <div class="text-blue-600 text-5xl mb-4">
         <i class="fas fa-headset"></i>
@@ -162,5 +246,7 @@ import contactHeroImg from '../assets/contact-hero.jpg'
 import NavBar from '../components/navbar.vue'
 import Hero from '../components/Hero.vue'
 import Footer from '../components/footer.vue'
+import AuthForm from '../components/AuthForm.vue'
+
 
 </script>

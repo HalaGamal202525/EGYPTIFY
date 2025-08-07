@@ -23,7 +23,7 @@
 import { reactive } from 'vue';
 
 const filters = {
-  'Location / Region': ['Cairo', 'Luxor', 'Aswan', 'Red Coast', 'Delta'],
+  'Location / Region': ['Cairo', 'Luxor', 'Aswan', 'Sharm El Sheikh', 'Dahab'],
   'Destination Type': ['Natural', 'Cultural', 'Beach', 'Historic', 'Shopping', 'Family-Friendly'],
   'Available Activities': ['Diving', 'Hiking', 'Museums', 'Markets', 'Festivals / Events'],
   'Budget Level': ['Elite', '$500-1000', 'Economy'],

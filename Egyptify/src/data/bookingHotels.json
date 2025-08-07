@@ -1,0 +1,185 @@
+{
+  "filters": {
+    "cities": ["Cairo", "Giza", "Sharm El Sheikh", "Alexandria", "Luxor", "Aswan", "Hurghada", "El Gouna"],
+    "price": ["Less than 5000", "5000 - 15000", "More than 15000"],
+    "Rating": ["4+ Stars", "4.5+ Stars", "5 Stars"]
+
+  },
+  "bookings": [
+    {
+      "id": 1,
+      "image": "../public/bookingHotels/Casa Cook, El Gouna.webp",
+      "title": "Marriott Mena House",
+      "description": "Luxury hotel near the pyramids.",
+      "location": "Giza, Egypt",
+      "date": "2025-08-15",
+      "duration": "3 nights",
+      "people": "2 adults",
+      "price": 20000,
+      "rating": 4.5,
+      "type": "Hotel"
+    },
+    {
+      "id": 2,
+      "image": "../public/bookingHotels/pyramids hotel.webp",
+      "title": "Pyramids Hotel",
+      "description": "A beautiful stay with pyramid views.",
+      "location": "Giza, Egypt",
+      "date": "2025-09-01",
+      "duration": "2 nights",
+      "people": "1 adult",
+      "price": 3000,
+      "rating": 4.2,
+      "type": "Resort"
+    },
+    {
+      "id": 3,
+      "image": "../public/bookingHotels/four season cairo.webp",
+      "title": "Four Seasons Hotel Cairo",
+      "description": "5-star hotel overlooking the Nile.",
+      "location": "Cairo, Egypt",
+      "date": "2025-08-10",
+      "duration": "4 nights",
+      "people": "2 adults, 1 child",
+      "price": 12000,
+      "rating": 4.9,
+      "type": "Hostel"
+    },
+    {
+      "id": 4,
+      "image": "../public/bookingHotels/Cleopatra Luxury Resort Sharm el-Sheikh.webp",
+      "title": "Cleopatra Luxury Resort",
+      "description": "Beachfront resort with modern amenities.",
+      "location": "Sharm El Sheikh",
+      "date": "2025-10-05",
+      "duration": "5 nights",
+      "people": "2 adults",
+      "price": 6000,
+      "rating": 3.9,
+      "type": "Resort"
+    },
+    {
+      "id": 5,
+      "image": "../public/bookingHotels/Sofitel Winter Palace.webp",
+      "title": "Sofitel Winter Palace",
+      "description": "Historic hotel in Luxor with royal charm.",
+      "location": "Luxor, Egypt",
+      "date": "2025-09-15",
+      "duration": "3 nights",
+      "people": "1 adult",
+      "price": 5000,
+      "rating": 4.6,
+      "type": "Hostel"
+    },
+    {
+      "id": 6,
+      "image": "../public/bookingHotels/Mövenpick Resort Aswan.webp",
+      "title": "Mövenpick Resort",
+      "description": "Peaceful retreat by the Nile.",
+      "location": "Aswan, Egypt",
+      "date": "2025-11-20",
+      "duration": "4 nights",
+      "people": "2 adults",
+      "price": 5000,
+      "rating": 4.5,
+      "type": "Hostel"
+    },
+    {
+      "id": 7,
+      "image": "../public/bookingHotels/The V Luxury Resort Sahl Hasheesh, Hurghada.webp",
+      "title": "The V Luxury Resort Sahl Hasheesh",
+      "description": "Exclusive resort with sea views.",
+      "location": "Hurghada, Egypt",
+      "date": "2025-12-10",
+      "duration": "6 nights",
+      "people": "2 adults, 2 children",
+      "price": 4000,
+      "rating": 4.1,
+      "type": "Resort"
+    },
+    {
+      "id": 8,
+      "image": "../public/bookingHotels/Casa Cook, El Gouna.webp",
+      "title": "Casa Cook",
+      "description": "Boho-chic style boutique hotel.",
+      "location": "El Gouna, Egypt",
+      "date": "2025-08-25",
+      "duration": "3 nights",
+      "people": "2 adults",
+      "price": 6000,
+      "rating": 4.3,
+      "type": "Hostel"
+    },
+    {
+      "id": 9,
+      "image": "../public/bookingHotels/Steigenberger Cecil Hotel.webp",
+      "title": "hostel8.jpg",
+      "description": "Historic hotel in the heart of Alexandria.",
+      "location": "Alexandria, Egypt",
+      "date": "2025-08-18",
+      "duration": "2 nights",
+      "people": "1 adult",
+      "price": 9000,
+      "rating": 4.0,
+      "type": "Hostel"
+    },
+  {
+    "id": 10,
+    "image": "../public/bookingHotels/rixos-magawish-hotel.jpg",
+    "title": "Rixos Premium Magawish (Hurghada)",
+    "description": "Luxury beachfront resort with villas and pools.",
+    "location": "Hurghada, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 28000,
+    "rating": 4.7,
+    "type": "Resort"
+  },
+  {
+    "id": 11,
+    "image": "../public/bookingHotels/jaz-aquaviva.jpg",
+    "title": "Jaz Aquaviva (Sharm El Sheikh)",
+    "description": "5-star resort with a large water park.",
+    "location": "Sharm El Sheikh, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 29000,
+    "rating": 4.6,
+    "type": "Resort"
+  },
+  {
+    "id": 12,
+    "image": "../public/bookingHotels/four seasons alex.jpg",
+    "title": "Four Seasons Alexandria at San Stefano",
+    "description": "Luxury hotel on the Corniche with sea views.",
+    "location": "Alexandria, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 35000,
+    "rating": 4.9,
+    "type": "Hotel"
+  }
+],
+
+  "history": [
+    {
+      "id": 101,
+      "title": "Mövenpick Resort",
+      "city": "Aswan",
+      "date": "2025-03-05",
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": 102,
+      "title": "Khufu’s Restaurant",
+      "city": "Giza Plateau",
+      "date": "2025-04-12",
+      "price": "$$$",
+      "status": "Completed"
+    }
+  ]
+  }
