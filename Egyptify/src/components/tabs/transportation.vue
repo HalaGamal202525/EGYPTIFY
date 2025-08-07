@@ -8,14 +8,14 @@
       <div class="flex justify-center flex-wrap gap-4">
         <!-- From Dropdown -->
         <DropdownMenu
-          label="From"
+          :label="selectedFrom || 'From'"          
           :options="cityOptions"
           @select="(item) => (selectedFrom = item.value)"
         />
 
         <!-- To Dropdown -->
         <DropdownMenu
-          label="To"
+          :label="selectedTo || 'To'"
           :options="cityOptions"
           @select="(item) => (selectedTo = item.value)"
         />
@@ -29,26 +29,17 @@
 
         <!-- Type Dropdown -->
         <DropdownMenu
-          label="Type"
+          :label="selectedType || 'Type'"
           :options="typeOptions"
           @select="(item) => (selectedType = item.value)"
         />
-
-        <!-- Search Button -->
-        <button
-          @click="handleSearch"
-          class="bg-[#FFC340] hover:bg-yellow-400 text-white px-6 py-2 rounded-md shadow font-semibold"
-        >
-          Search
-        </button>
       </div>
     </div>
 
     <!-- Transportation Cards -->
     <section
       class="grid grid-cols-1 gap-4 px-4 pb-10"
-      style="grid-template-columns: repeat(3, minmax(350px, 1fr)) "
-    >
+      style="grid-template-columns: repeat(3, minmax(350px, 1fr)) ">
       <CardComponent
         v-for="item in filteredTransportation"
         :key="item.id"
@@ -115,16 +106,29 @@ const selectedTo = ref(null);
 const selectedDate = ref(null);
 const selectedType = ref(null);
 
-// خيارات المدن
-const cityOptions = [
-  { label: "Cairo", value: "Cairo" },
-  { label: "Alexandria", value: "Alexandria" },
-  { label: "Luxor", value: "Luxor" },
-  { label: "Aswan", value: "Aswan" },
-];
+
+
+// استخراج المدن من بيانات النقل
+const cityOptions = computed(() => {
+  const cities = new Set();
+
+  transportationData.value.forEach(item => {
+    if (item.from) cities.add(item.from);
+    if (item.to) cities.add(item.to);
+  });
+
+  return [
+    { label: "All Cities", value: "" },
+    ...Array.from(cities).map(city => ({
+      label: city,
+      value: city
+    }))
+  ];
+});
 
 // خيارات نوع الوسيلة
 const typeOptions = [
+  { label: "All Types", value: "" },
   { label: "Train", value: "Train" },
   { label: "Bus", value: "Bus" },
   { label: "Car", value: "Car" },

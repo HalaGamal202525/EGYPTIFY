@@ -42,7 +42,7 @@
       "duration": "4 nights",
       "people": "2 adults, 1 child",
       "price": 12000,
-      "rating": 4.9,
+      "rating": 5,
       "type": "Hostel"
     },
     {
@@ -159,7 +159,7 @@
     "duration": "3 nights",
     "people": "2 adults",
     "price": 35000,
-    "rating": 4.9,
+    "rating": 5,
     "type": "Hotel"
   }
 ],
