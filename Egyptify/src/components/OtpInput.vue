@@ -22,12 +22,13 @@
       </label>
     </div>
 
-    <button @click="continueVerification" class="continue-button">Continue</button>
+    <BaseButton @click="continueVerification" class="continue-button">Continue</BaseButton>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import BaseButton from './BaseButton.vue'
 
 const otpDigits = ref(['', '', '', ''])
 const inputRefs = ref([])
@@ -75,17 +76,19 @@ const resendCode = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 30px;
+  gap: 25px;
+  padding: 35px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   max-width: 300px;
-  margin: 30px auto;
+  margin: 60px auto;
   text-align: center;
 }
 
 .otp-fields {
+  color: #333;
   display: flex;
   gap: 15px;
   margin-bottom: 15px;
@@ -94,7 +97,7 @@ const resendCode = () => {
 .otp-field {
   width: 50px;
   height: 50px;
-  border: 1px solid #ccc;
+  border: 1px solid #bbbbbb;
   border-radius: 8px;
   font-size: 20px;
   text-align: center;
@@ -103,8 +106,8 @@ const resendCode = () => {
 }
 
 .otp-field:focus {
-  border-color: #daa520;
-  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.2);
+  border-color: #ffc340;
+  box-shadow: 0 0 0 2px rgba(232, 175, 30, 0.2);
 }
 
 .resend-section {
@@ -135,18 +138,5 @@ const resendCode = () => {
   text-decoration: underline;
 }
 
-.continue-button {
-  background-color: #daa520;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.continue-button:hover {
-  background-color: #b8860b;
-}
 </style>

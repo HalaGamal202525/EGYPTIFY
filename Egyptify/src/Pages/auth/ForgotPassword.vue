@@ -23,8 +23,11 @@
 
         <BaseButton 
           type="submit" 
-          class="w-full text-white text-lg py-3 mb-6 bg-yellow-500 hover:bg-yellow-600"
+          class="w-full text-white text-lg py-3 mb-6"
         >
+        <!-- <a href="../OTP">
+          Send Reset Link
+          </a> -->
           Send Reset Link
         </BaseButton>
 
