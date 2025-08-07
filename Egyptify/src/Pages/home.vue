@@ -566,7 +566,7 @@ const offer = [
   },
 ];
 
-import { ref, onMounted, nextTick } from "vue";
+import { ref, onMounted, nextTick,computed } from "vue";
 
 const scrollContainer = ref(null);
 const canScrollLeft = ref(false);
@@ -627,6 +627,7 @@ if (!emailRegex.test(mailinput.value)) {
 const location = ref("");
 const date = ref("");
 const guests = ref("");
+
 
 
 import { useRouter } from "vue-router";
