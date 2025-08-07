@@ -51,6 +51,10 @@ import Culture from "../Pages/culture.vue"
 import Culturedetail from "../Pages/culturedetail.vue"
 import packages from '../Pages/packages.vue'
 import PackageDetails from '../Pages/PackageDetails.vue'
+import EventList from '../Pages/EventList.vue'
+import EventDetails from '../Pages/EventDetails.vue'
+
+
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
@@ -68,7 +72,16 @@ const routes = [
     name: 'TripPlanner',
     component: TripPlanner
   },  
-  
+  {
+  path: '/events',
+  name: 'EventList',
+  component: EventList
+},
+{
+  path: '/event/:id',
+  name: 'EventDetails',
+  component:EventDetails
+},
   {
   path: '/popular/:id',
   name: 'PlaceDetails',
