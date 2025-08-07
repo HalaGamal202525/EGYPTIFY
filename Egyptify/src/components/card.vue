@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative"
-  >
+  <div  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
     <!-- الصورة -->
     <div class="w-full relative">
       <img
@@ -122,6 +120,7 @@
         <BaseButton v-else-if="showButton">{{ buttonText }}</BaseButton>
       </div>
     </div>
+  </div>
   </div>
 </template>
 <script setup>
