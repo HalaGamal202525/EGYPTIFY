@@ -4,9 +4,7 @@
     <!-- <Slide v-for="(img, index) in images" :key="index">
   <img :src="img" :alt="'Slide ' + (index + 1)" class="slide-img" />
 </Slide> -->
-
     <slide></slide>
-
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
