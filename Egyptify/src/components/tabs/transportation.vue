@@ -20,12 +20,7 @@
           @select="(item) => (selectedTo = item.value)"
         />
 
-        <!-- Travel Date -->
-        <input
-          type="date"
-          v-model="selectedDate"
-          class="px-4 py-2 border border-[#FFC340] rounded-md shadow-sm text-gray-700 focus:outline-none"
-        />
+      
 
         <!-- Type Dropdown -->
         <DropdownMenu
@@ -51,7 +46,6 @@
         :icon="item.icon"
         :showButton="true"
         :buttonText="'Book Now'"
-        :showHeart="true"
         :showImage="false"
         :departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
         :arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
@@ -72,6 +66,8 @@
       v-if="showBooking"
       :selectedItem="selectedTransport"
       @confirm="handleBooking"
+      @close="showBooking = false"
+
     />
 
     <!-- Checkout Section -->
