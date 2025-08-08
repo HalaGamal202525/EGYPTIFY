@@ -1,11 +1,11 @@
 <template>
     <NavBarBlack />
     <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto mt-7 bg-[#fffefd] p-8 rounded-lg shadow-2xl">
-            <h1 class="text-3xl font-bold text-center text-gray-800 mb-16">Trip Planner</h1>
+        <div class="max-w-4xl mx-auto mt-7 bg-white rounded-lg border border-gray-300 shadow-2xl p-8">
+            <h1 class="text-3xl font-bold text-center text-yellow-500 mb-16">Trip Planner</h1>
 
             <div class="mb-10 text-center">
-                <h2 class="text-xl text-left font-semibold text-gray-600 mb-6">Plan Your Dream Trip to Egypt</h2>
+                <h2 class="text-lg text-left font-semibold text-gray-600 mb-6">Plan Your Dream Trip to Egypt</h2>
 
                 <div class="mb-8 text-left">
                     <h3 class="text-m font-medium text-yellow-500 mb-3">Step 1: Select Your Interests</h3>

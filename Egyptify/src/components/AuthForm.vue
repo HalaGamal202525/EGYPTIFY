@@ -9,7 +9,7 @@
 
     <!-- Username -->
     <div v-if="showUsername" class="mb-4">
-      <label class="block text-gray font-semibold mb-1">User Name*</label>
+      <label class="block text-gray-800 font-semibold mb-1" >User Name*</label>
       <InputField
         v-model="form.username"
         type="text"
@@ -23,7 +23,7 @@
 
     <!-- Email -->
     <div class="mb-4">
-      <label class="block text-black font-medium mb-1">E-mail*</label>
+      <label class="block text-gray-800 font-medium mb-1">E-mail*</label>
       <InputField
         v-model="form.email"
         type="email"
@@ -37,7 +37,7 @@
 
     <!-- Password -->
     <div class="mb-4">
-      <label class="block text-black font-semibold mb-1">Password*</label>
+      <label class="block text-gray-800 font-semibold mb-1">Password*</label>
       <InputField
         v-model="form.password"
         type="password"
@@ -64,7 +64,7 @@
 
     <!-- Confirm Password (only for Sign Up) -->
     <div v-if="showConfirmPassword" class="mb-6">
-      <label class="block text-black font-semibold mb-1"
+      <label class="block text-gray-800 font-semibold mb-1"
         >Confirm Password*</label
       >
       <InputField

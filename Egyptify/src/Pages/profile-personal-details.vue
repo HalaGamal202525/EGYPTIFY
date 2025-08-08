@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
-  <div class="min-h-screen bg-[#FFFDF9] py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl">
+  <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
       <div class="flex items-center mb-8">
         <img
           src="../../public/profile/unnamed.png"
@@ -10,7 +10,7 @@
         />
         <div>
           <h1 class="text-2xl font-bold text-gray-800">Yasmine Emad</h1>
-          <p class="text-gray-600">Joined in 2023</p>
+          <p class="text-gray-600">Joined in 2025</p>
         </div>
       </div>
 
@@ -64,7 +64,7 @@
             <InputField
               id="email"
               type="email"
-              placeholder="yasmineemad2023@gmail.com"
+              placeholder="yasmineemad25@gmail.com"
               v-model="personalDetails.email"
               required
             >
@@ -246,29 +246,8 @@
       </div>
 
       <div v-else-if="activeTab === 'reviews'">
-        <h2 class="text-xl font-bold text-yellow-500 mb-6">Write a Review</h2>
-        <form @submit.prevent="submitReview" class="mb-8">
-            <textarea
-                v-model="newReview.text"
-                placeholder="Write your review here..."
-                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                rows="4"
-                required
-            ></textarea>
-            <div class="flex items-center my-4">
-                <span class="text-gray-700 font-medium mr-2">Rating:</span>
-                <i
-                    v-for="n in 5"
-                    :key="'new-rating-' + n"
-                    class="fas fa-star cursor-pointer"
-                    :class="{ 'text-yellow-400': n <= newReview.rating, 'text-gray-300': n > newReview.rating }"
-                    @click="setRating(n)"
-                ></i>
-            </div>
-            <BaseButton type="submit" class="w-full">Submit Review</BaseButton>
-        </form>
-
-        <h2 class="text-xl font-bold text-yellow-500 mb-6">Reviews Left</h2>
+        <UserReview :location-name="locationName" :user-name="personalDetails.username" />
+        <h2 class="text-xl font-bold text-yellow-500 mb-6 mt-8">Reviews Left</h2>
         <div class="space-y-6">
           <div
             v-for="review in reviews"
@@ -278,14 +257,18 @@
             <div class="flex-grow">
               <p class="text-gray-700 font-semibold mb-1">{{ review.location }}</p>
               <p class="text-sm text-gray-500 mb-1">{{ new Date(review.date.toDate()).toLocaleDateString() }}</p>
+              
               <div class="flex items-center mb-2">
                 <i
                   v-for="n in 5"
                   :key="n"
-                  class="fas fa-star"
-                  :class="{ 'text-yellow-400': n <= review.rating, 'text-gray-300': n > review.rating }"
+                  :class="{ 
+                    'fas fa-star text-yellow-400': n <= review.rating, 
+                    'far fa-star text-gray-400': n > review.rating 
+                  }"
                 ></i>
               </div>
+              
               <p class="text-gray-700 text-sm">{{ review.text }}</p>
             </div>
             <div class="ml-4 flex-shrink-0">
@@ -298,7 +281,6 @@
           </div>
         </div>
       </div>
-
       <div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
         <favorite />
@@ -373,7 +355,7 @@
         <div>
           <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
           <a
-            href="#"
+            href="profile-change-password"
             @click.prevent="activeTab = 'personal'"
             class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
           >
@@ -746,6 +728,9 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+a{
+  cursor: pointer;
+}
 .fas.fa-star {
   font-size: 0.9em;
   margin-right: 2px;
