@@ -5,7 +5,7 @@
     <div class="container mx-auto px-4 mt-28 ">
       <router-link
          to="/destination"
-        class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+        class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"
       >
         <i class="fas fa-arrow-left mr-2 text-lg"></i>
         <span class="font-medium">Back</span>
