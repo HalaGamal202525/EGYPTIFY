@@ -20,14 +20,15 @@
         <!-- Map Box -->
         <div class="bg-white rounded-lg shadow overflow-hidden">
           <iframe
-            :src="event.map_embed_url"
-            width="100%"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+  :src="`https://www.google.com/maps?q=${encodeURIComponent(event.location)}&output=embed`"
+  width="100%"
+  height="300"
+  style="border: 0"
+  allowfullscreen
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
         </div>
       </div>
 
