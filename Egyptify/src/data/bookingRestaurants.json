@@ -2,48 +2,51 @@
  "bookings": [
   {
     "id": 1,
-    "name": "Mediterranean Restaurant",
-    "cuisine": "Italian",
-    "location": "Zamalek",
-    "rating": 4.6,
-    "price": "$$$",
-    "image": "../public/bookingRestaurants/mediterranean.jpg"
+    "name": "Sobhy Kaber",
+    "cuisine": "Egyptian",
+    "location": "Qalyubia",
+    "rating": 4,
+    "price": "190-320",
+    "image": "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg"
   },
   {
     "id": 2,
-    "name": "Khufu’s Restaurant",
+    "name": "Sachi",
     "cuisine": "Egyptian",
-    "location": "Giza Plateau",
-    "rating": 5.0,
-    "price": "$$$",
-    "image": "../public/bookingRestaurants/khufu.jpg"
+    "location": "Mohandessin, Giza",
+    "rating": 5,
+    "price": "820-1200",
+    "image": "/imagesdatabase/Food/Sachi2.webp"
+    
   },
+
   {
     "id": 3,
-    "name": "Tabla Luna",
-    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "$$",
-    "image": "../public/bookingRestaurants/tabla.jpg"
+    "name": "Koshary Abou Tarek",
+    "cuisine": "Egyptian street food (Koshari)",
+    "location": "Qasr El Nil, Cairo",
+    "rating": 3.5,
+    "price": "30–50",
+    "image": "../public/bookingRestaurants/kosharyabutarek.jpg"
   },
+  
   {
     "id": 4,
-    "name": "Romanov Restaurant (Kempinski Royal Maxim)",
-    "cuisine": "European grill (steaks, seafood)",
-    "location": "2nd Settlement – New Cairo",
-    "rating": 4.8,
-    "price": "$$$$",
-    "image": "../public/bookingRestaurants/the-view-at-romanov.jpg"
+    "name": "Crave",
+    "cuisine": "international cuisine with a contemporary twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "700-900",
+    "image": "/food/cearve.jpg"
   },
   {
     "id": 5,
-    "name": "La Gourmandise (Ritz-Carlton)",
-    "cuisine": "Classic French fine dining",
-    "location": "Nile Corniche, Garden City, Cairo",
-    "rating": 4.6,
-    "price": "$$$$",
-    "image": "../public/bookingRestaurants/la-gourmandise-restaurant.jpg"
+    "name": "Zooba",
+    "cuisine": "Egyptian street food with a modern twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "60-120",
+    "image": "/food/zooba.webp"
   },
   {
     "id": 6,
@@ -51,26 +54,26 @@
     "cuisine": "Egyptian & international café fare",
     "location": "Talaat Harb St., Downtown Cairo",
     "rating": 4.2,
-    "price": "$$",
+    "price": "250-270",
     "image": "../public/bookingRestaurants/cafe riche.jpg"
   },
   {
     "id": 7,
-    "name": "Moby Dick / Starfish Seafood",
-    "cuisine": "Fresh seafood, Mediterranean style",
-    "location": "Hurghada, Red Sea Coast",
-    "rating": 4.5,
-    "price": "$$$",
-    "image": "../public/bookingRestaurants/starfish.jpg"
+    "name": "Khufu’s Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza Plateau",
+    "rating": 5,
+    "price": "1250-1600",
+    "image": "../public/bookingRestaurants/khufu.jpg"
   },
   {
     "id": 8,
-    "name": "Koshary Abou Tarek",
-    "cuisine": "Egyptian street food (Koshari)",
-    "location": "Downtown Cairo, near Tahrir Square",
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
     "rating": 4.5,
-    "price": "$",
-    "image": "../public/bookingRestaurants/kosharyabutarek.jpg"
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
   }
   ],
 
@@ -89,7 +92,7 @@
       "title": "Khufu’s Restaurant",
       "city": "Giza Plateau",
       "date": "2025-04-12",
-      "price": "$$$",
+      "price": "1250-1600",
       "status": "Completed"
     }
   ]

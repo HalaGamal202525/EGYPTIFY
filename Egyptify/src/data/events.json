@@ -1,194 +1,114 @@
 [
-  {
-    "title": "Music Concert",
-    "location": "Opera House",
-    "date": "2025-02-15",
-     "people": 3000,
-
-    "price": 1200,
-
-    "image": "concert.jpg",
-    "description": "A musical night filled with classical melodies and vibrant performances."
-  },
-  {
-    "title": "Abu Simbel Sun Festival",
-    "location": "Abu Simbel, Aswan",
-    "date": "2025-02-22",
-    "people": 100,
-
-    "price": 1200,
-    "image": "abu-simbel.jpg",
-    "description": "Witness the magical alignment of the sun at Abu Simbel temple."
-  },
-  {
-    "title": "Alexandria Lighthouse Tour",
-    "location": "Alexandria",
-    "date": "2025-02-09",
-     "people": 150,
-
-    "price": 500,
-
-    "image": "alexandria.jpg",
-    "description": "A historic journey exploring the remnants of the ancient lighthouse."
-  },
-  {
-    "title": "Sound & Light at the Pyramids",
-    "location": "Giza",
-    "date": "2025-01-14",
-     "people": 1200,
-
-    "price": 900,
-    "image": "sound-light.jpg",
-    "description": "Enjoy a spectacular sound and light show at the Giza Pyramids."
-  },
-  {
-    "title": "Nile Sunset Cruise",
-    "location": "Luxor",
-    "date": "2025-01-19",
-     "people": 100,
-
-    "price": 500,
-    "image": "nile-cruise.jpg",
-    "description": "Relax with a scenic sunset cruise along the Nile River."
-  },
-  {
-    "title": "Aswan Spice Market Experience",
-    "location": "Aswan",
-    "date": "2025-01-31",
-     "people": 300,
-
-    "price": 250,
-    "image": "spice-market.jpg",
-    "description": "Explore the vibrant colors and aromas of Aswan’s spice market."
-  },
-  {
-    "title": "Siwa Oasis Safari",
-    "location": "Siwa",
-    "date": "2025-01-25",
-     "people": 80,
-
-    "price": 950,
-    "image": "siwa.jpg",
-    "description": "Discover the remote beauty of Siwa in a guided safari tour."
-  },
-  {
-    "title": "Khan El Khalili Bazaar Walk",
-    "location": "Cairo",
-    "date": "2025-01-23",
-     "people": 400,
-
-    "price": 300,
-    "image": "khan.jpg",
-    "description": "Walk through Cairo’s historic market and experience local culture."
-  },
-  {
-    "title": "Camel Ride by the Pyramids",
-    "location": "Giza",
-    "date": "2025-02-01",
-     "people": 100,
-
-    "price": 400,
-    "image": "camel.jpg",
-    "description": "Enjoy a camel ride with views of the majestic pyramids."
-  },
-  {
-    "title": "Egyptian Museum Guided Tour",
-    "location": "Cairo",
-    "date": "2025-01-20",
-     "people": 100,
-
-    "price": 600,
-    "image": "museum.jpg",
-    "description": "Guided tour showcasing ancient Egyptian artifacts and treasures."
-  },
-  {
-    "title": "Red Sea Snorkeling Adventure",
-    "location": "Hurghada",
-    "date": "2025-02-10",
-     "people": 150,
-
-    "price": 800,
-    "image": "snorkeling.jpg",
-    "description": "Dive into the Red Sea and explore colorful coral reefs."
-  },
-  {
-    "title": "Luxor Temple Night Visit",
-    "location": "Luxor",
-    "date": "2025-01-30",
-     "people": 300,
-
-    "price": 550,
-    "image": "luxor.jpg",
-    "description": "Visit Luxor Temple under the stars in a magical night setting."
-  },
-  {
-    "title": "Saint Catherine Hiking Trip",
-    "location": "South Sinai",
-    "date": "2025-02-05",
-     "people": 120,
-
-    "price": 700,
-    "image": "catherine.jpg",
-    "description": "Climb Mount Sinai and witness a breathtaking sunrise."
-  },
-  {
-    "title": "Philae Temple Sound & Light",
-    "location": "Aswan",
-    "date": "2025-02-12",
-     "people": 250,
-
-    "price": 600,
-    "image": "philae.jpg",
-    "description": "Enjoy a sound and light spectacle at Philae Temple."
-  },
-  {
-    "title": "Cairo International Book Fair",
-    "location": "Cairo",
-    "date": "2025-01-23",
-     "people": 5000,
-
-    "price": 100,
-    "image": "book-fair.jpg",
-    "description": "Explore thousands of titles and cultural events at the annual book fair in Cairo."
-  },
-  {
-    "title": "El Gouna Film Festival",
-    "location": "El Gouna",
-    "date": "2025-10-20",
-     "people": 3500,
-
-    "price": 1500,
-    "image": "elgouna.jpg",
-    "description": "A prestigious film festival showcasing regional and international cinema at the Red Sea."
-  },
-  {
-    "title": "Cairo International Film Festival (CIFF)",
-    "location": "Cairo",
-    "date": "2025-11-12",
-     "people": 3000,
-
-    "price": 1200,
-    "image": "ciff.jpg",
-    "description": "One of the oldest and most respected film festivals in the Arab world and Africa."
-  },
-  {
-    "title": "Downtown Contemporary Arts Festival",
-    "location": "Downtown Cairo",
-    "date": "2025-03-25",
-     "people": 900,
-
-    "price": 400,
-    "image": "d-arts.jpg",
-    "description": "A vibrant festival celebrating performing and visual arts in Cairo’s downtown."
-  },
-  {
-    "title": "Tour d’Égypte (Cycling Race)",
-    "location": "Across Egypt",
-    "date": "2025-02-15",
-     "people": 200,
-
-    "price": "free", 
-    "image": "tour-egypt.jpg",
-    "description": "A major international cycling event covering scenic routes across Egypt."
-  }
+    {
+        "id": 1,
+        "name": "Cairo International Book Fair",
+        "location": "Fifth Settlement, New Cairo, Cairo, Egypt",
+        "dateRange": "January 23 - February 5, 2025",
+        "visitingHours": "12:00 PM – 2:00 AM",
+        "extendedHours": "Thursdays and Fridays: 10:00 AM – 9:00 PM",
+        "ticketDetails": "EGP 5 per entry",
+        "ticketPurchaseInfo": "Register on the official fair platform to purchase and receive your ticket via SMS or email.",
+        "website": "https://cairobookfair.gebo.gov.eg/",
+        "transportation": [
+            "Route 1: Abdel Moniem Riyad → Ramses → Al-Azhar University → Mosheer Axis → Fair",
+            "Route 2: Shubra Roundabout → Ramses Street → Abbassia → Mosheer Axis → Fair",
+            "Route 3: New Nozha → Hegaz Square → Makram Ebeid → Mustafa El-Nahhas → Fair",
+            "Route 4: Imbaba/Amiriya → Ain Shams University → Fair",
+            "Route 5: Giza Square → Cairo University → Autostrad → Fair",
+            "Route 6: Sayr Quraish → Maadi Carrefour → Fair",
+            "Route 7: Al-Mazalat/Roxy → Fair"
+        ],
+        "visitorTips": "It is recommended to purchase your ticket in advance to avoid crowds.",
+        "description": "The Cairo International Book Fair is one of the largest and oldest book fairs in the Arab world and Africa. Held annually in Cairo, Egypt, it brings together publishers, writers, and readers from across the globe. The fair showcases a vast collection of books in various genres and languages, along with cultural events, panel discussions, and activities that celebrate literature, knowledge, and creativity.",
+        "images": [
+            "/events/bookfair_main.jpg",
+            "/events/bookfair1.jpg",
+            "/events/bookfair2.jpg",
+            "/events/bookfair3.jpg",
+            "/events/bookfair4.jpg"
+        ],
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456...الخ",
+        "reviews": [
+            {
+                "name": "Mona",
+                "text": "An unforgettable experience! The variety of books, cultural events, and the warm atmosphere made it worth the visit. I found rare titles I've been searching for for years."
+            },
+            {
+                "name": "Sara",
+                "text": "Very well-organized this year. The shuttle buses were a great help, and the venue was spacious and easy to navigate. Loved the panel discussions with Arab authors."
+            },
+            {
+                "name": "Yasmine",
+                "text": "Perfect for book lovers and families! My kids enjoyed the storytelling area while I explored Arabic fiction. It’s more than just a book fair—it’s a cultural celebration."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dahab Kite Festival",
+        "location": "Dahab, South Sinai, Egypt",
+        "dateRange": "October 10 - October 14, 2025",
+        "visitingHours": "10:00 AM – 7:00 PM",
+        "ticketDetails": "EGP 100 per day",
+        "ticketPurchaseInfo": "Tickets available online or at select Dahab surf shops.",
+        "website": "https://dahabkitefestival.com",
+        "transportation": [
+            "Direct buses from Cairo to Dahab",
+            "Sharm El-Sheikh Airport → Taxi to Dahab",
+            "Organized shuttles by event sponsors"
+        ],
+        "visitorTips": "Bring sunscreen and water-friendly clothing. Kiteboarding lessons are available for beginners.",
+        "description": "The Dahab Kite Festival is a vibrant annual event that brings together kite surfers, beach lovers, and adventure seekers. Set against the stunning backdrop of the Red Sea, the festival features kiteboarding competitions, beach parties, workshops, and eco-friendly initiatives, making it a perfect blend of sport and sustainability.",
+        "images": [
+            "/events/kitefestival_main.avif",
+            "/events/kitefestival1.avif",
+            "/events/kitefestival2.jpg",
+            "/events/kitefestival3.jpg"
+        ],
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...الخ",
+        "reviews": [
+            {
+                "name": "Ahmed",
+                "text": "Amazing vibes! The atmosphere was electric and seeing all the colorful kites over the sea was breathtaking."
+            },
+            {
+                "name": "Layla",
+                "text": "Loved the workshops and night parties. Met so many new people from around the world."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Siwa Oasis Date Harvest Festival",
+        "location": "Siwa Oasis, Matrouh Governorate, Egypt",
+        "dateRange": "November 1 - November 7, 2025",
+        "visitingHours": "All day",
+        "ticketDetails": "Free Entry",
+        "ticketPurchaseInfo": "No tickets required. Open to all visitors.",
+        "website": "https://siwadatefestival.com",
+        "transportation": [
+            "Private car from Cairo via Marsa Matrouh",
+            "Group tours organized by travel agencies",
+            "Local transport available within Siwa"
+        ],
+        "visitorTips": "Wear comfortable shoes and be prepared for warm weather. Don't miss the date tasting stands.",
+        "description": "Experience the rich culture of Siwa Oasis during the annual Date Harvest Festival. Celebrate the date harvest season with local Siwan traditions, music, dance, and crafts. The festival is an immersive cultural experience that showcases the unique heritage of one of Egypt’s most enchanting regions.",
+        "images": [
+            "/events/siwafestival_main.avif",
+            "/events/siwafestival1.jpg",
+            "/events/siwafestival2.jpg",
+            "/events/siwafestival3.jpg"
+        ],
+        "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...الخ",
+        "reviews": [
+            {
+                "name": "Karim",
+                "text": "A beautiful celebration of Siwa’s traditions. Loved the performances and the authentic local food."
+            },
+            {
+                "name": "Nour",
+                "text": "Such a unique experience. Learned so much about the culture and enjoyed the natural beauty of Siwa."
+            }
+        ]
+    }
 ]

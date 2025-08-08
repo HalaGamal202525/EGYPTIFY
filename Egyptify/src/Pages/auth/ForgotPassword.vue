@@ -1,14 +1,12 @@
-<template>
+ <template>
   <div class="flex h-screen bg-[#fefaf2]">
-    <!-- Left Side - Form -->
     <div class="w-full md:w-1/2 flex justify-center items-center p-8">
-      <form @submit.prevent="handleSubmit" class="bg-white rounded-2xl shadow-md w-full max-w-md p-8">
+      <form @submit.prevent="handleReset" class="bg-white rounded-2xl shadow-md w-full max-w-md p-8">
         <h2 class="text-3xl font-bold mb-4 text-black text-center">Reset Password</h2>
         <p class="text-center text-gray-500 mb-6">
           Enter your email to receive a reset link
         </p>
 
-        <!-- Email Field -->
         <div class="mb-6">
           <label class="block text-black font-semibold mb-1">Email*</label>
           <InputField
@@ -23,15 +21,16 @@
           </InputField>
         </div>
 
-        <!-- Submit Button -->
         <BaseButton 
           type="submit" 
-          class="w-full text-white text-lg py-3 mb-6 bg-yellow-500 hover:bg-yellow-600"
+          class="w-full text-white text-lg py-3 mb-6"
         >
+        <!-- <a href="../OTP">
+          Send Reset Link
+          </a> -->
           Send Reset Link
         </BaseButton>
 
-        <!-- Back to Login Link -->
         <div class="text-center">
           <router-link 
             to="/login"
@@ -44,8 +43,7 @@
       </form>
     </div>
 
-    <!-- Right Side - Image -->
-    <div class="hidden md:block md:w-1/2 bg-gray-100">
+\    <div class="hidden md:block md:w-1/2 bg-gray-100">
       <img
         src="../../assets/signup .png"
         alt="Password reset visual"
@@ -60,11 +58,23 @@ import { ref } from 'vue'
 import InputField from '../../components/InputField.vue'
 import BaseButton from '../../components/BaseButton.vue'
 
-const email = ref('')
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth'
 
-const handleSubmit = () => {
-  // Handle form submission
-  console.log('Password reset requested for:', email.value)
-  alert(`Reset link sent to: ${email.value}`)
+const email = ref('')
+const message = ref('')
+const error = ref('')
+
+const handleReset = async () => {
+  const auth = getAuth()
+  try {
+    await sendPasswordResetEmail(auth, email.value)
+    message.value = 'Password reset email sent! Check your inbox.'
+    error.value = ''
+  } catch (err) {
+    message.value = ''
+    error.value = err.message
+  }
 }
 </script>
+
+

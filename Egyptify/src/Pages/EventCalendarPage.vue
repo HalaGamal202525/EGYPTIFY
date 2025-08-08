@@ -32,13 +32,13 @@
         <DropdownComponent
   :label="filters.city?.label || 'All Cities'"
   :options="cityOptions"
-  @select="(val) => filters.city = val.value"
+  @select="(val) => filters.city = val"
 />
 
 <DropdownComponent
   :label="filters.type?.label || 'All Types'"
   :options="typeOptions"
-  @select="(val) => filters.type = val.value"
+  @select="(val) => filters.type = val"
 />
 
 
@@ -75,6 +75,7 @@
         :showButton="true"
         :buttonText="'Book Now'"
         :showHeart="true"
+         @click="goToEvent(event.id)"
       />
     </section>
 
@@ -97,7 +98,13 @@ import CardComponent from '../components/card.vue'
 import heroImage from '../assets/eventCalendar.jpg'
 import bookingEvents from '../data/bookingEvents.json'
 import ButtonComponent from '../components/BaseButton.vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+
+const goToEvent = (id) => {
+  router.push(`/events/${id}`)
+}
 
 const months = [
   'January', 'February', 'March', 'April', 'May', 'June',
@@ -130,12 +137,16 @@ const filteredEvents = computed(() => {
         ? eventDate.getMonth() === currentMonthIndex.value && eventDate.getFullYear() === currentYear.value
         : eventDate.getFullYear() === currentYear.value
 
-    const cityMatch = !filters.value.city?.value || event.city === filters.value.city.value
-    const typeMatch = !filters.value.type?.value || event.type === filters.value.type.value
+         const selectedCity = filters.value.city?.value?.toLowerCase() || '';
+         const selectedType = filters.value.type?.value?.toLowerCase() || '';
+         const eventCity = event.location?.toLowerCase() || '';
+         const eventType = event.type?.toLowerCase() || '';
 
-    return isMonthMatch && cityMatch && typeMatch
-  })
-})
+         const cityMatch = !selectedCity || eventCity.includes(selectedCity);
+         const typeMatch = !selectedType || eventType === selectedType;
+        return isMonthMatch && cityMatch && typeMatch;
+        })
+        })
 
 
 function nextMonth() {
@@ -161,13 +172,25 @@ const cityOptions = [
   { label: 'Cairo', value: 'Cairo' },
   { label: 'Alexandria', value: 'Alexandria' },
   { label: 'Luxor', value: 'Luxor' },
-  { label: 'Aswan', value: 'Aswan' }
+  { label: 'Aswan', value: 'Aswan' },
+  { label: 'Giza', value: 'Giza' },
+  { label: 'Siwa', value: 'Siwa' },
+  { label: 'Hurghada', value: 'Hurghada' },
+  { label: 'South Sinai', value: 'South Sinai' },
+  { label: 'Downtown Cairo', value: 'Downtown Cairo' },
+  { label: 'Across Egypt', value: 'Across Egypt' }
 ]
 
 const typeOptions = [
-  { label: 'All types', value: '' },
-  { label: 'Culture', value: 'Culture' },
+  { label: 'All Types', value: '' },
   { label: 'Music', value: 'Music' },
+  { label: 'Culture', value: 'Culture' },
+  { label: 'Heritage', value: 'Heritage' },
+  { label: 'Show', value: 'Show' },
+  { label: 'Nature', value: 'Nature' },
+  { label: 'Local', value: 'Local' },
+  { label: 'Adventure', value: 'Adventure' },
+  { label: 'Arts', value: 'Arts' },
   { label: 'Sports', value: 'Sports' }
 ]
 

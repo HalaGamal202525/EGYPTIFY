@@ -7,14 +7,14 @@
     />
 
     <div class=" p-5 space-y-3">
-      <h2 class="text-xl font-semibold text-gray-800">{{ data.name }}</h2>
+      <h2 class="text-xl font-semibold h-15 text-gray-800">{{ data.name }}</h2>
 
       <div class="text-gray-600">
-        <p class="text-base">📍 {{ data.where }}</p>
+        <p class="text-base h-12"><i class="fa-solid fa-location-dot" style="color: #ffc340"></i> {{ data.where }}</p>
         <p class="text-sm text-gray-500">far : {{ data.fromcenter }}</p>
       </div>
 
-      <p class="text-gray-700 text-sm h-22 leading-relaxed">
+      <p class="text-gray-700 text-sm h-25 leading-relaxed">
         {{ data.descripation }}
       </p>
 
@@ -36,7 +36,7 @@
       >
         {{ data.moredetail || 'المزيد من التفاصيل' }}
     </div>
-            <BaseButton class="  w-full   ">More Detail</BaseButton>
+            <BaseButton class="  w-full  " @click="gotobooking">Book Now </BaseButton>
 
     </div>
 
@@ -46,6 +46,11 @@
 <script setup>
 import BaseButton  from '../BaseButton.vue';
 
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const gotobooking=()=>{
+  router.push("/booking")
+}
 const props = defineProps({
   data: Object
 });
@@ -54,25 +59,3 @@ const props = defineProps({
 
 
 
-<!-- <template>
-  <div class="bg-white shadow rounded-lg overflow-hidden">
-    <img :src="data.img" class="w-full h-48 object-cover" />
-
-    <div class="p-4">
-      <h2 class="text-xl font-bold">{{ data.name }}</h2>
-      <p class="text-gray-600">{{ data.type }}</p>
-      <p class="text-sm mt-2 truncate">{{ data.description }}</p>
-
-
-      <router-link :to="`/place/${data.id}`">
-        <button class="mt-4 text-white bg-[#ffc340] px-4 py-1 rounded-full w-full text-sm hover:bg-yellow-400">
-          More
-        </button>
-      </router-link>
-    </div>
-  </div>
-</template>
-
-<script setup>
-defineProps(['data']);
-</script> -->

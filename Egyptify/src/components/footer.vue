@@ -73,13 +73,13 @@ const gotohome=()=>{
 
 <style scoped>
 .footer {
-  background-color: #ddd;
+  background-color: #000424;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
-  color: black;
+  color: white;
   font-size: 1.05rem;
 }
 
@@ -119,8 +119,8 @@ h3, h4 {
 }
 
 .icons p {
-  background-color: #ddd;
-  border: 1px solid black; /* ستروك أسود */
+  background-color: #dddddd00;
+  border: 1px solid white; /* ستروك أسود */
   border-radius: 50%;
   padding: 10px;
   font-size: 1.3rem;
@@ -143,7 +143,7 @@ h3, h4 {
 
 .links a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: color 0.2s ease;
 }
 

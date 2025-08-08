@@ -4,9 +4,7 @@
     <!-- <Slide v-for="(img, index) in images" :key="index">
   <img :src="img" :alt="'Slide ' + (index + 1)" class="slide-img" />
 </Slide> -->
-
     <slide></slide>
-
     <!-- section -->
     <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
@@ -32,7 +30,6 @@
         <i class="fa-solid fa-location-dot mr-2 text-[#ffc340] text-xl"></i>
       </template>
     </InputField>
-
     <!-- Suggestions -->
     <ul
       v-if="showSuggestions && filteredPlaces.length"
@@ -154,8 +151,9 @@
         <div
           v-for="card in discover"
           :key="card.id"
-@click="goToCategory(card.title)"          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
-        >
+          @click="goToCategory(card.title)"          
+          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover"
+          >
           <img
             :src="card.image"
             alt="Card Image"
@@ -163,12 +161,12 @@
           />
 
           <div
-            class="absolute inset-0 b flex flex-col items-start justify-end text-center px-4 py-4"
+            class="absolute inset-0 b flex flex-col items-start justify-end text-center px-4 py-4 z-100"
           >
-            <h3 class="text-xl text-white font-semibold mb-2">
+            <h3 class="text-xl !text-white font-semibold mb-2">
               {{ card.title }}
             </h3>
-            <p class="text-sm text-white">{{ card.description }}</p>
+            <p class="text-sm !text-white">{{ card.description }}</p>
           </div>
         </div>
       </div>
@@ -337,7 +335,7 @@
             :description="card.description"
             :showButton="true"
             buttonText="View offer"
-            @click="gotoffer"
+            @click="gotooffer"
             class="!bg-gray-50  shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>
@@ -566,7 +564,7 @@ const offer = [
   },
 ];
 
-import { ref, onMounted, nextTick } from "vue";
+import { ref, onMounted, nextTick,computed } from "vue";
 
 const scrollContainer = ref(null);
 const canScrollLeft = ref(false);
@@ -627,6 +625,7 @@ if (!emailRegex.test(mailinput.value)) {
 const location = ref("");
 const date = ref("");
 const guests = ref("");
+
 
 
 import { useRouter } from "vue-router";

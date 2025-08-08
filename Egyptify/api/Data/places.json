@@ -15,22 +15,25 @@
     "moredetail":"+400 EGP Taxes and chargers",
     "type":"Historical location"
 },
-{"id":2,
-    "img":"public/offer/all/alazhar.webp",
-    "name":"Al Azhar Park",
-    "numofreviews":"10 reviews",
-    "where": "Cairo, near Al-Azhar Mosque",
-    "location":"Cairo",
-    "fromcenter":"4–5 km from center",
-        "review":4.8,
-    "descripation":"Wide green spaces, artificial lakes, panoramic views of old Cairo",
-    "howlong":"5 Hours",
-    "numoflocation":"1 locations left on this trip",
-    "afterdesc":"300EGP",
-    "beforedesc":"400EGP",
-    "moredetail":"+50 EGP Taxes and chargers",
-    "type":"Natural location"
-},
+{
+  "id": 2,
+  "img": "public/offer/all/SOHO Square.webp",
+  "name": "SOHO Square",
+  "numofreviews": "45 reviews",
+  "where": "Sharm El-Sheikh, White Knight Bay",
+  "location": "Sharm El-Sheikh",
+  "fromcenter": "5–7 km from center",
+  "review": 4.9,
+  "descripation": "Lively entertainment and shopping center with restaurants, dancing fountain, and shows",
+  "howlong": "4 Hours",
+  "numoflocation": "3 locations left on this trip",
+  "afterdesc": "400EGP",
+  "beforedesc": "500EGP",
+  "moredetail": "+60 EGP Taxes and charges",
+  "type": "Entertainment location"
+}
+
+,
 {"id":3,
     "img":"public/offer/all/historical cairo.webp",
     "name":"Cairo Historical Day Tour",
@@ -435,7 +438,8 @@
   "beforedesc": "160 EGP",
   "moredetail": "Suitable for all ages",
   "type": "Entertainment location"
-},{
+},
+{
   "id": 26,
   "img": "public/offer/all/abou elsid.webp",
   "name": "Abou El Sid",

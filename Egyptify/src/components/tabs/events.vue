@@ -5,21 +5,25 @@
     <div class="bg-yellow-20 border border-gray-300 rounded-lg p-4 mx-4 mb-6 shadow">
       <h2 class="text-lg font-semibold mb-4 text-gray-700">Filter</h2>
       <div class="flex flex-wrap gap-4 justify-center">
-        <DropdownMenu
-          label="Select Location"
-          :options="locationOptions"
-          @select="filterOptions.location = $event.value"
-        />
-        <DropdownMenu
-          label="Select Type"
-          :options="typeOptions"
-          @select="filterOptions.type = $event.value"
-        />
-        <DropdownMenu
-          label="Select Price"
-          :options="priceOptions"
-          @select="filterOptions.price = $event.value"
-        />
+        
+
+      <DropdownMenu
+        :label="filterOptions.location?.label || 'Select Location'"
+        :options="locationOptions"
+        @select="filterOptions.location = $event"
+      />
+
+      <DropdownMenu
+        :label="filterOptions.type?.label || 'Select Type'"
+        :options="typeOptions"
+        @select="filterOptions.type = $event"
+      />
+
+      <DropdownMenu
+        :label="filterOptions.price?.label || 'Select Price'"
+        :options="priceOptions"
+        @select="filterOptions.price = $event"
+      />
       </div>
     </div>
 
@@ -38,7 +42,6 @@
         :showHeart="true"
         button-text="Book Now"
         @book-now="$emit('book-now', event)"
-
 
       />
     </div>
@@ -77,11 +80,16 @@ const selectedEvent = ref(null)
 const showBooking = ref(false)
 const bookingDetails = ref(null)
 
+
+
 const filterOptions = ref({
-  location: '',
-  type: '',
-  price: ''
+  location: { label: 'All Locations', value: '' },
+  type: { label: 'All Types', value: '' },
+  price: { label: 'All Prices', value: '' }
 })
+
+
+
 
 // Dropdown options
 const locationOptions = [
@@ -107,20 +115,24 @@ const priceOptions = [
   { label: 'More than 1000 EGP', value: 'gt1000' }
 ]
 
+
 // Filter logic
+
 const filteredEvents = computed(() => {
   return eventsData.value.filter(event => {
-    const matchLocation = !filterOptions.value.location || event.location === filterOptions.value.location
-    const matchType = !filterOptions.value.type || event.type === filterOptions.value.type
+    const matchLocation = !filterOptions.value.location.value || event.location === filterOptions.value.location.value
+    const matchType = !filterOptions.value.type.value || event.type === filterOptions.value.type.value
     const matchPrice =
-      !filterOptions.value.price ||
-      (filterOptions.value.price === 'lt500' && event.price < 500) ||
-      (filterOptions.value.price === '500-1000' && event.price >= 500 && event.price <= 1000) ||
-      (filterOptions.value.price === 'gt1000' && event.price > 1000)
+      !filterOptions.value.price.value ||
+      (filterOptions.value.price.value === 'lt500' && event.price < 500) ||
+      (filterOptions.value.price.value === '500-1000' && event.price >= 500 && event.price <= 1000) ||
+      (filterOptions.value.price.value === 'gt1000' && event.price > 1000)
 
     return matchLocation && matchType && matchPrice
   })
 })
+
+
 
 // Booking actions
 const handleBookNow = (event) => {
@@ -132,8 +144,6 @@ const handleBooking = (data) => {
   bookingDetails.value = data
   showBooking.value = false
 }
-
-
 
 import { defineEmits } from 'vue'
 

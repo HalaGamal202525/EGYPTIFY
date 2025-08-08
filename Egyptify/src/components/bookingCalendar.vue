@@ -186,6 +186,8 @@ const total = computed(() => {
 });
 
 // ✅ لما المستخدم يعمل Confirm
+// defineProps(['item'])
+
 const emit = defineEmits(['booking-confirmed', 'close']);
 
 // const confirmBooking = () => {
@@ -222,5 +224,12 @@ const confirmBooking = () => {
   emit('booking-confirmed', bookingDetails);
   emit('close');
 };
+
+
+
+
+
+
+
 
 </script>

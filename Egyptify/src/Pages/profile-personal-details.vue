@@ -295,36 +295,28 @@
         </div>
 
         <div class="mb-8">
-          <h3 class="text-xl font-bold text-yellow-500 mb-4">Notifications</h3>
-          <div class="flex items-center justify-between">
-            <div>
-              <p class="text-gray-700 font-medium">Booking notifications</p>
-              <p class="text-sm text-gray-500">Receive email notifications for booking confirmations and updates.</p>
+            <h3 class="text-xl font-bold text-yellow-500 mb-4">Notifications</h3>
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-gray-700 font-medium">Booking notifications</p>
+                <p class="text-sm text-gray-500">Receive email notifications for booking confirmations and updates.</p>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" v-model="settings.bookingNotifications" />
+                <span class="slider"></span>
+              </label>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                v-model="settings.bookingNotifications"
-                class="sr-only peer"
-              />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
-            </label>
-          </div>
-          <div class="flex items-center justify-between mt-4">
-            <div>
-              <p class="text-gray-700 font-medium">Promotional Offers</p>
-              <p class="text-sm text-gray-500">Stay informed about new trips, special offers, and promotions.</p>
+            <div class="flex items-center justify-between mt-4">
+              <div>
+                <p class="text-gray-700 font-medium">Promotional Offers</p>
+                <p class="text-sm text-gray-500">Stay informed about new trips, special offers, and promotions.</p>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" v-model="settings.promotionalOffers" />
+                <span class="slider"></span>
+              </label>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                v-model="settings.promotionalOffers"
-                class="sr-only peer"
-              />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400"></div>
-            </label>
           </div>
-        </div>
 
         <div>
           <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
@@ -632,5 +624,55 @@ async function deleteAccount() {
 .sr-only:checked + div::after {
   content: '';
   transform: translateX(100%);
+}
+/* Base styles for the toggle switch container */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px; /* w-11 */
+  height: 24px; /* h-6 */
+}
+
+/* Hide the default HTML checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider/track of the switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Default grey color */
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* The white circle/handle */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* h-5 */
+  width: 20px; /* w-5 */
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Change background color when checked */
+input:checked + .slider {
+  background-color: #FBBF24; /* Tailwind yellow-400 */
+}
+
+/* Move the circle to the right when checked */
+input:checked + .slider:before {
+  transform: translateX(20px);
 }
 </style>
