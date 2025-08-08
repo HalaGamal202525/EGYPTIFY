@@ -91,7 +91,8 @@
         >
 
         <slot name="action" v-if="hasActionSlot" />
-        <BaseButton v-else-if="showButton">{{ buttonText }}</BaseButton>
+        <BaseButton v-else-if="showButton"  
+  @click="handleClick">{{ buttonText }}</BaseButton>
       </div>
     </div>
   </div>
@@ -133,6 +134,7 @@ const props = defineProps({
     default: true,
   },
   defaultFavorite: Boolean,
+    onClick: Function,
 });
 const slots = useSlots();
 const hasActionSlot = !!slots.action;
@@ -141,7 +143,12 @@ import { watchEffect } from "vue";
 
 const isFavorite = ref(props.defaultFavorite || false);
 const showOverlay = ref(false);
-
+function handleClick() {
+  if (props.onClick) {
+    props.onClick();
+  }
+}
+ 
 watchEffect(() => {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   isFavorite.value = favorites.some((p) => p.id === props.id);

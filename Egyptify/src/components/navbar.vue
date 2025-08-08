@@ -66,7 +66,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from "vue-router";
-
+import BaseButton from './BaseButton.vue';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
