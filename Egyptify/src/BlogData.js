@@ -1,24 +1,24 @@
 // src/BlogData.js
-import post1 from './assets/blogs/post1.jpg'
-import post2 from './assets/blogs/post2.webp'
+import post1 from './assets/blogs/post1.webp'
+import post2 from './assets/blogs/post2.jpg'
 import post3 from './assets/blogs/post3.jpg'
 import post4 from './assets/blogs/post4.jpg'
-import post5 from './assets/blogs/post5.jpg'
+import post5 from './assets/blogs/post5.jpeg'
 import post6 from './assets/blogs/post6.jpg'
-import post7 from './assets/blogs/post7.jpg'
+import post7 from './assets/blogs/post7.jpeg'
 import post8 from './assets/blogs/post8.jpg'
-import post9 from './assets/blogs/post9.jpg'
-import post10 from './assets/blogs/post10.jpg'
+import post9 from './assets/blogs/post9.webp'
+import post10 from './assets/blogs/post10.jpeg'
 import post11 from './assets/blogs/post11.jpg'
 import post12 from './assets/blogs/post12.jpg'
 import post13 from './assets/blogs/post13.jpg'
-import post14 from './assets/blogs/post14.jpg'
-import post15 from './assets/blogs/post15.jpg'
+import post14 from './assets/blogs/post14.jpeg'
+import post15 from './assets/blogs/post15.webp'
 import post16 from './assets/blogs/post16.jpg'
 import post17 from './assets/blogs/post17.jpg'
 import post18 from './assets/blogs/post18.jpg'
 import post19 from './assets/blogs/post19.jpg'
-import post20 from './assets/blogs/post20.webp'
+// import post20 from './assets/blogs/post20.webp'
 import person1 from './assets/blogs/person1.png'
 import person2 from './assets/blogs/person2.jpg'
 
@@ -232,15 +232,15 @@ export const blogs = [
     authorBio: "History writer and urban culture fan.",
     content: "Port Said combines French colonial charm with bustling ports. Visit the Military Museum and take the ferry across the Suez Canal."
   },
-  {
-    id: 20,
-    title: "Tanta’s Sufi Spirit",
-    author: "Heba Elshamy",
-    date: "December 2023",
-    summary: "Feel the energy of Egypt’s biggest religious festival.",
-    image: post20,
-    authorImage: person1,
-    authorBio: "Religious studies researcher and festival traveler.",
-    content: "The moulid of Sayyid Ahmed el-Badawi in Tanta draws thousands for celebration and zikr. The energy is unmatched — a true cultural immersion."
-  }
+  // {
+  //   id: 20,
+  //   title: "Tanta’s Sufi Spirit",
+  //   author: "Heba Elshamy",
+  //   date: "December 2023",
+  //   summary: "Feel the energy of Egypt’s biggest religious festival.",
+  //   image: post20,
+  //   authorImage: person1,
+  //   authorBio: "Religious studies researcher and festival traveler.",
+  //   content: "The moulid of Sayyid Ahmed el-Badawi in Tanta draws thousands for celebration and zikr. The energy is unmatched — a true cultural immersion."
+  // }
 ];

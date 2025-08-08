@@ -73,12 +73,12 @@ const routes = [
     component: TripPlanner
   },  
   {
-  path: '/events',
+  path: '/event',
   name: 'EventList',
   component: EventList
 },
 {
-  path: '/event/:id',
+  path: '/events/:id',
   name: 'EventDetails',
   component:EventDetails
 },

@@ -1,196 +1,346 @@
 {
-"bookings": [
-  {
-    "id": "1",
-    "title": "Music Concert",
-    "location": "Opera House",
-    "date": "2025-02-15",
-    "people": 3000,
-    "price": 1200,
-    "type": "Music",
-    "image": "../public/bookingEvents/music concert.jpeg",
-    "description": "A musical night filled with classical melodies and vibrant performances."
-  },
-  {
-    "id": "2",
-    "title": "Abu Simbel Sun Festival",
-    "location": "Abu Simbel, Aswan",
-    "date": "2025-01-22",
-    "people": 100,
-    "price": 1200,
-    "type": "Culture",
-    "image": "../public/bookingEvents/Abu Simbel Sun Festival Event.jpeg",
-    "description": "Witness the magical alignment of the sun at Abu Simbel temple."
-  },
-  {
-    "id": "3",
-    "title": "Alexandria Lighthouse Tour",
-    "location": "Alexandria",
-    "date": "2025-04-09",
-    "people": 150,
-    "price": 500,
-    "type": "Heritage",
-    "image": "../public/bookingEvents/Lighthouse Alexandria Governorate.jpeg",
-    "description": "A historic journey exploring the remnants of the ancient lighthouse."
-  },
-  {
-    "id": "4",
-    "title": "Sound & Light at the Pyramids",
-    "location": "Giza",
-    "date": "2025-01-14",
-    "people": 1200,
-    "price": 900,
-    "type": "Show",
-    "image": "../public/bookingEvents/sound and light.jpeg",
-    "description": "Enjoy a spectacular sound and light show at the Giza Pyramids."
-  },
-  {
-    "id": "5",
-    "title": "Nile Sunset Cruise",
-    "location": "Luxor",
-    "date": "2025-01-19",
-    "people": 100,
-    "price": 500,
-    "type": "Nature",
-    "image": "../public/bookingEvents/Egypt Nile Cruise.jpeg",
-    "description": "Relax with a scenic sunset cruise along the Nile River."
-  },
-  {
-    "id": "6",
-    "title": "Aswan Spice Market Experience",
-    "location": "Aswan",
-    "date": "2025-05-31",
-    "people": 300,
-    "price": 250,
-    "type": "Local",
-    "image": "../public/bookingEvents/Spice Market.jpeg",
-    "description": "Explore the vibrant colors and aromas of Aswan’s spice market."
-  },
-  {
-    "id": "7",
-    "title": "Siwa Oasis Safari",
-    "location": "Siwa",
-    "date": "2025-06-25",
-    "people": 80,
-    "price": 950,
-    "type": "Adventure",
-    "image": "../public/bookingEvents/siwa safari.jpg",
-    "description": "Discover the remote beauty of Siwa in a guided safari tour."
-  },
-  {
-    "id": "8",
-    "title": "Khan El Khalili Bazaar Walk",
-    "location": "Cairo",
-    "date": "2025-07-23",
-    "people": 400,
-    "price": 300,
-    "type": "Local",
-    "image": "../public/bookingEvents/khanel-khalili.jpg",
-    "description": "Walk through Cairo’s historic market and experience local culture."
-  },
-  {
-    "id": "9",
-    "title": "Camel Ride by the Pyramids",
-    "location": "Giza",
-    "date": "2025-08-01",
-    "people": 100,
-    "price": 400,
-    "type": "Adventure",
-    "image": "../public/bookingEvents/camelride.jpg",
-    "description": "Enjoy a camel ride with views of the majestic pyramids."
-  },
-  {
-    "id": "10",
-    "title": "Egyptian Museum Guided Tour",
-    "location": "Cairo",
-    "date": "2025-08-20",
-    "people": 100,
-    "price": 600,
-    "type": "Heritage",
-    "image": "../public/bookingEvents/musuem.jpg",
-    "description": "Guided tour showcasing ancient Egyptian artifacts and treasures."
-  },
-  {
-    "id": "11",
-    "title": "Red Sea Snorkeling Adventure",
-    "location": "Hurghada",
-    "date": "2025-08-10",
-    "people": 150,
-    "price": 800,
-    "type": "Adventure",
-    "image": "../public/bookingEvents/red sea.jpg",
-    "description": "Dive into the Red Sea and explore colorful coral reefs."
-  },
-  {
-    "id": "12",
-    "title": "Luxor Temple Night Visit",
-    "location": "Luxor",
-    "date": "2025-09-30",
-    "people": 300,
-    "price": 550,
-    "type": "Culture",
-    "image": "../public/bookingEvents/luxor temple.jpg",
-    "description": "Visit Luxor Temple under the stars in a magical night setting."
-  },
-  {
-    "id": "13",
-    "title": "Saint Catherine Hiking Trip",
-    "location": "South Sinai",
-    "date": "2025-10-05",
-    "people": 120,
-    "price": 700,
-    "type": "Adventure",
-    "image": "../public/bookingEvents/saint catherine.jpg",
-    "description": "Climb Mount Sinai and witness a breathtaking sunrise."
-  },
-  {
-    "id": "14",
-    "title": "Philae Temple Sound & Light",
-    "location": "Aswan",
-    "date": "2025-11-12",
-    "people": 250,
-    "price": 600,
-    "type": "Show",
-    "image": "../public/bookingEvents/philae.jpg",
-    "description": "Enjoy a sound and light spectacle at Philae Temple."
-  },
-  {
-    "id": "15",
-    "title": "Cairo International Book Fair",
-    "location": "Cairo",
-    "date": "2025-12-23",
-    "people": 5000,
-    "price": 100,
-    "type": "Culture",
-    "image": "../public/bookingEvents/book fair.jpeg",
-    "description": "Explore thousands of titles and cultural events at the annual book fair in Cairo."
-  },
-  
-  {
-    "id": "18",
-    "title": "Downtown Contemporary Arts Festival",
-    "location": "Downtown Cairo",
-    "date": "2025-03-25",
-    "people": 900,
-    "price": 400,
-    "type": "Arts",
-    "image": "../public/bookingEvents/downtown festival.jpg",
-    "description": "A vibrant festival celebrating performing and visual arts in Cairo’s downtown."
-  },
-  {
-    "id": "19",
-    "title": "Tour d’Égypte (Cycling Race)",
-    "location": "Across Egypt",
-    "date": "2025-04-15",
-    "people": 200,
-    "price": "free",
-    "type": "Sports",
-    "image": "../public/bookingEvents/egypt cycling.png",
-    "description": "A major international cycling event covering scenic routes across Egypt."
-  }
-],
-
-
+  "bookings": [
+    {
+      "id": "1",
+      "title": "Music Concert",
+      "location": "Opera House",
+      "date": "2025-02-15",
+      "people": 3000,
+      "price": 1200,
+      "type": "Music",
+      "image": "../public/bookingEvents/music concert.jpeg",
+      "description": "A musical night filled with classical melodies and vibrant performances.",
+      "visit_hours": "Evening shows typically start at 19:00 - 22:30",
+      "ticket_purchase_info": "Tickets available via the Opera House box office, official website, or authorized vendors. Advance booking recommended.",
+      "event_website": "https://www.example-operahouse.com/events/music-concert",
+      "transportation_info": "Best reached by car or taxi; limited street parking. Nearest metro station: Opera/City Center (walk 10-15 min).",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Opera+House",
+      "reviews": [
+        "Amazing performance and excellent acoustics — seating was comfortable and well organized.",
+        "Beautiful night but the queue for entry was long. Worth going for the artists' lineup."
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Abu Simbel Sun Festival",
+      "location": "Abu Simbel, Aswan",
+      "date": "2025-01-22",
+      "people": 100,
+      "price": 1200,
+      "type": "Culture",
+      "image": "../public/bookingEvents/Abu Simbel Sun Festival Event.jpeg",
+      "description": "Witness the magical alignment of the sun at Abu Simbel temple.",
+      "visit_hours": "Early morning alignment event — usually 05:30 - 08:30 depending on the season",
+      "ticket_purchase_info": "Tickets via official tourism operators or event organizers; special guided packages available.",
+      "event_website": "https://www.example-aswan-tourism.com/abu-simbel-sun-festival",
+      "transportation_info": "Access by guided bus or private transfer from Aswan. Flights to Aswan then 3-hour drive; boat/ferry options vary seasonally.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Abu+Simbel",
+      "reviews": [
+        "A unique experience — seeing the sun alignment was breathtaking.",
+        "Logistics are a bit tiring (long travel), but the site and the moment are unforgettable."
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Alexandria Lighthouse Tour",
+      "location": "Alexandria",
+      "date": "2025-04-09",
+      "people": 150,
+      "price": 500,
+      "type": "Heritage",
+      "image": "../public/bookingEvents/Lighthouse Alexandria Governorate.jpeg",
+      "description": "A historic journey exploring the remnants of the ancient lighthouse.",
+      "visit_hours": "Tours typically run 09:00 - 16:00; check specific tour times.",
+      "ticket_purchase_info": "Book through local tour operators or museum ticket desks. Group discounts often available.",
+      "event_website": "https://www.example-alexandria-heritage.com/lighthouse-tour",
+      "transportation_info": "Easily accessible by taxi or public bus within Alexandria; central meeting point near the Corniche.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Alexandria+Lighthouse",
+      "reviews": [
+        "Informative tour with a knowledgeable guide — great for history lovers.",
+        "Nice views of the coast and good photo opportunities."
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Sound & Light at the Pyramids",
+      "location": "Giza",
+      "date": "2025-01-14",
+      "people": 1200,
+      "price": 900,
+      "type": "Show",
+      "image": "../public/bookingEvents/sound and light.jpeg",
+      "description": "Enjoy a spectacular sound and light show at the Giza Pyramids.",
+      "visit_hours": "Evening shows around 18:00 - 21:00 (seasonal variations).",
+      "ticket_purchase_info": "Tickets available online through the official site, at the venue ticket booth, or via travel agencies.",
+      "event_website": "https://www.example-giza-shows.com/sound-light-pyramids",
+      "transportation_info": "Recommended by taxi or tour bus; official parking available. Avoid peak traffic times.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Giza+Pyramids+Sound+and+Light",
+      "reviews": [
+        "The show is magical and the narration adds a lot of value.",
+        "Seating could be improved but the lights and history narration were excellent."
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Nile Sunset Cruise",
+      "location": "Luxor",
+      "date": "2025-01-19",
+      "people": 100,
+      "price": 500,
+      "type": "Nature",
+      "image": "../public/bookingEvents/Egypt Nile Cruise.jpeg",
+      "description": "Relax with a scenic sunset cruise along the Nile River.",
+      "visit_hours": "Usually departs late afternoon for a 2-3 hour sunset cruise (16:30 - 19:30).",
+      "ticket_purchase_info": "Book via cruise operators, hotels in Luxor, or on-site at the dock. Some include dinner.",
+      "event_website": "https://www.example-luxor-cruises.com/nile-sunset",
+      "transportation_info": "Most hotels offer pickup; otherwise taxi to Luxor Nile dock area.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Luxor+Nile+dock",
+      "reviews": [
+        "Beautiful sunset views and relaxing atmosphere.",
+        "Crew was friendly, food was good. Highly recommended for a calm evening."
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Aswan Spice Market Experience",
+      "location": "Aswan",
+      "date": "2025-05-31",
+      "people": 300,
+      "price": 250,
+      "type": "Local",
+      "image": "../public/bookingEvents/Spice Market.jpeg",
+      "description": "Explore the vibrant colors and aromas of Aswan’s spice market.",
+      "visit_hours": "Open daily; peak market activity 09:00 - 13:00 and late afternoon 16:00 - 19:00.",
+      "ticket_purchase_info": "Free to enter; guided market tours bookable through local guides or tour desks.",
+      "event_website": "https://www.example-aswan-markets.com/spice-market",
+      "transportation_info": "Short taxi ride from Aswan city center; walkable from riverside hotels.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Aswan+Spice+Market",
+      "reviews": [
+        "So many colors and friendly vendors — great place to buy local spices.",
+        "Bargaining is expected; bring cash and small bills."
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Siwa Oasis Safari",
+      "location": "Siwa",
+      "date": "2025-06-25",
+      "people": 80,
+      "price": 950,
+      "type": "Adventure",
+      "image": "../public/bookingEvents/siwa safari.jpg",
+      "description": "Discover the remote beauty of Siwa in a guided safari tour.",
+      "visit_hours": "Full-day or multi-day safari options; typical start 06:00 with flexible end times.",
+      "ticket_purchase_info": "Book with adventure operators; price may include transfers, guide and some meals.",
+      "event_website": "https://www.example-adventures.com/siwa-safari",
+      "transportation_info": "Remote location — usually reached by 4x4 from Marsa Matruh or via private transfer; internal transfers arranged by operator.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Siwa+Oasis",
+      "reviews": [
+        "A truly remote and beautiful experience — guides were knowledgeable.",
+        "Hard to reach but completely worth it for the landscapes and stars."
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Khan El Khalili Bazaar Walk",
+      "location": "Cairo",
+      "date": "2025-07-23",
+      "people": 400,
+      "price": 300,
+      "type": "Local",
+      "image": "../public/bookingEvents/khanel-khalili.jpg",
+      "description": "Walk through Cairo’s historic market and experience local culture.",
+      "visit_hours": "Market open during daytime and evening hours; best walking tours run 10:00 - 14:00 or 17:00 - 21:00.",
+      "ticket_purchase_info": "Walking tours bookable through local tour companies; entrance to market is free.",
+      "event_website": "https://www.example-cairo-tours.com/khan-el-khalili-walk",
+      "transportation_info": "Accessible by taxi or metro (close to Al-Azhar/Cairo Citadel area).",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Khan+El+Khalili",
+      "reviews": [
+        "A bustling bazaar with great souvenirs and local flavor.",
+        "Be ready to haggle — vendors are persistent but friendly."
+      ]
+    },
+    {
+      "id": "9",
+      "title": "Camel Ride by the Pyramids",
+      "location": "Giza",
+      "date": "2025-08-01",
+      "people": 100,
+      "price": 400,
+      "type": "Adventure",
+      "image": "../public/bookingEvents/camelride.jpg",
+      "description": "Enjoy a camel ride with views of the majestic pyramids.",
+      "visit_hours": "Rides available throughout the day; best at sunrise or sunset for photos.",
+      "ticket_purchase_info": "Book through tour operators or vendors at the Giza plateau. Confirm price and duration before starting.",
+      "event_website": "https://www.example-giza.com/camel-ride",
+      "transportation_info": "Reachable by taxi or organized tour buses; parking and drop-off near the plateau.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Giza+Pyramids",
+      "reviews": [
+        "Fantastic photo opportunities and memorable experience.",
+        "Negotiate the price beforehand to avoid surprises."
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Egyptian Museum Guided Tour",
+      "location": "Cairo",
+      "date": "2025-08-20",
+      "people": 100,
+      "price": 600,
+      "type": "Heritage",
+      "image": "../public/bookingEvents/musuem.jpg",
+      "description": "Guided tour showcasing ancient Egyptian artifacts and treasures.",
+      "visit_hours": "Museum open 09:00 - 17:00; guided tours often scheduled in morning and afternoon slots.",
+      "ticket_purchase_info": "Tickets via museum ticket office or official website; guided tour fees may be extra.",
+      "event_website": "https://www.example-egyptmuseum.com/guided-tour",
+      "transportation_info": "Central Cairo — accessible by taxi, ride-hailing, and some bus routes. Nearest metro: Tahrir/Cairo University area.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Egyptian+Museum+Cairo",
+      "reviews": [
+        "Incredible collection and very informative guide.",
+        "Expect crowds; allow several hours to fully explore."
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Red Sea Snorkeling Adventure",
+      "location": "Hurghada",
+      "date": "2025-08-10",
+      "people": 150,
+      "price": 800,
+      "type": "Adventure",
+      "image": "../public/bookingEvents/red sea.jpg",
+      "description": "Dive into the Red Sea and explore colorful coral reefs.",
+      "visit_hours": "Excursions typically depart in the morning (08:00 - 12:00) and afternoon options available.",
+      "ticket_purchase_info": "Book through dive centers or tour operators; equipment rental often included.",
+      "event_website": "https://www.example-hurghada-diving.com/snorkeling",
+      "transportation_info": "Hurghada accessible by flight or road; most hotels offer transfer to the marina.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Hurghada+Marina",
+      "reviews": [
+        "Stunning coral and abundant fish life — great guides and safety standards.",
+        "Water was clear and the boat crew was professional."
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Luxor Temple Night Visit",
+      "location": "Luxor",
+      "date": "2025-09-30",
+      "people": 300,
+      "price": 550,
+      "type": "Culture",
+      "image": "../public/bookingEvents/luxor temple.jpg",
+      "description": "Visit Luxor Temple under the stars in a magical night setting.",
+      "visit_hours": "Night visits generally from 18:00 - 22:00; check seasonal times.",
+      "ticket_purchase_info": "Tickets available at the site; guided night tours bookable through agencies.",
+      "event_website": "https://www.example-luxor.com/luxor-temple-night",
+      "transportation_info": "Most visitors arrive from Luxor city center by taxi or hotel transfer.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Luxor+Temple",
+      "reviews": [
+        "Beautifully lit and atmospheric at night — highly recommended.",
+        "Guides provide great historical context; bring a light jacket after dark."
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Saint Catherine Hiking Trip",
+      "location": "South Sinai",
+      "date": "2025-10-05",
+      "people": 120,
+      "price": 700,
+      "type": "Adventure",
+      "image": "../public/bookingEvents/saint catherine.jpg",
+      "description": "Climb Mount Sinai and witness a breathtaking sunrise.",
+      "visit_hours": "Night climb recommended for sunrise viewing; typical schedule starts around 02:00 - 03:00.",
+      "ticket_purchase_info": "Book via trekking companies or monasteries that arrange guides and permits.",
+      "event_website": "https://www.example-sinai-treks.com/saint-catherine-hike",
+      "transportation_info": "Transfer from Sharm El-Sheikh or Dahab; organized transport often included in packages.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Saint+Catherine+Mount+Sinai",
+      "reviews": [
+        "The sunrise from the summit is unforgettable — tough but rewarding.",
+        "Guide and mule support made the climb manageable. Bring warm clothes for the top."
+      ]
+    },
+    {
+      "id": "14",
+      "title": "Philae Temple Sound & Light",
+      "location": "Aswan",
+      "date": "2025-11-12",
+      "people": 250,
+      "price": 600,
+      "type": "Show",
+      "image": "../public/bookingEvents/philae.jpg",
+      "description": "Enjoy a sound and light spectacle at Philae Temple.",
+      "visit_hours": "Evening shows around 19:00 - 21:00 (seasonal).",
+      "ticket_purchase_info": "Tickets via the show organizer or local tour providers; advance booking advised.",
+      "event_website": "https://www.example-aswan.com/philae-sound-light",
+      "transportation_info": "Access via boat from Aswan; many tours include the transfer.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Philae+Temple+Aswan",
+      "reviews": [
+        "A magical atmosphere with great storytelling and lights.",
+        "Boat ride added to the charm — well organized."
+      ]
+    },
+    {
+      "id": "15",
+      "title": "Cairo International Book Fair",
+      "location": "Cairo",
+      "date": "2025-12-23",
+      "people": 5000,
+      "price": 100,
+      "type": "Culture",
+      "image": "../public/bookingEvents/book fair.jpeg",
+      "description": "Explore thousands of titles and cultural events at the annual book fair in Cairo.",
+      "visit_hours": "Daily hours usually 10:00 - 20:00 during the fair period.",
+      "ticket_purchase_info": "Tickets commonly sold at venue entrances and online; special events may require separate registration.",
+      "event_website": "https://www.example-cairobookfair.com",
+      "transportation_info": "Major venue with good transport links — metro, buses and taxis recommended; allow time for crowds.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Cairo+International+Book+Fair",
+      "reviews": [
+        "Huge selection of books and many cultural events — a booklover's paradise.",
+        "Very crowded on weekends; go early for a more relaxed visit."
+      ]
+    },
+    {
+      "id": "18",
+      "title": "Downtown Contemporary Arts Festival",
+      "location": "Downtown Cairo",
+      "date": "2025-03-25",
+      "people": 900,
+      "price": 400,
+      "type": "Arts",
+      "image": "../public/bookingEvents/downtown festival.jpg",
+      "description": "A vibrant festival celebrating performing and visual arts in Cairo’s downtown.",
+      "visit_hours": "Festival events across the day and evening; main performances 17:00 - 23:00.",
+      "ticket_purchase_info": "Tickets via festival website, box offices, and selected partners. Some events free.",
+      "event_website": "https://www.example-downtownarts.com/festival",
+      "transportation_info": "Central location — best by metro or taxi; expect pedestrian zones and road closures during festival days.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Downtown+Cairo+Arts+Festival",
+      "reviews": [
+        "Fantastic mix of contemporary performances and street art.",
+        "Great vibe but some venues are small — arrive early for popular shows."
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Tour d’Égypte (Cycling Race)",
+      "location": "Across Egypt",
+      "date": "2025-04-15",
+      "people": 200,
+      "price": "free",
+      "type": "Sports",
+      "image": "../public/bookingEvents/egypt cycling.png",
+      "description": "A major international cycling event covering scenic routes across Egypt.",
+      "visit_hours": "Stages run during daytime hours; exact schedule varies by stage.",
+      "ticket_purchase_info": "Spectating is generally free; official hospitality packages and team passes available via organizers.",
+      "event_website": "https://www.example-tourdegypte.com",
+      "transportation_info": "Stages held across multiple regions; local transport and shuttle information provided by organizers per stage.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Tour+d%27Egypte+stage+locations",
+      "reviews": [
+        "Exciting atmosphere with great support from local crowds.",
+        "Well organized; good for cycling fans and families."
+      ]
+    }
+  ],
   "history": [
     {
       "id": 101,
@@ -198,7 +348,16 @@
       "city": "Aswan",
       "date": "2025-03-05",
       "price": 5000,
-      "status": "Completed"
+      "status": "Completed",
+      "visit_hours": "Check-in from 14:00, check-out by 12:00; facilities open 07:00 - 23:00.",
+      "ticket_purchase_info": "Bookings via hotel website or travel agents. Special packages sometimes available.",
+      "event_website": "https://www.movenpick.com/aswan",
+      "transportation_info": "Accessible from Aswan airport with hotel transfer options.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Movenpick+Resort+Aswan",
+      "reviews": [
+        "Excellent service and comfortable rooms with great Nile views.",
+        "Food options were varied and the pool area was relaxing."
+      ]
     },
     {
       "id": 102,
@@ -206,7 +365,16 @@
       "city": "Giza Plateau",
       "date": "2025-04-12",
       "price": "$$$",
-      "status": "Completed"
+      "status": "Completed",
+      "visit_hours": "Opening hours typically 12:00 - 23:00; special dinner service in the evening.",
+      "ticket_purchase_info": "Reservations recommended for evenings; book via phone or restaurant website.",
+      "event_website": "https://www.example-khufus.com",
+      "transportation_info": "Short taxi ride from central Giza or hotels near the plateau.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Khufu%27s+Restaurant+Giza",
+      "reviews": [
+        "Fantastic food with a view — great for special occasions.",
+        "Service was attentive though a bit pricey for the area."
+      ]
     }
   ]
-  }
+}
