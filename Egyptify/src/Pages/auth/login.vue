@@ -34,7 +34,15 @@
         </BaseButton>
       </div>
     </div>
-
+  <div v-if="showErrorModal" class="fixed inset-0 flex items-center justify-center bg-black model z-50">
+    <div class="bg-pink-100 border border-pink-400 text-pink-800 px-6 py-4 rounded-lg shadow-lg w-80">
+      <div class="flex justify-between items-center mb-2">
+        <h3 class="font-bold">Feild to login</h3>
+        <button @click="showErrorModal = false" class="text-pink-800 font-bold">&times;</button>
+      </div>
+      <p> Eamil or password inncorrect.</p>
+    </div>
+  </div> 
     <div
       v-if="showForgotPassword"
       class="text-center md:text-right mt-2 md:mt-1 mb-4 px-4"
@@ -60,7 +68,7 @@ import BaseButton from "../../components/BaseButton.vue";
 const router = useRouter();
 
 const showModal = ref(false);
-
+const showErrorModal = ref(false);
 const gotohome = () => {
   showModal.value = true;
   router.push("/");
@@ -71,8 +79,7 @@ async function handleLogin({ email, password }) {
     await signInWithEmailAndPassword(auth, email, password);
     showModal.value = true;
   } catch (error) {
-    alert("Login failed " );
-  }
+showErrorModal.value = true;  }
 }
 </script>
 

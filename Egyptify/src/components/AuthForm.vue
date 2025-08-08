@@ -127,6 +127,27 @@
         >Sign Up</router-link
       >
     </div>
+<!-- Success Modal -->
+<div v-if="showSuccessModal" class="fixed inset-0 flex items-center justify-center bg-pink-100 model z-50">
+      <div
+        class="bg-white p-8 rounded-xl w-full max-w-md flex items-center justify-center flex-col text-center shadow-lg"
+      >
+        <h2 class="text-2xl font-bold mb-4">Welcome!</h2>
+        <p class="mb-6">You’ve successfully logged in. Let’s plan your trip!</p>
+        <BaseButton @click="gotohome" class="px-4 py-2 text-white rounded-lg">
+          Start
+        </BaseButton>
+      </div>
+</div>
+
+<!-- Error Modal -->
+<div v-if="showErrorModal" class="fixed inset-0 flex items-center justify-center bg-pink-100 model z-50">
+  <div class="bg-white p-6 rounded-xl shadow-xl text-center w-[300px]">
+    <h2 class="text-red-600 text-xl font-bold mb-4">Login Failed</h2>
+    <p>Invalid email or password.</p>
+    <button @click="showErrorModal = false" class="mt-4 px-4 py-2 bg-red-500 text-white rounded-md">Try Again</button>
+  </div>
+</div>
 
     <div v-if="showAuthLink" class="text-center mt-6">
       <span class="text-gray-500">{{ authLinkText }}</span>
@@ -146,7 +167,11 @@ import { ref } from "vue";
 
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
+const showSuccessModal = ref(false);
+const showErrorModal = ref(false);
+import { useRouter } from "vue-router";
 
+const userName = ref('');
 defineProps({
   title: { type: String, default: "Log in" },
   subtitle: {
@@ -163,14 +188,12 @@ defineProps({
   authLinkAction: { type: String, default: "Sign up" },
   authLinkRoute: { type: String, default: "/signup" },
 });
-// ✅ الإميت
 const emit = defineEmits(["submit"]);
 
 const email = ref('');
 const password = ref('');
-const confirmPassword = ref(''); // ✅ ده اللي كان ناقص
+const confirmPassword = ref('');
 const username = ref('');
-// ✅ بيانات الفورم
 const form = ref({
   username: "",
   email: "",
@@ -178,22 +201,36 @@ const form = ref({
   confirmPassword: "",
 });
 
-// ✅ دالة الإرسال
 function handleSubmit() {
   emit("submit", {
     email: form.value.email,
     password: form.value.password,
     confirmPassword: confirmPassword.value,
-    username: form.value.username, // لو عايزة تبعتيه
+    username: form.value.username, 
   });
 }
+const router = useRouter();
+
+const gotohome = () => {
+  router.push("/");
+};
+
 function googleLogin() {
   const provider = new GoogleAuthProvider();
-  signInWithPopup(auth, provider).then((res) => {
-    console.log("Google user:", res.user);
-  });
+  signInWithPopup(auth, provider)
+    .then((res) => {
+      userName.value = res.user.displayName;
+      showSuccessModal.value = true;
+    })
+    .catch(() => {
+      showErrorModal.value = true;
+    });
 }
-
 import InputField from "./InputField.vue";
 import BaseButton from "./BaseButton.vue";
 </script>
+<style scoped>
+.model {
+  background-color: rgba(128, 128, 128, 0.329);
+}
+</style>
