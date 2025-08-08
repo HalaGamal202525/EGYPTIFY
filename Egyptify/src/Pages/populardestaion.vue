@@ -19,6 +19,7 @@
             :rating="place.review"
             :description="place.descripation"
             :showHeart="true"
+             :defaultFavorite="place.isFavorite"
             class="flex flex-col h-full"
           />
         </div>

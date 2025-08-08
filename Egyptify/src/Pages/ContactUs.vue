@@ -33,13 +33,7 @@
     </section>
 
     
-
-
-
-
-
-
-
+<!-- form -->
 <section class="bg-gray-50 py-10">
   <div class="container mx-auto border border-[#FFC340] rounded-lg max-w-6xl">
     <div class="bg-gray-50  px-6 py-4 rounded-t-xl">
@@ -52,7 +46,7 @@
 
     <!--border -->
     <div class=" p-6 rounded-b-xl bg-white shadow" id="form">
-      <form class="grid grid-cols-1 md:grid-cols-2 gap-4" >
+      <form @submit.prevent="handleSubmit" class="grid grid-cols-1 md:grid-cols-2 gap-4" >
         
         
         <!-- Full Name -->
@@ -63,21 +57,26 @@
 
         <div class="relative">
           <!-- الأيقونة -->
-          <i class="fa-solid fa-user absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+          <i class="fa-solid fa-user absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
 
           <!-- حقل الإدخال -->
           <input 
-            type="email" 
+            v-model="fullName"
+            type="text" 
             class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
                   text-black placeholder-gray-500 placeholder:text-sm"  
             placeholder="Enter Your Full Name" 
           />
+
+        <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.fullName }}
+        </div>
+
         </div>
       </div>
 
-
-
-        
+  
         <!-- Email Address -->
       <div>
         <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
@@ -86,18 +85,24 @@
 
         <div class="relative">
           <!-- الأيقونة -->
-          <i class="fas fa-envelope absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+          <i class="fas fa-envelope absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
 
           <!-- حقل الإدخال -->
           <input 
+            v-model="email"
             type="email" 
             class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
                   text-black placeholder-gray-500 placeholder:text-sm"  
             placeholder="Enter Your E-mail" 
           />
+
+          <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.email }}
+        </div>
+      
         </div>
       </div>
-
 
 
         <!-- Phone Number -->
@@ -108,15 +113,23 @@
 
         <div class="relative">
           <!-- الأيقونة -->
-          <i class="fa-solid fa-phone absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+          <i class="fa-solid fa-phone absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
 
           <!-- حقل الإدخال -->
           <input 
-            type="email" 
+            v-model="phone"
+            type="tel" 
             class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
                   text-black placeholder-gray-500 placeholder:text-sm"  
             placeholder="Enter Your Phone Number" 
           />
+
+           <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.phone }}
+        </div>
+
+
         </div>
       </div>
 
@@ -128,15 +141,23 @@
 
         <div class="relative">
           <!-- الأيقونة -->
-          <i class="fas fa-pen-to-square absolute left-4 top-1/2 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+          <i class="fas fa-pen-to-square absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
 
           <!-- حقل الإدخال -->
           <input 
+            v-model="subject"
             type="text" 
             class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
                   text-black placeholder-gray-500 placeholder:text-sm"  
             placeholder="Subject" 
           />
+          
+
+           <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.subject }}
+        </div>
+
         </div>
       </div>
 
@@ -151,18 +172,28 @@
           <i class="fas fa-comment-dots absolute left-4 top-3"></i>
 
           <textarea 
+            v-model="message"
             class="w-full border border-[#FFC340] p-2 pl-10 rounded h-32 
                   focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
                   text-black placeholder-gray-500 placeholder:text-sm" 
             placeholder="Write Your Message..."></textarea>
+
+            
+             <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.message }}
+        </div>
+
         </div>
       </div>
 
 
-
-        <!-- Send -->
+        <!-- Send button -->
         <div class="col-span-1 md:col-span-2">
-          <button class="w-full bg-[#FFC340] text-white py-3 rounded-lg font-semibold hover:bg-[#E6AD36] transition cursor">
+          <button 
+          type="submit"
+          @click.prevent="handleSubmit"
+          class="w-full bg-[#FFC340] text-white py-3 rounded-lg font-semibold hover:bg-[#E6AD36] transition cursor-pointer">
             <i class="fa-solid fa-paper-plane fa-lg" style="color: white;"></i>
             Send Message
           </button>
@@ -171,6 +202,21 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+  <div v-if="showModal" class="fixed inset-0 bg-gray-200 !bg-opacity-90 flex justify-center items-center z-50"   style="background-color: rgba(0, 0, 0, 0.3);">
+    <div class="bg-white rounded-2xl p-6 w-[90%] max-w-md text-center flex flex-col justify-center items-center shadow-xl border border-gray-200">
+      <h3 class="text-2xl font-bold text-green-600 mb-4"> 💌 Thanks for your message!</h3>
+      <p class="text-gray-700 mb-6">We'll get back to you as soon as possible.</p>
+      <basebutton
+        @click="showModal = false"
+        class="bg-[#1E293B] hover:bg-gray-800 text-white px-4 py-2 rounded-md cursor-pointer"
+      >
+        Close
+      </basebutton>
+    </div>
+  </div>
+
 
 <!-- Contact Info -->
     <section class="bg-white py-10" id="email">
@@ -211,7 +257,6 @@
 </section>
 
 
-
 <!-- Live Support Section -->
 <section class="bg-white py-10" id="livechat">
   <div class="max-w-6xl mx-auto px-2">
@@ -241,6 +286,8 @@
   </div>
 </template>
 
+
+
 <script setup>
 import contactHeroImg from '../assets/contact-hero.jpg'
 import NavBar from '../components/navbar.vue'
@@ -248,5 +295,34 @@ import Hero from '../components/Hero.vue'
 import Footer from '../components/footer.vue'
 import AuthForm from '../components/AuthForm.vue'
 
+import { ref } from 'vue'
+
+// form state
+const fullName = ref('')
+const email = ref('')
+const phone = ref('')
+const subject = ref('')
+const message = ref('')
+const showModal = ref(false)
+const errors = ref({})
+
+// validate form
+const validateForm = () => {
+  const newErrors = {}
+  if (!fullName.value.trim()) newErrors.fullName = 'Full Name is required'
+  if (!email.value.trim() || !email.value.includes('@')) newErrors.email = 'Valid email required'
+  if (!phone.value.trim()) newErrors.phone = 'Phone number is required'
+  if (!subject.value.trim()) newErrors.subject = 'Subject is required'
+  if (!message.value.trim()) newErrors.message = 'Message is required'
+
+  errors.value = newErrors
+  return Object.keys(newErrors).length === 0
+}
+
+const handleSubmit = () => {
+  if (validateForm()) {
+    showModal.value = true
+  }
+}
 
 </script>

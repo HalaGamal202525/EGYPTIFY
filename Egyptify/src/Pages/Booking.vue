@@ -26,9 +26,10 @@
       :visible="showBooking"
       v-if="showBooking"
       :item="selectedItem"
-      @booking-confirmed="handleBooking"
+       @booking-confirmed="handleBooking" 
       @close="showBooking = false"
     />
+
 
 
 
@@ -66,9 +67,6 @@
       </div>
       <p class="font-bold text-lg mt-4">Total: {{ totalPrice }} EGP</p>
     </div>
-
-
-
 
 
 
@@ -113,7 +111,7 @@ import { ref, computed, onMounted } from 'vue'
 // State
 const selectedItem = ref(null)
 const showBooking = ref(false)
-const bookingDetails = ref([])
+// const bookingDetails = ref([])
 
 // Logic for user login (can be dynamic)
 const isLoggedIn = true
@@ -123,10 +121,10 @@ const handleBookNow = (item) => {
   showBooking.value = true
 }
 
-const handleBooking = (data) => {
-  bookingDetails.value.push(data)
-  showBooking.value = false
-}
+// const handleBooking = (data) => {
+//   bookingDetails.value.push(data)
+//   showBooking.value = false
+// }
 
 // Total Price Calculation
 const totalPrice = computed(() =>
@@ -135,7 +133,7 @@ const totalPrice = computed(() =>
 
 
 
-const allHistory = ref([])
+// const allHistory = ref([])
 
 onMounted(() => {
   const combined = [
@@ -153,4 +151,25 @@ onMounted(() => {
 
   allHistory.value = unique
 })
+
+
+
+// مصفوفه لتخزين البيانات 
+const bookingDetails = ref([]);
+const allHistory = ref([]);
+
+const handleBooking = (bookingData) => {
+  // تخزين في الـ Checkout
+  bookingDetails.value.push(bookingData);
+
+  // تخزين في الـ History (مع إضافة التاريخ)
+  allHistory.value.push({
+    ...bookingData,
+    date: new Date().toLocaleDateString(),
+    status: 'Confirmed',
+  });
+
+  showBooking.value = false;
+};
+
 </script>

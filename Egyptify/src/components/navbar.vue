@@ -43,10 +43,10 @@
 
   <template v-if="user">
     <img
-      :src="user.photoURL || '/1752250863586.jpg'"
+      :src="user.photoURL || '/profile/unnamed.png'"
       :alt="user.displayName || 'User'"
             @click="goToProfile"
-      class="w-12 h-12 rounded-full object-cover border-2 border-yellow-400  hover:scale-105 transition cursor-pointer"
+      class="w-12 h-12 rounded-full object-contain border-2 border-yellow-400  hover:scale-105 transition cursor-pointer"
     />
   </template>
 
@@ -66,7 +66,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from "vue-router";
-
+import BaseButton from './BaseButton.vue';
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 

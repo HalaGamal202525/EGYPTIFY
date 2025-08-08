@@ -53,9 +53,9 @@ import Culture from "../Pages/culture.vue"
 import Culturedetail from "../Pages/culturedetail.vue"
 import packages from '../Pages/packages.vue'
 import PackageDetails from '../Pages/PackageDetails.vue'
+import favorite from '../Pages/favorite.vue'
 import EventList from '../Pages/EventList.vue'
 import EventDetails from '../Pages/EventDetails.vue'
-
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -87,7 +87,9 @@ const routes = [
   name: 'PlaceDetails',
   component:()=> import("../Pages/populardetails.vue")
 }
-,
+,{
+  path:"/favorite",component:favorite
+},
   
   {
   path: '/puplor',
