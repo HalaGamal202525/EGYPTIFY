@@ -66,28 +66,6 @@
           ></span>
         </div>
 
-        <div
-          class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mt-2"
-          v-if="location || date || duration || people"
-        >
-          <span v-if="location"
-            ><i class="fa-solid fa-location-dot" style="color: #ffc340"></i>
-            {{ location }}</span
-          >
-          <span v-if="date"
-            ><i class="fa-solid fa-calendar" style="color: #ffc340"></i>
-            {{ date }}</span
-          >
-          <span v-if="duration"
-            ><i class="fa-solid fa-clock" style="color: #ffc340"></i>
-            {{ duration }}</span
-          >
-          <span v-if="people"
-            ><i class="fa-solid fa-user-group" style="color: #ffc340"></i>
-            {{ people }}</span
-          >
-
-
 
 
         <div class="grid grid-col gap-3 text-sm text-gray-600 mt-3">
@@ -95,12 +73,9 @@
           <div v-if="arrival"> Arrival: {{ arrival }}</div>
         </div>
 
-
-
         
         <div class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mt-2" v-if="location || date || duration||people">
-
-          <span v-if="location"><i class="fa-solid fa-location-dot" style="color: #ffc340;"></i> {{ location }}</span>
+          <span v-if="location"><i class="fa-solid fa-location-dot" style="color: #ffc340"></i> {{ location }}</span>
           <span v-if="date"><i class="fa-solid fa-calendar" style="color: #ffc340;"></i> {{ date }}</span>
           <span v-if="duration"><i class="fa-solid fa-clock" style="color: #ffc340;"></i> {{ duration }}</span>
           <span v-if="people"><i class="fa-solid fa-user-group" style="color: #ffc340;"></i> {{ people }}</span>
@@ -119,7 +94,6 @@
         <BaseButton v-else-if="showButton">{{ buttonText }}</BaseButton>
       </div>
     </div>
-  </div>
   </div>
 </template>
 <script setup>
