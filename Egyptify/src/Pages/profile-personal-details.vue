@@ -234,30 +234,11 @@
         </div>
       </div>
 
-      <div v-else-if="activeTab === 'favorite'">
+<div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
-        <h3 class="text-lg font-semibold text-gray-800 mb-4">Destinations</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-          <div v-for="place in favoriteDestinations" :key="place.id" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
-            <img :src="place.imageUrl" :alt="place.name" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ place.name }}</h4>
-              <p class="text-sm text-gray-600">{{ place.description }}</p>
-            </div>
-          </div>
-        </div>
-        <h3 class="text-lg font-semibold text-gray-800 mb-4">Accomodations</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div v-for="place in favoriteAccommodations" :key="place.id" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
-            <img :src="place.imageUrl" :alt="place.name" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ place.name }}</h4>
-              <p class="text-sm text-gray-600">{{ place.description }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <favorite />
 
+      </div>
       <div v-else-if="activeTab === 'settings'">
         <div class="mb-8">
           <h3 class="text-xl font-bold text-yellow-500 mb-4">Display</h3>
@@ -352,11 +333,12 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
 import NavBarBlack from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import BaseButton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
+import favorite from "./favorite.vue";
 
 // Firebase imports
 import { getAuth, signOut, deleteUser, reauthenticateWithCredential, EmailAuthProvider, updatePassword } from "firebase/auth";
@@ -612,6 +594,23 @@ async function deleteAccount() {
     router.push("/login");
   }
 }
+
+
+const favoritePlaces = ref([]);
+
+function syncFavorites() {
+  favoritePlaces.value = JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
+onMounted(() => {
+  window.addEventListener("storage", syncFavorites);
+  syncFavorites();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("storage", syncFavorites);
+});
+
 </script>
 
 <style scoped>
