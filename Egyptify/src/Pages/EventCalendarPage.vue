@@ -75,6 +75,7 @@
         :showButton="true"
         :buttonText="'Book Now'"
         :showHeart="true"
+         @click="goToEvent(event.id)"
       />
     </section>
 
@@ -97,7 +98,13 @@ import CardComponent from '../components/card.vue'
 import heroImage from '../assets/eventCalendar.jpg'
 import bookingEvents from '../data/bookingEvents.json'
 import ButtonComponent from '../components/BaseButton.vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+
+const goToEvent = (id) => {
+  router.push(`/events/${id}`)
+}
 
 const months = [
   'January', 'February', 'March', 'April', 'May', 'June',
