@@ -192,14 +192,16 @@
           class="shrink-0 w-[260px] flex justify-center items-center transition-transform duration-300 hover:scale-105"
         >
           <Card
-            :image="card.image"
-            :title="card.title"
-            :rating="card.rate"
-            :description="card.description"
-            :showHeart="true"
-            class="bg-white shadow-2xl rounded-xl gap-3 w-full max-w-xs"
-            style="height: 380px"
-          />
+  :image="card.image"
+  :title="card.title"
+  :rating="card.rate"
+  :description="card.description"
+  :showHeart="true"
+  :id="card.id"
+  @toggle-favorite="toggleFavorite(card.id)"
+  class="bg-white shadow-2xl rounded-xl gap-3 w-full max-w-xs"
+  style="height: 380px"
+/>
         </div>
       </div>
 
