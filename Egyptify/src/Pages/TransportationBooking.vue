@@ -61,10 +61,18 @@
               <option>Sharm El Sheikh</option>
               <option>Dahab</option>
             </select> -->
-            <InputField><template #icon>
+
+                       <InputField
+  type="select"
+  placeholder="Select city"
+  :options="['Cairo', 'Luxor', 'Aswan', 'Sharm El Sheikh', 'Dahab']"
+  v-model="form.number"
+>
+  <template #icon>
     <MapPin class="w-5 h-5" />
-  </template></InputField>
-          
+  </template>
+</InputField>
+     
           </div>
 
           <div>
@@ -81,9 +89,16 @@
               <option>Sharm El Sheikh</option>
               <option>Dahab</option>
             </select> -->
-                  <InputField><template #icon>
+                            <InputField
+  type="select"
+  placeholder="Select city"
+  :options="['Cairo', 'Luxor', 'Aswan', 'Sharm El Sheikh', 'Dahab']"
+  v-model="form.number"
+>
+  <template #icon>
     <MapPin class="w-5 h-5" />
-  </template></InputField>
+  </template>
+</InputField>
           </div>
         </div>
 
