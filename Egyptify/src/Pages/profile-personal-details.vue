@@ -4,9 +4,9 @@
     <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl">
       <div class="flex items-center mb-8">
         <img
-          src="../../public/profile/girl-4.png"
+          src="../../public/profile/unnamed.png"
           alt="Profile Avatar"
-          class="w-16 h-22 rounded-full mr-4 object-fit"
+          class="w-20 h-20 rounded-full mr-4 object-fit"
         />
         <div>
           <h1 class="text-2xl font-bold text-gray-800">Yasmine Emad</h1>
