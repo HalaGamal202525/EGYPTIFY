@@ -50,23 +50,31 @@
              <label class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
             <!-- <input type="text" placeholder="Name on card" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> --> 
 
-            <InputField placeholder="Name on card "></InputField>
+            <InputField placeholder="Name on card" ><template #icon>
+    <User class="w-5 h-5" />
+  </template></InputField>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
             <!-- <input type="text" placeholder="1234 5678 9012 3456" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
-             <InputField placeholder="1234"></InputField>
+             <InputField placeholder="1234 5678 9012 3456"><template #icon>
+    <CreditCard class="w-5 h-5" />
+  </template></InputField>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
               <!-- <input type="month" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
-               <InputField></InputField>
+               <InputField><template #icon>
+    <CalendarClock class="w-5 h-5" />
+  </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
               <!-- <input type="text" placeholder="123" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
-               <InputField placeholder="123 "></InputField>
+               <InputField placeholder="123 "><template #icon>
+    <Shield class="w-5 h-5" />
+  </template></InputField>
             </div>
           </div>
 
@@ -89,11 +97,16 @@
 <script>
 import Footer from '../components/footer.vue';
 import InputField from '../components/InputField.vue';
+import { User, CreditCard, CalendarClock, Shield, } from 'lucide-vue-next';
 
 export default {
   name: 'Payment',
   components: { Footer,
-    InputField
+    InputField,
+    User,
+    CreditCard,
+    CalendarClock,
+    Shield
    }
 };
 </script>
