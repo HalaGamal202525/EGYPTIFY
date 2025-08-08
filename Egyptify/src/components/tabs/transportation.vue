@@ -38,7 +38,8 @@
       <CardComponent
         v-for="item in filteredTransportation"
         :key="item.id"
-        :title="`${item.provider}  |  ${item.type}`"
+        :title="item.provider"
+        :type="item.type"
         :kind="item.kind"
         :amenities="item.amenities"
         :price="item.price"        

@@ -74,8 +74,111 @@
     "rating": 4.5,
     "price": "350-580",
     "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Abou El Sid",
+    "cuisine": "Egyptian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.5,
+    "price": "300-580",
+    "image": "../public/offer/all/abou elsid.webp"
+  },
+  {
+    "id": 10,
+    "name": "Naguib Mahfouz Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Khan El Khalili, Cairo",
+    "rating": 4.3,
+    "price": "250-500",
+    "image": "../public/offer/all/Naguib Mahfouz Cafe.webp"
+  },
+  {
+    "id": 11,
+    "name": "Sequoia",
+    "cuisine": "Mediterranean and Levantine dishes",
+    "location": "Zamalek, Cairo",
+    "rating": 4.6,
+    "price": "300-500",
+    "image": "../public/offer/all/Sequoia.webp"
+  },
+  {
+    "id": 12,
+    "name": "Kazoku",
+    "cuisine": "Asian cuisine",
+    "location": "Cairo",
+    "rating": 4.7,
+    "price": "600-900",
+    "image": "../public/offer/all/kazuka.png"
+  },
+  {
+    "id": 13,
+    "name": "Andrea Mariouteya",
+    "cuisine": "Egyptian",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/offer/all/andrea.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
   }
+
   ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    
   "history": [
@@ -92,7 +195,7 @@
       "title": "Khufu’s Restaurant",
       "city": "Giza Plateau",
       "date": "2025-04-12",
-      "price": "1250-1600",
+      "price": "1600",
       "status": "Completed"
     }
   ]
