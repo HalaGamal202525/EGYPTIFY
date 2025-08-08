@@ -40,7 +40,8 @@
               for="username"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >User Name*</label>
+            >User Name*</label
+            >
             <InputField
               id="username"
               type="text"
@@ -58,7 +59,8 @@
               for="email"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >E-mail*</label>
+            >E-mail*</label
+            >
             <InputField
               id="email"
               type="email"
@@ -76,7 +78,8 @@
               for="currentPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Current Password</label>
+            >Current Password</label
+            >
             <InputField
               id="currentPassword"
               :type="currentPasswordVisible ? 'text' : 'password'"
@@ -103,7 +106,8 @@
               for="newPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >New Password</label>
+            >New Password</label
+            >
             <InputField
               id="newPassword"
               :type="newPasswordVisible ? 'text' : 'password'"
@@ -130,7 +134,8 @@
               for="confirmPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Confirm New Password</label>
+            >Confirm New Password</label
+            >
             <InputField
               id="confirmPassword"
               :type="confirmPasswordVisible ? 'text' : 'password'"
@@ -154,7 +159,8 @@
               for="phone"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Phone*</label>
+            >Phone*</label
+            >
             <InputField
               id="phone"
               type="tel"
@@ -173,7 +179,11 @@
               <span v-else>Saving...</span>
             </BaseButton>
           </div>
-          <p v-if="saveMessage" :class="{'text-green-600': saveSuccess, 'text-red-600': !saveSuccess}" class="mt-4 text-sm text-center">
+          <p
+            v-if="saveMessage"
+            :class="{ 'text-green-600': saveSuccess, 'text-red-600': !saveSuccess }"
+            class="mt-4 text-sm text-center"
+          >
             {{ saveMessage }}
           </p>
         </form>
@@ -183,62 +193,117 @@
         <h2 class="text-xl font-bold text-yellow-500 mb-6">Saved Trips/Bookings</h2>
         <h3 class="text-lg font-semibold text-gray-800">Upcoming trips</h3>
         <div class="space-y-6 mt-4">
-          <div v-for="trip in upcomingTrips" :key="trip.id" class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
+          <div
+            v-for="trip in upcomingTrips"
+            :key="trip.id"
+            class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
+          >
             <div class="flex-grow">
               <p class="text-sm text-gray-500 mb-1">Booking ID: {{ trip.bookingId }}</p>
               <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ trip.title }}</h4>
               <p class="text-gray-600 text-sm">{{ trip.date }}</p>
-              <button class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+              <button
+                class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm"
+              >
                 View Details
               </button>
             </div>
             <div class="ml-4 flex-shrink-0">
-              <img :src="trip.imageUrl" :alt="trip.title" class="w-24 h-24 object-cover rounded-md" />
+              <img
+                :src="trip.imageUrl"
+                :alt="trip.title"
+                class="w-24 h-24 object-cover rounded-md"
+              />
             </div>
           </div>
         </div>
         <h3 class="text-lg font-semibold text-gray-800 mt-8">Past trips</h3>
         <div class="space-y-6 mt-4">
-          <div v-for="trip in pastTrips" :key="trip.id" class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
+          <div
+            v-for="trip in pastTrips"
+            :key="trip.id"
+            class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
+          >
             <div class="flex-grow">
               <p class="text-sm text-gray-500 mb-1">Booking ID: {{ trip.bookingId }}</p>
               <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ trip.title }}</h4>
               <p class="text-gray-600 text-sm">{{ trip.date }}</p>
-              <button class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm">
+              <button
+                class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm"
+              >
                 View Details
               </button>
             </div>
             <div class="ml-4 flex-shrink-0">
-              <img :src="trip.imageUrl" :alt="trip.title" class="w-24 h-24 object-cover rounded-md" />
+              <img
+                :src="trip.imageUrl"
+                :alt="trip.title"
+                class="w-24 h-24 object-cover rounded-md"
+              />
             </div>
           </div>
         </div>
       </div>
 
       <div v-else-if="activeTab === 'reviews'">
-        <h2 class="text-xl font-bold text-yellow-500 mb-6">My Reviews</h2>
+        <h2 class="text-xl font-bold text-yellow-500 mb-6">Write a Review</h2>
+        <form @submit.prevent="submitReview" class="mb-8">
+            <textarea
+                v-model="newReview.text"
+                placeholder="Write your review here..."
+                class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                rows="4"
+                required
+            ></textarea>
+            <div class="flex items-center my-4">
+                <span class="text-gray-700 font-medium mr-2">Rating:</span>
+                <i
+                    v-for="n in 5"
+                    :key="'new-rating-' + n"
+                    class="fas fa-star cursor-pointer"
+                    :class="{ 'text-yellow-400': n <= newReview.rating, 'text-gray-300': n > newReview.rating }"
+                    @click="setRating(n)"
+                ></i>
+            </div>
+            <BaseButton type="submit" class="w-full">Submit Review</BaseButton>
+        </form>
+
+        <h2 class="text-xl font-bold text-yellow-500 mb-6">Reviews Left</h2>
         <div class="space-y-6">
-          <div v-for="review in reviews" :key="review.id" class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm">
+          <div
+            v-for="review in reviews"
+            :key="review.id"
+            class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
+          >
             <div class="flex-grow">
               <p class="text-gray-700 font-semibold mb-1">{{ review.location }}</p>
-              <p class="text-sm text-gray-500 mb-1">{{ review.date }}</p>
+              <p class="text-sm text-gray-500 mb-1">{{ new Date(review.date.toDate()).toLocaleDateString() }}</p>
               <div class="flex items-center mb-2">
-                <i v-for="n in 5" :key="n" class="fas fa-star" :class="{'text-yellow-400': n <= review.rating, 'text-gray-300': n > review.rating}"></i>
+                <i
+                  v-for="n in 5"
+                  :key="n"
+                  class="fas fa-star"
+                  :class="{ 'text-yellow-400': n <= review.rating, 'text-gray-300': n > review.rating }"
+                ></i>
               </div>
               <p class="text-gray-700 text-sm">{{ review.text }}</p>
             </div>
             <div class="ml-4 flex-shrink-0">
-              <img :src="review.imageUrl" :alt="review.location" class="w-24 h-24 object-cover rounded-md" />
+              <img
+                :src="review.imageUrl"
+                :alt="review.location"
+                class="w-24 h-24 object-cover rounded-md"
+              />
             </div>
           </div>
         </div>
       </div>
 
-<div v-else-if="activeTab === 'favorite'">
+      <div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
         <favorite />
-
       </div>
+
       <div v-else-if="activeTab === 'settings'">
         <div class="mb-8">
           <h3 class="text-xl font-bold text-yellow-500 mb-4">Display</h3>
@@ -247,7 +312,8 @@
               for="language-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Language</label>
+            >Language</label
+            >
             <select
               id="language-select"
               v-model="settings.language"
@@ -262,7 +328,8 @@
               for="currency-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Currency</label>
+            >Currency</label
+            >
             <select
               id="currency-select"
               v-model="settings.currency"
@@ -276,28 +343,32 @@
         </div>
 
         <div class="mb-8">
-            <h3 class="text-xl font-bold text-yellow-500 mb-4">Notifications</h3>
-            <div class="flex items-center justify-between">
-              <div>
-                <p class="text-gray-700 font-medium">Booking notifications</p>
-                <p class="text-sm text-gray-500">Receive email notifications for booking confirmations and updates.</p>
-              </div>
-              <label class="toggle-switch">
-                <input type="checkbox" v-model="settings.bookingNotifications" />
-                <span class="slider"></span>
-              </label>
+          <h3 class="text-xl font-bold text-yellow-500 mb-4">Notifications</h3>
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-gray-700 font-medium">Booking notifications</p>
+              <p class="text-sm text-gray-500">
+                Receive email notifications for booking confirmations and updates.
+              </p>
             </div>
-            <div class="flex items-center justify-between mt-4">
-              <div>
-                <p class="text-gray-700 font-medium">Promotional Offers</p>
-                <p class="text-sm text-gray-500">Stay informed about new trips, special offers, and promotions.</p>
-              </div>
-              <label class="toggle-switch">
-                <input type="checkbox" v-model="settings.promotionalOffers" />
-                <span class="slider"></span>
-              </label>
-            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" v-model="settings.bookingNotifications" />
+              <span class="slider"></span>
+            </label>
           </div>
+          <div class="flex items-center justify-between mt-4">
+            <div>
+              <p class="text-gray-700 font-medium">Promotional Offers</p>
+              <p class="text-sm text-gray-500">
+                Stay informed about new trips, special offers, and promotions.
+              </p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" v-model="settings.promotionalOffers" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
 
         <div>
           <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
@@ -309,19 +380,23 @@
             <span class="text-gray-700 font-medium">Change Password</span>
             <i class="fas fa-arrow-right text-gray-400"></i>
           </a>
-          <a href="#" class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150">
+          <a
+            href="#"
+            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+          >
             <span class="text-gray-700 font-medium">Update Contact Information</span>
             <i class="fas fa-arrow-right text-gray-400"></i>
           </a>
-          <a href="#" @click="deleteAccount" class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600">
+          <a
+            href="#"
+            @click="deleteAccount"
+            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
+          >
             <span class="font-medium">Delete Account</span>
             <i class="fas fa-arrow-right text-gray-400"></i>
           </a>
           <div class="flex justify-end mt-6">
-            <BaseButton
-              @click="logout"
-              class="bg-red-500 hover:bg-red-600"
-            >
+            <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
               Logout
             </BaseButton>
           </div>
@@ -333,7 +408,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, reactive } from "vue";
 import NavBarBlack from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import BaseButton from "../components/BaseButton.vue";
@@ -343,8 +418,8 @@ import favorite from "./favorite.vue";
 // Firebase imports
 import { getAuth, signOut, deleteUser, reauthenticateWithCredential, EmailAuthProvider, updatePassword } from "firebase/auth";
 import { db } from '../firebase';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { useRouter } from "vue-router";
+import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore'; 
 
 const activeTab = ref("personal");
 
@@ -397,10 +472,6 @@ if (currentFirebaseUser) {
   userDocRef = doc(db, "users", "devUser1");
 }
 
-onMounted(async () => {
-  await fetchPersonalDetails();
-});
-
 async function fetchPersonalDetails() {
   if (!userDocRef) {
     saveMessage.value = "Error: User not identified for data loading.";
@@ -439,26 +510,90 @@ const pastTrips = [
   { id: 4, title: 'Luxor Exploration', date: 'Feb 2 - Feb 2, 2024', bookingId: '901234', imageUrl: '../../public/profile/luxor-vally of the kings.jpg' },
 ];
 
-const reviews = [
-  { id: 1, location: 'Cairo', date: '2 months ago', rating: 5, text: 'Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.', imageUrl: '../../public/profile/Pyramids2.jpeg' },
-  { id: 2, location: 'Aswan', date: '3 months ago', rating: 4, text: 'Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.', imageUrl: '../../public/profile/Aswan-Abu-Simple-Tour.jpg' },
-  { id: 3, location: 'Luxor', date: '4 months ago', rating: 5, text: 'Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.', imageUrl: '../../public/profile/luxor-vally of the kings.jpg' },
-  { id: 4, location: 'Alexandria', date: '6 months ago', rating: 4, text: 'Amazing experience exploring the pyramids and the Sphinx. The guide was knowledgeable and friendly.', imageUrl: '../../public/profile/Alex.jpg' },
-];
+// New reactive object for the review form
+const newReview = reactive({
+  text: '',
+  rating: 0,
+  imageUrl: '../../public/profile/unnamed.png',
+  location: 'User\'s Review',
+});
 
-const favoriteDestinations = [
-  { id: 1, name: 'Luxor', description: 'Ancient Temples & Royal Tombs', imageUrl: '../../public/profile/luxor-vally of the kings.jpg' },
-  { id: 2, name: 'Aswan', description: 'Scenic Nile Cruises and Nubian Culture', imageUrl: '../../public/profile/Aswan-Abu-Simple-Tour.jpg' },
-  { id: 3, name: 'Desert Oasis Resort', description: 'Eco-friendly resort in the desert', imageUrl: '../../public/profile/Desert-Oasis.jpeg' },
-];
+// New ref for storing fetched reviews
+const reviews = ref([]); 
 
-const favoriteAccommodations = [
-  { id: 1, name: 'The Nile View Hotel', description: 'Luxury hotel with stunning Nile views', imageUrl: '../../public/profile/Nile-River.jpg' },
-  { id: 2, name: 'Alexandria', description: 'Costal city with historical sites', imageUrl: '../../public/profile/Alex.jpg' },
-  { id: 3, name: 'Costal Breeze Apartments', description: 'Modern apartments near the beach', imageUrl: '../../public/profile/Costal-Breeze.jpg' },
-];
+// New async function to fetch user reviews
+const fetchUserReviews = async () => {
+  const auth = getAuth();
+  const currentFirebaseUser = auth.currentUser;
 
-// New function to toggle password visibility
+  if (!currentFirebaseUser) {
+    console.error("User not authenticated, cannot fetch reviews.");
+    reviews.value = [];
+    return;
+  }
+
+  try {
+    const reviewsCollectionRef = collection(db, `users/${currentFirebaseUser.uid}/reviews`);
+    const q = query(reviewsCollectionRef, orderBy('date', 'desc'));
+    const querySnapshot = await getDocs(q);
+
+    const fetchedReviews = [];
+    querySnapshot.forEach((doc) => {
+      fetchedReviews.push({ id: doc.id, ...doc.data() });
+    });
+    reviews.value = fetchedReviews;
+  } catch (error) {
+    console.error("Error fetching reviews:", error);
+  }
+};
+
+// New async function to handle review submission
+const submitReview = async () => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+
+  if (!user) {
+    console.error("No authenticated user, cannot submit review.");
+    return;
+  }
+  
+  if (!newReview.text || newReview.rating === 0) {
+      alert("Please provide a review and a rating.");
+      return;
+  }
+  
+  try {
+    const reviewsCollectionRef = collection(db, `users/${user.uid}/reviews`);
+    await addDoc(reviewsCollectionRef, {
+      ...newReview,
+      date: serverTimestamp(),
+      userId: user.uid,
+    });
+
+    console.log("Review submitted successfully!");
+    // Reset the form
+    newReview.text = '';
+    newReview.rating = 0;
+    
+    // Refresh the list of reviews to show the new one
+    await fetchUserReviews();
+    
+  } catch (error) {
+    console.error("Error submitting review: ", error);
+  }
+};
+
+// New function to handle star rating clicks
+const setRating = (rating) => {
+    newReview.rating = rating;
+};
+
+const favoritePlaces = ref([]);
+
+function syncFavorites() {
+  favoritePlaces.value = JSON.parse(localStorage.getItem("favorites")) || [];
+}
+
 const togglePasswordVisibility = (field) => {
   if (field === 'current') {
     currentPasswordVisible.value = !currentPasswordVisible.value;
@@ -595,13 +730,6 @@ async function deleteAccount() {
   }
 }
 
-
-const favoritePlaces = ref([]);
-
-function syncFavorites() {
-  favoritePlaces.value = JSON.parse(localStorage.getItem("favorites")) || [];
-}
-
 onMounted(() => {
   window.addEventListener("storage", syncFavorites);
   syncFavorites();
@@ -611,6 +739,10 @@ onBeforeUnmount(() => {
   window.removeEventListener("storage", syncFavorites);
 });
 
+onMounted(async () => {
+  await fetchPersonalDetails();
+  await fetchUserReviews();
+});
 </script>
 
 <style scoped>
