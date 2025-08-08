@@ -10,7 +10,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
-        Back to Home
+        Back to home
       </button>
 
       <!-- العنوان -->
@@ -51,23 +51,23 @@
       </div>
 
       <div class="bg-gray-50 rounded-xl p-6 mb-8">
-        <h3 class="text-lg font-semibold text-center mb-4">Booking Details</h3>
+        <h3 class="text-lg font-semibold text-center text-gray-800 mb-4">Booking Details</h3>
         <div class="space-y-3">
           <div class="flex justify-between border-b pb-2">
             <span class="text-gray-600">Booking ID:</span>
-            <span class="font-medium">EGT-2024-001234</span>
+            <span class="font-medium text-gray-700">EGT-2024-001234</span>
           </div>
           <div class="flex justify-between border-b pb-2">
             <span class="text-gray-600">Route:</span>
-            <span class="font-medium">Cairo → Luxor</span>
+            <span class="font-medium text-gray-700">Cairo → Luxor</span>
           </div>
           <div class="flex justify-between border-b pb-2">
             <span class="text-gray-600">Date:</span>
-            <span class="font-medium">March 15, 2024</span>
+            <span class="font-medium text-gray-700">March 15, 2024</span>
           </div>
           <div class="flex justify-between">
             <span class="text-gray-700">Time:</span>
-            <span class="font-medium">08:30 AM</span>
+            <span class="font-medium text-gray-700">08:30 AM</span>
           </div>
         </div>
       </div>
