@@ -14,7 +14,7 @@
       <div class="flex items-center space-x-6">
        
         <router-link 
-          to="/explore" 
+          to="/" 
           class="flex items-center space-x-1 group"
         >
           <ArrowLeft class="w-4 h-4 text-gray-600 group-hover:text-yellow-500 transition-colors"/>
