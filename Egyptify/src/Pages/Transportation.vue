@@ -73,7 +73,7 @@ src/pages/Transportation.vue
             <option>2 Passengers</option>
             <option>3 Passengers</option>
             <option>4 Passengers</option>
-            <option>5 Passengers</option>
+            <option>5+ Passengers</option>
           </select>
         </div>
       </div>
@@ -92,7 +92,7 @@ src/pages/Transportation.vue
 
   
     <section class="text-center py-12">
-      <h2 class="text-black font-bold mb-2">Choose Your Transportation</h2>
+      <h2 class="text-black text-2xl font-bold mb-2">Choose Your Transportation</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">
         We offer you a variety of transportation options to suit your budget, time, and preferences.
       </p>

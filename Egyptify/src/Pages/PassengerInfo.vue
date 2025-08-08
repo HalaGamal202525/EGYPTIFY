@@ -49,39 +49,72 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-              <input type="text" placeholder="Enter first name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="text" placeholder="Enter first name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField placeholder="Enter your first name "><template #icon>
+        <User class="w-5 h-5" />
+      </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-              <input type="text" placeholder="Enter last name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="text" placeholder="Enter last name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField placeholder="Enter your last name"><template #icon>
+        <User class="w-5 h-5" />
+      </template>
+</InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-              <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField placeholder="example@email.com "><template #icon>
+    <Mail class="w-5 h-5" />
+  </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-              <input type="text" placeholder="+20 XXX XXX XXXX" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="text" placeholder="+20 XXX XXX XXXX" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField placeholder="+20 XXX XXX XXXX"><template #icon>
+        <Phone class="w-5 h-5" />
+      </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Passport Number</label>
-              <input type="text" placeholder="Passport number" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="text" placeholder="Passport number" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+                <InputField placeholder="Passport number"><template #icon>
+        <IdCard class="w-5 h-5" />
+      </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
-              <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+              <!-- <select class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"> -->
+                 <!-- <InputField >
                 <option disabled selected>Select nationality</option>
                 <option>Egyptian</option>
                 <option>Saudi</option>
                 <option>Europian</option>
                 <option>Other</option>
-              </select>
+             </InputField> -->
+<InputField
+  type="select"
+  placeholder="Select nationality"
+  :options="['Egyptian', 'Saudi', 'European', 'Other']"
+  v-model="form.nationality"
+>
+  <template #icon>
+    🌍
+  </template>
+</InputField>
+
+
             </div>
           </div>
 
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">Emergency Contact</label>
-            <input type="text" placeholder="Emergency contact name and phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <!-- <input type="text" placeholder="Emergency contact name and phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" /> -->
+            <InputField placeholder="Emergency contact name and phone" ><template #icon>
+        <PhoneCall class="w-5 h-5" />
+      </template></InputField>
+          
           </div>
 
           <!-- الأزرار -->
@@ -104,11 +137,20 @@
 
 <script>
 import Footer from '../components/footer.vue';
+import InputField from '../components/InputField.vue';
 
 export default {
   name: 'PassengerInfo',
   components: {
-    Footer
+    Footer,
+    InputField,
+  },
+    data() {
+    return {
+      form: {
+        nationality: ''
+      }
+    }
   }
 };
 </script>
