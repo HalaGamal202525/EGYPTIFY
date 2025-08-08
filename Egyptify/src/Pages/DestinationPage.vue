@@ -160,20 +160,20 @@ function handlePageChange(newPage) {
     <div class="p-4 md:p-6">
       <div class="flex justify-between mb-4">
         <!-- cities filteration-->
-        <select v-model="selectedLocation" class="border p-2 rounded text-sm">
+        <!-- <select v-model="selectedLocation" class="border p-2 rounded text-sm">
           <option value="">All Locations</option>
           <option v-for="loc in uniqueLocations" :key="loc" :value="loc">{{ loc }}</option>
-        </select>
+        </select> -->
 
         <!-- sort-->
-        <select class="border p-2 rounded text-sm">
+        <!-- <select class="border p-2 rounded text-sm">
           <option>Sort by: Top Rated</option>
-        </select>
+        </select> -->
       </div>
 
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-        <FilterSidebar class="text-sm sticky top-4 self-start min-h-full" />
-
+  <div class="w-64 mt-17">
+    <SideFilter :allDestinations="allDestinations" @update:filters="applyFilters" />    </div>
         <div class="flex-1 space-y-6">
           <div
             v-for="destination in paginatedDestinations"
@@ -198,7 +198,7 @@ function handlePageChange(newPage) {
           </div>
 
           <!-- Pagination-->
-        <div class="flex justify-center mt-10 mb-16 text-black">
+        <div class="flex justify-center  mb-16 text-black">
   <PaginationComponent
     :currentPage="currentPage"
     :totalPages="10"
@@ -217,7 +217,7 @@ function handlePageChange(newPage) {
 import { ref, computed } from 'vue'
 import navbar from '../components/navbar.vue'
 import Footer from '../components/footer.vue'
-import FilterSidebar from '../components/FiltersSidebar.vue'
+import SideFilter from './filterdestaination.vue'
 import BaseButton from '../components/BaseButton.vue'
 import PaginationComponent from '../components/PaginationComponent.vue'
 
@@ -291,22 +291,55 @@ const selectedLocation = ref("")
 const uniqueLocations = computed(() => [...new Set(allDestinations.map(d => d.location))])
 
 //filteration
-const filteredDestinations = computed(() => {
-  if (!selectedLocation.value) return allDestinations
-  return allDestinations.filter(d => d.location === selectedLocation.value)
-})
+// const filteredDestinations = computed(() => {
+//   if (!selectedLocation.value) return allDestinations
+//   return allDestinations.filter(d => d.location === selectedLocation.value)
+// })
 
 // pagination
 const itemsPerPage = 4
 const currentPage = ref(1)
-const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
+// const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
+
+// const paginatedDestinations = computed(() => {
+//   const start = (currentPage.value - 1) * itemsPerPage
+//   return filteredDestinations.value.slice(start, start + itemsPerPage)
+// })
 
 const paginatedDestinations = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return filteredDestinations.value.slice(start, start + itemsPerPage)
+  return combinedFilteredDestinations.value.slice(start, start + itemsPerPage)
 })
+
+const totalPages = computed(() => Math.ceil(combinedFilteredDestinations.value.length / itemsPerPage))
+
 
 function handlePageChange(newPage) {
   currentPage.value = newPage
 }
+const filters = ref({
+  location: '',
+  type: '',
+  budget: '',
+})
+
+const applyFilters = (newFilters) => {
+  filters.value = newFilters
+}
+
+const combinedFilteredDestinations = computed(() => {
+  return allDestinations.filter(item => {
+    const matchesLocationDropdown =
+      !selectedLocation.value || item.location === selectedLocation.value
+
+    const matchesSideFilters =
+      (filters.value.location.length === 0 || filters.value.location.includes(item.location)) &&
+      (filters.value.type.length === 0 || filters.value.type.includes(item.type)) &&
+      (filters.value.budget.length === 0 || filters.value.budget.includes(item.budget))
+
+    return matchesLocationDropdown && matchesSideFilters
+  })
+})
+
+
 </script>
