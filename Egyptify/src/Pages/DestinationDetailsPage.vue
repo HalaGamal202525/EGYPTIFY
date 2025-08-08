@@ -20,7 +20,7 @@
           <p class="text-sm text-black">{{ destination.stars }}</p>
           <p class="text-black mt-1">
             <i class="fas fa-map-marker-alt"></i> {{ destination.address }}
-            <a href="#" class="text-blue-600 underline ml-2">Show Map</a>
+            <a href="/map" class="text-blue-600 underline ml-2">Show Map</a>
           </p>
         </div>
 
