@@ -12,11 +12,11 @@
       <!-- الجزء العلوي -->
       <div class="space-y-2">
         <!-- العنوان -->
-        <h2 class="text-lg font-semibold text-gray-800">{{ data.name }}</h2>
+        <h2 class="text-lg font-semibold  text-gray-800">{{ data.name }}</h2>
 
         <!-- الموقع والمسافة -->
         <div class="text-gray-600 text-sm">
-          <p>📍 {{ data.where }}</p>
+          <p><i class="fa-solid fa-location-dot" style="color: #ffc340"></i> {{ data.where }}</p>
           <p class="text-xs text-gray-500">far: {{ data.fromcenter }}</p>
         </div>
 
@@ -48,7 +48,7 @@
         <div class="text-base font-medium text-gray-700 mb-2">
           {{ data.moredetail || 'المزيد من التفاصيل' }}
         </div>
-        <BaseButton class="w-full text-sm py-2">More Detail</BaseButton>
+        <BaseButton class="w-full text-sm py-2" @click="gotobooking">Book Now </BaseButton>
       </div>
     </div>
   </div>
@@ -56,6 +56,11 @@
 
 <script setup>
 import BaseButton from '../BaseButton.vue';
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const gotobooking=()=>{
+  router.push("/booking")
+}
 const props = defineProps({
   data: Object
 });

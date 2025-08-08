@@ -1,5 +1,5 @@
 <template>
-  <div  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
+  <div  @click="$emit('click')"  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
     <!-- الصورة -->
     <div class="w-full relative">
       <img
@@ -98,7 +98,7 @@
   </div>
 </template>
 <script setup>
-import { useSlots } from "vue";
+import { useSlots, ref, watchEffect, onMounted, onBeforeUnmount } from "vue";
 import BaseButton from "./BaseButton.vue";
 const props = defineProps({
   id: [String, Number],
@@ -107,7 +107,6 @@ const props = defineProps({
   description: String,
   location: String,
   kind: String,
-  location: String, 
   departure: String,
   arrival: String,
   amenities: String,
@@ -134,36 +133,39 @@ const props = defineProps({
     default: true,
   },
   defaultFavorite: Boolean,
-    onClick: Function,
+  onClick: Function,
 });
+
 const slots = useSlots();
 const hasActionSlot = !!slots.action;
-import { ref } from "vue";
-import { watchEffect } from "vue";
 
 const isFavorite = ref(props.defaultFavorite || false);
 const showOverlay = ref(false);
+const overlayMessage = ref('');
+
 function handleClick() {
   if (props.onClick) {
     props.onClick();
   }
 }
- 
-watchEffect(() => {
+
+// Sync favorite state from local storage
+function syncFavoriteState() {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   isFavorite.value = favorites.some((p) => p.id === props.id);
-});
+}
 
-// Toggle favorite
-function toggleFavorite() {
+// Toggle favorite and show overlay
+function toggleFavorite(event) {
+  event.stopPropagation(); // Prevents card click event from firing
+  
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
   const exists = favorites.find((p) => p.id === props.id);
   let updatedFavorites;
 
   if (exists) {
     updatedFavorites = favorites.filter((p) => p.id !== props.id);
-    isFavorite.value = false;
+    overlayMessage.value = "Removed from Favorites";
   } else {
     const newFavorite = {
       id: props.id,
@@ -179,22 +181,19 @@ function toggleFavorite() {
       type: props.type,
     };
     updatedFavorites = [...favorites, newFavorite];
-    isFavorite.value = true;
+    overlayMessage.value = "Added to Favorites";
   }
 
   localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-  isFavorite.value = !isFavorite.value;
-  // Show overlay
+
+  // Update the local state
+  isFavorite.value = !exists;
+
+  // Show the overlay with the correct message
   showOverlay.value = true;
   setTimeout(() => {
     showOverlay.value = false;
   }, 2000);
-}
-import { onMounted, onBeforeUnmount } from "vue";
-
-function syncFavoriteState() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  isFavorite.value = favorites.some((p) => p.id === props.id);
 }
 
 onMounted(() => {
@@ -205,4 +204,5 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("storage", syncFavoriteState);
 });
+
 </script>

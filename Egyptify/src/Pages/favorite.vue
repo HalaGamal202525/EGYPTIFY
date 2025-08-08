@@ -26,7 +26,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import navbar from '../components/NavBar-Black.vue';
-import foot from '../components/footer.vue';
 import Card from '../components/card.vue'; 
 
 const favoritePlaces = ref([]);

@@ -48,7 +48,7 @@ import popular from "../Pages/populardetails.vue"
 import adventure from '../Pages/adventure.vue'
 import adventuredatail from '../Pages/adventuredetail.vue'
 import Foodcategoray from "../Pages/foodcategoray.vue"
-import Fooddetail from "../Pages/fooddetails.vue"
+import Fooddetail  from "../Pages/fooddetails.vue"
 import Culture from "../Pages/culture.vue"
 import Culturedetail from "../Pages/culturedetail.vue"
 import packages from '../Pages/packages.vue'
@@ -56,6 +56,7 @@ import PackageDetails from '../Pages/PackageDetails.vue'
 import favorite from '../Pages/favorite.vue'
 import EventList from '../Pages/EventList.vue'
 import EventDetails from '../Pages/EventDetails.vue'
+import path from 'path'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -182,7 +183,10 @@ const routes = [
     component: TermsOfUse
 
   },
-
+{
+path:"/food/:id",
+component:FoodDetail
+},
 
   {
   path: '/booking',

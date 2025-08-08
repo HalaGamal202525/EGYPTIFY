@@ -9,7 +9,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
-        Back to Home
+        Back to home
       </button>
 
       <!-- العنوان -->
@@ -47,21 +47,34 @@
 
         <form class="space-y-6">
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
-            <input type="text" placeholder="Name on card" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" />
+             <label class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
+            <!-- <input type="text" placeholder="Name on card" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> --> 
+
+            <InputField placeholder="Name on card" ><template #icon>
+    <User class="w-5 h-5" />
+  </template></InputField>
           </div>
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-            <input type="text" placeholder="1234 5678 9012 3456" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" />
+          <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+            <!-- <input type="text" placeholder="1234 5678 9012 3456" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
+             <InputField placeholder="1234 5678 9012 3456"><template #icon>
+    <CreditCard class="w-5 h-5" />
+  </template></InputField>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
-              <input type="month" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="month" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField><template #icon>
+    <CalendarClock class="w-5 h-5" />
+  </template></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-              <input type="text" placeholder="123" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" />
+              <!-- <input type="text" placeholder="123" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
+               <InputField placeholder="123 "><template #icon>
+    <Shield class="w-5 h-5" />
+  </template></InputField>
             </div>
           </div>
 
@@ -83,9 +96,17 @@
 
 <script>
 import Footer from '../components/footer.vue';
+import InputField from '../components/InputField.vue';
+import { User, CreditCard, CalendarClock, Shield, } from 'lucide-vue-next';
 
 export default {
   name: 'Payment',
-  components: { Footer }
+  components: { Footer,
+    InputField,
+    User,
+    CreditCard,
+    CalendarClock,
+    Shield
+   }
 };
 </script>

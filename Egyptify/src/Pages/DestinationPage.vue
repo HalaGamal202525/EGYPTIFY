@@ -160,20 +160,20 @@ function handlePageChange(newPage) {
     <div class="p-4 md:p-6">
       <div class="flex justify-between mb-4">
         <!-- cities filteration-->
-        <select v-model="selectedLocation" class="border p-2 rounded text-sm">
+        <!-- <select v-model="selectedLocation" class="border p-2 rounded text-sm">
           <option value="">All Locations</option>
           <option v-for="loc in uniqueLocations" :key="loc" :value="loc">{{ loc }}</option>
-        </select>
+        </select> -->
 
         <!-- sort-->
-        <select class="border p-2 rounded text-sm">
+        <!-- <select class="border p-2 rounded text-sm">
           <option>Sort by: Top Rated</option>
-        </select>
+        </select> -->
       </div>
 
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-        <FilterSidebar class="text-sm sticky top-4 self-start min-h-full" />
-
+  <div class="w-full lg:w-64 mt-4 bg-white p-4 rounded shadow space-y-4 ">
+    <SideFilter :allDestinations="allDestinations" @update:filters="applyFilters" class="text-black"/> </div>
         <div class="flex-1 space-y-6">
           <div
             v-for="destination in paginatedDestinations"
@@ -198,7 +198,7 @@ function handlePageChange(newPage) {
           </div>
 
           <!-- Pagination-->
-        <div class="flex justify-center mt-10 mb-16 text-black">
+        <div class="flex justify-center  mb-16 text-black">
   <PaginationComponent
     :currentPage="currentPage"
     :totalPages="10"
@@ -217,7 +217,7 @@ function handlePageChange(newPage) {
 import { ref, computed } from 'vue'
 import navbar from '../components/navbar.vue'
 import Footer from '../components/footer.vue'
-import FilterSidebar from '../components/FiltersSidebar.vue'
+import SideFilter from './filterdestaination.vue'
 import BaseButton from '../components/BaseButton.vue'
 import PaginationComponent from '../components/PaginationComponent.vue'
 
@@ -231,9 +231,10 @@ const allDestinations = [
   { title: 'Steigenberger Nile Palace', location: 'Luxor',type: 'Luxury', activities: ['Spa', 'Pools'], budget: 'Elite', duration: 'More than 3 days', bestTime: 'Winter', suitableFor: ['Couples', 'Families'], description: 'The 5-star Steigenberger Nile Palace is situated in the heart of Luxor and provides modern accommodation with stunning views of the Nile.', image: '/public/Destination/steignberger.jpg' },
   { title: 'Luxor Temple', location: 'Luxor',type: 'Historic', activities: ['Museums'], budget: 'Economy', duration: 'Less than 3 days', bestTime: 'Winter', suitableFor: ['Families'], description: 'A temple built for the ritual practices exercised at the most important Ancient Egyptian festival, The Festival of Opet.', image: '/public/Destination/luxor temple.jpg' },
   { title: 'El Tarboush', location: 'Luxor', description: 'El Tarboush is celebrated by many travelers for its authentic Lebanese cuisine, with dishes that are both expertly crafted and generously portioned.', image: '/public/Destination/eltarboush.jpg' },
+  { title: 'Iberotel Luxor', location: 'Luxor', description: 'A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.', image: '/public/hotel/main.jpg' },
   { title: 'Sofitel Winter Palace Luxor',location: 'Luxor', description: 'Sofitel Winter Palace Luxor is popular among travelers for its spacious, elegant rooms, although some note that the furnishings feel outdated.', image: '/public/Destination/sofitel.jpg' },
   { title: 'Valley of the Kings', location: 'Luxor',type: 'Historic', activities: ['Museums'], budget: '$500-1000', duration: '2-3 days', bestTime: 'Winter', suitableFor: ['Families', 'Solo Travelers'], description: 'This desert valley contains the ancient burial ground of many Egyptian pharaohs. Among over 60 royal tombs is the famous Tomb of Tutankhamen that was found in pristine condition.', image: '/public/Destination/valley of kings.jpg' },
-  { title: 'Iberotel Luxor', location: 'Luxor', description: 'A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.', image: '/public/hotel/img1.jpg' },
+
   { title: 'Sofra Restaurant & Cafe', location: 'Luxor', description: 'A restaurant located in the heart of Luxor that draws its inspiration from the rich Arabian culture. Sofra is situated in an old 1930s Egyptian house that still retains its traditional character.', image: '/public/Destination/sofra restaurant.jpg' },
   { title: 'Hilton Luxor Resort & Spa', location: 'Luxor', description: 'Nestled on the banks of the Nile, Hilton Luxor Resort & Spa offers stylish rooms with uninterrupted views from the water’s edge, luxurious spa facilities and stunning infinity pools.', image: '/public/Destination/hilton luxor.jpg' },
 
@@ -290,22 +291,55 @@ const selectedLocation = ref("")
 const uniqueLocations = computed(() => [...new Set(allDestinations.map(d => d.location))])
 
 //filteration
-const filteredDestinations = computed(() => {
-  if (!selectedLocation.value) return allDestinations
-  return allDestinations.filter(d => d.location === selectedLocation.value)
-})
+// const filteredDestinations = computed(() => {
+//   if (!selectedLocation.value) return allDestinations
+//   return allDestinations.filter(d => d.location === selectedLocation.value)
+// })
 
 // pagination
 const itemsPerPage = 4
 const currentPage = ref(1)
-const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
+// const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
+
+// const paginatedDestinations = computed(() => {
+//   const start = (currentPage.value - 1) * itemsPerPage
+//   return filteredDestinations.value.slice(start, start + itemsPerPage)
+// })
 
 const paginatedDestinations = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return filteredDestinations.value.slice(start, start + itemsPerPage)
+  return combinedFilteredDestinations.value.slice(start, start + itemsPerPage)
 })
+
+const totalPages = computed(() => Math.ceil(combinedFilteredDestinations.value.length / itemsPerPage))
+
 
 function handlePageChange(newPage) {
   currentPage.value = newPage
 }
+const filters = ref({
+  location: '',
+  type: '',
+  budget: '',
+})
+
+const applyFilters = (newFilters) => {
+  filters.value = newFilters
+}
+
+const combinedFilteredDestinations = computed(() => {
+  return allDestinations.filter(item => {
+    const matchesLocationDropdown =
+      !selectedLocation.value || item.location === selectedLocation.value
+
+    const matchesSideFilters =
+      (filters.value.location.length === 0 || filters.value.location.includes(item.location)) &&
+      (filters.value.type.length === 0 || filters.value.type.includes(item.type)) &&
+      (filters.value.budget.length === 0 || filters.value.budget.includes(item.budget))
+
+    return matchesLocationDropdown && matchesSideFilters
+  })
+})
+
+
 </script>

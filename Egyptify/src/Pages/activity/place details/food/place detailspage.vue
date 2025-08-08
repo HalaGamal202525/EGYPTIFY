@@ -84,7 +84,7 @@
                   </div>
 
                   <div class="flex gap-4">
-                    <BaseButton
+                    <BaseButton @click="gotobooking"
                       class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
                     >
                       Book Now
@@ -258,11 +258,11 @@ const reviewsData = computed(() => place.value?.review || []);
 
 const tabs = ["Overview", "Details", "Reviews"];
 const activeTab = ref(0);
-
-console.log("Overview Data", overviewData.value);
-console.log("Details Data", detailsData.value);
-console.log("Reviews Data", reviewsData.value);
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
+const gotobooking=()=>{
+  router.push("/booking")
+}
 const relatedPlaces = computed(() =>
   data.filter((p) => p.id !== placeId).slice(4, 10)
 );

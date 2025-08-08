@@ -4,8 +4,8 @@
 
     <div class="container mx-auto px-4 mt-28 ">
       <router-link
-        to="/destination"
-        class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200"
+         to="/destination"
+        class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"
       >
         <i class="fas fa-arrow-left mr-2 text-lg"></i>
         <span class="font-medium">Back</span>
@@ -20,14 +20,14 @@
           <p class="text-sm text-black">{{ destination.stars }}</p>
           <p class="text-black mt-1">
             <i class="fas fa-map-marker-alt"></i> {{ destination.address }}
-            <a href="#" class="text-blue-600 underline ml-2">Show Map</a>
+            <a href="/map" class="text-blue-600 underline ml-2">Show Map</a>
           </p>
         </div>
 
         <div class="flex gap-4 items-center">
           <i class="far fa-heart text-2xl cursor-pointer"></i>
           <i class="fas fa-share-alt text-2xl cursor-pointer text-gray-600 hover:text-blue-500 transition-colors"></i>
-          <BaseButton class="text-white">Reserve</BaseButton>
+          <BaseButton @click="$router.push('/booking')" class="text-white">Reserve</BaseButton>
         </div>
       </div>
 
@@ -79,7 +79,7 @@
             <p class="text-black flex items-center"><i class="fas fa-city mr-1"></i> City View</p>
             <p class="text-black flex items-center"><i class="fas fa-smoking-ban mr-1"></i> Non-Smoking rooms</p>
           </div>
-          <a href="#" class="text-blue-600 underline">Show Details</a>
+          <a href="/roomtype" class="text-blue-600 underline">Show Details</a>
         </div>
       </div>
 
@@ -151,6 +151,8 @@ import Navbar from '../components/Navbar-Black.vue'
 import Footer from '../components/footer.vue'
 import BaseButton from '../components/BaseButton.vue'
 import reviews from '../components/reviews.vue'
+
+
 
 // البيانات المحلية لـ ٨ أماكن
 const route = useRoute()
