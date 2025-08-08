@@ -335,7 +335,7 @@
             :description="card.description"
             :showButton="true"
             buttonText="View offer"
-            @click="gotoffer"
+            @click="gotooffer"
             class="!bg-gray-50  shadow-2xl rounded-xl flex  text-left w-full max-w-xs"
           />
         </div>

@@ -29,6 +29,7 @@ const router = useRouter();
 const eventclick =()=>{
   router.push("./naturaldetail")
 }
+
 onMounted(() => {
   historicalData.value = historicalJson
 })

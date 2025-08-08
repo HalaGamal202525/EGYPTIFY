@@ -1,5 +1,5 @@
 <template>
-  <div  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
+  <div  @click="$emit('click')"  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
     <!-- الصورة -->
     <div class="w-full relative">
       <img
