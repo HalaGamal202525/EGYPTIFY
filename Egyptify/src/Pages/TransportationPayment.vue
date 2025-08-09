@@ -65,9 +65,7 @@
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
               <!-- <input type="month" class="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-yellow-400" /> -->
-               <InputField><template #icon>
-    <CalendarClock class="w-5 h-5" />
-  </template></InputField>
+               <InputField type="date"></InputField>
             </div>
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>

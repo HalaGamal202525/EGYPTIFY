@@ -151,13 +151,13 @@ function handlePageChange(newPage) {
   <div>
     <navbar />
 
-    <div class="relative h-64 md:h-130 bg-cover bg-center" style="background-image: url('/public/Destination/background.jpg')">
+    <div class="relative h-64 md:h-125 bg-cover bg-center" style="background-image: url('/public/Destination/background.jpg')">
       <h1 class="absolute inset-0 flex justify-center items-center text-white text-2xl md:text-4xl font-bold">
         Destinations
       </h1>
     </div>
 
-    <div class="p-4 md:p-6">
+    <div class="p-4 md:p-9">
       <div class="flex justify-between mb-4">
         <!-- cities filteration-->
         <!-- <select v-model="selectedLocation" class="border p-2 rounded text-sm">
@@ -268,7 +268,7 @@ const allDestinations = [
     title: "Ras Mohammed National Park",location: "Sharm El Sheikh",type: "Natural Reserve",activities: ["Diving", "Wildlife", "Photography"],budget: "Economy",duration: "Day trip",bestTime: "Spring",suitableFor: ["Nature Lovers", "Divers"], description: "Protected marine park with pristine reef systems and migratory bird habitats.",image: "/public/hotel/ra's-mohamed.jpg"
   },
   {
-    title: "Soho Square",location: "Sharm El Sheikh",type: "Entertainment Complex",activities: ["Dining", "Shows", "Shopping"], budget: "Elite",duration: "Evening",bestTime: "Summer",suitableFor: ["Families", "Couples"],description: "Upscale entertainment hub with restaurants, live performances and arcade games.",image: "/public/hotel/soho-square.jpg"
+    title: "Soho Square",location: "Sharm El Sheikh",type: "Entertainment",activities: ["Dining", "Shows", "Shopping"], budget: "Elite",duration: "Evening",bestTime: "Summer",suitableFor: ["Families", "Couples"],description: "Upscale entertainment hub with restaurants, live performances and arcade games.",image: "/public/hotel/soho-square.jpg"
   },
   {
     title: "Tirana Beach",location: "Sharm El Sheikh",type: "Beach",activities: ["Swimming", "Sunbathing", "Snorkeling"],budget: "Economy",duration: "Half‑day",bestTime: "Summer",suitableFor: ["Families", "Relaxation Seekers"],description: "Relaxed sandy cove with calm waters ideal for snorkeling and swimming.", image: "/public/hotel/tirana.jpeg"
