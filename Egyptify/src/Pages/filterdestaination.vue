@@ -1,6 +1,6 @@
 <template>
-  <div class="sidebar">
-    <h3>Filter by:</h3>
+  <div class="sidebar bg-white rounded-lg border border-gray-300 shadow-lg" >
+    <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 
     <!-- Location -->
     <div class="filter-group">
@@ -60,8 +60,7 @@ watch(filters, (newVal) => {
   padding: 1rem;
   border-radius: 8px;
   max-width: 250px;
-  font-family: sans-serif;
-  background-color: #ddd;
+
 }
 
 .filter-group {
