@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row h-150">
+  <div class="flex flex-col md:flex-row h-screen ">
     <div
       class="w-full md:w-1/2 h-1/2 md:h-full bg-white flex justify-center items-center p-6 md:p-8"
     >
@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="w-full md:w-1/2 h-150 md:h-full bg-gray-100">
+    <div class="w-full md:w-1/2 h-1/2 md:h-full bg-gray-100">
       <img
         src="../../assets/signup .png"
         alt="Login visual"
