@@ -16,7 +16,7 @@
             <div class="relative px-4">
   <button
     @click="toggleMenu"
-    class=" font-bold text-gray-800 hover:text-yellow-400 focus:outline-none"
+    class=" font-bold text-gray-800 hover:text-yellow-400 focus:outline-none cursor-pointer"
   >
     More
   </button>
@@ -50,7 +50,7 @@
   <template v-else>
     <BaseButton
       @click="gologin"
-      class="bg-yellow-400 text-black font-bold cursor-pointer px-4 py-2 rounded hover:bg-yellow-500  hover:scale-105 transition cursor-pointer"
+      class="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500  hover:scale-105 transition cursor-pointer"
     >
       Login
     </BaseButton>

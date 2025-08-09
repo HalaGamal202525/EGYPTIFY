@@ -29,7 +29,7 @@ const backgroundStyle = computed(() => ({
 
 <style scoped>
 .hero-section {
-  height: 80vh;
+  height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@ const backgroundStyle = computed(() => ({
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
