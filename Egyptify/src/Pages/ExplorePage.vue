@@ -15,7 +15,7 @@ import Footer from "../components/footer.vue";
     :image="HeroImage"
   />
 
-  <section class="py-2 px-6 bg-[#FFFCF6]">
+  <section class="py-6 px-6 bg-[#FFFCF6]">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Experiences</h2>
       <p class="text-gray-600 mb-6">Camel rides, Felucca trips, city tours</p>
@@ -197,7 +197,7 @@ import Footer from "../components/footer.vue";
       <!-- Right: Button -->
       <div class="flex justify-center md:justify-end">
         <button
-          class="bg-[#005C4B] text-white text-xl font-semibold px-8 py-4 rounded-full hover:bg-[#00463a] transition"
+          class="bg-yellow-400 text-white text-xl font-semibold px-8 py-4 rounded-full hover:bg-yellow-500 transition"
         >
           Plan your own trip now!
         </button>

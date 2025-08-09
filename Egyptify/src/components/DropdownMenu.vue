@@ -1,6 +1,6 @@
 <!-- src/components/DropdownMenu.vue -->
 <template>
-  <div ref="dropdownRef" class="relative inline-block text-left">
+  <div ref="dropdownRef" class="relative inline-block text-left cursor-pointer">
     <button
       @click="isOpen = !isOpen"
       class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-[#FFC340] rounded-md shadow-sm hover:bg-gray-50 focus:outline-none cursor-pointer"
