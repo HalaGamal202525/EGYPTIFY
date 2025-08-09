@@ -109,9 +109,7 @@
               Travel Date
             </label>
             <!-- <input type="date" class="w-full border border-gray-300 rounded-md p-3" /> -->
-                   <InputField><template #icon>
-    <Calendar class="w-5 h-5" />
-  </template></InputField>
+                   <InputField type="date"></InputField>
           </div>
 
           <div>
