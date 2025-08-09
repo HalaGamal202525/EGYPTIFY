@@ -24,7 +24,8 @@
 
 
 
-   <!-- Hotels Cards Section -->
+   <!-- Hotels Cards Section        @book-now="$emit('book-now', hotel)"
+ -->
    <section class="grid sm-grid-cols-1 md:grid-cols-4 gap-6 p-8">
     <CardComponent
       v-for="hotel in filteredHotels"
@@ -38,7 +39,8 @@
       :showButton="true"
       :buttonText="'Book Now'"
       :showHeart="true"
-      @book-now="$emit('book-now', hotel)"
+      :onClick="() => $router.push('/bookingprocess')"
+
     />
     </section> 
 
@@ -99,6 +101,7 @@ const cityOptions = [
 
 const ratingOptions = [
   { label: 'All Ratings', value: '' },
+  { label: '3+ Stars', value: 3 },
   { label: '4+ Stars', value: 4 },
   { label: '4.5+ Stars', value: 4.5 },
   { label: '5 Stars', value: 5 }
@@ -129,4 +132,9 @@ const filteredHotels = computed(() => {
 import { defineEmits } from 'vue'
 
 const emit = defineEmits(['book-now'])
+
+
+
+
+
 </script>

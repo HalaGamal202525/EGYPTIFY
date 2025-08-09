@@ -57,6 +57,8 @@ import favorite from '../Pages/favorite.vue'
 import EventList from '../Pages/EventList.vue'
 import EventDetails from '../Pages/EventDetails.vue'
 import path from 'path'
+import BookingProcess from '../Pages/BookingProcess.vue'
+import BookingProcessInfo from '../Pages/BookingProcessInfo.vue';
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -77,11 +79,6 @@ const routes = [
   path: '/event',
   name: 'EventList',
   component: EventList
-},
-{
-  path: '/events/:id',
-  name: 'EventDetails',
-  component:EventDetails
 },
   {
   path: '/popular/:id',
@@ -238,7 +235,16 @@ component:FoodDetail
   name: '/DestinationDetails',
   component: DestinationDetailsPage
 },
-
+{
+  path: '/bookingprocess',
+  name: 'BookingProcess',
+  component: BookingProcess
+},
+  {
+    path: '/bookingprocessinfo',
+    name: 'BookingProcessInfo',
+    component: BookingProcessInfo
+  },
 
 ]
 

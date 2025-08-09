@@ -115,72 +115,40 @@
     "id": 13,
     "name": "Andrea Mariouteya",
     "cuisine": "Egyptian",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "350-580",
+    "location": "Giza",
+    "rating": 4.2,
+    "price": "200-400",
     "image": "../public/offer/all/andrea.jpeg"
   },
   {
     "id": 14,
-    "name": "Tabla Luna",
-    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "350-580",
-    "image": "../public/bookingRestaurants/tabla.jpg"
+    "name": "Pier 88 Cairo",
+    "cuisine": "Italian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.4,
+    "price": "500-700",
+    "image": "../public/offer/all/pier.webp"
   },
   {
     "id": 15,
-    "name": "Tabla Luna",
-    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "350-580",
-    "image": "../public/bookingRestaurants/tabla.jpg"
+    "name": "Sofra Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Luxor",
+    "rating": 4.6,
+    "price": "200-400",
+    "image": "../public/offer/all/Sofra Restaurant.webp"
   },
   {
     "id": 16,
-    "name": "Tabla Luna",
-    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "350-580",
-    "image": "../public/bookingRestaurants/tabla.jpg"
-  },
-  {
-    "id": 17,
-    "name": "Tabla Luna",
-    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
-    "location": "Maadi, Cairo",
-    "rating": 4.5,
-    "price": "350-580",
-    "image": "../public/bookingRestaurants/tabla.jpg"
+    "name": "Hagouga Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza",
+    "rating": 4.3,
+    "price": "150-250",
+    "image": "../public/offer/all/Hagouga Restaurant.webp"
   }
-
   ],
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
   "history": [
     {
       "id": 101,
@@ -199,4 +167,4 @@
       "status": "Completed"
     }
   ]
-  }
+}

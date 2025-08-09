@@ -36,7 +36,7 @@
         :showHeart="true"
         :showButton="true"
         :buttonText="'Book Now'"
-        @book-now="$emit('book-now', restaurant)"
+        :onClick="() => $router.push('/bookingprocess')"
 
       />
     </div>
@@ -66,12 +66,13 @@ onMounted(() => {
 
 // Format options to use { label, value }
 const priceOptions = [
-  { label: 'All Prices', value: '' },
-  { label: 'Less than 100 EGP', value: 'lt100' },
-  { label: '100 - 500 EGP', value: '100-500' },
-  { label: '500 - 1000 EGP', value: '500-1000' },
-  { label: 'More than 1000 EGP', value: 'gt1000' }
-]
+  { label: 'All Prices', value: [0, Infinity] },
+  { label: 'Less than 100 EGP', value: [0, 100] },
+  { label: '100 - 500 EGP', value: [100, 500] },
+  { label: '500 - 1000 EGP', value: [500, 1000] },
+  { label: 'More than 1000 EGP', value: [1000, Infinity] }
+];
+
 
 
 const cuisineOptions = computed(() => {
@@ -97,31 +98,34 @@ const locationOptions = computed(() => {
 
 const filteredRestaurants = computed(() => {
   return allRestaurants.value.filter(r => {
-    const priceRange = r.price.split('-').map(p => parseInt(p))
+    // 1. فلتر السعر
+    const selectedPriceRange = filters.value.price?.value; // ده Array زي [100, 500]
 
-    const minPrice = priceRange[0]
-    const maxPrice = priceRange[1] || minPrice
+    const [minPrice, maxPrice] = r.price
+      .split(/[-–]/)
+      .map(p => parseInt(p.trim()));
 
-    const selectedPrice = filters.value.price?.value
+    const actualMax = maxPrice || minPrice;
 
-    const matchesPrice =
-      !selectedPrice ||
-      (selectedPrice === 'lt100' && maxPrice < 100) ||
-      (selectedPrice === '100-500' && minPrice >= 100 && maxPrice <= 500) ||
-      (selectedPrice === '500-1000' && minPrice >= 500 && maxPrice <= 1000) ||
-      (selectedPrice === 'gt1000' && minPrice > 1000)
+    const matchesPrice = !selectedPriceRange
+      ? true
+      : actualMax >= selectedPriceRange[0] && minPrice <= selectedPriceRange[1];
 
+    // 2. فلتر نوع الأكل (cuisine)
     const matchesCuisine = filters.value.cuisine?.value
       ? r.cuisine === filters.value.cuisine.value
-      : true
+      : true;
 
+    // 3. فلتر الموقع (location)
     const matchesLocation = filters.value.location?.value
       ? r.location === filters.value.location.value
-      : true
+      : true;
 
-    return matchesPrice && matchesCuisine && matchesLocation
-  })
-})
+    return matchesPrice && matchesCuisine && matchesLocation;
+  });
+});
+
+
 
 const handleBookNow = (restaurant) => {
   alert(`You booked a table at ${restaurant.name} located in ${restaurant.location}`)

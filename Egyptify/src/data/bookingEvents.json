@@ -365,7 +365,17 @@
       "city": "Giza Plateau",
       "date": "2025-04-12",
       "price": "1600",
-      "status": "Completed"
+      "status": "Completed",
+      "visit_hours": "Opening hours typically 12:00 - 23:00; special dinner service in the evening.",
+      "ticket_purchase_info": "Reservations recommended for evenings; book via phone or restaurant website.",
+      "event_website": "https://www.example-khufus.com",
+      "transportation_info": "Short taxi ride from central Giza or hotels near the plateau.",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Khufu%27s+Restaurant+Giza",
+      "reviews": [
+        "Fantastic food with a view — great for special occasions.",
+        "Service was attentive though a bit pricey for the area."
+      ]
+
     }
   ]
 }

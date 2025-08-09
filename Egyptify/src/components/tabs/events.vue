@@ -41,7 +41,7 @@
         :buttonText="'Book Now'"
         :showHeart="true"
         button-text="Book Now"
-        @book-now="$emit('book-now', event)"
+      :onClick="() => $router.push('/bookingprocess')"
 
       />
     </div>

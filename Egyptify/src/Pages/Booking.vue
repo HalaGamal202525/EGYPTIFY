@@ -33,6 +33,41 @@
 
 
 
+    <!-- Special Offers Section -->
+<section class="px-6 pb-20 w-full mt-10">
+  <div
+    class="rounded-xl gap-2 bg-green-800 hover:bg-green-700 text-white py-10 px-6 text-center shadow-lg"
+  >
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">
+      Special Offers for Early Bookings
+    </h2>
+    <p class="text-md md:text-lg text-white mb-6">
+      Book your trip 30 days in advance and get up to 25% discount
+    </p>
+
+    <!-- Offer Badges -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex items-center gap-2 bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-white font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.955c.3.921-.755 1.688-1.538 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.783.57-1.838-.197-1.538-1.118l1.286-3.955a1 1 0 00-.364-1.118L2.465 9.382c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.955z" />
+        </svg>
+        25% Off
+      </div>
+
+      <div class="flex items-center gap-2 bg-white/20 hover:bg-white/30 transition px-4 py-2 rounded-full text-white font-medium bg-blue">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 9l.5 6m4-6l-.5 6m4.5-10.5H6.75a.75.75 0 00-.75.75v10.5c0 .414.336.75.75.75h10.5a.75.75 0 00.75-.75V5.25a.75.75 0 00-.75-.75z" />
+        </svg>
+        Free Canellation
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
     <!-- Booking History -->
 <div 
   v-if="isLoggedIn && allHistory.length" 
@@ -68,6 +103,9 @@
       <p class="font-bold text-lg mt-4">Total: {{ totalPrice }} EGP</p>
     </div>
 
+
+
+    
 
 
     <Footer />

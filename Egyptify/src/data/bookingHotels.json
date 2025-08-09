@@ -151,6 +151,19 @@
   },
   {
     "id": 12,
+    "image": "../public/offer/all/Steigenberger Nile Palace.jpeg",
+    "title": "Steigenberger Nile Palace",
+    "description": "Experience comfort and elegance with Nile views, spa services, and gourmet restaurants in the heart of Luxor.",
+    "location": "Luxor, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 35000,
+    "rating": 4.6,
+    "type": "Hotel"
+  },
+  {
+    "id": 13,
     "image": "../public/bookingHotels/four seasons alex.jpg",
     "title": "Four Seasons Alexandria at San Stefano",
     "description": "Luxury hotel on the Corniche with sea views.",
@@ -160,6 +173,113 @@
     "people": "2 adults",
     "price": 35000,
     "rating": 5,
+    "type": "Hotel"
+  },
+
+
+
+  {
+    "id": 14,
+    "image": "../public/offer/all/Sofitel Legend Old Cataract.jpeg",
+    "title": "Sofitel Legend Old Cataract",
+    "description": "Enjoy royal treatment in this historic palace overlooking the Nile, known for its stunning architecture and luxury service.",
+    "location": "Aswan, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 6500,
+    "rating": 4.8,
+    "type": "Hotel"
+  },
+  {
+    "id": 15,
+    "image": "../public/offer/all/Osiris Hotel Cairo.jpeg",
+    "title": "Osiris Hotel Cairo",
+    "description": "Affordable, clean hotel in downtown with easy access to metro and attractions.",
+    "location": "Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 700,
+    "rating": 4.1,
+    "type": "Hotel"
+  },
+  {
+    "id": 16,
+    "image": "../public/offer/all/The Gabriel Hotel.jpeg",
+    "title": "The Gabriel Hotel",
+    "description": "Boutique luxury hotel with elegant decor, rooftop pool, and personalized service.",
+    "location": "Heliopolis, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 3500,
+    "rating": 4.2,
+    "type": "Hotel"
+  },
+  {
+    "id": 17,
+    "image": "../public/offer/all/City View Hotel.webp",
+    "title": "City View Hotel",
+    "description": "Budget-friendly hotel with clean rooms, friendly staff, and great city views.",
+    "location": "Tahrir Square, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 1100,
+    "rating": 3.9,
+    "type": "Hotel"
+  },
+  {
+    "id": 18,
+    "image": "../public/offer/all/Kempinski Nile Hotel Cairo.jpg",
+    "title": "Kempinski Nile Hotel Cairo",
+    "description": "Luxury hotel offering Nile-view suites, rooftop pool, gourmet dining, and spa.",
+    "location": "Garden City, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 6200,
+    "rating": 4.7,
+    "type": "Hotel"
+  },
+  {
+    "id": 19,
+    "image": "../public/offer/all/Hilton Luxor Resort & Spa.webp",
+    "title": "Hilton Luxor Resort & Spa",
+    "description": "Elegant resort with Nile views, infinity pools, full-service spa, and tranquil gardens.",
+    "location": "Luxor, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 5600,
+    "rating": 4.8,
+    "type": "Hotel"
+  },
+  {
+    "id": 20,
+    "image": "../public/offer/all/Jaz Mirabel Resort.webp",
+    "title": "Jaz Mirabel Resort",
+    "description": "Beachfront resort with private beach, water activities, and family-friendly amenities.",
+    "location": "Sharm El Sheikh",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 5000,
+    "rating": 4.5,
+    "type": "Hotel"
+  },
+  {
+    "id": 21,
+    "image": "../public/offer/all/Maritim Jolie Ville Resort & Casino.jpeg",
+    "title": "Maritim Jolie Ville Resort & Casino",
+    "description": "Vibrant resort with beachfront access, casino, restaurants, and vibrant nightlife.",
+    "location": "Sharm El Sheikh",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 4500,
+    "rating": 4.3,
     "type": "Hotel"
   }
 ],

@@ -56,7 +56,7 @@
             ? 'From: Flexible → To: As requested'
             : `From: ${item.from} → To: ${item.to}` "
         
-        @book-now="$emit('book-now', item)"
+        :onClick="() => $router.push('/bookingprocess')"
           class="!w-full space-y-4"
       />
     </section>
