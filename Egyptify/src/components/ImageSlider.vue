@@ -23,11 +23,18 @@ import { Carousel, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 
 const images = [
-  '/public/hero/40996b0ea58ec14d349bd07f20fac572.jpg',
-  '/hero/bluehole.jpg',
-  '/hero/luxor,aswan.webp',
-    '/hero/sailing.jpg',
-  '/hero/seasunset.jpg'
+  // '/public/hero/40996b0ea58ec14d349bd07f20fac572.jpg',
+  // '/hero/bluehole.jpg',
+  // '/hero/luxor,aswan.webp',
+  //   '/hero/sailing.jpg',
+  // '/hero/seasunset.jpg'
+  '/public/hero/alazhar-mosque1.jpg',
+  '/public/hero/hero1.jpg',
+  '/src/assets/ExplorePageHero.jpg',
+  '/src/assets/slider/slider4.jpg',
+    '/hero/hero6.webp',
+   
+
 
 ]
 // const images = Object.values(
@@ -39,7 +46,7 @@ const images = [
 .slider-section {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -62,7 +69,7 @@ const images = [
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
   align-items: center;

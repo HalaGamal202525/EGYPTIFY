@@ -204,7 +204,7 @@
 />
         </div>
       </div>
-
+      
       <!-- Left Arrow -->
       <button
         v-if="canScrollLeft"
@@ -222,6 +222,7 @@
       >
         <i class="fa-solid fa-arrow-right text-white"></i>
       </button>
+      
     </section>
 
     <!-- Testimonials -->
