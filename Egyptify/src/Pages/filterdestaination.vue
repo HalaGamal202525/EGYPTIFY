@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar bg-white rounded-lg border border-gray-300 shadow-lg" >
+  <div class="sidebar bg-gray-200 rounded-lg border border-gray-300 shadow-lg" >
     <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 
     <!-- Location -->

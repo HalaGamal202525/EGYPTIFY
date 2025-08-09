@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-4 my-6 bg-gray-100 p-3 rounded-2xl">
+  <div class="flex flex-wrap gap-4 my-6 bg-gray-200 p-3 rounded-2xl">
     <!-- Category -->
   
 <div>
