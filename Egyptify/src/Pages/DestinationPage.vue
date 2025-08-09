@@ -172,7 +172,7 @@ function handlePageChange(newPage) {
       </div>
 
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-  <div class="w-full lg:w-64 mt-4 bg-white p-4 rounded shadow space-y-4 ">
+  <div class="w-full lg:w-64 mt-0 bg-white p-4 rounded shadow space-y-4 ">
     <SideFilter :allDestinations="allDestinations" @update:filters="applyFilters" class="text-black"/> </div>
         <div class="flex-1 space-y-6">
           <div
@@ -297,7 +297,7 @@ const uniqueLocations = computed(() => [...new Set(allDestinations.map(d => d.lo
 // })
 
 // pagination
-const itemsPerPage = 4
+const itemsPerPage = 8
 const currentPage = ref(1)
 // const totalPages = computed(() => Math.ceil(filteredDestinations.value.length / itemsPerPage))
 
