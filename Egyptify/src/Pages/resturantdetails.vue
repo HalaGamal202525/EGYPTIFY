@@ -26,23 +26,49 @@ onMounted(() => {
         <span class="font-medium">Back</span>
       </router-link>
     </div>
-  <div v-if="restaurant" class="max-w-6xl mx-auto p-6 mt-10">
+  <!-- <div v-if="restaurant" class="max-w-6xl mx-auto p-6 mt-10">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-  <!-- أول صورة كبيرة تاخد عمودين في الصف الأول -->
+ 
   <img
     v-if="restaurant.images.length > 0"
     :src="restaurant.images[0]"
     class="w-full h-full object-cover rounded-xl shadow md:col-span-2 row-span-2"
   />
 
-  <!-- باقي الصور في العمود الثالث -->
+ 
   <img
     v-for="(img, index) in restaurant.images.slice(1, 3)"
     :key="index"
     :src="img"
     class="w-full h-58  object-cover rounded-xl shadow"
   />
-</div>
+</div> -->
+
+<div v-if="restaurant" class="max-w-6xl mx-auto p-6 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+    <!-- الصورة الكبيرة على اليسار -->
+    <img
+      v-if="restaurant.images.length > 0"
+      :src="restaurant.images[0]"
+      class="w-full h-[500px] object-cover rounded-xl shadow md:col-span-2 md:row-span-2"
+    />
+
+    <!-- الصورتين على اليمين فوق بعض -->
+    <div class="flex flex-col gap-6"> <!-- زودت المسافة لـ gap-6 -->
+      <img
+        v-for="(img, index) in restaurant.images.slice(1, 3)"
+        :key="index"
+        :src="img"
+        class="w-full h-[240px] object-cover rounded-xl shadow"
+      />
+    </div>
+  </div>
+
+
+
+
+
+
 
 
   <!-- باقي التفاصيل زي ما هي -->

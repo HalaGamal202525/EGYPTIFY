@@ -55,7 +55,7 @@ const handlePageChange = (page) => {
 
   <div
     class="relative h-64 md:h-125 bg-cover bg-center"
-    style="background-image: url('/unsplashfood/hero.avif')"
+    style="background-image: url('/unsplashfood/hero19.jpg')"
   >
     <h1
       class="absolute inset-0 flex justify-center items-center text-white text-2xl md:text-4xl font-bold"
@@ -97,7 +97,7 @@ const handlePageChange = (page) => {
             <span class="text-gray-500 text-sm">({{ restaurant.reviewsCount }} reviews)</span>
           </div>
 
-          <div class="text-sm text-gray-600">
+          <!-- <div class="text-sm text-gray-600">
             <p class="text-sm text-gray-500">
               <i class="fa-solid fa-utensils"></i> {{ restaurant.cuisine }}
             </p>
@@ -105,7 +105,16 @@ const handlePageChange = (page) => {
 <BaseButton @click="$router.push(`/restaurants/${restaurant.slug}`)" class="mt-4">
   Show Details
 </BaseButton>
-        </div>
+        </div> -->
+        <div class="flex justify-between items-center mt-4">
+  <div class="text-sm text-gray-500">
+    <i class="fa-solid fa-utensils"></i> {{ restaurant.cuisine }}
+  </div>
+  <BaseButton @click="$router.push(`/restaurants/${restaurant.slug}`)">
+    Show Details
+  </BaseButton>
+</div>
+</div>
       </div>
 
       <div class="flex justify-center my-6">
