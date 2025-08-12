@@ -20,7 +20,7 @@
 
     <div class="w-full md:w-1/2 h-1/2 md:h-full bg-gray-100">
       <img
-        src="../../assets/signup .png"
+        src="../../assets/egyptian-hieroglyphs-wall.jpg"
         alt="Signup visual"
         class="w-full h-full object-cover"
       />

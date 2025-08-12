@@ -318,23 +318,23 @@
               >
               <div class="flex justify-between gap-2">
                 <InputField
-                  type="number"
-                  placeholder="XXXX"
+                  type="text"
+                  placeholder="X"
                   class="w-1/4 px-2 py-2 rounded-md"
                 />
                 <InputField
-                  type="number"
-                  placeholder="XXXX"
+                  type="text"
+                  placeholder="X"
                   class="w-1/4 px-2 py-2 rounded-md"
                 />
                 <InputField
-                  type="number"
-                  placeholder="XXXX"
+                  type="text"
+                  placeholder="X"
                   class="w-1/4 px-2 py-2 rounded-md"
                 />
                 <InputField
-                  type="number"
-                  placeholder="XXXX"
+                  type="text"
+                  placeholder="X"
                   class="w-1/4 px-2 py-2 rounded-md"
                 />
               </div>
