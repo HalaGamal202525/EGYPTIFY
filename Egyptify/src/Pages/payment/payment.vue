@@ -409,9 +409,7 @@
               <span>{{ totalPrice }} EGP</span>
             </div>
 
-            <BaseButton @click="goToOtpSection" class="w-full mt-6"
-              >Continue</BaseButton
-            >
+          
           </div>
 
           <!-- Step 2: OTP Section -->
