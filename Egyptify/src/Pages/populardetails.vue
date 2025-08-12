@@ -47,9 +47,9 @@
         <div class="bg-white shadow-md rounded-xl p-6 space-y-4">
           <h3 class="text-xl font-bold text-gray-900">Plan Your Visit</h3>
           <p class="text-gray-800 text-lg">From <span class="font-semibold">{{ place.price }} EGP</span></p>
-          <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg transition">
+          <BaseButton class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg transition"   @click="bookNow">
             Book Now
-          </button>
+          </BaseButton>
         </div>
       </div>
 
@@ -196,9 +196,26 @@ const places = [
     ]
   },
  
+
 ]
+import { useBookingStore } from '../data/store'
+import BaseButton from '../components/BaseButton.vue';
 
+const bookingStore = useBookingStore()
 
+function bookNow() {
+  if (!place.value) return;
+
+  bookingStore.setCardData({
+    image: place.value.image,
+    title: place.value.title,
+    rate: place.value.rating,
+    price: place.value.price,
+  })
+
+  // ممكن توجه المستخدم لصفحة الحجز مثلاً أو تعمل أي إجراء ثاني
+  router.push('/form') // أو أي رابط خاص بصفحة الحجز
+}
 const route = useRoute()
 const place = ref(null)
 

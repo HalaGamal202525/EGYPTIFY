@@ -88,44 +88,44 @@
     </div>
 
     <!-- Destination Section -->
-    <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
-        <h2 class="special-heading">Destination</h2>
-        <p class="text-xl text-gray-700">Popular Destination</p>
-      </div>
+ <section class="py-16 bg-[#FFFDF9]">
+    <div class="text-center mb-12">
+      <h2 class="special-heading">Destination</h2>
+      <p class="text-xl text-gray-700">Popular Destination</p>
+    </div>
 
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+        v-for="card in popular"
+        :key="card.id"
+        class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
       >
-        <div
-          v-for="card in popular"
-          :key="card.id"
-          class="relative group py-2 transition-transform duration-300 hover:scale-105 flex justify-center items-center overflow-hidden"
+        <router-link
+          :to="`/popular/${card.id}`"
+          class="w-full max-w-xs"
+          @click.native.prevent="handleCardClick(card); $router.push(`/popular/${card.id}`)"
         >
-          <!-- عند الضغط على الكارت => صفحة تفاصيل -->
-          <router-link :to="`/popular/${card.id}`" class="w-full max-w-xs">
-            <Card
-              :image="card.image"
-              :title="card.title"
-              :description="card.description"
-              class="bg-white shadow-2xl rounded-xl w-full"
-            />
-          </router-link>
+          <Card
+            :image="card.image"
+            :title="card.title"
+            :description="card.description"
+            class="bg-white shadow-2xl rounded-xl w-full"
+          />
+        </router-link>
 
-          <!-- عند الضغط على السهم => صفحة الأماكن كلها -->
-          <router-link
-            to="/destination"
-            class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+        <router-link
+          to="/destination"
+          class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+        >
+          <div
+            class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
           >
-            <div
-              class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
-            >
-              <i class="fa-solid fa-arrow-right !text-white"></i>
-            </div>
-          </router-link>
-        </div>
+            <i class="fa-solid fa-arrow-right !text-white"></i>
+          </div>
+        </router-link>
       </div>
-    </section>
+    </div>
+  </section>
 
     <!-- trip planner -->
     <div
@@ -425,7 +425,17 @@ const userInput = ref("");
 import rawData from "../data/packages_data.json";
 
 const categories = Object.values(rawData.packageCategories);
+import { useBookingStore } from '../data/store.js'
+const bookingStore = useBookingStore()
 
+function handleCardClick(card) {
+  bookingStore.setCardData({
+    image: card.image,
+    title: card.title,
+    rate: card.rate,
+    price: card.price
+  })
+}
 const popular = [
   {
     id: 1,
