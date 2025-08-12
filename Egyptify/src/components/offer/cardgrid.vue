@@ -36,7 +36,7 @@
       >
         {{ data.moredetail || 'المزيد من التفاصيل' }}
     </div>
-        <BaseButton :restaurant="data"   class="w-full text-sm py-2"/>
+        <BaseButton :restaurant="data"   class="w-full text-sm py-2">Book Now</BaseButton>
 
     </div>
 
