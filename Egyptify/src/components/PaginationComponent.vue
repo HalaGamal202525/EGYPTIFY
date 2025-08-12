@@ -6,7 +6,7 @@
     <button
       @click="goToPage(currentPage - 1)"
       :disabled="currentPage === 1"
-      class="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full disabled:opacity-40 disabled:cursor-not-allowed bg-white/20 backdrop-blur-md shadow-md hover:bg-white/30 transition-all duration-300"
+      class="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full disabled:opacity-40 disabled:cursor-not-allowed bg-white/20 backdrop-blur-md shadow-md hover:bg-white/30 transition-all duration-300 cursor-pointer"
     >
       <i class="fa-solid fa-chevron-left"></i>
       Prev
@@ -18,7 +18,7 @@
       :key="page"
       @click="goToPage(page)"
       :class="[
-        'px-4 py-2 border border-white/30 rounded-full shadow-md backdrop-blur-md transition-all duration-300',
+        'px-4 py-2 border border-white/30 rounded-full shadow-md backdrop-blur-md transition-all duration-300 cursor-pointer',
         currentPage === page
           ? 'bg-[#FFC340]/80 text-white font-bold shadow-lg scale-110 border-[#FFC340]/50'
           : 'bg-white/20 text-black hover:bg-white/30'
@@ -31,7 +31,7 @@
     <button
       @click="goToPage(currentPage + 1)"
       :disabled="currentPage === totalPages"
-      class="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full disabled:opacity-40 disabled:cursor-not-allowed bg-white/20 backdrop-blur-md shadow-md hover:bg-white/30 transition-all duration-300"
+      class="flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full disabled:opacity-40 disabled:cursor-not-allowed bg-white/20 backdrop-blur-md shadow-md hover:bg-white/30 transition-all duration-300 cursor-pointer"
     >
       Next
       <i class="fa-solid fa-chevron-right"></i>

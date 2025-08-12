@@ -41,7 +41,7 @@
     Budget: {{ hotel.budget || 'N/A' }}
   </p>
   <p
-    class="text-gray-700 text-sm line-clamp-3 mb-3"
+    class="text-gray-700 text-sm line-clamp-3 mb-3 h-20"
     title="Description"
   >
     {{ hotel.description.length > 120 ? hotel.description.slice(0, 120) + '...' : hotel.description }}
