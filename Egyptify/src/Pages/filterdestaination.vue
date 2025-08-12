@@ -1,31 +1,31 @@
 <template>
-  <div class="sidebar bg-gray-200 rounded-lg border border-gray-300 shadow-lg" >
+  <div class="sidebar bg-gray-200 rounded-lg border border-gray-300 p-6 shadow-lg" >
     <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 
     <!-- Location -->
     <div class="filter-group">
-      <h4>Location</h4>
+      <h2 class="font-bold">Location</h2>
       <div v-for="loc in uniqueLocations" :key="loc">
-        <input type="checkbox" :id="`loc-${loc}`" :value="loc" v-model="filters.location" />
+        <input type="checkbox" :id="`loc-${loc}`" :value="loc" v-model="filters.location" class="mx-3" />
         <label :for="`loc-${loc}`">{{ loc }}</label>
       </div>
     </div>
 
-    <!-- Type -->
+    <!-- Category -->
     <div class="filter-group">
-      <h4>Type</h4>
-      <div v-for="type in uniqueTypes" :key="type">
-        <input type="checkbox" :id="`type-${type}`" :value="type" v-model="filters.type" />
+      <h2 class="font-bold">Category</h2>
+      <div v-for="type in uniqueCategory" :key="type">
+        <input type="checkbox" :id="`type-${type}`" :value="type" v-model="filters.category"  class="mx-3" />
         <label :for="`type-${type}`">{{ type }}</label>
       </div>
     </div>
 
-    <!-- Budget -->
+    <!-- Rate -->
     <div class="filter-group">
-      <h4>Budget</h4>
-      <div v-for="b in uniqueBudgets" :key="b">
-        <input type="checkbox" :id="`budget-${b}`" :value="b" v-model="filters.budget" />
-        <label :for="`budget-${b}`">{{ b }}</label>
+      <h2 class="font-bold">Rate</h2>
+      <div v-for="rate in uniqueRate" :key="rate">
+        <input type="checkbox" :id="`rate-${rate}`" :value="rate" v-model="filters.rate"  class="mx-3" />
+        <label :for="`rate-${rate}`">{{ rate }}</label>
       </div>
     </div>
   </div>
@@ -33,47 +33,27 @@
 
 <script setup>
 import { ref, computed, watch } from 'vue'
-import { toRaw } from 'vue'
 
 const props = defineProps({
-  allDestinations: Array,
+  destinationdata: {
+    type: Array,
+    default: () => []
+  },
 })
+
 const emit = defineEmits(['update:filters'])
 
 const filters = ref({
   location: [],
-  type: [],
-  budget: [],
+  category: [],
+  rate: [],
 })
 
-const uniqueLocations = computed(() => [...new Set(props.allDestinations.map(d => d.location))])
-const uniqueTypes = computed(() => [...new Set(props.allDestinations.map(d => d.type).filter(Boolean))])
-const uniqueBudgets = computed(() => [...new Set(props.allDestinations.map(d => d.budget).filter(Boolean))])
+const uniqueLocations = computed(() => [...new Set(props.destinationdata.map(d => d.location).filter(Boolean))])
+const uniqueCategory = computed(() => [...new Set(props.destinationdata.map(d => d.category).filter(Boolean))])
+const uniqueRate = computed(() => [...new Set(props.destinationdata.map(d => String(d.rate)).filter(Boolean))])
 
 watch(filters, (newVal) => {
-  emit('update:filters', toRaw(newVal))
+  emit('update:filters', newVal)
 }, { deep: true })
 </script>
-
-<style scoped>
-.sidebar {
-  padding: 1rem;
-  border-radius: 8px;
-  max-width: 250px;
-
-}
-
-.filter-group {
-  margin-bottom: 1.5rem;
-}
-
-.filter-group h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.filter-group label {
-  margin-left: 0.5rem;
-}
-</style>

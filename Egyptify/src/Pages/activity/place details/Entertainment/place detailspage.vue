@@ -89,11 +89,7 @@
                     >
                       Book Now
                     </BaseButton>
-                    <BaseButton
-                      class="bg-white border border-[#FFC340] !text-[#FFC340] hover:bg-[#fff6dc] font-bold py-2 px-4 rounded-xl shadow"
-                    >
-                      Add to Favorite
-                    </BaseButton>
+                 
                   </div>
                 </div>
 

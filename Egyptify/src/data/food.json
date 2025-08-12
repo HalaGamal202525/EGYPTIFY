@@ -6,530 +6,519 @@
     "category": "Food",
     "rate": 4,
     "description": "Very popular for grilled meats, kebda, and oriental salads. Busy, authentic Egyptian atmosphere.",
-      "images": [
-    "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg",
-    "/imagesdatabase/Food/Sobhy Kaber2.webp",
-    "/imagesdatabase/Food/Sobhy Kaber3.jpeg",
-    "/imagesdatabase/Food/Sobhy Kaber4.webp"
-  ],
-  "overview":{
-       "description": "Sobhy Kaber is one of the most famous Egyptian restaurants known for its rich, flavorful grilled meats, liver dishes, and traditional side plates. Located in Shubra El Kheima, the restaurant has built a strong reputation for authentic Egyptian cuisine, massive portions, and a lively local atmosphere. It’s a must-try for food lovers seeking a true taste of Cairo.",
-    "rating": 4.5,
-    "address": "151 Obaid Street, Shubra El Kheima, Qalyubia Governorate, Egypt",
-    "mapLink": "https://maps.app.goo.gl/YJUtGMJZ8NyTDzbq9",
-    "mapImage": " /imagesdatabase/Food/Sobhy Kabermap.png"
-  },
-  "detail":{
-       "visitingHours": "10:00 AM - 12:00 AM",
-    "entryFees": "Free",
-    "bestTimeToVisit": "Evening",
-    "howToGet": "Take metro to Sadat Station, 5 min walk",
-    "tips": "Go early to avoid queues"
-  },
-  "review":{
-    "review1":{
-          "name": "Sarah A.",
-    "date": "July 2025",
-    "content": "Amazing place! Very clean and staff were friendly.",
-    "rating": 5,
-    "avatar": "/sara/person.jpeg"
-    },
-    "review2":{
-       "name": "Ahmed M.",
-    "date":" June 2025",
-    "content":" Nice experience, but it was a bit crowded.",
-    "rating": 4,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-  },
-{
-  "id": 2,
-  "name": "Sachi",
-  "image": "/food/suchi.webp",
-  "category": "Food",
-  "rate": 5,
-  "description": "Sachi is a high-end restaurant offering a blend of Mediterranean and Asian cuisines in a luxurious atmosphere.",
-  "images": [
-    "/imagesdatabase/Food/Sachi.webp",
-    "/imagesdatabase/Food/Sachi2.webp",
-    "/imagesdatabase/Food/Sachi3.webp",
-    "/imagesdatabase/Food/Sachi4.webp"
-  ],
-  "overview": {
-    "description": "Sachi is a luxurious dining destination known for its fusion of Mediterranean and Asian flavors. With locations in Cairo and Alexandria, the restaurant is celebrated for its elegant ambiance, fine-dining service, and innovative dishes crafted by top chefs. It's a perfect spot for romantic dinners, business meals, or upscale celebrations.",
-    "rating": 5,
-    "address": "23 El-Batal Ahmed Abdel Aziz St, Mohandessin, Giza, Egypt",
-    "mapLink": "https://maps.app.goo.gl/XpNLufo3ykFjZnwa6",
-    "mapImage": "/imagesdatabase/Food/Sachimap.webp"
-  },
-  "detail": {
-    "visitingHours": "1:00 PM - 12:00 AM",
-    "entryFees": "Free (meals priced individually)",
-    "bestTimeToVisit": "Evening or weekends",
-    "howToGet": "Taxi or Uber to Mohandessin, near Shooting Club",
-    "tips": "Make a reservation, especially on weekends. Try the sushi platter."
-  },
-  "review": {
-    "review1": {
-      "name": "Lina M.",
-      "date": "July 2025",
-      "content": "Fantastic service and the food was outstanding. Perfect for date night.",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
-    },
-    "review2": {
-      "name": "Kareem H.",
-      "date": "June 2025",
-      "content": "Excellent sushi and ambiance. A bit pricey but worth it.",
+    "images": [
+      "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg",
+      "/imagesdatabase/Food/Sobhy Kaber2.webp",
+      "/imagesdatabase/Food/Sobhy Kaber3.jpeg",
+      "/imagesdatabase/Food/Sobhy Kaber4.webp"
+    ],
+    "overview": {
+      "description": "Sobhy Kaber is one of the most famous Egyptian restaurants known for its rich, flavorful grilled meats, liver dishes, and traditional side plates. Located in Shubra El Kheima, the restaurant has built a strong reputation for authentic Egyptian cuisine, massive portions, and a lively local atmosphere. It’s a must-try for food lovers seeking a true taste of Cairo.",
       "rating": 4.5,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-}
-,
-{
-  "id": 3,
-  "name": "Abou Tarek",
-  "image": "/food/tark.webp",
-  "rate": 3.5,
-  "description": "The most iconic koshari restaurant in Egypt, known for fast service and authentic flavor.",
-  "images": [
-    "/imagesdatabase/Food/Abou Tarek.webp",
-    "/imagesdatabase/Food/Abou Tarek2.webp",
-    "/imagesdatabase/Food/Abou Tarek3.webp"
-  ],
-  "overview": {
-    "description": "Abou Tarek is a legendary koshari restaurant located in downtown Cairo, serving authentic Egyptian koshari with quick service and generous portions.",
-    "rating": 3.5,
-    "address": "16 Marouf, Qasr El Nil, Cairo Governorate 11513",
-    "mapLink": "https://maps.app.goo.gl/iN8PGgTJa9gRHToX8",
-    "mapImage": "/imagesdatabase/Food/Abou Tarekmap.webp"
-  },
-  "detail": {
-    "visitingHours": "9:00 AM - 11:00 PM",
-    "entryFees": "Free",
-    "bestTimeToVisit": "Lunch or early dinner hours",
-    "howToGet": "Easily accessible by metro (Sadat Station) or taxi",
-    "tips": "Try their signature koshari dish with extra crispy onions."
-  },
-  "review": {
-    "review1": {
-      "name": "Mona A.",
-      "date": "2024-11-12",
-      "content": "Fast service and the koshari was delicious and filling!",
-      "rate": 4,
-    "avatar": "/sara/person.jpeg"
+      "address": "151 Obaid Street, Shubra El Kheima, Qalyubia Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/YJUtGMJZ8NyTDzbq9",
+      "mapImage": " /imagesdatabase/Food/Sobhy Kabermap.png"
     },
-    "review2": {
-      "name": "Omar K.",
-      "date": "2025-01-05",
-      "content": "It was a bit crowded but totally worth the wait.",
-      "rate": 3,
-    "avatar": "/sara/person2.jpeg"
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Evening",
+      "howToGet": "Take metro to Sadat Station, 5 min walk",
+      "tips": "Go early to avoid queues"
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah A.",
+        "date": "July 2025",
+        "content": "Amazing place! Very clean and staff were friendly.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": " June 2025",
+        "content": " Nice experience, but it was a bit crowded.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
     }
-  }
-}
-,
+  },
   {
-  "id": 4,
-  "name": "Crave",
-  "image": "/food/cearve.jpg",
-  "rate": 4,
-  "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
-  "images": [
-    "/imagesdatabase/Food/Crave.webp",
-    "/imagesdatabase/Food/Crave2.webp",
-    "/imagesdatabase/Food/Crave3.webp",
-    "/imagesdatabase/Food/Crave4.webp"
-  ],
-  "overview": {
+    "id": 2,
+    "name": "Sachi",
+    "image": "/food/suchi.webp",
+    "category": "Food",
+    "rate": 5,
+    "description": "Sachi is a high-end restaurant offering a blend of Mediterranean and Asian cuisines in a luxurious atmosphere.",
+    "images": [
+      "/imagesdatabase/Food/Sachi.webp",
+      "/imagesdatabase/Food/Sachi2.webp",
+      "/imagesdatabase/Food/Sachi3.webp",
+      "/imagesdatabase/Food/Sachi4.webp"
+    ],
+    "overview": {
+      "description": "Sachi is a luxurious dining destination known for its fusion of Mediterranean and Asian flavors. With locations in Cairo and Alexandria, the restaurant is celebrated for its elegant ambiance, fine-dining service, and innovative dishes crafted by top chefs. It's a perfect spot for romantic dinners, business meals, or upscale celebrations.",
+      "rating": 5,
+      "address": "23 El-Batal Ahmed Abdel Aziz St, Mohandessin, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XpNLufo3ykFjZnwa6",
+      "mapImage": "/imagesdatabase/Food/Sachimap.webp"
+    },
+    "detail": {
+      "visitingHours": "1:00 PM - 12:00 AM",
+      "entryFees": "Free (meals priced individually)",
+      "bestTimeToVisit": "Evening or weekends",
+      "howToGet": "Taxi or Uber to Mohandessin, near Shooting Club",
+      "tips": "Make a reservation, especially on weekends. Try the sushi platter."
+    },
+    "review": {
+      "review1": {
+        "name": "Lina M.",
+        "date": "July 2025",
+        "content": "Fantastic service and the food was outstanding. Perfect for date night.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Kareem H.",
+        "date": "June 2025",
+        "content": "Excellent sushi and ambiance. A bit pricey but worth it.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Abou Tarek",
+    "image": "/food/tark.webp",
+    "rate": 3.5,
+    "description": "The most iconic koshari restaurant in Egypt, known for fast service and authentic flavor.",
+    "images": [
+      "/imagesdatabase/Food/Abou Tarek.webp",
+      "/imagesdatabase/Food/Abou Tarek2.webp",
+      "/imagesdatabase/Food/Abou Tarek3.webp"
+    ],
+    "overview": {
+      "description": "Abou Tarek is a legendary koshari restaurant located in downtown Cairo, serving authentic Egyptian koshari with quick service and generous portions.",
+      "rating": 3.5,
+      "address": "16 Marouf, Qasr El Nil, Cairo Governorate 11513",
+      "mapLink": "https://maps.app.goo.gl/iN8PGgTJa9gRHToX8",
+      "mapImage": "/imagesdatabase/Food/Abou Tarekmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 11:00 PM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Lunch or early dinner hours",
+      "howToGet": "Easily accessible by metro (Sadat Station) or taxi",
+      "tips": "Try their signature koshari dish with extra crispy onions."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona A.",
+        "date": "2024-11-12",
+        "content": "Fast service and the koshari was delicious and filling!",
+        "rate": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-01-05",
+        "content": "It was a bit crowded but totally worth the wait.",
+        "rate": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Crave",
+    "image": "/food/cearve.jpg",
+    "rate": 4,
     "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
-    "rating": 4,
-    "address": "Zamalek, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/GD3ZonLhtm4Bmuik9",
-    "mapImage": "/imagesdatabase/Food/Cravemap.webp"
-  },
-  "detail": {
-    "visitingHours": "12:00 PM - 12:00 AM",
-    "entryFees": "Free",
-    "bestTimeToVisit": "Evening for dinner",
-    "howToGet": "By car or ride-hailing apps like Uber",
-    "tips": "Try their signature pasta and book in advance on weekends."
-  },
-  "review": {
-    "review1": {
-      "name": "Nour Hassan",
-      "date": "2025-07-21",
-      "content": "Lovely place with delicious food. I really enjoyed the ambiance!",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
-    },
-    "review2": {
-      "name": "Omar Khaled",
-      "date": "2025-07-18",
-      "content": "Nice experience, though service was a bit slow.",
+    "images": [
+      "/imagesdatabase/Food/Crave.webp",
+      "/imagesdatabase/Food/Crave2.webp",
+      "/imagesdatabase/Food/Crave3.webp",
+      "/imagesdatabase/Food/Crave4.webp"
+    ],
+    "overview": {
+      "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
       "rating": 4,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-}
-,
-{
-  "id": 5,
-  "name": "Zooba",
-  "image": "/food/zooba.webp",
-  "category": "Food",
-  "rate": 4,
-  "description": "Trendy Egyptian street food with a modern twist — koshari, taameya, liver sandwiches, and more.",
-  "images": [
-    "/imagesdatabase/Food/Zooba.webp",
-    "/imagesdatabase/Food/Zooba2.webp",
-    "/imagesdatabase/Food/Zooba3.webp",
-    "/imagesdatabase/Food/Zooba4.webp"
-  ],
-  "overview": {
-    "description": "Zooba is a popular Egyptian eatery that reimagines traditional street food in a stylish, modern setting. From colorful interiors to unique packaging, it's a vibrant take on local favorites.",
-    "rating": 4,
-    "address": "26th July St, Zamalek, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/gx8bASaF17hYNdzo7",
-    "mapImage": "/imagesdatabase/Food/Zoobamap.webp"
-  },
-  "detail": {
-    "visitingHours": "10:00 AM - 12:00 AM",
-    "entryFees": "Free entry, pay for food",
-    "bestTimeToVisit": "Evenings and weekends",
-    "howToGet": "Easily accessible by car or taxi to Zamalek",
-    "tips": "Try the taameya burger and hibiscus drink. Expect some waiting time during peak hours."
-  },
-  "review": {
-    "review1": {
-      "name": "Nourhan F.",
-      "date": "2025-07-15",
-      "content": "Loved the modern twist on classic Egyptian dishes. The taameya sandwich is a must-try!",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
+      "address": "Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/GD3ZonLhtm4Bmuik9",
+      "mapImage": "/imagesdatabase/Food/Cravemap.webp"
     },
-    "review2": {
-      "name": "Ahmed M.",
-      "date": "2025-07-10",
-      "content": "Unique concept and delicious food, but the place can get crowded.",
-      "rating": 4,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-}
-,
-{
-  "id": 6,
-  "name": "Tamara Lebanese Bistro",
-  "image": "/food/tamara.webp",
-  "rate": 5,
-  "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
-  "images": [
-    "/imagesdatabase/Food/Tamara Lebanese Bistro.webp",
-    "/imagesdatabase/Food/Tamara Lebanese Bistro2.webp",
-    "/imagesdatabase/Food/Tamara Lebanese Bistro3.webp",
-    "/imagesdatabase/Food/Tamara Lebanese Bistro4.jpeg"
-  ],
-  "overview": {
-    "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
-    "rating": 5,
-    "address": "City Stars, Nasr City, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/VhP6DwZ3xdodmy548",
-    "mapImage": "/imagesdatabase/Food/Tamara Lebanese Bistromap.webp"
-  },
-  "detail": {
-    "visitingHours": "12:00 PM - 12:00 AM",
-    "entryFees": "Free entry",
-    "bestTimeToVisit": "Evening and weekends",
-    "howToGet": "Located inside City Stars Mall, accessible by car or Uber",
-    "tips": "Try the mixed grill platter and freshly baked manakeesh."
-  },
-  "review": {
-    "review1": {
-      "name": "Nour A.",
-      "date": "2025-07-22",
-      "content": "Authentic Lebanese flavors and cozy ambiance. Loved the service!",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Evening for dinner",
+      "howToGet": "By car or ride-hailing apps like Uber",
+      "tips": "Try their signature pasta and book in advance on weekends."
     },
-    "review2": {
-      "name": "Omar K.",
-      "date": "2025-07-18",
-      "content": "Delicious food and beautiful presentation. Definitely coming back.",
-      "rating": 4,
-    "avatar": "/sara/person2.jpeg"
+    "review": {
+      "review1": {
+        "name": "Nour Hassan",
+        "date": "2025-07-21",
+        "content": "Lovely place with delicious food. I really enjoyed the ambiance!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar Khaled",
+        "date": "2025-07-18",
+        "content": "Nice experience, though service was a bit slow.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
     }
-  }
-}
-,
+  },
   {
-  "id": 7,
-  "name": "Lucille’s",
-  "image": "/food/lusills.webp",
-  "category": "Food",
-  "rate": 3.5,
-  "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
-  "images": [
-    "/imagesdatabase/Food/Lucille’s.webp",
-    "/imagesdatabase/Food/Lucille’s2.jpg",
-    "/imagesdatabase/Food/Lucille’s3.jpg",
-    "/imagesdatabase/Food/Lucille’s4.webp"
-  ],
-  "overview": {
+    "id": 5,
+    "name": "Zooba",
+    "image": "/food/zooba.webp",
+    "category": "Food",
+    "rate": 4,
+    "description": "Trendy Egyptian street food with a modern twist — koshari, taameya, liver sandwiches, and more.",
+    "images": [
+      "/imagesdatabase/Food/Zooba.webp",
+      "/imagesdatabase/Food/Zooba2.webp",
+      "/imagesdatabase/Food/Zooba3.webp",
+      "/imagesdatabase/Food/Zooba4.webp"
+    ],
+    "overview": {
+      "description": "Zooba is a popular Egyptian eatery that reimagines traditional street food in a stylish, modern setting. From colorful interiors to unique packaging, it's a vibrant take on local favorites.",
+      "rating": 4,
+      "address": "26th July St, Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/gx8bASaF17hYNdzo7",
+      "mapImage": "/imagesdatabase/Food/Zoobamap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free entry, pay for food",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Easily accessible by car or taxi to Zamalek",
+      "tips": "Try the taameya burger and hibiscus drink. Expect some waiting time during peak hours."
+    },
+    "review": {
+      "review1": {
+        "name": "Nourhan F.",
+        "date": "2025-07-15",
+        "content": "Loved the modern twist on classic Egyptian dishes. The taameya sandwich is a must-try!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": "2025-07-10",
+        "content": "Unique concept and delicious food, but the place can get crowded.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Tamara Lebanese Bistro",
+    "image": "/food/tamara.webp",
+    "rate": 5,
+    "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
+    "images": [
+      "/imagesdatabase/Food/Tamara Lebanese Bistro.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro2.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro3.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro4.jpeg"
+    ],
+    "overview": {
+      "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
+      "rating": 5,
+      "address": "City Stars, Nasr City, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/VhP6DwZ3xdodmy548",
+      "mapImage": "/imagesdatabase/Food/Tamara Lebanese Bistromap.webp"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Evening and weekends",
+      "howToGet": "Located inside City Stars Mall, accessible by car or Uber",
+      "tips": "Try the mixed grill platter and freshly baked manakeesh."
+    },
+    "review": {
+      "review1": {
+        "name": "Nour A.",
+        "date": "2025-07-22",
+        "content": "Authentic Lebanese flavors and cozy ambiance. Loved the service!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-07-18",
+        "content": "Delicious food and beautiful presentation. Definitely coming back.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "Lucille’s",
+    "image": "/food/lusills.webp",
+    "category": "Food",
+    "rate": 3.5,
     "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
-    "rating": 3.5,
-    "address": "Maadi, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/p1SaEqNic5Bb9Cwc9",
-    "mapImage": "/imagesdatabase/Food/Lucille’smap.webp"
-  },
-  "detail": {
-    "visitingHours": "8:00 AM - 12:00 AM",
-    "entryFees": "Free entry",
-    "bestTimeToVisit": "Morning for breakfast or evening for dinner",
-    "howToGet": "Located in Maadi, accessible by car or ride-hailing apps",
-    "tips": "Try the pancakes and burgers. Can be crowded on weekends."
-  },
-  "review": {
-    "review1": {
-      "name": "Omar R.",
-      "date": "2025-06-25",
-      "content": "Burgers were amazing, and the service was great. Will come again!",
-      "rating": 5,
-    "avatar": "/sara/person2.jpeg"
+    "images": [
+      "/imagesdatabase/Food/Lucille’s.webp",
+      "/imagesdatabase/Food/Lucille’s2.jpg",
+      "/imagesdatabase/Food/Lucille’s3.jpg",
+      "/imagesdatabase/Food/Lucille’s4.webp"
+    ],
+    "overview": {
+      "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
+      "rating": 3.5,
+      "address": "Maadi, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/p1SaEqNic5Bb9Cwc9",
+      "mapImage": "/imagesdatabase/Food/Lucille’smap.webp"
     },
-    "review2": {
-      "name": "Sara M.",
-      "date": "2025-07-01",
-      "content": "Good food but a bit overpriced for what you get.",
-      "rating": 3,
-    "avatar": "/sara/person.jpeg"
+    "detail": {
+      "visitingHours": "8:00 AM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Morning for breakfast or evening for dinner",
+      "howToGet": "Located in Maadi, accessible by car or ride-hailing apps",
+      "tips": "Try the pancakes and burgers. Can be crowded on weekends."
+    },
+    "review": {
+      "review1": {
+        "name": "Omar R.",
+        "date": "2025-06-25",
+        "content": "Burgers were amazing, and the service was great. Will come again!",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "name": "Sara M.",
+        "date": "2025-07-01",
+        "content": "Good food but a bit overpriced for what you get.",
+        "rating": 3,
+        "avatar": "/sara/person.jpeg"
+      }
     }
-  }
-}
-,
-{
-  "id": 8,
-  "name": "Kazoku",
-  "image": "/food/kazuka.png",
-  "rate": 4,
-  "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
-  "images": [
-    "/imagesdatabase/Food/Kazoku.webp",
-    "/imagesdatabase/Food/Kazoku2.webp",
-    "/imagesdatabase/Food/Kazoku3.webp",
-    "/imagesdatabase/Food/Kazoku4.webp"
-  ],
-  "overview": {
+  },
+  {
+    "id": 8,
+    "name": "Kazoku",
+    "image": "/food/kazuka.png",
+    "rate": 4,
     "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
-    "rating": 4,
-    "address": "New Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/kbuHa4tGyT5QaX4d6",
-    "mapImage": "/imagesdatabase/Food/Kazokumap.webp"
-  },
-  "detail": {
-    "visitingHours": "12:00 PM - 12:00 AM",
-    "entryFees": "Free entry",
-    "bestTimeToVisit": "Evening",
-    "howToGet": "Located in New Cairo, reachable by car or taxi",
-    "tips": "Reserve in advance for dinner, try the robata grill."
-  },
-  "review": {
-    "review1": {
-      "name": "Mona F.",
-      "date": "2025-07-15",
-      "content": "Amazing sushi and great ambiance. A bit pricey but worth it.",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
-    },
-    "review2": {
-      "name": "Karim H.",
-      "date": "2025-06-28",
-      "content": "Service was excellent. Loved the cocktails and the music.",
+    "images": [
+      "/imagesdatabase/Food/Kazoku.webp",
+      "/imagesdatabase/Food/Kazoku2.webp",
+      "/imagesdatabase/Food/Kazoku3.webp",
+      "/imagesdatabase/Food/Kazoku4.webp"
+    ],
+    "overview": {
+      "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
       "rating": 4,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-}
-,
- {
-  "id": 9,
-  "name": "Pier 88",
-  "image": "/food/pier.webp",
-  "category": "Food",
-  "rate": 5,
-  "description": "Elegant Mediterranean/Italian restaurant with great views and a celebrity vibe.",
-  "images": [
-    "/imagesdatabase/Food/Pier 88.webp",
-    "/imagesdatabase/Food/Pier 882.webp",
-    "/imagesdatabase/Food/Pier 883.jpg",
-    "/imagesdatabase/Food/Pier 884.jpg"
-  ],
-  "overview": {
-    "description": "Pier 88 is an upscale Mediterranean and Italian restaurant offering delicious food, stylish ambiance, and a celebrity-favored experience. Located by the Nile, it’s perfect for a luxurious dining night.",
-    "rating": 5,
-    "address": "Zamalek, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/mHSZTzrTtiqRFVSs8",
-    "mapImage": "/imagesdatabase/Food/Pier 88map.webp"
-  },
-  "detail": {
-    "visitingHours": "12:00 PM - 12:00 AM",
-    "entryFees": "No entry fee, but reservation recommended",
-    "bestTimeToVisit": "Evenings and weekends",
-    "howToGet": "Located in Zamalek, accessible by car or taxi",
-    "tips": "Book in advance, wear smart casual, and enjoy the riverside view."
-  },
-  "review": {
-    "review1": {
-      "name": "Sara Adel",
-      "date": "2025-06-10",
-      "content": "Great food and beautiful views! The seafood pasta was perfect.",
-      "rate": 5,
-    "avatar": "/sara/person.jpeg"
+      "address": "New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/kbuHa4tGyT5QaX4d6",
+      "mapImage": "/imagesdatabase/Food/Kazokumap.webp"
     },
-    "review2": {
-      "name": "Youssef Gamal",
-      "date": "2025-07-15",
-      "content": "Loved the ambiance and music. A bit pricey but worth it for a special night.",
-      "rate": 4,
-    "avatar": "/sara/person2.jpeg"
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Evening",
+      "howToGet": "Located in New Cairo, reachable by car or taxi",
+      "tips": "Reserve in advance for dinner, try the robata grill."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona F.",
+        "date": "2025-07-15",
+        "content": "Amazing sushi and great ambiance. A bit pricey but worth it.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Karim H.",
+        "date": "2025-06-28",
+        "content": "Service was excellent. Loved the cocktails and the music.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
     }
-  }
-}
-,
-{
-  "id": 10,
-  "name": "Abou El Sid",
-  "image": "/food/abou elsid.webp",
-  "category": "Food",
-  "rate": 4.5,
-  "description": "A nostalgic Egyptian dining experience with traditional recipes and Oriental decor.",
-  "images": [
-    "/imagesdatabase/Food/Abou El Sid.webp",
-    "/imagesdatabase/Food/Abou El Sid2.webp",
-    "/imagesdatabase/Food/Abou El Sid3.webp",
-    "/imagesdatabase/Food/Abou El Sid4.webp"
-  ],
-  "overview": {
-    "description": "Abou El Sid offers an authentic Egyptian experience with classic dishes, vintage ambiance, and Oriental music. It's perfect for those seeking the true taste of Egypt.",
-    "rating": 4.5,
-    "address": "157 26th of July Corridor, Zamalek, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/qdzrnjHUS1TzRTng8",
-    "mapImage": "/imagesdatabase/Food/Abou El Sidmap.webp/maps/abouelsid_map.jpg"
   },
-  "detail": {
-    "visitingHours": "12:00 PM - 12:00 AM",
-    "entryFees": "Free entry (based on orders)",
-    "bestTimeToVisit": "Evenings and weekends",
-    "howToGet": "Located in Zamalek, reachable by taxi or ride-hailing apps",
-    "tips": "Try the molokhia and stuffed vine leaves. It's a popular place, so booking is recommended."
-  },
-  "review": {
-    "review1": {
-      "name": "Yasmine M.",
-      "date": "2025-07-18",
-      "content": "The food was delicious and the ambiance is unmatched. Loved the traditional music and decorations!",
+  {
+    "id": 9,
+    "name": "Pier 88",
+    "image": "/food/pier.webp",
+    "category": "Food",
+    "rate": 5,
+    "description": "Elegant Mediterranean/Italian restaurant with great views and a celebrity vibe.",
+    "images": [
+      "/imagesdatabase/Food/Pier 88.webp",
+      "/imagesdatabase/Food/Pier 882.webp",
+      "/imagesdatabase/Food/Pier 883.jpg",
+      "/imagesdatabase/Food/Pier 884.jpg"
+    ],
+    "overview": {
+      "description": "Pier 88 is an upscale Mediterranean and Italian restaurant offering delicious food, stylish ambiance, and a celebrity-favored experience. Located by the Nile, it’s perfect for a luxurious dining night.",
       "rating": 5,
-    "avatar": "/sara/person.jpeg"
+      "address": "Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mHSZTzrTtiqRFVSs8",
+      "mapImage": "/imagesdatabase/Food/Pier 88map.webp"
     },
-    "review2": {
-      "name": "Omar K.",
-      "date": "2025-06-30",
-      "content": "Great spot for classic Egyptian dishes. A bit crowded on weekends but worth it.",
-      "rating": 4,
-    "avatar": "/sara/person2.jpeg"
-    }
-  }
-}
-,
-{
-  "id": 11,
-  "name": "Sequoia",
-  "image": "/food/Sequoia.webp",
-  "rate": 4.5,
-  "description": "Upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting.",
-  "images": [
-    "/imagesdatabase/Food/Sequoia.webp",
-    "/imagesdatabase/Food/Sequoia2.webp",
-"/imagesdatabase/Food/Sequoia.webp",
-    "/imagesdatabase/Food/Sequoia2.webp"  ],
-  "overview": {
-    "description": "Sequoia is an upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting. Perfect for sunset dinners with a scenic view.",
-    "rating": 4.5,
-    "address": "53 Abou El Feda St., Zamalek, Cairo",
-    "mapLink": "https://maps.app.goo.gl/8wuqijd8BGLoceq17",
-    "mapImage": "/imagesdatabase/Food/Sobhy Kabermap.png"
-  },
-  "detail": {
-    "visitingHours": "12:00 PM - 1:00 AM",
-    "entryFees": "No entry fee, pay per meal",
-    "bestTimeToVisit": "Sunset and evening",
-    "howToGet": "By taxi or Uber to Zamalek",
-    "tips": "Make a reservation in advance and try the seafood platter."
-  },
-  "review": {
-    "review1": {
-      "name": "Yasmine Khaled",
-      "date": "2025-07-18",
-      "content": "One of my favorite spots in Cairo! The view is amazing and the food is delicious.",
-      "rating": 5,
-    "avatar": "/sara/person.jpeg"
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "No entry fee, but reservation recommended",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located in Zamalek, accessible by car or taxi",
+      "tips": "Book in advance, wear smart casual, and enjoy the riverside view."
     },
-    "review2": {
-      "name": "Omar Hany",
-      "date": "2025-06-22",
-      "content": "A bit pricey, but the ambiance and view make it worth it.",
-      "rating": 4,
-    "avatar": "/sara/person2.jpeg"
+    "review": {
+      "review1": {
+        "name": "Sara Adel",
+        "date": "2025-06-10",
+        "content": "Great food and beautiful views! The seafood pasta was perfect.",
+        "rate": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef Gamal",
+        "date": "2025-07-15",
+        "content": "Loved the ambiance and music. A bit pricey but worth it for a special night.",
+        "rate": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
     }
-  }
-}
-,
-{
-  "id": 12,
-  "name": "Naguib Mahfouz Cafe",
-  "image": "/food/Naguib Mahfouz Cafe.webp",
-  "category": "Food",
-  "rate": 4,
-  "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
-  "images": [
-    "/imagesdatabase/Food/Naguib Mahfouz Cafe.webp",
-   "/imagesdatabase/Food/Naguib Mahfouz Cafe2.webp" ,
-   "/imagesdatabase/Food/Naguib Mahfouz Cafe3.webp",
-   "/imagesdatabase/Food/Naguib Mahfouz Cafe4.webp"
-  ],
-  "overview": {
+  },
+  {
+    "id": 10,
+    "name": "Abou El Sid",
+    "image": "/food/abou elsid.webp",
+    "category": "Food",
+    "rate": 4.5,
+    "description": "A nostalgic Egyptian dining experience with traditional recipes and Oriental decor.",
+    "images": [
+      "/imagesdatabase/Food/Abou El Sid.webp",
+      "/imagesdatabase/Food/Abou El Sid2.webp",
+      "/imagesdatabase/Food/Abou El Sid3.webp",
+      "/imagesdatabase/Food/Abou El Sid4.webp"
+    ],
+    "overview": {
+      "description": "Abou El Sid offers an authentic Egyptian experience with classic dishes, vintage ambiance, and Oriental music. It's perfect for those seeking the true taste of Egypt.",
+      "rating": 4.5,
+      "address": "157 26th of July Corridor, Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/qdzrnjHUS1TzRTng8",
+      "mapImage": "/imagesdatabase/Food/Abou El Sidmap.webp/maps/abouelsid_map.jpg"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry (based on orders)",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located in Zamalek, reachable by taxi or ride-hailing apps",
+      "tips": "Try the molokhia and stuffed vine leaves. It's a popular place, so booking is recommended."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine M.",
+        "date": "2025-07-18",
+        "content": "The food was delicious and the ambiance is unmatched. Loved the traditional music and decorations!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-06-30",
+        "content": "Great spot for classic Egyptian dishes. A bit crowded on weekends but worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "name": "Sequoia",
+    "image": "/food/Sequoia.webp",
+    "rate": 4.5,
+    "description": "Upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting.",
+    "images": [
+      "/imagesdatabase/Food/Sequoia.webp",
+      "/imagesdatabase/Food/Sequoia2.webp",
+      "/imagesdatabase/Food/Sequoia.webp",
+      "/imagesdatabase/Food/Sequoia2.webp"
+    ],
+    "overview": {
+      "description": "Sequoia is an upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting. Perfect for sunset dinners with a scenic view.",
+      "rating": 4.5,
+      "address": "53 Abou El Feda St., Zamalek, Cairo",
+      "mapLink": "https://maps.app.goo.gl/8wuqijd8BGLoceq17",
+      "mapImage": "/imagesdatabase/Food/Sobhy Kabermap.png"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 1:00 AM",
+      "entryFees": "No entry fee, pay per meal",
+      "bestTimeToVisit": "Sunset and evening",
+      "howToGet": "By taxi or Uber to Zamalek",
+      "tips": "Make a reservation in advance and try the seafood platter."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine Khaled",
+        "date": "2025-07-18",
+        "content": "One of my favorite spots in Cairo! The view is amazing and the food is delicious.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar Hany",
+        "date": "2025-06-22",
+        "content": "A bit pricey, but the ambiance and view make it worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 12,
+    "name": "Naguib Mahfouz Cafe",
+    "image": "/food/Naguib Mahfouz Cafe.webp",
+    "category": "Food",
+    "rate": 4,
     "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
-    "rating": 4,
-    "address": "Khan El Khalili, Cairo, Egypt",
-    "mapLink": "https://maps.app.goo.gl/D9XUx8sMxxFsXU5F6",
-    "mapImage": "/imagesdatabase/Food/Naguib Mahfouz Cafemap.webp"
-  },
-  "detail": {
-    "visitingHours": "9:00 AM - 12:00 AM",
-    "entryFees": "Free (Dining Costs Apply)",
-    "bestTimeToVisit": "Evenings and weekends",
-    "howToGet": "Located inside Khan El Khalili bazaar area",
-    "tips": "Try the traditional Egyptian tea and reserve in advance on weekends."
-  },
-  "review": {
-    "review1": {
-      "name": "Layla M.",
-      "date": "2025-07-20",
-      "content": "Perfect atmosphere, felt like I was in old Cairo. Food is authentic!",
-      "rate": 5,
-    "avatar": "/sara/person.jpeg"
+    "images": [
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe2.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe3.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe4.webp"
+    ],
+    "overview": {
+      "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
+      "rating": 4,
+      "address": "Khan El Khalili, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/D9XUx8sMxxFsXU5F6",
+      "mapImage": "/imagesdatabase/Food/Naguib Mahfouz Cafemap.webp"
     },
-    "review2": {
-      "name": "Ahmed S.",
-      "date": "2025-06-15",
-      "content": "A bit crowded, but the service and food were excellent.",
-      "rate": 4,
-    "avatar": "/sara/person2.jpeg"
+    "detail": {
+      "visitingHours": "9:00 AM - 12:00 AM",
+      "entryFees": "Free (Dining Costs Apply)",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located inside Khan El Khalili bazaar area",
+      "tips": "Try the traditional Egyptian tea and reserve in advance on weekends."
+    },
+    "review": {
+      "review1": {
+        "name": "Layla M.",
+        "date": "2025-07-20",
+        "content": "Perfect atmosphere, felt like I was in old Cairo. Food is authentic!",
+        "rate": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed S.",
+        "date": "2025-06-15",
+        "content": "A bit crowded, but the service and food were excellent.",
+        "rate": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
     }
   }
-}
-
-
 ]

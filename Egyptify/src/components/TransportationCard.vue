@@ -1,50 +1,61 @@
-<!-- src/components/TransportationCard.vue -->
 <template>
-  <div class="border rounded-md p-6 w-full max-w-sm bg-white shadow-sm">
-    <div class="flex justify-center mb-4">
-      <div class="w-16 h-16 bg-gradient-to-b from-yellow-400 to-green-600 rounded-full"></div>
+  <div class="border rounded-2xl p-6 w-full max-w-sm bg-white shadow-md hover:shadow-lg transition-all duration-300">
+    <!-- Icon -->
+    <div class="flex justify-center mb-5">
+      <div class="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 text-3xl shadow-sm">
+        <i :class="icon" ></i>
+      </div>
     </div>
 
-    <h3 class="text-black font-bold text-center mb-1">{{ title }}</h3>
-    <p class="text-sm text-gray-600 text-center mb-4">{{ description }}</p>
+    <!-- Title -->
+    <h3 class="text-xl font-bold text-center mb-2 text-gray-900">{{ title }}</h3>
+    <p class="text-sm text-gray-500 text-center mb-5 leading-relaxed">{{ description }}</p>
 
-    <div class="flex items-center justify-between mb-2 text-sm">
-      <span class="bg-yellow-400 px-3 py-1 rounded-full text-white font-medium">{{ price }}</span>
-      <div class="flex items-center gap-1 text-gray-600">
+    <!-- Price & Duration -->
+    <div class="flex items-center justify-between mb-5">
+      <span class="bg-yellow-500 px-4 py-1.5 rounded-full text-white font-semibold text-sm shadow-sm">
+        {{ price }}
+      </span>
+      <div class="flex items-center gap-2 text-gray-500 text-sm">
         <i class="fas fa-clock text-yellow-500"></i>
         <span>{{ duration }}</span>
       </div>
     </div>
 
-    <div class="mb-2">
-      <p class="text-black font-medium mb-1">Features:</p>
+    <!-- Features -->
+    <div v-if="features?.length" class="mb-5 h-20">
+      <p class="text-gray-900 font-semibold mb-2">Features</p>
       <div class="flex flex-wrap gap-2">
         <span
           v-for="feature in features"
           :key="feature"
-          class="bg-yellow-200 text-yellow-900 px-2 py-1 rounded-full text-xs"
+          class="bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs border border-yellow-200"
         >
           {{ feature }}
         </span>
       </div>
     </div>
 
-    <div class="mt-2">
-      <p class="text-black font-medium mb-1">Popular Routes:</p>
-      <ul class="text-sm text-gray-700 list-disc list-inside">
+    <!-- Routes -->
+    <div v-if="routes?.length" class="mb-6">
+      <p class="text-gray-900 font-semibold mb-2">Popular Routes</p>
+      <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
         <li v-for="route in routes" :key="route">{{ route }}</li>
       </ul>
     </div>
+
+    <!-- Button -->
     <router-link to="/transportation-booking">
-    <div class="mt-4">
-      <BaseButton class="w-full">Book Now</BaseButton>
-    </div>
+      <BaseButton class="w-full  text-white font-semibold py-2.5 rounded-lg shadow-md transition-all">
+        Book Now
+      </BaseButton>
     </router-link>
   </div>
 </template>
 
 <script setup>
 defineProps({
+  icon: String, // مثال: "fas fa-bus"
   title: String,
   description: String,
   price: String,

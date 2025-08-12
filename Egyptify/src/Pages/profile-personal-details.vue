@@ -351,38 +351,80 @@
             </label>
           </div>
         </div>
+  <div>
+    <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
 
-        <div>
-          <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
-          <a
-            href="profile-change-password"
-            @click.prevent="activeTab = 'personal'"
-            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+    <!-- Change Password -->
+    <a
+      href="profile-change-password"
+      @click.prevent="activeTab = 'personal'"
+      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+    >
+      <span class="text-gray-700 font-medium">Change Password</span>
+      <i class="fas fa-arrow-right text-gray-400"></i>
+    </a>
+
+    <!-- Update Contact Information -->
+    <a
+      href="#"
+      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+    >
+      <span class="text-gray-700 font-medium">Update Contact Information</span>
+      <i class="fas fa-arrow-right text-gray-400"></i>
+    </a>
+
+    <!-- Delete Account -->
+    <a
+      href="#"
+      @click.prevent="showDeleteModal = true"
+      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
+    >
+      <span class="font-medium">Delete Account</span>
+      <i class="fas fa-arrow-right text-gray-400"></i>
+    </a>
+
+    <!-- Logout -->
+    <div class="flex justify-end mt-6">
+      <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
+        Logout
+      </BaseButton>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div
+      v-if="showDeleteModal"
+      class="fixed inset-0 bg-black model flex items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+        <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
+        <p class="text-gray-600 mb-6">
+          Are you sure you want to delete your account? This action cannot be undone.
+        </p>
+        <div class="flex justify-end space-x-3">
+          <button
+            @click="showDeleteModal = false"
+            class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
           >
-            <span class="text-gray-700 font-medium">Change Password</span>
-            <i class="fas fa-arrow-right text-gray-400"></i>
-          </a>
-          <a
-            href="#"
-            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+            Cancel
+          </button>
+          <button
+            @click="confirmDelete"
+            class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
           >
-            <span class="text-gray-700 font-medium">Update Contact Information</span>
-            <i class="fas fa-arrow-right text-gray-400"></i>
-          </a>
-          <a
-            href="#"
-            @click="deleteAccount"
-            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
-          >
-            <span class="font-medium">Delete Account</span>
-            <i class="fas fa-arrow-right text-gray-400"></i>
-          </a>
-          <div class="flex justify-end mt-6">
-            <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
-              Logout
-            </BaseButton>
-          </div>
+            Yes, Delete
+          </button>
         </div>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div
+      v-if="showSuccessMessage"
+      class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
+    >
+      Account deleted successfully.
+    </div>
+  </div>
       </div>
     </div>
   </div>
@@ -676,6 +718,21 @@ function logout() {
     });
 }
 
+const showDeleteModal = ref(false);
+const showSuccessMessage = ref(false);
+
+///////////////////////////////////////////////////////////
+function confirmDelete() {
+  showDeleteModal.value = false;
+  showSuccessMessage.value = true;
+
+  setTimeout(() => {
+    showSuccessMessage.value = false;
+    console.log("Account deleted from backend");
+  }, 2000);
+      router.push("/login")
+
+}
 async function deleteAccount() {
   const user = auth.currentUser;
 
@@ -728,6 +785,9 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+.model{
+  background-color: #cccccc8c;
+}
 a{
   cursor: pointer;
 }

@@ -1,0 +1,2175 @@
+[
+  {
+    "id": 1,
+    "name": "Siwa Oasis",
+    "image": "/natural/siwa.jpg",
+        "category": "Natural",
+"location":"Siwa",
+    "rate": 4,
+    "description": "Located in Egypt’s Western Desert, Siwa is known for its salt lakes, hot springs, palm groves.",
+        "images": [
+      "/imagesdatabase/natural/Siwa Oasis1.webp",
+      "/imagesdatabase/natural/Siwa Oasis2.webp",
+      "/imagesdatabase/natural/Siwa Oasis3.webp",
+      "/imagesdatabase/natural/Siwa Oasis4.jpg"
+    ],
+    "overview":{
+            "description": "Siwa Oasis is one of Egypt’s most remote and enchanting destinations, located near the Libyan border in the heart of the Western Desert. Known for its serene landscapes, Siwa offers a unique blend of natural beauty, Natural significance, and indigenous Amazigh (Berber) culture.The oasis is home to crystal-clear salt lakes, hot and cold springs, golden sand dunes, and thousands of date palm trees. One of its most famous spots is Cleopatra’s Pool, a natural spring where legend says the queen herself once bathed..",
+    "rating": 4.8,
+    "address": "Siwa Oasis, Matrouh Governorate, Western Desert, Egypt",
+    "mapLink": "https://maps.app.goo.gl/UQmnm2iTHa5x1UNB9",
+    "mapImage": "/imagesdatabase/natural/siwamap.PNG"
+    },
+    "detail":{
+         "visitingHours": "9:00AM-5:00PM",
+    "entryFees": "Around EGP 30",
+    "bestTimeToVisit": "October to March (15°C to 28°C)",
+    "howToGet": "From Cairo:🚗 By Car: 750 km (about 10 hours)🚌 By Bus:  (12–14 hours)",
+    "tips": "Go early to avoid queues"
+    },
+    "review":{
+        "review1":{
+    "name": "Sarah A.",
+    "date": "July 2025",
+    "content":" Siwa is magical — stunning salt lakes, friendly locals, and a deep connection to nature.",
+    "rating": 5,
+    "avatar": "/sara/person.jpeg"
+  },
+  "review2":{
+    "name":" Ahmed M.",
+    "date": "June 2025",
+    "content": "stunning salt lakes, friendly locals, and a deep connection to nature.",
+    "rating": 4,
+    "avatar":" /sara/person2.jpeg"
+  }
+    }
+  },
+{
+  "id": 2,
+  "name": "White Desert",
+  "image": "/natural/white.jpg",
+      "category": "Natural",
+"location":"Western Desert",
+
+  "rate": 5,
+  "description": "A protected area in Farafra featuring stunning white rock formations. A surreal landscape perfect for camping and stargazing.",
+  "images": [
+    "/imagesdatabase/natural/White Desert1.webp",
+    "/imagesdatabase/natural/White Desert2.jpeg",
+    "/imagesdatabase/natural/White Desert3.webp",
+    "/imagesdatabase/natural/White Desert4.jpg"
+  ],
+  "overview": {
+    "description": "The White Desert is a breathtaking natural wonder in Egypt’s Western Desert. Known for its surreal chalk formations created by wind erosion, the landscape resembles a snowy Arctic scene. It's a favorite destination for adventurers, campers, and photographers. The contrast of the white rocks against the golden sands creates a truly magical experience.",
+    "rating": 4.9,
+    "address": "White Desert National Park, Farafra, New Valley Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/pCUvSrsV1MCqw2t46",
+    "mapImage": "/imagesdatabase/natural/White Desertmap.jpeg"
+  },
+  "detail": {
+    "visitingHours": "Open 24 hours",
+    "entryFees": "EGP 10–30 (varies by tour)",
+    "bestTimeToVisit": "October to April (cooler months, ideal for camping)",
+    "howToGet": "From Cairo: 🚗 By Car: around 570 km (8 hours) 🚌 By Bus: via Bawiti or Farafra",
+    "tips": "Bring warm clothes for night camping and extra water."
+  },
+  "review": {
+    "review1": {
+      "name": "Laila F.",
+      "date": "May 2025",
+      "content": "Camping under the stars in the White Desert is unforgettable. The silence, the sky, everything is surreal.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Omar N.",
+      "date": "April 2025",
+      "content": "I felt like I was on another planet. The landscapes are out of this world.",
+      "rating": 5,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+{
+  "id": 3,
+  "name": "Ras Mohammed National Park",
+  "image": "/natural/Rasmohamed.jpg",
+      "category": "Natural",
+"location":"Sharm El Sheikh",
+  "rate": 5,
+  "description": "Located in South Sinai, this marine protected area is one of the top diving spots in the world with vibrant coral reefs and diverse marine life.",
+  "images": [
+    "/imagesdatabase/natural/Ras Mohammed National Park1.avif",
+    "/imagesdatabase/natural/Ras Mohammed National Park2.webp",
+    "/imagesdatabase/natural/Ras Mohammed National Park3.webp",
+    "/imagesdatabase/natural/Ras Mohammed National Park4.webp"
+  ],
+  "overview": {
+    "description": "Ras Mohammed National Park is Egypt’s first national park, established in 1983. It lies at the southern tip of the Sinai Peninsula, where the Gulf of Suez meets the Gulf of Aqaba. Known for its crystal-clear waters, coral reefs, and unique mangroves, it’s a haven for snorkelers, divers, and nature lovers. The park also offers dramatic desert landscapes and salt lakes.",
+    "rating": 4.8,
+    "address": "Ras Mohammed National Park, South Sinai Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/1VwnUvVf4qnE6BsFA",
+    "mapImage": "/imagesdatabase/natural/Ras Mohammed National Parkmap.avif"
+  },
+  "detail": {
+    "visitingHours": "7 AM – 5 PM",
+    "entryFees": "EGP 25 for Egyptians, EGP 140 for foreigners",
+    "bestTimeToVisit": "March to June and September to November (ideal for diving and snorkeling)",
+    "howToGet": "From Sharm El Sheikh: 🚗 By Car: about 30 km (30–40 minutes)",
+    "tips": "Bring snorkeling gear, sunscreen, and enough drinking water. Respect marine life and park regulations."
+  },
+  "review": {
+    "review1": {
+      "name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Youssef H.",
+      "date": "May 2025",
+      "content": "Absolutely stunning natural beauty – both underwater and on land. Highly recommended!",
+      "rating": 5,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+  {
+  "id": 4,
+  "name": "Blue Hole",
+  "image": "/natural/blue hole.jpg",
+      "category": "Natural",
+"location":"Dahab",
+  "rate": 4,
+  "description": "A world-famous diving site on the Red Sea, ideal for experienced divers and underwater photography lovers.",
+  "images": [
+    "/imagesdatabase/natural/Blue Hole1.webp",
+    "/imagesdatabase/natural/Blue Hole2.webp",
+    "/imagesdatabase/natural/Blue Hole3.webp",
+    "/imagesdatabase/natural/Blue Hole4.webp"
+  ],
+  "overview": {
+    "description": "The Blue Hole, located near Dahab in South Sinai, is one of the most famous dive sites in the world. This underwater sinkhole is renowned for its deep blue color and rich marine life. With depths reaching over 100 meters, it's a favorite among experienced divers and underwater photographers.",
+    "rating": 4.7,
+    "address": "Blue Hole, Dahab, South Sinai Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/r5JXeMRELvTNCvXu7",
+    "mapImage": "/imagesdatabase/natural/Blue Holemap.webp"
+  },
+  "detail": {
+    "visitingHours": "8:00 AM – 5:00 PM",
+    "entryFees": "Free, but diving tours may charge separately",
+    "bestTimeToVisit": "March to June and September to November",
+    "howToGet": "From Dahab: 🚕 Taxi: 15-minute drive 🏍️ Scooter rental is also common",
+    "tips": "Only experienced divers should attempt deep dives. Don’t forget reef-safe sunscreen and snorkeling gear."
+  },
+  "review": {
+    "review1": {
+      "name": "Yasmin A.",
+      "date": "June 2025",
+      "content": "Absolutely mesmerizing! The corals and marine life were stunning. One of my favorite dive spots ever.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Mohamed T.",
+      "date": "May 2025",
+      "content": "Very deep and beautiful site, but definitely not for beginners. The view from the surface is incredible too!",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+{
+  "id": 5,
+  "name": "Wadi El Rayan",
+  "image": "/natural/wadi alrayan.jpg",
+      "category": "Natural",
+"location":"fayoum",
+  "rate": 4,
+  "description": "A natural reserve with Egypt’s only waterfalls, large lakes, and surrounding sand dunes great for swimming and sandboarding.",
+  "images": [
+    "/imagesdatabase/natural/Wadi El Rayan1.webp",
+    "/imagesdatabase/natural/Wadi El Rayan2.webp",
+    "/imagesdatabase/natural/Wadi El Rayan3.webp",
+    "/imagesdatabase/natural/Wadi El Rayan4.webp"
+  ],
+  "overview": {
+    "description": "Wadi El Rayan is a protected area in Fayoum, Egypt, known for its stunning waterfalls, vast desert, and tranquil lakes. It’s a perfect getaway for nature lovers, families, and adventure seekers. The area is rich with biodiversity and offers a unique desert-lake landscape found nowhere else in Egypt.",
+    "rating": 4.6,
+    "address": "Wadi El Rayan Reserve, Fayoum Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/wC9y2fWKJZAgz2JT9",
+    "mapImage": "/imagesdatabase/natural/Wadi El Rayanmap.webp"
+  },
+  "detail": {
+    "visitingHours": "8:00 AM - 5:00 PM",
+    "entryFees": "EGP 10 for Egyptians, EGP 50 for foreigners",
+    "bestTimeToVisit": "October to April (pleasant weather, best for sandboarding and photography)",
+    "howToGet": "From Cairo: 🚗 By Car: ~150 km (around 2 hours) 🚌 By Microbus from El-Moneeb station",
+    "tips": "Don’t forget sunscreen, extra water, and a camera for the waterfalls. Avoid weekends for a quieter visit."
+  },
+  "review": {
+    "review1": {
+      "name": "Nour H.",
+      "date": "May 2025",
+      "content": "The waterfalls are breathtaking and the desert drive was thrilling!",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+
+,
+{
+  "id": 6,
+  "name": "Mount Sinai",
+  "image": "/natural/سانت كاترين.jpg",
+      "category": "Natural",
+"location":"sinai",
+  "rate": 5,
+  "description": "A sacred mountain with religious significance, popular for sunrise hikes and panoramic desert views.",
+  "images": [
+    "/imagesdatabase/natural/Mount Sinai1.webp",
+    "/imagesdatabase/natural/Mount Sinai2.webp",
+    "/imagesdatabase/natural/Mount Sinai3.webp",
+    "/imagesdatabase/natural/Mount Sinai4.jpeg"
+  ],
+  "overview": {
+    "description": "A sacred mountain with religious significance, popular for sunrise hikes and panoramic desert views.",
+    "rating": 5,
+    "address": "Saint Catherine, Egypt",
+    "mapLink": "https://maps.app.goo.gl/J3uDJCothvmkBHgB9",
+    "mapImage": "/imagesdatabase/natural/Mount Sinaimap.webp"
+  },
+  "detail": {
+    "visitingHours": "6:00 AM - 6:00 PM",
+    "entryFees": "$10",
+    "bestTimeToVisit": "October to March",
+    "howToGet": "By car or guided tour",
+    "tips": "Bring water and wear comfortable shoes."
+  },
+  "review": {
+    "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+  {
+  "id": 7,
+  "name": "Gebel Elba",
+  "image": "/natural/elba.jpg",
+      "category": "Natural",
+"location":"Aswan",
+  "rate": 3.5,
+  "description": "A remote mountain range in southeastern Egypt, rich in biodiversity and home to rare wildlife.",
+  "images": [
+    "/imagesdatabase/natural/Gebel Elba1.webp",
+    "/imagesdatabase/natural/Gebel Elba2.webp",
+    "/imagesdatabase/natural/Gebel Elba3.webp",
+    "/imagesdatabase/natural/4.webp"
+  ],
+  "overview": {
+    "description": "A remote and ecologically unique mountain range located in southeastern Egypt, known for its lush vegetation, rare wildlife, and limited access.",
+    "rating": 3.5,
+    "address": "Halaib Triangle, Southeastern Egypt",
+    "mapLink": "https://maps.app.goo.gl/xAuojNQXm9x9XaXHA",
+    "mapImage": "/imagesdatabase/natural/Gebel Elbamap.webp"
+  },
+  "detail": {
+    "visitingHours": "Accessible only via special permits",
+    "entryFees": "Free (Permit Required)",
+    "bestTimeToVisit": "November to March",
+    "howToGet": "By 4x4 vehicles through guided eco-tours",
+    "tips": "Get proper permissions, carry enough supplies, and be prepared for no cellular signal."
+  },
+  "review": {
+    "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+ {
+  "id": 8,
+  "name": "Fayoum Oasis",
+  "image": "/natural/fayom.jpg",
+      "category": "Natural",
+"location":"fayoum",
+  "rate": 4,
+  "description": "Famous for its lakes, bird-watching, and traditional pottery villages like Tunis Village.",
+  "images": [
+    "/imagesdatabase/natural/Fayoum Oasis1.webp",
+    "/imagesdatabase/natural/Fayoum Oasis2.webp",
+    "/imagesdatabase/natural/Fayoum Oasis3.webp",
+    "/imagesdatabase/natural/Fayoum Oasis4.webp"
+  ],
+  "overview": {
+    "description": "Famous for its lakes, bird-watching, and traditional pottery villages like Tunis Village.",
+    "rating": 4,
+    "address": "Fayoum Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/19Wa9MPXGy2v7n3e8",
+    "mapImage": "/imagesdatabase/natural/Fayoum Oasismap.webp"
+  },
+  "detail": {
+    "visitingHours": "8:00 AM - 6:00 PM",
+    "entryFees": "Free",
+    "bestTimeToVisit": "October to April",
+    "howToGet": "By car or local bus from Cairo",
+    "tips": "Explore Tunis Village for pottery workshops and visit Wadi El Rayan for waterfalls."
+  },
+  "review": {
+  "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+ {
+  "id": 9,
+  "name": "Valley of the Whales",
+  "image": "/natural/vally.jpg",
+      "category": "Natural",
+"location":"fayoum",
+  "rate": 5,
+  "description": "A UNESCO World Heritage site in Wadi Al-Hitan featuring fossilized remains of ancient whales.",
+  "images": [
+    "/imagesdatabase/natural/Valley of the Whales1.webp",
+    "/imagesdatabase/natural/Valley of the Whales2.webp",
+    "/imagesdatabase/natural/Valley of the Whales3.webp",
+    "/imagesdatabase/natural/Valley of the Whales4.webp"
+  ],
+  "overview": {
+    "description": "A UNESCO World Heritage site in Wadi Al-Hitan featuring fossilized remains of ancient whales.",
+    "rating": 5,
+    "address": "Wadi Al-Hitan, Fayoum, Egypt",
+    "mapLink": "https://maps.app.goo.gl/S93ehSanUFEZab4CA",
+    "mapImage": "/imagesdatabase/natural/Valley of the Whalesmap.webp"
+  },
+  "detail": {
+    "visitingHours": "8:00 AM - 5:00 PM",
+    "entryFees": "$5",
+    "bestTimeToVisit": "October to April",
+    "howToGet": "By car or guided eco-tour",
+    "tips": "Bring sun protection and water; guided tours recommended."
+  },
+  "review": {
+  "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+{
+  "id": 10,
+  "name": "Dahab Blue Lagoon",
+  "image": "/natural/logoon.jpg",
+      "category": "Natural",
+"location":"Dahab",
+  "rate": 4.5,
+  "description": "A tranquil, clear-water beach in Dahab ideal for relaxing, kite surfing, and snorkeling.",
+  "images": [
+    "/imagesdatabase/natural/Dahab Blue Lagoon.webp",
+    "/imagesdatabase/natural/Dahab Blue Lagoon2.webp",
+    "/imagesdatabase/natural/Dahab Blue Lagoon3.webp",
+    "/imagesdatabase/natural/Dahab Blue Lagoon4.webp"
+  ],
+  "overview": {
+    "description": "A tranquil, clear-water beach in Dahab ideal for relaxing, kite surfing, and snorkeling.",
+    "rating": 4.5,
+    "address": "Dahab, Egypt",
+    "mapLink": "https://maps.app.goo.gl/8UZQNWTZWt7x3kaq7",
+    "mapImage": "/imagesdatabase/natural/Dahab Blue Lagoonmap.webp"
+  },
+  "detail": {
+    "visitingHours": "All day",
+    "entryFees": "Free",
+    "bestTimeToVisit": "March to November",
+    "howToGet": "Accessible by 4x4 vehicles or by camel from Dahab",
+    "tips": "Bring snacks and water as there are limited facilities."
+  },
+  "review": {
+  "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+ {
+  "id": 11,
+  "name": "Bahariya Oasis",
+  "image": "/natural/Bahariya Oasis.jpg",
+      "category": "Natural",
+"location":"Siwa",
+  "rate": 4,
+  "description": "A lush oasis in the desert surrounded by black desert hills and ancient tombs.",
+  "images": [
+    "/imagesdatabase/natural/Bahariya Oasis.webp",
+    "/imagesdatabase/natural/Bahariya Oasis2.webp",
+    "/imagesdatabase/natural/Bahariya Oasis3.webp",
+    "/imagesdatabase/natural/Bahariya Oasis4.webp"
+  ],
+  "overview": {
+    "description": "Bahariya Oasis is a serene desert retreat known for its palm groves, natural springs, and proximity to the Black and White Deserts.",
+    "rating": 4,
+    "address": "Western Desert, Egypt",
+    "mapLink": "https://maps.app.goo.gl/svTYzXSfz32aYekt6",
+    "mapImage": "/imagesdatabase/natural/Bahariya Oasismap.webp"
+  },
+  "detail": {
+    "visitingHours": "Open all day",
+    "entryFees": "Free",
+    "bestTimeToVisit": "October to April",
+    "howToGet": "By 4x4 vehicle or organized tour from Cairo",
+    "tips": "Bring sunscreen and plenty of water. Ideal for desert camping and stargazing."
+  },
+  "review": {
+     "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+  {
+  "id": 12,
+  "name": "St. Catherine’s Monastery",
+  "image": "/natural/St. Catherine’s Monastery.jpg",
+      "category": "Natural",
+"location":"sinai",
+  "rate": 5,
+  "description": "One of the oldest working Christian monasteries, located at the foot of Mount Sinai.",
+  "images": [
+    "/imagesdatabase/natural/St. Catherine’s Monastery.webp",
+    "/imagesdatabase/natural/St. Catherine’s Monastery2.webp",
+    "/imagesdatabase/natural/St. Catherine’s Monastery3.webp",
+    "/imagesdatabase/natural/St. Catherine’s Monastery4.webp"
+  ],
+  "overview": {
+    "description": "Located at the foot of Mount Sinai, St. Catherine’s Monastery is one of the oldest Christian monasteries still in use. It houses ancient manuscripts, religious icons, and is considered a UNESCO World Heritage site.",
+    "rating": 5,
+    "address": "Saint Catherine, South Sinai, Egypt",
+    "mapLink": "https://maps.app.goo.gl/D4PahkAkdS7iD4iC8",
+    "mapImage": "/imagesdatabase/natural/St. Catherine’s Monasterymap.webp"
+  },
+  "detail": {
+    "visitingHours": "9:00 AM - 12:00 PM (Mon-Sat)",
+    "entryFees": "$5",
+    "bestTimeToVisit": "October to April",
+    "howToGet": "By car or tour from Sharm El-Sheikh or Dahab",
+    "tips": "Dress modestly, and respect religious customs. Photography might be restricted in some areas."
+  },
+  "review": {
+     "review1": {"name": "Mona S.",
+      "date": "June 2025",
+      "content": "The water was so clear and full of colorful fish! One of the best snorkeling experiences I’ve ever had.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"},
+    "review2": {
+      "name": "Kareem M.",
+      "date": "April 2025",
+      "content": "Very peaceful place, just avoid weekends if you want to skip the crowds.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+},  {
+    "id": 13,
+    "name": "Pyramids of Giza",
+    "category": "Historical",
+    "image": "/historical/pyramids (4).jpg",
+        "location":"Giza",
+
+    "rate": 4,
+    "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza",
+    "images": [
+      "/Details/historical/1753012412581.jpg",
+      "/Details/historical/camel-1839616_1920.jpg",
+      "/Details/historical/pyramids (3).jpg",
+      "/Details/historical/pyramids (4).jpg"
+    ],
+    "overview": {
+      "description": "The Giza Plateau features three legendary pyramids: The Great Pyramid of Khufu, the largest and only surviving Wonder of the Ancient World;  the Pyramid of Khafre, known for its elevated base and proximity to the Great Sphinx; and the Pyramid of Menkaure, the smallest yet refined in design.Together, they reflect the engineering mastery and spiritual depth of ancient Egypt.",
+      "rating": 4.9,
+      "address": "Al Haram, Giza Governorate 3512201, Egypt",
+      "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
+      "mapImage": " /Details/historical/Rectangle 7.png"
+    },
+    "detail": {
+      "visitingHours": "8:00AM-5:00PM",
+      "entryFees": "EGP 200 for Egyptians, EGP 400 for foreigners",
+      "bestTimeToVisit": "October to April (cooler weather and fewer crowds)",
+      "howToGet": "Take the metro to Giza Station, then use a taxi or Careem ",
+      "tips": "Go early "
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah A.",
+        "date": "July 2025",
+        "content": "Great for families. Kids loved it. Camel ride was fun but overpriced",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": "June 2025",
+        "content": "Absolutely breathtaking! A must-see. Go early to avoid crowds",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "name": "Karnak Temple",
+    "category": "Historical",
+            "location":"luxor",
+
+    "image": "/historical/karnak.webp",
+    "rate": 5,
+    "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods.",
+    "images": [
+      "/imagesdatabase/historical/Karnak Temple2.webp",
+      "/imagesdatabase/historical/Karnak Temple1.webp",
+      "/imagesdatabase/historical/Karnak Temple3.webp",
+      "/imagesdatabase/historical/Karnak Temple4.webp"
+    ],
+    "overview": {
+      "description": "Karnak Temple is one of the largest religious buildings ever constructed, covering over 100 hectares. Located in Luxor, it features a vast mix of decayed temples, chapels, pylons, and other buildings. It was primarily dedicated to the Theban triad of Amun, Mut, and Khonsu.",
+      "rating": 4.8,
+      "address": "Luxor City, Luxor Governorate 85958, Egypt",
+      "mapLink": "https://maps.app.goo.gl/iRYPZTi26niwpH389",
+      "mapImage": "/imagesdatabase/historical/Karnak Templemap.webp"
+    },
+    "detail": {
+      "visitingHours": "6:00AM-5:30PM",
+      "entryFees": "EGP 150 for Egyptians, EGP 300 for foreigners",
+      "bestTimeToVisit": "November to March (pleasant weather)",
+      "howToGet": "Fly to Luxor or take a train from Cairo, then use local transport to the temple.",
+      "tips": "Visit early in the morning to avoid heat and crowds. Wear comfortable shoes."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona H.",
+        "date": "May 2025",
+        "content": "A place full of history. The Hypostyle Hall is simply stunning!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "April 2025",
+        "content": "Huge and impressive. Great guide helped bring the place to life.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+
+  {
+    "id": 15,
+    "name": "Valley of the Kings",
+    "category": "Historical",
+        "location":"Giza",
+
+    "image": "/historical/vaiiy.webp",
+    "rate": 3.5,
+    "description": "The burial site of ancient pharaohs, including Tutankhamun, hidden in the Theban hills of Luxor.",
+    "images": [
+      "/imagesdatabase/historical/Valley of the Kings1.webp",
+      "/imagesdatabase/historical/Valley of the Kings2.webp",
+      "/imagesdatabase/historical/Valley of the Kings3.webp",
+      "/imagesdatabase/historical/Valley of the Kings4.jpeg"
+    ],
+    "overview": {
+      "description": "The Valley of the Kings is a royal burial ground for pharaohs and powerful nobles of the New Kingdom. It includes over 60 tombs, most famously that of Tutankhamun. The tombs are carved deep into the desert rock, decorated with scenes from Egyptian mythology.",
+      "rating": 4.7,
+      "address": "Luxor West Bank, Luxor Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XSsouHLM1ZvUkz7R6",
+      "mapImage": "/imagesdatabase/historical/Valley of the Kingsmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "6:00AM-4:00PM",
+      "entryFees": "EGP 160 for Egyptians, EGP 240 for foreigners (general ticket)",
+      "bestTimeToVisit": "October to March (cooler temperatures)",
+      "howToGet": "Accessible by car, minibus, or tour groups from Luxor. Located on the west bank of the Nile.",
+      "tips": "Bring water, wear a hat, and consider hiring a guide for detailed insights into each tomb."
+    },
+    "review": {
+      "review1": {
+        "name": "Layla R.",
+        "date": "March 2025",
+        "content": "The tombs were incredible to see. Photography isn’t allowed inside, but the memories stay.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Tamer F.",
+        "date": "February 2025",
+        "content": "Deeply impressive. Some tombs are closed, but those open are amazing!",
+        "rating": 3.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+
+  {
+    "id": 16,
+    "name": "Citadel of Saladin",
+    "category": "Historical",
+    "image": "/historical/castdel.webp",
+            "location":"Cairo",
+
+    "rate": 3,
+    "description": "A medieval Islamic fort with panoramic views of Cairo and the iconic Mosque",
+    "images": [
+      "/imagesdatabase/historical/Citadel of Saladin1.webp",
+      "/imagesdatabase/historical/Citadel of Saladin2.webp",
+      "/imagesdatabase/historical/Citadel of Saladin3.jpeg",
+      "/imagesdatabase/historical/Citadel of Saladin4.jpeg"
+    ],
+    "overview": {
+      "description": "The Citadel of Saladin is a historic Islamic fortification in Cairo. Built in the 12th century by Salah al-Din, it served as Egypt's seat of government for over 700 years. The Citadel offers panoramic views of Cairo and houses several mosques and museums, including the famous Mosque of Muhammad Ali.",
+      "rating": 4.6,
+      "address": "Al Abageyah, El Khalifa, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mCy99jTqRHGtQ6Hs6",
+      "mapImage": "/imagesdatabase/historical/Citadel of Saladinmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "8:00AM - 5:00PM",
+      "entryFees": "EGP 60 for Egyptians, EGP 180 for foreigners",
+      "bestTimeToVisit": "October to April (pleasant weather)",
+      "howToGet": "Easily accessible by taxi, Uber, or local transportation from central Cairo.",
+      "tips": "Wear comfortable shoes, bring a camera for panoramic shots, and visit early to avoid crowds."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine A.",
+        "date": "April 2025",
+        "content": "The view of Cairo from the top was breathtaking. The mosque inside is beautiful.",
+        "rating": 4.5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Karim H.",
+        "date": "January 2025",
+        "content": "Rich in history and very well preserved. A must-see for any visitor to Cairo.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "name": "Philae Temple",
+    "category": "Historical",
+    "image": "/historical/philia.webp",
+            "location":"Aswan",
+
+    "rate": 4,
+    "description": "A picturesque temple on an island in Aswan, dedicated to the goddess Isis.",
+    "images": [
+      "/imagesdatabase/historical/Philae Temple1.jpeg",
+      "/imagesdatabase/historical/Philae Temple2.webp",
+      "/imagesdatabase/historical/Philae Temple3.webp",
+      "/imagesdatabase/historical/Philae Temple4.webp"
+    ],
+    "overview": {
+      "description": "Philae Temple is one of Egypt’s most beautiful temples, located on Agilkia Island in Aswan. It was moved from its original location to avoid flooding after the construction of the High Dam. The temple is dedicated to the goddess Isis and is known for its stunning reliefs and sound-and-light show.",
+      "rating": 4.5,
+      "address": "Agilkia Island, Aswan Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/rEt5SH4iqe3bD5LD9",
+      "mapImage": "/imagesdatabase/historical/Philae Templemap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "7:00AM-4:00PM",
+      "entryFees": "EGP 40 for Egyptians, EGP 140 for foreigners",
+      "bestTimeToVisit": "October to April (cool and pleasant weather)",
+      "howToGet": "Reachable by boat from the Marina Philae Temple in Aswan.",
+      "tips": "Visit early in the morning to avoid heat, and consider staying for the evening sound-and-light show."
+    },
+    "review": {
+      "review1": {
+        "name": "Noura M.",
+        "date": "March 2025",
+        "content": "Absolutely breathtaking location and history. The boat ride made the experience special.",
+        "rating": 4.5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed T.",
+        "date": "February 2025",
+        "content": "A magical place full of myths and beauty. Must visit when in Aswan.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+
+  {
+    "id": 18,
+    "name": "Egyptian Museum",
+    "category": "Historical",
+    "image": "/historical/The-Grand-Egyptian.jpg",
+            "location":"Cairo",
+
+    "rate": 4.3,
+    "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun.",
+    "images": [
+      "/imagesdatabase/historical/Egyptian Museum2.avif",
+      "/imagesdatabase/historical/Egyptian Museum1.jpeg",
+      "/imagesdatabase/historical/Egyptian Museum3.avif",
+      "/imagesdatabase/historical/Egyptian Museum4.avif"
+    ],
+    "overview": {
+      "description": "Located in Tahrir Square, Cairo, the Egyptian Museum houses an extensive collection of ancient Egyptian antiquities. Among the most famous exhibits are the golden mask and treasures of King Tutankhamun, mummies of pharaohs, and countless statues and relics spanning thousands of years.",
+      "rating": 4.6,
+      "address": "Tahrir Square, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/FVoj927V2wrNsUu96",
+      "mapImage": "/imagesdatabase/historical/Egyptian Museummap.avif"
+    },
+    "detail": {
+      "visitingHours": "9:00AM–5:00PM",
+      "entryFees": "EGP 30 for Egyptians, EGP 200 for foreigners",
+      "bestTimeToVisit": "Weekdays in the morning to avoid crowds",
+      "howToGet": "Easily reachable via Cairo Metro (Sadat Station) or taxi to Tahrir Square.",
+      "tips": "Allow at least 2 hours for your visit; guided tours enhance the experience."
+    },
+    "review": {
+      "review1": {
+        "name": "Hana K.",
+        "date": "April 2025",
+        "content": "Incredible collection! Seeing Tutankhamun’s mask in person is unforgettable.",
+        "rating": 4.5,
+        "avatar": "/sara/person11.jpeg"
+      },
+      "review2": {
+        "name": "Omar Z.",
+        "date": "March 2025",
+        "content": "So much to see, it's overwhelming! Wish there were more labels in English.",
+        "rating": 4,
+        "avatar": "/sara/person12.jpeg"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "name": "Abu Simbel Temples",
+    "category": "Historical",
+    "image": "/historical/planner.jpeg",
+            "location":"Aswan",
+
+    "rate": 4.2,
+    "description": "Massive rock temples of Ramses II relocated to save them from flooding.",
+    "images": [
+      "/imagesdatabase/historical/Abu Simbel Temples1.avif",
+      "/imagesdatabase/historical/Abu Simbel Temples2.jpeg",
+      "/imagesdatabase/historical/Abu Simbel Temples3.webp",
+      "/imagesdatabase/historical/Abu Simbel Temples4.jpeg"
+    ],
+    "overview": {
+      "description": "Located in southern Egypt near the Sudanese border, Abu Simbel Temples are two massive rock temples built by Pharaoh Ramses II. They were relocated in a historic UNESCO operation to avoid submersion due to the Aswan High Dam. The temples are dedicated to Ramses II and his queen Nefertari, and aligned to allow sunlight to illuminate the inner sanctuary twice a year.",
+      "rating": 4.7,
+      "address": "Abu Simbel, Aswan Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/5qfEtYAgyEjSjRN98",
+      "mapImage": "/imagesdatabase/historical/Abu Simbel Templesmap.webp"
+    },
+    "detail": {
+      "visitingHours": "6:00AM–5:00PM",
+      "entryFees": "EGP 40 for Egyptians, EGP 255 for foreigners",
+      "bestTimeToVisit": "February and October during the Sun Festival",
+      "howToGet": "Accessible by road (approx. 3.5 hours from Aswan) or via domestic flight to Abu Simbel Airport.",
+      "tips": "Visit during sunrise for the best lighting and fewer crowds; wear sun protection."
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah M.",
+        "date": "March 2025",
+        "content": "A breathtaking site with incredible history. The scale of the temples is amazing.",
+        "rating": 4.8,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ali F.",
+        "date": "April 2025",
+        "content": "Long trip but totally worth it! Highly recommend catching the Sun Festival if you can.",
+        "rating": 4.6,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 20,
+    "name": "Al-Muizz Street",
+    "category": "Historical",
+        "location":"Cairo",
+
+    "image": "/historical/ALMOUZ.jpg",
+    "rate": 4.7,
+    "description": "A historic area full of mosques, markets, and medieval architecture reflecting Islamic Cairo’s rich heritage.",
+     "images": [
+      "/imagesdatabase/historical/Al-Muizz Street1.jpeg",
+      "/imagesdatabase/historical/Al-Muizz Street2.jpeg",
+      "/imagesdatabase/historical/Al-Muizz Street3.webp",
+      "/imagesdatabase/historical/Al-Muizz Street4.webp"
+    ],
+    "overview": {
+      "description": "Al-Muizz Street is one of the oldest streets in Cairo and is often called an open-air museum. It's lined with stunning examples of Islamic architecture, including mosques, madrasas, and sabils. The street comes alive with local markets, traditional crafts, and vibrant cultural life.",
+      "rating": 4.6,
+      "address": "El-Gamaleya, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mT3yZPNq4mmHWEuF6",
+      "mapImage": "/imagesdatabase/historical/Al-Muizz Streetmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "Open 24 hours (best visited during daylight)",
+      "entryFees": "Free access; some monuments may charge small fees",
+      "bestTimeToVisit": "Late afternoon or evening for cooler weather and ambiance",
+      "howToGet": "Located in central Cairo; accessible via metro (Al-Azhar station) or taxi.",
+      "tips": "Wear comfortable shoes; visit early to avoid crowds and enjoy photography opportunities."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona E.",
+        "date": "May 2025",
+        "content": "Walking through Al-Muizz feels like a journey back in time. The buildings are full of character.",
+        "rating": 4.7,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef K.",
+        "date": "June 2025",
+        "content": "Perfect for history and culture lovers. Lots of beautiful spots to take photos.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 21,
+    "name": "Abu Serga",
+    "category": "Historical",
+    "image": "/historical/elserag.webp",
+            "location":"Cairo",
+
+    "rate": 4.4,
+    "description": "One of the oldest Coptic churches, believed to be visited by the Holy Family during their stay in Egypt.",
+         "images": [
+      "/imagesdatabase/historical/Abu Serga1.webp",
+      "/imagesdatabase/historical/Abu Serga2.jpeg",
+      "/imagesdatabase/historical/Abu Serga3.webp",
+      "/imagesdatabase/historical/Abu Serga4.jpeg"
+    ],
+    "overview": {
+      "description": "Abu Serga Church, also known as Saints Sergius and Bacchus Church, is located in Old Cairo and is considered one of the oldest Coptic churches in Egypt. It holds great religious significance as it is believed to have sheltered the Holy Family during their flight into Egypt. The church features beautiful wooden ceilings, ancient icons, and a crypt where the Holy Family stayed.",
+      "rating": 4.5,
+      "address": "Mar Girgis Street, Old Cairo, Cairo Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/LChvuuHsBnULr6T96",
+      "mapImage": "/imagesdatabase/historical/Abu Sergamap.webp"
+    },
+    "detail": {
+      "visitingHours": "9 AM – 5 PM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Morning hours during weekdays",
+      "howToGet": "Take the Cairo Metro to Mar Girgis Station; the church is a short walk from the station.",
+      "tips": "Dress modestly; photography may be restricted in some areas."
+    },
+    "review": {
+      "review1": {
+        "name": "Nermine S.",
+        "date": "April 2025",
+        "content": "A deeply spiritual place. The atmosphere is peaceful and full of history. Highly recommend a visit.",
+        "rating": 4.8,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Peter A.",
+        "date": "May 2025",
+        "content": "The crypt is a must-see. It's humbling to stand in a place believed to have sheltered the Holy Family.",
+        "rating": 4.6,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 22,
+    "name": "Al-Azhar Mosque",
+    "category": "Historical",
+        "location":"Cairo",
+
+    "image": "/historical/الازهر (2).webp",
+    "rate": 4.8,
+    "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world.",
+         "images": [
+      "/imagesdatabase/historical/Al-Azhar Mosque1.jpg",
+      "/imagesdatabase/historical/Al-Azhar Mosque2.webp",
+      "/imagesdatabase/historical/Al-Azhar Mosque3.webp",
+      "/imagesdatabase/historical/Al-Azhar Mosque4.webp"
+    ],
+    "overview": {
+      "description": "Founded in 970 AD, Al-Azhar Mosque is not only one of the most iconic mosques in Cairo but also a prominent university and one of the world's oldest centers for Islamic education. The mosque's architecture showcases a blend of Fatimid, Mamluk, and Ottoman styles. It remains a spiritual and intellectual hub for Muslims around the globe.",
+      "rating": 4.6,
+      "address": "Al-Azhar Street, Islamic Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/79os6b7bwKzaVRJq7",
+      "mapImage": "/imagesdatabase/historical/Al-Azhar Mosquemap.jpg"
+    },
+    "detail": {
+      "visitingHours": "9 AM – 5 PM (non-prayer times)",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Early morning or late afternoon",
+      "howToGet": "Located near Al-Azhar Street; easily accessible by taxi or by walking from El-Hussein area.",
+      "tips": "Dress modestly, women may need to cover their heads, and respect prayer times."
+    },
+    "review": {
+      "review1": {
+        "name": "Ahmed Z.",
+        "date": "June 2025",
+        "content": "The mosque is breathtaking! Rich in history and still active with students and worshippers. A must-visit in Cairo.",
+        "rating": 4.7,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Fatima R.",
+        "date": "July 2025",
+        "content": "Al-Azhar is more than a mosque — it's a symbol of knowledge and heritage. The courtyards are stunning.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 23,
+    "name": "Hatshepsut Temple",
+    "category": "Historical",
+        "location":"luxor",
+
+    "image": "/historical/vaiiy.webp",
+    "rate": 4.5,
+    "description": "A mortuary temple built for the powerful Queen Hatshepsut, located beneath the cliffs at Deir el-Bahari.",
+   "images": [
+      "/imagesdatabase/historical/Valley of the Kings1.webp",
+      "/imagesdatabase/historical/Valley of the Kings2.webp",
+      "/imagesdatabase/historical/Valley of the Kings3.webp",
+      "/imagesdatabase/historical/Valley of the Kings4.jpeg"
+    ],
+    "overview": {
+      "description": "The Temple of Hatshepsut, also known as Djeser-Djeseru, is a stunning mortuary temple built for the female pharaoh Hatshepsut. It is nestled at the base of the towering cliffs of Deir el-Bahari near the Valley of the Kings. The temple is famous for its unique architecture, terraces, and colonnades that blend beautifully into the surrounding desert landscape.",
+      "rating": 4.8,
+      "address": "Deir el-Bahari, Luxor, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XSsouHLM1ZvUkz7R6",
+      "mapImage": "/imagesdatabase/historical/Valley of the Kingsmap.jpeg"
+    },
+    "detail": {
+      "visitingHours": "6 AM – 5 PM",
+      "entryFees": "160 EGP for adults, 80 EGP for students",
+      "bestTimeToVisit": "Early morning to avoid the heat",
+      "howToGet": "Located in Luxor's West Bank, can be reached via taxi, bus, or organized tours.",
+      "tips": "Wear comfortable shoes, bring water, and try to arrive early to avoid crowds."
+    },
+    "review": {
+      "review1": {
+        "name": "Lena M.",
+        "date": "May 2025",
+        "content": "Incredible architecture and fascinating history. The temple feels surreal, especially in the morning light.",
+        "rating": 4.9,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef T.",
+        "date": "April 2025",
+        "content": "One of the highlights of my visit to Luxor! You can really feel the grandeur of ancient Egypt here.",
+        "rating": 4.7,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 24,
+    "name": "Saqqara Step Pyramid",
+    "category": "Historical",
+    "image": "/historical/Saqqara Step Pyramid.jpg",
+            "location":"Giza",
+
+    "rate": 4,
+    "description": "The oldest known pyramid in Egypt, built for Pharaoh Djoser in the 27th century BC.",
+     "images": [
+      "/Details/historical/1753012412581.jpg",
+      "/Details/historical/camel-1839616_1920.jpg",
+      "/Details/historical/pyramids (3).jpg",
+      "/Details/historical/pyramids (4).jpg"
+    ],
+    "overview": {
+      "description": "The Saqqara Step Pyramid, also known as the Pyramid of Djoser, is considered the earliest colossal stone structure in Egypt. Built during the 27th century BC, it marks a major advancement in ancient Egyptian architecture. It consists of six mastaba-like layers stacked on top of each other and is located in the vast necropolis of Saqqara.",
+      "rating": 4.6,
+      "address": "Saqqara Necropolis, south of Cairo, Egypt",
+       "mapLink": "https://maps.app.goo.gl/Ntc1PRJe2yMBWRHc9",
+      "mapImage": " /Details/historical/Rectangle 7.png"
+    },
+    "detail": {
+      "visitingHours": "8 AM – 5 PM",
+      "entryFees": "180 EGP for adults, 90 EGP for students",
+      "bestTimeToVisit": "Morning hours, especially in cooler months",
+      "howToGet": "Located around 30 km south of Cairo; accessible by taxi or guided tours.",
+      "tips": "Carry water and sun protection; consider combining with nearby tomb visits."
+    },
+    "review": {
+      "review1": {
+        "name": "Daniel K.",
+        "date": "March 2025",
+        "content": "A must-see if you're interested in ancient history. The site is less crowded and gives a raw, authentic feel.",
+        "rating": 4.5,
+        "avatar": "/sara/person23.jpeg"
+      },
+      "review2": {
+        "name": "Salma H.",
+        "date": "February 2025",
+        "content": "The oldest pyramid in Egypt is impressive and full of hidden history. Highly recommend a guide.",
+        "rating": 4.7,
+        "avatar": "/sara/person24.jpeg"
+      }
+    }
+  },  {
+    "id": 25,
+    "name": "Sobhy Kaber",
+    "image": "/food/sobhy.webp",
+    "category": "Food",
+    "location":"Cairo",
+    "rate": 4,
+    "description": "Very popular for grilled meats, kebda, and oriental salads. Busy, authentic Egyptian atmosphere.",
+    "images": [
+      "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg",
+      "/imagesdatabase/Food/Sobhy Kaber2.webp",
+      "/imagesdatabase/Food/Sobhy Kaber3.jpeg",
+      "/imagesdatabase/Food/Sobhy Kaber4.webp"
+    ],
+    "overview": {
+      "description": "Sobhy Kaber is one of the most famous Egyptian restaurants known for its rich, flavorful grilled meats, liver dishes, and traditional side plates. Located in Shubra El Kheima, the restaurant has built a strong reputation for authentic Egyptian cuisine, massive portions, and a lively local atmosphere. It’s a must-try for food lovers seeking a true taste of Cairo.",
+      "rating": 4.5,
+      "address": "151 Obaid Street, Shubra El Kheima, Qalyubia Governorate, Egypt",
+      "mapLink": "https://maps.app.goo.gl/YJUtGMJZ8NyTDzbq9",
+      "mapImage": " /imagesdatabase/Food/Sobhy Kabermap.png"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Evening",
+      "howToGet": "Take metro to Sadat Station, 5 min walk",
+      "tips": "Go early to avoid queues"
+    },
+    "review": {
+      "review1": {
+        "name": "Sarah A.",
+        "date": "July 2025",
+        "content": "Amazing place! Very clean and staff were friendly.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": " June 2025",
+        "content": " Nice experience, but it was a bit crowded.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "name": "Sachi",
+    "image": "/food/suchi.webp",
+    "category": "Food",
+    "location":"Giza",
+    "rate": 5,
+    "description": "Sachi is a high-end restaurant offering a blend of Mediterranean and Asian cuisines in a luxurious atmosphere.",
+    "images": [
+      "/imagesdatabase/Food/Sachi.webp",
+      "/imagesdatabase/Food/Sachi2.webp",
+      "/imagesdatabase/Food/Sachi3.webp",
+      "/imagesdatabase/Food/Sachi4.webp"
+    ],
+    "overview": {
+      "description": "Sachi is a luxurious dining destination known for its fusion of Mediterranean and Asian flavors. With locations in Cairo and Alexandria, the restaurant is celebrated for its elegant ambiance, fine-dining service, and innovative dishes crafted by top chefs. It's a perfect spot for romantic dinners, business meals, or upscale celebrations.",
+      "rating": 5,
+      "address": "23 El-Batal Ahmed Abdel Aziz St, Mohandessin, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/XpNLufo3ykFjZnwa6",
+      "mapImage": "/imagesdatabase/Food/Sachimap.webp"
+    },
+    "detail": {
+      "visitingHours": "1:00 PM - 12:00 AM",
+      "entryFees": "Free (meals priced individually)",
+      "bestTimeToVisit": "Evening or weekends",
+      "howToGet": "Taxi or Uber to Mohandessin, near Shooting Club",
+      "tips": "Make a reservation, especially on weekends. Try the sushi platter."
+    },
+    "review": {
+      "review1": {
+        "name": "Lina M.",
+        "date": "July 2025",
+        "content": "Fantastic service and the food was outstanding. Perfect for date night.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Kareem H.",
+        "date": "June 2025",
+        "content": "Excellent sushi and ambiance. A bit pricey but worth it.",
+        "rating": 4.5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 27,
+    "name": "Abou Tarek",
+    "image": "/food/tark.webp",
+        "category": "Food",
+
+    "rate": 3.5,
+    "location":"Cairo",
+    "description": "The most iconic koshari restaurant in Egypt, known for fast service and authentic flavor.",
+    "images": [
+      "/imagesdatabase/Food/Abou Tarek.webp",
+      "/imagesdatabase/Food/Abou Tarek2.webp",
+      "/imagesdatabase/Food/Abou Tarek3.webp"
+    ],
+    "overview": {
+      "description": "Abou Tarek is a legendary koshari restaurant located in downtown Cairo, serving authentic Egyptian koshari with quick service and generous portions.",
+      "rating": 3.5,
+      "address": "16 Marouf, Qasr El Nil, Cairo Governorate 11513",
+      "mapLink": "https://maps.app.goo.gl/iN8PGgTJa9gRHToX8",
+      "mapImage": "/imagesdatabase/Food/Abou Tarekmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 11:00 PM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Lunch or early dinner hours",
+      "howToGet": "Easily accessible by metro (Sadat Station) or taxi",
+      "tips": "Try their signature koshari dish with extra crispy onions."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona A.",
+        "date": "2024-11-12",
+        "content": "Fast service and the koshari was delicious and filling!",
+        "rate": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-01-05",
+        "content": "It was a bit crowded but totally worth the wait.",
+        "rate": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 28,
+    "name": "Crave",
+    "image": "/food/cearve.jpg",
+        "category": "Food",
+"location":"Cairo",
+    "rate": 4,
+    "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
+    "images": [
+      "/imagesdatabase/Food/Crave.webp",
+      "/imagesdatabase/Food/Crave2.webp",
+      "/imagesdatabase/Food/Crave3.webp",
+      "/imagesdatabase/Food/Crave4.webp"
+    ],
+    "overview": {
+      "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
+      "rating": 4,
+      "address": "Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/GD3ZonLhtm4Bmuik9",
+      "mapImage": "/imagesdatabase/Food/Cravemap.webp"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free",
+      "bestTimeToVisit": "Evening for dinner",
+      "howToGet": "By car or ride-hailing apps like Uber",
+      "tips": "Try their signature pasta and book in advance on weekends."
+    },
+    "review": {
+      "review1": {
+        "name": "Nour Hassan",
+        "date": "2025-07-21",
+        "content": "Lovely place with delicious food. I really enjoyed the ambiance!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar Khaled",
+        "date": "2025-07-18",
+        "content": "Nice experience, though service was a bit slow.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "name": "Zooba",
+    "image": "/food/zooba.webp",
+    "category": "Food",
+    "location":"Cairo",
+    "rate": 4,
+    "description": "Trendy Egyptian street food with a modern twist — koshari, taameya, liver sandwiches, and more.",
+    "images": [
+      "/imagesdatabase/Food/Zooba.webp",
+      "/imagesdatabase/Food/Zooba2.webp",
+      "/imagesdatabase/Food/Zooba3.webp",
+      "/imagesdatabase/Food/Zooba4.webp"
+    ],
+    "overview": {
+      "description": "Zooba is a popular Egyptian eatery that reimagines traditional street food in a stylish, modern setting. From colorful interiors to unique packaging, it's a vibrant take on local favorites.",
+      "rating": 4,
+      "address": "26th July St, Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/gx8bASaF17hYNdzo7",
+      "mapImage": "/imagesdatabase/Food/Zoobamap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free entry, pay for food",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Easily accessible by car or taxi to Zamalek",
+      "tips": "Try the taameya burger and hibiscus drink. Expect some waiting time during peak hours."
+    },
+    "review": {
+      "review1": {
+        "name": "Nourhan F.",
+        "date": "2025-07-15",
+        "content": "Loved the modern twist on classic Egyptian dishes. The taameya sandwich is a must-try!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed M.",
+        "date": "2025-07-10",
+        "content": "Unique concept and delicious food, but the place can get crowded.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 30,
+    "name": "Tamara Lebanese Bistro",
+    "image": "/food/tamara.webp",
+    "category":"Food",
+    "location":"Cairo",
+    "rate": 5,
+    "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
+    "images": [
+      "/imagesdatabase/Food/Tamara Lebanese Bistro.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro2.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro3.webp",
+      "/imagesdatabase/Food/Tamara Lebanese Bistro4.jpeg"
+    ],
+    "overview": {
+      "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
+      "rating": 5,
+      "address": "City Stars, Nasr City, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/VhP6DwZ3xdodmy548",
+      "mapImage": "/imagesdatabase/Food/Tamara Lebanese Bistromap.webp"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Evening and weekends",
+      "howToGet": "Located inside City Stars Mall, accessible by car or Uber",
+      "tips": "Try the mixed grill platter and freshly baked manakeesh."
+    },
+    "review": {
+      "review1": {
+        "name": "Nour A.",
+        "date": "2025-07-22",
+        "content": "Authentic Lebanese flavors and cozy ambiance. Loved the service!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-07-18",
+        "content": "Delicious food and beautiful presentation. Definitely coming back.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 31,
+    "name": "Lucille’s",
+    "image": "/food/lusills.webp",
+    "category": "Food",
+    "location":"Cairo",
+    "rate": 3.5,
+    "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
+    "images": [
+      "/imagesdatabase/Food/Lucille’s.webp",
+      "/imagesdatabase/Food/Lucille’s2.jpg",
+      "/imagesdatabase/Food/Lucille’s3.jpg",
+      "/imagesdatabase/Food/Lucille’s4.webp"
+    ],
+    "overview": {
+      "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
+      "rating": 3.5,
+      "address": "Maadi, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/p1SaEqNic5Bb9Cwc9",
+      "mapImage": "/imagesdatabase/Food/Lucille’smap.webp"
+    },
+    "detail": {
+      "visitingHours": "8:00 AM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Morning for breakfast or evening for dinner",
+      "howToGet": "Located in Maadi, accessible by car or ride-hailing apps",
+      "tips": "Try the pancakes and burgers. Can be crowded on weekends."
+    },
+    "review": {
+      "review1": {
+        "name": "Omar R.",
+        "date": "2025-06-25",
+        "content": "Burgers were amazing, and the service was great. Will come again!",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "name": "Sara M.",
+        "date": "2025-07-01",
+        "content": "Good food but a bit overpriced for what you get.",
+        "rating": 3,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
+  },
+  {
+    "id": 32,
+    "name": "Kazoku",
+    "image": "/food/kazuka.png",
+    "category":"Food",
+    "location":"Giza",
+    "rate": 4,
+    "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
+    "images": [
+      "/imagesdatabase/Food/Kazoku.webp",
+      "/imagesdatabase/Food/Kazoku2.webp",
+      "/imagesdatabase/Food/Kazoku3.webp",
+      "/imagesdatabase/Food/Kazoku4.webp"
+    ],
+    "overview": {
+      "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
+      "rating": 4,
+      "address": "New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/kbuHa4tGyT5QaX4d6",
+      "mapImage": "/imagesdatabase/Food/Kazokumap.webp"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry",
+      "bestTimeToVisit": "Evening",
+      "howToGet": "Located in New Cairo, reachable by car or taxi",
+      "tips": "Reserve in advance for dinner, try the robata grill."
+    },
+    "review": {
+      "review1": {
+        "name": "Mona F.",
+        "date": "2025-07-15",
+        "content": "Amazing sushi and great ambiance. A bit pricey but worth it.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Karim H.",
+        "date": "2025-06-28",
+        "content": "Service was excellent. Loved the cocktails and the music.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id":33,
+    "name": "Pier 88",
+    "image": "/food/pier.webp",
+    "category": "Food",
+    "location":"Cairo",
+    "rate": 5,
+    "description": "Elegant Mediterranean/Italian restaurant with great views and a celebrity vibe.",
+    "images": [
+      "/imagesdatabase/Food/Pier 88.webp",
+      "/imagesdatabase/Food/Pier 882.webp",
+      "/imagesdatabase/Food/Pier 883.jpg",
+      "/imagesdatabase/Food/Pier 884.jpg"
+    ],
+    "overview": {
+      "description": "Pier 88 is an upscale Mediterranean and Italian restaurant offering delicious food, stylish ambiance, and a celebrity-favored experience. Located by the Nile, it’s perfect for a luxurious dining night.",
+      "rating": 5,
+      "address": "Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mHSZTzrTtiqRFVSs8",
+      "mapImage": "/imagesdatabase/Food/Pier 88map.webp"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "No entry fee, but reservation recommended",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located in Zamalek, accessible by car or taxi",
+      "tips": "Book in advance, wear smart casual, and enjoy the riverside view."
+    },
+    "review": {
+      "review1": {
+        "name": "Sara Adel",
+        "date": "2025-06-10",
+        "content": "Great food and beautiful views! The seafood pasta was perfect.",
+        "rate": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Youssef Gamal",
+        "date": "2025-07-15",
+        "content": "Loved the ambiance and music. A bit pricey but worth it for a special night.",
+        "rate": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 34,
+    "name": "Abou El Sid",
+    "image": "/food/abou elsid.webp",
+    "category": "Food",
+    "location":"Giza",
+    "rate": 4.5,
+    "description": "A nostalgic Egyptian dining experience with traditional recipes and Oriental decor.",
+    "images": [
+      "/imagesdatabase/Food/Abou El Sid.webp",
+      "/imagesdatabase/Food/Abou El Sid2.webp",
+      "/imagesdatabase/Food/Abou El Sid3.webp",
+      "/imagesdatabase/Food/Abou El Sid4.webp"
+    ],
+    "overview": {
+      "description": "Abou El Sid offers an authentic Egyptian experience with classic dishes, vintage ambiance, and Oriental music. It's perfect for those seeking the true taste of Egypt.",
+      "rating": 4.5,
+      "address": "157 26th of July Corridor, Zamalek, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/qdzrnjHUS1TzRTng8",
+      "mapImage": "/imagesdatabase/Food/Abou El Sidmap.webp/maps/abouelsid_map.jpg"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 12:00 AM",
+      "entryFees": "Free entry (based on orders)",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located in Zamalek, reachable by taxi or ride-hailing apps",
+      "tips": "Try the molokhia and stuffed vine leaves. It's a popular place, so booking is recommended."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine M.",
+        "date": "2025-07-18",
+        "content": "The food was delicious and the ambiance is unmatched. Loved the traditional music and decorations!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-06-30",
+        "content": "Great spot for classic Egyptian dishes. A bit crowded on weekends but worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 35,
+    "name": "Sequoia",
+    "image": "/food/Sequoia.webp",
+    "category":"Food",
+    "location":"Cairo",
+    "rate": 4.5,
+    "description": "Upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting.",
+    "images": [
+      "/imagesdatabase/Food/Sequoia.webp",
+      "/imagesdatabase/Food/Sequoia2.webp",
+      "/imagesdatabase/Food/Sequoia.webp",
+      "/imagesdatabase/Food/Sequoia2.webp"
+    ],
+    "overview": {
+      "description": "Sequoia is an upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting. Perfect for sunset dinners with a scenic view.",
+      "rating": 4.5,
+      "address": "53 Abou El Feda St., Zamalek, Cairo",
+      "mapLink": "https://maps.app.goo.gl/8wuqijd8BGLoceq17",
+      "mapImage": "/imagesdatabase/Food/Sobhy Kabermap.png"
+    },
+    "detail": {
+      "visitingHours": "12:00 PM - 1:00 AM",
+      "entryFees": "No entry fee, pay per meal",
+      "bestTimeToVisit": "Sunset and evening",
+      "howToGet": "By taxi or Uber to Zamalek",
+      "tips": "Make a reservation in advance and try the seafood platter."
+    },
+    "review": {
+      "review1": {
+        "name": "Yasmine Khaled",
+        "date": "2025-07-18",
+        "content": "One of my favorite spots in Cairo! The view is amazing and the food is delicious.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar Hany",
+        "date": "2025-06-22",
+        "content": "A bit pricey, but the ambiance and view make it worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 36,
+    "name": "Naguib Mahfouz Cafe",
+    "image": "/food/Naguib Mahfouz Cafe.webp",
+    "category": "Food",
+    "location":"Cairo",
+    "rate": 4,
+    "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
+    "images": [
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe2.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe3.webp",
+      "/imagesdatabase/Food/Naguib Mahfouz Cafe4.webp"
+    ],
+    "overview": {
+      "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
+      "rating": 4,
+      "address": "Khan El Khalili, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/D9XUx8sMxxFsXU5F6",
+      "mapImage": "/imagesdatabase/Food/Naguib Mahfouz Cafemap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 12:00 AM",
+      "entryFees": "Free (Dining Costs Apply)",
+      "bestTimeToVisit": "Evenings and weekends",
+      "howToGet": "Located inside Khan El Khalili bazaar area",
+      "tips": "Try the traditional Egyptian tea and reserve in advance on weekends."
+    },
+    "review": {
+      "review1": {
+        "name": "Layla M.",
+        "date": "2025-07-20",
+        "content": "Perfect atmosphere, felt like I was in old Cairo. Food is authentic!",
+        "rate": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Ahmed S.",
+        "date": "2025-06-15",
+        "content": "A bit crowded, but the service and food were excellent.",
+        "rate": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+    {
+    "id": 37,
+    "name": "Dream Park",
+    "image": "/entertainment/dream.jpg",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4,
+    "description": "One of the largest amusement parks in Egypt. Offers thrill rides, family-friendly zones, and live shows.",
+    "images": [
+      "/imagesdatabase/entertainment/Dream Park.webp",
+      "/imagesdatabase/entertainment/Dream Park2.webp",
+      "/imagesdatabase/entertainment/Dream Park3.webp",
+      "/imagesdatabase/entertainment/Dream Park4.webp"
+    ],
+    "overview": {
+      "description": "Dream Park is one of Egypt’s largest and most popular amusement parks, located on Wahat Road in the Dreamland Compound, 6th of October City, Giza. Established in 1999 and spanning over 150 acres, the park is divided into three main zones: Kids Zone, Family Zone, and Thrill Zone — offering more than 30 attractions ranging from gentle rides to intense roller coasters. It features an inverted roller coaster with five loops, 5D and 7D simulators, bumper cars, a Ferris wheel, Go-Karts, and a famous Horror House.",
+      "rating": 4.8,
+      "address": "Wahat Road, Dreamland Compound, 6th of October City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/vmcvMWv8Dv4SeL566",
+      "mapImage": "/imagesdatabase/entertainment/Dream Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10 AM – 9/10 PM",
+      "entryFees": "EGP 120–239",
+      "bestTimeToVisit": "Spring (March–May) and Autumn (October–November",
+      "howToGet": "From Downtown Cairo: approx. 45–60 minutes",
+      "tips": "Go early to avoid queues"
+    },
+    "review": {
+      "review1": {
+        "user": "Sarah A.",
+        "date": "July 2025",
+        "content": "Great for families. Kids loved it. Camel ride was fun but overpriced.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": " Ahmed M.",
+        "date": "June 2025",
+        "content": "Absolutely breathtaking! A must-see. Go early to avoid crowds",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 38,
+    "name": "KidZania",
+    "image": "/entertainment/kidzaina.jpg",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 5,
+    "description": "An educational entertainment city where kids role-play real-life jobs in a safe and fun environment",
+    "images": [
+      "/imagesdatabase/entertainment/KidZania.webp",
+      "/imagesdatabase/entertainment/KidZania2.webp",
+      "/imagesdatabase/entertainment/KidZania3.webp",
+      "/imagesdatabase/entertainment/KidZania4.webp"
+    ],
+    "overview": {
+      "description": "KidZania is a miniature city built for children, offering interactive role-play experiences where kids can try out real-world professions like doctors, firefighters, chefs, and more in a safe and fun environment.",
+      "rating": 5,
+      "address": "Cairo Festival City Mall, New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/LXDWjz7WEuEf8Sza7",
+      "mapImage": "/imagesdatabase/entertainment/KidZaniamap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 8:00 PM",
+      "entryFees": "Children: EGP 300, Adults: EGP 100",
+      "bestTimeToVisit": "Weekdays for less crowd or weekends for full experience",
+      "howToGet": "Accessible via car or taxi to Cairo Festival City Mall",
+      "tips": "Let your kids explore independently; wear comfortable shoes; book tickets online to skip queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Noha M.",
+        "date": "2025-07-15",
+        "content": "A fantastic place for kids to learn and play! My daughter loved being a mini doctor.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Ahmed R.",
+        "date": "2025-07-10",
+        "content": "Great concept and very well organized. My son had an amazing time role-playing as a firefighter.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 39,
+    "name": "Magic Planet",
+    "image": "/entertainment/magic.jpg",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 3.5,
+    "description": "Indoor fun center with arcade games, bumper cars, and 7D cinema.",
+    "images": [
+      "/imagesdatabase/entertainment/Magic Planet.webp",
+      "/imagesdatabase/entertainment/Magic Planet2.webp",
+      "/imagesdatabase/entertainment/Magic Planet3.webp",
+      "/imagesdatabase/entertainment/Magic Planet4.webp"
+    ],
+    "overview": {
+      "description": "Magic Planet is an indoor amusement center featuring arcade games, bumper cars, and thrilling 7D cinema experiences. It's a great destination for families and kids looking for indoor fun.",
+      "rating": 3.5,
+      "address": "Citystars, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/vrjQesnYFF4iqRt98",
+      "mapImage": "/imagesdatabase/entertainment/Magic Planetmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 10:00 PM",
+      "entryFees": "Free entry, games priced individually",
+      "bestTimeToVisit": "Afternoons and weekends",
+      "howToGet": "Accessible by car or  transportation to Citystars Mall",
+      "tips": "Top up your game card in advance to save time. Great place for birthday parties."
+    },
+    "review": {
+      "review1": {
+        "user": "Ahmed",
+        "date": "2025-05-20",
+        "content": "Kids loved the games and 7D cinema! Very entertaining for a few hours.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Salma",
+        "date": "2025-06-10",
+        "content": "Fun place but a bit crowded on weekends. Games are slightly expensive.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 40,
+    "name": "Vox Cinemas",
+    "image": "/entertainment/vox.webp",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4,
+    "description": "Modern cinemas featuring IMAX, VIP lounges, and the latest movies.",
+    "images": [
+      "/imagesdatabase/entertainment/Vox Cinemas.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas2.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas3.webp",
+      "/imagesdatabase/entertainment/Vox Cinemas4.webp"
+    ],
+    "overview": {
+      "description": "Vox Cinemas is a state-of-the-art movie theater offering a premium cinema experience with IMAX screens, VIP seating, gourmet snacks, and the latest blockbuster films. Located in top malls across Egypt, it's the go-to destination for movie lovers.",
+      "rating": 4.2,
+      "address": "Mall of Egypt, 6th of October City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/4guMxTxnS3adSYgX7",
+      "mapImage": "/imagesdatabase/entertainment/Vox Cinemasmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM – 12:00 AM",
+      "entryFees": "EGP 100–250 depending on seat type and movie format",
+      "bestTimeToVisit": "Evenings and weekends for new releases",
+      "howToGet": "Accessible via Ring Road to Mall of Egypt, with on-site parking available",
+      "tips": "Book VIP or MAX screens online in advance for the best seats and avoid long queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Mona",
+        "date": "2025-06-22",
+        "content": "Great sound and picture quality! The VIP lounge is very comfortable.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Tarek",
+        "date": "2025-07-01",
+        "content": "Nice experience overall, but snacks are overpriced.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 41,
+    "name": "Mall of Egypt",
+    "image": "/entertainment/mallegypt.webp",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4,
+    "description": "A full entertainment mall with shopping, restaurants, and Ski Egypt – the first indoor ski slope in Africa.",
+    "images": [
+      "/imagesdatabase/entertainment/Mall of Egypt.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt2.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt3.webp",
+      "/imagesdatabase/entertainment/Mall of Egypt4.webp"
+    ],
+    "overview": {
+      "description": "Mall of Egypt offers a wide range of shopping, dining, and entertainment options, including Africa's first indoor ski slope – Ski Egypt.",
+      "rating": 4,
+      "address": "Al Wahat Road, 6th of October City, Egypt",
+      "mapLink": "https://maps.app.goo.gl/mwbY3ijrYq8paYV46",
+      "mapImage": "/imagesdatabase/entertainment/Mall of Egyptmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 12:00 AM",
+      "entryFees": "Free (additional charges for Ski Egypt and entertainment zones)",
+      "bestTimeToVisit": "Weekdays to avoid crowd",
+      "howToGet": "By car, Uber, or taxi from anywhere in Cairo",
+      "tips": "Plan your visit to include both shopping and indoor skiing for a full experience."
+    },
+    "review": {
+      "review1": {
+        "user": "Nada Hassan",
+        "date": "2025-07-15",
+        "content": "A great place to hang out, shop, and enjoy Ski Egypt. Loved the food court too!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Sherif Adel",
+        "date": "2025-07-11",
+        "content": "Very spacious and clean mall. A bit pricey but worth visiting.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 42,
+    "name": "ZED Park",
+    "image": "/entertainment/zed.webp",
+    "category": "Entertainment",
+    "location":"Giza",
+    "rate": 5,
+    "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events.",
+    "images": [
+      "/imagesdatabase/entertainment/ZED Park.webp",
+      "/imagesdatabase/entertainment/ZED Park2.webp",
+      "/imagesdatabase/entertainment/ZED Park3.webp",
+      "/imagesdatabase/entertainment/ZED Park4.webp"
+    ],
+    "overview": {
+      "description": "Family-friendly park with amusement rides, water games, restaurants, and live music events.",
+      "rating": 5,
+      "address": "Sheikh Zayed City, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/bVAPDEfJFumAicQk8",
+      "mapImage": "/imagesdatabase/entertainment/ZED Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 11:00 PM",
+      "entryFees": "$5 (some activities not included)",
+      "bestTimeToVisit": "Afternoons and event days",
+      "howToGet": "By car, Uber, or taxi",
+      "tips": "Check the schedule for concerts and shows before visiting."
+    },
+    "review": {
+      "review1": {
+        "user": "Salma H.",
+        "date": "2025-06-20",
+        "content": "Loved the rides and the concert was amazing!",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Khaled R.",
+        "date": "2025-06-15",
+        "content": "Perfect for families, especially in the evening.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 43,
+    "name": "Family Park",
+    "image": "/entertainment/family.webp",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 3.5,
+    "description": "Large open park with water play areas, a train ride, and various kids' activities.",
+    "images": [
+      "/imagesdatabase/entertainment/Family Park.webp",
+      "/imagesdatabase/entertainment/Family Park2.webp",
+      "/imagesdatabase/entertainment/Family Park3.webp",
+      "/imagesdatabase/entertainment/Family Park4.webp"
+    ],
+    "overview": {
+      "description": "A spacious family park with playgrounds, a kids' train ride, and interactive play zones. Ideal for relaxed outdoor fun.",
+      "rating": 3.5,
+      "address": "New Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/eMMA4RhhuGTjkVvN9",
+      "mapImage": "/imagesdatabase/entertainment/Family Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 10:00 PM",
+      "entryFees": "$3 per person",
+      "bestTimeToVisit": "Early morning or late afternoon",
+      "howToGet": "Easily accessible via car or Uber in New Cairo",
+      "tips": "Bring snacks and water, limited food vendors inside. Great for picnics."
+    },
+    "review": {
+      "review1": {
+        "user": "Sara H.",
+        "date": "2025-07-01",
+        "content": "Nice green space, affordable, and my kids enjoyed the train!",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Mohamed T.",
+        "date": "2025-06-15",
+        "content": "Could use more activities, but it's peaceful and great for families.",
+        "rating": 3,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 44,
+    "name": "Al-Azhar Park",
+    "image": "/entertainment/alazhar.webp",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4,
+    "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails",
+    "images": [
+      "/imagesdatabase/entertainment/Al-Azhar Park.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park2.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park3.webp",
+      "/imagesdatabase/entertainment/Al-Azhar Park4.webp"
+    ],
+    "overview": {
+      "description": "Beautiful green space with panoramic views of historic Cairo, upscale restaurants, and walking trails",
+      "rating": 4,
+      "address": "Salah Salem Street, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/UZzhLjxCw6cz8EeJ8",
+      "mapImage": "/imagesdatabase/entertainment/Al-Azhar Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 10:00 PM",
+      "entryFees": "$1.5 for locals, $3 for foreigners",
+      "bestTimeToVisit": "Late afternoon for sunset view",
+      "howToGet": "By taxi or Uber from central Cairo",
+      "tips": "Bring your camera, and enjoy a meal at the lakefront restaurant."
+    },
+    "review": {
+      "review1": {
+        "user": "Mona",
+        "date": "2025-03-18",
+        "content": "Wonderful park with amazing views. A perfect place to relax away from the city's chaos.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Ahmed Z.",
+        "date": "2025-05-04",
+        "content": "Loved the ambiance and food. Great for couples and families alike.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
+  },
+  {
+    "id": 45,
+    "name": "Giza Zoo",
+    "image": "/entertainment/zoo.webp",
+    "category": "Entertainment",
+"location":"Giza",
+    "rate": 5,
+    "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids.",
+    "images": [
+      "/imagesdatabase/entertainment/Giza Zoo.webp",
+      "/imagesdatabase/entertainment/Giza Zoo2.webp",
+      "/imagesdatabase/entertainment/Giza Zoo3.webp",
+      "/imagesdatabase/entertainment/Giza Zoo4.webp"
+    ],
+    "overview": {
+      "description": "The oldest zoo in Africa, offering a fun and educational visit for families and kids.",
+      "rating": 5,
+      "address": "Charles De Gaulle Street, Giza, Egypt",
+      "mapLink": "https://maps.app.goo.gl/BRyizrghuHS3M6nu6",
+      "mapImage": "/imagesdatabase/entertainment/Giza Zoomap.webp"
+    },
+    "detail": {
+      "visitingHours": "8:30 AM - 4:00 PM",
+      "entryFees": "$1",
+      "bestTimeToVisit": "Weekdays in the morning",
+      "howToGet": "By metro to Giza station, then short walk",
+      "tips": "Bring your own water and wear comfortable shoes."
+    },
+    "review": {
+      "review1": {
+        "name": "Hassan Ali",
+        "date": "2025-07-03",
+        "content": "Very enjoyable experience with lots of animals to see.",
+        "rating": 5,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "name": "Aya Gamal",
+        "date": "2025-07-15",
+        "content": "Great for kids but needs some renovation in areas.",
+        "rating": 4,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
+  },
+  {
+    "id": 46,
+    "name": "Butterfly Garden",
+    "image": "/entertainment/buttterfly.jpeg",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4.5,
+    "description": "An interactive experience where visitors can walk among free-flying butterflies in a natural habitat.",
+    "images": [
+      "/imagesdatabase/entertainment/Butterfly Garden.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden2.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden3.webp",
+      "/imagesdatabase/entertainment/Butterfly Garden4.webp"
+    ],
+    "overview": {
+      "description": "Butterfly Garden offers a serene and magical environment where you can walk among hundreds of colorful butterflies in a climate-controlled dome. It's an educational and relaxing experience for all ages.",
+      "rating": 4.5,
+      "address": "Zabeel Park, Dubai, UAE",
+      "mapLink": "https://maps.app.goo.gl/zmQDs4KQm66LjhqE8",
+      "mapImage": "/imagesdatabase/entertainment/Butterfly Gardenmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 6:00 PM",
+      "entryFees": "$15",
+      "bestTimeToVisit": "November to April",
+      "howToGet": "Accessible by taxi or Metro (Al Jafiliya Station)",
+      "tips": "Wear light clothing, and bring a camera for amazing butterfly shots."
+    },
+    "review": {
+      "review1": {
+        "user": "Sarah M.",
+        "date": "2025-07-20",
+        "content": "A peaceful and beautiful place. The butterflies were everywhere! Great for kids too.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "user": "Omar T.",
+        "date": "2025-07-18",
+        "content": "Loved the experience, but it was a bit crowded during the weekend.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+
+  {
+    "id": 47,
+    "name": "Africa Safari Park",
+    "image": "/entertainment/afrcaina.jpg",
+    "category": "Entertainment",
+"location":"luxor",
+    "rate": 4.5,
+    "description": "A unique drive-thru safari experience where visitors can see wild animals up close in a natural environment.",
+    "images": [
+      "/imagesdatabase/entertainment/Africa Safari Park.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park2.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park3.webp",
+      "/imagesdatabase/entertainment/Africa Safari Park4.webp"
+    ],
+    "overview": {
+      "description": "Africa Safari Park offers a thrilling drive-thru safari where visitors can encounter lions, giraffes, zebras, and more in a natural-style habitat. Ideal for families and wildlife enthusiasts.",
+      "rating": 4.5,
+      "address": "Cairo-Alexandria Desert Road, Egypt",
+      "mapLink": "https://maps.app.goo.gl/erArrxwMSi4CtKxj9",
+      "mapImage": "/imagesdatabase/entertainment/Africa Safari Parkmap.webp"
+    },
+    "detail": {
+      "visitingHours": "9:00 AM - 5:00 PM",
+      "entryFees": "Adults: EGP 250, Children: EGP 150",
+      "bestTimeToVisit": "October to April",
+      "howToGet": "Accessible by private car or taxi via the Cairo-Alex Desert Road.",
+      "tips": "Bring a camera, stay inside your vehicle during safari, and avoid feeding the animals."
+    },
+    "review": {
+      "review1": {
+        "name": "Salma A.",
+        "date": "2025-06-15",
+        "content": "A wonderful adventure for the whole family! The animals are well cared for and the park is clean.",
+        "rating": 5,
+        "avatar": "/sara/person.jpeg"
+      },
+      "review2": {
+        "name": "Omar K.",
+        "date": "2025-05-28",
+        "content": "Loved the close encounters with giraffes! It's a bit pricey but definitely worth it.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      }
+    }
+  },
+  {
+    "id": 48,
+    "name": "Aqua Park Cairo",
+    "image": "/entertainment/Aqua Park Cairo.webp",
+    "category": "Entertainment",
+"location":"Cairo",
+    "rate": 4,
+    "description": "A large water park featuring pools, slides, and attractions suitable for all ages.",
+    "images": [
+      "/imagesdatabase/entertainment/Aqua Park Cairo.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo2.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo3.webp",
+      "/imagesdatabase/entertainment/Aqua Park Cairo4.webp"
+    ],
+    "overview": {
+      "description": "Aqua Park Cairo offers a thrilling water adventure with multiple pools, high-speed slides, and attractions for all ages, perfect for family fun and summer excitement.",
+      "rating": 4,
+      "address": "Ismailia Desert Road, Cairo, Egypt",
+      "mapLink": "https://maps.app.goo.gl/JiFkK7Arj3W581ueA",
+      "mapImage": "/imagesdatabase/entertainment/Aqua Park Cairomap.webp"
+    },
+    "detail": {
+      "visitingHours": "10:00 AM - 6:00 PM",
+      "entryFees": "Adults: EGP 200, Children: EGP 150",
+      "bestTimeToVisit": "June to September",
+      "howToGet": "By car or local transportation from Cairo center towards Ismailia Road.",
+      "tips": "Bring sunscreen, swimwear, and arrive early to enjoy all rides without long queues."
+    },
+    "review": {
+      "review1": {
+        "user": "Hassan M.",
+        "date": "2024-07-12",
+        "content": "Great water park with plenty of attractions for kids and adults. Very clean and well-maintained.",
+        "rating": 4,
+        "avatar": "/sara/person2.jpeg"
+      },
+      "review2": {
+        "user": "Dina F.",
+        "date": "2024-08-01",
+        "content": "Fun place but gets really crowded on weekends. Go on weekdays if possible!",
+        "rating": 3.5,
+        "avatar": "/sara/person.jpeg"
+      }
+    }
+  }
+
+]

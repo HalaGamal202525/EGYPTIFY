@@ -56,9 +56,12 @@ import PackageDetails from '../Pages/PackageDetails.vue'
 import favorite from '../Pages/favorite.vue'
 import EventList from '../Pages/EventList.vue'
 import EventDetails from '../Pages/EventDetails.vue'
-import path from 'path'
 import BookingProcess from '../Pages/BookingProcess.vue'
 import BookingProcessInfo from '../Pages/BookingProcessInfo.vue';
+import hotels from '../Pages/hotels.vue'
+import hotelsdetails from "../Pages/hoteldetail.vue"
+import Resturantlist from '../Pages/resturantlist.vue'
+// import Resturantdetails from '../Pages/resturantdetails.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -196,6 +199,10 @@ component:FoodDetail
     name: 'EventCalendar',
     component: EventCalendarPage
   },
+  {
+    path: '/events/:id', 
+    component: EventDetails
+  },
 
   {
     path:"/offerpage",component:offergrid
@@ -210,7 +217,23 @@ component:FoodDetail
   name: 'Destination Page',
   component: DestinationPage
 },
+{path:"/hotels",component:hotels},
 {
+  path: '/hotel/:slug',
+  name: 'HotelDetails',
+  component: () => import('../Pages/hoteldetail.vue')
+}  ,
+{
+  path:"/resturant",
+  component:Resturantlist
+},
+{
+  path: '/restaurants/:slug',
+  name: 'restaurant-details',
+  component: () => import('../Pages/resturantdetails.vue')
+},
+
+  {
   path: '/transportation-booking',
   name: '/TransportationBooking',
   component: TransportationBooking
@@ -231,7 +254,7 @@ component:FoodDetail
   component: TransportationConfirmation
 },
 {
-  path: '/destination/:slug',
+  path: '/destination/:id',
   name: '/DestinationDetails',
   component: DestinationDetailsPage
 },

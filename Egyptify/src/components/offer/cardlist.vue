@@ -48,14 +48,14 @@
         <div class="text-base font-medium text-gray-700 mb-2">
           {{ data.moredetail || 'المزيد من التفاصيل' }}
         </div>
-        <BaseButton class="w-full text-sm py-2" @click="gotobooking">Book Now </BaseButton>
+        <BookNowButton :restaurant="data"   class="w-full text-sm py-2"/>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import BaseButton from '../BaseButton.vue';
+import BookNowButton from '../booknowbutton.vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();
 const gotobooking=()=>{

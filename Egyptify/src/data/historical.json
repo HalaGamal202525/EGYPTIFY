@@ -4,6 +4,8 @@
     "name": "Pyramids of Giza",
     "category": "Historical",
     "image": "/historical/pyramids (4).jpg",
+        "location":"Giza",
+
     "rate": 4,
     "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza",
     "images": [
@@ -47,6 +49,8 @@
     "id": 2,
     "name": "Karnak Temple",
     "category": "Historical",
+            "location":"luxor",
+
     "image": "/historical/karnak.webp",
     "rate": 5,
     "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods.",
@@ -92,6 +96,7 @@
     "id": 3,
     "name": "Valley of the Kings",
     "category": "Historical",
+        "location":"Giza",
 
     "image": "/historical/vaiiy.webp",
     "rate": 3.5,
@@ -139,7 +144,9 @@
     "name": "Citadel of Saladin",
     "category": "Historical",
     "image": "/historical/castdel.webp",
-    "rate": 4,
+            "location":"Cairo",
+
+    "rate": 3,
     "description": "A medieval Islamic fort with panoramic views of Cairo and the iconic Mosque",
     "images": [
       "/imagesdatabase/historical/Citadel of Saladin1.webp",
@@ -183,6 +190,8 @@
     "name": "Philae Temple",
     "category": "Historical",
     "image": "/historical/philia.webp",
+            "location":"Aswan",
+
     "rate": 4,
     "description": "A picturesque temple on an island in Aswan, dedicated to the goddess Isis.",
     "images": [
@@ -228,7 +237,9 @@
     "name": "Egyptian Museum",
     "category": "Historical",
     "image": "/historical/The-Grand-Egyptian.jpg",
-    "rate": 4,
+            "location":"Cairo",
+
+    "rate": 4.3,
     "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun.",
     "images": [
       "/imagesdatabase/historical/Egyptian Museum2.avif",
@@ -272,7 +283,9 @@
     "name": "Abu Simbel Temples",
     "category": "Historical",
     "image": "/historical/planner.jpeg",
-    "rate": 4,
+            "location":"Aswan",
+
+    "rate": 4.2,
     "description": "Massive rock temples of Ramses II relocated to save them from flooding.",
     "images": [
       "/imagesdatabase/historical/Abu Simbel Temples1.avif",
@@ -315,9 +328,10 @@
     "id": 8,
     "name": "Al-Muizz Street",
     "category": "Historical",
+        "location":"Cairo",
 
     "image": "/historical/ALMOUZ.jpg",
-    "rate": 4,
+    "rate": 4.7,
     "description": "A historic area full of mosques, markets, and medieval architecture reflecting Islamic Cairo’s rich heritage.",
      "images": [
       "/imagesdatabase/historical/Al-Muizz Street1.jpeg",
@@ -361,7 +375,9 @@
     "name": "Abu Serga",
     "category": "Historical",
     "image": "/historical/elserag.webp",
-    "rate": 4,
+            "location":"Cairo",
+
+    "rate": 4.4,
     "description": "One of the oldest Coptic churches, believed to be visited by the Holy Family during their stay in Egypt.",
          "images": [
       "/imagesdatabase/historical/Abu Serga1.webp",
@@ -404,9 +420,10 @@
     "id": 10,
     "name": "Al-Azhar Mosque",
     "category": "Historical",
+        "location":"Cairo",
 
     "image": "/historical/الازهر (2).webp",
-    "rate": 4,
+    "rate": 4.8,
     "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world.",
          "images": [
       "/imagesdatabase/historical/Al-Azhar Mosque1.jpg",
@@ -449,6 +466,7 @@
     "id": 11,
     "name": "Hatshepsut Temple",
     "category": "Historical",
+        "location":"luxor",
 
     "image": "/historical/vaiiy.webp",
     "rate": 4.5,
@@ -495,6 +513,8 @@
     "name": "Saqqara Step Pyramid",
     "category": "Historical",
     "image": "/historical/Saqqara Step Pyramid.jpg",
+            "location":"Giza",
+
     "rate": 4,
     "description": "The oldest known pyramid in Egypt, built for Pharaoh Djoser in the 27th century BC.",
      "images": [

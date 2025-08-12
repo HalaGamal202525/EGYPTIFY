@@ -36,7 +36,7 @@
       <!-- كروت النقل والفندق -->
       <div class="flex flex-wrap gap-6 justify-center my-4">
         <!-- كارت وسيلة النقل -->
-        <div
+        <!-- <div
           class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
         >
           <img
@@ -76,47 +76,91 @@
               <span class="font-bold">Price:</span> {{ transport.price }} EGP
             </p>
           </div>
-        </div>
+        </div> -->
 
-        <!-- كارت الفندق -->
-        <div
-          class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
-        >
-          <img
-            :src="hotel.image"
-            alt="Hotel Image"
-            class="w-full h-48 rounded-2xl object-cover"
-          />
-          <div class="py-4 space-y-2">
-            <h2 class="text-xl font-bold text-gray-800">{{ hotel.name }}</h2>
-            <p class="text-gray-600">
-              <span class="font-semibold">Location:</span> {{ hotel.location }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Check-in:</span> {{ hotel.checkin }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Check-out:</span> {{ hotel.checkout }}
-            </p>
-            <p class="flex flex-wrap text-gray-600">
-              <span class="font-semibold">Rating:</span> {{ hotel.rating }} ⭐
-              &nbsp;&nbsp;&nbsp;<span class="font-semibold">Room Type:</span>
-              {{ hotel.roomType }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Guests:</span> Up to
-              {{ hotel.guests }} people
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Facilities:</span>
-              {{ hotel.facilities.join(", ") }}
-            </p>
-            <p class="text-gray-900 font-bold text-lg">
-              <span class="font-bold">Price:</span> {{ hotel.price }} EGP /
-              night
-            </p>
-          </div>
-        </div>
+ <!-- كارت الفندق -->
+<div
+  class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
+>
+<div v-if="hotel">
+  <!-- باقي بيانات الفندق -->
+   <div class="py-4 space-y-2">
+    <h2 class="text-xl font-bold text-gray-800">{{hotel.name }}</h2>
+    <p class="text-gray-600">
+    {{ hotel.location }}
+    </p>
+    <p class="text-gray-600">
+      <span class="font-semibold">Check-in:</span> {{ bookingStore.dates.checkIn  }}
+    </p>
+
+    <p class="text-gray-600">
+      <span class="font-semibold">Check-out:</span> {{bookingStore.dates.checkOut }}
+    </p>
+    <p>
+  <span class="font-semibold">Room Type:</span>
+  {{ bookingStore.roomType }}
+</p>
+
+<p class="text-gray-600">
+  <span class="font-semibold">Guests:</span> Up to
+  {{ bookingStore.guests }} people
+</p>
+
+<p class="text-gray-900 font-bold text-lg">
+  <span class="font-bold">Price:</span> {{ bookingStore.price }} EGP / night
+</p>
+  </div>
+</div>
+<div v-else>
+  <p>Loading hotel data...</p>
+</div>
+
+  
+</div>
+
+<!-- كارت المسافر (مكرر فقط مرة واحدة) -->
+<div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
+  <h2 class="text-2xl font-bold mb-4">Traveler Details</h2>
+  <ul class="space-y-2">
+    <li class="flex justify-between text-gray-600">
+      <strong>Name:</strong> {{ formData.name }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Address:</strong> {{ formData.address }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Nationality:</strong> {{ formData.nationality }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Gender:</strong> {{ formData.gender }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>ID Type:</strong> {{ formData.idType }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>ID Number:</strong> {{ formData.idNumber }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Phone:</strong> {{ formData.phone }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Email:</strong> {{ formData.email }}
+    </li>
+    <div class="h-px w-full bg-gray-100"></div>
+    <li class="flex justify-between text-gray-600">
+      <strong>Passengers:</strong> {{ formData.passengerCount }}
+    </li>
+  </ul>
+</div>
+
+
       </div>
 
       <!-- خط -->
@@ -124,85 +168,9 @@
 
       <!-- كروت المسافر والرحلة -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-        <!-- كارت المسافر -->
-        <div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
-          <h2 class="text-2xl font-bold mb-4">Traveler Details</h2>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-gray-600">
-              <strong>Name:</strong>{{ formData.name }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Address:</strong> {{ formData.address }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Nationality:</strong> {{ formData.nationality }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Gender:</strong> {{ formData.gender }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>ID Type:</strong> {{ formData.idType }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>ID Number:</strong> {{ formData.idNumber }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Phone:</strong> {{ formData.phone }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Email:</strong> {{ formData.email }}
-            </li>
-            <div class="h-px w-full bg-gray-100"></div>
-            <li class="flex justify-between text-gray-600">
-              <strong>Passengers:</strong> {{ formData.passengerCount }}
-            </li>
-          </ul>
-        </div>
+  
 
-        <!-- كارت الرحلة -->
-        <div class="bg-white p-6 rounded-2xl shadow space-y-3">
-          <h2 class="text-xl font-bold text-gray-800">Trip Summary</h2>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">Transport:</span>
-            {{ trip.transport.name }} - {{ trip.transport.price }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">Hotel:</span> {{ trip.hotel.name }} -
-            {{ trip.hotel.price }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">Meals:</span> {{ trip.meals }} -
-            {{ trip.mealPrice }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">Service:</span> {{ trip.service }} -
-            {{ trip.servicePrice }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">Place:</span> {{ trip.place }} -
-            {{ trip.placeprice }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="flex justify-between text-gray-600">
-            <span class="font-semibold">TourGuide:</span> {{ trip.Tourguide }} -
-            {{ trip.tourprice }} EGP
-          </p>
-          <div class="h-px w-full bg-gray-100"></div>
-          <p class="text-lg font-bold flex justify-between mt-4">
-            <span>Total Price:</span> {{ totalPrice }} EGP
-          </p>
-        </div>
+       
       </div>
 
       <!-- checkbox -->
@@ -219,15 +187,18 @@
       </div>
 
       <div class="flex flex row justify-center gap-8 mb-5">
-        <BaseButton
-          @click="previous()"
-          class="mt-4 bg-white !text-[#ffc340] !w-60 border border-[#ffc340] px-4 py-2 hover:text-black rounded"
-          >Previous</BaseButton
-        >
+      <BaseButton
+  @click="previous()"
+  class="mt-4 w-60 !bg-white border-2 border-[#ffc340] !text-[#ffc340] font-semibold px-4 py-2 rounded-md
+         hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out">
+  Previous
+</BaseButton>
+
 
         <BaseButton
           @click="nextStep()"
-          class="mt-4 bg-[#ffc340] px-4 py-2 !w-60 rounded"
+          class="mt-4 w-60 border-2 border-[#ffc340] text-[#ffc340] font-semibold px-4 py-2 rounded-md
+         hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out"
           >Next</BaseButton
         >
       </div>
@@ -416,25 +387,73 @@
         </div>
       </div>
 
-      <div v-if="activeTab === 'vodafone'">
-        <div v-if="!showOtpSection" class="flex flex-col gap-4">
-          <h3 class="text-lg font-semibold mb-2 text-gray-800">Fawry Number</h3>
-          <InputField placeholder="Enter Phone Number" type="number" />
+      <div v-if="activeTab === 'vodafone'" class="flex justify-center w-full my-5">
+       <div
+          class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md transition-all gap-6 duration-300"
+        >
+          <!-- Step 1: Phone number -->
+          <div v-if="!showOtpSection" class="flex flex-col gap-4">
+            <h3 class="text-lg font-semibold mb-2 text-gray-800">
+              Fawry Number
+            </h3>
+            <InputField placeholder="Enter Phone Number" type="number" />
 
-          <p class="text-sm text-gray-600">
-            You will receive a code on your phone number.
-          </p>
+            <p class="text-sm text-gray-600">
+              You will receive a code on your phone number.
+            </p>
 
-          <div
-            class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
-          >
-            <span>Total Price:</span>
-            <span>{{ totalPrice }} EGP</span>
+            <div
+              class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
+            >
+              <span>Total Price:</span>
+              <span>{{ totalPrice }} EGP</span>
+            </div>
+
+            <BaseButton @click="goToOtpSection" class="w-full mt-6"
+              >Continue</BaseButton
+            >
           </div>
 
-          <BaseButton @click="goToOtpSection" class="w-full mt-6"
-            >Continue</BaseButton
-          >
+          <!-- Step 2: OTP Section -->
+          <div v-else class="flex flex-col gap-4">
+            <p class="text-base font-medium mt-2">Enter OTP sent via Fawry:</p>
+            <otp @otp-verified="goToStepThree" />
+
+            <!-- زر الرجوع -->
+            <div class="flex items-center justify-center mb-2 mt-1">
+              <input
+                type="checkbox"
+                id="agree"
+                v-model="isChecked"
+                class="mr-2 mt-1"
+              />
+              <label for="agree" class="text-sm text-gray-700">
+                I agree to the terms and conditions.
+              </label>
+            </div>
+
+            <p class="text-sm text-blue-600 cursor-pointer mb-2">
+              Didn’t receive a code?
+            </p>
+
+            <!-- أزرار التنقل -->
+            <div class="flex justify-between gap-4 mt-4">
+              <BaseButton
+                @click="previous"
+                class="w-full bg-gray-300 text-gray-800 hover:bg-gray-400"
+              >
+                Back
+              </BaseButton>
+
+              <BaseButton
+                @click="nextStep"
+                class="w-full"
+                :disabled="!isChecked"
+              >
+                Next
+              </BaseButton>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -475,6 +494,16 @@ import BaseButton from "../../components/BaseButton.vue";
 import foot from "../../components/footer.vue";
 import InputField from "../../components/InputField.vue";
 import otp from "../../components/OtpInput.vue";
+// localStorage.setItem('selectedTransport', JSON.stringify(transport));
+// localStorage.setItem('selectedHotel', JSON.stringify(hotel));
+// localStorage.setItem('tripDetails', JSON.stringify(trip));
+
+import { computed } from 'vue';
+import { useBookingStore } from '../../data/store';
+
+const bookingStore = useBookingStore();
+
+const hotel = computed(() => bookingStore.hotel);
 
 const steps = ["Customer Detail ", "Payment Methoed", "Confirmation"];
 const currentStep = ref(1);
@@ -532,6 +561,12 @@ const goToStepThree = () => {
   // كود نقلك للخطوة الثالثة، ممكن تغيري قيمة step مثلاً
   currentStep.value = 3;
 };
+import { watchEffect } from 'vue';
+
+watchEffect(() => {
+  console.log('hotel data:', bookingStore.hotel);
+});
+
 
 const formData = ref({});
 
@@ -545,30 +580,30 @@ onMounted(() => {
 const resetSteps = () => {
   currentStep.value = 1;
 };
-const transport = {
-  image: "/sara/R (8).jpeg",
-  company: "GoBus",
-  type: "Bus",
-  from: "Cairo",
-  to: "Hurghada",
-  departureTime: "08:00 AM",
-  arrivalTime: "01:30 PM",
-  duration: "5h 30m",
-  bags: 2,
-  price: 220,
-};
-const hotel = {
-  image: "/sara/wood-hotel-house-1001965.jpg",
-  name: "Grand Nile Hotel",
-  location: "Garden City, Cairo",
-  checkin: "12 Jul 2025  12:00PM",
-  checkout: "15 Jul 2025  3:00PM",
-  rating: 4.5,
-  roomType: "Deluxe Room",
-  guests: 2,
-  facilities: ["Wi-Fi", "Breakfast", "Pool", "Gym"],
-  price: 1200,
-};
+// const transport = {
+//   image: "/sara/R (8).jpeg",
+//   company: "GoBus",
+//   type: "Bus",
+//   from: "Cairo",
+//   to: "Hurghada",
+//   departureTime: "08:00 AM",
+//   arrivalTime: "01:30 PM",
+//   duration: "5h 30m",
+//   bags: 2,
+//   price: 220,
+// };
+// const hotel = {
+//   image: "/sara/wood-hotel-house-1001965.jpg",
+//   name: "Grand Nile Hotel",
+//   location: "Garden City, Cairo",
+//   checkin: "12 Jul 2025  12:00PM",
+//   checkout: "15 Jul 2025  3:00PM",
+//   rating: 4.5,
+//   roomType: "Deluxe Room",
+//   guests: 2,
+//   facilities: ["Wi-Fi", "Breakfast", "Pool", "Gym"],
+//   price: 1200,
+// };
 const trip = {
   transport: {
     name: "GoBus",

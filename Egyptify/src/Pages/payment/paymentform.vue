@@ -12,6 +12,7 @@ const formData = ref({
   idNumber: '',
   phone: '',
   email: '',
+  date: '', // ✅ أضفنا التاريخ هنا
   passengerCount: 1
 })
 
@@ -25,7 +26,8 @@ const validateForm = () => {
     idNumber,
     phone,
     email,
-    passengerCount
+    passengerCount,
+    date
   } = formData.value
 
   if (
@@ -65,12 +67,13 @@ const goToNext = () => {
 
 const goBack = () => {
   console.log('رجوع للخطوة السابقة')
+  router.push('/booking')
 }
 </script>
 
 <template>
   <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg">
-    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Traveler Information</h2>
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Guest Information</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
@@ -121,8 +124,20 @@ const goBack = () => {
         <input v-model="formData.email" placeholder="Email" class="w-full border border-[#ffc340] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#e6ac20]" />
       </div>
 
+
+          <div class="md:col-span-2">
+      <label class="block mb-1 text-gray-700">Date</label>
+      <input
+        type="date"
+        v-model="formData.date"
+        class="w-full border border-[#ffc340] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#e6ac20]"
+      />
+    </div>
+
+
+
       <div class="md:col-span-2">
-        <label class="block mb-1 text-gray-700">Number of Passengers</label>
+        <label class="block mb-1 text-gray-700">Number of Guests</label>
         <input
           v-model.number="formData.passengerCount"
           type="number"
@@ -134,11 +149,12 @@ const goBack = () => {
     </div>
 
     <div class="flex justify-between mt-10">
-      <button @click="goBack" class="px-6 py-2 rounded-lg bg-gray-200 hover:bg-[#ffc340]text-gray-700">
+      <button @click="goBack" class="px-6 py-2 rounded-lg bg-gray-200 hover:bg-[#ffc340]text-gray-700 cursor-pointer">
         Back
       </button>
       <button  @click="goToNext()"  
- class="px-6 py-2 rounded-lg bg-[#ffc340] hover:bg-[#ffc340] text-white">
+        :style="{ cursor: 'pointer' }" 
+       class="px-6 py-2 rounded-lg bg-[#ffc340] hover:bg-[#ffc340] text-white cursor pointer">
         Next
       </button>
     </div>

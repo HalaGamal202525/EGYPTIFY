@@ -12,21 +12,27 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <RoomCard
-        v-for="room in filteredRooms"
-        :key="room.id"
-        :image="room.imageurl"
-        :title="room.name"
-        :description="room.description"
-        :people="room.guestno"
-        :price="room.price "
-        :showButton="true"
-        buttonText="Book Now"
-        class="p-3"
-      />
+<RoomCard
+  v-for="room in filteredRooms"
+  :key="room.id"
+  :image="room.imageurl"
+  :title="room.name"
+  :description="room.description"
+  :people="room.guestno"
+  :price="room.price"
+  :showButton="true"
+  buttonText="Book Now"
+  v-on="{
+    click: () => handleBookRoom(room)
+  }"
+  class="p-3"
+/>
+
+
     </div>
   </div>
-
+   <!-- :showButton="true"
+        buttonText="Book Now" -->
   <foot />
 </template>
 
@@ -45,6 +51,14 @@ const goback=()=>{
   router.back()
 }
 
+import { useBookingStore } from '../data/store' // إذا عندك ستور للحجز
+
+const bookingStore = useBookingStore()
+
+const handleBookRoom = (room) => {
+  bookingStore.setRoomDetails(room.name, room.guestno, room.price,room.image)
+  router.push('/form')
+}
 
 import roomsData from "../data/room.json"; 
 
@@ -56,7 +70,6 @@ const selectedGuests = ref(null);
 function setPrice(value) {
   selectedPrice.value = value;
 }
-
 function setGuests(value) {
   selectedGuests.value = value;
 }
