@@ -1530,8 +1530,11 @@ const destination = ref(destinations.find(d => d.slug === route.params.slug))
                   </div>
 
                   <div class="flex gap-4">
-                           <BookNowButton :restaurant="overviewData"     class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"/>
-
+                    <BaseButton @click="gotobooking"
+                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
+                    >
+                      Book Now
+                    </BaseButton>
              
                   </div>
                 </div>
