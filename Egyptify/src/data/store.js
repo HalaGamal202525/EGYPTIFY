@@ -2,25 +2,30 @@ import { defineStore } from 'pinia'
 
 export const useBookingStore = defineStore('booking', {
   state: () => ({
-    hotel: null,       // تخزن بيانات الفندق كاملة
-    roomType: null,    // تخزن بيانات نوع الغرفة
-    dates: { checkIn: null, checkOut: null }, // مواعيد الدخول والخروج
-    userData: null
+    hotel: null,
+    roomType: null,
+    dates: { checkIn: null, checkOut: null },
+    userData: null,
+    card: {
+      image: null,
+      title: null,
+      rate: null,
+      price: null
+    }
   }),
   actions: {
     setHotel(hotel) {
       this.hotel = hotel;
-      // لو بيانات مواعيد الدخول والخروج موجودة داخل الفندق، ممكن تخزنها هنا كمان
-      if(hotel.checkin && hotel.checkout){
+      if (hotel.checkin && hotel.checkout) {
         this.dates.checkIn = hotel.checkin;
         this.dates.checkOut = hotel.checkout;
       }
     },
-     setRoomDetails(roomType, guests, price,image) {
+    setRoomDetails(roomType, guests, price, image) {
       this.roomType = roomType;
       this.guests = guests;
       this.price = price;
-      this.image=image
+      this.image = image;
     },
     setDates(checkIn, checkOut) {
       this.dates = { checkIn, checkOut };
@@ -28,11 +33,23 @@ export const useBookingStore = defineStore('booking', {
     setUserData(data) {
       this.userData = data;
     },
+    setCardData({ image, title, rate, price }) {
+      this.card.image = image;
+      this.card.title = title;
+      this.card.rate = rate;
+      this.card.price = price;
+    },
     resetBooking() {
       this.hotel = null;
       this.roomType = null;
       this.dates = { checkIn: null, checkOut: null };
       this.userData = null;
+      this.card = {
+        image: null,
+        title: null,
+        rate: null,
+        price: null
+      };
     }
   }
 })
