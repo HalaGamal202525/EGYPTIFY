@@ -12,7 +12,7 @@ const formData = ref({
   idNumber: '',
   phone: '',
   email: '',
-  date: '', // ✅ أضفنا التاريخ هنا
+  date: '', 
   passengerCount: 1
 })
 
@@ -45,7 +45,6 @@ const validateForm = () => {
     return false
   }
 
-  // تحقق من صحة الإيميل مبدئياً
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email)) {
     alert('Please enter a valid email address.')
@@ -59,8 +58,8 @@ const validateForm = () => {
 
 const goToNext = () => {
   if (validateForm()) {
-    localStorage.setItem('formData', JSON.stringify(formData.value)) // حفظ البيانات
-    router.push('/payment') // أو المسار الصحيح للصفحة الجاية
+    localStorage.setItem('formData', JSON.stringify(formData.value)) 
+    router.push('/payment')
   }
 }
 
