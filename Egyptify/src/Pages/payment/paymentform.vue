@@ -69,6 +69,8 @@ const goBack = () => {
   router.push('/booking')
 }
 import NavBarBlack from '../../components/NavBar-Black.vue'
+import foot from "../../components/footer.vue";
+
 </script>
 
 <template>
@@ -160,6 +162,8 @@ import NavBarBlack from '../../components/NavBar-Black.vue'
       </button>
     </div>
   </div>
+    <foot />
+
 </template>
 
 
