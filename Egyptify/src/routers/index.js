@@ -61,6 +61,7 @@ import BookingProcessInfo from '../Pages/BookingProcessInfo.vue';
 import hotels from '../Pages/hotels.vue'
 import hotelsdetails from "../Pages/hoteldetail.vue"
 import Resturantlist from '../Pages/resturantlist.vue'
+import Transportiondatils from '../Pages/transportiondatils.vue'
 // import Resturantdetails from '../Pages/resturantdetails.vue'
 
 const routes = [
@@ -72,6 +73,9 @@ const routes = [
   { path: '/OTP', component: OTPPage },
     { path: '/form', component: form },
       { path: '/payment', component: payment },
+      {
+        path:"/transportiondetails",component:Transportiondatils
+      },
 
   {
     path: '/tripplanner',

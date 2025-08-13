@@ -196,6 +196,6 @@ import BaseButton from '../components/BaseButton.vue'
 import { useRouter } from "vue-router";
 const router = useRouter();
 function gototarnsportion(){
-router.push("/booking")
+router.push("/transportiondetails")
 }
 </script>

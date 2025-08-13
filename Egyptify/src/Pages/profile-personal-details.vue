@@ -64,7 +64,7 @@
             <InputField
               id="email"
               type="email"
-              placeholder="{{ userStore.email }}"
+              placeholder="Email"
               v-model= "userStore.email"
               required
             >
