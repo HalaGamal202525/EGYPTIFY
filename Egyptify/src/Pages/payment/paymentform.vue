@@ -69,9 +69,11 @@ const goBack = () => {
   console.log('رجوع للخطوة السابقة')
   router.push('/booking')
 }
+import NavBarBlack from '../../components/NavBar-Black.vue'
 </script>
 
 <template>
+  <NavBarBlack/>
   <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg">
     <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Guest Information</h2>
 

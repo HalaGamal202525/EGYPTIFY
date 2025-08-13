@@ -1,4 +1,6 @@
 <template>
+    <NavBarBlack/>
+
   <div class="flex justify-center items-center gap-8 my-8">
     <div
       v-for="(step, index) in steps"
@@ -544,6 +546,7 @@ import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
 
 const router = useRouter();
+import NavBarBlack from '../../components/NavBar-Black.vue'
 import BaseButton from "../../components/BaseButton.vue";
 import foot from "../../components/footer.vue";
 import InputField from "../../components/InputField.vue";
