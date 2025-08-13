@@ -26,18 +26,19 @@
           <section
             class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 mb-6 cursor-pointer"
           >
-            <CardComponent
-              v-for="item in paginatedDestinations"
-              :key="item.id"
-              :title="item.name"
-              :description="item.description"
-              :image="item.image"
-              :rating="item.rate"
-              :showHeart="true"
-              :showButton="true"
-              buttonText="Show Details"
-              @click="() => router.push(`/destination/${item.id}`)"
-            />
+          <CardComponent
+  v-for="item in paginatedDestinations"
+  :key="item.id"
+  :title="item.name"
+  :description="item.description"
+  :image="item.image"
+  :rating="item.rate"
+  :showHeart="true"
+  :showButton="true"
+  buttonText="Show Details"
+  @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
+/>
+
           </section>
 
           <!-- Pagination -->
@@ -82,6 +83,19 @@ const filters = ref({
   category: [],
   rate: [],
 });
+ 
+
+import { useBookingStore } from '../data/store.js'
+const bookingStore = useBookingStore()
+
+function handleCardClick(card) {
+  bookingStore.setCardData({
+    image: card.image,
+    title: card.title,
+    rate: card.rate,
+    price: card.price
+  })
+}
 
 function applyFilters(newFilters) {
   filters.value = newFilters;

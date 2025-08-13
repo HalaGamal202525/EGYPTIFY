@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Siwa Oasis",
+
+"price":1200,    "name": "Siwa Oasis",
     "image": "/natural/siwa.jpg",
         "category": "Natural",
 "location":"Siwa",
@@ -46,7 +47,8 @@
   },
 {
   "id": 2,
-  "name": "White Desert",
+
+"price":1200,  "name": "White Desert",
   "image": "/natural/white.jpg",
       "category": "Natural",
 "location":"Western Desert",
@@ -93,7 +95,8 @@
 ,
 {
   "id": 3,
-  "name": "Ras Mohammed National Park",
+
+"price":1200,  "name": "Ras Mohammed National Park",
   "image": "/natural/Rasmohamed.jpg",
       "category": "Natural",
 "location":"Sharm El Sheikh",
@@ -139,7 +142,8 @@
 ,
   {
   "id": 4,
-  "name": "Blue Hole",
+
+"price":1200,  "name": "Blue Hole",
   "image": "/natural/blue hole.jpg",
       "category": "Natural",
 "location":"Dahab",
@@ -185,7 +189,8 @@
 ,
 {
   "id": 5,
-  "name": "Wadi El Rayan",
+
+"price":1200,  "name": "Wadi El Rayan",
   "image": "/natural/wadi alrayan.jpg",
       "category": "Natural",
 "location":"fayoum",
@@ -232,7 +237,8 @@
 ,
 {
   "id": 6,
-  "name": "Mount Sinai",
+
+"price":1200,  "name": "Mount Sinai",
   "image": "/natural/سانت كاترين.jpg",
       "category": "Natural",
 "location":"sinai",
@@ -276,7 +282,8 @@
 ,
   {
   "id": 7,
-  "name": "Gebel Elba",
+
+"price":1200,  "name": "Gebel Elba",
   "image": "/natural/elba.jpg",
       "category": "Natural",
 "location":"Aswan",
@@ -320,7 +327,8 @@
 ,
  {
   "id": 8,
-  "name": "Fayoum Oasis",
+
+"price":1200,  "name": "Fayoum Oasis",
   "image": "/natural/fayom.jpg",
       "category": "Natural",
 "location":"fayoum",
@@ -364,7 +372,8 @@
 ,
  {
   "id": 9,
-  "name": "Valley of the Whales",
+
+"price":1200,  "name": "Valley of the Whales",
   "image": "/natural/vally.jpg",
       "category": "Natural",
 "location":"fayoum",
@@ -408,6 +417,7 @@
 ,
 {
   "id": 10,
+  "price":1200,
   "name": "Dahab Blue Lagoon",
   "image": "/natural/logoon.jpg",
       "category": "Natural",
@@ -452,6 +462,7 @@
 ,
  {
   "id": 11,
+  "price":1200,
   "name": "Bahariya Oasis",
   "image": "/natural/Bahariya Oasis.jpg",
       "category": "Natural",
@@ -496,6 +507,7 @@
 ,
   {
   "id": 12,
+  "price":1200,
   "name": "St. Catherine’s Monastery",
   "image": "/natural/St. Catherine’s Monastery.jpg",
       "category": "Natural",
@@ -538,6 +550,7 @@
   }
 },  {
     "id": 13,
+    "price":1200,
     "name": "Pyramids of Giza",
     "category": "Historical",
     "image": "/historical/pyramids (4).jpg",
@@ -584,6 +597,7 @@
   },
   {
     "id": 14,
+    "price":1200,
     "name": "Karnak Temple",
     "category": "Historical",
             "location":"luxor",
@@ -631,6 +645,7 @@
 
   {
     "id": 15,
+    "price":1200,
     "name": "Valley of the Kings",
     "category": "Historical",
         "location":"Giza",
@@ -678,6 +693,7 @@
 
   {
     "id": 16,
+    "price":1200,
     "name": "Citadel of Saladin",
     "category": "Historical",
     "image": "/historical/castdel.webp",
@@ -724,6 +740,7 @@
   },
   {
     "id": 17,
+    "price":1200,
     "name": "Philae Temple",
     "category": "Historical",
     "image": "/historical/philia.webp",
@@ -771,6 +788,7 @@
 
   {
     "id": 18,
+    "price":1200,
     "name": "Egyptian Museum",
     "category": "Historical",
     "image": "/historical/The-Grand-Egyptian.jpg",
@@ -817,6 +835,7 @@
   },
   {
     "id": 19,
+    "price":1200,
     "name": "Abu Simbel Temples",
     "category": "Historical",
     "image": "/historical/planner.jpeg",
@@ -863,6 +882,7 @@
   },
   {
     "id": 20,
+    "price":1200,
     "name": "Al-Muizz Street",
     "category": "Historical",
         "location":"Cairo",
@@ -909,6 +929,7 @@
   },
   {
     "id": 21,
+    "price":1200,
     "name": "Abu Serga",
     "category": "Historical",
     "image": "/historical/elserag.webp",
@@ -955,6 +976,7 @@
   },
   {
     "id": 22,
+    "price":1200,
     "name": "Al-Azhar Mosque",
     "category": "Historical",
         "location":"Cairo",
@@ -1001,6 +1023,7 @@
   },
   {
     "id": 23,
+    "price":1200,
     "name": "Hatshepsut Temple",
     "category": "Historical",
         "location":"luxor",
@@ -1047,6 +1070,7 @@
   },
   {
     "id": 24,
+    "price":1200,
     "name": "Saqqara Step Pyramid",
     "category": "Historical",
     "image": "/historical/Saqqara Step Pyramid.jpg",
@@ -1092,6 +1116,7 @@
     }
   },  {
     "id": 25,
+    "price":1200,
     "name": "Sobhy Kaber",
     "image": "/food/sobhy.webp",
     "category": "Food",
@@ -1137,6 +1162,7 @@
   },
   {
     "id": 26,
+    "price":1200,
     "name": "Sachi",
     "image": "/food/suchi.webp",
     "category": "Food",
@@ -1182,6 +1208,7 @@
   },
   {
     "id": 27,
+    "price":1200,
     "name": "Abou Tarek",
     "image": "/food/tark.webp",
         "category": "Food",
@@ -1227,6 +1254,7 @@
   },
   {
     "id": 28,
+    "price":1200,
     "name": "Crave",
     "image": "/food/cearve.jpg",
         "category": "Food",
@@ -1272,6 +1300,7 @@
   },
   {
     "id": 29,
+    "price":1200,
     "name": "Zooba",
     "image": "/food/zooba.webp",
     "category": "Food",
@@ -1317,6 +1346,7 @@
   },
   {
     "id": 30,
+    "price":1200,
     "name": "Tamara Lebanese Bistro",
     "image": "/food/tamara.webp",
     "category":"Food",
@@ -1362,6 +1392,7 @@
   },
   {
     "id": 31,
+    "price":1200,
     "name": "Lucille’s",
     "image": "/food/lusills.webp",
     "category": "Food",
@@ -1407,6 +1438,7 @@
   },
   {
     "id": 32,
+    "price":1200,
     "name": "Kazoku",
     "image": "/food/kazuka.png",
     "category":"Food",
@@ -1452,7 +1484,8 @@
   },
   {
     "id":33,
-    "name": "Pier 88",
+
+"price":1200,    "name": "Pier 88",
     "image": "/food/pier.webp",
     "category": "Food",
     "location":"Cairo",
@@ -1497,6 +1530,7 @@
   },
   {
     "id": 34,
+    "price":1200,
     "name": "Abou El Sid",
     "image": "/food/abou elsid.webp",
     "category": "Food",
@@ -1542,6 +1576,7 @@
   },
   {
     "id": 35,
+    "price":1200,
     "name": "Sequoia",
     "image": "/food/Sequoia.webp",
     "category":"Food",
@@ -1587,6 +1622,7 @@
   },
   {
     "id": 36,
+    "price":1200,
     "name": "Naguib Mahfouz Cafe",
     "image": "/food/Naguib Mahfouz Cafe.webp",
     "category": "Food",
@@ -1632,6 +1668,7 @@
   },
     {
     "id": 37,
+    "price":1200,
     "name": "Dream Park",
     "image": "/entertainment/dream.jpg",
     "category": "Entertainment",
@@ -1677,6 +1714,7 @@
   },
   {
     "id": 38,
+    "price":1200,
     "name": "KidZania",
     "image": "/entertainment/kidzaina.jpg",
     "category": "Entertainment",
@@ -1722,6 +1760,7 @@
   },
   {
     "id": 39,
+    "price":1200,
     "name": "Magic Planet",
     "image": "/entertainment/magic.jpg",
     "category": "Entertainment",
@@ -1767,6 +1806,7 @@
   },
   {
     "id": 40,
+    "price":1200,
     "name": "Vox Cinemas",
     "image": "/entertainment/vox.webp",
     "category": "Entertainment",
@@ -1812,6 +1852,7 @@
   },
   {
     "id": 41,
+    "price":1200,
     "name": "Mall of Egypt",
     "image": "/entertainment/mallegypt.webp",
     "category": "Entertainment",
@@ -1857,6 +1898,7 @@
   },
   {
     "id": 42,
+    "price":1200,
     "name": "ZED Park",
     "image": "/entertainment/zed.webp",
     "category": "Entertainment",
@@ -1902,6 +1944,7 @@
   },
   {
     "id": 43,
+    "price":1200,
     "name": "Family Park",
     "image": "/entertainment/family.webp",
     "category": "Entertainment",
@@ -1947,6 +1990,7 @@
   },
   {
     "id": 44,
+    "price":1200,
     "name": "Al-Azhar Park",
     "image": "/entertainment/alazhar.webp",
     "category": "Entertainment",
@@ -1992,6 +2036,7 @@
   },
   {
     "id": 45,
+    "price":1200,
     "name": "Giza Zoo",
     "image": "/entertainment/zoo.webp",
     "category": "Entertainment",
@@ -2037,6 +2082,7 @@
   },
   {
     "id": 46,
+    "price":1200,
     "name": "Butterfly Garden",
     "image": "/entertainment/buttterfly.jpeg",
     "category": "Entertainment",
@@ -2083,6 +2129,7 @@
 
   {
     "id": 47,
+    "price":1200,
     "name": "Africa Safari Park",
     "image": "/entertainment/afrcaina.jpg",
     "category": "Entertainment",
@@ -2128,6 +2175,7 @@
   },
   {
     "id": 48,
+    "price":1200,
     "name": "Aqua Park Cairo",
     "image": "/entertainment/Aqua Park Cairo.webp",
     "category": "Entertainment",
