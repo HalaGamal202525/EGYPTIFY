@@ -1,4 +1,6 @@
 <template>
+    <NavBarBlack/>
+
   <div class="flex justify-center items-center gap-8 my-8">
     <div
       v-for="(step, index) in steps"
@@ -83,7 +85,6 @@
   class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
 >
 <div v-if="hotel">
-  <!-- باقي بيانات الفندق -->
    <div class="py-4 space-y-2">
     <h2 class="text-xl font-bold text-gray-800">{{hotel.name }}</h2>
     <p class="text-gray-600">
@@ -111,9 +112,39 @@
 </p>
   </div>
 </div>
-<div v-else>
-  <p>Loading hotel data...</p>
+
+<div>
+  <div v-if="cardData && cardData.title">
+    <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden p-4">
+      <img
+        v-if="cardData.image"
+        :src="cardData.image"
+        alt="Booking Image"
+        class="w-full h-48 object-cover rounded-md mb-4"
+      />
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">
+        {{ cardData.title }}
+      </h2>
+      <div class="flex items-center mb-3">
+        <span v-for="n in 5" :key="n" class="text-yellow-400 mr-1">
+          <i
+            class="fa-solid"
+            :class="n <= Math.round(cardData.rate) ? 'fa-star' : 'fa-star-half-stroke'"
+          ></i>
+        </span>
+        <span class="text-gray-600 ml-2">({{ cardData.rate || 0 }})</span>
+      </div>
+      <p class="text-lg font-bold text-green-600">
+        {{ cardData.price ? `$${cardData.price}` : 'Price not available' }}
+      </p>
+    </div>
+  </div>
+
+
+
+
 </div>
+
 
   
 </div>
@@ -228,7 +259,7 @@
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
             </h3>
-            <InputField placeholder="Enter Phone Number" type="number" />
+            <InputField placeholder="Enter Phone Number" />
 
             <p class="text-sm text-gray-600">
               You will receive a code on your phone number.
@@ -340,7 +371,7 @@
               </div>
             </div>
 
-            <div class="flex justify-between gap-3">
+            <!-- <div class="flex justify-between gap-3">
               <div class="w-1/3">
                 <label class="block text-sm font-medium text-gray-700 mb-1"
                   >Exp. Month</label
@@ -363,15 +394,40 @@
               </div>
               <div class="w-1/3">
                 <label class="block text-sm font-medium text-gray-700 mb-1"
-                  >CVC</label
+                  >CVV</label
                 >
                 <InputField
                   type="number"
-                  placeholder="CVC"
+                  placeholder="CVV"
                   class="w-full px-2 py-2 rounded-md"
                 />
               </div>
-            </div>
+            </div> -->
+
+            <div class="flex justify-between gap-3">
+  <div class="w-1/2">
+    <label class="block text-sm font-medium text-gray-700 mb-1">
+      Expiry Date
+    </label>
+    <InputField
+      type="text"
+      placeholder="MM/YY"
+      class="w-full px-2 py-2 rounded-md"
+    />
+  </div>
+
+  <div class="w-1/2">
+    <label class="block text-sm font-medium text-gray-700 mb-1">
+      CVV
+    </label>
+    <InputField
+      
+      placeholder="CVV"
+      class="w-full px-2 py-2 rounded-md"
+    />
+  </div>
+</div>
+
 
             <div
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
@@ -396,7 +452,7 @@
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
             </h3>
-            <InputField placeholder="Enter Phone Number" type="number" />
+            <InputField placeholder="Enter Phone Number"  />
 
             <p class="text-sm text-gray-600">
               You will receive a code on your phone number.
@@ -474,7 +530,7 @@
       Your booking has been successfully confirmed. We’ve sent a confirmation email with the details.
     </p>
 
-    <BaseButton @click="goToHome" class="w-full">Back to Home</BaseButton>
+    <BaseButton @click="$router.push('/')" class="w-full">Back to Home</BaseButton>
   </div>
 </div>
 
@@ -490,6 +546,7 @@ import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
 
 const router = useRouter();
+import NavBarBlack from '../../components/NavBar-Black.vue'
 import BaseButton from "../../components/BaseButton.vue";
 import foot from "../../components/footer.vue";
 import InputField from "../../components/InputField.vue";
@@ -503,6 +560,7 @@ import { useBookingStore } from '../../data/store';
 
 const bookingStore = useBookingStore();
 
+const cardData = computed(() => bookingStore.card);
 const hotel = computed(() => bookingStore.hotel);
 
 const steps = ["Customer Detail ", "Payment Methoed", "Confirmation"];

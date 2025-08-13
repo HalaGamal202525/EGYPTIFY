@@ -35,12 +35,12 @@
           <p class="text-gray-600 text-sm mb-2">{{ pkg.shortDescription }}</p>
           <p class="text-sm font-bold text-[#ffc340]">{{ pkg.price }} • {{ pkg.duration }}</p>
 
-          <router-link
-            :to="`/packages/${selectedCategory}/${pkg.slug}`"
+          <BaseButton
+          @click="handleCardClick(pkg) "
             class="inline-block mt-3 text-[#ffc340] font-medium hover:underline"
           >
             View Details →
-          </router-link>
+          </BaseButton>
         </div>
       </div>
     </div>
@@ -54,6 +54,8 @@ import { useRoute } from 'vue-router';
 import rawData from '../data/packages_data.json';
 import Navbar from '../components/NavBar-Black.vue';
 import Foot from '../components/footer.vue';
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const categories = Object.values(rawData.packageCategories);
 const selectedCategory = ref(categories[0]?.slug || '');
@@ -68,7 +70,18 @@ const setCategoryFromQuery = () => {
 
 onMounted(setCategoryFromQuery);
 watch(() => route.query.category, setCategoryFromQuery);
+import { useBookingStore } from '../data/store.js'
+import BaseButton from '../components/BaseButton.vue';
+const bookingStore = useBookingStore()
 
+function handleCardClick(card) {
+  bookingStore.setCardData({
+    image: card.image,
+    title: card.title,
+    rate: card.rate,
+    price: card.price
+  })
+ router.push(`/packages/${selectedCategory.value}/${card.slug}`);}
 const filteredPackages = computed(() => {
   const cat = categories.find(c => c.slug === selectedCategory.value);
   return cat ? Object.values(cat.packages) : [];

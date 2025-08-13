@@ -17,8 +17,7 @@
         :image="place.image"
         :title="place.title"
         :description="place.description"
-        @click="goToDetails(place.id)"
-      />
+  @click="handleCardClick(place); goToDetails(place.id)"      />
     </div>
   </div>
 
@@ -29,6 +28,7 @@
 import Navbar from '../components/NavBar-Black.vue';
 import Footer from '../components/Footer.vue';
 import Card from '../components/Card.vue';
+import { useBookingStore } from '../data/store.js'
 
 export default {
   name: "CultureCategory",
@@ -62,6 +62,16 @@ export default {
     };
   },
   methods: {
+      handleCardClick(card) {
+    const bookingStore = useBookingStore();
+    bookingStore.setCardData({
+      image: card.image,
+      title: card.title,
+      rate: card.rate,
+      price: card.price
+    });
+    console.log('Set card data:', bookingStore.card);
+  },
     goToDetails(id) {
       this.$router.push(`/culture/${id}`);
     }

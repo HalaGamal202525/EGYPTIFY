@@ -11,14 +11,16 @@
     <h1 class="text-3xl font-bold mb-6">Adventure Activities</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <Card
+<Card
   v-for="place in adventurePlaces"
   :key="place.id"
   :image="place.image"
   :title="place.title"
   :description="place.description"
-  @click="goToDetails(place.id)"
-/>
+  @click="handleCardClick(place); goToDetails(place.id)"
+   class="cuersor-pointer"
+ />
+
 
     </div>
   </div>
@@ -30,6 +32,7 @@
 import Navbar from '../components/NavBar-Black.vue';
 import Footer from '../components/Footer.vue';
 import Card from '../components/Card.vue';
+import { useBookingStore } from '../data/store.js'
 
 export default {
   name: "AdventureCategory",
@@ -46,27 +49,45 @@ export default {
           title: "Desert Safari in Siwa",
           image: "/sara/Desert Safari in Siwa.jpg",
           description: "Explore the majestic dunes of Siwa in a 4x4 safari.",
+          rate: 4.5,
+          price: 120
         },
         {
           id: 2,
           title: "Sinai Mountain Hiking",
           image: "/sara/Sinai Mountain Hiking.webp",
           description: "Climb Mount Sinai and enjoy breathtaking views at sunrise.",
+          rate: 4.8,
+          price: 150
         },
         {
           id: 3,
           title: "Camping by Wadi El-Rayan",
           image: "/sara/wadi alrayan.jpg",
           description: "Spend a night under the stars beside the waterfalls.",
+          rate: 4.2,
+          price: 90
         },
       ]
     }
   },
-  methods: {
-    goToDetails(id) {
-      this.$router.push(`/adventure/${id}`);
-    }
+ methods: {
+  handleCardClick(card) {
+    const bookingStore = useBookingStore();
+    bookingStore.setCardData({
+      image: card.image,
+      title: card.title,
+      rate: card.rate,
+      price: card.price
+    });
+    console.log('Set card data:', bookingStore.card);
+  },
+  goToDetails(id) {
+    console.log('Going to details for id:', id);
+    this.$router.push(`/adventure/${id}`);
   }
+}
+
 }
 </script>
 

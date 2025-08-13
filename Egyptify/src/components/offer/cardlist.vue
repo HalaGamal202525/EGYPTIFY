@@ -48,7 +48,7 @@
         <div class="text-base font-medium text-gray-700 mb-2">
           {{ data.moredetail || 'المزيد من التفاصيل' }}
         </div>
-        <BaseButton :restaurant="data"   class="w-full text-sm py-2">Book now</BaseButton>
+        <BaseButton :restaurant="data"   class="w-full text-sm py-2"  @click="$emit('book')"> Book now</BaseButton>
       </div>
     </div>
   </div>

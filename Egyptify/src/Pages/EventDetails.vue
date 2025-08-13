@@ -34,42 +34,42 @@
 
       <!-- Basic Info -->
       <div class="space-y-2">
-        <h1 class="text-4xl font-bold">{{ event.title }}</h1>
+        <h1 class="text-3xl font-bold">{{ event.title }}</h1>
         <p class="text-lg text-gray-700 flex items-center gap-2">
-          📅 {{ event.date }} | 🗺️ {{ event.location }} | 🎭 {{ event.type }}
+          <i class="fa-solid fa-calendar"></i> {{ event.date }} | <i class="fa-solid fa-map-location"></i> {{ event.location }} | <i class="fa-solid fa-masks-theater"></i> {{ event.type }}
         </p>
         <p class="text-lg text-gray-600 flex items-center gap-2">
-          👥 People: {{ event.people }} | 💰 Price: {{ event.price }} EGP
+          <i class="fa-solid fa-user-group"></i> People: {{ event.people }} | <i class="fa-solid fa-money-bill-1-wave"></i> Price: {{ event.price }} EGP
         </p>
       </div>
 
       <!-- Description -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">📝 Description</h2>
+        <h2 class="text-xl font-semibold mb-2"><i class="fa-light fa-book-open-lines"></i> Description</h2>
         <p>{{ event.description }}</p>
       </div>
 
       <!-- Visit Hours -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">🕒 Visit Hours</h2>
+        <h2 class="text-xl font-semibold mb-2"><i class="fa-solid fa-clock"></i> Visit Hours</h2>
         <p>{{ event.visit_hours }}</p>
       </div>
 
       <!-- Ticket Info -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">🎫 Ticket Purchase Info</h2>
+        <h2 class="text-xl font-semibold mb-2"><i class="fa-solid fa-ticket"></i> Ticket Purchase Info</h2>
         <p>{{ event.ticket_purchase_info }}</p>
       </div>
 
       <!-- Transportation Info -->
       <div>
-        <h2 class="text-2xl font-semibold mb-2">🚍 Transportation Info</h2>
+        <h2 class="text-xl font-semibold mb-2"><i class="fa-solid fa-car"></i> Transportation Info</h2>
         <p>{{ event.transportation_info }}</p>
       </div>
 
       <!-- External Links -->
       <div class="space-y-2">
-        <h2 class="text-2xl font-semibold">🔗 Useful Links</h2>
+        <h2 class="text-xl font-semibold"><i class="fa-solid fa-link"></i> Useful Links</h2>
         <p>
           <a
             :href="event.event_website"
@@ -88,20 +88,20 @@
         </p>
       </div>
 <div class="mt-6">
-  <BookButton>
+  <BookButton @click="bookNow" >
     Book Ticket Now
   </BookButton>
 </div>
       <!-- Reviews -->
 <div v-if="event.reviews && event.reviews.length">
-  <h2 class="text-2xl font-semibold mb-4">💬 Reviews</h2>
+  <h2 class="text-xl font-semibold mb-4"><i class="fa-solid fa-comment"></i> Reviews</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 h-">
     <div
       v-for="(review, index) in event.reviews"
       :key="index"
       class="bg-gray-100 border border-gray-300 rounded-lg p-6 shadow-sm flex items-start gap-4"
     >
-      <div class="text-2xl mt-1">💬</div>
+      <div class="text-xl mt-1"><i class="fa-solid fa-comment"></i></div>
       <p class="text-base">{{ review }}</p>
     </div>
   </div>
@@ -115,15 +115,32 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute ,useRouter} from 'vue-router'
 import Navbar from '../components/NavBar-Black.vue'
 import Footer from '../components/footer.vue'
 import bookingEvents from '../data/bookingEvents.json'
 import BookButton from '../components/BaseButton.vue'
 const route = useRoute()
+const router = useRouter()
+
 const eventId = route.params.id
 
 const event = ref(null)
+import { useBookingStore } from '../data/store'
+const bookingStore = useBookingStore()
+function bookNow() {
+  if (!event.value) return;
+
+  bookingStore.setCardData({
+    image: event.value.image,
+    title: event.value.title,
+    rate: event.value.date,
+    price: event.value.price,
+  });
+
+  router.push('/form');
+}
+
 
 onMounted(() => {
   event.value = bookingEvents.bookings.find(e => e.id === eventId)

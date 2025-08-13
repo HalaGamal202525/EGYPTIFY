@@ -115,7 +115,7 @@
 
         <router-link
           to="/destination"
-          class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+          class="absolute bottom-4 right-4 opacity-0  group-hover:opacity-100 transition-opacity duration-300 z-10"
         >
           <div
             class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
@@ -269,12 +269,12 @@
           v-model="mailinput"
           type="email"
           placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
+          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
           style="height: 50px"
         />
         <basebutton
           @click="handleJoin"
-          class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg transition"
+          class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-4 py-2 mt-4 rounded-lg transition"
           style="height: 50px"
         >
           Join

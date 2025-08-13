@@ -39,18 +39,26 @@
         </BaseButton>
       </div>
     </div>
-  <div v-if="showErrorModal" class="fixed inset-0 flex items-center justify-center bg-black model z-50">
-    <div class="bg-pink-100 border border-pink-400 text-pink-800 px-6 py-4 rounded-lg shadow-lg w-80">
-      <div class="flex justify-between items-center mb-2">
-        <h3 class="font-bold">Feild to login</h3>
-        <button @click="showErrorModal = false" class="text-pink-800 font-bold">&times;</button>
-      </div>
-      <p> Eamil  Exists.</p>
+ <div v-if="showErrorModal" class="fixed inset-0 model flex items-center justify-center bg-black bg-opacity-50 z-50">
+  <div class="bg-white border-l-4 border-red-500 text-red-700 px-6 py-4 rounded-lg shadow-lg w-96 animate-fade-in">
+    <div class="flex justify-between items-center mb-3">
+      <h3 class="font-bold text-lg flex items-center gap-2">
+        <i class="fas fa-exclamation-circle text-red-500"></i>
+        Failed to Login
+      </h3>
+      <button 
+        @click="showErrorModal = false" 
+        class="text-red-500 text-xl font-bold hover:text-red-700 transition"
+      >
+        &times;
+      </button>
     </div>
-  </div> 
+    <p class="text-sm">Email already exists. Please try another one.</p>
+  </div>
+</div>
+
   </div>
 </template>
-
 <script setup>
 import AuthForm from '../../components/AuthForm.vue'
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -58,22 +66,34 @@ import BaseButton from '../../components/BaseButton.vue';
 import { auth } from "../../firebase";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { useUserStore } from '../../data/signupstore' // استدعاء الـ store
 
 const showModal = ref(false);
 const showErrorModal = ref(false);
 const router = useRouter();
+const userStore = useUserStore()
+
 const gotohome = () => {
-  showModal.value = true;
-  router.push("/");
+  router.push("/") 
 }
-async function handleSignUp({ email, password }) {
+
+async function handleSignUp({ username, email, password }) {
   try {
     await createUserWithEmailAndPassword(auth, email, password);
+
+    userStore.setUserData({
+      name: username,
+      email,
+      password
+    })
+
     showModal.value = true;
   } catch (error) {
-showErrorModal.value = true;    }
+    showErrorModal.value = true;
+  }
 }
 </script>
+
 
 
 <style scoped>

@@ -27,7 +27,7 @@
             Price: {{ place.price }} EGP
           </div>
 
-          <BaseButton class="mt-6">Book This Trip</BaseButton>
+          <BaseButton class="mt-6" @click="bookNow">Book This Trip</BaseButton>
         </div>
       </div>
 
@@ -112,6 +112,26 @@ const places = [
   }
 ];
 
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+import { useBookingStore } from '../data/store'
+
+const bookingStore = useBookingStore()
+
+function bookNow() {
+  if (!place) return;
+
+  bookingStore.setCardData({
+    image: place.image,
+    title: place.title,
+    rate: place.rating,
+    price: place.price,
+  });
+
+  router.push('/form');
+}
 
 const route = useRoute()
 const placeId = route.params.id

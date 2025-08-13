@@ -27,7 +27,7 @@
             Price: {{ place.price }} EGP
           </div>
 
-          <BaseButton class="mt-6">Book This Trip</BaseButton>
+          <BaseButton class="mt-6"  @click="bookNow" > Book This Trip</BaseButton>
         </div>
       </div>
 
@@ -53,7 +53,9 @@ import { useRoute } from 'vue-router'
 import Navbar from '../components/NavBar-Black.vue'
 import Footer from '../components/Footer.vue'
 import BaseButton from '../components/BaseButton.vue'
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const places = [
   {
     id: '1',
@@ -65,6 +67,8 @@ const places = [
     date: "Available All Year",
     duration: "6 Hours",
     people: "2-6 People",
+      rating:5,
+
     price: "500"
   },
   {
@@ -77,6 +81,8 @@ const places = [
     date: "October - April",
     duration: "1 Day",
     people: "1-10 People",
+      rating:4,
+
     price: "700"
   },{
   id: '3',
@@ -89,10 +95,27 @@ const places = [
   date: "October - March",
   duration: "2 Days / 1 Night",
   people: "2-12 People",
+  rating:4.3,
   price: "850"
 }
 
 ]
+import { useBookingStore } from '../data/store'
+
+const bookingStore = useBookingStore()
+
+function bookNow() {
+  if (!place) return;
+
+  bookingStore.setCardData({
+    image: place.image,
+    title: place.title,
+    rate: place.rating,
+    price: place.price,
+  });
+
+  router.push('/form');
+}
 
 const route = useRoute()
 const placeId = route.params.id
