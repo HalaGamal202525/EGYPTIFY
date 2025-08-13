@@ -45,7 +45,7 @@
     </div>
 
     <!-- Button -->
-    <router-link to="/transportation-booking">
+    <router-link to="/form">
       <BaseButton class="w-full  text-white font-semibold py-2.5 rounded-lg shadow-md transition-all">
         Book Now
       </BaseButton>
