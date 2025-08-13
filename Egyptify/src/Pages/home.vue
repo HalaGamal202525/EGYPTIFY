@@ -269,12 +269,12 @@
           v-model="mailinput"
           type="email"
           placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
+          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
           style="height: 50px"
         />
         <basebutton
           @click="handleJoin"
-          class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-6 py-2 rounded-lg transition"
+          class="bg-[#FFC340] hover:bg-yellow-400 text-black font-semibold px-4 py-2 mt-4 rounded-lg transition"
           style="height: 50px"
         >
           Join
