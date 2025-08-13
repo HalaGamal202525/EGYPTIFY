@@ -149,7 +149,7 @@
     <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-12">
         <h2 class="special-heading">Discover</h2>
-        <p class="text-xl text-gray-700">Thing to Do</p>
+        <p class="text-xl text-gray-700">Things to Do</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-9 px-8">
@@ -338,7 +338,7 @@
     <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-12">
         <h2 class="special-heading">offers</h2>
-        <p class="text-xl text-gray-700">special offer</p>
+        <p class="text-xl text-gray-700">special offers</p>
       </div>
 
       <div
