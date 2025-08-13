@@ -503,7 +503,7 @@
       Your booking has been successfully confirmed. We’ve sent a confirmation email with the details.
     </p>
 
-    <BaseButton @click="goToHome" class="w-full">Back to Home</BaseButton>
+    <BaseButton @click="$router.push('/')" class="w-full">Back to Home</BaseButton>
   </div>
 </div>
 
