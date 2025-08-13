@@ -4,7 +4,7 @@
     <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
       <div class="flex items-center mb-8">
         <img
-          src="../../public/profile/unnamed.png"
+          src="../../public/about-us/girl-3.png"
           alt="Profile Avatar"
           class="w-20 h-20 rounded-full mr-4 object-fit"
         />
