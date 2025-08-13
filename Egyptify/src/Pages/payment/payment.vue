@@ -257,7 +257,7 @@
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
             </h3>
-            <InputField placeholder="Enter Phone Number" type="number" />
+            <InputField placeholder="Enter Phone Number" />
 
             <p class="text-sm text-gray-600">
               You will receive a code on your phone number.
@@ -369,7 +369,7 @@
               </div>
             </div>
 
-            <div class="flex justify-between gap-3">
+            <!-- <div class="flex justify-between gap-3">
               <div class="w-1/3">
                 <label class="block text-sm font-medium text-gray-700 mb-1"
                   >Exp. Month</label
@@ -392,15 +392,40 @@
               </div>
               <div class="w-1/3">
                 <label class="block text-sm font-medium text-gray-700 mb-1"
-                  >CVC</label
+                  >CVV</label
                 >
                 <InputField
                   type="number"
-                  placeholder="CVC"
+                  placeholder="CVV"
                   class="w-full px-2 py-2 rounded-md"
                 />
               </div>
-            </div>
+            </div> -->
+
+            <div class="flex justify-between gap-3">
+  <div class="w-1/2">
+    <label class="block text-sm font-medium text-gray-700 mb-1">
+      Expiry Date
+    </label>
+    <InputField
+      type="text"
+      placeholder="MM/YY"
+      class="w-full px-2 py-2 rounded-md"
+    />
+  </div>
+
+  <div class="w-1/2">
+    <label class="block text-sm font-medium text-gray-700 mb-1">
+      CVV
+    </label>
+    <InputField
+      
+      placeholder="CVV"
+      class="w-full px-2 py-2 rounded-md"
+    />
+  </div>
+</div>
+
 
             <div
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
@@ -425,7 +450,7 @@
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
             </h3>
-            <InputField placeholder="Enter Phone Number" type="number" />
+            <InputField placeholder="Enter Phone Number"  />
 
             <p class="text-sm text-gray-600">
               You will receive a code on your phone number.
