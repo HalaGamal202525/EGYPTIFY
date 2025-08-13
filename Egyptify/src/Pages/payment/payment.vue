@@ -83,7 +83,6 @@
   class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
 >
 <div v-if="hotel">
-  <!-- باقي بيانات الفندق -->
    <div class="py-4 space-y-2">
     <h2 class="text-xl font-bold text-gray-800">{{hotel.name }}</h2>
     <p class="text-gray-600">
@@ -111,9 +110,39 @@
 </p>
   </div>
 </div>
-<div v-else>
-  <p>Loading hotel data...</p>
+
+<div>
+  <div v-if="cardData && cardData.title">
+    <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden p-4">
+      <img
+        v-if="cardData.image"
+        :src="cardData.image"
+        alt="Booking Image"
+        class="w-full h-48 object-cover rounded-md mb-4"
+      />
+      <h2 class="text-xl font-semibold text-gray-800 mb-2">
+        {{ cardData.title }}
+      </h2>
+      <div class="flex items-center mb-3">
+        <span v-for="n in 5" :key="n" class="text-yellow-400 mr-1">
+          <i
+            class="fa-solid"
+            :class="n <= Math.round(cardData.rate) ? 'fa-star' : 'fa-star-half-stroke'"
+          ></i>
+        </span>
+        <span class="text-gray-600 ml-2">({{ cardData.rate || 0 }})</span>
+      </div>
+      <p class="text-lg font-bold text-green-600">
+        {{ cardData.price ? `$${cardData.price}` : 'Price not available' }}
+      </p>
+    </div>
+  </div>
+
+
+
+
 </div>
+
 
   
 </div>
@@ -503,6 +532,7 @@ import { useBookingStore } from '../../data/store';
 
 const bookingStore = useBookingStore();
 
+const cardData = computed(() => bookingStore.card);
 const hotel = computed(() => bookingStore.hotel);
 
 const steps = ["Customer Detail ", "Payment Methoed", "Confirmation"];

@@ -37,11 +37,11 @@
 
       <!-- Cards -->
       <div v-if="viewMode === 'grid'" class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <cardgrid v-for="place in filteredPlaces" :key="place.id" :data="place" />
+        <cardgrid v-for="place in filteredPlaces" :key="place.id" :data="place"    @book="handleBook(place)"/>
       </div>
 
       <div v-else class="grid grid-cols-1 gap-4">
-        <cardlist v-for="place in filteredPlaces" :key="place.id" :data="place" />
+        <cardlist v-for="place in filteredPlaces" :key="place.id" :data="place"    @book="handleBook(place)"/>
         
       </div>
     </div>
@@ -88,6 +88,21 @@ const filteredPlaces = computed(() => {
     return matchType && matchWhere && matchReview;
   });
 });
+import { useRouter } from 'vue-router';
+import { useBookingStore } from '../../data/store.js';
+
+const router = useRouter();
+const bookingStore = useBookingStore();
+
+function handleBook(place) {
+  bookingStore.setCardData({
+    image: place.img,
+    title: place.name,
+    rate: place.review || place.rating || 0,
+    price: place.afterdesc,
+  });
+  router.push('/form'); 
+}
 
 const applyFilters = (newFilters) => {
   filters.value = newFilters;

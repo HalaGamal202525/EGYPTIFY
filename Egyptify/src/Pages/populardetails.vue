@@ -213,8 +213,7 @@ function bookNow() {
     price: place.value.price,
   })
 
-  // ممكن توجه المستخدم لصفحة الحجز مثلاً أو تعمل أي إجراء ثاني
-  router.push('/form') // أو أي رابط خاص بصفحة الحجز
+  router.push('/form') 
 }
 const route = useRoute()
 const place = ref(null)

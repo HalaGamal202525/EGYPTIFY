@@ -115,7 +115,7 @@
 
         <router-link
           to="/destination"
-          class="absolute bottom-4 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+          class="absolute bottom-4 right-4 opacity-0  group-hover:opacity-100 transition-opacity duration-300 z-10"
         >
           <div
             class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"

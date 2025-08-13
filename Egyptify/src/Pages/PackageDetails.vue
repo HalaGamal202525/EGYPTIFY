@@ -70,20 +70,20 @@
           </ul>
         </div>
         <!-- Back Button -->
-        <button
+        <BaseButton
           @click="goBack"
-          class="inline-flex items-center gap-2 px-6 py-3 mr-9 text-[#ffb703] hover:text-white bg-white border border-[#ffb703] hover:bg-[#ffb703] transition duration-300 rounded-full shadow-sm"
+          class="inline-flex !text-[#ffc340] items-center gap-2 px-6 py-3 mr-9 text-[#ffb703] hover:text-white !bg-white border border-[#ffb703] hover:bg-[#ffb703] transition duration-300 rounded-full shadow-sm"
         >
           <i class="fa-solid fa-arrow-left !text-[#ffc340] !hover:text-white"></i>
           <span>Back</span>
-        </button>
+        </BaseButton>
 
         <!-- Book Button -->
-        <button
+        <BaseButton @click="bookNow"
           class="mt-8 bg-[#ffc340] text-white px-8 py-3 rounded-full shadow hover:bg-yellow-400 transition"
         >
           Book Now
-        </button>
+        </BaseButton>
       </div>
 
       <!-- Right: Gallery -->
@@ -165,36 +165,63 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { onMounted } from "vue";
 
 import rawData from "../data/packages_data.json";
 import Navbar from "../components/navbar.vue";
 import Foot from "../components/footer.vue";
 const categories = Object.values(rawData.packageCategories);
 
+import { ref, computed, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+
+const route = useRoute();
+const router = useRouter();
+
+const categorySlug = ref(route.params.category);
+const packageSlug = ref(route.params.slug);
+
+const setCategoryFromQuery = () => {
+  const queryCategory = route.query.category;
+  if (queryCategory) {
+    categorySlug.value = queryCategory;
+  }
+};
+
 onMounted(() => {
-  console.log("Categories:", categories);
   setCategoryFromQuery();
 });
 
-import { useRouter } from "vue-router";
-const router = useRouter();
-
-const goBack = () => {
-  router.back();
-};
-
-const route = useRoute();
-const categorySlug = route.params.category;
-const packageSlug = route.params.slug;
-
 const pkg = computed(() => {
-  const category = rawData.packageCategories[categorySlug];
+  const category = rawData.packageCategories[categorySlug.value];
   if (category) {
-    return category.packages[packageSlug] || null;
+    return category.packages[packageSlug.value] || null;
   }
   return null;
 });
+
+
+
+
+const goBack = () => {
+router.replace(`/packages/${categorySlug}`);
+};
+
+
+
+import { useBookingStore } from '../data/store'
+import BaseButton from "../components/BaseButton.vue";
+const bookingStore = useBookingStore()
+function bookNow() {
+  if (!pkg.value) return;
+
+  bookingStore.setCardData({
+    image: pkg.value.image,
+    title: pkg.value.name,
+    rate: pkg.value.duration,
+    price: pkg.value.price,
+  });
+  router.push('/form');
+}
+
+
 </script>
