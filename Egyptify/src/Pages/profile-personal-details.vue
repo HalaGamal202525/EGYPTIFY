@@ -9,7 +9,7 @@
           class="w-20 h-20 rounded-full mr-4 object-fit"
         />
         <div>
-          <h1 class="text-2xl font-bold text-gray-800">Yasmine Emad</h1>
+          <h1 class="text-2xl font-bold text-gray-800">{{ userStore.name }}</h1>
           <p class="text-gray-600">Joined in 2025</p>
         </div>
       </div>
@@ -46,7 +46,7 @@
               id="username"
               type="text"
               placeholder="Yasmine Emad"
-              v-model="personalDetails.username"
+              v-model= "userStore.name "
               required
             >
               <template #icon>
@@ -64,8 +64,8 @@
             <InputField
               id="email"
               type="email"
-              placeholder="yasmineemad25@gmail.com"
-              v-model="personalDetails.email"
+              placeholder="{{ userStore.email }}"
+              v-model= "userStore.email"
               required
             >
               <template #icon>
@@ -84,7 +84,7 @@
               id="currentPassword"
               :type="currentPasswordVisible ? 'text' : 'password'"
               placeholder="Enter current password if changing"
-              v-model="passwordFields.currentPassword"
+              v-model="userStore.password"
             >
               <template #icon>
                 <i class="fas fa-lock" />
@@ -720,7 +720,9 @@ function logout() {
 
 const showDeleteModal = ref(false);
 const showSuccessMessage = ref(false);
-
+//////////////////////////////////////////////////
+import { useUserStore } from '../data/signupstore'
+const userStore = useUserStore()
 ///////////////////////////////////////////////////////////
 function confirmDelete() {
   showDeleteModal.value = false;
