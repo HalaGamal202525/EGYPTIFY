@@ -74,7 +74,7 @@ import NavBarBlack from '../../components/NavBar-Black.vue'
 
 <template>
   <NavBarBlack/>
-  <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-lg">
+  <div class="max-w-3xl mx-auto mt-29 bg-white p-8 rounded-2xl shadow-lg">
     <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Guest Information</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -1,7 +1,7 @@
 <template>
-    <NavBarBlack/>
+  <NavBarBlack />
 
-  <div class="flex justify-center items-center gap-8 my-8">
+  <div class="flex justify-center items-center gap-8 mt-29 ">
     <div
       v-for="(step, index) in steps"
       :key="index"
@@ -35,9 +35,8 @@
   <div class="mt-10 px-6">
     <div v-if="currentStep === 1">
       <div class="h-1 w-full bg-[#ffc340]"></div>
-      <!-- كروت النقل والفندق -->
       <div class="flex flex-wrap gap-6 justify-center my-4">
-        <!-- كارت وسيلة النقل -->
+        \
         <!-- <div
           class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
         >
@@ -80,129 +79,131 @@
           </div>
         </div> -->
 
- <!-- كارت الفندق -->
-<div
-  class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
->
-<div v-if="hotel">
-   <div class="py-4 space-y-2">
-    <h2 class="text-xl font-bold text-gray-800">{{hotel.name }}</h2>
-    <p class="text-gray-600">
-    {{ hotel.location }}
-    </p>
-    <p class="text-gray-600">
-      <span class="font-semibold">Check-in:</span> {{ bookingStore.dates.checkIn  }}
-    </p>
+        <!-- كارت الفندق -->
+        <div
+          class="rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
+        >
+          <div v-if="hotel">
+            <div class="py-4 space-y-2">
+              <h2 class="text-xl font-bold text-gray-800">{{ hotel.name }}</h2>
+              <p class="text-gray-600">
+                {{ hotel.location }}
+              </p>
+              <p class="text-gray-600">
+                <span class="font-semibold">Check-in:</span>
+                {{ bookingStore.dates.checkIn }}
+              </p>
 
-    <p class="text-gray-600">
-      <span class="font-semibold">Check-out:</span> {{bookingStore.dates.checkOut }}
-    </p>
-    <p>
-  <span class="font-semibold">Room Type:</span>
-  {{ bookingStore.roomType }}
-</p>
+              <p class="text-gray-600">
+                <span class="font-semibold">Check-out:</span>
+                {{ bookingStore.dates.checkOut }}
+              </p>
+              <p>
+                <span class="font-semibold">Room Type:</span>
+                {{ bookingStore.roomType }}
+              </p>
 
-<p class="text-gray-600">
-  <span class="font-semibold">Guests:</span> Up to
-  {{ bookingStore.guests }} people
-</p>
+              <p class="text-gray-600">
+                <span class="font-semibold">Guests:</span> Up to
+                {{ bookingStore.guests }} people
+              </p>
 
-<p class="text-gray-900 font-bold text-lg">
-  <span class="font-bold">Price:</span> {{ bookingStore.price }} EGP / night
-</p>
-  </div>
-</div>
+              <p class="text-gray-900 font-bold text-lg">
+                <span class="font-bold">Price:</span>
+                {{ bookingStore.price }} EGP / night
+              </p>
+            </div>
+          </div>
 
-<div>
-  <div v-if="cardData && cardData.title">
-    <div class="max-w-sm mx-auto  rounded-lg shadow-lg overflow-hidden p-4">
-      <img
-        v-if="cardData.image"
-        :src="cardData.image"
-        alt="Booking Image"
-        class="w-full h-48 object-cover rounded-md mb-4"
-      />
-      <h2 class="text-xl font-semibold text-gray-800 mb-2">
-        {{ cardData.title }}
-      </h2>
-      <div class="flex items-center mb-3">
-        <span v-for="n in 5" :key="n" class="text-yellow-400 mr-1">
-          <i
-            class="fa-solid"
-            :class="n <= Math.round(cardData.rate) ? 'fa-star' : 'fa-star-half-stroke'"
-          ></i>
-        </span>
-        <span class="text-gray-600 ml-2">({{ cardData.rate || 0 }})</span>
-      </div>
-      <p class="text-lg font-bold text-green-600">
-        {{ cardData.price ? `$${cardData.price}` : 'Price not available' }}
-      </p>
-    </div>
-  </div>
+          <div>
+            <div v-if="cardData && cardData.title">
+              <div
+                class="max-w-sm mx-auto rounded-lg shadow-lg overflow-hidden p-4"
+              >
+                <img
+                  v-if="cardData.image"
+                  :src="cardData.image"
+                  alt="Booking Image"
+                  class="w-full h-48 object-cover rounded-md mb-4"
+                />
+                <h2 class="text-xl font-semibold text-gray-800 mb-2">
+                  {{ cardData.title }}
+                </h2>
+                <div class="flex items-center mb-3">
+                  <span v-for="n in 5" :key="n" class="text-yellow-400 mr-1">
+                    <i
+                      class="fa-solid"
+                      :class="
+                        n <= Math.round(cardData.rate)
+                          ? 'fa-star'
+                          : 'fa-star-half-stroke'
+                      "
+                    ></i>
+                  </span>
+                  <span class="text-gray-600 ml-2"
+                    >({{ cardData.rate || 0 }})</span
+                  >
+                </div>
+                <p class="text-lg font-bold text-green-600">
+                  {{
+                    cardData.price
+                      ? `$${cardData.price}`
+                      : "Price not available"
+                  }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-
-
-
-</div>
-
-
-  
-</div>
-
-<!-- كارت المسافر (مكرر فقط مرة واحدة) -->
-<div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
-  <h2 class="text-2xl font-bold mb-4">Traveler Details</h2>
-  <ul class="space-y-2">
-    <li class="flex justify-between text-gray-600">
-      <strong>Name:</strong> {{ formData.name }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Address:</strong> {{ formData.address }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Nationality:</strong> {{ formData.nationality }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Gender:</strong> {{ formData.gender }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>ID Type:</strong> {{ formData.idType }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>ID Number:</strong> {{ formData.idNumber }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Phone:</strong> {{ formData.phone }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Email:</strong> {{ formData.email }}
-    </li>
-    <div class="h-px w-full bg-gray-100"></div>
-    <li class="flex justify-between text-gray-600">
-      <strong>Passengers:</strong> {{ formData.passengerCount }}
-    </li>
-  </ul>
-</div>
-
-
+        <!-- كارت المسافر (مكرر فقط مرة واحدة) -->
+        <div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
+          <h2 class="text-2xl font-bold mb-4">Traveler Details</h2>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-gray-600">
+              <strong>Name:</strong> {{ formData.name }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Address:</strong> {{ formData.address }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Nationality:</strong> {{ formData.nationality }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Gender:</strong> {{ formData.gender }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>ID Type:</strong> {{ formData.idType }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>ID Number:</strong> {{ formData.idNumber }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Phone:</strong> {{ formData.phone }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Email:</strong> {{ formData.email }}
+            </li>
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Passengers:</strong> {{ formData.passengerCount }}
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- خط -->
       <div class="h-1 w-full bg-[#ffc340] my-6"></div>
 
       <!-- كروت المسافر والرحلة -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-  
-
-       
-      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"></div>
 
       <!-- checkbox -->
       <div class="flex items-center justify-start py-6 px-6 mt-4">
@@ -218,18 +219,16 @@
       </div>
 
       <div class="flex flex row justify-center gap-8 mb-5">
-      <BaseButton
-  @click="previous()"
-  class="mt-4 w-60 !bg-white border-2 border-[#ffc340] !text-[#ffc340] font-semibold px-4 py-2 rounded-md
-         hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out">
-  Previous
-</BaseButton>
-
+        <BaseButton
+          @click="previous()"
+          class="mt-4 w-60 !bg-white border-2 border-[#ffc340] !text-[#ffc340] font-semibold px-4 py-2 rounded-md hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out"
+        >
+          Previous
+        </BaseButton>
 
         <BaseButton
           @click="nextStep()"
-          class="mt-4 w-60 border-2 border-[#ffc340] text-[#ffc340] font-semibold px-4 py-2 rounded-md
-         hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out"
+          class="mt-4 w-60 border-2 border-[#ffc340] text-[#ffc340] font-semibold px-4 py-2 rounded-md hover:bg-[#ffc340] hover:text-white transition-colors duration-300 ease-in-out"
           >Next</BaseButton
         >
       </div>
@@ -405,29 +404,27 @@
             </div> -->
 
             <div class="flex justify-between gap-3">
-  <div class="w-1/2">
-    <label class="block text-sm font-medium text-gray-700 mb-1">
-      Expiry Date
-    </label>
-    <InputField
-      type="text"
-      placeholder="MM/YY"
-      class="w-full px-2 py-2 rounded-md"
-    />
-  </div>
+              <div class="w-1/2">
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  Expiry Date
+                </label>
+                <InputField
+                  type="text"
+                  placeholder="MM/YY"
+                  class="w-full px-2 py-2 rounded-md"
+                />
+              </div>
 
-  <div class="w-1/2">
-    <label class="block text-sm font-medium text-gray-700 mb-1">
-      CVV
-    </label>
-    <InputField
-      
-      placeholder="CVV"
-      class="w-full px-2 py-2 rounded-md"
-    />
-  </div>
-</div>
-
+              <div class="w-1/2">
+                <label class="block text-sm font-medium text-gray-700 mb-1">
+                  CVV
+                </label>
+                <InputField
+                  placeholder="CVV"
+                  class="w-full px-2 py-2 rounded-md"
+                />
+              </div>
+            </div>
 
             <div
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
@@ -443,8 +440,11 @@
         </div>
       </div>
 
-      <div v-if="activeTab === 'vodafone'" class="flex justify-center w-full my-5">
-       <div
+      <div
+        v-if="activeTab === 'vodafone'"
+        class="flex justify-center w-full my-5"
+      >
+        <div
           class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md transition-all gap-6 duration-300"
         >
           <!-- Step 1: Phone number -->
@@ -452,7 +452,7 @@
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
             </h3>
-            <InputField placeholder="Enter Phone Number"  />
+            <InputField placeholder="Enter Phone Number" />
 
             <p class="text-sm text-gray-600">
               You will receive a code on your phone number.
@@ -513,27 +513,37 @@
         </div>
       </div>
     </div>
-   <div v-if="currentStep === 3" class="flex justify-center w-full my-10">
-  <div class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md text-center">
-    <svg
-      class="mx-auto mb-4 w-16 h-16 text-green-500"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
+    <div v-if="currentStep === 3" class="flex justify-center w-full my-10">
+      <div
+        class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md text-center"
+      >
+        <svg
+          class="mx-auto mb-4 w-16 h-16 text-green-500"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
 
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Payment Confirmed!</h2>
-    <p class="text-gray-600 mb-6">
-      Your booking has been successfully confirmed. We’ve sent a confirmation email with the details.
-    </p>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Payment Confirmed!
+        </h2>
+        <p class="text-gray-600 mb-6">
+          Your booking has been successfully confirmed. We’ve sent a
+          confirmation email with the details.
+        </p>
 
-    <BaseButton @click="$router.push('/')" class="w-full">Back to Home</BaseButton>
-  </div>
-</div>
-
+        <BaseButton @click="$router.push('/')" class="w-full"
+          >Back to Home</BaseButton
+        >
+      </div>
+    </div>
   </div>
 
   <foot />
@@ -546,7 +556,7 @@ import { useRoute, useRouter } from "vue-router";
 const route = useRoute();
 
 const router = useRouter();
-import NavBarBlack from '../../components/NavBar-Black.vue'
+import NavBarBlack from "../../components/NavBar-Black.vue";
 import BaseButton from "../../components/BaseButton.vue";
 import foot from "../../components/footer.vue";
 import InputField from "../../components/InputField.vue";
@@ -555,8 +565,8 @@ import otp from "../../components/OtpInput.vue";
 // localStorage.setItem('selectedHotel', JSON.stringify(hotel));
 // localStorage.setItem('tripDetails', JSON.stringify(trip));
 
-import { computed } from 'vue';
-import { useBookingStore } from '../../data/store';
+import { computed } from "vue";
+import { useBookingStore } from "../../data/store";
 
 const bookingStore = useBookingStore();
 
@@ -619,12 +629,11 @@ const goToStepThree = () => {
   // كود نقلك للخطوة الثالثة، ممكن تغيري قيمة step مثلاً
   currentStep.value = 3;
 };
-import { watchEffect } from 'vue';
+import { watchEffect } from "vue";
 
 watchEffect(() => {
-  console.log('hotel data:', bookingStore.hotel);
+  console.log("hotel data:", bookingStore.hotel);
 });
-
 
 const formData = ref({});
 
