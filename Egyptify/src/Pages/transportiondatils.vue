@@ -205,5 +205,4 @@ const handleBookNow = (item) => {
 };
 
 
-const emit = defineEmits(["book-now"]);
 </script>
