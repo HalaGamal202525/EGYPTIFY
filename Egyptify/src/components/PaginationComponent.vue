@@ -1,7 +1,5 @@
-
-
 <template>
-  <div class="flex justify-center items-center space-x-2 mt-8">
+<div class="flex justify-center items-center space-x-2 mt-8 flex-wrap">
     <!-- Prev -->
     <button
       @click="goToPage(currentPage - 1)"
@@ -14,7 +12,7 @@
 
     <!-- Pages -->
     <button
-      v-for="page in totalPages"
+      v-for="page in visiblePages"
       :key="page"
       @click="goToPage(page)"
       :class="[
@@ -40,14 +38,28 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, computed } from 'vue'
 
 const props = defineProps({
   currentPage: Number,
-  totalPages: Number
+  totalPages: Number,
+  maxVisible: { type: Number, default: 5 } // الحد الأقصى للأزرار الظاهرة
 })
 
 const emit = defineEmits(['page-changed'])
+
+// حساب الصفحات الظاهرة فقط
+const visiblePages = computed(() => {
+  const pages = []
+  let start = Math.max(1, props.currentPage - Math.floor(props.maxVisible / 2))
+  let end = start + props.maxVisible - 1
+  if (end > props.totalPages) {
+    end = props.totalPages
+    start = Math.max(1, end - props.maxVisible + 1)
+  }
+  for (let i = start; i <= end; i++) pages.push(i)
+  return pages
+})
 
 function goToPage(page) {
   if (page >= 1 && page <= props.totalPages) {
@@ -59,8 +71,9 @@ function goToPage(page) {
 <style scoped>
 button {
   transition: all 0.25s ease;
+  line-height: 1.5; /* يمنع زيادة ارتفاع الزر */
 }
-i{
+i {
   color: #ffc340;
 }
 </style>
