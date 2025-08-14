@@ -158,7 +158,7 @@
 
         <!-- كارت المسافر (مكرر فقط مرة واحدة) -->
         <div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
-          <h2 class="text-2xl font-bold mb-4">Traveler Details</h2>
+          <h2 class="text-2xl font-bold mb-4">Traveller Details</h2>
           <ul class="space-y-2">
             <li class="flex justify-between text-gray-600">
               <strong>Name:</strong> {{ formData.name }}
