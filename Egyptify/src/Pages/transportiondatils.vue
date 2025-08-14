@@ -105,6 +105,8 @@ import DropdownMenu from "../components/DropdownMenu.vue";
 import CardComponent from "../components/card.vue";
 import BookingCalendar from "../components/bookingCalendar.vue";
 
+
+const bookingHeroImg = "/booking-hero.webp"
 // بيانات وسائل النقل من JSON
 import transportationDataJSON from "../data/bookingTransportation.json";
 const transportationData = ref(transportationDataJSON.transportation);
