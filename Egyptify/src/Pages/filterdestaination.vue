@@ -52,6 +52,18 @@
         {{ type }}
       </button>
     </div>
+     <div v-else>
+        <div v-for="type in uniqueCategory" :key="type">
+          <input
+            type="checkbox"
+            :id="`type-${type}`"
+            :value="type"
+            v-model="filters.category"
+            class="mx-3"
+          />
+          <label :for="`type-${type}`">{{ type }}</label>
+        </div>
+      </div>
     <!-- Rate -->
 
     <h2 class="font-bold my-2">Rate</h2>
@@ -68,6 +80,18 @@
         {{ rate }}
       </button>
     </div>
+     <div v-else>
+        <div v-for="rate in uniqueRate" :key="type">
+          <input
+            type="checkbox"
+            :id="`rate-${rate}`"
+            :value="rate"
+            v-model="filters.rate"
+            class="mx-3"
+          />
+          <label :for="`rate-${rate}`">{{ rate }}</label>
+        </div>
+      </div>
   </div>
 </template>
 
