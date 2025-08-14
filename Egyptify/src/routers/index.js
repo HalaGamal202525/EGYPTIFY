@@ -275,9 +275,17 @@ component:FoodDetail
 
 ]
 
+// const router = createRouter({
+//   history: createWebHistory(),
+//   routes,
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+  return { top: 0 }
+}
+
 })
+
 
 export default router

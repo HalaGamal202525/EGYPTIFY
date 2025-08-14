@@ -1,4 +1,10 @@
 <template>
+  <Navbar />
+  <Hero
+    title="Booking Page"
+    description="Plan & Reserve Your Trip"
+    :image="bookingHeroImg"
+  />
   <div class="max-w-screen-xl mx-auto px-2">
     <!-- Filter Section -->
     <div
@@ -8,7 +14,7 @@
       <div class="flex justify-center flex-wrap gap-4">
         <!-- From Dropdown -->
         <DropdownMenu
-          :label="selectedFrom || 'From'"          
+          :label="selectedFrom || 'From'"
           :options="cityOptions"
           @select="(item) => (selectedFrom = item.value)"
         />
@@ -19,8 +25,6 @@
           :options="cityOptions"
           @select="(item) => (selectedTo = item.value)"
         />
-
-      
 
         <!-- Type Dropdown -->
         <DropdownMenu
@@ -34,7 +38,8 @@
     <!-- Transportation Cards -->
     <section
       class="grid grid-cols-1 gap-4 px-4 pb-10"
-      style="grid-template-columns: repeat(3, minmax(350px, 1fr)) ">
+      style="grid-template-columns: repeat(3, minmax(350px, 1fr))"
+    >
       <CardComponent
         v-for="item in filteredTransportation"
         :key="item.id"
@@ -42,18 +47,27 @@
         :type="item.type"
         :kind="item.kind"
         :amenities="item.amenities"
-        :price="item.price"        
+        :price="item.price"
         :features="item.features"
         :icon="item.icon"
         :showButton="true"
         :buttonText="'Book Now'"
         :showImage="false"
-        :departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
-        :arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
-        :duration="item.type === 'Car' ? 'Duration: Based on distance' : `${item.duration}`"
+        :departure="
+          item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`
+        "
+        :arrival="
+          item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`
+        "
+        :duration="
+          item.type === 'Car'
+            ? 'Duration: Based on distance'
+            : `${item.duration}`
+        "
         :location="
           item.type === 'Car'
             ? 'From: Flexible → To: As requested'
+
             : `From: ${item.from} → To: ${item.to}` "
         
   :onClick="() => handleBookNow(item)"
@@ -63,14 +77,12 @@
       />
     </section>
 
-
     <!-- Booking Calendar -->
     <BookingCalendar
       v-if="showBooking"
       :selectedItem="selectedTransport"
       @confirm="handleBooking"
       @close="showBooking = false"
-
     />
 
     <!-- Checkout Section -->
@@ -87,6 +99,7 @@
       </p>
     </div>
   </div>
+  <Footer />
 </template>
 
 <script setup>
@@ -95,6 +108,8 @@ import DropdownMenu from "../components/DropdownMenu.vue";
 import CardComponent from "../components/card.vue";
 import BookingCalendar from "../components/bookingCalendar.vue";
 
+
+const bookingHeroImg = "/booking-hero.webp"
 // بيانات وسائل النقل من JSON
 import transportationDataJSON from "../data/bookingTransportation.json";
 const transportationData = ref(transportationDataJSON.transportation);
@@ -105,23 +120,24 @@ const selectedTo = ref(null);
 const selectedDate = ref(null);
 const selectedType = ref(null);
 
+import Navbar from "../components/navbar.vue";
+import Hero from "../components/Hero.vue";
+import Footer from "../components/footer.vue";
 
-
-// استخراج المدن من بيانات النقل
 const cityOptions = computed(() => {
   const cities = new Set();
 
-  transportationData.value.forEach(item => {
+  transportationData.value.forEach((item) => {
     if (item.from) cities.add(item.from);
     if (item.to) cities.add(item.to);
   });
 
   return [
     { label: "All Cities", value: "" },
-    ...Array.from(cities).map(city => ({
+    ...Array.from(cities).map((city) => ({
       label: city,
-      value: city
-    }))
+      value: city,
+    })),
   ];
 });
 
@@ -189,4 +205,5 @@ const handleBookNow = (item) => {
 };
 
 
+const emit = defineEmits(["book-now"]);
 </script>
