@@ -12,7 +12,7 @@ const formData = ref({
   idNumber: '',
   phone: '',
   email: '',
-  date: '', 
+  date: '', // ✅ أضفنا التاريخ هنا
   passengerCount: 1
 })
 
@@ -39,6 +39,7 @@ const validateForm = () => {
     !idNumber ||
     !phone ||
     !email ||
+    !date ||
     !passengerCount
   ) {
     alert('Please fill in all required fields.')
@@ -66,7 +67,7 @@ const goToNext = () => {
 
 const goBack = () => {
   console.log('رجوع للخطوة السابقة')
-  router.push('/booking')
+  // router.push('/booking')
 }
 import NavBarBlack from '../../components/NavBar-Black.vue'
 import foot from "../../components/footer.vue";
@@ -165,5 +166,28 @@ import foot from "../../components/footer.vue";
     <foot />
 
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -67,10 +67,13 @@
         :location="
           item.type === 'Car'
             ? 'From: Flexible → To: As requested'
-            : `From: ${item.from} → To: ${item.to}`
-        "
-        :onClick="() => $router.push('/form')"
-        class="!w-full space-y-4"
+
+            : `From: ${item.from} → To: ${item.to}` "
+        
+  :onClick="() => handleBookNow(item)"
+
+          class="!w-full space-y-4"
+
       />
     </section>
 
@@ -163,13 +166,13 @@ const handleSearch = () => {
 };
 
 // عند الضغط على Book Now
-const showBooking = ref(false);
-const selectedTransport = ref(null);
+// const showBooking = ref(false);
+// const selectedTransport = ref(null);
 
-const handleBookNow = (item) => {
-  selectedTransport.value = item;
-  showBooking.value = true;
-};
+// const handleBookNow = (item) => {
+//   selectedTransport.value = item;
+//   showBooking.value = true;
+// };
 
 // استقبال بيانات الحجز من الـ Calendar
 const bookingDetails = ref(null);
@@ -180,5 +183,26 @@ const handleBooking = (data) => {
 
 import { defineEmits } from "vue";
 
-const emit = defineEmits(["book-now"]);
+const emit = defineEmits(['book-now']) 
+
+
+
+
+
+
+import { useRouter } from "vue-router";
+import { useBookingStore } from "../data/Store";
+
+const bookingStore = useBookingStore();
+const router = useRouter();
+
+const handleBookNow = (item) => {
+  // حفظ بيانات وسيلة المواصلات في store
+  bookingStore.setTransportation(item);
+
+  // الانتقال لصفحة الفورم
+  router.push("/form");
+};
+
+
 </script>
