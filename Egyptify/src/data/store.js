@@ -10,8 +10,15 @@ export const useBookingStore = defineStore('booking', {
       image: null,
       title: null,
       rate: null,
-      price: null
-    }
+      price: null,
+
+  
+    },
+
+ // بيانات وسيلة المواصلات
+    transportation: null
+
+
   }),
   actions: {
     setHotel(hotel) {
@@ -20,6 +27,8 @@ export const useBookingStore = defineStore('booking', {
         this.dates.checkIn = hotel.checkin;
         this.dates.checkOut = hotel.checkout;
       }
+
+      
     },
     setRoomDetails(roomType, guests, price, image) {
       this.roomType = roomType;
@@ -50,6 +59,15 @@ export const useBookingStore = defineStore('booking', {
         rate: null,
         price: null
       };
-    }
+
+      this.transportation = null;
+      },
+     
+
+       setTransportation(transportData) {
+        this.transportation = transportData;
+      }
+
+
   }
 })

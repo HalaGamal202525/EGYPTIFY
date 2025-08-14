@@ -36,7 +36,7 @@
     <div v-if="currentStep === 1">
       <div class="h-1 w-full bg-[#ffc340]"></div>
       <div class="flex flex-wrap gap-6 justify-center my-4">
-        \
+        
         <!-- <div
           class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
         >
@@ -115,6 +115,32 @@
             </div>
           </div>
 
+
+
+
+
+          <!-- بيانات وسيلة المواصلات -->
+    <div v-if="bookingStore.transportation" class="mb-10">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">Transportation Booking</h2>
+      <p class="mb-3"><strong>Type:</strong> {{ bookingStore.transportation.type }}</p>
+      <p class="mb-3"><strong>Provider:</strong> {{ bookingStore.transportation.provider }}</p>
+      <p class="mb-3"><strong>From:</strong> {{ bookingStore.transportation.from }}</p>
+      <p class="mb-3"><strong>To:</strong> {{ bookingStore.transportation.to }}</p>
+      <p class="mb-3"><strong>Departure:</strong> {{ bookingStore.transportation.departure }}</p>
+      <p class="mb-3"><strong>Arrival:</strong> {{ bookingStore.transportation.arrival }}</p>
+      <p class="mb-3"><strong>Date:</strong> {{ formData.date }}</p>
+      <p class="font-bold"><strong>Price:</strong> {{ bookingStore.transportation.price }} EGP</p>
+    </div>
+
+    <!-- لو مفيش أي بيانات -->
+    <div v-if="!bookingStore.hotel && !bookingStore.transportation" class="text-gray-500">
+      No booking details available.
+    </div>
+
+
+
+
+
           <div>
             <div v-if="cardData && cardData.title">
               <div
@@ -191,6 +217,15 @@
             <li class="flex justify-between text-gray-600">
               <strong>Email:</strong> {{ formData.email }}
             </li>
+
+
+            <div class="h-px w-full bg-gray-100"></div>
+            <li class="flex justify-between text-gray-600">
+              <strong>Date:</strong> {{ formData.date }}
+            </li>
+
+
+
             <div class="h-px w-full bg-gray-100"></div>
             <li class="flex justify-between text-gray-600">
               <strong>Passengers:</strong> {{ formData.passengerCount }}
@@ -615,6 +650,11 @@ const previous = () => {
 const goBack = () => {
   router.push("/form");
 };
+
+const goToHome = () => {
+    router.push('/');
+};
+
 const continueVerification = () => {
   const fullOtp = otpDigits.value.join("");
   if (fullOtp.length === 4 && /^\d{4}$/.test(fullOtp)) {
@@ -704,3 +744,12 @@ input[type="checkbox"] {
   border: 1px solid black !important;
 }
 </style>
+
+
+
+
+
+
+
+
+
