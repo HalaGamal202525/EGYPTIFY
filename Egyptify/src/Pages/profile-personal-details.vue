@@ -6,7 +6,7 @@
          <div class="px-3">
     <!-- الصورة الأساسية -->
     <img
-      :src="selectedImage || '/about-us/girl-10.png'"
+      :src="selectedImage || '/about-us/girl-4.png'"
       alt="main"
       class="w-25 h-25 rounded-full object-cover cursor-pointer border"
       @click="openModal"
@@ -26,7 +26,7 @@
             v-for="(img, index) in images"
             :key="index"
             :src="img"
-            class="w-25 h-25 rounded-full object-cover cursor-pointer border-2"
+            class="w-25 h-25 rounded-full object-contain cursor-pointer border-2"
             :class="{ 'border-[#ffc340]': selectedTemp === img }"
             @click="selectedTemp = img"
           />
