@@ -67,6 +67,8 @@ import { auth } from "../../firebase";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useUserStore } from '../../data/signupstore' // استدعاء الـ store
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const showModal = ref(false);
 const showErrorModal = ref(false);
@@ -79,19 +81,28 @@ const gotohome = () => {
 
 async function handleSignUp({ username, email, password }) {
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    await setDoc(doc(db, "users", user.uid), {
+      name: username,
+      email: email, 
+      password:password
+    });
 
     userStore.setUserData({
       name: username,
-      email,
-      password
-    })
+      email: email,
+            password:password
+
+    });
 
     showModal.value = true;
   } catch (error) {
     showErrorModal.value = true;
   }
 }
+
 </script>
 
 

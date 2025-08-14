@@ -163,15 +163,25 @@
 
 <script setup>
 import { ref } from "vue";
-
-
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../data/signupstore";
+
+import InputField from "./InputField.vue";
+import BaseButton from "./BaseButton.vue";
+
+const userStore = useUserStore();
 const showSuccessModal = ref(false);
 const showErrorModal = ref(false);
-import { useRouter } from "vue-router";
 
-const userName = ref('');
+const form = ref({
+  username: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+});
+
 defineProps({
   title: { type: String, default: "Log in" },
   subtitle: {
@@ -188,47 +198,69 @@ defineProps({
   authLinkAction: { type: String, default: "Sign up" },
   authLinkRoute: { type: String, default: "/signup" },
 });
-const emit = defineEmits(["submit"]);
 
-const email = ref('');
-const password = ref('');
-const confirmPassword = ref('');
-const username = ref('');
-const form = ref({
-  username: "",
-  email: "",
-  password: "",
-  confirmPassword: "",
-});
+const emit = defineEmits(["submit"]);
+const router = useRouter();
 
 function handleSubmit() {
   emit("submit", {
     email: form.value.email,
     password: form.value.password,
-    confirmPassword: confirmPassword.value,
     username: form.value.username, 
   });
+
+  form.value.username = "";
+  form.value.email = "";
+  form.value.password = "";
+  form.value.confirmPassword = "";
 }
-const router = useRouter();
+
+
 
 const gotohome = () => {
   router.push("/");
 };
 
+// function googleLogin() {
+//   const provider = new GoogleAuthProvider();
+//   signInWithPopup(auth, provider)
+//     .then((res) => {
+//       const userData = {
+//         name: res.user.displayName,
+//         email: res.user.email,
+//         uid: res.user.uid
+//       };
+//       userStore.setUserData(userData);
+
+//       showSuccessModal.value = true;
+//     })
+//     .catch(() => {
+//       showErrorModal.value = true;
+//     });
+// }
+
 function googleLogin() {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((res) => {
-      userName.value = res.user.displayName;
+      const userData = {
+        name: res.user.displayName,
+        email: res.user.email,
+        password: null, // أو "google-login"
+        uid: res.user.uid,
+        photo: res.user.photoURL
+      };
+
+      userStore.setUserData(userData);
       showSuccessModal.value = true;
     })
     .catch(() => {
       showErrorModal.value = true;
     });
 }
-import InputField from "./InputField.vue";
-import BaseButton from "./BaseButton.vue";
+
 </script>
+
 <style scoped>
 .model {
   background-color: rgba(128, 128, 128, 0.329);

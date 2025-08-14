@@ -59,30 +59,68 @@
 </template>
 
 <script setup>
-import AuthForm from "../../components/AuthForm.vue";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { onMounted, ref } from "vue";
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { auth, db } from "../../firebase";
+import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { useUserStore } from "../../data/signupstore";
+import AuthForm from "../../components/AuthForm.vue";
 import BaseButton from "../../components/BaseButton.vue";
 
 const router = useRouter();
+const userStore = useUserStore();
 
 const showModal = ref(false);
 const showErrorModal = ref(false);
+
+onMounted(async () => {
+  // تسجيل الخروج ومسح البيانات
+  await signOut(auth);
+  userStore.clearUserData();
+  console.log("تم تسجيل الخروج ومسح بيانات المستخدم");
+});
+
 const gotohome = () => {
-  showModal.value = true;
   router.push("/");
 };
 
 async function handleLogin({ email, password }) {
   try {
-    await signInWithEmailAndPassword(auth, email, password);
-    showModal.value = true;
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    const docSnap = await getDoc(doc(db, "users", user.uid));
+    if (docSnap.exists()) {
+      userStore.setUserData(docSnap.data());
+      showModal.value = true;
+
+      const formElement = document.querySelector("form");
+      if (formElement) formElement.reset();
+    } else {
+      console.log("No user profile found!");
+    }
   } catch (error) {
-showErrorModal.value = true;  }
+    console.error("Login failed:", error);
+    showErrorModal.value = true;
+  }
 }
+
+// إلغاء onAuthStateChanged عشان ما يرجعش بيانات قديمة
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    const docSnap = await getDoc(doc(db, "users", user.uid));
+    if (docSnap.exists()) {
+      userStore.setUserData(docSnap.data());
+    } else {
+      userStore.clearUserData();
+    }
+  }
+});
+
+
 </script>
+
 
 <style scoped>
 .model {

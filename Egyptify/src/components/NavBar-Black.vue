@@ -39,12 +39,12 @@
   </span>
 
   <template v-if="user">
-    <img
-      :src="user.photoURL || '../../public/about-us/girl-3.png'"
-      :alt="user.displayName || 'User'"
-      @click="goToProfile"
-      class="w-12 h-12 rounded-full object-contain border-2 border-yellow-400  hover:scale-105 transition cursor-pointer"
-    />
+     <img
+    :src="imageStore.selectedImage || '/about-us/girl-7.png'"
+    :alt="user.displayName || 'User'"
+    @click="goToProfile"
+    class="w-15 h-15 rounded-full object-contain border-2 border-yellow-400 hover:scale-105 transition cursor-pointer"
+  />
   </template>
 
   <template v-else>
@@ -66,7 +66,8 @@ import { useRouter } from "vue-router";
 
 import BaseButton from './BaseButton.vue';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-
+import { useImageStore } from '../data/imagepicker'
+const imageStore = useImageStore()
 const router = useRouter();
 
 // حالة المستخدم

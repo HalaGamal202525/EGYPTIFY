@@ -3,11 +3,53 @@
   <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
       <div class="flex items-center mb-8">
-        <img
-          src="../../public/about-us/girl-3.png"
-          alt="Profile Avatar"
-          class="w-20 h-20 rounded-full mr-4 object-fit"
-        />
+         <div class="px-3">
+    <!-- الصورة الأساسية -->
+    <img
+      :src="selectedImage || '/about-us/girl-10.png'"
+      alt="main"
+      class="w-25 h-25 rounded-full object-cover cursor-pointer border"
+      @click="openModal"
+    />
+
+    <!-- المودل -->
+    <div
+      v-if="isModalOpen"
+      class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-lg font-bold mb-4">Choose image</h2>
+
+        <!-- الصور المتاحة -->
+        <div class="grid grid-cols-3 gap-3">
+          <img
+            v-for="(img, index) in images"
+            :key="index"
+            :src="img"
+            class="w-25 h-25 rounded-full object-cover cursor-pointer border-2"
+            :class="{ 'border-[#ffc340]': selectedTemp === img }"
+            @click="selectedTemp = img"
+          />
+        </div>
+
+        <!-- أزرار التحكم -->
+        <div class="mt-4 flex justify-between">
+          <BaseButton
+            @click="closeModal"
+            class="px-4 py-2 !bg-white !border !border-[#ffc340] !text-[#ffc340] rounded "
+          >
+            cansel
+          </BaseButton>
+          <BaseButton
+            @click="saveImage"
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            save
+          </BaseButton>
+        </div>
+      </div>
+    </div>
+  </div>
         <div>
           <h1 class="text-2xl font-bold text-gray-800">{{ userStore.name }}</h1>
           <p class="text-gray-600">Joined in 2025</p>
@@ -273,8 +315,9 @@
             </div>
             <div class="ml-4 flex-shrink-0">
               <img
-                :src="review.imageUrl"
-                :alt="review.location"
+             :src="selectedImage || '/about-us/girl-10.png'"
+      alt="main"
+
                 class="w-24 h-24 object-cover rounded-md"
               />
             </div>
@@ -445,8 +488,42 @@ import { db } from '../firebase';
 import { useRouter } from "vue-router";
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore'; 
 
-const activeTab = ref("personal");
+///////////////////
+import { useImageStore } from "../data/imagepicker"; 
 
+const store = useImageStore();
+
+// المتغيرات
+const isModalOpen = ref(false);
+const selectedImage = ref(store.selectedImage || null);
+const selectedTemp = ref(null);
+
+const images = [
+  "/about-us/girl-3.png",
+  "/about-us/girl-4.png",
+  "/about-us/girl-6.png",
+  "/about-us/girl-7.png",
+  '/about-us/girl-10.png'
+];
+
+// الدوال
+function openModal() {
+  isModalOpen.value = true;
+  selectedTemp.value = selectedImage.value;
+}
+
+function closeModal() {
+  isModalOpen.value = false;
+}
+
+function saveImage() {
+ selectedImage.value = selectedTemp.value;
+  store.setSelectedImage(selectedImage.value); 
+  isModalOpen.value = false;
+}
+console.log(store.selectedImage)
+/////////////
+const activeTab = ref("personal");
 const tabs = [
   { id: 'personal', name: 'Personal Details' },
   { id: 'saved', name: 'Saved trips/Bookings' },
@@ -460,6 +537,14 @@ const personalDetails = ref({
   email: "",
   phone: "",
 });
+
+
+async function logout() {
+  await signOut(auth);
+  userStore.clearUserData();
+  router.push("/login");
+}
+
 
 const passwordFields = reactive({
   currentPassword: '',
@@ -708,15 +793,7 @@ const saveChanges = async () => {
   }
 };
 
-function logout() {
-  signOut(auth)
-    .then(() => {
-      router.push("/login");
-    })
-    .catch((error) => {
-      console.error("Logout error:", error);
-    });
-}
+
 
 const showDeleteModal = ref(false);
 const showSuccessMessage = ref(false);
