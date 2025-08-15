@@ -180,28 +180,7 @@
             </div>
 
             <div v-if="activeTab === 2">
-              <div
-                v-for="(review, index) in reviewsData"
-                :key="index"
-                class="mb-4 flex items-start gap-4 bg-white shadow p-4 rounded-lg"
-              >
-                <img
-                  :src="review.avatar"
-                  alt="Avatar"
-                  class="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <div class="font-semibold text-lg">{{ review.name }}</div>
-                  <div class="text-sm text-gray-500 mb-1">
-                    {{ review.date }}
-                  </div>
-                  <div class="text-gray-700">{{ review.content }}</div>
-                  <div class="text-yellow-500">
-                    <i class="fa-solid fa-star"></i> {{ review.rating }}
-                  </div>
-                </div>
-              </div>
-              <div class="border-t pt-6 mt-6 space-y-4">
+              <div class="pt-6 mt-6 space-y-4">
                 <h3 class="text-xl font-semibold text-gray-800">
                   Add Your Review
                 </h3>
@@ -214,6 +193,28 @@
                 >
                   Submit Review
                 </BaseButton>
+
+                <div
+                  v-for="(review, index) in reviewsData"
+                  :key="index"
+                  class="mb-4 flex items-start gap-4 bg-white shadow p-4 rounded-lg"
+                >
+                  <img
+                    :src="review.avatar"
+                    alt="Avatar"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <div class="font-semibold text-lg">{{ review.name }}</div>
+                    <div class="text-sm text-gray-500 mb-1">
+                      {{ review.date }}
+                    </div>
+                    <div class="text-gray-700">{{ review.content }}</div>
+                    <div class="text-yellow-500">
+                      <i class="fa-solid fa-star"></i> {{ review.rating }}
+                    </div>
+                  </div>
+                </div>
 
                 <p class="text-gray-500 text-sm">
                   Your feedback helps others discover great places!
@@ -272,7 +273,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 import Navbar from "../components/NavBar-Black.vue";
@@ -316,11 +317,42 @@ const place = computed(() => data.find((p) => p.id === placeId) || {});
 
 const overviewData = computed(() => place.value?.overview || {});
 const detailsData = computed(() => place.value?.detail || {});
-const reviewsData = computed(() => place.value?.review || []);
 const activitiesData = computed(() => place.value?.activity || []);
 
+const newComment = ref("");
+const reviewsData = ref([]);
+
+watch(place, (newPlace) => {
+  const savedReviews = localStorage.getItem(`reviews_place_${placeId}`);
+  if (savedReviews) {
+    reviewsData.value = JSON.parse(savedReviews);
+  } else {
+    reviewsData.value = newPlace.review ? Object.values(newPlace.review) : [];
+  }
+}, { immediate: true });
 const tabs = ["Overview", "Details", "Reviews", "Activities"];
 const activeTab = ref(0);
+import { useImageStore } from '../data/imagepicker'
+const imageStore = useImageStore()
+function submitComment() {
+  if (!newComment.value.trim()) return;
+
+  const newReview = {
+    name: "You",
+    date: new Date().toLocaleDateString(),
+    content: newComment.value,
+    rating: 5,
+    avatar: imageStore.selectedImage || '/about-us/girl-4.png',
+  };
+
+  // أضف التعليق للقائمة
+  reviewsData.value.unshift(newReview);
+
+  // خزّن كل التعليقات في LocalStorage
+  localStorage.setItem(`reviews_place_${placeId}`, JSON.stringify(reviewsData.value));
+
+  newComment.value = "";
+}
 
 const gotobooking = () => {
   router.push("/booking");
