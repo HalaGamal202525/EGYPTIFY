@@ -1,0 +1,170 @@
+ {
+ "bookings": [
+  {
+    "id": 1,
+    "name": "Sobhy Kaber",
+    "cuisine": "Egyptian",
+    "location": "Qalyubia",
+    "rating": 4,
+    "price": "190-320",
+    "image": "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sachi",
+    "cuisine": "Egyptian",
+    "location": "Mohandessin, Giza",
+    "rating": 5,
+    "price": "820-1200",
+    "image": "/imagesdatabase/Food/Sachi2.webp"
+    
+  },
+
+  {
+    "id": 3,
+    "name": "Koshary Abou Tarek",
+    "cuisine": "Egyptian street food (Koshari)",
+    "location": "Qasr El Nil, Cairo",
+    "rating": 3.5,
+    "price": "30–50",
+    "image": "../public/bookingRestaurants/kosharyabutarek.jpg"
+  },
+  
+  {
+    "id": 4,
+    "name": "Crave",
+    "cuisine": "international cuisine with a contemporary twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "700-900",
+    "image": "/food/cearve.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Zooba",
+    "cuisine": "Egyptian street food with a modern twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "60-120",
+    "image": "/food/zooba.webp"
+  },
+  {
+    "id": 6,
+    "name": "Café Riche",
+    "cuisine": "Egyptian & international café fare",
+    "location": "Talaat Harb St., Downtown Cairo",
+    "rating": 4.2,
+    "price": "250-270",
+    "image": "../public/bookingRestaurants/cafe riche.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Khufu’s Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza Plateau",
+    "rating": 5,
+    "price": "1250-1600",
+    "image": "../public/bookingRestaurants/khufu.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Abou El Sid",
+    "cuisine": "Egyptian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.5,
+    "price": "300-580",
+    "image": "../public/offer/all/abou elsid.webp"
+  },
+  {
+    "id": 10,
+    "name": "Naguib Mahfouz Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Khan El Khalili, Cairo",
+    "rating": 4.3,
+    "price": "250-500",
+    "image": "../public/offer/all/Naguib Mahfouz Cafe.webp"
+  },
+  {
+    "id": 11,
+    "name": "Sequoia",
+    "cuisine": "Mediterranean and Levantine dishes",
+    "location": "Zamalek, Cairo",
+    "rating": 4.6,
+    "price": "300-500",
+    "image": "../public/offer/all/Sequoia.webp"
+  },
+  {
+    "id": 12,
+    "name": "Kazoku",
+    "cuisine": "Asian cuisine",
+    "location": "Cairo",
+    "rating": 4.7,
+    "price": "600-900",
+    "image": "../public/offer/all/kazuka.png"
+  },
+  {
+    "id": 13,
+    "name": "Andrea Mariouteya",
+    "cuisine": "Egyptian",
+    "location": "Giza",
+    "rating": 4.2,
+    "price": "200-400",
+    "image": "../public/offer/all/andrea.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Pier 88 Cairo",
+    "cuisine": "Italian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.4,
+    "price": "500-700",
+    "image": "../public/offer/all/pier.webp"
+  },
+  {
+    "id": 15,
+    "name": "Sofra Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Luxor",
+    "rating": 4.6,
+    "price": "200-400",
+    "image": "../public/offer/all/Sofra Restaurant.webp"
+  },
+  {
+    "id": 16,
+    "name": "Hagouga Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza",
+    "rating": 4.3,
+    "price": "150-250",
+    "image": "../public/offer/all/Hagouga Restaurant.webp"
+  }
+  ],
+
+  "history": [
+    {
+      "id": 101,
+      "title": "Mövenpick Resort",
+      "city": "Aswan",
+      "date": "2025-03-05",
+      "price": 5000,
+      "status": "Completed"
+    },
+    {
+      "id": 102,
+      "title": "Khufu’s Restaurant",
+      "city": "Giza Plateau",
+      "date": "2025-04-12",
+      "price": "1600",
+      "status": "Completed"
+    }
+  ]
+}

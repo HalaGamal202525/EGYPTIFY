@@ -1,0 +1,722 @@
+[
+  {
+    "title": "Steigenberger Nile Palace",
+    "location": "Luxor",
+    "type": "Luxury",
+    "activities": ["Spa", "Pools"],
+    "budget": "Elite",
+    "duration": "More than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Couples", "Families"],
+    "description": "The 5-star Steigenberger Nile Palace is situated in the heart of Luxor and provides modern accommodation with stunning views of the Nile.",
+    "image": "/public/Destination/steignberger.jpg"
+  },
+  {
+    "title": "Luxor Temple",
+    "location": "Luxor",
+    "type": "Historic",
+    "activities": ["Museums"],
+    "budget": "Economy",
+    "duration": "Less than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families"],
+    "description": "A temple built for the ritual practices exercised at the most important Ancient Egyptian festival, The Festival of Opet.",
+    "image": "/public/Destination/luxor temple.jpg"
+  },
+  {
+    "title": "El Tarboush",
+    "location": "Luxor",
+    "description": "El Tarboush is celebrated by many travelers for its authentic Lebanese cuisine, with dishes that are both expertly crafted and generously portioned.",
+    "image": "/public/Destination/eltarboush.jpg"
+  },
+  {
+    "title": "Iberotel Luxor",
+    "location": "Luxor",
+    "description": "A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.",
+    "image": "/public/hotel/main.jpg"
+  },
+  {
+    "title": "Sofitel Winter Palace Luxor",
+    "location": "Luxor",
+    "description": "Sofitel Winter Palace Luxor is popular among travelers for its spacious, elegant rooms, although some note that the furnishings feel outdated.",
+    "image": "/public/Destination/sofitel.jpg"
+  },
+  {
+    "title": "Valley of the Kings",
+    "location": "Luxor",
+    "type": "Historic",
+    "activities": ["Museums"],
+    "budget": "$500-1000",
+    "duration": "2-3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families", "Solo Travelers"],
+    "description": "This desert valley contains the ancient burial ground of many Egyptian pharaohs. Among over 60 royal tombs is the famous Tomb of Tutankhamen that was found in pristine condition.",
+    "image": "/public/Destination/valley of kings.jpg"
+  },
+
+  {
+    "title": "Sofra Restaurant & Cafe",
+    "location": "Luxor",
+    "description": "A restaurant located in the heart of Luxor that draws its inspiration from the rich Arabian culture. Sofra is situated in an old 1930s Egyptian house that still retains its traditional character.",
+    "image": "/public/Destination/sofra restaurant.jpg"
+  },
+  {
+    "title": "Hilton Luxor Resort & Spa",
+    "location": "Luxor",
+    "description": "Nestled on the banks of the Nile, Hilton Luxor Resort & Spa offers stylish rooms with uninterrupted views from the water’s edge, luxurious spa facilities and stunning infinity pools.",
+    "image": "/public/Destination/hilton luxor.jpg"
+  },
+
+  {
+    "title": "Pyramids of Giza",
+    "location": "Cairo",
+    "type": "Historic",
+    "activities": ["Museums"],
+    "budget": "Economy",
+    "duration": "Less than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families"],
+    "description": "Iconic ancient monuments including the Great Pyramid and the Sphinx, located on the Giza",
+    "image": "/public/historical/pyramids.jpg"
+  },
+  {
+    "title": "Egyptian Museum",
+    "location": "Cairo",
+    "type": "Historic",
+    "activities": ["Museums"],
+    "budget": "Economy",
+    "duration": "Less than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families"],
+    "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun.",
+    "image": "/public/historical/The-Grand-Egyptian.jpg"
+  },
+  {
+    "title": "Khan El Khalili",
+    "location": "Cairo",
+    "type": "Shopping",
+    "activities": ["Markets"],
+    "budget": "Economy",
+    "duration": "Less than 3 days",
+    "bestTime": "Spring",
+    "description": "This vibrant open-air bazaar is a treasure trove of Egyptian culture, with bustling streets filled with local artisans and vendors. Here, you can pick up unique souvenirs like spices and perfumes, or simply soak up the local atmosphere.",
+    "image": "/public/historical/khan-elkhalili1.jpg"
+  },
+  {
+    "title": "Intercontinental Cairo Semiramis",
+    "type": "Luxury",
+    "activities": ["Pools", "Restaurants", "Spa"],
+    "location": "Cairo",
+    "description": "On the historic Semiramis hotel site, guests can enjoy modern luxury by the river Nile. Semiramis InterContinental Cairo is located in the heart of downtown Cairo, next to the Egyptian Museum and Khan el Khalili.",
+    "image": "/public/hotel/samiramis.jpg"
+  },
+  {
+    "title": "Al Azhar Mosque",
+    "location": "Cairo",
+    "description": "Al-Azhar Mosque is a historic Islamic landmark in Cairo and one of the oldest centers of Islamic learning in the world.",
+    "image": "/public/historical/alazhar.jpg"
+  },
+  {
+    "title": "The Citadel",
+    "location": "Cairo",
+    "description": "A medieval Islamic fort with panoramic views of Cairo and the iconic Mosque",
+    "image": "/public/historical/citadel.jpg"
+  },
+  {
+    "title": "Le Passage Cairo Hotel & Casino",
+    "location": "Cairo",
+    "description": "Le Passage Cairo Hotel & Casino is located in Heliopolis, an elegant business and residential district in Cairo and it is considered one of the safest area in town. The hotel is only five minutes from Cairo International Airport and ten minutes from the Cairo International Convention Centre and Fair Grounds, with free shuttle bus service, free wifi and free internet. Great design is the key to this urban, cosmopolitan business and leisure base, providing a sophisticated and stylish environment in the throbbing heart of Egypt and the Middle East.",
+    "image": "/public/historical/lepassage.jpg"
+  },
+  {
+    "title": "Steigenberger Hotel El Tahrir Cairo",
+    "location": "Cairo",
+    "description": "Among Cairo hotels, Steigenberger El Tahrir secures a spectacular location in El Tahrir Square, overlooking the Egyptian museum, minutes away from Khan El Khalili Bazar, and in close proximity to Egypt’s major attractions with a total area of 21,633 sqm.",
+    "image": "/public/historical/steigenberger-hotel.jpg"
+  },
+
+  {
+    "title": "Sofitel Legend Old Cataract Aswan",
+    "location": "Aswan",
+    "type": "Luxury",
+    "activities": ["Spa", "Pools"],
+    "budget": "Elite",
+    "duration": "More than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Couples", "Families"],
+    "description": "Hotel Complex encompassing famous Victorian-style Cataract Hotel & adjacent high-rise New Cataract Hotel (1963).",
+    "image": "/public/hotel/sofitel-legend.jpg"
+  },
+  {
+    "title": "Movenpick Resort Aswan",
+    "location": "Aswan",
+    "type": "Luxury",
+    "activities": ["Pool", "Boating"],
+    "budget": "Elite",
+    "duration": "Less than 3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families"],
+    "description": "Mövenpick Resort Aswan provides a tranquil environment of lush tropical gardens and magnificent views of the River Nile . Located on its own island , the hotel offers 404 rooms & suites , 6 restaurants & bars , two swimming pools , recreation facilities and lavish landscape.",
+    "image": "/public/hotel/movenpick-resort-aswan.jpg"
+  },
+  {
+    "title": "Nubian Museum",
+    "location": "Aswan",
+    "type": "Museum",
+    "description": "This museum traces the history from the earliest settlements to present day of Nubia, the region defined as the area between Aswan in Egypt and Khartoum in the Sudan.",
+    "image": "/public/historical/nubian-museum.jpg"
+  },
+  {
+    "title": "Unfinished Obelisk",
+    "location": "Aswan",
+    "description": "This gigantic semi-finished obelisk, dating from the New Kingdom, would have weighed a staggering 1,197 tons if completed.",
+    "image": "/public/historical/obelisk.jpg"
+  },
+  {
+    "title": "Temple of Philae",
+    "location": "Aswan",
+    "type": "Historic",
+    "activities": ["Museums"],
+    "budget": "$500-1000",
+    "duration": "2-3 days",
+    "bestTime": "Winter",
+    "suitableFor": ["Families", "Solo Travelers"],
+    "description": "This large temple complex, relocated to the island of Agilika with the building of the High Dam in Aswan, features the magnificent Temple of Isis that was built in the late Ptolemaic and early Roman periods.",
+    "image": "/public/hotel/temple-of-philae.jpg"
+  },
+  {
+    "title": "1902 Restaurant",
+    "location": "Aswan",
+    "description": "A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.",
+    "image": "/public/hotel/img1.jpg"
+  },
+  {
+    "title": "Kato Dool Wellness Resort",
+    "location": "Aswan",
+    "description": "Live like a local Nubian in an eco-friendly wellness sanctuary. Katodool Wellness is ideally located on the hillside of the Nubian Village in Aswan, embracing the beauty of the surrounding nature of the river Nile and the protectorate of Salouga and Ghazal, preserving the genuine Nubian lifestyle and its mindfulness activities. ",
+    "image": "/public/hotel/kato-dool-wellness-resort.jpg"
+  },
+  {
+    "title": "Solaih Nubian Restaurant",
+    "location": "Aswan",
+    "description": "Nubian kitchen is rich with its recipes, but unfortunately these recipes are not commonly used right now among Nubians and started to disappear. Our aim was to establish a Nubian restaurant that provide only Nubian cuisine with old and new recipes. The restaurant is located in a premium location on an island overlooking the famous Philae temple.",
+    "image": "/public/food/salaih-nubian.jpg"
+  },
+
+  {
+    "title": "Rixos Premium Seagate",
+    "location": "Sharm El Sheikh",
+    "type": "Luxury Resort",
+    "activities": ["Beach", "Scuba Diving", "Spa"],
+    "budget": "Elite",
+    "duration": "More than 3 days",
+    "bestTime": "Summer",
+    "suitableFor": ["Couples", "Families"],
+    "description": "All‑inclusive beachfront resort with private beach, diving center and spa services.",
+    "image": "/public/hotel/rixos-premium-seagate.jpg"
+  },
+  {
+    "title": "Naama Bay",
+    "location": "Sharm El Sheikh",
+    "type": "Beach District",
+    "activities": ["Beach", "Shopping", "Nightlife"],
+    "budget": "$500‑1000",
+    "duration": "1‑2 days",
+    "bestTime": "Summer",
+    "suitableFor": ["Families", "Solo Travelers"],
+    "description": "Souvenir shops, cafes, water‑sports and vibrant nightlife along a sandy bay.",
+    "image": "/public/hotel/neaamabay.jpg"
+  },
+  {
+    "title": "Ras Mohammed National Park",
+    "location": "Sharm El Sheikh",
+    "type": "Natural Reserve",
+    "activities": ["Diving", "Wildlife", "Photography"],
+    "budget": "Economy",
+    "duration": "Day trip",
+    "bestTime": "Spring",
+    "suitableFor": ["Nature Lovers", "Divers"],
+    "description": "Protected marine park with pristine reef systems and migratory bird habitats.",
+    "image": "/public/hotel/ra's-mohamed.jpg"
+  },
+  {
+    "title": "Soho Square",
+    "location": "Sharm El Sheikh",
+    "type": "Entertainment",
+    "activities": ["Dining", "Shows", "Shopping"],
+    "budget": "Elite",
+    "duration": "Evening",
+    "bestTime": "Summer",
+    "suitableFor": ["Families", "Couples"],
+    "description": "Upscale entertainment hub with restaurants, live performances and arcade games.",
+    "image": "/public/hotel/soho-square.jpg"
+  },
+  {
+    "title": "Tirana Beach",
+    "location": "Sharm El Sheikh",
+    "type": "Beach",
+    "activities": ["Swimming", "Sunbathing", "Snorkeling"],
+    "budget": "Economy",
+    "duration": "Half‑day",
+    "bestTime": "Summer",
+    "suitableFor": ["Families", "Relaxation Seekers"],
+    "description": "Relaxed sandy cove with calm waters ideal for snorkeling and swimming.",
+    "image": "/public/hotel/tirana.jpeg"
+  },
+  {
+    "title": "Na’ama Aquarium",
+    "location": "Sharm El Sheikh",
+    "type": "Aquarium",
+    "activities": ["Marine Viewing", "Photography"],
+    "budget": "Economy",
+    "duration": "1‑2 hours",
+    "bestTime": "All year",
+    "suitableFor": ["Families", "Children"],
+    "description": "Small aquarium showcasing Red Sea marine life species in eye‑level tanks.",
+    "image": "/public/hotel/aquarium.jpg"
+  },
+  {
+    "title": "Old Market Sharm",
+    "location": "Sharm El Sheikh",
+    "type": "Traditional Market",
+    "activities": ["Shopping", "Local Food"],
+    "budget": "Economy",
+    "duration": "1‑2 hours",
+    "bestTime": "Evening",
+    "suitableFor": ["Families", "Solo Travelers"],
+    "description": "Colorful bazaar with local crafts, spices and casual dining options.",
+    "image": "/public/hotel/oldmarket.jpg"
+  },
+  {
+    "title": "Al Mustafa Mosque",
+    "location": "Sharm El Sheikh",
+    "type": "Historic",
+    "activities": ["Sightseeing"],
+    "budget": "Free",
+    "duration": "30 min",
+    "bestTime": "All year",
+    "suitableFor": ["Families", "Cultural Tourists"],
+    "description": "Beautiful Ottoman‑style mosque located near the marina area.",
+    "image": "/public/hotel/mosque.jpeg"
+  },
+      {
+      "id": 1,
+      "image": "../public/bookingHotels/Casa Cook, El Gouna.webp",
+      "title": "Marriott Mena House",
+      "description": "Luxury hotel near the pyramids.",
+      "location": "Giza, Egypt",
+      "date": "2025-08-15",
+      "duration": "3 nights",
+      "people": "2 adults",
+      "price": 20000,
+      "rating": 4.5,
+      "type": "Hotel"
+    },
+    {
+      "id": 2,
+      "image": "../public/bookingHotels/pyramids hotel.webp",
+      "title": "Pyramids Hotel",
+      "description": "A beautiful stay with pyramid views.",
+      "location": "Giza, Egypt",
+      "date": "2025-09-01",
+      "duration": "2 nights",
+      "people": "1 adult",
+      "price": 3000,
+      "rating": 4.2,
+      "type": "Resort"
+    },
+    {
+      "id": 3,
+      "image": "../public/bookingHotels/four season cairo.webp",
+      "title": "Four Seasons Hotel Cairo",
+      "description": "5-star hotel overlooking the Nile.",
+      "location": "Cairo, Egypt",
+      "date": "2025-08-10",
+      "duration": "4 nights",
+      "people": "2 adults, 1 child",
+      "price": 12000,
+      "rating": 5,
+      "type": "Hostel"
+    },
+    {
+      "id": 4,
+      "image": "../public/bookingHotels/Cleopatra Luxury Resort Sharm el-Sheikh.webp",
+      "title": "Cleopatra Luxury Resort",
+      "description": "Beachfront resort with modern amenities.",
+      "location": "Sharm El Sheikh",
+      "date": "2025-10-05",
+      "duration": "5 nights",
+      "people": "2 adults",
+      "price": 6000,
+      "rating": 3.9,
+      "type": "Resort"
+    },
+    {
+      "id": 5,
+      "image": "../public/bookingHotels/Sofitel Winter Palace.webp",
+      "title": "Sofitel Winter Palace",
+      "description": "Historic hotel in Luxor with royal charm.",
+      "location": "Luxor, Egypt",
+      "date": "2025-09-15",
+      "duration": "3 nights",
+      "people": "1 adult",
+      "price": 5000,
+      "rating": 4.6,
+      "type": "Hostel"
+    },
+    {
+      "id": 6,
+      "image": "../public/bookingHotels/Mövenpick Resort Aswan.webp",
+      "title": "Mövenpick Resort",
+      "description": "Peaceful retreat by the Nile.",
+      "location": "Aswan, Egypt",
+      "date": "2025-11-20",
+      "duration": "4 nights",
+      "people": "2 adults",
+      "price": 5000,
+      "rating": 4.5,
+      "type": "Hostel"
+    },
+    {
+      "id": 7,
+      "image": "../public/bookingHotels/The V Luxury Resort Sahl Hasheesh, Hurghada.webp",
+      "title": "The V Luxury Resort Sahl Hasheesh",
+      "description": "Exclusive resort with sea views.",
+      "location": "Hurghada, Egypt",
+      "date": "2025-12-10",
+      "duration": "6 nights",
+      "people": "2 adults, 2 children",
+      "price": 4000,
+      "rating": 4.1,
+      "type": "Resort"
+    },
+    {
+      "id": 8,
+      "image": "../public/bookingHotels/Casa Cook, El Gouna.webp",
+      "title": "Casa Cook",
+      "description": "Boho-chic style boutique hotel.",
+      "location": "El Gouna, Egypt",
+      "date": "2025-08-25",
+      "duration": "3 nights",
+      "people": "2 adults",
+      "price": 6000,
+      "rating": 4.3,
+      "type": "Hostel"
+    },
+    {
+      "id": 9,
+      "image": "../public/bookingHotels/Steigenberger Cecil Hotel.webp",
+      "title": "hostel8.jpg",
+      "description": "Historic hotel in the heart of Alexandria.",
+      "location": "Alexandria, Egypt",
+      "date": "2025-08-18",
+      "duration": "2 nights",
+      "people": "1 adult",
+      "price": 9000,
+      "rating": 4.0,
+      "type": "Hostel"
+    },
+  {
+    "id": 10,
+    "image": "../public/bookingHotels/rixos-magawish-hotel.jpg",
+    "title": "Rixos Premium Magawish (Hurghada)",
+    "description": "Luxury beachfront resort with villas and pools.",
+    "location": "Hurghada, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 28000,
+    "rating": 4.7,
+    "type": "Resort"
+  },
+  {
+    "id": 11,
+    "image": "../public/bookingHotels/jaz-aquaviva.jpg",
+    "title": "Jaz Aquaviva (Sharm El Sheikh)",
+    "description": "5-star resort with a large water park.",
+    "location": "Sharm El Sheikh, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 29000,
+    "rating": 4.6,
+    "type": "Resort"
+  },
+  {
+    "id": 12,
+    "image": "../public/offer/all/Steigenberger Nile Palace.jpeg",
+    "title": "Steigenberger Nile Palace",
+    "description": "Experience comfort and elegance with Nile views, spa services, and gourmet restaurants in the heart of Luxor.",
+    "location": "Luxor, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 35000,
+    "rating": 4.6,
+    "type": "Hotel"
+  },
+  {
+    "id": 13,
+    "image": "../public/bookingHotels/four seasons alex.jpg",
+    "title": "Four Seasons Alexandria at San Stefano",
+    "description": "Luxury hotel on the Corniche with sea views.",
+    "location": "Alexandria, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 35000,
+    "rating": 5,
+    "type": "Hotel"
+  },
+  {
+    "id": 14,
+    "image": "../public/offer/all/Sofitel Legend Old Cataract.jpeg",
+    "title": "Sofitel Legend Old Cataract",
+    "description": "Enjoy royal treatment in this historic palace overlooking the Nile, known for its stunning architecture and luxury service.",
+    "location": "Aswan, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 6500,
+    "rating": 4.8,
+    "type": "Hotel"
+  },
+  {
+    "id": 15,
+    "image": "../public/offer/all/Osiris Hotel Cairo.jpeg",
+    "title": "Osiris Hotel Cairo",
+    "description": "Affordable, clean hotel in downtown with easy access to metro and attractions.",
+    "location": "Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 700,
+    "rating": 4.1,
+    "type": "Hotel"
+  },
+  {
+    "id": 16,
+    "image": "../public/offer/all/The Gabriel Hotel.jpeg",
+    "title": "The Gabriel Hotel",
+    "description": "Boutique luxury hotel with elegant decor, rooftop pool, and personalized service.",
+    "location": "Heliopolis, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 3500,
+    "rating": 4.2,
+    "type": "Hotel"
+  },
+  {
+    "id": 17,
+    "image": "../public/offer/all/City View Hotel.webp",
+    "title": "City View Hotel",
+    "description": "Budget-friendly hotel with clean rooms, friendly staff, and great city views.",
+    "location": "Tahrir Square, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 1100,
+    "rating": 3.9,
+    "type": "Hotel"
+  },
+  {
+    "id": 18,
+    "image": "../public/offer/all/Kempinski Nile Hotel Cairo.jpg",
+    "title": "Kempinski Nile Hotel Cairo",
+    "description": "Luxury hotel offering Nile-view suites, rooftop pool, gourmet dining, and spa.",
+    "location": "Garden City, Cairo",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 6200,
+    "rating": 4.7,
+    "type": "Hotel"
+  },
+  {
+    "id": 19,
+    "image": "../public/offer/all/Hilton Luxor Resort & Spa.webp",
+    "title": "Hilton Luxor Resort & Spa",
+    "description": "Elegant resort with Nile views, infinity pools, full-service spa, and tranquil gardens.",
+    "location": "Luxor, Egypt",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 5600,
+    "rating": 4.8,
+    "type": "Hotel"
+  },
+  {
+    "id": 20,
+    "image": "../public/offer/all/Jaz Mirabel Resort.webp",
+    "title": "Jaz Mirabel Resort",
+    "description": "Beachfront resort with private beach, water activities, and family-friendly amenities.",
+    "location": "Sharm El Sheikh",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 5000,
+    "rating": 4.5,
+    "type": "Hotel"
+  },
+  {
+    "id": 21,
+    "image": "../public/offer/all/Maritim Jolie Ville Resort & Casino.jpeg",
+    "title": "Maritim Jolie Ville Resort & Casino",
+    "description": "Vibrant resort with beachfront access, casino, restaurants, and vibrant nightlife.",
+    "location": "Sharm El Sheikh",
+    "date": "2025-08-18",
+    "duration": "3 nights",
+    "people": "2 adults",
+    "price": 4500,
+    "rating": 4.3,
+    "type": "Hotel"
+  }, 
+   {
+    "id": 1,
+    "name": "Sobhy Kaber",
+    "cuisine": "Egyptian",
+    "location": "Qalyubia",
+    "rating": 4,
+    "price": "190-320",
+    "image": "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sachi",
+    "cuisine": "Egyptian",
+    "location": "Mohandessin, Giza",
+    "rating": 5,
+    "price": "820-1200",
+    "image": "/imagesdatabase/Food/Sachi2.webp"
+    
+  },
+
+  {
+    "id": 3,
+    "name": "Koshary Abou Tarek",
+    "cuisine": "Egyptian street food (Koshari)",
+    "location": "Qasr El Nil, Cairo",
+    "rating": 3.5,
+    "price": "30–50",
+    "image": "../public/bookingRestaurants/kosharyabutarek.jpg"
+  },
+  
+  {
+    "id": 4,
+    "name": "Crave",
+    "cuisine": "international cuisine with a contemporary twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "700-900",
+    "image": "/food/cearve.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Zooba",
+    "cuisine": "Egyptian street food with a modern twist",
+    "location": "Zamalek, Cairo",
+    "rating": 4,
+    "price": "60-120",
+    "image": "/food/zooba.webp"
+  },
+  {
+    "id": 6,
+    "name": "Café Riche",
+    "cuisine": "Egyptian & international café fare",
+    "location": "Talaat Harb St., Downtown Cairo",
+    "rating": 4.2,
+    "price": "250-270",
+    "image": "../public/bookingRestaurants/cafe riche.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Khufu’s Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza Plateau",
+    "rating": 5,
+    "price": "1250-1600",
+    "image": "../public/bookingRestaurants/khufu.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tabla Luna",
+    "cuisine": "Latin American (Peruvian, Argentine, Mexican)",
+    "location": "Maadi, Cairo",
+    "rating": 4.5,
+    "price": "350-580",
+    "image": "../public/bookingRestaurants/tabla.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Abou El Sid",
+    "cuisine": "Egyptian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.5,
+    "price": "300-580",
+    "image": "../public/offer/all/abou elsid.webp"
+  },
+  {
+    "id": 10,
+    "name": "Naguib Mahfouz Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Khan El Khalili, Cairo",
+    "rating": 4.3,
+    "price": "250-500",
+    "image": "../public/offer/all/Naguib Mahfouz Cafe.webp"
+  },
+  {
+    "id": 11,
+    "name": "Sequoia",
+    "cuisine": "Mediterranean and Levantine dishes",
+    "location": "Zamalek, Cairo",
+    "rating": 4.6,
+    "price": "300-500",
+    "image": "../public/offer/all/Sequoia.webp"
+  },
+  {
+    "id": 12,
+    "name": "Kazoku",
+    "cuisine": "Asian cuisine",
+    "location": "Cairo",
+    "rating": 4.7,
+    "price": "600-900",
+    "image": "../public/offer/all/kazuka.png"
+  },
+  {
+    "id": 13,
+    "name": "Andrea Mariouteya",
+    "cuisine": "Egyptian",
+    "location": "Giza",
+    "rating": 4.2,
+    "price": "200-400",
+    "image": "../public/offer/all/andrea.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Pier 88 Cairo",
+    "cuisine": "Italian",
+    "location": "Zamalek, Cairo",
+    "rating": 4.4,
+    "price": "500-700",
+    "image": "../public/offer/all/pier.webp"
+  },
+  {
+    "id": 15,
+    "name": "Sofra Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Luxor",
+    "rating": 4.6,
+    "price": "200-400",
+    "image": "../public/offer/all/Sofra Restaurant.webp"
+  },
+  {
+    "id": 16,
+    "name": "Hagouga Restaurant",
+    "cuisine": "Egyptian",
+    "location": "Giza",
+    "rating": 4.3,
+    "price": "150-250",
+    "image": "../public/offer/all/Hagouga Restaurant.webp"
+  }
+]

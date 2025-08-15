@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Sobhy Kaber",
+    "activity": "Food",
+    "mainImage": "public/Details/food/the-new-p.jpg",
+    "images": [
+      "public/Details/food/OIP (39).webp",
+      "public/Details/food/OIP (40).webp",
+      "public/Details/food/R (6).jpeg"
+    ],
+    "description": "Sobhy Kaber is one of the most famous Egyptian restaurants known for its rich, flavorful grilled meats, liver dishes, and traditional side plates. Located in Shubra El Kheima, the restaurant has built a strong reputation for authentic Egyptian cuisine, massive portions, and a lively local atmosphere. It’s a must-try for food lovers seeking a true taste of Cairo.",
+    "rate": 3,
+    "address": "151 Obaid Street, Shubra El Kheima, Qalyubia Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/YJUtGMJZ8NyTDzbq9",
+    "mapImage": "  public/Details/food/Rectangle 7.png",
+    "visitingHours": "10:00 AM - 12:00 AM",
+    "entryFees": "Free",
+    "bestTimeToVisit": "Evening",
+    "howToGetThere": "Take metro to Sadat Station, 5 min walk",
+    "tips": "Go early to avoid queues"
+  }
+]

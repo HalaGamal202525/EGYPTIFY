@@ -1,52 +1,51 @@
 <template>
   <footer class="footer">
     <div class="footer-section logo">
-      <h2 class="logo-text">EGYPTIFY</h2>
+      <img class="logo-img cursor-pointer" src="../assets/logo.png" alt="EGYPTIFY Logo" @click="gotohome" />
       <p class="slogan">"Discover the magic of Egypt"</p>
     </div>
 
     <div class="footer-section social">
-      <h3>Find Us In<br />Social media</h3>
+      <h3 class="nowrap">Find Us In Social Media</h3>
       <div class="icons">
-        <button><i class="fab fa-instagram"></i></button>
-        <button><i class="fab fa-facebook-f"></i></button>
-        <button><i class="fab fa-whatsapp"></i></button>
-        <button><i class="fab fa-x-twitter"></i></button>
-        <button><i class="fab fa-linkedin-in"></i></button>
+        <p><i class="fab fa-instagram"></i></p>
+        <p><i class="fab fa-facebook-f"></i></p>
+        <p><i class="fab fa-whatsapp"></i></p>
+        <p><i class="fab fa-x-twitter"></i></p>
+        <p><i class="fab fa-linkedin-in"></i></p>
       </div>
     </div>
 
     <div class="footer-section links">
-      <h4>About Us</h4>
+      <h4 @click="gotoabout">About Us</h4>
       <ul>
-        <li>Mission</li>
-        <li>Story</li>
-        <li>Team</li>
-        <li>Partners</li>
-        <li>Press</li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">Mission</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#story' }">Story</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#team' }">Team</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">Partenrs</router-link></li>
+        <li><router-link :to="{ path: '/about-us', hash: '#mission' }">press</router-link></li>
       </ul>
     </div>
 
     <div class="footer-section links">
-      <h4>Contact Us</h4>
+      <h4 @click="gotocontact">Contact Us</h4>
       <ul>
-        <li>Contact</li>
-        <li>Form</li>
-        <li>Email</li>
-        <li>Social</li>
-        <li>LiveChat</li>
+        <li><a href="#" @click="gotocontact">Contact</a></li>
+        <li><router-link :to="{ path: '/contact', hash: '#form' }">Form</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#email'}">Email</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#contactway'}">Social</router-link></li>
+        <li><router-link :to="{path: '/contact',hash:'#livechat'}">Livechat</router-link></li>
       </ul>
     </div>
 
     <div class="footer-section links">
-      <h4>Policies</h4>
+      <h4 @click="gototerms">Policies</h4>
       <ul>
-        <li>FAQ</li>
-        <li>Support</li>
-        <li>Feedback</li>
-        <li>Blog</li>
-        <li>Terms</li>
-        <li>Complaints</li>
+        <li><a href="#" @click="gototerms">FAQ</a></li>
+        <li><a href="#" @click="gototerms">Support</a></li>
+        <li><a href="#" @click="gototerms">Feedback</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#" @click="gototerms">Terms</a></li>
       </ul>
     </div>
   </footer>
@@ -55,36 +54,62 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
-const router = useRouter;
+const router = useRouter();
+const gotocontact=()=>{
+  router.push('./contact')
+}
+
+const gotoabout=()=>{
+router.push({ path: '/about-us', hash: '#start' });
+}
+const gototerms=()=>{
+router.push({ path: '/Terms-of-use', hash: '#start' });
+}
+const gotohome=()=>{
+  router.push('/')
+}
+
 </script>
 
 <style scoped>
 .footer {
-  background-color: #ddd;
+  background-color: #000424;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  border: 2px solid #8e44ec;
   flex-wrap: wrap;
   gap: 1rem;
+  color: white;
+  font-size: 1.05rem;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* لينكات عالشمال */
 }
 
-.logo-text {
-  color: #f4a623;
-  font-weight: bold;
-  font-size: 2rem;
-  letter-spacing: 1px;
+.logo-img {
+  width: 180px;
+  max-width: 100%; /* يخليه responsive */
+  height: auto;
 }
+
+
 
 .slogan {
   font-style: italic;
   font-size: 1rem;
+  text-align: center;
+}
+
+h3, h4 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.nowrap {
+  white-space: nowrap; /* علشان العنوان ما ينزلش سطر تاني */
 }
 
 .social .icons {
@@ -93,22 +118,38 @@ const router = useRouter;
   margin-top: 0.5rem;
 }
 
-.icons button {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 8px;
-  padding: 0.5rem;
-  font-size: 1.1rem;
+.icons p {
+  background-color: #dddddd00;
+  border: 1px solid white; /* ستروك أسود */
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.3rem;
+  text-align: center;
   cursor: pointer;
+  color: black;
 }
 
 .links ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* اللينكات تبقى شمال */
 }
 
 .links li {
   margin: 0.25rem 0;
 }
+
+.links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #FFC340;
+}
+
+
 </style>

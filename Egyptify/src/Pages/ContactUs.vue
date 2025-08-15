@@ -1,0 +1,328 @@
+<template>
+  <div class="bg-[#FFFDF9]">
+    <!-- Navbar -->
+    <NavBar />
+
+    <!-- Hero Section -->
+    <Hero 
+      title="Contact Us" 
+      description="Get in touch with us for any inquiries or support" 
+      :image="contactHeroImg"
+
+    />
+
+    <!-- Contact Types Section -->
+    <section class="py-10 bg-white text-center">
+      <div class="container mx-auto max-w-6xl flex justify-between gap-8 ">
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
+          <i class="fa-solid fa-clock text-3xl text-[#FFC340] mb-4 mt-4"></i>
+          <h3 class="font-bold h-8">24/7 Support</h3>
+          <p>Available around the clock for your <br> convenience.</p>
+        </div>
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
+          <i class="fa-solid fa-users text-3xl text-[#FFC340] mb-4 mt-4"></i>
+          <h3 class="font-bold h-8">Expert Team</h3>
+          <p>Experienced professionals ready to <br> assist.</p>
+        </div>
+        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
+          <i class="fas fa-headset text-3xl text-[#FFC340] mb-4 mt-4"></i>
+          <h3 class="font-bold h-8">Quick Response</h3>
+          <p>Fast replies within 2 hours <br> guaranteed.</p>
+        </div>
+      </div>
+    </section>
+
+    
+<!-- form -->
+<section class="bg-gray-50 py-10">
+  <div class="container mx-auto border border-[#FFC340] rounded-lg max-w-6xl">
+    <div class="bg-gray-50  px-6 py-4 rounded-t-xl">
+      <h2 class="text-xl font-bold mt-3 mb-3"><i class="fa-solid fa-paper-plane fa-lg mr-4" style="color: #FFD43B;"></i>
+        Send Us a Message</h2>
+      <p class="text-gray-700 mb-3">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+      
+    </div>
+
+    <!--border -->
+    <div class=" p-6 rounded-b-xl bg-white shadow" id="form">
+      <form @submit.prevent="handleSubmit" class="grid grid-cols-1 md:grid-cols-2 gap-4" >
+        
+        
+        <!-- Full Name -->
+        <div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Full Name*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fa-solid fa-user absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            v-model="fullName"
+            type="text" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your Full Name" 
+          />
+
+        <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.fullName }}
+        </div>
+
+        </div>
+      </div>
+
+  
+        <!-- Email Address -->
+      <div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Email Address*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fas fa-envelope absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            v-model="email"
+            type="email" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your E-mail" 
+          />
+
+          <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.email }}
+        </div>
+      
+        </div>
+      </div>
+
+
+        <!-- Phone Number -->
+        <div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Phone Number*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fa-solid fa-phone absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            v-model="phone"
+            type="tel" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Enter Your Phone Number" 
+          />
+
+           <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.phone }}
+        </div>
+
+
+        </div>
+      </div>
+
+        <!-- Subject -->
+        <div>
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Subject*
+        </label>
+
+        <div class="relative">
+          <!-- الأيقونة -->
+          <i class="fas fa-pen-to-square absolute left-4 top-1/3 transform -translate-y-1/2"  style="color: #ffc340;"></i>
+
+          <!-- حقل الإدخال -->
+          <input 
+            v-model="subject"
+            type="text" 
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm"  
+            placeholder="Subject" 
+          />
+          
+
+           <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.subject }}
+        </div>
+
+        </div>
+      </div>
+
+
+        <!-- Message-->
+              <div class="col-span-1 md:col-span-2">
+        <label class="block mb-1 text-black font-semibold" style="font-size: 17px !important;">
+          Message*
+        </label>
+
+        <div class="relative">
+          <i class="fas fa-comment-dots absolute left-4 top-3"></i>
+
+          <textarea 
+            v-model="message"
+            class="w-full border border-[#FFC340] p-2 pl-10 rounded h-32 
+                  focus:outline-none focus:ring-2 focus:ring-[#FFC340] shadow 
+                  text-black placeholder-gray-500 placeholder:text-sm" 
+            placeholder="Write Your Message..."></textarea>
+
+            
+             <!-- Error message -->
+        <div class="text-red-500 text-sm min-h-[20px] mt-1">
+          {{ errors.message }}
+        </div>
+
+        </div>
+      </div>
+
+
+        <!-- Send button -->
+        <div class="col-span-1 md:col-span-2">
+          <button 
+          type="submit"
+          @click.prevent="handleSubmit"
+          class="w-full bg-[#FFC340] text-white py-3 rounded-lg font-semibold hover:bg-[#E6AD36] transition cursor-pointer">
+            <i class="fa-solid fa-paper-plane fa-lg" style="color: white;"></i>
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+  <div v-if="showModal" class="fixed inset-0 bg-gray-200 !bg-opacity-90 flex justify-center items-center z-50"   style="background-color: rgba(0, 0, 0, 0.3);">
+    <div class="bg-white rounded-2xl p-6 w-[90%] max-w-md text-center flex flex-col justify-center items-center shadow-xl border border-gray-200">
+      <h3 class="text-2xl font-bold text-green-600 mb-4"> 💌 Thanks for your message!</h3>
+      <p class="text-gray-700 mb-6">We'll get back to you as soon as possible.</p>
+      <basebutton
+        @click="showModal = false"
+        class="bg-[#1E293B] hover:bg-gray-800 text-white px-4 py-2 rounded-md cursor-pointer"
+      >
+        Close
+      </basebutton>
+    </div>
+  </div>
+
+
+<!-- Contact Info -->
+    <section class="bg-white py-10" id="email">
+      <div class="container mx-auto  border border-[#FFC340] rounded-lg max-w-6xl p-6 shadow-md" >
+        <h2 class="text-xl font-bold mb-10 px-15">Contact Information</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div><i class="fas fa-envelope mr-2 text-blue-500"></i>info@egyptify.com</div>
+          <div><i class="fas fa-phone mr-2 text-green-500"></i>+20 1234567891</div>
+          <div><i class="fas fa-map-marker-alt mr-2 text-red-500"></i>Cairo, Egypt</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Connect With Us -->
+<section class="bg-white py-10" id="contactway">
+  <div class="max-w-6xl mx-auto border border-[#FFC340] rounded-lg shadow-md p-6" >
+    <h2 class="text-xl font-bold py-2 px-15 rounded mb-4 inline-block">
+      Connect With Us
+    </h2>
+    <p class="mb-6 text-gray-600 text-center">Follow us on social media for the latest updates</p>
+    
+      <div class="flex justify-center gap-8 text-2xl text-gray-600">
+        <a href="#" class="hover:opacity-80 transition">
+          <i class="fab fa-facebook" style="color: #1877F2;"></i>
+        </a>
+        <a href="#" class="hover:opacity-80 transition">
+          <i class="fab fa-instagram" style="color: #E1306C;"></i>
+        </a>
+        <a href="#" class="hover:opacity-80 transition">
+          <i class="fab fa-x-twitter" style="color: #000;"></i>
+        </a>
+        <a href="#" class="hover:opacity-80 transition">
+          <i class="fab fa-linkedin" style="color: #0077B5;"></i>
+        </a>
+      </div>
+
+  </div>
+</section>
+
+
+<!-- Live Support Section -->
+<section class="bg-white py-10" id="livechat">
+  <div class="max-w-6xl mx-auto px-2">
+    <div class="bg-yellow-20 border border-[#FFC340] rounded-lg p-6 shadow-md text-center">
+      <!-- Icon -->
+      <div class="text-blue-600 text-5xl mb-4">
+        <i class="fas fa-headset"></i>
+      </div>
+
+      <!-- Text -->
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">Live Support</h3>
+      <p class="text-gray-600 mb-6">
+        Our support team is available to help you right now!      
+      </p>
+
+      <!-- Button Full Width -->
+      <button class="bg-[#FFC340] text-white w-full py-3 rounded-lg hover:bg-[#E6AD36] transition cursor-pointer">
+        Contact Support
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <Footer />
+  </div>
+</template>
+
+
+
+<script setup>
+import contactHeroImg from '../assets/contact-hero.jpg'
+import NavBar from '../components/navbar.vue'
+import Hero from '../components/Hero.vue'
+import Footer from '../components/footer.vue'
+import AuthForm from '../components/AuthForm.vue'
+
+import { ref } from 'vue'
+
+// form state
+const fullName = ref('')
+const email = ref('')
+const phone = ref('')
+const subject = ref('')
+const message = ref('')
+const showModal = ref(false)
+const errors = ref({})
+
+// validate form
+const validateForm = () => {
+  const newErrors = {}
+  if (!fullName.value.trim()) newErrors.fullName = 'Full Name is required'
+  if (!email.value.trim() || !email.value.includes('@')) newErrors.email = 'Valid email required'
+  if (!phone.value.trim()) newErrors.phone = 'Phone number is required'
+  if (!subject.value.trim()) newErrors.subject = 'Subject is required'
+  if (!message.value.trim()) newErrors.message = 'Message is required'
+
+  errors.value = newErrors
+  return Object.keys(newErrors).length === 0
+}
+
+const handleSubmit = () => {
+  if (validateForm()) {
+    showModal.value = true
+  }
+}
+
+</script>

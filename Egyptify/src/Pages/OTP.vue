@@ -1,14 +1,16 @@
 <template>
+  <NavBarBlack />
   <div class="w-full">
-    <div style="margin-top: 80px;">
+    <div style="margin-top: 150px;">
       <OtpInput />
     </div>
   </div>
+  <Footer />
 </template>
 
 <script setup>
-import Navbar from '../components/navbar.vue'
+import NavBarBlack from "../components/NavBar-Black.vue"
 import Footer from "../components/footer.vue"
-import btn from "../components/BaseButton.vue"
+
 import OtpInput from '../components/OtpInput.vue'
 </script>
