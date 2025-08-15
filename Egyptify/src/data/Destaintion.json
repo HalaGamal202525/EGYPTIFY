@@ -1619,65 +1619,65 @@
   {
   "id": 25,
   "price": 1200,
-  "name": "Sobhy Kaber",
-  "image": "/food/sobhy.webp",
-  "category": "Food",
-  "location": "Cairo",
+  "name": "SOHO Square",
+  "image": "/Destination/soho2.jpg",
+  "category": "Entertainment",
+  "location": "Sharm El Sheikh",
   "rate": 4,
-  "description": "Very popular for grilled meats, kebda, and oriental salads. Busy, authentic Egyptian atmosphere.",
+  "description": "SOHO Square is a shopping and entertainment complex that’s great for all ages. Check out the dancing fountain, take a whirl on the ball pit and slides at the Kids’ Zone, and snag a souvenir at the souk-themed Khan El-Khalili Bazaar.",
   "images": [
-    "/imagesdatabase/Food/Sobhy Kaber1 (1).jpg",
-    "/imagesdatabase/Food/Sobhy Kaber2.webp",
-    "/imagesdatabase/Food/Sobhy Kaber3.jpeg",
-    "/imagesdatabase/Food/Sobhy Kaber4.webp"
+    "/Destination/soho2.jpg",
+    "/Destination/soho1.jpg",
+    "/Destination/soho2.jpg",
+    "/Destination/soho.jpg"
   ],
   "overview": {
-    "description": "Sobhy Kaber is one of the most famous Egyptian restaurants known for its rich, flavorful grilled meats, liver dishes, and traditional side plates. Located in Shubra El Kheima, the restaurant has built a strong reputation for authentic Egyptian cuisine, massive portions, and a lively local atmosphere. It’s a must-try for food lovers seeking a true taste of Cairo.",
+    "description": "SOHO Square is a shopping and entertainment complex that’s great for all ages. Check out the dancing fountain, take a whirl on the ball pit and slides at the Kids’ Zone, and snag a souvenir at the souk-themed Khan El-Khalili Bazaar. For a great group activity, you can even go bowling and ice skating, or have a game of billiards and tennis. Dining-wise, take your pick from a range of casual eateries, fast food joints, and fine dining establishments while enjoying our 10 different cuisines.",
     "rating": 4.5,
-    "address": "151 Obaid Street, Shubra El Kheima, Qalyubia Governorate, Egypt",
-    "mapLink": "https://maps.app.goo.gl/YJUtGMJZ8NyTDzbq9",
-    "mapImage": "/imagesdatabase/Food/Sobhy Kabermap.png"
+    "address": "SOHO Square, South Sinai Governorate 46628",
+    "mapLink":  "https://maps.app.goo.gl/i4MtVs6MouVTfwo19",
+    "mapImage": "/map/soho-square.png"
   },
   "detail": {
-    "visitingHours": "10:00 AM - 12:00 AM",
-    "entryFees": "Free",
+    "visitingHours": "01:00 PM - 02:00 AM",
+    "entryFees": "Free entry to the square; some attractions may have additional charges",
     "bestTimeToVisit": "Evening",
-    "howToGet": "Take metro to Sadat Station, 5 min walk",
-    "tips": "Go early to avoid queues"
+    "howToGet": "Easily reachable by taxi or local bus; within walking distance from nearby hotels in the Sharks Bay area",
+    "tips": "Visit in the evening to enjoy the colorful fountain show and make the most of family-friendly activities"
   },
-  "activity": [
+   "activity": [
     {
-      "name": "Grilled Meat Feast",
-      "description": "Try Sobhy Kaber’s signature grilled kofta, kebabs, and lamb chops for an authentic Egyptian meat experience.",
-      "image": "/imagesdatabase/activity/grilled_meat_sobhy.webp",
-      "price": "EGP 300-500 per person"
+      "name": "Dancing Fountain Show",
+      "description": "A stunning fountain display synchronized with music and colorful lights – one of the main highlights of the square.",
+      "image": "/Destination/soho.jpg",
+      "price": "Free"
     },
     {
-      "name": "Kebda & Oriental Salad Combo",
-      "description": "Taste the famous Alexandrian-style liver with a side of freshly made tahini, baba ghanoush, and pickles.",
-      "image": "/imagesdatabase/activity/kebda_sobhy.webp",
-      "price": "EGP 150-250 per person"
+      "name": "Culturama Panoramic Experience",
+      "description": "A panoramic cinema offering an interactive cultural presentation spanning 4,500 years of Egypt's history.",
+      "image": "/entertainment/soho1.jpg",
+      "price": "Separate ticket required"
     },
     {
-      "name": "Evening Local Dining Experience",
-      "description": "Enjoy your meal during the vibrant evening hours when the restaurant is full of energy and live cooking aromas fill the air.",
-      "image": "/imagesdatabase/activity/evening_dining_sobhy.webp",
-      "price": "Depends on menu choices"
+      "name": "Ice Rink & Bowling",
+      "description": "Enjoy ice-skating and bowling with family and friends, plus other sports like tennis and squash.",
+      "image": "/entertainment/ice-rink.jpg",
+      "price": "Varies by activity"
     }
   ],
   "review": {
     "review1": {
-      "name": "Sarah A.",
-      "date": "July 2025",
-      "content": "Amazing place! Very clean and staff were friendly.",
-      "rating": 5,
-      "avatar": "/sara/person.jpeg"
+      "name": "David R.",
+      "date": "June 2025",
+      "content": "SOHO Square is great for all ages. The evening atmosphere is magical with the fountain and lights. Plenty of dining options at reasonable prices.",
+      "rating": 4.5,
+      "avatar": "/sara/person2.jpeg"
     },
     "review2": {
-      "name": "Ahmed M.",
-      "date": "June 2025",
-      "content": "Nice experience, but it was a bit crowded.",
-      "rating": 4,
+      "name": "Mohamed Agha",
+      "date": "October 2024",
+      "content": "Modern and clean design, with beautiful colored lights and great night music. The Asian restaurant was a personal favorite with amazing views.",
+      "rating": 5,
       "avatar": "/sara/person2.jpeg"
     }
   }
@@ -1685,165 +1685,208 @@
 ,
   {
   "id": 26,
-  "price": 1200,
-  "name": "Sachi",
-  "image": "/food/suchi.webp",
-  "category": "Food",
-  "location": "Giza",
-  "rate": 5,
-  "description": "Sachi is a high-end restaurant offering a blend of Mediterranean and Asian cuisines in a luxurious atmosphere.",
+  "price": 800,
+  "name": "Ras Mohammed National Park",
+  "image": "/Destination/rasmohamed-park.jpg",
+  "category": "Nature & Diving",
+  "location": "Sharm El Sheikh",
+  "rate": 4.8,
+  "description": "Ras Mohammed National Park is Egypt’s premier marine reserve, famous for its vibrant coral reefs, mangroves, and unique desert-mountain scenery.",
   "images": [
-    "/imagesdatabase/Food/Sachi.webp",
-    "/imagesdatabase/Food/Sachi2.webp",
-    "/imagesdatabase/Food/Sachi3.webp",
-    "/imagesdatabase/Food/Sachi4.webp"
+    "/Destination/rasmohamed-park1.jpg",
+    "/Destination/rasmohamed-park2.jpg",
+    "/Destination/rasmohamed-park.jpg",
+    "/Destination/rasmohamed-park1.jpg"
   ],
   "overview": {
-    "description": "Sachi is a luxurious dining destination known for its fusion of Mediterranean and Asian flavors. With locations in Cairo and Alexandria, the restaurant is celebrated for its elegant ambiance, fine-dining service, and innovative dishes crafted by top chefs. It's a perfect spot for romantic dinners, business meals, or upscale celebrations.",
-    "rating": 5,
-    "address": "23 El-Batal Ahmed Abdel Aziz St, Mohandessin, Giza, Egypt",
-    "mapLink": "https://maps.app.goo.gl/XpNLufo3ykFjZnwa6",
-    "mapImage": "/imagesdatabase/Food/Sachimap.webp"
+    "description": "Located at the southern tip of the Sinai Peninsula, Ras Mohammed National Park is a UNESCO-listed site offering world-class diving and snorkeling experiences. Visitors can explore over 200 species of coral and a stunning variety of marine life. The park also features mangrove forests, desert hiking trails, and panoramic views from Shark Observatory.",
+    "rating": 4.8,
+    "address": "Ras Mohammed, South Sinai Governorate, Egypt",
+    "mapLink": "https://maps.app.goo.gl/3VXT31dkTixSQGeH8",
+    "mapImage": "/map/ras-mohamed.png"
   },
   "detail": {
-    "visitingHours": "1:00 PM - 12:00 AM",
-    "entryFees": "Free (meals priced individually)",
-    "bestTimeToVisit": "Evening or weekends",
-    "howToGet": "Taxi or Uber to Mohandessin, near Shooting Club",
-    "tips": "Make a reservation, especially on weekends. Try the sushi platter."
+    "visitingHours": "7:00 AM - 5:00 PM",
+    "entryFees": "EGP 150 for foreigners, EGP 10 for Egyptians (may vary)",
+    "bestTimeToVisit": "July to October for best visibility",
+    "howToGet": "Book a guided tour or take a taxi from Sharm El Sheikh (approx. 30-40 mins)",
+    "tips": "Bring snorkeling gear, sunscreen, and water. Wear reef-safe sunscreen to protect corals."
   },
   "activity": [
     {
-      "name": "Sushi & Sashimi Tasting",
-      "description": "Enjoy Sachi’s signature sushi and sashimi platter, prepared with fresh, premium ingredients and artistic presentation.",
-      "image": "/imagesdatabase/activity/sachi_sushi.webp",
-      "price": "EGP 400-700 per person"
+      "name": "Snorkeling Adventure",
+      "description": "Discover stunning coral reefs and tropical fish in crystal-clear waters.",
+      "image": "/entertainment/snorkeling.jpg",
+      "price": "EGP 400-600 per person"
     },
     {
-      "name": "Romantic Dinner for Two",
-      "description": "Experience an intimate evening with candlelit tables, a curated tasting menu, and exquisite wine pairing.",
-      "image": "/imagesdatabase/activity/sachi_romantic.webp",
-      "price": "EGP 1500-2500 for two"
+      "name": "Scuba Diving Experience",
+      "description": "Dive with a certified guide to explore Ras Mohammed’s most famous underwater spots.",
+      "image": "/entertainment/ras-mohamed.jpg",
+      "price": "EGP 1000-1500 per person"
     },
     {
-      "name": "Chef’s Signature Tasting Menu",
-      "description": "Indulge in a multi-course journey of Mediterranean and Asian fusion dishes, personally crafted by the chef.",
-      "image": "/imagesdatabase/activity/sachi_tasting.webp",
-      "price": "EGP 1200-1800 per person"
+      "name": "Shark Observatory Viewpoint",
+      "description": "Enjoy breathtaking panoramic views of the Red Sea and Gulf of Suez from the park’s highest point.",
+      "image": "/entertainment/ras-mohamed1.jpg",
+      "price": "Included in entry ticket"
     }
   ],
   "review": {
     "review1": {
-      "name": "Lina M.",
-      "date": "July 2025",
-      "content": "Fantastic service and the food was outstanding. Perfect for date night.",
+      "name": "James K.",
+      "date": "May 2025",
+      "content": "Absolutely stunning underwater scenery. The visibility was perfect and the marine life was abundant.",
       "rating": 5,
+      "avatar": "/sara/person2.jpeg"
+    },
+    "review2": {
+      "name": "Sara M.",
+      "date": "April 2025",
+      "content": "Beautiful park with amazing coral reefs. A must-visit for nature lovers.",
+      "rating": 4.5,
+      "avatar": "/sara/person.jpeg"
+    }
+  }
+}
+
+
+  ,
+ {
+  "id": 27,
+  "price": 0,
+  "name": "Naama Bay",
+  "image": "/Destination/neama-bay.png",
+  "category": "Beach & Nightlife",
+  "location": "Sharm El Sheikh",
+  "rate": 4.6,
+  "description": "Naama Bay is the vibrant hub of Sharm El Sheikh—famous for its long sandy beaches, lively nightlife, restaurants, cafés, and shopping.",
+  "images": [
+    "/Destination/naama.jpg",
+    "/Destination/naama2.jpg",
+    "/Destination/naama1.jpg",
+    "/Destination/neama-bay.png"
+  ],
+  "overview": {
+    "description": "Situated along the Red Sea coast, Naama Bay is the city’s main tourist hotspot, offering sunbathing on sandy beaches, water sports, cafés, restaurants, bars, and local bazaars in a vibrant, atmospheric setting :contentReference[oaicite:1]{index=1}.",
+    "rating": 4.6,
+    "address": "Naama Bay, Sharm El Sheikh, South Sinai, Egypt",
+    "mapLink": "https://maps.app.goo.gl/TBmPyRpEuiZtuVLh9",
+    "mapImage": "/map/naama-bay.png"
+  },
+  "detail": {
+    "visitingHours": "Open all day and night",
+    "entryFees": "Free beach access, some venues may charge",
+    "bestTimeToVisit": "Evenings for nightlife and promenade strolls",
+    "howToGet": "Within walking distance from many hotels; taxis readily available",
+    "tips": "Stroll after sunset to enjoy shops, cafés, and street performances."
+  },
+  "activity": [
+    {
+      "name": "Beach & Water Sports",
+      "description": "Enjoy sunbathing, snorkeling, diving, or water-skiing in the clear waters of the bay.",
+      "image": "/entertainment/naama-bay.jpg",
+      "price": "Varies by activity"
+    },
+    {
+      "name": "Evening Promenade & Dining",
+      "description": "Walk along the lively waterfront lined with restaurants, cafés, and bars.",
+      "image": "/entertainment/naama-bay1.jpg",
+      "price": "Prices vary"
+    },
+    {
+      "name": "Shopping & Street Vibes",
+      "description": "Explore local crafts, souvenirs, and enjoy the buzzing ambiance.",
+      "image": "/entertainment/naama.jpg",
+      "price": "Free to browse; purchases vary"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Emily R.",
+      "date": "May 2025",
+      "content": "Naama Bay is vibrant and fun with something for everyone—perfect mix of beach and nightlife.",
+      "rating": 4.5,
       "avatar": "/sara/person.jpeg"
     },
     "review2": {
-      "name": "Kareem H.",
-      "date": "June 2025",
-      "content": "Excellent sushi and ambiance. A bit pricey but worth it.",
-      "rating": 4.5,
+      "name": "Omar S.",
+      "date": "April 2025",
+      "content": "Fantastic atmosphere at night with plenty of dining and shopping options, though some venues can be pricey.",
+      "rating": 4,
       "avatar": "/sara/person2.jpeg"
     }
   }
 }
 
   ,
-  {
-    "id": 27,
-    "price":1200,
-    "name": "Abou Tarek",
-    "image": "/food/tark.webp",
-        "category": "Food",
-
-    "rate": 3.5,
-    "location":"Cairo",
-    "description": "The most iconic koshari restaurant in Egypt, known for fast service and authentic flavor.",
-    "images": [
-      "/imagesdatabase/Food/Abou Tarek.webp",
-      "/imagesdatabase/Food/Abou Tarek2.webp",
-      "/imagesdatabase/Food/Abou Tarek3.webp"
-    ],
-    "overview": {
-      "description": "Abou Tarek is a legendary koshari restaurant located in downtown Cairo, serving authentic Egyptian koshari with quick service and generous portions.",
-      "rating": 3.5,
-      "address": "16 Marouf, Qasr El Nil, Cairo Governorate 11513",
-      "mapLink": "https://maps.app.goo.gl/iN8PGgTJa9gRHToX8",
-      "mapImage": "/imagesdatabase/Food/Abou Tarekmap.webp"
+{
+  "id": 28,
+  "price": 0,
+  "name": "Old Market (Sharm El Sheikh)",
+  "image": "/Destination/old-market.jpg",
+  "category": "Culture & Shopping",
+  "location": "Sharm El Sheikh",
+  "rate": 4.4,
+  "description": "The Old Market is a bustling traditional souq in Sharm, filled with spices, crafts, textiles, and local street food.",
+  "images": [
+    "/Destination/old-market1.jpg",
+    "/Destination/old-market2.jpg",
+    "/Destination/old-market.jpg",
+    "/Destination/old-market1.jpg"
+  ],
+  "overview": {
+    "description": "With winding alleys and eclectic shops, the Old Market blends authentic Egyptian charm with tourist appeal—selling spices, textiles, souvenirs, and local crafts in a lively, scented atmosphere :contentReference[oaicite:2]{index=2}.",
+    "rating": 4.4,
+    "address": "El-Souk, Sharm El Sheikh, South Sinai, Egypt",
+    "mapLink": "https://maps.app.goo.gl/5Ur1qSkhMdtnumPN8",
+    "mapImage": "/map/old-market.png"
+  },
+  "detail": {
+    "visitingHours": "Daily from 09:00 AM – 10:00 PM (some sources say open 24h) :contentReference[oaicite:3]{index=3}",
+    "entryFees": "Free entry; prices on goods vary",
+    "bestTimeToVisit": "Evening hours for cooler temperature and lively atmosphere :contentReference[oaicite:4]{index=4}",
+    "howToGet": "Center of city—easy walking or taxi from Naama Bay area",
+    "tips": "Bring cash (EGP), bargain politely, and sample authentic street food."
+  },
+  "activity": [
+    {
+      "name": "Shopping Souvenirs & Spices",
+      "description": "Browse handcrafted jewelry, textiles, spices and traditional goods.",
+      "image": "/Destination/old-market1.jpg",
+      "price": "Varies"
     },
-    "detail": {
-      "visitingHours": "9:00 AM - 11:00 PM",
-      "entryFees": "Free",
-      "bestTimeToVisit": "Lunch or early dinner hours",
-      "howToGet": "Easily accessible by metro (Sadat Station) or taxi",
-      "tips": "Try their signature koshari dish with extra crispy onions."
+    {
+      "name": "Street Food Sampling",
+      "description": "Try local delicacies like kebabs, falafel, and Egyptian sweets.",
+      "image": "/entertainment/oldmarket.webp",
+      "price": "EGP 20–80"
     },
-    "review": {
-      "review1": {
-        "name": "Mona A.",
-        "date": "2024-11-12",
-        "content": "Fast service and the koshari was delicious and filling!",
-        "rate": 4,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar K.",
-        "date": "2025-01-05",
-        "content": "It was a bit crowded but totally worth the wait.",
-        "rate": 3,
-        "avatar": "/sara/person2.jpeg"
-      }
+    {
+      "name": "Cultural Stroll",
+      "description": "Experience the vibrant energy, aromas, and weaving alleys of the marketplace.",
+      "image": "/entertainment/old-market.webp",
+      "price": "Free"
     }
-  }
-  ,
-  {
-    "id": 28,
-    "price":1200,
-    "name": "Crave",
-    "image": "/food/cearve.jpg",
-        "category": "Food",
-"location":"Cairo",
-    "rate": 4,
-    "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
-    "images": [
-      "/imagesdatabase/Food/Crave.webp",
-      "/imagesdatabase/Food/Crave2.webp",
-      "/imagesdatabase/Food/Crave3.webp",
-      "/imagesdatabase/Food/Crave4.webp"
-    ],
-    "overview": {
-      "description": "Crave is a modern bistro offering upscale international cuisine with a contemporary twist.",
+  ],
+  "review": {
+    "review1": {
+      "name": "Nadia F.",
+      "date": "June 2025",
+      "content": "Vibrant and colorful—best place to pick up spices and crafts. Loved bargaining with the shopkeepers.",
+      "rating": 4.5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Ahmed L.",
+      "date": "March 2025",
+      "content": "Authentic Egyptian vibe and great street food stalls. Go in the evening for a cooler, lively experience.",
       "rating": 4,
-      "address": "Zamalek, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/GD3ZonLhtm4Bmuik9",
-      "mapImage": "/imagesdatabase/Food/Cravemap.webp"
-    },
-    "detail": {
-      "visitingHours": "12:00 PM - 12:00 AM",
-      "entryFees": "Free",
-      "bestTimeToVisit": "Evening for dinner",
-      "howToGet": "By car or ride-hailing apps like Uber",
-      "tips": "Try their signature pasta and book in advance on weekends."
-    },
-    "review": {
-      "review1": {
-        "name": "Nour Hassan",
-        "date": "2025-07-21",
-        "content": "Lovely place with delicious food. I really enjoyed the ambiance!",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar Khaled",
-        "date": "2025-07-18",
-        "content": "Nice experience, though service was a bit slow.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
+      "avatar": "/sara/person2.jpeg"
     }
   }
+}
+
   ,
   {
     "id": 29,
