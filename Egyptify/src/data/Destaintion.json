@@ -1888,374 +1888,433 @@
 }
 
   ,
-  {
-    "id": 29,
-    "price":1200,
-    "name": "Zooba",
-    "image": "/food/zooba.webp",
-    "category": "Food",
-    "location":"Cairo",
-    "rate": 4,
-    "description": "Trendy Egyptian street food with a modern twist — koshari, taameya, liver sandwiches, and more.",
-    "images": [
-      "/imagesdatabase/Food/Zooba.webp",
-      "/imagesdatabase/Food/Zooba2.webp",
-      "/imagesdatabase/Food/Zooba3.webp",
-      "/imagesdatabase/Food/Zooba4.webp"
-    ],
-    "overview": {
-      "description": "Zooba is a popular Egyptian eatery that reimagines traditional street food in a stylish, modern setting. From colorful interiors to unique packaging, it's a vibrant take on local favorites.",
-      "rating": 4,
-      "address": "26th July St, Zamalek, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/gx8bASaF17hYNdzo7",
-      "mapImage": "/imagesdatabase/Food/Zoobamap.webp"
-    },
-    "detail": {
-      "visitingHours": "10:00 AM - 12:00 AM",
-      "entryFees": "Free entry, pay for food",
-      "bestTimeToVisit": "Evenings and weekends",
-      "howToGet": "Easily accessible by car or taxi to Zamalek",
-      "tips": "Try the taameya burger and hibiscus drink. Expect some waiting time during peak hours."
-    },
-    "review": {
-      "review1": {
-        "name": "Nourhan F.",
-        "date": "2025-07-15",
-        "content": "Loved the modern twist on classic Egyptian dishes. The taameya sandwich is a must-try!",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Ahmed M.",
-        "date": "2025-07-10",
-        "content": "Unique concept and delicious food, but the place can get crowded.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
+ {
+  "id": 29,
+  "price": 0,
+  "name": "Crystal Mountain",
+  "image": "/Destination/crystal-mountain1.jpg",
+  "category": "Nature",
+  "location": "Western Desert",
+  "rate": 4.7,
+  "description": "A natural rock formation glittering with quartz crystals, located between the Bahariya and Farafra oases.",
+  "images": [
+    "/Destination/crystal-mountain.jpg",
+    "/Destination/crystal-mountain2.jpg",
+    "/Destination/crystal-mountain5.jpg",
+    "/Destination/crystal-mountain4.jpg"
+  ],
+  "overview": {
+    "description": "Crystal Mountain is a small hill made of quartz crystals, formed naturally over millions of years. It’s a popular stop on the way to the White Desert, where sunlight makes the crystals sparkle brilliantly.",
+    "rating": 4.7,
+    "address": "Crystal Mountain, Western Desert, Egypt",
+    "mapLink": "https://maps.app.goo.gl/rjVvcjkiq9EqyvUTA",
+    "mapImage": "/map/crystal-mountain.png"
   },
-  {
-    "id": 30,
-    "price":1200,
-    "name": "Tamara Lebanese Bistro",
-    "image": "/food/tamara.webp",
-    "category":"Food",
-    "location":"Cairo",
-    "rate": 5,
-    "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
-    "images": [
-      "/imagesdatabase/Food/Tamara Lebanese Bistro.webp",
-      "/imagesdatabase/Food/Tamara Lebanese Bistro2.webp",
-      "/imagesdatabase/Food/Tamara Lebanese Bistro3.webp",
-      "/imagesdatabase/Food/Tamara Lebanese Bistro4.jpeg"
-    ],
-    "overview": {
-      "description": "Stylish Lebanese restaurant offering mezze, grilled meats, and freshly baked manakeesh.",
-      "rating": 5,
-      "address": "City Stars, Nasr City, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/VhP6DwZ3xdodmy548",
-      "mapImage": "/imagesdatabase/Food/Tamara Lebanese Bistromap.webp"
-    },
-    "detail": {
-      "visitingHours": "12:00 PM - 12:00 AM",
-      "entryFees": "Free entry",
-      "bestTimeToVisit": "Evening and weekends",
-      "howToGet": "Located inside City Stars Mall, accessible by car or Uber",
-      "tips": "Try the mixed grill platter and freshly baked manakeesh."
-    },
-    "review": {
-      "review1": {
-        "name": "Nour A.",
-        "date": "2025-07-22",
-        "content": "Authentic Lebanese flavors and cozy ambiance. Loved the service!",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar K.",
-        "date": "2025-07-18",
-        "content": "Delicious food and beautiful presentation. Definitely coming back.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
+  "detail": {
+    "visitingHours": "Open 24 hours",
+    "entryFees": "Free",
+    "bestTimeToVisit": "Morning or late afternoon for the best light",
+    "howToGet": "Accessible by 4x4 on the road between Bahariya and Farafra oases.",
+    "tips": "Avoid removing crystals, as it’s protected. Best visited with a local guide."
   },
-  {
-    "id": 31,
-    "price":1200,
-    "name": "Lucille’s",
-    "image": "/food/lusills.webp",
-    "category": "Food",
-    "location":"Cairo",
-    "rate": 3.5,
-    "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
-    "images": [
-      "/imagesdatabase/Food/Lucille’s.webp",
-      "/imagesdatabase/Food/Lucille’s2.jpg",
-      "/imagesdatabase/Food/Lucille’s3.jpg",
-      "/imagesdatabase/Food/Lucille’s4.webp"
-    ],
-    "overview": {
-      "description": "Classic American diner known for huge burgers, pancakes, and milkshakes.",
-      "rating": 3.5,
-      "address": "Maadi, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/p1SaEqNic5Bb9Cwc9",
-      "mapImage": "/imagesdatabase/Food/Lucille’smap.webp"
+  "activity": [
+    {
+      "name": "Photo Stop",
+      "description": "Take stunning photographs of the sparkling quartz formations.",
+      "image": "/Destination/crystal-mountain5.jpg",
+      "price": "Free"
     },
-    "detail": {
-      "visitingHours": "8:00 AM - 12:00 AM",
-      "entryFees": "Free entry",
-      "bestTimeToVisit": "Morning for breakfast or evening for dinner",
-      "howToGet": "Located in Maadi, accessible by car or ride-hailing apps",
-      "tips": "Try the pancakes and burgers. Can be crowded on weekends."
-    },
-    "review": {
-      "review1": {
-        "name": "Omar R.",
-        "date": "2025-06-25",
-        "content": "Burgers were amazing, and the service was great. Will come again!",
-        "rating": 5,
-        "avatar": "/sara/person2.jpeg"
-      },
-      "review2": {
-        "name": "Sara M.",
-        "date": "2025-07-01",
-        "content": "Good food but a bit overpriced for what you get.",
-        "rating": 3,
-        "avatar": "/sara/person.jpeg"
-      }
+    {
+      "name": "Geology Exploration",
+      "description": "Learn about the geological history of the crystal formations with a guide.",
+      "image": "/Destination/crystal-mountain.jpg",
+      "price": "EGP 200-400 per person"
     }
-  },
-  {
-    "id": 32,
-    "price":1200,
-    "name": "Kazoku",
-    "image": "/food/kazuka.png",
-    "category":"Food",
-    "location":"Giza",
-    "rate": 4,
-    "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
-    "images": [
-      "/imagesdatabase/Food/Kazoku.webp",
-      "/imagesdatabase/Food/Kazoku2.webp",
-      "/imagesdatabase/Food/Kazoku3.webp",
-      "/imagesdatabase/Food/Kazoku4.webp"
-    ],
-    "overview": {
-      "description": "Upscale Japanese fine dining with sushi, robata grill, and sophisticated ambiance.",
-      "rating": 4,
-      "address": "New Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/kbuHa4tGyT5QaX4d6",
-      "mapImage": "/imagesdatabase/Food/Kazokumap.webp"
+  ],
+  "review": {
+    "review1": {
+      "name": "Omar K.",
+      "date": "January 2025",
+      "content": "Beautiful stop on the way to the White Desert. The crystals shine in the sun!",
+      "rating": 4.8,
+      "avatar": "/sara/person2.jpeg"
     },
-    "detail": {
-      "visitingHours": "12:00 PM - 12:00 AM",
-      "entryFees": "Free entry",
-      "bestTimeToVisit": "Evening",
-      "howToGet": "Located in New Cairo, reachable by car or taxi",
-      "tips": "Reserve in advance for dinner, try the robata grill."
-    },
-    "review": {
-      "review1": {
-        "name": "Mona F.",
-        "date": "2025-07-15",
-        "content": "Amazing sushi and great ambiance. A bit pricey but worth it.",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Karim H.",
-        "date": "2025-06-28",
-        "content": "Service was excellent. Loved the cocktails and the music.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
-  },
-  {
-    "id":33,
-
-"price":1200,    "name": "Pier 88",
-    "image": "/food/pier.webp",
-    "category": "Food",
-    "location":"Cairo",
-    "rate": 5,
-    "description": "Elegant Mediterranean/Italian restaurant with great views and a celebrity vibe.",
-    "images": [
-      "/imagesdatabase/Food/Pier 88.webp",
-      "/imagesdatabase/Food/Pier 882.webp",
-      "/imagesdatabase/Food/Pier 883.jpg",
-      "/imagesdatabase/Food/Pier 884.jpg"
-    ],
-    "overview": {
-      "description": "Pier 88 is an upscale Mediterranean and Italian restaurant offering delicious food, stylish ambiance, and a celebrity-favored experience. Located by the Nile, it’s perfect for a luxurious dining night.",
-      "rating": 5,
-      "address": "Zamalek, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/mHSZTzrTtiqRFVSs8",
-      "mapImage": "/imagesdatabase/Food/Pier 88map.webp"
-    },
-    "detail": {
-      "visitingHours": "12:00 PM - 12:00 AM",
-      "entryFees": "No entry fee, but reservation recommended",
-      "bestTimeToVisit": "Evenings and weekends",
-      "howToGet": "Located in Zamalek, accessible by car or taxi",
-      "tips": "Book in advance, wear smart casual, and enjoy the riverside view."
-    },
-    "review": {
-      "review1": {
-        "name": "Sara Adel",
-        "date": "2025-06-10",
-        "content": "Great food and beautiful views! The seafood pasta was perfect.",
-        "rate": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Youssef Gamal",
-        "date": "2025-07-15",
-        "content": "Loved the ambiance and music. A bit pricey but worth it for a special night.",
-        "rate": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
-  },
-  {
-    "id": 34,
-    "price":1200,
-    "name": "Abou El Sid",
-    "image": "/food/abou elsid.webp",
-    "category": "Food",
-    "location":"Giza",
-    "rate": 4.5,
-    "description": "A nostalgic Egyptian dining experience with traditional recipes and Oriental decor.",
-    "images": [
-      "/imagesdatabase/Food/Abou El Sid.webp",
-      "/imagesdatabase/Food/Abou El Sid2.webp",
-      "/imagesdatabase/Food/Abou El Sid3.webp",
-      "/imagesdatabase/Food/Abou El Sid4.webp"
-    ],
-    "overview": {
-      "description": "Abou El Sid offers an authentic Egyptian experience with classic dishes, vintage ambiance, and Oriental music. It's perfect for those seeking the true taste of Egypt.",
-      "rating": 4.5,
-      "address": "157 26th of July Corridor, Zamalek, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/qdzrnjHUS1TzRTng8",
-      "mapImage": "/imagesdatabase/Food/Abou El Sidmap.webp/maps/abouelsid_map.jpg"
-    },
-    "detail": {
-      "visitingHours": "12:00 PM - 12:00 AM",
-      "entryFees": "Free entry (based on orders)",
-      "bestTimeToVisit": "Evenings and weekends",
-      "howToGet": "Located in Zamalek, reachable by taxi or ride-hailing apps",
-      "tips": "Try the molokhia and stuffed vine leaves. It's a popular place, so booking is recommended."
-    },
-    "review": {
-      "review1": {
-        "name": "Yasmine M.",
-        "date": "2025-07-18",
-        "content": "The food was delicious and the ambiance is unmatched. Loved the traditional music and decorations!",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar K.",
-        "date": "2025-06-30",
-        "content": "Great spot for classic Egyptian dishes. A bit crowded on weekends but worth it.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
-  },
-  {
-    "id": 35,
-    "price":1200,
-    "name": "Sequoia",
-    "image": "/food/Sequoia.webp",
-    "category":"Food",
-    "location":"Cairo",
-    "rate": 4.5,
-    "description": "Upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting.",
-    "images": [
-      "/imagesdatabase/Food/Sequoia.webp",
-      "/imagesdatabase/Food/Sequoia2.webp",
-      "/imagesdatabase/Food/Sequoia.webp",
-      "/imagesdatabase/Food/Sequoia2.webp"
-    ],
-    "overview": {
-      "description": "Sequoia is an upscale Nile-side restaurant offering Mediterranean cuisine in a stunning open-air setting. Perfect for sunset dinners with a scenic view.",
-      "rating": 4.5,
-      "address": "53 Abou El Feda St., Zamalek, Cairo",
-      "mapLink": "https://maps.app.goo.gl/8wuqijd8BGLoceq17",
-      "mapImage": "/imagesdatabase/Food/Sobhy Kabermap.png"
-    },
-    "detail": {
-      "visitingHours": "12:00 PM - 1:00 AM",
-      "entryFees": "No entry fee, pay per meal",
-      "bestTimeToVisit": "Sunset and evening",
-      "howToGet": "By taxi or Uber to Zamalek",
-      "tips": "Make a reservation in advance and try the seafood platter."
-    },
-    "review": {
-      "review1": {
-        "name": "Yasmine Khaled",
-        "date": "2025-07-18",
-        "content": "One of my favorite spots in Cairo! The view is amazing and the food is delicious.",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar Hany",
-        "date": "2025-06-22",
-        "content": "A bit pricey, but the ambiance and view make it worth it.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
-  },
-  {
-    "id": 36,
-    "price":1200,
-    "name": "Naguib Mahfouz Cafe",
-    "image": "/food/Naguib Mahfouz Cafe.webp",
-    "category": "Food",
-    "location":"Cairo",
-    "rate": 4,
-    "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
-    "images": [
-      "/imagesdatabase/Food/Naguib Mahfouz Cafe.webp",
-      "/imagesdatabase/Food/Naguib Mahfouz Cafe2.webp",
-      "/imagesdatabase/Food/Naguib Mahfouz Cafe3.webp",
-      "/imagesdatabase/Food/Naguib Mahfouz Cafe4.webp"
-    ],
-    "overview": {
-      "description": "Traditional Egyptian restaurant and cafe located in Khan El Khalili, known for its classic ambiance and local dishes.",
-      "rating": 4,
-      "address": "Khan El Khalili, Cairo, Egypt",
-      "mapLink": "https://maps.app.goo.gl/D9XUx8sMxxFsXU5F6",
-      "mapImage": "/imagesdatabase/Food/Naguib Mahfouz Cafemap.webp"
-    },
-    "detail": {
-      "visitingHours": "9:00 AM - 12:00 AM",
-      "entryFees": "Free (Dining Costs Apply)",
-      "bestTimeToVisit": "Evenings and weekends",
-      "howToGet": "Located inside Khan El Khalili bazaar area",
-      "tips": "Try the traditional Egyptian tea and reserve in advance on weekends."
-    },
-    "review": {
-      "review1": {
-        "name": "Layla M.",
-        "date": "2025-07-20",
-        "content": "Perfect atmosphere, felt like I was in old Cairo. Food is authentic!",
-        "rate": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Ahmed S.",
-        "date": "2025-06-15",
-        "content": "A bit crowded, but the service and food were excellent.",
-        "rate": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
+    "review2": {
+      "name": "Hannah W.",
+      "date": "December 2024",
+      "content": "A quick but magical visit. Don’t expect to spend hours, but worth stopping.",
+      "rating": 4.6,
+      "avatar": "/sara/person.jpeg"
     }
   }
+},
+
+  {
+  "id": 31,
+  "price": 0,
+  "name": "Al Qasr Village",
+  "image": "/Destination/elqasr-village.jpeg",
+  "category": "Historical",
+  "location": "Western Desert",
+  "rate": 4.8,
+  "description": "An ancient Islamic village in Dakhla Oasis with mudbrick houses, narrow alleys, and historic mosques.",
+  "images": [
+    "/Destination/elqasr-village1.webp",
+    "/Destination/elqasr-village2.jpg",
+    "/Destination/elqasr-village3.webp",
+    "/Destination/elqasr-village4.webp"
+  ],
+  "overview": {
+    "description": "Al Qasr is a well-preserved medieval village that served as the capital of Dakhla Oasis in the Islamic period. Visitors can explore narrow streets, traditional houses, and ancient mosques built of mudbrick.",
+    "rating": 4.8,
+    "address": "Al Qasr Village, Dakhla Oasis, New Valley, Egypt",
+    "mapLink": "https://maps.app.goo.gl/TevLdPUSy7F8joB4A",
+    "mapImage": "/map/alqasr-village.png"
+  },
+  "detail": {
+    "visitingHours": "9:00 AM - 5:00 PM",
+    "entryFees": "EGP 20 for Egyptians, EGP 60 for foreigners",
+    "bestTimeToVisit": "Morning to avoid the heat",
+    "howToGet": "Reachable via road from Mut in Dakhla Oasis. Best visited with a guide.",
+    "tips": "Wear comfortable shoes and carry water."
+  },
+  "activity": [
+    {
+      "name": "Walking Tour",
+      "description": "Explore the maze-like alleys and historic sites of the village.",
+      "image": "/Destination/elqasr-village.jpeg",
+      "price": "EGP 100-200 per person"
+    },
+    {
+      "name": "Cultural Photography",
+      "description": "Capture the beauty of mudbrick architecture and Islamic heritage.",
+      "image": "/Destination/elqasr-village3.webp",
+      "price": "EGP 50-100 per person"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Fatma E.",
+      "date": "November 2024",
+      "content": "A true step back in time. Very peaceful and full of history.",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "John P.",
+      "date": "October 2024",
+      "content": "Fascinating to walk through such a well-preserved ancient village.",
+      "rating": 4.7,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+ {
+  "id": 32,
+  "price": 0,
+  "name": "Great Sand Sea",
+  "image": "/Destination/great-sand-sea.jpg",
+  "category": "Nature",
+  "location": "Western Desert",
+  "rate": 4.9,
+  "description": "A vast expanse of golden sand dunes stretching between Egypt and Libya.",
+  "images": [
+    "/Destination/great-sand-sea1.jpg",
+    "/Destination/great-sand-sea2.jpg",
+    "/Destination/great-sand-sea5.jpg",
+    "/Destination/great-sand-sea4.jpg"
+  ],
+  "overview": {
+    "description": "The Great Sand Sea is one of the largest sand dune fields in the world, covering about 72,000 km². Visitors can enjoy sandboarding, 4x4 adventures, and incredible sunset views.",
+    "rating": 4.9,
+    "address": "Great Sand Sea, Western Desert, Egypt",
+    "mapLink": "https://maps.app.goo.gl/bt5mA1uZgK8UR2wB9",
+    "mapImage": "/imagesdatabase/Destination/great_sand_sea_map.webp"
+  },
+  "detail": {
+    "visitingHours": "Anytime, but best during daylight",
+    "entryFees": "Free",
+    "bestTimeToVisit": "Sunset for amazing views",
+    "howToGet": "Accessible via guided desert safari from Siwa or Bahariya Oasis.",
+    "tips": "Bring sunglasses, water, and sunscreen. Sandboarding is a must-try."
+  },
+  "activity": [
+    {
+      "name": "Sandboarding",
+      "description": "Ride down the giant dunes on a sandboard for an adrenaline rush.",
+      "image": "/imagesdatabase/activity/sandboarding.webp",
+      "price": "EGP 300-500 per person"
+    },
+    {
+      "name": "4x4 Safari",
+      "description": "Experience the thrill of driving across massive dunes in a 4x4 vehicle.",
+      "image": "/imagesdatabase/activity/4x4_safari.webp",
+      "price": "EGP 600-900 per person"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Salma R.",
+      "date": "March 2025",
+      "content": "Unforgettable! The dunes are breathtaking and sandboarding was so much fun.",
+      "rating": 5,
+      "avatar": "/avatars/avatar7.png"
+    },
+    "review2": {
+      "name": "David L.",
+      "date": "February 2025",
+      "content": "The desert feels endless. Perfect spot for adventurous travelers.",
+      "rating": 4.9,
+      "avatar": "/avatars/avatar8.png"
+    }
+  }
+}
+,
+{
+  "id": 33,
+   "price": 50,
+  "name": "Abu Galum Protectorate",
+  "image": "/Destination/abu-galum1.jpg",
+  "category": "Nature Reserve",
+  "location": "Dahab",
+  "rate": 4.9,
+  "description": "A protected area with crystal-clear waters, coral reefs, and scenic desert mountains.",
+  "images": [
+    "/Destination/abu-galum.jpg",
+    "/Destination/abu-galum4.jpg",
+    "/Destination/abu-galum5.jpg",
+    "/Destination/abu-galum2.webp"
+  ],
+  "overview": {
+    "description": "Abu Galum Protectorate is a stunning blend of mountains, desert, and sea. Known for its biodiversity and pristine coral reefs, it’s a perfect escape for eco-tourism, snorkeling, and camel rides along the coast.",
+    "rating": 4.9,
+    "address": "Abu Galum Protectorate, Dahab, South Sinai, Egypt",
+    "mapLink": "https://maps.app.goo.gl/eKJGkajZRbvW5PG89",
+    "mapImage": "/map/abu-galun.png"
+  },
+  "detail": {
+    "visitingHours": "08:00 AM - 05:00 PM",
+    "entryFees": "EGP 50 per person",
+    "bestTimeToVisit": "Morning",
+    "howToGet": "Boat or camel ride from Blue Hole area.",
+    "tips": "Bring snorkeling gear and plenty of water."
+  },
+  "activity": [
+    {
+      "name": "Camel Ride by the Sea",
+      "description": "Travel along the scenic coastline to Abu Galum on a traditional camel.",
+      "image": "/imagesdatabase/activity/camel_ride.webp",
+      "price": "EGP 300-500"
+    },
+    {
+      "name": "Snorkeling Adventure",
+      "description": "Explore the untouched coral reefs and vibrant marine life.",
+      "image": "/imagesdatabase/activity/snorkeling_abu.webp",
+      "price": "EGP 150-300 per person"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Nour H.",
+      "date": "June 2025",
+      "content": "The most peaceful place I’ve been to in Sinai.",
+      "rating": 5,
+      "avatar": "/avatars/avatar7.png"
+    },
+    "review2": {
+      "name": "Mark D.",
+      "date": "May 2025",
+      "content": "Incredible reefs, highly recommend the camel ride.",
+      "rating": 4.9,
+      "avatar": "/avatars/avatar8.png"
+    }
+  }
+}
+,
+  {
+    "id": 34,
+  "price": 0,
+  "name": "Wadi Gnai",
+  "image": "/Destination/wadi-gnai.jpg",
+  "category": "Adventure",
+  "location": "Dahab",
+  "rate": 4.6,
+  "description": "A popular spot for rock climbing, hiking, and exploring desert canyons.",
+  "images": [
+    "/Destination/wadi-gnai2.webp",
+    "/Destination/wadi-gnai3.webp",
+    "/Destination/wadi-gnai4.jpg",
+    "/Destination/wadi-gnai1.png"
+  ],
+  "overview": {
+    "description": "Wadi Gnai is a desert valley located just outside Dahab, famous for its rugged cliffs, hiking trails, and rock climbing routes. It’s a great spot for adventure seekers looking to combine sport and nature.",
+    "rating": 4.6,
+    "address": "Wadi Gnai, Dahab, South Sinai, Egypt",
+    "mapLink": "https://maps.app.goo.gl/E89ZybCrA7N86UTcA",
+    "mapImage": "/map/wadi-gnai.png"
+  },
+  "detail": {
+    "visitingHours": "All day",
+    "entryFees": "Free",
+    "bestTimeToVisit": "Early morning or late afternoon",
+    "howToGet": "15 minutes by car or bike from Dahab center.",
+    "tips": "Wear proper shoes and bring climbing gear if you plan to climb."
+  },
+  "activity": [
+    {
+      "name": "Rock Climbing",
+      "description": "Test your skills on various climbing routes with different difficulty levels.",
+      "image": "/Destination/wadi-gnai4.jpg",
+      "price": "EGP 200-500 per person"
+    },
+    {
+      "name": "Hiking",
+      "description": "Enjoy scenic desert views and explore hidden canyons.",
+      "image": "/Destination/wadi-gnai5.webp",
+      "price": "Free"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Ali K.",
+      "date": "April 2025",
+      "content": "A must-visit for climbers and adventure lovers.",
+      "rating": 4.7,
+      "avatar": "/sara/person2.jpeg"
+    },
+    "review2": {
+      "name": "Sophie G.",
+      "date": "March 2025",
+      "content": "Beautiful place to hike, especially during sunset.",
+      "rating": 4.5,
+      "avatar": "/sara/person.jpeg"
+    }
+  }
+}
+,
+{
+  "id": 35,
+  "price": 40,
+  "name": "Oracle Temple",
+  "image": "/Destination/oracle-temple.jpg",
+  "category": "Historical",
+  "location": "Siwa",
+  "rate": 4.8,
+  "description": "Ancient temple dedicated to the god Amun, famous for its oracle that guided ancient rulers.",
+  "images": [
+    "/Destination/oracle-temple1.jpg",
+    "/Destination/oracle-temple2.jpg",
+    "/Destination/oracle-temple3.jpg",
+    "/Destination/oracle-temple4.jpg"
+  ],
+  "overview": {
+    "description": "The Oracle Temple, also known as the Temple of Amun, is one of Siwa’s most significant archaeological sites. It was visited by Alexander the Great to consult the oracle, making it a historical landmark of great importance.",
+    "rating": 4.8,
+    "address": "Aghurmi Village, Siwa Oasis, Matrouh, Egypt",
+    "mapLink": "https://maps.app.goo.gl/bfbWwohRwEYe93gb8",
+    "mapImage": "/map/oracle-temple.png"
+  },
+  "detail": {
+    "visitingHours": "08:00 AM - 05:00 PM",
+    "entryFees": "EGP 40 per person",
+    "bestTimeToVisit": "Morning or late afternoon",
+    "howToGet": "Short tuk-tuk ride from Siwa center to Aghurmi village.",
+    "tips": "Wear comfortable shoes and bring water; the site has uneven terrain."
+  },
+  "activity": [
+    {
+      "name": "Historical Tour",
+      "description": "Guided tour explaining the history of the temple and its significance in ancient times.",
+      "image": "/Destination/oracle-temple4.jpg",
+      "price": "EGP 100-200 per person"
+    },
+    {
+      "name": "Photography",
+      "description": "Capture stunning shots of the temple ruins and surrounding desert landscapes.",
+      "image": "/Destination/oracle-temple.jpg",
+      "price": "Free"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Sara M.",
+      "date": "May 2025",
+      "content": "A fascinating place with deep history, worth visiting.",
+      "rating": 4.9,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "John P.",
+      "date": "April 2025",
+      "content": "Amazing to walk in the footsteps of Alexander the Great.",
+      "rating": 4.8,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+,
+{
+  "id": 302,
+  "price": 0,
+  "name": "Cleopatra’s Spring",
+  "image": "/Destination/cleopatra-spring.jpg",
+  "category": "Nature",
+  "location": "Siwa",
+  "rate": 4.6,
+  "description": "A natural stone pool fed by a fresh water spring, believed to have been visited by Queen Cleopatra.",
+  "images": [
+    "/Destination/cleopatra-spring1.jpg",
+    "/Destination/cleopatra-spring2.jpg",
+    "/Destination/cleopatra-spring4.jpg",
+    "/Destination/cleopatra-spring.jpg"
+  ],
+  "overview": {
+    "description": "Cleopatra’s Spring is a natural warm water spring in Siwa Oasis, surrounded by palm trees and cafes. Visitors can swim in the crystal-clear water, making it a refreshing stop on a tour of the oasis.",
+    "rating": 4.6,
+    "address": "Siwa Oasis, Matrouh, Egypt",
+    "mapLink": "https://maps.app.goo.gl/FgwAvuK2ckuEhKAB7",
+    "mapImage": "/map/cleoptra.png"
+  },
+  "detail": {
+    "visitingHours": "All day",
+    "entryFees": "Free",
+    "bestTimeToVisit": "Morning or early afternoon",
+    "howToGet": "Walking distance or short tuk-tuk ride from Siwa town center.",
+    "tips": "Bring a swimsuit and towel, and enjoy a drink from nearby cafes."
+  },
+  "activity": [
+    {
+      "name": "Swimming",
+      "description": "Enjoy a refreshing swim in the natural spring water.",
+      "image": "/Destination/cleopatra-spring.jpg",
+      "price": "Free"
+    },
+    {
+      "name": "Relax at the Café",
+      "description": "Sip fresh juice or tea at one of the shaded cafes surrounding the spring.",
+      "image": "/Destination/cleopatra-spring5.jpg",
+      "price": "EGP 30-60"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Nour A.",
+      "date": "May 2025",
+      "content": "Beautiful spot, perfect for cooling off in the heat.",
+      "rating": 4.7,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Paul S.",
+      "date": "April 2025",
+      "content": "Great water and atmosphere, but can get crowded.",
+      "rating": 4.5,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+
   ,
 
 
@@ -3122,7 +3181,69 @@
       "avatar": "/sara/person.jpeg"
     }
   }
+},
+{
+  "id": 49,
+  "price": 60,
+  "name": "Mountain of the Dead",
+  "image": "/Destination/mountain5.jpg",
+  "category": "Historical",
+  "location": "Siwa",
+  "rate": 4.7,
+  "description": "An archaeological site filled with rock-cut tombs dating back to the 26th Dynasty and Greco-Roman periods.",
+  "images": [
+    "/Destination/mountain.jpg",
+    "/Destination/mountain1.jpg",
+    "/Destination/mountain2.jpg",
+    "/Destination/mountain3.jpg"
+  ],
+  "overview": {
+    "description": "The Mountain of the Dead is a hill covered with ancient tombs carved into the rock. It offers both historical exploration and panoramic views of Siwa Oasis.",
+    "rating": 4.7,
+    "address": "Siwa Oasis, Matrouh, Egypt",
+    "mapLink": "https://maps.app.goo.gl/hJys2fWFSiYzDqaN9",
+    "mapImage": "/map/mountain-of-the-dead.png"
+  },
+  "detail": {
+    "visitingHours": "08:00 AM - 05:00 PM",
+    "entryFees": "EGP 60 per person",
+    "bestTimeToVisit": "Morning for cooler weather",
+    "howToGet": "Short tuk-tuk ride from Siwa town.",
+    "tips": "Wear comfortable shoes and bring a camera for the views."
+  },
+  "activity": [
+    {
+      "name": "Historical Exploration",
+      "description": "Discover ancient tombs and learn about Siwa’s burial traditions.",
+      "image": "/Destination/mountain.jpg",
+      "price": "EGP 100-200 for guided tour"
+    },
+    {
+      "name": "Panoramic View Photography",
+      "description": "Capture breathtaking views of the oasis from the top.",
+      "image": "/Destination/mountain1.jpg",
+      "price": "Free"
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Hany F.",
+      "date": "May 2025",
+      "content": "A must-see for history lovers.",
+      "rating": 4.8,
+      "avatar": "/sara/person2.jpeg"
+    },
+    "review2": {
+      "name": "Emily R.",
+      "date": "April 2025",
+      "content": "The views from the top are amazing.",
+      "rating": 4.7,
+      "avatar": "/sara/person.jpeg"
+    }
+  }
 }
+
+
 
 
 ]
