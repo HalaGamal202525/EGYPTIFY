@@ -5,7 +5,7 @@
   "budget": "Elite",
   "bestTime": "Winter",
   "description": "A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.",
-  "image": "/public/hotel/main.jpg",
+  "image": "/hotel/main.jpg",
   "details": {
     "slug": "iberotel-luxor",
     "name": "Iberotel Luxor",
@@ -67,7 +67,7 @@
   "bestTime": "Winter",
   "suitableFor": ["Families"],
   "description": "Mövenpick Resort Aswan provides a tranquil environment of lush tropical gardens and magnificent views of the River Nile. Located on its own island, the hotel offers 404 rooms & suites, 6 restaurants & bars, two swimming pools, recreation facilities and lavish landscape.",
-  "image": "/public/hotel/movenpick-resort-aswan.jpg",
+  "image": "/hotel/movenpick-resort-aswan.jpg",
   "details": {
     "slug": "movenpick-resort-aswan",
     "name": "Movenpick Resort Aswan",
@@ -116,7 +116,7 @@
   "budget": "Elite",
   "bestTime": "Winter",
   "description": "Sofitel Winter Palace Luxor is popular among travelers for its spacious, elegant rooms, although some note that the furnishings feel outdated.",
-  "image": "/public/Destination/sofitel.jpg",
+  "image": "/Destination/sofitel.jpg",
   "details": {
     "slug": "sofitel-winter-palace-luxor",
     "name": "Sofitel Winter Palace Luxor",
@@ -131,7 +131,7 @@
         "/Destination/sofitel-winter-palace (4).jpg",
         "/Destination/sofitel-winter-palace (3).jpg",
         "/Destination/sofitel-winter-palace (2).jpg",
-        "/public/Destination/sofitel-winter-palace (1).jpg"
+        "/Destination/sofitel-winter-palace (1).jpg"
       ]
     },
     "description": "A luxurious 5-star hotel overlooking the Nile in the heart of Aswan. Sofitel Winter Palace Luxor is popular among travelers for its spacious, elegant rooms, although some note that the furnishings feel outdated. Its location near Luxor Temple and the Nile River earns rave reviews. The historic atmosphere and old-world charm are highlights, and the attentive, friendly service is often praised.",
@@ -174,7 +174,7 @@
   "budget": "Elite",
   "bestTime": "Winter",
   "description": "Nestled on the banks of the Nile, Hilton Luxor Resort & Spa offers stylish rooms with uninterrupted views from the water’s edge, luxurious spa facilities and stunning infinity pools.",
-  "image": "/public/Destination/hilton luxor.jpg",
+  "image": "/Destination/hilton luxor.jpg",
   "details": {
     "slug": "hilton-luxor-resort--spa",
     "name": "Hilton Luxor Resort & Spa",
@@ -234,7 +234,7 @@
   "budget": "Elite",
   "bestTime": "All Year",
   "description": "On the historic Semiramis hotel site, guests can enjoy modern luxury by the river Nile. Semiramis InterContinental Cairo is located in the heart of downtown Cairo, next to the Egyptian Museum and Khan el Khalili.",
-  "image": "/public/hotel/samiramis.jpg",
+  "image": "/hotel/samiramis.jpg",
   "details": {
     "slug": "intercontinental-cairo-semiramis",
     "name": "Intercontinental Cairo Semiramis",
@@ -292,7 +292,7 @@
   "budget": "Moderate",
   "bestTime": "All Year",
   "description": "Le Passage Cairo Hotel & Casino is located in Heliopolis, an elegant business and residential district in Cairo and it is considered one of the safest area in town. The hotel is only five minutes from Cairo International Airport and ten minutes from the Cairo International Convention Centre and Fair Grounds, with free shuttle bus service, free wifi and free internet. Great design is the key to this urban, cosmopolitan business and leisure base, providing a sophisticated and stylish environment in the throbbing heart of Egypt and the Middle East.",
-  "image": "/public/historical/lepassage.jpg",
+  "image": "/historical/lepassage.jpg",
   "details": {
     "slug": "le-passage-cairo-hotel--casino",
     "name": "Le Passage Cairo Hotel & Casino",
@@ -343,7 +343,7 @@
   "budget": "Elite",
   "bestTime": "All Year",
   "description": "Among Cairo hotels, Steigenberger El Tahrir secures a spectacular location in El Tahrir Square, overlooking the Egyptian museum, minutes away from Khan El Khalili Bazar, and in close proximity to Egypt’s major attractions with a total area of 21,633 sqm.",
-  "image": "/public/historical/steigenberger-hotel.jpg",
+  "image": "/historical/steigenberger-hotel.jpg",
   "details": {
     "slug": "steigenberger-hotel-el-tahrir-cairo",
     "name": "Steigenberger Hotel El Tahrir Cairo",
@@ -406,7 +406,7 @@
   "bestTime": "Winter",
   "suitableFor": ["Couples", "Families"],
   "description": "Hotel Complex encompassing famous Victorian-style Cataract Hotel & adjacent high-rise New Cataract Hotel (1963).",
-  "image": "/public/hotel/sofitel-legend.jpg",
+  "image": "/hotel/sofitel-legend.jpg",
   "details": {
     "slug": "sofitel-legend-old-cataract-aswan",
     "name": "Sofitel Legend Old Cataract Aswan",
@@ -454,7 +454,7 @@
   "budget": "Moderate",
   "bestTime": "Winter",
   "description": "Live like a local Nubian in an eco-friendly wellness sanctuary. Katodool Wellness is ideally located on the hillside of the Nubian Village in Aswan, embracing the beauty of the surrounding nature of the river Nile and the protectorate of Salouga and Ghazal, preserving the genuine Nubian lifestyle and its mindfulness activities.",
-  "image": "/public/hotel/kato-dool-wellness-resort.jpg",
+  "image": "/hotel/kato-dool-wellness-resort.jpg",
   "details": {
     "slug": "kato-dool-wellness-resort",
     "name": "Kato Dool Wellness Resort",
@@ -506,7 +506,7 @@
   "bestTime": "Summer",
   "suitableFor": ["Couples", "Families"],
   "description": "All‑inclusive beachfront resort with private beach, diving center and spa services.",
-  "image": "/public/hotel/rixos-premium-seagate.jpg",
+  "image": "/hotel/rixos-premium-seagate.jpg",
   "details": {
     "slug": "rixos-premium-seagate",
     "name": "Rixos Premium Seagate",
@@ -894,7 +894,7 @@
   "budget": "Elite",
   "bestTime": "Winter",
   "description": "A heated pool floating on the Nile is one of the most unique features of this 4-star hotel. Overlooking the Theben Hills, Iberotel Luxor also offers a restaurant boat and rooms with private balconies.",
-  "image": "/public/hotel/main.jpg",
+  "image": "/hotel/main.jpg",
   "details": {
     "slug": "iberotel-luxor",
     "name": "Iberotel Luxor",

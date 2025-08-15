@@ -1,6 +1,6 @@
 [
       {"id":1,
-    "img":"public/offer/all/pyramids-6224903_1280.jpg",
+    "img":"/offer/all/pyramids-6224903_1280.jpg",
     "name":"Pyramids of Giza",
     "numofreviews":"20 Reviews",
     "where": "Giza ,cairo",
@@ -17,7 +17,7 @@
 },
 {
   "id": 2,
-  "img": "/public/hotel/soho-square.jpg",
+  "img": "/hotel/soho-square.jpg",
   "name": "SOHO Square",
   "numofreviews": "45 reviews",
   "where": "Sharm El-Sheikh, White Knight Bay",
@@ -35,7 +35,7 @@
 
 ,
 {"id":3,
-    "img":"public/offer/all/historical cairo.webp",
+    "img":"/offer/all/historical cairo.webp",
     "name":"Cairo Historical Day Tour",
     "numofreviews":"20 reviews",
     "where": "Cairo",
@@ -51,7 +51,7 @@
     "type":"Tour"
 },
 {"id":4,
-    "img":"public/offer/all/festivalmall.jpg",
+    "img":"/offer/all/festivalmall.jpg",
     "name":"Cairo Festival City Mall",
     "numofreviews":"20 reviews",
     "where": "New Cairo",
@@ -68,7 +68,7 @@
 },
 {
   "id": 5,
-  "img": "public/offer/all/Marriott Mena House.jpg",
+  "img": "/offer/all/Marriott Mena House.jpg",
   "name": "Marriott Mena House",
   "numofreviews": "45 Reviews",
   "where": "Giza, Cairo",
@@ -101,7 +101,7 @@
 },
 {
   "id": 7,
-  "img": "public/offer/all/siwa.webp",
+  "img": "/offer/all/siwa.webp",
   "name": "Siwa Oasis Adventure",
   "numofreviews": "18 Reviews",
   "review": 4.6,
@@ -118,7 +118,7 @@
 },
 {
   "id": 8,
-  "img": "public/offer/all/dahab.jpg",
+  "img": "/offer/all/dahab.jpg",
   "name": "Dahab & Blue Hole Escape",
   "numofreviews": "25 Reviews",
   "review": 4.8,
@@ -135,7 +135,7 @@
 },
 {
   "id": 9,
-  "img": "public/offer/all/fayom.jpg",
+  "img": "/offer/all/fayom.jpg",
   "name": "Fayoum & Wadi El Rayan Safari",
   "numofreviews": "40 Reviews",
   "review": 4.5,
@@ -152,7 +152,7 @@
 },
 {
   "id": 10,
-  "img": "public/offer/all/سانت كاترين.jpg",
+  "img": "/offer/all/سانت كاترين.jpg",
   "name": "Saint Catherine & Mount Sinai Hike",
   "numofreviews": "22 Reviews",
   "review": 4.7,
@@ -169,7 +169,7 @@
 },
 {
   "id": 11,
-  "img": "public/offer/all/hurghada.webp",
+  "img": "/offer/all/hurghada.webp",
   "name": "Hurghada & Giftun Island Tour",
   "numofreviews": "35 Reviews",
   "review": 4.9,
@@ -186,7 +186,7 @@
 },
 {
   "id": 12,
-  "img": "public/offer/all/Aswan Nile Cruise Experience.webp",
+  "img": "/offer/all/Aswan Nile Cruise Experience.webp",
   "name": "Aswan Nile Cruise Experience",
   "numofreviews": "28 Reviews",
   "review": 4.6,
@@ -220,7 +220,7 @@
   },
   {
     "id": 14,
-    "img": "public/offer/all/rasmohamed.jpg",
+    "img": "/offer/all/rasmohamed.jpg",
     "name": "Ras Mohammed National Park",
     "numofreviews": "85 Reviews",
     "review": 4.8,
@@ -237,7 +237,7 @@
   },
   {
     "id": 15,
-    "img": "public/offer/all/whitedesert.jpg",
+    "img": "/offer/all/whitedesert.jpg",
     "name": "White Desert & Bahariya Oasis",
     "numofreviews": "48 Reviews",
     "review": 4.6,
@@ -254,7 +254,7 @@
   },
   {
   "id": 17,
-  "img": "public/offer/all/Wadi Degla Nature Hike.jpg",
+  "img": "/offer/all/Wadi Degla Nature Hike.jpg",
   "name": "Wadi Degla Nature Hike",
   "numofreviews": "38 Reviews",
   "review": 4.4,
@@ -271,7 +271,7 @@
 },
   {
     "id": 17,
-    "img": "public/offer/all/zaranik-1.jpg",
+    "img": "/offer/all/zaranik-1.jpg",
     "name": "Zaranik Nature Reserve",
     "numofreviews": "22 Reviews",
     "review": 4.0,
@@ -288,7 +288,7 @@
   },
   {
     "id": 18,
-    "img": "public/offer/all/Wadi El Gemal National Park.webp",
+    "img": "/offer/all/Wadi El Gemal National Park.webp",
     "name": "Wadi El Gemal National Park",
     "numofreviews": "38 Reviews",
     "review": 4.7,
@@ -305,7 +305,7 @@
   },
 {
   "id": 18,
-  "img": "public/offer/all/mallegypt.webp",
+  "img": "/offer/all/mallegypt.webp",
   "name": "Ski Egypt – Mall of Egypt",
   "numofreviews": "120 Reviews",
   "review": 4.6,
@@ -322,7 +322,7 @@
 },
 {
   "id": 19,
-  "img": "public/offer/all/kidzaina.jpg",
+  "img": "/offer/all/kidzaina.jpg",
   "name": "KidZania Cairo",
   "numofreviews": "85 Reviews",
   "review": 4.5,
@@ -339,7 +339,7 @@
 },
 {
   "id": 20,
-  "img": "public/offer/all/zed.webp",
+  "img": "/offer/all/zed.webp",
   "name": "ZED Park",
   "numofreviews": "95 Reviews",
   "review": 4.7,
@@ -356,7 +356,7 @@
 },
 {
   "id": 21,
-  "img": "public/offer/all/festivalmall.jpg",
+  "img": "/offer/all/festivalmall.jpg",
   "name": "Cairo Festival City Mall",
   "numofreviews": "150 Reviews",
   "review": 4.6,
@@ -373,7 +373,7 @@
 }
 ,{
   "id": 22,
-  "img": "public/offer/all/magic.jpg",
+  "img": "/offer/all/magic.jpg",
   "name": "Magic Planet",
   "numofreviews": "65 Reviews",
   "review": 4.3,
@@ -390,7 +390,7 @@
 }
 ,{
   "id": 23,
-  "img": "public/offer/all/Sky .jpeg",
+  "img": "/offer/all/Sky .jpeg",
   "name": "Sky Park Adventure",
   "numofreviews": "42 Reviews",
   "review": 4.1,
@@ -407,7 +407,7 @@
 }
 ,{
   "id": 24,
-  "img": "public/offer/all/Gravity Code Trampoline Park.jpeg",
+  "img": "/offer/all/Gravity Code Trampoline Park.jpeg",
   "name": "Gravity Code Trampoline Park",
   "numofreviews": "58 Reviews",
   "review": 4.4,
@@ -424,7 +424,7 @@
 }
 ,{
   "id": 25,
-  "img": "public/offer/all/Adventure Park – Family Land.webp",
+  "img": "/offer/all/Adventure Park – Family Land.webp",
   "name": "Adventure Park – Family Land",
   "numofreviews": "73 Reviews",
   "review": 4.2,
@@ -441,7 +441,7 @@
 },
 {
   "id": 26,
-  "img": "public/offer/all/abou elsid.webp",
+  "img": "/offer/all/abou elsid.webp",
   "name": "Abou El Sid",
   "numofreviews": "65 Reviews",
   "review": 4.5,
@@ -457,7 +457,7 @@
   "type": "Restaurant"
 },{
   "id": 27,
-  "img": "public/offer/all/Naguib Mahfouz Cafe.webp",
+  "img": "/offer/all/Naguib Mahfouz Cafe.webp",
   "name": "Naguib Mahfouz Restaurant",
   "numofreviews": "52 Reviews",
   "review": 4.3,
@@ -473,7 +473,7 @@
   "type": "Restaurant"
 },{
   "id": 28,
-  "img": "public/offer/all/Sequoia.webp",
+  "img": "/offer/all/Sequoia.webp",
   "name": "Sequoia",
   "numofreviews": "78 Reviews",
   "review": 4.6,
@@ -489,7 +489,7 @@
   "type": "Restaurant"
 },{
   "id": 29,
-  "img": "public/offer/all/kazuka.png",
+  "img": "/offer/all/kazuka.png",
   "name": "Kazoku",
   "numofreviews": "84 Reviews",
   "review": 4.7,
@@ -505,7 +505,7 @@
   "type": "Restaurant"
 },{
   "id": 30,
-  "img": "public/offer/all/andrea.jpeg",
+  "img": "/offer/all/andrea.jpeg",
   "name": "Andrea Mariouteya",
   "numofreviews": "48 Reviews",
   "review": 4.2,
@@ -522,7 +522,7 @@
 },
 {
   "id": 31,
-  "img": "public/offer/all/tark.webp",
+  "img": "/offer/all/tark.webp",
   "name": "Koshary Abou Tarek",
   "numofreviews": "110 Reviews",
   "review": 4.1,
@@ -539,7 +539,7 @@
 },
 {
   "id": 32,
-  "img": "public/offer/all/pier.webp",
+  "img": "/offer/all/pier.webp",
   "name": "Pier 88 Cairo",
   "numofreviews": "60 Reviews",
   "review": 4.4,
@@ -556,7 +556,7 @@
 },
 {
   "id": 23,
-  "img": "public/offer/all/Sofra Restaurant.webp",
+  "img": "/offer/all/Sofra Restaurant.webp",
   "name": "Sofra Restaurant",
   "numofreviews": "43 Reviews",
   "review": 4.6,
@@ -573,7 +573,7 @@
 },
 {
   "id": 24,
-  "img": "public/offer/all/Hagouga Restaurant.webp",
+  "img": "/offer/all/Hagouga Restaurant.webp",
   "name": "Hagouga Restaurant",
   "numofreviews": "51 Reviews",
   "review": 4.3,
@@ -590,7 +590,7 @@
 },
 {
   "id": 25,
-  "img": "public/offer/all/Marriott Mena House.jpg",
+  "img": "/offer/all/Marriott Mena House.jpg",
   "name": "Cairo Marriott Hotel",
   "numofreviews": "210 Reviews",
   "review": 4.5,
@@ -607,7 +607,7 @@
 },
 {
   "id": 26,
-  "img": "public/offer/all/Steigenberger Nile Palace.jpeg",
+  "img": "/offer/all/Steigenberger Nile Palace.jpeg",
   "name": "Steigenberger Nile Palace",
   "numofreviews": "132 Reviews",
   "review": 4.6,
@@ -624,7 +624,7 @@
 }
 ,{
   "id": 27,
-  "img": "public/offer/all/Sofitel Legend Old Cataract.jpeg",
+  "img": "/offer/all/Sofitel Legend Old Cataract.jpeg",
   "name": "Sofitel Legend Old Cataract",
   "numofreviews": "98 Reviews",
   "review": 4.8,
@@ -641,7 +641,7 @@
 }
 ,{
   "id": 28,
-  "img": "public/offer/all/Four Seasons Hotel Cairo.webp",
+  "img": "/offer/all/Four Seasons Hotel Cairo.webp",
   "name": "Four Seasons Hotel Cairo",
   "numofreviews": "115 Reviews",
   "review": 4.8,
@@ -657,7 +657,7 @@
   "type": "Hotel"
 },{
   "id": 29,
-  "img": "public/offer/all/Osiris Hotel Cairo.jpeg",
+  "img": "/offer/all/Osiris Hotel Cairo.jpeg",
   "name": "Osiris Hotel Cairo",
   "numofreviews": "38 Reviews",
   "review": 4.1,
@@ -674,7 +674,7 @@
 },
 {
   "id": 30,
-  "img": "public/offer/all/Adrere Amellal Eco-Lodge.webp",
+  "img": "/offer/all/Adrere Amellal Eco-Lodge.webp",
   "name": "Adrere Amellal Eco-Lodge",
   "numofreviews": "52 Reviews",
   "review": 4.7,
@@ -691,7 +691,7 @@
 }
 ,{
   "id": 31,
-  "img": "public/offer/all/The Gabriel Hotel.jpeg",
+  "img": "/offer/all/The Gabriel Hotel.jpeg",
   "name": "The Gabriel Hotel",
   "numofreviews": "60 Reviews",
   "review": 4.2,
@@ -708,7 +708,7 @@
 }
 ,{
   "id": 32,
-  "img": "public/offer/all/City View Hotel.webp",
+  "img": "/offer/all/City View Hotel.webp",
   "name": "City View Hotel",
   "numofreviews": "45 Reviews",
   "review": 3.9,
@@ -724,7 +724,7 @@
   "type": "Hotel"
 },{
   "id": 33,
-  "img": "public/offer/all/Kempinski Nile Hotel Cairo.jpg",
+  "img": "/offer/all/Kempinski Nile Hotel Cairo.jpg",
   "name": "Kempinski Nile Hotel Cairo",
   "numofreviews": "112 Reviews",
   "review": 4.7,
@@ -740,7 +740,7 @@
   "type": "Hotel"
 },{
   "id": 34,
-  "img": "public/offer/all/Hilton Luxor Resort & Spa.webp",
+  "img": "/offer/all/Hilton Luxor Resort & Spa.webp",
   "name": "Hilton Luxor Resort & Spa",
   "numofreviews": "145 Reviews",
   "review": 4.8,
@@ -756,7 +756,7 @@
   "type": "Hotel"
 },{
   "id": 35,
-  "img": "public/offer/all/Jaz Mirabel Resort.webp",
+  "img": "/offer/all/Jaz Mirabel Resort.webp",
   "name": "Jaz Mirabel Resort",
   "numofreviews": "190 Reviews",
   "review": 4.5,
@@ -773,7 +773,7 @@
 },
 {
   "id": 36,
-  "img": "public/offer/all/Maritim Jolie Ville Resort & Casino.jpeg",
+  "img": "/offer/all/Maritim Jolie Ville Resort & Casino.jpeg",
   "name": "Maritim Jolie Ville Resort & Casino",
   "numofreviews": "103 Reviews",
   "review": 4.3,
