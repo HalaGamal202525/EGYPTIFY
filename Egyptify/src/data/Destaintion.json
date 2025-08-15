@@ -2255,7 +2255,7 @@
 }
 ,
 {
-  "id": 302,
+  "id": 36,
   "price": 0,
   "name": "Cleopatra’s Spring",
   "image": "/Destination/cleopatra-spring.jpg",
@@ -2979,7 +2979,7 @@
   "overview": {
     "description": "Butterfly Garden offers a serene and magical environment where you can walk among hundreds of colorful butterflies in a climate-controlled dome. It's an educational and relaxing experience for all ages.",
     "rating": 4.5,
-    "address": "Zabeel Park, Dubai, UAE",
+    "address": "Cairo",
     "mapLink": "https://maps.app.goo.gl/zmQDs4KQm66LjhqE8",
     "mapImage": "/imagesdatabase/entertainment/Butterfly Gardenmap.webp"
   },
