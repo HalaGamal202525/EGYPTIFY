@@ -114,7 +114,7 @@ const submitReservation = () => {
                 type="text"
                 placeholder="John Doe"
                 class="border border-gray-300 rounded-md p-3 w-full focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                v-model="reservation.name"
+                v-model="reservation.name" required
               />
             </div>
 
@@ -124,7 +124,7 @@ const submitReservation = () => {
                 type="tel"
                 placeholder="+20 123 456 7890"
                 class="border border-gray-300 rounded-md p-3 w-full focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                v-model="reservation.phone"
+                v-model="reservation.phone" required
               />
             </div>
 
@@ -135,7 +135,7 @@ const submitReservation = () => {
                 min="1"
                 placeholder="2"
                 class="border border-gray-300 rounded-md p-3 w-full focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                v-model="reservation.guests"
+                v-model="reservation.guests" required
               />
             </div>
 
@@ -144,7 +144,7 @@ const submitReservation = () => {
               <input
                 type="date"
                 class="border border-gray-300 rounded-md p-3 w-full focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                v-model="reservation.date"
+                v-model="reservation.date" required
               />
             </div>
 
@@ -153,7 +153,7 @@ const submitReservation = () => {
               <input
                 type="time"
                 class="border border-gray-300 rounded-md p-3 w-full focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-                v-model="reservation.time"
+                v-model="reservation.time" required
               />
             </div>
 
@@ -168,13 +168,15 @@ const submitReservation = () => {
             </div>
 
             <div class="flex justify-center mt-4">
-              <BaseButton
-                @click="submitReservation"
-                class="bg-yellow-400 text-black font-bold px-6 py-3 rounded-md hover:bg-yellow-500 w-full md:w-auto transition"
-              >
-                Reserve Table
-              </BaseButton>
-            </div>
+  <BaseButton
+    @click="submitReservation"
+    :disabled="!reservation.name || !reservation.phone || !reservation.guests || !reservation.date || !reservation.time"
+    class="bg-yellow-400 disabled:bg-gray-300 text-black font-bold px-6 py-3 rounded-md hover:bg-yellow-500 w-full md:w-auto transition"
+  >
+    Reserve Table
+  </BaseButton>
+</div>
+
           </div>
         </div>
 
