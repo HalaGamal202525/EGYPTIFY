@@ -40,7 +40,7 @@
 
   <template v-if="user">
      <img
-    :src="imageStore.selectedImage || '/about-us/girl-7.png'"
+    :src="imageStore.selectedImage || '/about-us/girl-4.png'"
     :alt="user.displayName || 'User'"
     @click="goToProfile"
     class="w-15 h-15 rounded-full object-contain border-2 border-yellow-400 hover:scale-105 transition cursor-pointer"
