@@ -12,7 +12,7 @@ export const useBookingStore = defineStore('booking', {
       rate: null,
       price: null,
 
-  
+
     },
 
  // بيانات وسيلة المواصلات
