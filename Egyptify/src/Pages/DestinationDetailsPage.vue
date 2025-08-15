@@ -220,26 +220,35 @@
             </div>
             <div v-if="activeTab === 3">
 
-    <div
-      v-for="(act, index) in activitiesData"
-      :key="index"
-      class="bg-white shadow-md p-4 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center"
-    >
-      <div>
-        <img :src="act.image"></img>
-        <h3 class="text-lg font-bold text-gray-800">{{ act.title }}</h3>
-        <p class="text-gray-600 mt-1">{{ act.description }}</p>
-        <p class="text-sm text-gray-500 mt-1"> {{ act.duration }}</p>
-        <p class="text-sm text-gray-500">{{ act.price }}</p>
-      </div>
-
-      <BaseButton
-        @click="addToPackage(act)"
-        class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow mt-4 md:mt-0"
-      >
-        Add to Package
-      </BaseButton>
+  
+<div
+  v-for="(act, index) in activitiesData"
+  :key="index"
+  class="bg-white shadow-md p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
+>
+  
+  <div class="flex flex-col md:flex-row items-center md:items-start flex-1">
+    <img
+      :src="act.image"
+      :alt="act.title"
+      class="w-2/3 md:w-28 md:h-28 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
+    />
+    <div class="text-center md:text-left">
+      <h3 class="text-xl font-bold text-gray-800">{{ act.title }}</h3>
+      <p class="text-gray-600 mt-2 leading-relaxed text-base">{{ act.description }}</p>
+      <p v-if="act.duration" class="text-sm text-gray-500 mt-2">{{ act.duration }}</p>
+      <p v-if="act.price" class="text-sm text-gray-500">{{ act.price }}</p>
+    </div>
   </div>
+
+  
+  <BaseButton
+    @click="addToPackage(act)"
+    class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0"
+  >
+    Add to Package
+  </BaseButton>
+</div>
 </div>
 
           </div>
