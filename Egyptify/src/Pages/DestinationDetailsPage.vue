@@ -23,26 +23,28 @@
           </p>
         </div>
 
-<div class="grid grid-cols-4 gap-4" v-if="place && place.images && place.images.length">
-  <!-- الصورة الرئيسية -->
-  <img
-    :src="place.images[0]"
-    alt="Main Image"
-    class="col-span-3 row-span-3 w-full h-[400px] object-cover rounded-xl shadow"
-  />
+        <div
+          class="grid grid-cols-4 gap-4"
+          v-if="place && place.images && place.images.length"
+        >
+          <!-- الصورة الرئيسية -->
+          <img
+            :src="place.images[0]"
+            alt="Main Image"
+            class="col-span-3 row-span-3 w-full h-[400px] object-cover rounded-xl shadow"
+          />
 
-  <!-- باقي الصور -->
-  <div class="col-span-1 flex flex-col gap-4">
-    <img
-      v-for="(img, index) in place.images.slice(1)"
-      :key="index"
-      :src="img"
-      alt="Sub Image"
-      class="w-full h-[120px] object-cover rounded-xl shadow"
-    />
-  </div>
-</div>
-
+          <!-- باقي الصور -->
+          <div class="col-span-1 flex flex-col gap-4">
+            <img
+              v-for="(img, index) in place.images.slice(1)"
+              :key="index"
+              :src="img"
+              alt="Sub Image"
+              class="w-full h-[120px] object-cover rounded-xl shadow"
+            />
+          </div>
+        </div>
 
         <section class="px-4 md:px-16 rounded-md">
           <div class="p-4">
@@ -84,12 +86,12 @@
                   </div>
 
                   <div class="flex gap-4">
-                    <BaseButton @click="bookNow"
+                    <BaseButton
+                      @click="bookNow"
                       class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
                     >
                       Book Now
                     </BaseButton>
-             
                   </div>
                 </div>
 
@@ -219,38 +221,43 @@
               </div>
             </div>
             <div v-if="activeTab === 3">
+              <div
+                v-for="(act, index) in activitiesData"
+                :key="index"
+                class="bg-white shadow-md p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
+              >
+                <div
+                  class="flex flex-col md:flex-row items-center md:items-start flex-1"
+                >
+                  <img
+                    :src="act.image"
+                    :alt="act.title"
+                    class="w-2/3 md:w-28 md:h-28 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
+                  />
+                  <div class="text-center md:text-left">
+                    <h3 class="text-xl font-bold text-gray-800">
+                      {{ act.name }}
+                    </h3>
+                    <p class="text-gray-600 mt-2 leading-relaxed text-base">
+                      {{ act.description }}
+                    </p>
+                    <p v-if="act.duration" class="text-sm text-gray-500 mt-2">
+                      {{ act.duration }}
+                    </p>
+                    <p v-if="act.price" class="text-lg text-gray-500">
+                      {{ act.price }}
+                    </p>
+                  </div>
+                </div>
 
-  
-<div
-  v-for="(act, index) in activitiesData"
-  :key="index"
-  class="bg-white shadow-md p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
->
-  
-  <div class="flex flex-col md:flex-row items-center md:items-start flex-1">
-    <img
-      :src="act.image"
-      :alt="act.title"
-      class="w-2/3 md:w-28 md:h-28 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
-    />
-    <div class="text-center md:text-left">
-      <h3 class="text-xl font-bold text-gray-800">{{ act.title }}</h3>
-      <p class="text-gray-600 mt-2 leading-relaxed text-base">{{ act.description }}</p>
-      <p v-if="act.duration" class="text-sm text-gray-500 mt-2">{{ act.duration }}</p>
-      <p v-if="act.price" class="text-sm text-gray-500">{{ act.price }}</p>
-    </div>
-  </div>
-
-  
-  <BaseButton
-    @click="addToPackage(act)"
-    class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0"
-  >
-    Add to Package
-  </BaseButton>
-</div>
-</div>
-
+                <BaseButton
+                  @click="addToPackage(act)"
+                  class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0"
+                >
+                  Add to Package
+                </BaseButton>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -266,7 +273,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useRoute,useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 import Navbar from "../components/NavBar-Black.vue";
 import sidecard from "../components/activity detail/sidecard.vue";
@@ -276,8 +283,8 @@ import data from "../data/Destaintion.json";
 import BaseButton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 
-import { useBookingStore } from '../data/store'
-const bookingStore = useBookingStore()
+import { useBookingStore } from "../data/store";
+const bookingStore = useBookingStore();
 function bookNow() {
   if (!place.value) return;
 
@@ -288,7 +295,7 @@ function bookNow() {
     price: place.value.price,
   });
 
-  router.push('/form');
+  router.push("/form");
 }
 function addToPackage(activity) {
   bookingStore.setCardData({
@@ -297,9 +304,8 @@ function addToPackage(activity) {
     rate: place.value.rate,
     price: place.value.price,
   });
-  router.push('/form');
+  router.push("/form");
 }
-
 
 const route = useRoute();
 const router = useRouter();
@@ -316,10 +322,9 @@ const activitiesData = computed(() => place.value?.activity || []);
 const tabs = ["Overview", "Details", "Reviews", "Activities"];
 const activeTab = ref(0);
 
-
-const gotobooking=()=>{
-  router.push("/booking")
-}
+const gotobooking = () => {
+  router.push("/booking");
+};
 const relatedPlaces = computed(() =>
   data.filter((p) => p.id !== placeId).slice(4, 10)
 );

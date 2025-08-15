@@ -32,19 +32,19 @@
     {
       "name": "Sandboarding",
       "description": "Experience the thrill of sliding down the golden dunes of Siwa.",
-      "image": "/imagesdatabase/activity/sandboarding.jpg",
+      "image": "/Destination/Sandboardingsiwa.webp",
       "price": "EGP 200"
     },
     {
       "name": "Hot Spring Bath",
       "description": "Relax in the natural hot springs surrounded by serene landscapes.",
-      "image": "/imagesdatabase/activity/hotspring.jpg",
+      "image": "/Destination/Hot Spring Bath in siwa.webp",
       "price": "EGP 150"
     },
     {
       "name": "Visit Cleopatra’s Pool",
       "description": "Swim in the legendary spring where Cleopatra is said to have bathed.",
-      "image": "/imagesdatabase/activity/cleopatra_pool.jpg",
+      "image": "/Destination/Visit Cleopatra’s Pool.webp",
       "price": "EGP 100"
     }
   ],
@@ -100,19 +100,19 @@
     {
       "name": "Camping Night",
       "description": "Spend the night under the stars in a tent and enjoy the magical desert silence.",
-      "image": "/imagesdatabase/activity/camping.jpg",
+      "image": "/Destination/Camping Night in whitedesert.webp",
       "price": "EGP 250"
     },
     {
       "name": "Photography Tour",
       "description": "Capture the surreal white rock formations with a guided photography session.",
-      "image": "/imagesdatabase/activity/photography.jpg",
+      "image": "/Destination/Photography Tourin whitedesert.webp",
       "price": "EGP 150"
     },
     {
       "name": "Desert Trekking",
       "description": "Explore the unique chalk formations on a guided trek across the desert.",
-      "image": "/imagesdatabase/activity/trekking.jpg",
+      "image": "/Destination/Desert Trekking.webp",
       "price": "EGP 200"
     }
   ],
@@ -168,19 +168,19 @@
     {
       "name": "Snorkeling",
       "description": "Explore vibrant coral reefs and swim alongside colorful fish in crystal-clear waters.",
-      "image": "/imagesdatabase/activity/snorkeling.jpg",
+      "image": "/Destination/Snorkeling.webp",
       "price": "EGP 300"
     },
     {
       "name": "Scuba Diving",
       "description": "Dive into the Red Sea to discover amazing marine life and underwater landscapes.",
-      "image": "/imagesdatabase/activity/diving.jpg",
+      "image": "/Destination/Scuba Diving.webp",
       "price": "EGP 500"
     },
     {
       "name": "Boat Tour",
       "description": "Enjoy a scenic boat tour around the park’s coastline, witnessing mangroves and salt lakes.",
-      "image": "/imagesdatabase/activity/boat-tour.jpg",
+      "image": "/Destination/Boat Tour.webp",
       "price": "EGP 250"
     }
   ],
@@ -236,19 +236,19 @@
     {
       "name": "Scuba Diving",
       "description": "Dive into the Blue Hole’s depths to explore vibrant corals and rich marine life. Suitable for experienced divers.",
-      "image": "/imagesdatabase/activity/bluehole-diving.jpg",
+      "image": "/Destination/Scuba Diving.webp",
       "price": "EGP 500"
     },
     {
       "name": "Snorkeling",
       "description": "Explore the upper layers of the Blue Hole, observing colorful fish and corals safely.",
-      "image": "/imagesdatabase/activity/bluehole-snorkeling.jpg",
+      "image": "/Destination/Snorkeling.webp",
       "price": "EGP 300"
     },
     {
       "name": "Underwater Photography",
       "description": "Capture stunning shots of the Blue Hole’s marine life and deep blue waters.",
-      "image": "/imagesdatabase/activity/bluehole-photography.jpg",
+      "image": "/Destination/Underwater Photography.webp",
       "price": "EGP 200"
     }
   ],
@@ -304,19 +304,19 @@
     {
       "name": "Waterfalls Visit",
       "description": "Explore Egypt’s only natural waterfalls and enjoy the refreshing water. Perfect for family outings and photography.",
-      "image": "/imagesdatabase/activity/wadiwaterfalls.jpg",
+      "image": "/Destination/Waterfalls Visit.webp",
       "price": "EGP 50"
     },
     {
       "name": "Sandboarding",
       "description": "Slide down the desert dunes surrounding Wadi El Rayan for an adrenaline-packed adventure.",
-      "image": "/imagesdatabase/activity/wadisandboarding.jpg",
+      "image": "/Destination/Sandboardingsiwa.webp",
       "price": "EGP 100"
     },
     {
       "name": "Swimming in Lakes",
       "description": "Relax and swim in the reserve’s tranquil lakes, surrounded by beautiful natural scenery.",
-      "image": "/imagesdatabase/activity/wadilakeswimming.jpg",
+      "image": "/Destination/Swimming in Lakes.webp",
       "price": "EGP 30"
     }
   ],
@@ -373,19 +373,19 @@
     {
       "name": "Sunrise Hike",
       "description": "Climb Mount Sinai early in the morning to witness a breathtaking sunrise over the desert.",
-      "image": "/imagesdatabase/activity/sunrise_hike.webp",
+      "image": "/Destination/Sunrise Hike.webp",
       "price": "$20"
     },
     {
       "name": "Guided Religious Tour",
       "description": "Learn about the religious and historical significance of Mount Sinai with a local guide.",
-      "image": "/imagesdatabase/activity/religious_tour.webp",
+      "image": "/Destination/Guided Religious Tour.webp",
       "price": "$15"
     },
     {
       "name": "Photography Tour",
       "description": "Capture panoramic desert views and unique landscapes around Mount Sinai.",
-      "image": "/imagesdatabase/activity/photography_tour.webp",
+      "image": "/Destination/Photography Tour.webp",
       "price": "$10"
     }
   ],
@@ -441,19 +441,19 @@
     {
       "name": "Wildlife Safari",
       "description": "Explore the rare wildlife and unique flora of Gebel Elba with an experienced guide.",
-      "image": "/imagesdatabase/activity/wildlife_safari.webp",
+      "image": "/Destination/Gebel Elbawilde.webp",
       "price": "$30"
     },
     {
       "name": "Bird Watching",
       "description": "Spot endemic and migratory bird species in their natural habitat.",
-      "image": "/imagesdatabase/activity/bird_watching.webp",
+      "image": "/Destination/Bird Watching.webp",
       "price": "$20"
     },
     {
       "name": "Eco-Hiking Tour",
       "description": "Trek through scenic trails, mountains, and valleys while learning about the ecosystem.",
-      "image": "/imagesdatabase/activity/eco_hiking.webp",
+      "image": "/Destination/Eco-Hiking Tour.webp",
       "price": "$25"
     }
   ],
@@ -482,7 +482,7 @@
   "name": "Fayoum Oasis",
   "image": "/natural/fayom.jpg",
   "category": "Natural",
-  "location": "fayoum",
+  "location": "Fayoum",
   "rate": 4,
   "description": "Famous for its lakes, bird-watching, and traditional pottery villages like Tunis Village.",
   "images": [
@@ -509,19 +509,19 @@
     {
       "name": "Bird Watching",
       "description": "Spot and photograph a variety of migratory and native bird species around the lakes.",
-      "image": "/imagesdatabase/activity/bird_watching_fayoum.webp",
+      "image": "/Destination/Bird Watching.webp",
       "price": "$15"
     },
     {
       "name": "Pottery Workshop",
       "description": "Visit Tunis Village and participate in traditional pottery making sessions.",
-      "image": "/imagesdatabase/activity/pottery_workshop_fayoum.webp",
+      "image": "/Destination/Pottery Workshop.webp",
       "price": "$20"
     },
     {
       "name": "Lake Boat Tour",
       "description": "Enjoy a relaxing boat ride on the oasis lakes, exploring the scenic surroundings.",
-      "image": "/imagesdatabase/activity/lake_boat_fayoum.webp",
+      "image": "/Destination/Lake Boat Tour.webp",
       "price": "$25"
     }
   ],
@@ -550,7 +550,7 @@
   "name": "Valley of the Whales",
   "image": "/natural/vally.jpg",
   "category": "Natural",
-  "location": "fayoum",
+  "location": "Fayoum",
   "rate": 5,
   "description": "A UNESCO World Heritage site in Wadi Al-Hitan featuring fossilized remains of ancient whales.",
   "images": [
@@ -577,19 +577,19 @@
     {
       "name": "Fossil Tour",
       "description": "Guided tour exploring fossilized remains of ancient whales and other prehistoric creatures.",
-      "image": "/imagesdatabase/activity/fossil_tour_valley.webp",
+      "image": "/Destination/Fossil Tour.webp",
       "price": "$10"
     },
     {
       "name": "Hiking & Photography",
       "description": "Walk along scenic trails, capture the desert landscapes and unique fossil formations.",
-      "image": "/imagesdatabase/activity/hiking_photography_valley.webp",
+      "image": "/Destination/Hiking & Photography.webp",
       "price": "$0"
     },
     {
       "name": "Eco-Guided Tour",
       "description": "Learn about the geological and ecological significance of Wadi Al-Hitan with an expert guide.",
-      "image": "/imagesdatabase/activity/eco_tour_valley.webp",
+      "image": "/Destination/Eco-Hiking Tour.webp",
       "price": "$15"
     }
   ],
@@ -645,19 +645,19 @@
     {
       "name": "Snorkeling",
       "description": "Explore the clear waters and vibrant marine life of the lagoon.",
-      "image": "/imagesdatabase/activity/snorkeling_dahab.webp",
+      "image": "/Destination/Snorkeling.webp",
       "price": "$0"
     },
     {
       "name": "Kite Surfing",
       "description": "Enjoy the winds of Dahab for an exciting kite surfing experience.",
-      "image": "/imagesdatabase/activity/kitesurfing_dahab.webp",
+      "image": "/Destination/Kite Surfing.webp",
       "price": "$25 per hour"
     },
     {
       "name": "Relaxing & Sunbathing",
       "description": "Relax on the beach, take in the scenery, and enjoy the peaceful environment.",
-      "image": "/imagesdatabase/activity/relaxing_dahab.webp",
+      "image": "/Destination/Relaxing & Sunbathing.webp",
       "price": "$0"
     }
   ],
@@ -713,19 +713,19 @@
     {
       "name": "Desert Safari",
       "description": "Explore the surrounding Black and White Deserts in a 4x4 vehicle.",
-      "image": "/imagesdatabase/activity/desert_safari_bahariya.webp",
+      "image": "/Destination/Desert Safari.webp",
       "price": "$40 per person"
     },
     {
       "name": "Hot Spring Bathing",
       "description": "Relax in the natural hot springs scattered around the oasis.",
-      "image": "/imagesdatabase/activity/hot_spring_bahariya.webp",
+      "image": "/Destination/Hot Spring Bath in siwa.webp",
       "price": "Free"
     },
     {
       "name": "Stargazing",
       "description": "Experience the crystal-clear desert night sky away from city lights.",
-      "image": "/imagesdatabase/activity/stargazing_bahariya.webp",
+      "image": "/Destination/Stargazing.webp",
       "price": "$15 per person"
     }
   ],
@@ -754,7 +754,7 @@
   "name": "St. Catherine’s Monastery",
   "image": "/natural/St. Catherine’s Monastery.jpg",
   "category": "Natural",
-  "location": "sinai",
+  "location": "Sinai",
   "rate": 5,
   "description": "One of the oldest working Christian monasteries, located at the foot of Mount Sinai.",
   "images": [
@@ -781,19 +781,19 @@
     {
       "name": "Monastery Tour",
       "description": "Guided tour inside the monastery to explore its ancient library, icons, and chapels.",
-      "image": "/imagesdatabase/activity/monastery_tour.webp",
+      "image": "/Destination/Monastery Tour.webp",
       "price": "$10 per person"
     },
     {
       "name": "Icon Gallery Visit",
       "description": "View one of the world's most important collections of early Christian icons.",
-      "image": "/imagesdatabase/activity/icon_gallery.webp",
+      "image": "/Destination/Icon Gallery Visit.webp",
       "price": "Included in entry fee"
     },
     {
       "name": "Mount Sinai Sunrise Hike",
       "description": "Climb Mount Sinai early in the morning to witness a breathtaking sunrise.",
-      "image": "/imagesdatabase/activity/mount_sinai_hike.webp",
+      "image": "/Destination/Mount Sinai Sunrise Hike.webp",
       "price": "$20 per person"
     }
   ],
@@ -849,19 +849,19 @@
     {
       "name": "Camel Ride",
       "description": "Experience a traditional camel ride around the pyramids with panoramic desert views.",
-      "image": "/imagesdatabase/activity/camel_ride.webp",
+      "image": "/Destination/Camel Ride.webp",
       "price": "From EGP 200 per ride"
     },
     {
       "name": "Guided Pyramid Tour",
       "description": "Learn about the history and construction of the pyramids with a professional Egyptologist.",
-      "image": "/imagesdatabase/activity/guided_tour.webp",
+      "image": "/Destination/Guided Pyramid Tour.webp",
       "price": "From EGP 500 per person"
     },
     {
       "name": "Sound and Light Show",
       "description": "Watch the pyramids illuminated at night with a narrated light show.",
-      "image": "/imagesdatabase/activity/light_show.webp",
+      "image": "/Destination/Sound and Light Show.webp",
       "price": "From EGP 300 per ticket"
     }
   ],
@@ -885,52 +885,73 @@
 
   ,
   {
-    "id": 14,
-    "price":1200,
-    "name": "Karnak Temple",
-    "category": "Historical",
-            "location":"luxor",
-
-    "image": "/historical/karnak.webp",
-    "rate": 5,
-    "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods.",
-    "images": [
-      "/imagesdatabase/historical/Karnak Temple2.webp",
-      "/imagesdatabase/historical/Karnak Temple1.webp",
-      "/imagesdatabase/historical/Karnak Temple3.webp",
-      "/imagesdatabase/historical/Karnak Temple4.webp"
-    ],
-    "overview": {
-      "description": "Karnak Temple is one of the largest religious buildings ever constructed, covering over 100 hectares. Located in Luxor, it features a vast mix of decayed temples, chapels, pylons, and other buildings. It was primarily dedicated to the Theban triad of Amun, Mut, and Khonsu.",
-      "rating": 4.8,
-      "address": "Luxor City, Luxor Governorate 85958, Egypt",
-      "mapLink": "https://maps.app.goo.gl/iRYPZTi26niwpH389",
-      "mapImage": "/imagesdatabase/historical/Karnak Templemap.webp"
-    },
-    "detail": {
-      "visitingHours": "6:00AM-5:30PM",
-      "entryFees": "EGP 150 for Egyptians, EGP 300 for foreigners",
-      "bestTimeToVisit": "November to March (pleasant weather)",
-      "howToGet": "Fly to Luxor or take a train from Cairo, then use local transport to the temple.",
-      "tips": "Visit early in the morning to avoid heat and crowds. Wear comfortable shoes."
-    },
-    "review": {
-      "review1": {
-        "name": "Mona H.",
-        "date": "May 2025",
-        "content": "A place full of history. The Hypostyle Hall is simply stunning!",
-        "rating": 5,
-        "avatar": "/sara/person.jpeg"
-      },
-      "review2": {
-        "name": "Omar K.",
-        "date": "April 2025",
-        "content": "Huge and impressive. Great guide helped bring the place to life.",
-        "rating": 4,
-        "avatar": "/sara/person2.jpeg"
-      }
-    }
+  "id": 14,
+  "price": 1200,
+  "name": "Karnak Temple",
+  "category": "Historical",
+  "location": "luxor",
+  "image": "/historical/karnak.webp",
+  "rate": 5,
+  "description": "A vast temple complex in Luxor built over 2,000 years, dedicated to the Theban gods.",
+  "images": [
+    "/imagesdatabase/historical/Karnak Temple2.webp",
+    "/imagesdatabase/historical/Karnak Temple1.webp",
+    "/imagesdatabase/historical/Karnak Temple3.webp",
+    "/imagesdatabase/historical/Karnak Temple4.webp"
+  ],
+  "overview": {
+    "description": "Karnak Temple is one of the largest religious buildings ever constructed, covering over 100 hectares. Located in Luxor, it features a vast mix of decayed temples, chapels, pylons, and other buildings. It was primarily dedicated to the Theban triad of Amun, Mut, and Khonsu.",
+    "rating": 4.8,
+    "address": "Luxor City, Luxor Governorate 85958, Egypt",
+    "mapLink": "https://maps.app.goo.gl/iRYPZTi26niwpH389",
+    "mapImage": "/imagesdatabase/historical/Karnak Templemap.webp"
   },
+  "detail": {
+    "visitingHours": "6:00AM-5:30PM",
+    "entryFees": "EGP 150 for Egyptians, EGP 300 for foreigners",
+    "bestTimeToVisit": "November to March (pleasant weather)",
+    "howToGet": "Fly to Luxor or take a train from Cairo, then use local transport to the temple.",
+    "tips": "Visit early in the morning to avoid heat and crowds. Wear comfortable shoes."
+  },
+  "activities": [
+    {
+      "name": "Guided Tour",
+      "image": "/Destination/Guided Religious Tour.webp",
+      "price": "EGP 200",
+      "description": "Explore the temple with a professional guide and learn the history and architecture."
+    },
+    {
+      "name": "Photography Session",
+      "image": "/Destination/Photography Tour.webp",
+      "price": "EGP 100",
+      "description": "Capture the grandeur of Karnak Temple at sunrise or sunset."
+    },
+    {
+      "name": "Cultural Workshop",
+      "image": "/Destination/Cultural Workshop.webp",
+      "price": "EGP 150",
+      "description": "Participate in a workshop on ancient Egyptian hieroglyphs and religious rituals."
+    }
+  ],
+  "review": {
+    "review1": {
+      "name": "Mona H.",
+      "date": "May 2025",
+      "content": "A place full of history. The Hypostyle Hall is simply stunning!",
+      "rating": 5,
+      "avatar": "/sara/person.jpeg"
+    },
+    "review2": {
+      "name": "Omar K.",
+      "date": "April 2025",
+      "content": "Huge and impressive. Great guide helped bring the place to life.",
+      "rating": 4,
+      "avatar": "/sara/person2.jpeg"
+    }
+  }
+}
+
+  ,
 
  {
   "id": 15,
