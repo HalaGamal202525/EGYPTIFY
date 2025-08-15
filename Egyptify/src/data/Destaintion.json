@@ -986,19 +986,19 @@
     {
       "name": "Guided Tomb Tours",
       "description": "Explore the intricate tombs with an Egyptologist who explains the history and meaning of the wall paintings.",
-      "image": "/imagesdatabase/activity/guided_tomb_tour.webp",
+      "image": "/historical/valley.jpg",
       "price": "From EGP 300 per person"
     },
     {
       "name": "Luxor West Bank Day Trip",
       "description": "Combine your visit with other sites such as Hatshepsut Temple and the Colossi of Memnon.",
-      "image": "/imagesdatabase/activity/west_bank_trip.webp",
+      "image": "/historical/Luxor-trip.webp",
       "price": "From EGP 800 per person"
     },
     {
       "name": "Nile Felucca Ride at Sunset",
       "description": "Relax on a traditional felucca boat ride along the Nile after exploring the Valley.",
-      "image": "/imagesdatabase/activity/felucca_ride.webp",
+      "image": "/historical/egyptian-felucca-ride.jpg",
       "price": "From EGP 250 per person"
     }
   ],
@@ -1055,19 +1055,19 @@
     {
       "name": "Mosque of Muhammad Ali Tour",
       "description": "Explore the grand Ottoman-style mosque inside the Citadel, known for its stunning domes and intricate decorations.",
-      "image": "/imagesdatabase/activity/mosque_muhammad_ali.webp",
+      "image": "/historical/Mosque-of-Muhammad-Ali.webp",
       "price": "Included with Citadel entry"
     },
     {
       "name": "Military Museum Visit",
       "description": "Discover Egypt's military history through uniforms, weapons, and artifacts from various eras.",
-      "image": "/imagesdatabase/activity/military_museum.webp",
+      "image": "/historical/Military Museum Visit.jpg",
       "price": "Included with Citadel entry"
     },
     {
       "name": "Panoramic Photography Session",
       "description": "Capture the breathtaking skyline of Cairo from the Citadel’s elevated viewpoints.",
-      "image": "/imagesdatabase/activity/cairo_view.webp",
+      "image": "/historical/citadel2.jpg",
       "price": "Free with entry"
     }
   ],
@@ -1123,19 +1123,19 @@
     {
       "name": "Boat Ride to Agilkia Island",
       "description": "Enjoy a scenic boat trip on the Nile to reach the temple while admiring the surrounding islands.",
-      "image": "/imagesdatabase/activity/philae_boat.webp",
+      "image": "/historical/boat.jpg",
       "price": "EGP 50-100 per person (negotiable)"
     },
     {
       "name": "Sound and Light Show",
       "description": "Experience the magical night-time illumination of the temple with stories of ancient Egypt narrated dramatically.",
-      "image": "/imagesdatabase/activity/philae_lightshow.webp",
+      "image": "/historical/sound&light.jpg",
       "price": "EGP 100 for Egyptians, EGP 250 for foreigners"
     },
     {
       "name": "Photography Tour",
       "description": "Capture the temple’s intricate carvings, columns, and island setting with perfect lighting conditions.",
-      "image": "/imagesdatabase/activity/philae_photography.webp",
+      "image": "/historical/tour.jpg",
       "price": "Included with entry"
     }
   ],
@@ -1192,19 +1192,19 @@
     {
       "name": "Tutankhamun’s Treasures Tour",
       "description": "Explore the golden mask, jewelry, and artifacts from the tomb of King Tutankhamun.",
-      "image": "/imagesdatabase/activity/tutankhamun_treasures.webp",
+      "image": "/historical/valley.jpg",
       "price": "Included with entry"
     },
     {
       "name": "Mummy Room Visit",
       "description": "See the preserved mummies of ancient pharaohs up close for a fascinating look at history.",
-      "image": "/imagesdatabase/activity/mummy_room.webp",
+      "image": "/historical/mummy-room.jpg",
       "price": "EGP 150 for foreigners, EGP 30 for Egyptians"
     },
     {
       "name": "Guided Museum Tour",
       "description": "Join an expert Egyptologist for a deeper understanding of the museum’s highlights.",
-      "image": "/imagesdatabase/activity/guided_tour.webp",
+      "image": "/historical/egyptian-museum.jpg",
       "price": "EGP 200-400 depending on duration"
     }
   ],
@@ -1260,19 +1260,19 @@
     {
       "name": "Sun Festival Experience",
       "description": "Witness the incredible alignment where the sun illuminates the inner sanctuary twice a year (February & October).",
-      "image": "/imagesdatabase/activity/sun_festival.webp",
+      "image": "/historical/sun-festival.jpg",
       "price": "Included with entry"
     },
     {
       "name": "Guided History Tour",
       "description": "Learn the fascinating story of the temples' construction and relocation from an expert guide.",
-      "image": "/imagesdatabase/activity/abu_simbel_tour.webp",
+      "image": "/historical/tour.jpg",
       "price": "EGP 200-400 depending on guide"
     },
     {
       "name": "Photography Session at Sunrise",
       "description": "Capture breathtaking shots of the temples with the golden morning light.",
-      "image": "/imagesdatabase/activity/abu_simbel_sunrise.webp",
+      "image": "/historical/abu-simbel.jpg",
       "price": "Free"
     }
   ],
@@ -1328,19 +1328,19 @@
     {
       "name": "Historical Walking Tour",
       "description": "Explore centuries-old mosques, madrasas, and sabils with a knowledgeable guide who brings history to life.",
-      "image": "/imagesdatabase/activity/almuizz_tour.webp",
+      "image": "/historical/almoez.jpg",
       "price": "EGP 200-350 per person"
     },
     {
       "name": "Souvenir Shopping",
       "description": "Browse traditional markets for handmade crafts, lanterns, spices, and antiques.",
-      "image": "/imagesdatabase/activity/almuizz_shopping.webp",
+      "image": "/historical/elmoez2.jpg",
       "price": "Varies depending on purchases"
     },
     {
       "name": "Night Photography Walk",
       "description": "Capture the magical glow of historic buildings lit up at night along Al-Muizz Street.",
-      "image": "/imagesdatabase/activity/almuizz_night.webp",
+      "image": "/historical/ALMOUZ.jpg",
       "price": "Free"
     }
   ],
@@ -1396,19 +1396,19 @@
     {
       "name": "Historical & Religious Tour",
       "description": "Join a guided tour to learn about the church’s history, Coptic traditions, and its role in the Holy Family’s journey.",
-      "image": "/imagesdatabase/activity/abuserga_tour.webp",
+      "image": "/historical/abu-serga.jpg",
       "price": "EGP 150-250 per person"
     },
     {
       "name": "Old Cairo Heritage Walk",
       "description": "Explore the surrounding area including the Hanging Church, Ben Ezra Synagogue, and Coptic Museum.",
-      "image": "/imagesdatabase/activity/oldcairo_walk.webp",
+      "image": "/historical/old-cairo.jpg",
       "price": "EGP 100-200 per person"
     },
     {
       "name": "Religious Icon Viewing",
       "description": "Admire centuries-old Coptic icons and wooden craftsmanship preserved within the church.",
-      "image": "/imagesdatabase/activity/coptic_icons.webp",
+      "image": "/historical/abu-serga1.jpg",
       "price": "Free"
     }
   ],
@@ -1464,19 +1464,19 @@
     {
       "name": "Guided Historical Tour",
       "description": "Discover the mosque’s 1,000-year history, architecture, and role in Islamic education with a knowledgeable guide.",
-      "image": "/imagesdatabase/activity/alazhar_tour.webp",
+      "image": "/Destination/alazhar-mosque1.jpg",
       "price": "EGP 200-300 per person"
     },
     {
       "name": "Islamic Architecture Photography",
       "description": "Capture the intricate Fatimid, Mamluk, and Ottoman details in the mosque’s minarets and courtyards.",
-      "image": "/imagesdatabase/activity/islamic_architecture.webp",
+      "image": "/Destination/alazhar-mosque2.jpg",
       "price": "Free"
     },
     {
       "name": "Old Cairo Cultural Walk",
       "description": "Combine your visit with nearby attractions like Khan El Khalili, El-Hussein Mosque, and Al-Muizz Street.",
-      "image": "/imagesdatabase/activity/oldcairo_cultural.webp",
+      "image": "/historical/old-cairo.jpg",
       "price": "EGP 150-250 per person"
     }
   ],
@@ -1532,19 +1532,19 @@
     {
       "name": "Guided Historical Tour",
       "description": "Learn about Queen Hatshepsut’s reign, the temple’s architecture, and its religious significance from an expert Egyptologist.",
-      "image": "/imagesdatabase/activity/hatshepsut_tour.webp",
+      "image": "/historical/hatshepsut.jpg",
       "price": "EGP 250-400 per person"
     },
     {
       "name": "Photography from the Cliffs",
       "description": "Hike up nearby cliffs for panoramic views of the temple against the desert backdrop.",
-      "image": "/imagesdatabase/activity/luxor_cliff_view.webp",
+      "image": "/historical/hatshepsut1.webp",
       "price": "Free"
     },
     {
       "name": "West Bank Day Tour",
       "description": "Combine your visit with nearby attractions like the Valley of the Kings, Medinet Habu, and Colossi of Memnon.",
-      "image": "/imagesdatabase/activity/luxor_westbank_tour.webp",
+      "image": "/historical/hatshepsut2.jpg",
       "price": "EGP 500-800 per person"
     }
   ],
@@ -1599,19 +1599,19 @@
     {
       "name": "Guided Pyramid Tour",
       "description": "Explore the history and architecture of the Step Pyramid with an Egyptologist guide.",
-      "image": "/imagesdatabase/activity/saqqara_tour.webp",
+      "image": "/historical/saqqara.jpg",
       "price": "EGP 250-400 per person"
     },
     {
       "name": "Visit the Serapeum of Saqqara",
       "description": "Discover the underground burial site of the sacred Apis bulls, located nearby.",
-      "image": "/imagesdatabase/activity/serapeum.webp",
+      "image": "/historical/saqqara1.jpg",
       "price": "Included in some guided tours"
     },
     {
       "name": "Camel Ride Around the Necropolis",
       "description": "Enjoy a camel ride for a unique view of the Step Pyramid and surrounding desert landscape.",
-      "image": "/imagesdatabase/activity/camel_saqqara.webp",
+      "image": "/historical/saqqara3.jpg",
       "price": "EGP 150-300 per person"
     }
   ],
