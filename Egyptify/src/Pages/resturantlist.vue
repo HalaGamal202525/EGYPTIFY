@@ -39,6 +39,8 @@ const paginatedRestaurants = computed(() => {
 
 const handlePageChange = (page) => {
   currentPage.value = page
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
 }
 
 const applyFilters = (filters) => {

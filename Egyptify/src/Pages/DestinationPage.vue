@@ -165,6 +165,8 @@ const totalPages = computed(() => {
 
 function handlePageChange(newPage) {
   currentPage.value = newPage;
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
 }
 const isOverlayOpen = ref(false)
 const tempFilters = ref({ location: [], category: [], rate: [] })

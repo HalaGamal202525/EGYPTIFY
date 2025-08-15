@@ -171,6 +171,8 @@ const totalPages = computed(() =>
 
 function handlePageChange(newPage) {
   currentPage.value = newPage;
+    window.scrollTo({ top: 0, behavior: 'smooth' }); 
+
 }
 
 // Unique filter values

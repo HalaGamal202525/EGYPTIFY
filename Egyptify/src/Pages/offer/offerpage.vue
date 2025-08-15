@@ -36,14 +36,21 @@
 </div>
 
       <!-- Cards -->
-      <div v-if="viewMode === 'grid'" class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <cardgrid v-for="place in filteredPlaces" :key="place.id" :data="place"    @book="handleBook(place)"/>
-      </div>
+ <div v-if="viewMode === 'grid'" class="grid grid-cols-2 md:grid-cols-3 gap-6">
+  <cardgrid v-for="place in paginatedPlaces" :key="place.id" :data="place" @book="handleBook(place)" />
+</div>
 
-      <div v-else class="grid grid-cols-1 gap-4">
-        <cardlist v-for="place in filteredPlaces" :key="place.id" :data="place"    @book="handleBook(place)"/>
-        
-      </div>
+<div v-else class="grid grid-cols-1 gap-4">
+  <cardlist v-for="place in paginatedPlaces" :key="place.id" :data="place" @book="handleBook(place)" />
+</div>
+
+       <div class="flex justify-center mb-16">
+            <PaginationComponent
+              :currentPage="currentPage"
+              :totalPages="totalPages"
+              @page-changed="handlePageChange"
+            />
+          </div>
     </div>
   </div>
   <foot />
@@ -58,9 +65,20 @@ import cardgrid  from "../../components/offer/cardgrid.vue";
 import cardlist from "../../components/offer/cardlist.vue";
 import PlaceFilters from '../../components/offer/filterplaces.vue';
 import foot from "../../components/footer.vue"
+import PaginationComponent from "../../components/PaginationComponent.vue";
 
 const places = ref([]);
 
+const currentPage = ref(1);
+const itemsPerPage = ref(6); // عدد الكروت اللي تظهر في كل صفحة
+const totalPages = computed(() => {
+  return Math.ceil(filteredPlaces.value.length / itemsPerPage.value);
+});
+const paginatedPlaces = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage.value;
+  const end = start + itemsPerPage.value;
+  return filteredPlaces.value.slice(start, end);
+});
 
 onMounted(async () => {
   try {
@@ -102,6 +120,10 @@ function handleBook(place) {
     price: place.afterdesc,
   });
   router.push('/form'); 
+}
+function handlePageChange(page) {
+  currentPage.value = page;
+  window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
 
 const applyFilters = (newFilters) => {
