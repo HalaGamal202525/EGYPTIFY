@@ -1,11 +1,15 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import Navbar from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import { generateRestaurantDetails } from "../data/fakedata";
 import BaseButton from "../components/BaseButton.vue";
+import { useBookingStore } from "../data/store.js"; 
 
+
+const router = useRouter()
+const bookingStore = useBookingStore()
 const route = useRoute();
 const restaurant = ref(null);
 
@@ -23,8 +27,15 @@ const reservation = ref({
 
 const submitReservation = () => {
   console.log("Reservation Details:", reservation.value);
-  alert("Your table has been reserved!");
+   bookingStore.setReservation(reservation.value)
+  router.push('/form') 
 };
+
+
+
+
+
+
 </script>
 
 <template>

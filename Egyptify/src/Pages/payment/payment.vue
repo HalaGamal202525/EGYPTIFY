@@ -132,12 +132,24 @@
       <p class="font-bold"><strong>Price:</strong> {{ bookingStore.transportation.price }} EGP</p>
     </div>
 
+
+
+          <!-- بيانات حجز المطعم من الفورم -->
+      <div v-if="bookingStore.reservation.name" class="mt-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Reservation Details</h2>
+        <p class="mb-3"><strong>Name:</strong> {{ bookingStore.reservation.name }}</p>
+        <p class="mb-3"><strong>Phone:</strong> {{ bookingStore.reservation.phone }}</p>
+        <p class="mb-3"><strong>Guests:</strong> {{ bookingStore.reservation.guests }}</p>
+        <p class="mb-3"><strong>Date:</strong> {{ bookingStore.reservation.date }}</p>
+        <p class="mb-3"><strong>Time:</strong> {{ bookingStore.reservation.time }}</p>
+        <p class="mb-3"><strong>Comment:</strong> {{ bookingStore.reservation.comment }}</p>
+      </div>
+
+
     <!-- لو مفيش أي بيانات -->
-    <div v-if="!bookingStore.hotel && !bookingStore.transportation" class="text-gray-500">
+    <!-- <div v-if="!bookingStore.hotel && !bookingStore.transportation" class="text-gray-500">
       No booking details available.
-    </div>
-
-
+    </div> -->
 
 
 

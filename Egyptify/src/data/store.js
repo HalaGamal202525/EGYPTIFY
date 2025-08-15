@@ -16,7 +16,20 @@ export const useBookingStore = defineStore('booking', {
     },
 
  // بيانات وسيلة المواصلات
-    transportation: null
+    transportation: null,
+
+
+
+    // بيانات الحجز من الفورم
+    reservation: {
+      name: '',
+      phone: '',
+      guests: '',
+      date: '',
+      time: '',
+      comment: ''
+    }
+
 
 
   }),
@@ -61,12 +74,29 @@ export const useBookingStore = defineStore('booking', {
       };
 
       this.transportation = null;
+
+
+      
+      this.reservation = {
+        name: '',
+        phone: '',
+        guests: '',
+        date: '',
+        time: '',
+        comment: ''
+      };
       },
-     
 
        setTransportation(transportData) {
         this.transportation = transportData;
-      }
+      },
+
+    
+       // تخزين بيانات الفورم
+    setReservation(data) {
+      this.reservation = { ...data };
+    },
+
 
 
   }
