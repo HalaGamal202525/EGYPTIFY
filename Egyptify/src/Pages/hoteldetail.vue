@@ -91,7 +91,7 @@
           <a href="/roomtype" class="text-blue-600 underline">Show Details</a>
         </div>
       </div>
-<div class="mt-8 p-6 rounded-lg bg-gray-50 border border-gray-200 shadow-sm">
+<div ref="dateSection"  class="mt-8 p-6 rounded-lg bg-gray-50 border border-gray-200 shadow-sm">
   <div class="flex flex-col md:flex-row gap-4">
     <!-- Check-in -->
     <div class="flex-1 flex flex-col">
