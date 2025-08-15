@@ -218,6 +218,30 @@
                 </p>
               </div>
             </div>
+            <div v-if="activeTab === 3">
+
+    <div
+      v-for="(act, index) in activitiesData"
+      :key="index"
+      class="bg-white shadow-md p-4 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center"
+    >
+      <div>
+        <img :src="act.image"></img>
+        <h3 class="text-lg font-bold text-gray-800">{{ act.title }}</h3>
+        <p class="text-gray-600 mt-1">{{ act.description }}</p>
+        <p class="text-sm text-gray-500 mt-1"> {{ act.duration }}</p>
+        <p class="text-sm text-gray-500">{{ act.price }}</p>
+      </div>
+
+      <BaseButton
+        @click="addToPackage(act)"
+        class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow mt-4 md:mt-0"
+      >
+        Add to Package
+      </BaseButton>
+  </div>
+</div>
+
           </div>
         </section>
       </div>
@@ -257,6 +281,15 @@ function bookNow() {
 
   router.push('/form');
 }
+function addToPackage(activity) {
+  bookingStore.setCardData({
+    image: place.value.image,
+    title: `${place.value.name} - ${activity.title}`,
+    rate: place.value.rate,
+    price: place.value.price,
+  });
+  router.push('/form');
+}
 
 
 const route = useRoute();
@@ -269,8 +302,9 @@ const place = computed(() => data.find((p) => p.id === placeId) || {});
 const overviewData = computed(() => place.value?.overview || {});
 const detailsData = computed(() => place.value?.detail || {});
 const reviewsData = computed(() => place.value?.review || []);
+const activitiesData = computed(() => place.value?.activity || []);
 
-const tabs = ["Overview", "Details", "Reviews"];
+const tabs = ["Overview", "Details", "Reviews", "Activities"];
 const activeTab = ref(0);
 
 
