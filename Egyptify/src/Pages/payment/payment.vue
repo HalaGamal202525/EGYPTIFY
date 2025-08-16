@@ -532,7 +532,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ bookingStore.totalPrice }} EGP</span>
+              <span>400 EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
