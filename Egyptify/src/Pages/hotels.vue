@@ -113,7 +113,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted ,watch} from "vue";
 import navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
 import SideFilter from "./hotelsfilters.vue";
@@ -133,8 +133,13 @@ function selectHotel(selectedHotel) {
 }
 
 // Pagination & filters
-const currentPage = ref(1);
+const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
+
+// كل ما الصفحة تتغير نخزنها
+watch(currentPage, (newPage) => {
+  localStorage.setItem("currentPage", newPage);
+});
 const filters = ref({ location: [], budget: [], bestTime: [] });
 const tempFilters = ref({ ...filters.value });
 const isOverlayOpen = ref(false);

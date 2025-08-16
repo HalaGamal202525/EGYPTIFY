@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed,watch } from 'vue'
 import { generateEgyptGovernorates } from '../data/fakedata'
 import Navbar from "../components/navbar.vue"
 import Footer from '../components/footer.vue'
@@ -8,7 +8,6 @@ import PaginationComponent from "../components/PaginationComponent.vue"
 import BaseButton from '../components/BaseButton.vue'
 import { useRouter } from 'vue-router'
 
-const itemsPerPage = 4
 const allRestaurants = ref(generateEgyptGovernorates(50))
 
 const appliedFilters = ref({
@@ -17,8 +16,13 @@ const appliedFilters = ref({
   cuisine: []
 })
 
-const currentPage = ref(1)
-const isOverlayOpen = ref(false)
+const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
+const itemsPerPage = 6;
+
+// كل ما الصفحة تتغير نخزنها
+watch(currentPage, (newPage) => {
+  localStorage.setItem("currentPage", newPage);
+});const isOverlayOpen = ref(false)
 const tempFilters = ref({ ...appliedFilters.value })
 const destinationdata = ref(allRestaurants.value)
 
@@ -102,41 +106,65 @@ const router = useRouter()
 
     <!-- قائمة المطاعم -->
     <div class="flex-1 flex flex-col gap-4">
-      <div
-        v-for="restaurant in paginatedRestaurants"
-        :key="restaurant.id"
-        class="flex items-center gap-4 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition"
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
+  <div
+    v-for="restaurant in paginatedRestaurants"
+    :key="restaurant.id"
+    class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1"
+  >
+    <!-- صورة المطعم -->
+    <div class="relative">
+      <img
+        :src="restaurant.image"
+        :alt="restaurant.name"
+        class="w-full h-48 object-cover"
+      />
+      <span
+        class="absolute top-3 left-3 bg-white text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow"
       >
-        <img
-          :src="restaurant.image"
-          :alt="restaurant.name"
-          class="w-56 h-44 object-cover rounded-lg"
-        />
+        {{ restaurant.cuisine }} 
+      </span>
+    </div>
 
-        <div class="flex flex-col justify-between flex-1">
-          <div>
-            <h2 class="text-lg font-bold text-gray-800">{{ restaurant.name }}</h2>
-            <p class="text-sm text-gray-500">
-              <i class="fa-solid fa-location-dot"></i> {{ restaurant.governorate }}
-            </p>
-            <span class="text-green-600">{{ restaurant.priceRange }}</span>
-          </div>
+    <!-- تفاصيل -->
+    <div class="p-4 space-y-3">
+      <h2 class="text-lg font-bold text-gray-900 truncate">
+        {{ restaurant.name }}
+      </h2>
+      <p class="text-sm text-gray-500 flex items-center justify-center sm:justify-start gap-1">
+        <i class="fa-solid fa-location-dot text-red-500"></i>
+        {{ restaurant.governorate }}
+      </p>
 
-          <div class="mt-1 text-yellow-500 font-medium">
-            <i class="fa-solid fa-star"></i> {{ restaurant.rating }}
-            <span class="text-gray-500 text-sm">({{ restaurant.reviewsCount }} reviews)</span>
-          </div>
-
-          <div class="flex justify-between items-center mt-4">
-            <div class="text-sm text-gray-500">
-              <i class="fa-solid fa-utensils"></i> {{ restaurant.cuisine }}
-            </div>
-            <BaseButton @click="() => router.push(`/restaurants/${restaurant.slug}`)">
-              Show Details
-            </BaseButton>
-          </div>
-        </div>
+      <!-- الريفيو والنجوم -->
+      <div class="flex items-center justify-center sm:justify-start gap-2">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <span class="font-semibold text-gray-700">{{ restaurant.rating }}</span>
+        <span class="text-sm text-gray-500">
+          ({{ restaurant.reviewsCount }} reviews)
+        </span>
       </div>
+
+      <!-- Cuisine -->
+      <div class="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-600">
+        <i class="fa-solid fa-utensils text-green-900"></i>
+        <span class="font-bold text-black">Price:</span> {{ restaurant.price }} EGP
+      </div>
+
+      <!-- زر التفاصيل -->
+      <div class="pt-4 flex justify-center">
+        <BaseButton
+          class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-4 py-2"
+          @click="() => router.push(`/restaurants/${restaurant.slug}`)"
+        >
+          🍽 Show Details
+        </BaseButton>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="flex justify-center items-center flex-wrap gap-2 my-6">
   <PaginationComponent
