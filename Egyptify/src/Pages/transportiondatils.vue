@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#fefaf2] min-h-screen flex flex-col">
+    <div class="bg-[#FFFDF9] min-h-screen flex flex-col">
 
   <Navbar />
   
@@ -158,7 +158,7 @@
   class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 pb-8"
 >
   <CardComponent
-    v-for="item in filteredTransportation"
+    v-for="item in paginatedTransportation"
     :key="item.id"
     :title="item.provider"
     :type="item.type"
@@ -178,6 +178,13 @@
     class="!w-full min-w-[380px] min-h-[260px] flex flex-col bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-transform hover:scale-[1.03]"
   />
 </section>
+<div class="flex justify-center mb-16">
+            <PaginationComponent
+              :currentPage="currentPage"
+              :totalPages="totalPages"
+              @page-changed="handlePageChange"
+            />
+          </div>
 
 
 
@@ -206,8 +213,7 @@
       </p>
     </div>
 
-
-    
+     
 
     <!-- Special Offers Section -->
 <section class="px-6 pb-20 w-full">
@@ -258,6 +264,26 @@ import { ref, computed } from "vue";
 import DropdownMenu from "../components/DropdownMenu.vue";
 import CardComponent from "../components/card.vue";
 import BookingCalendar from "../components/bookingCalendar.vue";
+import PaginationComponent from "../components/PaginationComponent.vue";
+
+const currentPage = ref(1); // الصفحة الحالية
+const itemsPerPage = ref(6); // عدد العناصر في كل صفحة
+ // إجمالي الصفحات
+const totalPages = computed(() => {
+  return Math.ceil(filteredTransportation.value.length / itemsPerPage.value);
+});
+
+// بيانات الصفحة الحالية
+const paginatedTransportation= computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage.value;
+  const end = start + itemsPerPage.value;
+  return filteredTransportation.value.slice(start, end);
+});
+const handlePageChange = (page) => {
+  currentPage.value = page;
+};
+
+
 
 
 const bookingHeroImg = "/booking-hero.webp"
@@ -354,6 +380,9 @@ const handleBookNow = (item) => {
   // الانتقال لصفحة الفورم
   router.push("/form");
 };
+
+
+
 
 
 // const emit = defineEmits(["book-now"]);
