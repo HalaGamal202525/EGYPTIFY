@@ -11,19 +11,12 @@ export const useBookingStore = defineStore("booking", {
       title: null,
       rate: null,
       price: null,
-
       activities: [],
     },
 
-
-
-
-      // الإجمالي وقائمة الحجوزات
-       totalPrice: 0,
-       bookings: [], // عشان لو حابة تحتفظ بكل الحجوزات كمان
-
-
-
+    // الإجمالي وقائمة الحجوزات
+    totalPrice: 0,
+    bookings: [],
 
     // بيانات وسيلة المواصلات
     transportation: null,
@@ -38,6 +31,7 @@ export const useBookingStore = defineStore("booking", {
       comment: "",
     },
   }),
+
   actions: {
     setHotel(hotel) {
       this.hotel = hotel;
@@ -46,18 +40,22 @@ export const useBookingStore = defineStore("booking", {
         this.dates.checkOut = hotel.checkout;
       }
     },
+
     setRoomDetails(roomType, guests, price, image) {
       this.roomType = roomType;
       this.guests = guests;
       this.price = price;
       this.image = image;
     },
+
     setDates(checkIn, checkOut) {
       this.dates = { checkIn, checkOut };
     },
+
     setUserData(data) {
       this.userData = data;
     },
+
     setCardData({ image, title, rate, price }) {
       this.card.image = image;
       this.card.title = title;
@@ -65,6 +63,7 @@ export const useBookingStore = defineStore("booking", {
       this.card.price = price;
       this.card.activities = [];
     },
+
     addActivityToCard(activity) {
       this.card.activities.push({
         name: activity.name,
@@ -83,11 +82,9 @@ export const useBookingStore = defineStore("booking", {
         title: null,
         rate: null,
         price: null,
-          activities: [],
+        activities: [],
       };
-
       this.transportation = null;
-
       this.reservation = {
         name: "",
         phone: "",
@@ -96,32 +93,18 @@ export const useBookingStore = defineStore("booking", {
         time: "",
         comment: "",
       };
-
-
-
-
-
-       this.totalPrice = 0;
+      this.totalPrice = 0;
       this.bookings = [];
-
-
-      },
     },
 
     setTransportation(transportData) {
       this.transportation = transportData;
     },
 
-    // تخزين بيانات الفورم
     setReservation(data) {
       this.reservation = { ...data };
     },
 
-
-
-
-
-     // إضافة حجز جديد للإجمالي
     addBooking(booking) {
       this.bookings.push(booking);
       this.totalPrice += booking.price;
@@ -129,8 +112,6 @@ export const useBookingStore = defineStore("booking", {
 
     setTotal(total) {
       this.totalPrice = total;
-    }
-  
-
-
-  })
+    }
+  }
+})

@@ -1,0 +1,101 @@
+[
+  { 
+    "budget": "economy",
+    "duration": 4,
+    "interests": ["Cultural & Historical Places", "Tour"],
+    "transportation": "Bus",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Cairo & Pyramids Tour",
+        "accommodation": "Stay in Cairo",
+        "image": "/historical/pyramids (4).jpg"
+      },
+      {
+        "day": 2,
+        "title": "Egyptian Museum",
+        "accommodation": "Stay in Cairo",
+        "image": "/historical/The-Grand-Egyptian.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Travel to Luxor & Karnak Temple",
+        "accommodation": "Stay in Luxor",
+        "image": "/historical/karnak.webp"
+      },
+      {
+        "day": 4,
+        "title": "Valley of the Kings & Departure",
+        "accommodation": "Depart from Luxor",
+        "image": "/historical/vaiiy.webp"
+      }
+    ]
+  },
+  {
+    "budget": "mid-range",
+    "duration": 5,
+    "interests": ["Nature & Outdoor"],
+    "transportation": "Car",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival & City Tour",
+        "accommodation": "Siwa Oasis",
+        "image": "/natural/siwa.jpg"
+      },
+      {
+        "day": 2,
+        "title": "Adventure Day",
+        "accommodation": "White Desert",
+        "image": "/natural/white.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Hiking Trip",
+        "accommodation": "Ras Mohammed National Park",
+        "image": "/natural/Rasmohamed.jpg"
+      },
+      {
+        "day": 4,
+        "title": "Relaxing by the Lake",
+        "accommodation": "Dahab Blue Lagoon",
+        "image": "/natural/logoon.jpg"
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "accommodation": "Depart from Airport",
+        "image": "/natural/plane.jpg"
+      }
+    ]
+  },
+  
+  {
+    "budget": "luxury",
+    "duration": 3,
+    "interests": ["Entertainment"],
+    "transportation": "Car",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Family-friendly zones, and live shows",
+        "accommodation": "Dream Park",
+        "image": "/entertainment/dream.jpg"
+      },
+      {
+        "day": 2,
+        "title": "Educational Entertainment",
+        "accommodation": "KidZania",
+        "image": "/entertainment/kidzaina.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Indoor fun Trip",
+        "accommodation": "Magic Planet",
+        "image": "/entertainment/magic.jpg"
+      }
+      
+    ]
+  }
+  
+]
