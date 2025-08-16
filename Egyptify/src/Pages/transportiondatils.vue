@@ -152,47 +152,36 @@
       </div>
     </div> -->
 
-    <!-- Transportation Cards -->
-    <section
-      class="grid grid-cols-1 gap-4 px-4 pb-10 ml-20"
-      style="grid-template-columns: repeat(3, minmax(350px, 1fr))"
-    >
-      <CardComponent
-        v-for="item in filteredTransportation"
-        :key="item.id"
-        :title="item.provider"
-        :type="item.type"
-        :kind="item.kind"
-        :amenities="item.amenities"
-        :price="item.price"
-        :features="item.features"
-        :icon="item.icon"
-        :showButton="true"
-        :buttonText="'Book Now'"
-        :showImage="false"
-        :departure="
-          item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`
-        "
-        :arrival="
-          item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`
-        "
-        :duration="
-          item.type === 'Car'
-            ? 'Duration: Based on distance'
-            : `${item.duration}`
-        "
-        :location="
-          item.type === 'Car'
-            ? 'From: Flexible → To: As requested'
+  
 
-            : `From: ${item.from} → To: ${item.to}` "
-        
-            :onClick="() => handleBookNow(item)"
+<section
+  class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 pb-8"
+>
+  <CardComponent
+    v-for="item in filteredTransportation"
+    :key="item.id"
+    :title="item.provider"
+    :type="item.type"
+    :kind="item.kind"
+    :amenities="item.amenities"
+    :price="item.price"
+    :features="item.features"
+    :icon="item.icon"
+    :showButton="true"
+    :buttonText="'Book Now'"
+    :showImage="false"
+    :departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
+    :arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
+    :duration="item.type === 'Car' ? 'Duration: Based on distance' : `${item.duration}`"
+    :location="item.type === 'Car' ? 'From: Flexible → To: As requested' : `From: ${item.from} → To: ${item.to}`"
+    :onClick="() => handleBookNow(item)"
+    class="!w-full min-w-[380px] min-h-[260px] flex flex-col bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-transform hover:scale-[1.03]"
+  />
+</section>
 
-          class="!w-full space-y-4"
 
-      />
-    </section>
+
+
     </div>
 
     <!-- Booking Calendar -->

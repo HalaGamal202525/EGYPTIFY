@@ -7,7 +7,7 @@ src/pages/Transportation.vue
   <!-- Hero Section with Search -->
 <section
   class="relative bg-cover bg-center text-white py-24 px-4"
-  style="background-image: url('/bookingRestaurants/ExplorePageHero.jpg')"
+  style="background-image: url('/Destination/transportation1.jpg')"
 >
   <!-- Dark overlay -->
   <div class="absolute inset-0 bg-black opacity-60"></div>
