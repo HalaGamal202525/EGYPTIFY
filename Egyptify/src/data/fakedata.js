@@ -71,8 +71,8 @@ export function generateEgyptGovernorates(count = 10) {
       reviewsCount: faker.number.int({ min: 50, max: 5000 }),
       rank: `#${faker.number.int({ min: 1, max: 1500 })} of 1500 Restaurants`,
       cuisine,
-      priceRange: faker.helpers.arrayElement(["$", "$$", "$$$"]),
-      image: img,
+    price: faker.number.int({ min: 100, max: 500 }),
+          image: img,
       slug,
     };
   });

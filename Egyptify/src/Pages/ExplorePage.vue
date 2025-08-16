@@ -42,7 +42,9 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
+        <router-link to="/destination">
         <BaseButton>Book Now</BaseButton>
+        </router-link>
       </div>
     </div>
   </section>
@@ -74,7 +76,9 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
+        <router-link to="/resturant">
         <BaseButton>Book Now</BaseButton>
+        </router-link>
       </div>
     </div>
   </section>
@@ -106,7 +110,9 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
-        <BaseButton>Add to Trip</BaseButton>
+        <router-link to="/tripplanner">
+        <BaseButton>Add To Trip</BaseButton>
+        </router-link>
       </div>
     </div>
   </section>
@@ -142,7 +148,9 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
+        <router-link to="/activity">
         <BaseButton>Book Now</BaseButton>
+        </router-link>
       </div>
     </div>
   </section>
@@ -174,7 +182,9 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
+        <router-link to="/events">
         <BaseButton>Book Tickets</BaseButton>
+        </router-link>
       </div>
     </div>
   </section>
@@ -196,11 +206,16 @@ import Footer from "../components/footer.vue";
 
       <!-- Right: Button -->
       <div class="flex justify-center md:justify-end">
+        <router-link to="/tripplanner">
+ 
+
         <button
-          class="bg-yellow-400 text-white text-xl font-semibold px-8 py-4 rounded-full hover:bg-yellow-500 transition"
+          class="bg-green-700 text-white text-xl font-semibold px-8 py-4 rounded-full hover:bg-green-800
+           transition"
         >
           Plan your own trip now!
         </button>
+        </router-link>
       </div>
     </div>
   </section>

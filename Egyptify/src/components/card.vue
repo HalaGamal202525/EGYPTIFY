@@ -1,5 +1,8 @@
 <template>
-  <div  @click="$emit('click')"  class="w-full max-w-[300px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative">
+  <div
+    @click="$emit('click')"
+    class="w-full max-w-[300px] bg-white rounded-2xl shadow-md overflow-hidden flex flex-col relative hover:shadow-xl transition transform hover:-translate-y-1"
+  >
     <!-- الصورة -->
     <div class="w-full relative">
       <img
@@ -38,9 +41,7 @@
     <div class="p-4 flex flex-col justify-between flex-1">
       <div>
         <div class="flex items-center gap-2 flex-wrap">
-
-          
-        <h2 class="text-lg font-bold text-gray-800 ">{{ title }}</h2>
+          <h2 class="text-lg font-bold text-gray-800">{{ title }}</h2>
 
           <div
             v-if="type"
@@ -50,11 +51,12 @@
           </div>
         </div>
 
-
-          <div v-if="kind" class="grid grid-col gap-1 text-sm text-gray-600 mt-3 font-bold">{{ kind }}</div>
-
-
-
+        <div
+          v-if="kind"
+          class="grid grid-col gap-1 text-sm text-gray-600 mt-3 font-bold"
+        >
+          {{ kind }}
+        </div>
 
         <p class="text-sm text-gray-500 mb-2 py-2">{{ description }}</p>
         <div v-if="rating" class="text-yellow-500 text-sm mb-1 py-4">
@@ -66,33 +68,51 @@
           ></span>
         </div>
 
-
-
         <div class="grid grid-col gap-3 text-sm text-gray-600 mt-3">
-          <div v-if="departure"> Departure: {{ departure }}</div>
-          <div v-if="arrival"> Arrival: {{ arrival }}</div>
+          <div v-if="departure">Departure: {{ departure }}</div>
+          <div v-if="arrival">Arrival: {{ arrival }}</div>
         </div>
 
-        
-        <div class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mt-2" v-if="location || date || duration||people">
-          <span v-if="location"><i class="fa-solid fa-location-dot" style="color: #ffc340"></i> {{ location }}</span>
-          <span v-if="date"><i class="fa-solid fa-calendar" style="color: #ffc340;"></i> {{ date }}</span>
-          <span v-if="duration"><i class="fa-solid fa-clock" style="color: #ffc340;"></i> {{ duration }}</span>
-          <span v-if="people"><i class="fa-solid fa-user-group" style="color: #ffc340;"></i> {{ people }}</span>
+        <div
+          class="flex flex-wrap items-center text-sm text-gray-600 gap-2 mt-2"
+          v-if="location || date || duration || people"
+        >
+          <span v-if="location"
+            ><i class="fa-solid fa-location-dot" style="color: #ffc340"></i>
+            {{ location }}</span
+          >
+          <span v-if="date"
+            ><i class="fa-solid fa-calendar" style="color: #ffc340"></i>
+            {{ date }}</span
+          >
+          <span v-if="duration"
+            ><i class="fa-solid fa-clock" style="color: #ffc340"></i>
+            {{ duration }}</span
+          >
+          <span v-if="people"
+            ><i class="fa-solid fa-user-group" style="color: #ffc340"></i>
+            {{ people }}</span
+          >
         </div>
       </div>
 
-       <div v-if="amenities" class="grid grid-col gap-3 text-sm text-gray-600 mt-3"> Features: {{ amenities }}</div>
-
+      <div
+        v-if="amenities"
+        class="grid grid-col gap-3 text-sm text-gray-600 mt-3"
+      >
+        Features: {{ amenities }}
+      </div>
 
       <div class="flex items-center justify-between mt-4">
         <span class="text-yellow-600 font-bold text-md" v-if="price">
           {{ price }} EGP</span
         >
-
-        <slot name="action" v-if="hasActionSlot" />
-        <BaseButton v-else-if="showButton"  
-  @click="handleClick">{{ buttonText }}</BaseButton>
+        <div class="pt-4 flex justify-center items-center">
+          <slot name="action" v-if="hasActionSlot" />
+          <BaseButton v-else-if="showButton" @click="handleClick">{{
+            buttonText
+          }}</BaseButton>
+        </div>
       </div>
     </div>
   </div>
@@ -141,7 +161,7 @@ const hasActionSlot = !!slots.action;
 
 const isFavorite = ref(props.defaultFavorite || false);
 const showOverlay = ref(false);
-const overlayMessage = ref('');
+const overlayMessage = ref("");
 
 function handleClick() {
   if (props.onClick) {
@@ -158,7 +178,7 @@ function syncFavoriteState() {
 // Toggle favorite and show overlay
 function toggleFavorite(event) {
   event.stopPropagation(); // Prevents card click event from firing
-  
+
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   const exists = favorites.find((p) => p.id === props.id);
   let updatedFavorites;
@@ -204,5 +224,4 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("storage", syncFavoriteState);
 });
-
 </script>

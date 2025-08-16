@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
 
-  <div class="flex justify-center items-center gap-8 mt-29 ">
+  <div class="flex justify-center items-center gap-8 mt-29">
     <div
       v-for="(step, index) in steps"
       :key="index"
@@ -36,7 +36,6 @@
     <div v-if="currentStep === 1">
       <div class="h-1 w-full bg-[#ffc340]"></div>
       <div class="flex flex-wrap gap-6 justify-center my-4">
-        
         <!-- <div
           class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
         >
@@ -79,7 +78,6 @@
           </div>
         </div> -->
 
-        <!-- كارت الفندق -->
         <div
           class="rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
         >
@@ -115,82 +113,110 @@
             </div>
           </div>
 
-
-
-
-
           <!-- بيانات وسيلة المواصلات -->
-    <div v-if="bookingStore.transportation" class="mb-10">
-      <h2 class="text-xl font-bold text-gray-800 mb-4">Transportation Booking</h2>
-      <p class="mb-3"><strong>Type:</strong> {{ bookingStore.transportation.type }}</p>
-      <p class="mb-3"><strong>Provider:</strong> {{ bookingStore.transportation.provider }}</p>
-      <p class="mb-3"><strong>From:</strong> {{ bookingStore.transportation.from }}</p>
-      <p class="mb-3"><strong>To:</strong> {{ bookingStore.transportation.to }}</p>
-      <p class="mb-3"><strong>Departure:</strong> {{ bookingStore.transportation.departure }}</p>
-      <p class="mb-3"><strong>Arrival:</strong> {{ bookingStore.transportation.arrival }}</p>
-      <p class="mb-3"><strong>Date:</strong> {{ formData.date }}</p>
-      <p class="font-bold"><strong>Price:</strong> {{ bookingStore.transportation.price }} EGP</p>
-    </div>
-
-
+          <div v-if="bookingStore.transportation" class="mb-10">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">
+              Transportation Booking
+            </h2>
+            <p class="mb-3">
+              <strong>Type:</strong> {{ bookingStore.transportation.type }}
+            </p>
+            <p class="mb-3">
+              <strong>Provider:</strong>
+              {{ bookingStore.transportation.provider }}
+            </p>
+            <p class="mb-3">
+              <strong>From:</strong> {{ bookingStore.transportation.from }}
+            </p>
+            <p class="mb-3">
+              <strong>To:</strong> {{ bookingStore.transportation.to }}
+            </p>
+            <p class="mb-3">
+              <strong>Departure:</strong>
+              {{ bookingStore.transportation.departure }}
+            </p>
+            <p class="mb-3">
+              <strong>Arrival:</strong>
+              {{ bookingStore.transportation.arrival }}
+            </p>
+            <p class="mb-3"><strong>Date:</strong> {{ formData.date }}</p>
+            <p class="font-bold">
+              <strong>Price:</strong>
+              {{ bookingStore.transportation.price }} EGP
+            </p>
+          </div>
 
           <!-- بيانات حجز المطعم من الفورم -->
-      <div v-if="bookingStore.reservation.name" class="mt-6">
-        <h2 class="text-xl font-bold text-gray-800 mb-4">Reservation Details</h2>
-        <p class="mb-3"><strong>Name:</strong> {{ bookingStore.reservation.name }}</p>
-        <p class="mb-3"><strong>Phone:</strong> {{ bookingStore.reservation.phone }}</p>
-        <p class="mb-3"><strong>Guests:</strong> {{ bookingStore.reservation.guests }}</p>
-        <p class="mb-3"><strong>Date:</strong> {{ bookingStore.reservation.date }}</p>
-        <p class="mb-3"><strong>Time:</strong> {{ bookingStore.reservation.time }}</p>
-        <p class="mb-3"><strong>Comment:</strong> {{ bookingStore.reservation.comment }}</p>
-      </div>
-
-
-    <!-- لو مفيش أي بيانات -->
-    <!-- <div v-if="!bookingStore.hotel && !bookingStore.transportation" class="text-gray-500">
-      No booking details available.
-    </div> -->
-
-
+          <div v-if="bookingStore.reservation.name" class="mt-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">
+              Reservation Details
+            </h2>
+            <p class="mb-3">
+              <strong>Name:</strong> {{ bookingStore.reservation.name }}
+            </p>
+            <p class="mb-3">
+              <strong>Phone:</strong> {{ bookingStore.reservation.phone }}
+            </p>
+            <p class="mb-3">
+              <strong>Guests:</strong> {{ bookingStore.reservation.guests }}
+            </p>
+            <p class="mb-3">
+              <strong>Date:</strong> {{ bookingStore.reservation.date }}
+            </p>
+            <p class="mb-3">
+              <strong>Time:</strong> {{ bookingStore.reservation.time }}
+            </p>
+            <p class="mb-3">
+              <strong>Comment:</strong> {{ bookingStore.reservation.comment }}
+            </p>
+          </div>
 
           <div>
-            <div v-if="cardData && cardData.title">
-              <div
-                class="max-w-sm mx-auto rounded-lg shadow-lg overflow-hidden p-4"
-              >
-                <img
-                  v-if="cardData.image"
-                  :src="cardData.image"
-                  alt="Booking Image"
-                  class="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h2 class="text-xl font-semibold text-gray-800 mb-2">
-                  {{ cardData.title }}
-                </h2>
-                <div class="flex items-center mb-3">
-                  <span v-for="n in 5" :key="n" class="text-yellow-400 mr-1">
-                    <i
-                      class="fa-solid"
-                      :class="
-                        n <= Math.round(cardData.rate)
-                          ? 'fa-star'
-                          : 'fa-star-half-stroke'
-                      "
-                    ></i>
-                  </span>
-                  <span class="text-gray-600 ml-2"
-                    >({{ cardData.rate || 0 }})</span
-                  >
-                </div>
-                <p class="text-lg font-bold text-green-600">
-                  {{
-                    cardData.price
-                      ? `$${cardData.price}`
-                      : "Price not available"
-                  }}
-                </p>
-              </div>
-            </div>
+         <div v-if="cardData && cardData.title">
+  <div
+    class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden  mb-6"
+  >
+    <!-- كارت المكان -->
+    <img
+      :src="cardData.image"
+      alt="place image"
+      class="w-full h-48 object-cover"
+    />
+    <div class="p-4">
+      <h2 class="text-2xl font-bold">{{ cardData.title }}</h2>
+      <p class="text-gray-600">{{ cardData.description }}</p>
+      <p class="mt-2 text-lg font-semibold text-blue-600">
+        {{ cardData.price }}
+      </p>
+
+    <!-- كروت الـ Activities جوا المكان -->
+<h3 class="text-lg font-semibold mb-2">Activities:</h3>
+
+<div v-if="cardData.activities && cardData.activities.length">
+  <div
+    v-for="(activity, index) in cardData.activities"
+    :key="index"
+    class="activity-card  rounded-md p-3 mb-3"
+  >
+    <img
+      :src="activity.image"
+      alt="Activity Image"
+      class="w-full h-40 object-cover rounded-md"
+    />
+    <h3 class="text-lg font-semibold mt-2">{{ activity.name }}</h3>
+        <p class="text-gray-600">{{ activity.description }}</p>
+
+    <p class="text-gray-600">{{ activity.price }}</p>
+  </div>
+</div>
+
+<p v-else class="text-gray-500">No activities added</p>
+
+
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
 
@@ -230,13 +256,10 @@
               <strong>Email:</strong> {{ formData.email }}
             </li>
 
-
             <div class="h-px w-full bg-gray-100"></div>
             <li class="flex justify-between text-gray-600">
               <strong>Date:</strong> {{ formData.date }}
             </li>
-
-
 
             <div class="h-px w-full bg-gray-100"></div>
             <li class="flex justify-between text-gray-600">
@@ -250,7 +273,6 @@
       <div class="h-1 w-full bg-[#ffc340] my-6"></div>
 
       <!-- كروت المسافر والرحلة -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"></div>
 
       <!-- checkbox -->
       <div class="flex items-center justify-start py-6 px-6 mt-4">
@@ -315,7 +337,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
@@ -477,7 +499,7 @@
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="nextStep" class="w-full mt-4"
@@ -509,7 +531,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
@@ -664,7 +686,7 @@ const goBack = () => {
 };
 
 const goToHome = () => {
-    router.push('/');
+  router.push("/");
 };
 
 const continueVerification = () => {
@@ -742,13 +764,19 @@ const trip = {
   tourprice: 400,
   seatno: "14A",
 };
-const totalPrice =
-  trip.transport.price +
-  trip.hotel.price +
-  trip.mealPrice +
-  trip.servicePrice +
-  trip.placeprice +
-  trip.tourprice;
+// const totalPrice =
+//   trip.transport.price +
+//   trip.hotel.price +
+//   trip.mealPrice +
+//   trip.servicePrice +
+//   trip.placeprice +
+//   trip.tourprice;
+
+
+const totalPrice = computed(() => {
+  return bookingStore.bookings.reduce((sum, booking) => sum + booking.price, 0);
+});
+
 </script>
 
 <style scoped>
@@ -756,12 +784,3 @@ input[type="checkbox"] {
   border: 1px solid black !important;
 }
 </style>
-
-
-
-
-
-
-
-
-

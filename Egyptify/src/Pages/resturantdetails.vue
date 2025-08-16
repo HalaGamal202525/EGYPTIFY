@@ -28,6 +28,18 @@ const reservation = ref({
 const submitReservation = () => {
   console.log("Reservation Details:", reservation.value);
    bookingStore.setReservation(reservation.value)
+
+
+
+   // إضافة الحجز لقائمة الحجوزات
+  bookingStore.addBooking({
+    type: 'Restaurant',
+    name: restaurant.value.name,
+    price: restaurant.value.priceRange ? parseInt(restaurant.value.priceRange.replace(/\D/g, '')) : 0
+  });
+
+
+
   router.push('/form') 
 };
 
@@ -92,9 +104,9 @@ const submitReservation = () => {
         <!-- Price -->
         <div>
           <span
-            class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm"
+            class="px-3 py-1 bg-green-100 text-green-700 rounded-full mt-2 text-sm"
           >
-            {{ restaurant.priceRange }}
+         Price:   {{ restaurant.price }}
           </span>
         </div>
 
