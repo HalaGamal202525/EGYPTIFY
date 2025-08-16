@@ -721,7 +721,7 @@ const gotofood = () => {
   router.push("/food");
 };
 const gotoactivity = () => {
-  router.push("/activity");
+  router.push("/destination");
 };
 const gotooffer = () => {
   router.push("/offerpage");
