@@ -162,8 +162,8 @@ const filteredEvents = computed(() => {
           eventDate.getFullYear() === currentYear.value
         : eventDate.getFullYear() === currentYear.value;
 
-    const selectedCity = filters.value.city?.toLowerCase() || "";
-    const selectedType = filters.value.type?.toLowerCase() || "";
+    const selectedCity = filters.value.city?.value?.toLowerCase() || "";
+    const selectedType = filters.value.type?.value?.toLowerCase() || "";
 
     const eventCity = event.location?.toLowerCase() || "";
     const eventType = event.type?.toLowerCase() || "";
