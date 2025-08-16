@@ -83,6 +83,7 @@
         >
           <div v-if="hotel">
             <div class="py-4 space-y-2">
+              <img :src="hotel.image"/>
               <h2 class="text-xl font-bold text-gray-800">{{ hotel.name }}</h2>
               <p class="text-gray-600">
                 {{ hotel.location }}
@@ -108,7 +109,7 @@
 
               <p class="text-gray-900 font-bold text-lg">
                 <span class="font-bold">Price:</span>
-                {{ bookingStore.totalPrice }} EGP / night
+                {{ bookingStore.price }} EGP / night
               </p>
             </div>
           </div>
@@ -142,7 +143,7 @@
             <p class="mb-3"><strong>Date:</strong> {{ formData.date }}</p>
             <p class="font-bold">
               <strong>Price:</strong>
-              {{ bookingStore.totalPrice }} EGP
+              {{ bookingStore.transportation.price }} EGP
             </p>
           </div>
 
@@ -337,7 +338,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ bookingStore.totalPrice }} EGP</span>
+              <span>{{ totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
