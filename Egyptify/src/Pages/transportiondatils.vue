@@ -36,8 +36,16 @@
             <option>Giza</option>
             <option>Alexandria</option>
             <option>Luxor</option>
+            <option>Sinai</option>
             <option>North Coast</option>
             <option>Sharm El-Sheikh</option>
+            <option>Aswan</option>
+            <option>Hurghada</option>
+            <option>Fayoum</option>
+            <option>Sahl Hasheesh</option>
+            <option>Western Desert</option>
+            <option>Dahab</option>
+            <option>Siwa</option>
           </select>
         </div>
 
@@ -46,14 +54,26 @@
           <label class="block text-sm font-semibold mb-1">To</label>
          <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <option>Choose destination</option>
+            <option>Cairo</option>
+            <option>Giza</option>
             <option>Luxor</option>
             <option>Aswan</option>
+            <option>Alexandria</option>
             <option>Hurghada</option>
-            <option>Cairo</option>
             <option>North Coast</option>
+            <option>Sahl Hasheesh</option>
             <option>Sharm El-Sheikh</option>
+            <option>Dahab</option>
+            <option>Siwa</option>
+            <option>Western Desert</option>
+            <option>Fayoum</option>
+            <option>Sinai</option>
+            
+
           </select>
         </div>
+
+
 
         <!-- Travel Date -->
         <div>
