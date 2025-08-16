@@ -1,8 +1,8 @@
 <template>
   <NavBarBlack />
-  <div class="flex h-screen bg-[#FFFDF9]">
-    <div class="w-full  flex justify-center items-center p-8">
-      <form @submit.prevent="handleSubmit" class="bg-white rounded-2xl shadow-md w-full max-w-md p-8">
+  <div class="flex h-screen mt-10  bg-[#FFFDF9]">
+    <div class="w-full flex justify-center items-center p-8 ">
+      <form @submit.prevent="handleSubmit" class="bg-white rounded-2xl border border-gray-300 shadow-md w-full max-w-md p-8">
         <h2 class="text-3xl font-bold mb-4 text-black text-center">Reset Password</h2>
         <p class="text-center text-gray-500 mb-6">
           Enter your email to receive a reset link
