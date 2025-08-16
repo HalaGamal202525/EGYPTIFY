@@ -337,7 +337,6 @@
             <div
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
-              <span>Total Price:</span>
       <span>Total Price:</span>
               <span>400 EGP</span>            </div>
 
@@ -499,7 +498,6 @@
             <div
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
             >
-              <span>Total Price:</span>
       <span>Total Price:</span>
               <span>400 EGP</span>            </div>
 
