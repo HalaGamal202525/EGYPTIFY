@@ -28,7 +28,7 @@
     "howToGet": "From Cairo:🚗 By Car: 750 km (about 10 hours)🚌 By Bus:  (12–14 hours)",
     "tips": "Go early to avoid queues"
   },
-  "activity": [
+  "activities": [
     {
       "name": "Sandboarding",
       "description": "Experience the thrill of sliding down the golden dunes of Siwa.",
@@ -96,7 +96,7 @@
     "howToGet": "From Cairo: 🚗 By Car: around 570 km (8 hours) 🚌 By Bus: via Bawiti or Farafra",
     "tips": "Bring warm clothes for night camping and extra water."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Camping Night",
       "description": "Spend the night under the stars in a tent and enjoy the magical desert silence.",
@@ -164,7 +164,7 @@
     "howToGet": "From Sharm El Sheikh: 🚗 By Car: about 30 km (30–40 minutes)",
     "tips": "Bring snorkeling gear, sunscreen, and enough drinking water. Respect marine life and park regulations."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Snorkeling",
       "description": "Explore vibrant coral reefs and swim alongside colorful fish in crystal-clear waters.",
@@ -232,7 +232,7 @@
     "howToGet": "From Dahab: 🚕 Taxi: 15-minute drive 🏍️ Scooter rental is also common",
     "tips": "Only experienced divers should attempt deep dives. Don’t forget reef-safe sunscreen and snorkeling gear."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Scuba Diving",
       "description": "Dive into the Blue Hole’s depths to explore vibrant corals and rich marine life. Suitable for experienced divers.",
@@ -300,7 +300,7 @@
     "howToGet": "From Cairo: 🚗 By Car: ~150 km (around 2 hours) 🚌 By Microbus from El-Moneeb station",
     "tips": "Don’t forget sunscreen, extra water, and a camera for the waterfalls. Avoid weekends for a quieter visit."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Waterfalls Visit",
       "description": "Explore Egypt’s only natural waterfalls and enjoy the refreshing water. Perfect for family outings and photography.",
@@ -369,7 +369,7 @@
     "howToGet": "By car or guided tour",
     "tips": "Bring water and wear comfortable shoes."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Sunrise Hike",
       "description": "Climb Mount Sinai early in the morning to witness a breathtaking sunrise over the desert.",
@@ -437,7 +437,7 @@
     "howToGet": "By 4x4 vehicles through guided eco-tours",
     "tips": "Get proper permissions, carry enough supplies, and be prepared for no cellular signal."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Wildlife Safari",
       "description": "Explore the rare wildlife and unique flora of Gebel Elba with an experienced guide.",
@@ -505,7 +505,7 @@
     "howToGet": "By car or local bus from Cairo",
     "tips": "Explore Tunis Village for pottery workshops and visit Wadi El Rayan for waterfalls."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Bird Watching",
       "description": "Spot and photograph a variety of migratory and native bird species around the lakes.",
@@ -573,7 +573,7 @@
     "howToGet": "By car or guided eco-tour",
     "tips": "Bring sun protection and water; guided tours recommended."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Fossil Tour",
       "description": "Guided tour exploring fossilized remains of ancient whales and other prehistoric creatures.",
@@ -641,7 +641,7 @@
     "howToGet": "Accessible by 4x4 vehicles or by camel from Dahab",
     "tips": "Bring snacks and water as there are limited facilities."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Snorkeling",
       "description": "Explore the clear waters and vibrant marine life of the lagoon.",
@@ -709,7 +709,7 @@
     "howToGet": "By 4x4 vehicle or organized tour from Cairo",
     "tips": "Bring sunscreen and plenty of water. Ideal for desert camping and stargazing."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Desert Safari",
       "description": "Explore the surrounding Black and White Deserts in a 4x4 vehicle.",
@@ -777,7 +777,7 @@
     "howToGet": "By car or tour from Sharm El-Sheikh or Dahab",
     "tips": "Dress modestly, and respect religious customs. Photography might be restricted in some areas."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Monastery Tour",
       "description": "Guided tour inside the monastery to explore its ancient library, icons, and chapels.",
@@ -845,7 +845,7 @@
     "howToGet": "Take the metro to Giza Station, then use a taxi or Careem",
     "tips": "Go early"
   },
-  "activity": [
+  "activities": [
     {
       "name": "Camel Ride",
       "description": "Experience a traditional camel ride around the pyramids with panoramic desert views.",
@@ -982,7 +982,7 @@
     "howToGet": "Accessible by car, minibus, or tour groups from Luxor. Located on the west bank of the Nile.",
     "tips": "Bring water, wear a hat, and consider hiring a guide for detailed insights into each tomb."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Guided Tomb Tours",
       "description": "Explore the intricate tombs with an Egyptologist who explains the history and meaning of the wall paintings.",
@@ -1051,7 +1051,7 @@
     "howToGet": "Easily accessible by taxi, Uber, or local transportation from central Cairo.",
     "tips": "Wear comfortable shoes, bring a camera for panoramic shots, and visit early to avoid crowds."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Mosque of Muhammad Ali Tour",
       "description": "Explore the grand Ottoman-style mosque inside the Citadel, known for its stunning domes and intricate decorations.",
@@ -1119,7 +1119,7 @@
     "howToGet": "Reachable by boat from the Marina Philae Temple in Aswan.",
     "tips": "Visit early in the morning to avoid heat, and consider staying for the evening sound-and-light show."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Boat Ride to Agilkia Island",
       "description": "Enjoy a scenic boat trip on the Nile to reach the temple while admiring the surrounding islands.",
@@ -1188,7 +1188,7 @@
     "howToGet": "Easily reachable via Cairo Metro (Sadat Station) or taxi to Tahrir Square.",
     "tips": "Allow at least 2 hours for your visit; guided tours enhance the experience."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Tutankhamun’s Treasures Tour",
       "description": "Explore the golden mask, jewelry, and artifacts from the tomb of King Tutankhamun.",
@@ -1256,7 +1256,7 @@
     "howToGet": "Accessible by road (approx. 3.5 hours from Aswan) or via domestic flight to Abu Simbel Airport.",
     "tips": "Visit during sunrise for the best lighting and fewer crowds; wear sun protection."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Sun Festival Experience",
       "description": "Witness the incredible alignment where the sun illuminates the inner sanctuary twice a year (February & October).",
@@ -1324,7 +1324,7 @@
     "howToGet": "Located in central Cairo; accessible via metro (Al-Azhar station) or taxi.",
     "tips": "Wear comfortable shoes; visit early to avoid crowds and enjoy photography opportunities."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Historical Walking Tour",
       "description": "Explore centuries-old mosques, madrasas, and sabils with a knowledgeable guide who brings history to life.",
@@ -1392,7 +1392,7 @@
     "howToGet": "Take the Cairo Metro to Mar Girgis Station; the church is a short walk from the station.",
     "tips": "Dress modestly; photography may be restricted in some areas."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Historical & Religious Tour",
       "description": "Join a guided tour to learn about the church’s history, Coptic traditions, and its role in the Holy Family’s journey.",
@@ -1460,7 +1460,7 @@
     "howToGet": "Located near Al-Azhar Street; easily accessible by taxi or by walking from El-Hussein area.",
     "tips": "Dress modestly, women may need to cover their heads, and respect prayer times."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Guided Historical Tour",
       "description": "Discover the mosque’s 1,000-year history, architecture, and role in Islamic education with a knowledgeable guide.",
@@ -1528,7 +1528,7 @@
     "howToGet": "Located in Luxor's West Bank, can be reached via taxi, bus, or organized tours.",
     "tips": "Wear comfortable shoes, bring water, and try to arrive early to avoid crowds."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Guided Historical Tour",
       "description": "Learn about Queen Hatshepsut’s reign, the temple’s architecture, and its religious significance from an expert Egyptologist.",
@@ -1595,7 +1595,7 @@
     "howToGet": "Located around 30 km south of Cairo; accessible by taxi or guided tours.",
     "tips": "Carry water and sun protection; consider combining with nearby tomb visits."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Guided Pyramid Tour",
       "description": "Explore the history and architecture of the Step Pyramid with an Egyptologist guide.",
@@ -1653,7 +1653,7 @@
     "/Destination/soho.jpg"
   ],
   "overview": {
-    "description": "SOHO Square is a shopping and entertainment complex that’s great for all ages. Check out the dancing fountain, take a whirl on the ball pit and slides at the Kids’ Zone, and snag a souvenir at the souk-themed Khan El-Khalili Bazaar. For a great group activity, you can even go bowling and ice skating, or have a game of billiards and tennis. Dining-wise, take your pick from a range of casual eateries, fast food joints, and fine dining establishments while enjoying our 10 different cuisines.",
+    "description": "SOHO Square is a shopping and entertainment complex that’s great for all ages. Check out the dancing fountain, take a whirl on the ball pit and slides at the Kids’ Zone, and snag a souvenir at the souk-themed Khan El-Khalili Bazaar. For a great group activities, you can even go bowling and ice skating, or have a game of billiards and tennis. Dining-wise, take your pick from a range of casual eateries, fast food joints, and fine dining establishments while enjoying our 10 different cuisines.",
     "rating": 4.5,
     "address": "SOHO Square, South Sinai Governorate 46628",
     "mapLink":  "https://maps.app.goo.gl/i4MtVs6MouVTfwo19",
@@ -1666,7 +1666,7 @@
     "howToGet": "Easily reachable by taxi or local bus; within walking distance from nearby hotels in the Sharks Bay area",
     "tips": "Visit in the evening to enjoy the colorful fountain show and make the most of family-friendly activities"
   },
-   "activity": [
+   "activities": [
     {
       "name": "Dancing Fountain Show",
       "description": "A stunning fountain display synchronized with music and colorful lights – one of the main highlights of the square.",
@@ -1683,7 +1683,7 @@
       "name": "Ice Rink & Bowling",
       "description": "Enjoy ice-skating and bowling with family and friends, plus other sports like tennis and squash.",
       "image": "/entertainment/ice-rink.jpg",
-      "price": "Varies by activity"
+      "price": "Varies by activities"
     }
   ],
   "review": {
@@ -1733,7 +1733,7 @@
     "howToGet": "Book a guided tour or take a taxi from Sharm El Sheikh (approx. 30-40 mins)",
     "tips": "Bring snorkeling gear, sunscreen, and water. Wear reef-safe sunscreen to protect corals."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Snorkeling Adventure",
       "description": "Discover stunning coral reefs and tropical fish in crystal-clear waters.",
@@ -1802,12 +1802,12 @@
     "howToGet": "Within walking distance from many hotels; taxis readily available",
     "tips": "Stroll after sunset to enjoy shops, cafés, and street performances."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Beach & Water Sports",
       "description": "Enjoy sunbathing, snorkeling, diving, or water-skiing in the clear waters of the bay.",
       "image": "/entertainment/naama-bay.jpg",
-      "price": "Varies by activity"
+      "price": "Varies by activities"
     },
     {
       "name": "Evening Promenade & Dining",
@@ -1870,7 +1870,7 @@
     "howToGet": "Center of city—easy walking or taxi from Naama Bay area",
     "tips": "Bring cash (EGP), bargain politely, and sample authentic street food."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Shopping Souvenirs & Spices",
       "description": "Browse handcrafted jewelry, textiles, spices and traditional goods.",
@@ -1938,7 +1938,7 @@
     "howToGet": "Accessible by 4x4 on the road between Bahariya and Farafra oases.",
     "tips": "Avoid removing crystals, as it’s protected. Best visited with a local guide."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Photo Stop",
       "description": "Take stunning photographs of the sparkling quartz formations.",
@@ -1999,7 +1999,7 @@
     "howToGet": "Reachable via road from Mut in Dakhla Oasis. Best visited with a guide.",
     "tips": "Wear comfortable shoes and carry water."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Walking Tour",
       "description": "Explore the maze-like alleys and historic sites of the village.",
@@ -2060,17 +2060,17 @@
     "howToGet": "Accessible via guided desert safari from Siwa or Bahariya Oasis.",
     "tips": "Bring sunglasses, water, and sunscreen. Sandboarding is a must-try."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Sandboarding",
       "description": "Ride down the giant dunes on a sandboard for an adrenaline rush.",
-      "image": "/imagesdatabase/activity/sandboarding.webp",
+      "image": "/imagesdatabase/activities/sandboarding.webp",
       "price": "EGP 300-500 per person"
     },
     {
       "name": "4x4 Safari",
       "description": "Experience the thrill of driving across massive dunes in a 4x4 vehicle.",
-      "image": "/imagesdatabase/activity/4x4_safari.webp",
+      "image": "/imagesdatabase/activities/4x4_safari.webp",
       "price": "EGP 600-900 per person"
     }
   ],
@@ -2121,17 +2121,17 @@
     "howToGet": "Boat or camel ride from Blue Hole area.",
     "tips": "Bring snorkeling gear and plenty of water."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Camel Ride by the Sea",
       "description": "Travel along the scenic coastline to Abu Galum on a traditional camel.",
-      "image": "/imagesdatabase/activity/camel_ride.webp",
+      "image": "/imagesdatabase/activities/camel_ride.webp",
       "price": "EGP 300-500"
     },
     {
       "name": "Snorkeling Adventure",
       "description": "Explore the untouched coral reefs and vibrant marine life.",
-      "image": "/imagesdatabase/activity/snorkeling_abu.webp",
+      "image": "/imagesdatabase/activities/snorkeling_abu.webp",
       "price": "EGP 150-300 per person"
     }
   ],
@@ -2182,7 +2182,7 @@
     "howToGet": "15 minutes by car or bike from Dahab center.",
     "tips": "Wear proper shoes and bring climbing gear if you plan to climb."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Rock Climbing",
       "description": "Test your skills on various climbing routes with different difficulty levels.",
@@ -2243,7 +2243,7 @@
     "howToGet": "Short tuk-tuk ride from Siwa center to Aghurmi village.",
     "tips": "Wear comfortable shoes and bring water; the site has uneven terrain."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Historical Tour",
       "description": "Guided tour explaining the history of the temple and its significance in ancient times.",
@@ -2304,7 +2304,7 @@
     "howToGet": "Walking distance or short tuk-tuk ride from Siwa town center.",
     "tips": "Bring a swimsuit and towel, and enjoy a drink from nearby cafes."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Swimming",
       "description": "Enjoy a refreshing swim in the natural spring water.",
@@ -2369,7 +2369,7 @@
     "howToGet": "From Downtown Cairo: approx. 45–60 minutes",
     "tips": "Go early to avoid queues"
   },
-  "activity": [
+  "activities": [
     {
       "title": "Roller Coaster Ride",
       "description": "Experience the inverted roller coaster with five loops for a heart-racing adventure.",
@@ -2437,7 +2437,7 @@
     "howToGet": "Accessible via car or taxi to Cairo Festival City Mall",
     "tips": "Let your kids explore independently; wear comfortable shoes; book tickets online to skip queues."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Mini Doctor Experience",
       "description": "Kids dress up as doctors, diagnose patients, and learn basic healthcare skills.",
@@ -2505,7 +2505,7 @@
     "howToGet": "Accessible by car or transportation to Citystars Mall",
     "tips": "Top up your game card in advance to save time. Great place for birthday parties."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Arcade Zone",
       "description": "Play a variety of classic and modern arcade games for all ages.",
@@ -2573,7 +2573,7 @@
     "howToGet": "Accessible via Ring Road to Mall of Egypt, with on-site parking available",
     "tips": "Book VIP or MAX screens online in advance for the best seats and avoid long queues."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Watch Latest Movies",
       "description": "Enjoy blockbuster films from Hollywood, Arabic cinema, and international releases.",
@@ -2641,7 +2641,7 @@
     "howToGet": "By car, Uber, or taxi from anywhere in Cairo",
     "tips": "Plan your visit to include both shopping and indoor skiing for a full experience."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Shopping",
       "description": "Explore a variety of local and international brands spread across multiple levels.",
@@ -2664,7 +2664,7 @@
       "title": "Entertainment Zones",
       "description": "Have fun at VOX Cinemas, Magic Planet arcade, and family entertainment areas.",
       "duration": "1–3 hours",
-      "price": "Varies by activity"
+      "price": "Varies by activities"
     }
   ],
   "review": {
@@ -2710,12 +2710,12 @@
   },
   "detail": {
     "visitingHours": "10:00 AM - 11:00 PM",
-    "entryFees": "$5 (some activity not included)",
+    "entryFees": "$5 (some activities not included)",
     "bestTimeToVisit": "Afternoons and event days",
     "howToGet": "By car, Uber, or taxi",
     "tips": "Check the schedule for concerts and shows before visiting."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Amusement Rides",
       "description": "Exciting rides for all ages, from roller coasters to family-friendly attractions.",
@@ -2724,7 +2724,7 @@
     },
     {
       "title": "Water Games",
-      "description": "Fun splash zones and water activity, perfect for cooling off on hot days.",
+      "description": "Fun splash zones and water activities, perfect for cooling off on hot days.",
       "duration": "30–60 minutes",
       "price": "Varies per game"
     },
@@ -2768,7 +2768,7 @@
   "category": "Entertainment",
   "location": "Cairo",
   "rate": 3.5,
-  "description": "Large open park with water play areas, a train ride, and various kids' activity.",
+  "description": "Large open park with water play areas, a train ride, and various kids' activities.",
   "images": [
     "/imagesdatabase/entertainment/Family Park.webp",
     "/imagesdatabase/entertainment/Family Park2.webp",
@@ -2789,7 +2789,7 @@
     "howToGet": "Easily accessible via car or Uber in New Cairo",
     "tips": "Bring snacks and water, limited food vendors inside. Great for picnics."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Kids' Train Ride",
       "description": "A fun scenic train ride around the park for kids and families.",
@@ -2826,7 +2826,7 @@
     "review2": {
       "user": "Mohamed T.",
       "date": "2025-06-15",
-      "content": "Could use more activity, but it's peaceful and great for families.",
+      "content": "Could use more activities, but it's peaceful and great for families.",
       "rating": 3,
       "avatar": "/sara/person2.jpeg"
     }
@@ -2863,7 +2863,7 @@
     "howToGet": "By taxi or Uber from central Cairo",
     "tips": "Bring your camera, and enjoy a meal at the lakefront restaurant."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Walking Trails",
       "description": "Scenic walking paths through lush gardens with views of historic Cairo.",
@@ -2937,7 +2937,7 @@
     "howToGet": "By metro to Giza station, then short walk",
     "tips": "Bring your own water and wear comfortable shoes."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Animal Exhibits",
       "description": "Explore a variety of animals from lions and elephants to rare bird species.",
@@ -3011,7 +3011,7 @@
     "howToGet": "Accessible by taxi or Metro (Al Jafiliya Station)",
     "tips": "Wear light clothing, and bring a camera for amazing butterfly shots."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Butterfly Walk",
       "description": "Stroll through lush gardens filled with hundreds of free-flying butterflies from around the world.",
@@ -3086,7 +3086,7 @@
     "howToGet": "Accessible by private car or taxi via the Cairo-Alex Desert Road.",
     "tips": "Bring a camera, stay inside your vehicle during safari, and avoid feeding the animals."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Drive-Thru Safari",
       "description": "Explore the park in your own vehicle and see lions, giraffes, zebras, and antelopes roaming freely.",
@@ -3160,7 +3160,7 @@
     "howToGet": "By car or local transportation from Cairo center towards Ismailia Road.",
     "tips": "Bring sunscreen, swimwear, and arrive early to enjoy all rides without long queues."
   },
-  "activity": [
+  "activities": [
     {
       "title": "Wave Pool",
       "description": "Enjoy the excitement of ocean-like waves in a large swimming pool suitable for all ages.",
@@ -3232,7 +3232,7 @@
     "howToGet": "Short tuk-tuk ride from Siwa town.",
     "tips": "Wear comfortable shoes and bring a camera for the views."
   },
-  "activity": [
+  "activities": [
     {
       "name": "Historical Exploration",
       "description": "Discover ancient tombs and learn about Siwa’s burial traditions.",

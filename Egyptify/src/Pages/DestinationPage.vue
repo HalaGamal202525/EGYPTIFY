@@ -69,6 +69,7 @@
   :showButton="true"
   buttonText="Show Details"
   @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
+  class="transition transform hover:-translate-y-1"
 />
 
 
@@ -91,7 +92,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted ,watch} from "vue";
 import navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
 import SideFilter from "./filterdestaination.vue";
@@ -108,8 +109,13 @@ onMounted(() => {
   destinationdata.value = destination;
 });
 
-const currentPage = ref(1);
+const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
+
+// كل ما الصفحة تتغير نخزنها
+watch(currentPage, (newPage) => {
+  localStorage.setItem("currentPage", newPage);
+});
 
 const filters = ref({
   location: [],
@@ -132,7 +138,7 @@ function handleCardClick(card) {
 
 function applyFilters(newFilters) {
   filters.value = newFilters;
-  currentPage.value = 1;  // ارجع الصفحة الأولى لما يتغير الفلتر
+  currentPage.value = 1;  
 }
 
 const filteredDestinations = computed(() => {

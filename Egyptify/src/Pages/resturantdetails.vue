@@ -104,9 +104,9 @@ const submitReservation = () => {
         <!-- Price -->
         <div>
           <span
-            class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm"
+            class="px-3 py-1 bg-green-100 text-green-700 rounded-full mt-2 text-sm"
           >
-            {{ restaurant.priceRange }}
+         Price:   {{ restaurant.price }}
           </span>
         </div>
 

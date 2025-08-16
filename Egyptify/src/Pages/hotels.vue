@@ -37,37 +37,41 @@
 
         <!-- قائمة الفنادق -->
         <div class="flex-1 space-y-6">
-          <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8 mb-6 cursor-pointer">
+          <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8 mb-6 cursor-pointer " >
             <div
               v-for="hotel in paginatedDestinations"
               :key="hotel.details.slug"
-              class="card p-4 rounded shadow hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              class="card  bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1"
               @click="selectHotel(hotel)"
             >
               <img :src="hotel.image" :alt="hotel.title" class="w-full h-44 object-cover rounded-md mb-4" />
-              <h3 class="text-xl font-bold text-gray-800 mb-1 h-15">{{ hotel.title }}</h3>
-              <p class="text-sm text-gray-500 mb-2">
+              <h3 class="text-xl font-bold text-gray-800 mb-1 h-15 px-3">{{ hotel.title }}</h3>
+              <p class="text-sm text-gray-500 mb-2 px-3">
                 <i class="fas fa-map-marker-alt mr-1"></i> {{ hotel.location }}
               </p>
-              <p class="text-sm text-yellow-600 font-semibold mb-2">
+              <p class="text-sm text-yellow-600 font-semibold mb-2 px-3">
                 Budget: {{ hotel.budget || 'N/A' }}
               </p>
               <p
-                class="text-gray-700 text-sm line-clamp-3 mb-3 h-20"
+                class="text-gray-700 text-sm line-clamp-3 mb-3 h-20 px-3"
                 title="Description"
               >
                 {{ hotel.description.length > 120 ? hotel.description.slice(0, 120) + '...' : hotel.description }}
               </p>
-              <p class="text-sm text-blue-600 font-medium mb-4">
+              <p class="text-sm text-blue-600 font-medium mb-4 px-3">
                 Best Time to Visit: {{ hotel.bestTime || 'All Year' }}
               </p>
+                    <div class="pt-4 flex justify-center mb-3">
+
               <router-link
                 :to="`/hotel/${hotel.details.slug}`"
-                class="inline-block w-[150px] h-[40px] font-semibold text-white bg-yellow-400 hover:bg-yellow-600 rounded px-4 py-2 text-center transition"
+                class="inline-block w-[150px] h-[40px] font-semibold text-white bg-yellow-400 hover:bg-yellow-600 rounded-xl px-4 py-2 text-center transition"
                 @click.stop
               >
                 See Details
               </router-link>
+              </div>
+
             </div>
           </section>
 
@@ -113,7 +117,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted ,watch} from "vue";
 import navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
 import SideFilter from "./hotelsfilters.vue";
@@ -133,8 +137,13 @@ function selectHotel(selectedHotel) {
 }
 
 // Pagination & filters
-const currentPage = ref(1);
+const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
+
+// كل ما الصفحة تتغير نخزنها
+watch(currentPage, (newPage) => {
+  localStorage.setItem("currentPage", newPage);
+});
 const filters = ref({ location: [], budget: [], bestTime: [] });
 const tempFilters = ref({ ...filters.value });
 const isOverlayOpen = ref(false);

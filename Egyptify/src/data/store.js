@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useBookingStore = defineStore('booking', {
+export const useBookingStore = defineStore("booking", {
   state: () => ({
     hotel: null,
     roomType: null,
@@ -12,6 +12,7 @@ export const useBookingStore = defineStore('booking', {
       rate: null,
       price: null,
 
+      activities: [],
     },
 
 
@@ -24,23 +25,18 @@ export const useBookingStore = defineStore('booking', {
 
 
 
- // بيانات وسيلة المواصلات
+    // بيانات وسيلة المواصلات
     transportation: null,
-
-
 
     // بيانات الحجز من الفورم
     reservation: {
-      name: '',
-      phone: '',
-      guests: '',
-      date: '',
-      time: '',
-      comment: ''
-    }
-
-
-
+      name: "",
+      phone: "",
+      guests: "",
+      date: "",
+      time: "",
+      comment: "",
+    },
   }),
   actions: {
     setHotel(hotel) {
@@ -49,8 +45,6 @@ export const useBookingStore = defineStore('booking', {
         this.dates.checkIn = hotel.checkin;
         this.dates.checkOut = hotel.checkout;
       }
-
-      
     },
     setRoomDetails(roomType, guests, price, image) {
       this.roomType = roomType;
@@ -69,7 +63,16 @@ export const useBookingStore = defineStore('booking', {
       this.card.title = title;
       this.card.rate = rate;
       this.card.price = price;
+      this.card.activities = [];
     },
+    addActivityToCard(activity) {
+      this.card.activities.push({
+        name: activity.name,
+        image: activity.image,
+        price: activity.price,
+      });
+    },
+
     resetBooking() {
       this.hotel = null;
       this.roomType = null;
@@ -79,20 +82,19 @@ export const useBookingStore = defineStore('booking', {
         image: null,
         title: null,
         rate: null,
-        price: null
+        price: null,
+          activities: [],
       };
 
       this.transportation = null;
 
-
-      
       this.reservation = {
-        name: '',
-        phone: '',
-        guests: '',
-        date: '',
-        time: '',
-        comment: ''
+        name: "",
+        phone: "",
+        guests: "",
+        date: "",
+        time: "",
+        comment: "",
       };
 
 
@@ -104,13 +106,13 @@ export const useBookingStore = defineStore('booking', {
 
 
       },
+    },
 
-       setTransportation(transportData) {
-        this.transportation = transportData;
-      },
+    setTransportation(transportData) {
+      this.transportation = transportData;
+    },
 
-    
-       // تخزين بيانات الفورم
+    // تخزين بيانات الفورم
     setReservation(data) {
       this.reservation = { ...data };
     },
@@ -131,5 +133,4 @@ export const useBookingStore = defineStore('booking', {
   
 
 
-  }
-})
+  })

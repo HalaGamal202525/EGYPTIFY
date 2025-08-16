@@ -221,7 +221,7 @@
                 </p>
               </div>
             </div>
-            <div v-if="activeTab === 3">
+<div v-show="activeTab === 3">
               <div
                 v-for="(act, index) in activitiesData"
                 :key="index"
@@ -231,7 +231,7 @@
                   class="flex flex-col md:flex-row items-center md:items-start flex-1"
                 >
                   <img
-                    :src="act.image"
+                  :src="act.image || place.images?.[0]"
                     :alt="act.title"
                     class="w-2/3 md:w-28 md:h-28 object-cover rounded-md mb-4 md:mb-0 md:mr-6"
                   />
@@ -252,12 +252,25 @@
                 </div>
 
                 <BaseButton
+                  :disabled="addedActivities.includes(act.name)"
                   @click="addToPackage(act)"
-                  class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0"
+                  :class="[
+                    'font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0',
+                    addedActivities.includes(act.name)
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-[#FFC340] hover:bg-[#eab308] text-white',
+                  ]"
                 >
-                  Add to Package
+                  {{
+                    addedActivities.includes(act.name)
+                      ? "Added!"
+                      : "Add to Package"
+                  }}
                 </BaseButton>
+
               </div>
+                              <BaseButton @click="goToForm">Go to check-out</BaseButton>
+
             </div>
           </div>
         </section>
@@ -268,12 +281,37 @@
       <sidecard title="Related Places" :items="relatedPlaces" />
     </div>
   </div>
-
+  <!-- Modal -->
+  <div
+    v-if="showModal"
+    class="fixed inset-0 flex items-center justify-center bg-gray-200 bg-opacity-50 model  z-50"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg w-120">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">Add Activities?</h2>
+      <p class="text-gray-600 mb-6">
+        Do you want to add some activities before booking?
+      </p>
+      <div class="flex justify-center gap-4">
+        <BaseButton
+          class="bg-gray-300 hover:bg-gray-400 text-black font-bold px-4 py-2 w-40 rounded"
+          @click="goToForm"
+        >
+          No, Continue
+        </BaseButton>
+        <BaseButton
+          class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold  py-2 w-40  rounded"
+          @click="goToActivities"
+        >
+          Yes,Show Activity
+        </BaseButton>
+      </div>
+    </div>
+  </div>
   <foot />
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 import Navbar from "../components/NavBar-Black.vue";
@@ -290,22 +328,33 @@ function bookNow() {
   if (!place.value) return;
 
   bookingStore.setCardData({
-    image: place.value.image,
+      image: place.value.images?.[0] || "",
     title: place.value.name,
     rate: place.value.rate,
     price: place.value.price,
   });
 
-  router.push("/form");
+  // بدل ما نوديه فوراً → نفتح المودل
+  showModal.value = true;
 }
+
+const addedActivities = ref([])
+
+
 function addToPackage(activity) {
-  bookingStore.setCardData({
-    image: place.value.image,
-    title: `${place.value.name} - ${activity.title}`,
-    rate: place.value.rate,
-    price: place.value.price,
-  });
-  router.push("/form");
+  if (!addedActivities.value.includes(activity.name)) {
+    addedActivities.value.push(activity.name)
+
+    bookingStore.addActivityToCard({
+      name: activity.name,
+      image: activity.image,
+      price: activity.price,
+      duration: activity.duration
+    })
+
+    console.log("store after add:", bookingStore.card)
+console.log("activities:", bookingStore.card.activities)
+  }
 }
 
 const route = useRoute();
@@ -317,23 +366,27 @@ const place = computed(() => data.find((p) => p.id === placeId) || {});
 
 const overviewData = computed(() => place.value?.overview || {});
 const detailsData = computed(() => place.value?.detail || {});
-const activitiesData = computed(() => place.value?.activity || []);
+const activitiesData = computed(() => place.value?.activities || []);
 
 const newComment = ref("");
 const reviewsData = ref([]);
+const showModal = ref(false);
 
-watch(place, (newPlace) => {
-  const savedReviews = localStorage.getItem(`reviews_place_${placeId}`);
-  if (savedReviews) {
-    reviewsData.value = JSON.parse(savedReviews);
-  } else {
-    reviewsData.value = newPlace.review ? Object.values(newPlace.review) : [];
-  }
-}, { immediate: true });
+watch(
+  place,
+  (newPlace) => {
+    const savedReviews = localStorage.getItem(`reviews_place_${placeId}`);
+    if (savedReviews) {
+      reviewsData.value = JSON.parse(savedReviews);
+    } else {
+      reviewsData.value = newPlace.review ? Object.values(newPlace.review) : [];
+    }
+  },
+  { immediate: true }
+);
 const tabs = ["Overview", "Details", "Reviews", "Activities"];
-const activeTab = ref(0);
-import { useImageStore } from '../data/imagepicker'
-const imageStore = useImageStore()
+import { useImageStore } from "../data/imagepicker";
+const imageStore = useImageStore();
 function submitComment() {
   if (!newComment.value.trim()) return;
 
@@ -342,22 +395,51 @@ function submitComment() {
     date: new Date().toLocaleDateString(),
     content: newComment.value,
     rating: 5,
-    avatar: imageStore.selectedImage || '/about-us/girl-4.png',
+    avatar: imageStore.selectedImage || "/about-us/girl-4.png",
   };
 
   // أضف التعليق للقائمة
   reviewsData.value.unshift(newReview);
 
   // خزّن كل التعليقات في LocalStorage
-  localStorage.setItem(`reviews_place_${placeId}`, JSON.stringify(reviewsData.value));
+  localStorage.setItem(
+    `reviews_place_${placeId}`,
+    JSON.stringify(reviewsData.value)
+  );
 
   newComment.value = "";
 }
+function goToForm() {
+  showModal.value = false;
+  router.push("/form");
+}
 
-const gotobooking = () => {
-  router.push("/booking");
-};
+function goToActivities() {
+  showModal.value = false;
+  nextTick(() => {
+    activeTab.value = 3;
+    console.log("activeTab is now:", activeTab.value);
+  });
+}
+console.log("store after add:", bookingStore.cardData)
+
+
 const relatedPlaces = computed(() =>
   data.filter((p) => p.id !== placeId).slice(4, 10)
 );
+// خلي قيمة التاب مرتبطة بالـ localStorage
+const activeTab = ref(Number(localStorage.getItem("activeTab")) || 0);
+
+// كل ما التاب يتغير نخزن القيمة
+watch(activeTab, (newTab) => {
+  localStorage.setItem("activeTab", newTab);
+});
+
 </script>
+
+
+<style scoped>
+.model{
+  background-color: rgba(248, 248, 255, 0.603);
+}
+</style>
