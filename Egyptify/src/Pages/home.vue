@@ -117,6 +117,7 @@
         </router-link>
       </div>
     </div>
+    
   </section>
 
     <!-- trip planner -->
