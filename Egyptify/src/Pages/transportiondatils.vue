@@ -6,7 +6,7 @@
 
   <!-- Hero Section with Search -->
 <section
-  class="relative bg-cover bg-center text-white py-24 px-4"
+  class="relative bg-cover bg-center text-white py-24 px-4 clear-bg "
   style="background-image: url('/bookingRestaurants/transportation.jpg')"
 >
   <!-- Dark overlay -->
