@@ -3,8 +3,7 @@
   <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
       <div class="flex items-center mb-8">
-         <div class="px-3">
-    <!-- الصورة الأساسية -->
+          <div class="px-3">
     <img
       :src="selectedImage || '/about-us/girl-4.png'"
       alt="main"
@@ -12,7 +11,6 @@
       @click="openModal"
     />
 
-    <!-- المودل -->
     <div
       v-if="isModalOpen"
       class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
@@ -20,7 +18,6 @@
       <div class="bg-white p-6 rounded-lg shadow-lg w-96">
         <h2 class="text-lg font-bold mb-4">Choose image</h2>
 
-        <!-- الصور المتاحة -->
         <div class="grid grid-cols-3 gap-3">
           <img
             v-for="(img, index) in images"
@@ -32,7 +29,6 @@
           />
         </div>
 
-        <!-- أزرار التحكم -->
         <div class="mt-4 flex justify-between">
           <BaseButton
             @click="closeModal"
@@ -82,8 +78,7 @@
               for="username"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >User Name</label
-            >
+            >User Name</label>
             <InputField
               id="username"
               type="text"
@@ -101,8 +96,7 @@
               for="email"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >E-mail</label
-            >
+            >E-mail</label>
             <InputField
               id="email"
               type="email"
@@ -120,25 +114,17 @@
               for="currentPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Current Password</label
-            >
+            >Current Password</label>
             <InputField
               id="currentPassword"
-              :type="currentPasswordVisible ? 'text' : 'password'"
+              type="password"
               placeholder="Enter current password if changing"
               v-model="userStore.password"
             >
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              <template #suffix-icon>
-                <i
-                  class="absolute right-4 top-3 text-gray-400 cursor-pointer"
-                  :class="currentPasswordVisible ? 'fas fa-eye' : 'fas fa-eye-slash'"
-                  @click="togglePasswordVisibility('current')"
-                />
-              </template>
-            </InputField>
+              </InputField>
             <p class="text-sm text-gray-500 mt-1">
               Required only if you are changing your password.
             </p>
@@ -148,25 +134,17 @@
               for="newPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >New Password</label
-            >
+            >New Password</label>
             <InputField
               id="newPassword"
-              :type="newPasswordVisible ? 'text' : 'password'"
+              type="password"
               placeholder="Enter new password"
               v-model="passwordFields.newPassword"
             >
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              <template #suffix-icon>
-                <i
-                  class="absolute right-4 top-3 text-gray-400 cursor-pointer"
-                  :class="newPasswordVisible ? 'fas fa-eye' : 'fas fa-eye-slash'"
-                  @click="togglePasswordVisibility('new')"
-                />
-              </template>
-            </InputField>
+              </InputField>
             <p class="text-sm text-gray-500 mt-1">
               Leave blank to keep current password.
             </p>
@@ -176,45 +154,18 @@
               for="confirmPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Confirm New Password</label
-            >
+            >Confirm New Password</label>
             <InputField
               id="confirmPassword"
-              :type="confirmPasswordVisible ? 'text' : 'password'"
+              type="password"
               placeholder="Confirm new password"
               v-model="passwordFields.confirmPassword"
             >
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              <template #suffix-icon>
-                <i
-                  class="absolute right-4 top-3 text-gray-400 cursor-pointer"
-                  :class="confirmPasswordVisible ? 'fas fa-eye' : 'fas fa-eye-slash'"
-                  @click="togglePasswordVisibility('confirm')"
-                />
-              </template>
-            </InputField>
+              </InputField>
           </div>
-          <!-- <div class="mb-4">
-            <label
-              for="phone"
-              class="mb-1"
-              style="font-weight: 500; font-size: medium"
-            >Phone*</label
-            >
-            <InputField
-              id="phone"
-              type="tel"
-              placeholder="01289373141"
-              v-model="personalDetails.phone"
-              required
-            >
-              <template #icon>
-                <i class="fas fa-phone" />
-              </template>
-            </InputField>
-          </div> -->
           <div class="mt-8 flex justify-end">
             <BaseButton type="submit" :disabled="isSaving">
               <span v-if="!isSaving">Save Changes</span>
@@ -315,8 +266,8 @@
             </div>
             <div class="ml-4 flex-shrink-0">
               <img
-             :src="selectedImage || '/about-us/girl-10.png'"
-      alt="main"
+               :src="selectedImage || '/about-us/girl-10.png'"
+     alt="main"
 
                 class="w-24 h-24 object-cover rounded-md"
               />
@@ -337,8 +288,7 @@
               for="language-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Language</label
-            >
+            >Language</label>
             <select
               id="language-select"
               v-model="settings.language"
@@ -353,8 +303,7 @@
               for="currency-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Currency</label
-            >
+            >Currency</label>
             <select
               id="currency-select"
               v-model="settings.currency"
@@ -394,80 +343,74 @@
             </label>
           </div>
         </div>
-  <div>
-    <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
+      <div>
+        <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
 
-    <!-- Change Password -->
-    <a
-      href="profile-change-password"
-      @click.prevent="activeTab = 'personal'"
-      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
-    >
-      <span class="text-gray-700 font-medium">Change Password</span>
-      <i class="fas fa-arrow-right text-gray-400"></i>
-    </a>
+        <a
+          href="profile-change-password"
+          @click.prevent="activeTab = 'personal'"
+          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+        >
+          <span class="text-gray-700 font-medium">Change Password</span>
+          <i class="fas fa-arrow-right text-gray-400"></i>
+        </a>
 
-    <!-- Update Contact Information -->
-    <a
-      href="#"
-      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
-    >
-      <span class="text-gray-700 font-medium">Update Contact Information</span>
-      <i class="fas fa-arrow-right text-gray-400"></i>
-    </a>
+        <a
+          href="#"
+          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+        >
+          <span class="text-gray-700 font-medium">Update Contact Information</span>
+          <i class="fas fa-arrow-right text-gray-400"></i>
+        </a>
 
-    <!-- Delete Account -->
-    <a
-      href="#"
-      @click.prevent="showDeleteModal = true"
-      class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
-    >
-      <span class="font-medium">Delete Account</span>
-      <i class="fas fa-arrow-right text-gray-400"></i>
-    </a>
+        <a
+          href="#"
+          @click.prevent="showDeleteModal = true"
+          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
+        >
+          <span class="font-medium">Delete Account</span>
+          <i class="fas fa-arrow-right text-gray-400"></i>
+        </a>
 
-    <!-- Logout -->
-    <div class="flex justify-end mt-6">
-      <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
-        Logout
-      </BaseButton>
-    </div>
+        <div class="flex justify-end mt-6">
+          <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
+            Logout
+          </BaseButton>
+        </div>
 
-    <!-- Delete Confirmation Modal -->
-    <div
-      v-if="showDeleteModal"
-      class="fixed inset-0 bg-black model flex items-center justify-center z-50"
-    >
-      <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-        <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
-        <p class="text-gray-600 mb-6">
-          Are you sure you want to delete your account? This action cannot be undone.
-        </p>
-        <div class="flex justify-end space-x-3">
-          <button
-            @click="showDeleteModal = false"
-            class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-          >
-            Cancel
-          </button>
-          <button
-            @click="confirmDelete"
-            class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-          >
-            Yes, Delete
-          </button>
+        <div
+          v-if="showDeleteModal"
+          class="fixed inset-0 bg-black model flex items-center justify-center z-50"
+        >
+          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+            <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
+            <p class="text-gray-600 mb-6">
+              Are you sure you want to delete your account? This action cannot be undone.
+            </p>
+            <div class="flex justify-end space-x-3">
+              <button
+                @click="showDeleteModal = false"
+                class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+              >
+                Cancel
+              </button>
+              <button
+                @click="confirmDelete"
+                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                Yes, Delete
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          v-if="showSuccessMessage"
+          class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
+        >
+          Account deleted successfully.
         </div>
       </div>
-    </div>
-
-    <!-- Success Message -->
-    <div
-      v-if="showSuccessMessage"
-      class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
-    >
-      Account deleted successfully.
-    </div>
-  </div>
       </div>
     </div>
   </div>

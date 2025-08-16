@@ -27,7 +27,8 @@
           {{ pkg.location }}
         </h2>
         <p class="text-lg text-gray-700 leading-relaxed">
-          {{ pkg.fullDescription }}
+                   <span class="font-semibold text-[#ffc340]">   Description:</span>
+  {{ pkg.fullDescription }}
         </p>
 
         <ul class="mt-6 space-y-2">
@@ -47,7 +48,7 @@
             <span
               v-for="(activity, index) in pkg.activities"
               :key="index"
-              class="bg-yellow-150 text-yellow-800 px-4 py-1 rounded-full text-sm shadow-sm"
+              class="bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm shadow-sm"
             >
               {{ activity }}
             </span>
@@ -92,7 +93,7 @@
           v-for="(img, index) in pkg.gallery"
           :key="index"
           :src="img"
-          class="w-full h-48 object-cover rounded-xl shadow hover:scale-155 transition"
+          class="w-full h-48 object-cover rounded-xl shadow hover:scale-125 transition"
         />
       </div>
     </div>
