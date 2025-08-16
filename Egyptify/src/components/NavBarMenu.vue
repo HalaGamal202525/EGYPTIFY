@@ -22,12 +22,7 @@
           @click="gotoexplore"
           >Explore Egypt</a
         >
-        <a
-          href="#"
-          class="block hover:text-[#FFC340] font-medium"
-          @click="goTodestination"
-          >Destinations</a
-        >
+        
         <a
           href="#"
           class="block hover:text-[#FFC340] font-medium"
@@ -41,15 +36,16 @@
           @click="goToblogs"
           >Travel Blog</a
         >
-      </div>
 
-      <div class="space-y-2">
         <a
           href="#"
           class="block hover:text-[#FFC340] font-medium"
           @click="goTooffers"
           >Offers</a
         >
+        </div>
+
+        <div class="space-y-2">
         <a
           href="#"
           class="block hover:text-[#FFC340] font-medium"
@@ -95,7 +91,7 @@ function gotoevents() {
   router.push("/events");
 }
 function gototransportaion(){
-  router.push("/transportation")
+  router.push("/transportiondetails")
 }
 function goToresturant(){
   router.push("/resturant")
