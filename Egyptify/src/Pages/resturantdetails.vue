@@ -106,7 +106,7 @@ const submitReservation = () => {
           <span
             class="px-3 py-1 bg-green-100 text-green-700 rounded-full mt-2 text-sm"
           >
-         Price:   {{ restaurant.price }}
+         Price:   {{ restaurant.price }} EGP 
           </span>
         </div>
 

@@ -140,7 +140,6 @@ function selectHotel(selectedHotel) {
 const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
 
-// كل ما الصفحة تتغير نخزنها
 watch(currentPage, (newPage) => {
   localStorage.setItem("currentPage", newPage);
 });

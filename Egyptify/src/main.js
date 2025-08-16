@@ -13,6 +13,7 @@ for (const [key, component] of Object.entries(LucideIcons)) {
   app.component(key, component)
 }
 
+
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
