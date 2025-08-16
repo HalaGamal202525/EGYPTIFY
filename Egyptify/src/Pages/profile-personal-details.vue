@@ -8,7 +8,7 @@
     <img
       :src="selectedImage || '/about-us/girl-4.png'"
       alt="main"
-      class="w-25 h-25 rounded-full object-cover cursor-pointer border"
+      class="w-25 h-25 rounded-full object-contain cursor-pointer "
       @click="openModal"
     />
 
@@ -82,7 +82,7 @@
               for="username"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >User Name*</label
+            >User Name</label
             >
             <InputField
               id="username"
@@ -101,7 +101,7 @@
               for="email"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >E-mail*</label
+            >E-mail</label
             >
             <InputField
               id="email"
@@ -196,7 +196,7 @@
               </template>
             </InputField>
           </div>
-          <div class="mb-4">
+          <!-- <div class="mb-4">
             <label
               for="phone"
               class="mb-1"
@@ -214,7 +214,7 @@
                 <i class="fas fa-phone" />
               </template>
             </InputField>
-          </div>
+          </div> -->
           <div class="mt-8 flex justify-end">
             <BaseButton type="submit" :disabled="isSaving">
               <span v-if="!isSaving">Save Changes</span>

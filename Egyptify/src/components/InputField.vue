@@ -3,17 +3,7 @@
     <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-yellow-600">
       <slot name="icon" />
     </span>
-    <!-- <input
-      v-bind="$attrs"
-      :type="type"
-      :placeholder="placeholder"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
-      class="w-full h-[40px] pl-10 pr-10 py-3 text-gray-800 rounded-[16px] border-1 border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-300 shadow-sm
-            placeholder-gray-500 placeholder-opacity-100  placeholder:text-sm"
-    /> -->
 
-      <!-- لو النوع select -->
     <select
       v-if="type === 'select'"
       :value="modelValue"
@@ -33,11 +23,10 @@
       </option>
     </select>
 
-    <!-- لو أي نوع تاني -->
     <input
       v-else
       v-bind="$attrs"
-      :type="type"
+      :type="inputType"
       :placeholder="placeholder"
       :value="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
@@ -46,14 +35,23 @@
              focus:ring-yellow-300 shadow-sm placeholder-gray-500 
              placeholder-opacity-100 placeholder:text-sm"
     />
+    
+    <span 
+      v-if="isPasswordInput" 
+      class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer text-gray-500"
+      @click="togglePasswordVisibility"
+    >
+      <i :class="['fas', isPasswordVisible ? 'fa-eye' : 'fa-eye-slash']"></i>
+    </span>
+    
     <slot name="suffix-icon" />
   </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits, ref, computed } from 'vue';
 
-defineProps({
+const props = defineProps({
   modelValue: {
     type: [String, Number],
     required: true,
@@ -66,14 +64,24 @@ defineProps({
     type: String,
     default: '',
   },
-   options: {
+  options: {
     type: Array,
-    default: () => [], // للقائمة لو النوع select
+    default: () => [],
   }
 });
 
 defineEmits(['update:modelValue']);
+
+// New reactivity to handle password visibility
+const isPasswordVisible = ref(false);
+const isPasswordInput = computed(() => props.type === 'password');
+const inputType = computed(() => (isPasswordInput.value && isPasswordVisible.value) ? 'text' : props.type);
+
+const togglePasswordVisibility = () => {
+  isPasswordVisible.value = !isPasswordVisible.value;
+};
 </script>
+
 <style scoped>
 /* عشان السهم في الـ select يبان بشكل افتراضي */
 select {

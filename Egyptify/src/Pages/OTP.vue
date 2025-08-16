@@ -1,6 +1,6 @@
 <template>
   <NavBarBlack />
-  <div class="w-full">
+  <div class="w-full bg-[#FFFDF9]">
     <div style="margin-top: 150px;">
       <OtpInput />
     </div>
