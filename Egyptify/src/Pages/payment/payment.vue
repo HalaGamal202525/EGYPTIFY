@@ -337,7 +337,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
@@ -499,7 +499,7 @@
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="nextStep" class="w-full mt-4"
@@ -531,7 +531,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ totalPrice }} EGP</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
@@ -764,13 +764,19 @@ const trip = {
   tourprice: 400,
   seatno: "14A",
 };
-const totalPrice =
-  trip.transport.price +
-  trip.hotel.price +
-  trip.mealPrice +
-  trip.servicePrice +
-  trip.placeprice +
-  trip.tourprice;
+// const totalPrice =
+//   trip.transport.price +
+//   trip.hotel.price +
+//   trip.mealPrice +
+//   trip.servicePrice +
+//   trip.placeprice +
+//   trip.tourprice;
+
+
+const totalPrice = computed(() => {
+  return bookingStore.bookings.reduce((sum, booking) => sum + booking.price, 0);
+});
+
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
     {
         "id":1,
         "imageurl":"/roomtype/single.jpg",
-        "name":"Sigle Room",
+        "name":"Single Room",
         "description":"One single bed for one person",
         "guestno":1,
         "price":200 
