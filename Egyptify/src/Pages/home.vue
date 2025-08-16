@@ -130,7 +130,7 @@
         </p>
         <basebutton
           @click="gotoplanner"
-          class="py-3 rounded-full cursor-pointer transition"
+          class="py-6 rounded-[16px] cursor-pointer transition"
         >
           Start planning
         </basebutton>
@@ -261,7 +261,7 @@
           v-model="mailinput"
           type="email"
           placeholder="Enter your email"
-          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
+          class="rounded-lg px-4 py-2 w-[250px] text-white placeholder-gray-50 focus:outline-none focus:ring-2 focus:ring-[#FFC340]"
           style="height: 50px"
         />
         <basebutton
