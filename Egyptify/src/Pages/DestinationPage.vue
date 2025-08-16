@@ -69,6 +69,7 @@
   :showButton="true"
   buttonText="Show Details"
   @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
+  class="transition transform hover:-translate-y-1"
 />
 
 
