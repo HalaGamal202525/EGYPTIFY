@@ -20,7 +20,7 @@
     </div>
 
     <!-- Main Details -->
-    <div class="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-10">
+    <div class="max-w-6xl mx-auto px-6 mt-12 grid md:grid-cols-2 gap-15">
       <!-- Left: Text -->
       <div class="space-y-6">
         <h2 class="text-3xl font-semibold text-[#ffc340]">
@@ -47,7 +47,7 @@
             <span
               v-for="(activity, index) in pkg.activities"
               :key="index"
-              class="bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm shadow-sm"
+              class="bg-yellow-150 text-yellow-800 px-4 py-1 rounded-full text-sm shadow-sm"
             >
               {{ activity }}
             </span>
@@ -92,7 +92,7 @@
           v-for="(img, index) in pkg.gallery"
           :key="index"
           :src="img"
-          class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition"
+          class="w-full h-48 object-cover rounded-xl shadow hover:scale-155 transition"
         />
       </div>
     </div>
@@ -154,7 +154,9 @@
             "Amazing experience, highly recommended!"
           </p>
           <div class="mt-4 flex items-center gap-2">
-            <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
+            <div class="w-15 h-15 bg-gray-200 rounded-full">
+              <img src="/sara/person.jpeg" alt="" class="w-15 h-15 bg-gray-200 rounded-full">
+            </div>
             <span class="font-medium text-gray-700">Traveler {{ i }}</span>
           </div>
         </div>
