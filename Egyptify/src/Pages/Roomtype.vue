@@ -58,7 +58,6 @@ const bookingStore = useBookingStore()
 const handleBookRoom = (room) => {
   bookingStore.setRoomDetails(room.name, room.guestno, room.price,room.image)
 
-   // إضافة الحجز لقائمة الحجوزات وحساب الإجمالي
   bookingStore.addBooking({
     type: 'Hotel',
     name: room.name,

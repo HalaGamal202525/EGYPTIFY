@@ -18,10 +18,10 @@ export const useBookingStore = defineStore("booking", {
     totalPrice: 0,
     bookings: [],
 
-    // بيانات وسيلة المواصلات
+
+
     transportation: null,
 
-    // بيانات الحجز من الفورم
     reservation: {
       name: "",
       phone: "",
@@ -32,6 +32,7 @@ export const useBookingStore = defineStore("booking", {
     },
   }),
 
+
   actions: {
     setHotel(hotel) {
       this.hotel = hotel;
@@ -41,6 +42,7 @@ export const useBookingStore = defineStore("booking", {
       }
     },
 
+
     setRoomDetails(roomType, guests, price, image) {
       this.roomType = roomType;
       this.guests = guests;
@@ -48,13 +50,16 @@ export const useBookingStore = defineStore("booking", {
       this.image = image;
     },
 
+
     setDates(checkIn, checkOut) {
       this.dates = { checkIn, checkOut };
     },
 
+
     setUserData(data) {
       this.userData = data;
     },
+
 
     setCardData({ image, title, rate, price }) {
       this.card.image = image;
@@ -63,6 +68,7 @@ export const useBookingStore = defineStore("booking", {
       this.card.price = price;
       this.card.activities = [];
     },
+
 
     addActivityToCard(activity) {
       this.card.activities.push({
@@ -83,6 +89,7 @@ export const useBookingStore = defineStore("booking", {
         rate: null,
         price: null,
         activities: [],
+        activities: [],
       };
       this.transportation = null;
       this.reservation = {
@@ -93,6 +100,7 @@ export const useBookingStore = defineStore("booking", {
         time: "",
         comment: "",
       };
+      this.totalPrice = 0;
       this.totalPrice = 0;
       this.bookings = [];
     },
@@ -114,4 +122,7 @@ export const useBookingStore = defineStore("booking", {
       this.totalPrice = total;
     }
   }
+})
+    }
+  }
 })
