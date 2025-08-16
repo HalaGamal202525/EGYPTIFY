@@ -6,17 +6,14 @@
 </Slide> -->
     <slide></slide>
     <!-- section -->
-    <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
+    <!-- <div class="flex items-center justify-center py-12 bg-[#FFFDF9]">
       <div
         class="bg-gray-100 rounded-xl w-full max-w-5xl p-8 shadow-lg flex flex-col gap-6"
       >
         <div class="grid grid-cols-1 w-full md:grid-cols-3 gap-6">
-          <!-- Location -->
           <div class="flex flex-col gap-2 ">
-            <!-- Label -->
             <label class="text-gray-700 font-semibold text-lg">Where to?</label>
 
-            <!-- InputField -->
             <InputField
               v-model="searchText"
               type="text"
@@ -25,14 +22,12 @@
               @focus="showSuggestions = true"
               @blur="hideSuggestions"
             >
-              <!-- Icon -->
               <template #icon>
                 <i
                   class="fa-solid fa-location-dot mr-2 text-[#ffc340] text-xl"
                 ></i>
               </template>
             </InputField>
-            <!-- Suggestions -->
             <ul
               v-if="showSuggestions && filteredPlaces.length"
               class="absolute top-[82px] left-0 w-full bg-white border border-yellow-300 rounded-lg shadow-lg z-10 max-h-[200px] overflow-y-auto"
@@ -48,7 +43,6 @@
             </ul>
           </div>
 
-          <!-- Date -->
           <div class="flex flex-col gap-2">
             <label class="text-gray-700 font-semibold text-lg"
               >When to go?</label
@@ -58,7 +52,6 @@
             </InputField>
           </div>
 
-          <!-- Guests -->
           <div class="flex flex-col gap-2">
             <label class="text-gray-700 font-semibold text-lg">Guests?</label>
             <InputField
@@ -78,14 +71,13 @@
         >
           Please fill in all fields before searching.
         </div>
-        <!-- Search Button -->
         <div class="flex justify-center w-full">
           <basebutton class="w-full" @click="handleSearch">
             <i class="fa-solid fa-magnifying-glass mr-2"></i> Search
           </basebutton>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Destination Section -->
  <section class="py-16 bg-[#FFFDF9]">
