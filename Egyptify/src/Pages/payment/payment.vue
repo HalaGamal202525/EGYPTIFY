@@ -83,6 +83,7 @@
         >
           <div v-if="hotel">
             <div class="py-4 space-y-2">
+              <img :src="hotel.image"/>
               <h2 class="text-xl font-bold text-gray-800">{{ hotel.name }}</h2>
               <p class="text-gray-600">
                 {{ hotel.location }}
@@ -337,7 +338,7 @@
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
               <span>Total Price:</span>
-              <span>{{ bookingStore.totalPrice }} EGP</span>
+              <span>{{ totalPrice }} EGP</span>
             </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
