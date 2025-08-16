@@ -120,7 +120,7 @@ export function generateRestaurantDetails(slug) {
       "Asian",
       "American",
     ]),
-    priceRange: faker.helpers.arrayElement(["$", "$$", "$$$"]),
+    price: faker.number.int({ min: 100, max: 500 }),
     address: faker.location.streetAddress(),
     phone: faker.phone.number(),
     description: faker.lorem.paragraphs(2),
