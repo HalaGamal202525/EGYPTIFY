@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
-  <div class="flex h-screen mt-10  bg-[#FFFDF9]">
-    <div class="w-full flex justify-center items-center p-8 ">
+  <div class="flex h-screen mt-18 bg-[#FFFDF9]">
+    <div class="w-full flex justify-center items-center p-8">
       <form @submit.prevent="handleSubmit" class="bg-white rounded-2xl border border-gray-300 shadow-md w-full max-w-md p-8">
         <h2 class="text-3xl font-bold mb-4 text-black text-center">Reset Password</h2>
         <p class="text-center text-gray-500 mb-6">
@@ -38,7 +38,7 @@
           </BaseButton>
         </div>
 
-        <div v-else>
+        <div v-else >
           <div class="mb-6">
             <label class="block text-black font-semibold mb-1">New Password*</label>
             <InputField
@@ -69,7 +69,7 @@
             type="submit" 
             class="w-full text-white text-lg py-3 mb-6"
           >
-            Reset Password
+            {{ showPasswordFields ? 'Save' : 'Send Reset Link' }}
           </BaseButton>
         </div>
 
@@ -84,33 +84,26 @@
         </div>
       </form>
     </div>
-
-    <!-- <div class="hidden md:block md:w-1/2 bg-gray-100">
-      <img
-        src="../../assets/egyptian-hieroglyphs-wall.jpg"
-        alt="Password reset visual"
-        class="w-full h-full object-cover"
-      />
-    </div> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import InputField from '../../components/InputField.vue';
 import BaseButton from '../../components/BaseButton.vue';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 import NavBarBlack from '../../components/NavBar-Black.vue';
-import NavBarMenu from '../../components/NavBarMenu.vue'; 
 
 const email = ref('');
 const newPassword = ref('');
 const confirmPassword = ref('');
 const message = ref('');
 const error = ref('');
-const showPasswordFields = ref(false); // New state variable
+const showPasswordFields = ref(false);
 
 const auth = getAuth();
+const router = useRouter(); // Initialize router
 
 const handleSubmit = async () => {
   message.value = '';
@@ -121,8 +114,8 @@ const handleSubmit = async () => {
     try {
       await sendPasswordResetEmail(auth, email.value);
       message.value = 'Password reset email sent! Check your inbox.';
-      error.value = ''; // Clear any previous errors
-      showPasswordFields.value = true; // Switch to the password fields
+      error.value = '';
+      showPasswordFields.value = true;
     } catch (err) {
       message.value = '';
       error.value = err.message;
@@ -134,13 +127,24 @@ const handleSubmit = async () => {
       return;
     }
     
-    // NOTE: This is a placeholder. A secure password change
-    // requires a unique token from the email. This is not a
-    // secure method for a real application.
-    message.value = 'Password changed successfully!';
-    newPassword.value = '';
-    confirmPassword.value = '';
-    error.value = '';
+    // NOTE: This is a placeholder for a real-world secure password change process.
+    // This code will not actually change the password in Firebase.
+    // The correct process involves a user clicking a reset link with a unique token.
+    try {
+      // Simulate a successful password change
+      message.value = 'Password saved successfully!';
+      newPassword.value = '';
+      confirmPassword.value = '';
+      error.value = '';
+
+      // Redirect to login page after a short delay to show the success message
+      setTimeout(() => {
+        router.push('/login');
+      }, 2000); // 2-second delay
+      
+    } catch (err) {
+      error.value = err.message;
+    }
   }
 };
 </script>
@@ -157,4 +161,4 @@ a {
 .star-rating .fa-star {
   font-size: 1.5rem;
 }
-</style>  
+</style>
