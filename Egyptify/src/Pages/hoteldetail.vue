@@ -215,6 +215,9 @@ const goToRoomType = () => {
 
 console.log(hoteldetails)
 
+
+
+
 </script>
 
 <style scoped>

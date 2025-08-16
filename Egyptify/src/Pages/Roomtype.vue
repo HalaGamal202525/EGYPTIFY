@@ -7,7 +7,7 @@
       <div class="flex flex-row gap-3 items-center justify-center">
         <i class="fa-solid fa-arrow-left text-2xl " @click="goback"></i>
       <h3 class="font-bold text-xl d-inline">Filtered By:</h3>
-</div>
+    </div>
       <RoomFilter @filter-price="setPrice" @filter-guest="setGuests"  class="flex justify-center my-4 items-center"/>
     </div>
 
@@ -57,6 +57,14 @@ const bookingStore = useBookingStore()
 
 const handleBookRoom = (room) => {
   bookingStore.setRoomDetails(room.name, room.guestno, room.price,room.image)
+
+   // إضافة الحجز لقائمة الحجوزات وحساب الإجمالي
+  bookingStore.addBooking({
+    type: 'Hotel',
+    name: room.name,
+    price: room.price
+  });
+
   router.push('/form')
 }
 
@@ -87,4 +95,11 @@ const filteredRooms = computed(() => {
     return matchPrice && matchGuest;
   });
 });
+
+
+
+
+
+
+
 </script>

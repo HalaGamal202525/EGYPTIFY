@@ -12,8 +12,17 @@ export const useBookingStore = defineStore('booking', {
       rate: null,
       price: null,
 
-
     },
+
+
+
+
+      // الإجمالي وقائمة الحجوزات
+       totalPrice: 0,
+       bookings: [], // عشان لو حابة تحتفظ بكل الحجوزات كمان
+
+
+
 
  // بيانات وسيلة المواصلات
     transportation: null,
@@ -85,6 +94,15 @@ export const useBookingStore = defineStore('booking', {
         time: '',
         comment: ''
       };
+
+
+
+
+
+       this.totalPrice = 0;
+      this.bookings = [];
+
+
       },
 
        setTransportation(transportData) {
@@ -97,6 +115,20 @@ export const useBookingStore = defineStore('booking', {
       this.reservation = { ...data };
     },
 
+
+
+
+
+     // إضافة حجز جديد للإجمالي
+    addBooking(booking) {
+      this.bookings.push(booking);
+      this.totalPrice += booking.price;
+    },
+
+    setTotal(total) {
+      this.totalPrice = total;
+    }
+  
 
 
   }
