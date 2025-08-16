@@ -1,0 +1,72 @@
+[
+  {
+    "budget": "economy",
+    "duration": 4,
+    "interests": ["Cultural & Historical Places", "Tour"],
+    "transportation": "Bus",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Cairo & Pyramids Tour",
+        "accommodation": "Stay in Cairo",
+        "image": "https://example.com/images/pyramids.jpg"
+      },
+      {
+        "day": 2,
+        "title": "Egyptian Museum & Khan el-Khalili Bazaar",
+        "accommodation": "Stay in Cairo",
+        "image": "https://example.com/images/museum.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Travel to Luxor & Karnak Temple",
+        "accommodation": "Stay in Luxor",
+        "image": "https://example.com/images/karnak.jpg"
+      },
+      {
+        "day": 4,
+        "title": "Valley of the Kings & Departure",
+        "accommodation": "Depart from Luxor",
+        "image": "https://example.com/images/kings.jpg"
+      }
+    ]
+  },
+  {
+    "budget": "mid-range",
+    "duration": 5,
+    "interests": ["Nature & Outdoor", "Tour"],
+    "transportation": "Car",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival & City Tour",
+        "accommodation": "Hotel in City Center",
+        "image": "https://example.com/images/city.jpg"
+      },
+      {
+        "day": 2,
+        "title": "Adventure Day",
+        "accommodation": "Hotel in Nature Reserve",
+        "image": "https://example.com/images/adventure.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Hiking Trip",
+        "accommodation": "Hotel in the Mountains",
+        "image": "https://example.com/images/hiking.jpg"
+      },
+      {
+        "day": 4,
+        "title": "Relaxing by the Lake",
+        "accommodation": "Lakeside Resort",
+        "image": "https://example.com/images/lake.jpg"
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "accommodation": "Depart from Airport",
+        "image": "https://example.com/images/plane.jpg"
+      }
+    ]
+  }
+]
