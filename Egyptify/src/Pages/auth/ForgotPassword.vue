@@ -43,7 +43,7 @@
       </form>
     </div>
 
-\    <div class="hidden md:block md:w-1/2 bg-gray-100">
+   <div class="hidden md:block md:w-1/2 bg-gray-100">
       <img
         src="../../assets/signup .png"
         alt="Password reset visual"

@@ -8,7 +8,7 @@
 
         <!-- Links -->
         <div class="hidden md:flex space-x-8 items-center text-[16px]">
-            <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goToexplore">Explore</a>
+            <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goTodestinations">Destinations</a>
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400" @click="goTotripplaner">Trips</a>
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goTotripreviews">Reviews</a>
 
@@ -97,8 +97,8 @@ router.push("../../../login")}
 function goTohome(){
     router.push("/")}
 
-function goToexplore(){
-    router.push("/explore")}
+function goTodestinations(){
+    router.push("/destination")}
 
     function goTotripplaner(){
     router.push("/tripplanner")}

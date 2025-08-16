@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#fefaf2] min-h-screen flex flex-col">
+    <div class="bg-[#FFFDF9] min-h-screen flex flex-col">
 
   <Navbar />
   
@@ -30,8 +30,9 @@
         <!-- From -->
         <div>
           <label class="block text-sm font-semibold mb-1">From</label>
-          <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-            <option>Choose city</option>
+          <select v-model="filters.from" 
+          class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Choose city</option>
             <option>Cairo</option>
             <option>Giza</option>
             <option>Alexandria</option>
@@ -52,8 +53,9 @@
         <!-- To -->
         <div>
           <label class="block text-sm font-semibold mb-1">To</label>
-         <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-            <option>Choose destination</option>
+         <select v-model="filters.to" 
+         class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Choose destination</option>
             <option>Cairo</option>
             <option>Giza</option>
             <option>Luxor</option>
@@ -78,7 +80,7 @@
         <!-- Travel Date -->
         <div>
           <label class="block text-sm font-semibold mb-1">Travel Date</label>
-          <input
+          <input v-model="filters.date"
             type="date"
             class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
@@ -87,8 +89,9 @@
         <!-- Passengers -->
         <div>
           <label class="block text-sm font-semibold mb-1">Passengers</label>
-        <select class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
-            <option>Select number</option>
+        <select v-model="filters.passengers" 
+        class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Select number</option>
             <option>1 Passenger</option>
             <option>2 Passengers</option>
             <option>3 Passengers</option>
@@ -100,7 +103,7 @@
 
       <!-- Search Button -->
 <div class="mt-6 flex justify-center">
-  <BaseButton class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-8 rounded-xl cursor-pointer" @click="gototarnsportion">
+  <BaseButton class="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold py-2 px-8 rounded-xl cursor-pointer"  @click="scrollToCards">
     Search Trips
   </BaseButton>
 </div>
@@ -154,11 +157,11 @@
 
   
 
-<section
+<section ref="cardsSection"
   class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-4 pb-8"
 >
   <CardComponent
-    v-for="item in filteredTransportation"
+    v-for="item in paginatedTransportation"
     :key="item.id"
     :title="item.provider"
     :type="item.type"
@@ -178,6 +181,13 @@
     class="!w-full min-w-[380px] min-h-[260px] flex flex-col bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-transform hover:scale-[1.03]"
   />
 </section>
+<div class="flex justify-center mb-16">
+            <PaginationComponent
+              :currentPage="currentPage"
+              :totalPages="totalPages"
+              @page-changed="handlePageChange"
+            />
+          </div>
 
 
 
@@ -206,8 +216,7 @@
       </p>
     </div>
 
-
-    
+     
 
     <!-- Special Offers Section -->
 <section class="px-6 pb-20 w-full">
@@ -258,6 +267,26 @@ import { ref, computed } from "vue";
 import DropdownMenu from "../components/DropdownMenu.vue";
 import CardComponent from "../components/card.vue";
 import BookingCalendar from "../components/bookingCalendar.vue";
+import PaginationComponent from "../components/PaginationComponent.vue";
+
+const currentPage = ref(1); // الصفحة الحالية
+const itemsPerPage = ref(6); // عدد العناصر في كل صفحة
+ // إجمالي الصفحات
+const totalPages = computed(() => {
+  return Math.ceil(filteredTransportation.value.length / itemsPerPage.value);
+});
+
+// بيانات الصفحة الحالية
+const paginatedTransportation= computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage.value;
+  const end = start + itemsPerPage.value;
+  return filteredTransportation.value.slice(start, end);
+});
+const handlePageChange = (page) => {
+  currentPage.value = page;
+};
+
+
 
 
 const bookingHeroImg = "/booking-hero.webp"
@@ -301,14 +330,14 @@ const typeOptions = [
 ];
 
 // فلترة البيانات
-const filteredTransportation = computed(() => {
-  return transportationData.value.filter((item) => {
-    const fromMatch = !selectedFrom.value || item.from === selectedFrom.value;
-    const toMatch = !selectedTo.value || item.to === selectedTo.value;
-    const typeMatch = !selectedType.value || item.type === selectedType.value;
-    return fromMatch && toMatch && typeMatch;
-  });
-});
+// const filteredTransportation = computed(() => {
+//   return transportationData.value.filter((item) => {
+//     const fromMatch = !selectedFrom.value || item.from === selectedFrom.value;
+//     const toMatch = !selectedTo.value || item.to === selectedTo.value;
+//     const typeMatch = !selectedType.value || item.type === selectedType.value;
+//     return fromMatch && toMatch && typeMatch;
+//   });
+// });
 
 // عملية البحث
 const handleSearch = () => {
@@ -356,5 +385,45 @@ const handleBookNow = (item) => {
 };
 
 
-// const emit = defineEmits(["book-now"]);
+
+
+
+
+
+
+// state بتاع الفلاتر
+const filters = ref({
+  from: "",
+  to: "",
+  date: "",
+  passengers: ""
+});
+
+// كل الداتا
+const transportation = ref(transportationData);
+
+// فلترة الداتا بناءً على الفلاتر
+const filteredTransportation = computed(() => {
+  return transportation.value.filter(item => {
+    return (
+      (!filters.value.from || item.from === filters.value.from) &&
+      (!filters.value.to || item.to === filters.value.to) &&
+      (!filters.value.date || item.date === filters.value.date) &&
+      (!filters.value.passengers || item.passengers >= Number(filters.value.passengers))
+    );
+  });
+});
+
+
+
+
+const cardsSection = ref(null)
+
+// عند الضغط على زر البحث
+const scrollToCards = () => {
+  cardsSection.value?.scrollIntoView({ behavior: "smooth" })
+
+};
+
+
 </script>
