@@ -41,7 +41,7 @@
         <h3 class="font-bold">Feild to login</h3>
         <button @click="showErrorModal = false" class="text-pink-800 font-bold">&times;</button>
       </div>
-      <p> Eamil or password inncorrect.</p>
+      <p>Email or password incorrect.</p>
     </div>
   </div> 
     <div

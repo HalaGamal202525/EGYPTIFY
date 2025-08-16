@@ -1,5 +1,5 @@
 [
-  {
+  { 
     "budget": "economy",
     "duration": 4,
     "interests": ["Cultural & Historical Places", "Tour"],
@@ -9,64 +9,93 @@
         "day": 1,
         "title": "Arrival in Cairo & Pyramids Tour",
         "accommodation": "Stay in Cairo",
-        "image": "https://example.com/images/pyramids.jpg"
+        "image": "/historical/pyramids (4).jpg"
       },
       {
         "day": 2,
-        "title": "Egyptian Museum & Khan el-Khalili Bazaar",
+        "title": "Egyptian Museum",
         "accommodation": "Stay in Cairo",
-        "image": "https://example.com/images/museum.jpg"
+        "image": "/historical/The-Grand-Egyptian.jpg"
       },
       {
         "day": 3,
         "title": "Travel to Luxor & Karnak Temple",
         "accommodation": "Stay in Luxor",
-        "image": "https://example.com/images/karnak.jpg"
+        "image": "/historical/karnak.webp"
       },
       {
         "day": 4,
         "title": "Valley of the Kings & Departure",
         "accommodation": "Depart from Luxor",
-        "image": "https://example.com/images/kings.jpg"
+        "image": "/historical/vaiiy.webp"
       }
     ]
   },
   {
     "budget": "mid-range",
     "duration": 5,
-    "interests": ["Nature & Outdoor", "Tour"],
+    "interests": ["Nature & Outdoor"],
     "transportation": "Car",
     "itinerary": [
       {
         "day": 1,
         "title": "Arrival & City Tour",
-        "accommodation": "Hotel in City Center",
-        "image": "https://example.com/images/city.jpg"
+        "accommodation": "Siwa Oasis",
+        "image": "/natural/siwa.jpg"
       },
       {
         "day": 2,
         "title": "Adventure Day",
-        "accommodation": "Hotel in Nature Reserve",
-        "image": "https://example.com/images/adventure.jpg"
+        "accommodation": "White Desert",
+        "image": "/natural/white.jpg"
       },
       {
         "day": 3,
         "title": "Hiking Trip",
-        "accommodation": "Hotel in the Mountains",
-        "image": "https://example.com/images/hiking.jpg"
+        "accommodation": "Ras Mohammed National Park",
+        "image": "/natural/Rasmohamed.jpg"
       },
       {
         "day": 4,
         "title": "Relaxing by the Lake",
-        "accommodation": "Lakeside Resort",
-        "image": "https://example.com/images/lake.jpg"
+        "accommodation": "Dahab Blue Lagoon",
+        "image": "/natural/logoon.jpg"
       },
       {
         "day": 5,
         "title": "Departure",
         "accommodation": "Depart from Airport",
-        "image": "https://example.com/images/plane.jpg"
+        "image": "/natural/plane.jpg"
       }
     ]
+  },
+  
+  {
+    "budget": "luxury",
+    "duration": 3,
+    "interests": ["Entertainment"],
+    "transportation": "Car",
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Family-friendly zones, and live shows",
+        "accommodation": "Dream Park",
+        "image": "/entertainment/dream.jpg"
+      },
+      {
+        "day": 2,
+        "title": "Educational Entertainment",
+        "accommodation": "KidZania",
+        "image": "/entertainment/kidzaina.jpg"
+      },
+      {
+        "day": 3,
+        "title": "Indoor fun Trip",
+        "accommodation": "Magic Planet",
+        "image": "/entertainment/magic.jpg"
+      }
+      
+    ]
   }
+  
 ]
