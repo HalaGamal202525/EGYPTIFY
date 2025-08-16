@@ -108,7 +108,7 @@
 
               <p class="text-gray-900 font-bold text-lg">
                 <span class="font-bold">Price:</span>
-                {{ bookingStore.totalPrice }} EGP / night
+                {{ bookingStore.price }} EGP / night
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@
             <p class="mb-3"><strong>Date:</strong> {{ formData.date }}</p>
             <p class="font-bold">
               <strong>Price:</strong>
-              {{ bookingStore.totalPrice }} EGP
+              {{ bookingStore.transportation.totalPrice }} EGP
             </p>
           </div>
 
