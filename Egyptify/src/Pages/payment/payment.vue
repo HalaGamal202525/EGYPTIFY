@@ -337,8 +337,9 @@
             <div
               class="text-lg font-bold flex flex-row justify-between items-center mt-4 border-t pt-4"
             >
-      <span>Total Price:</span>
-              <span>400 EGP</span>            </div>
+              <span>Total Price:</span>
+              <span>{{ totalPrice }} EGP</span>
+            </div>
 
             <BaseButton @click="goToOtpSection" class="w-full mt-6"
               >Continue</BaseButton
@@ -498,8 +499,9 @@
             <div
               class="text-lg font-bold flex justify-between items-center pt-4 border-t mt-4"
             >
-      <span>Total Price:</span>
-              <span>400 EGP</span>            </div>
+              <span>Total Price:</span>
+              <span>{{ bookingStore.totalPrice }} EGP</span>
+            </div>
 
             <BaseButton @click="nextStep" class="w-full mt-4"
               >Continue</BaseButton
