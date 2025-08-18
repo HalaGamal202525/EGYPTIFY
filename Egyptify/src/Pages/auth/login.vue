@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row h-screen ">
+  <div class="flex flex-col md:flex-row h-screen">
     <div
       class="w-full md:w-1/2 h-3/4 md:h-full bg-white flex justify-center items-center p-6 md:p-8"
     >
@@ -15,7 +15,6 @@
 
     <div class="w-full md:w-1/2 h-3/4 md:h-full bg-gray-100">
       <img
-      
         src="../../assets/egyptian-hieroglyphs-wall.jpg"
         alt="Login visual"
         class="w-full h-full object-cover"
@@ -35,15 +34,43 @@
         </BaseButton>
       </div>
     </div>
-  <div v-if="showErrorModal" class="fixed inset-0 flex items-center justify-center bg-black model z-50">
-    <div class="bg-pink-100 border border-pink-400 text-pink-800 px-6 py-4 rounded-lg shadow-lg w-80">
-      <div class="flex justify-between items-center mb-2">
-        <h3 class="font-bold">Feild to login</h3>
-        <button @click="showErrorModal = false" class="text-pink-800 font-bold">&times;</button>
+    <div
+      v-if="showErrorModal"
+      class="fixed inset-0 flex items-center justify-center model bg-black bg-opacity-40 z-50"
+    >
+      <div
+        class="bg-white rounded-xl shadow-2xl w-80 p-6 border-l-4 border-pink-500 animate-fadeIn"
+      >
+        <div class="flex items-start justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <svg
+              class="w-6 h-6 text-pink-500"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"
+              />
+            </svg>
+            <h3 class="text-lg font-semibold text-pink-600">Failed to Login</h3>
+          </div>
+          <button
+            @click="showErrorModal = false"
+            class="text-gray-400 hover:text-pink-600 font-bold text-xl"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Email or password is incorrect. Please try again.
+        </p>
       </div>
-      <p>Email or password incorrect.</p>
     </div>
-  </div> 
+
     <div
       v-if="showForgotPassword"
       class="text-center md:text-right mt-2 md:mt-1 mb-4 px-4"
@@ -60,7 +87,11 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "vue-router";
@@ -87,7 +118,11 @@ const gotohome = () => {
 
 async function handleLogin({ email, password }) {
   try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
     const user = userCredential.user;
 
     const docSnap = await getDoc(doc(db, "users", user.uid));
@@ -117,13 +152,24 @@ onAuthStateChanged(auth, async (user) => {
     }
   }
 });
-
-
 </script>
-
 
 <style scoped>
 .model {
   background-color: rgba(128, 128, 128, 0.329);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
 }
 </style>
