@@ -2,10 +2,10 @@
   <div class="font-sans text-gray-800 bg-[#FAFAFA]">
     <Navbar />
 
-    <section v-if="place" class="max-w-7xl mx-auto px-6 py-12 mt-20">
+    <section v-if="place" class="max-w-7xl mx-auto px-6 py-8 mt-20">
       <!-- Title and Rating -->
-       <router-link :to="`/`">Home</router-link>
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+       <router-link :to="`/`" class="underline text-blue-600">Home</router-link>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center my-6">
         <h1 class="text-4xl font-bold mb-2">{{ place.title }}</h1>
         <div class="flex items-center gap-2 text-yellow-500 text-lg">
           <i class="fa-solid fa-star"></i>
