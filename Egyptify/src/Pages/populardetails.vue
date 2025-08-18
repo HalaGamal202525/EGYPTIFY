@@ -44,10 +44,10 @@
         </div>
 
         <!-- Booking -->
-        <div class="bg-white shadow-md rounded-xl p-6 space-y-4">
+        <div class="bg-white shadow-md rounded-xl h-55 p-6 space-y-7">
           <h3 class="text-xl font-bold text-gray-900">Plan Your Visit</h3>
           <p class="text-gray-800 text-lg">From <span class="font-semibold">{{ place.price }} EGP</span></p>
-          <BaseButton class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg transition"   @click="bookNow">
+          <BaseButton class="w-full  font-bold py-2 rounded-lg transition"   @click="bookNow">
             Book Now
           </BaseButton>
         </div>
