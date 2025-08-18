@@ -59,7 +59,7 @@
         </div>
 
         <p class="text-sm text-gray-500 mb-2 py-2">{{ description }}</p>
-        <div v-if="rating" class="text-yellow-500 text-sm mb-1 py-4">
+        <div v-if="rating" class="text-yellow-500 text-sm mb-1 py-1">
           <span v-for="n in Math.floor(rating)" :key="n"
             ><i class="fa-solid fa-star" style="color: #ffc340"></i
           ></span>
@@ -107,7 +107,7 @@
         <span class="text-yellow-600 font-bold text-md" v-if="price">
           {{ price }} EGP</span
         >
-        <div class="pt-4 flex justify-center items-center">
+        <div class=" flex justify-center items-center">
           <slot name="action" v-if="hasActionSlot" />
           <BaseButton v-else-if="showButton" @click="handleClick">{{
             buttonText

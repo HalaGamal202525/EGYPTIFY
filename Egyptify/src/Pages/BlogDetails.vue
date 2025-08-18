@@ -21,21 +21,22 @@ function goToDetails(id) {
     <navbar />
 
    <div class="max-w-4xl mx-auto mt-24 px-4">
-  <div class="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg">
+  <div class="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg">
     <img
       :src="blog.image"
       alt="Blog Image"
-      class="w-full h-80 object-cover rounded-xl"
+      class="w-full h-80 object-cover rounded-lg"
     />
   </div>
 </div>
     <!-- Blog Content -->
-    <div class="max-w-4xl mx-auto px-4 py-12">
-      <h1 class="text-3xl md:text-5xl font-bold mb-4">{{ blog.title }}</h1>
-      <p class="text-sm text-gray-500 mb-2">By {{ blog.author }} • {{ blog.date }}</p>
+    <div class="max-w-10xl mx-20 px-4 py-6 mt-6 bg-white rounded-md shadow-md">
+      <h1 class="text-3xl md:text-4xl font-medium mb-8 ">{{ blog.title }}</h1>
+      
+      <p class="text-sm text-gray-500 mb-4">By {{ blog.author }} • {{ blog.date }}</p>
 
-      <div class="flex items-center gap-4 mb-6">
-        <img :src="blog.authorImage" class="w-14 h-14 rounded-full object-cover" />
+      <div class="flex items-center gap-4 mb-6 ">
+        <img :src="blog.authorImage" class="w-14 h-14 rounded-full shadow-sm  object-contain" />
         <div>
           <p class="font-semibold">{{ blog.author }}</p>
           <p class="text-sm text-gray-600">{{ blog.authorBio }}</p>
@@ -48,16 +49,16 @@ function goToDetails(id) {
     </div>
 
     <!-- Related Posts -->
-    <div class="bg-gray-50 py-10 px-4 md:px-20">
+    <div class="bg-gray-50 py-10 px-4 md:px-20 mb-16">
       <h2 class="text-2xl font-bold mb-6">Related Posts</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
           v-for="item in related"
           :key="item.id"
-          class="flex flex-col justify-between p-4 border rounded shadow hover:shadow-lg transition duration-300 bg-white"
+          class="flex flex-col justify-between p-4 rounded shadow hover:shadow-lg transition duration-300 bg-white"
         >
           <div>
-            <img :src="item.image" class="w-full h-40 object-cover rounded mb-4" />
+            <img :src="item.image" class="w-full h-50 object-cover rounded mb-4" />
             <h3 class="text-xl font-bold mb-2">{{ item.title }}</h3>
             <p class="text-sm text-gray-600 mb-2">By {{ item.author }}</p>
             <p class="text-sm text-gray-600 mb-4">{{ item.summary }}</p>

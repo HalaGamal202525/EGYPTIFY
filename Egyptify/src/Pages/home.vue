@@ -81,7 +81,7 @@
 
     <!-- Destination Section -->
  <section class="py-16 bg-[#FFFDF9]">
-    <div class="text-center mb-12">
+    <div class="text-center mb-18">
       <h2 class="special-heading">Destination</h2>
       <p class="text-xl text-gray-700">Popular Destination</p>
     </div>
@@ -140,7 +140,7 @@
 
     <!-- discover -->
     <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">Discover</h2>
         <p class="text-xl text-gray-700">Things to Do</p>
       </div>
@@ -172,7 +172,7 @@
 
     <!-- top rated -->
     <section class="py-16 bg-[#FFFDF9] relative" style="height: 650px">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">Top rated</h2>
         <p class="text-xl text-gray-700">Chosen by explorers like you</p>
       </div>
@@ -197,7 +197,7 @@
             :id="card.id"
             @toggle-favorite="toggleFavorite(card.id)"
             class="bg-white shadow-2xl rounded-xl gap-3 w-full max-w-xs"
-            style="height: 380px"
+            style="height: 360px"
           />
         </div>
       </div>
@@ -223,7 +223,7 @@
 
     <!-- Testimonials -->
     <section class="py-16 bg-[#FFFDF9] relative" style="height: 600px">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">Testimonials</h2>
         <p class="text-xl text-gray-700">What Travelers Say</p>
       </div>
@@ -300,7 +300,7 @@
 
     <!-- recommended -->
     <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">Recommended</h2>
         <p class="text-xl text-gray-700">Discover top-rated adventures</p>
       </div>
@@ -329,7 +329,7 @@
     </section>
     <!-- offer -->
     <section class="py-16 bg-[#FFFDF9]">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">offers</h2>
         <p class="text-xl text-gray-700">special offers</p>
       </div>
@@ -357,7 +357,7 @@
     </section>
     <!-- package -->
     <section class="py-16 bg-[#F9FAFB]">
-      <div class="text-center mb-12">
+      <div class="text-center mb-18">
         <h2 class="special-heading">Packages</h2>
         <p class="text-xl text-gray-700">Explore Packages</p>
       </div>
@@ -479,7 +479,7 @@ const top = [
   {
     id: 1,
     image: "sara/praymids1.jpg",
-    title: "Giza Pyramids Giza",
+    title: "Giza Pyramids",
     rate: 4,
     description: "Walk through one of the world's ancient wonders.",
   },
@@ -494,7 +494,7 @@ const top = [
   {
     id: 3,
     image: "hero/luxortambel.jpg",
-    title: "Valley of the Kings Luxor",
+    title: "Valley of the Kings",
     rate: 4.5,
 
     description: "Explore the royal tombs of ancient pharaohs.",
@@ -509,14 +509,14 @@ const top = [
   {
     id: 5,
     image: "sara/whitedesert.jpg",
-    title: "The White Desert - Western Desert ",
+    title: "The White Desert",
     rate: 4.9,
     description: "The White Desert in Egypt is a unique natural wonder.",
   },
   {
     id: 6,
     image: "sara/The-Grand-Egyptian.jpg",
-    title: "Grand Egyptian Museum – Giza,",
+    title: "Grand Egyptian Museum",
     rate: 4,
     description: "showcases ancient treasures near the Giza Pyramids.",
   },

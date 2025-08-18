@@ -82,7 +82,7 @@
             <InputField
               id="username"
               type="text"
-              placeholder="Yasmine Emad"
+              placeholder="User Name"
               v-model= "userStore.name "
               required
             >

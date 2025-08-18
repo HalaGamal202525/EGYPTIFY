@@ -1,7 +1,6 @@
 <template>
   <div>
     <navbar />
-
     <div
       class="relative h-64 md:h-125 bg-cover bg-center"
       style="background-image: url('/Destination/background.jpg')"
@@ -15,7 +14,7 @@
 
     <div class="p-4 md:p-9">
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-<div class="w-full lg:w-64 mt-0 bg-white p-4 rounded shadow space-y-4">
+<div class="w-full lg:w-64 mt-0 bg-gray-100 p-4 rounded shadow space-y-4">
 
   <!-- زر الفلتر للموبايل -->
   <button
@@ -48,10 +47,7 @@
     </div>
   </div>
 </div>
-
 </transition>
-
-
 </div>
 
         <div class="flex-1 space-y-6">
@@ -71,8 +67,6 @@
   @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
   class="transition transform hover:-translate-y-1"
 />
-
-
           </section>
 
           <!-- Pagination -->
