@@ -269,6 +269,25 @@
                 </BaseButton>
 
               </div>
+
+
+
+              
+              <!-- 
+               <p class="mt-6 text-gray-700 font-medium mb-6">
+               <div>Discover and book more in this destination :<br></div>
+               <div class="mt-4">
+                <RouterLink :to="{ path: '/hotels', query: { location: destination } }" class="text-yellow-600 hover:underline pr-2">Hotels</RouterLink>  |   
+                <RouterLink :to="{ path: '/resturant', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Restaurants</RouterLink>  |
+                <RouterLink :to="{ path: '/events', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Events</RouterLink>  |
+                <RouterLink :to="{ path: '/transportiondetails', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Transportation</RouterLink>
+                </div>
+              </p> -->
+
+
+
+
+
                               <BaseButton @click="goToForm">Go to check-out</BaseButton>
 
             </div>

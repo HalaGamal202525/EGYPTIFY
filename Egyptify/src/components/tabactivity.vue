@@ -22,6 +22,11 @@
       <component :is="tabs[activeTab].component" />
     </div>
   </div>
+
+
+  
+
+
 </template>
 
 <script setup>
