@@ -1,4 +1,3 @@
-<!-- src/pages/BlogDetails.vue -->
 <script setup>
 import { blogs } from '../BlogData.js'
 import { useRoute, useRouter } from 'vue-router'
@@ -29,8 +28,7 @@ function goToDetails(id) {
     />
   </div>
 </div>
-    <!-- Blog Content -->
-    <div class="max-w-10xl mx-20 px-4 py-6 mt-6 bg-white rounded-md shadow-md">
+    <div class="max-w-10xl mx-20 px-4 py-6 mt-6 bg-white rounded-lg shadow-lg">
       <h1 class="text-3xl md:text-4xl font-medium mb-8 ">{{ blog.title }}</h1>
       
       <p class="text-sm text-gray-500 mb-4">By {{ blog.author }} • {{ blog.date }}</p>
@@ -48,23 +46,24 @@ function goToDetails(id) {
       </p>
     </div>
 
-    <!-- Related Posts -->
-    <div class="bg-gray-50 py-10 px-4 md:px-20 mb-16">
+    <div class="container mx-auto px-4 mt-20 text-black mb-18">
       <h2 class="text-2xl font-bold mb-6">Related Posts</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 px-8">
         <div
           v-for="item in related"
           :key="item.id"
-          class="flex flex-col justify-between p-4 rounded shadow hover:shadow-lg transition duration-300 bg-white"
+          class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white transition duration-300 transform hover:scale-105 cursor-pointer"
+          @click="() => goToDetails(item.id)"
         >
-          <div>
-            <img :src="item.image" class="w-full h-50 object-cover rounded mb-4" />
-            <h3 class="text-xl font-bold mb-2">{{ item.title }}</h3>
-            <p class="text-sm text-gray-600 mb-2">By {{ item.author }}</p>
-            <p class="text-sm text-gray-600 mb-4">{{ item.summary }}</p>
-          </div>
-          <div class="mt-auto text-center">
-            <BaseButton @click="() => goToDetails(item.id)">Read More</BaseButton>
+          <img :src="item.image" class="w-full h-48 object-cover" />
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{{ item.title }}</h3>
+                        <p class="text-md font-semibold text-gray-800 mb-2">By {{ item.author }}</p>
+            <p class="text-gray-600 text-sm flex-grow mb-4">{{ item.summary }}</p>
+
+            <div class="mt-auto">
+              <BaseButton class="w-1/2 mx-auto text-center">View offer</BaseButton>
+            </div>
           </div>
         </div>
       </div>

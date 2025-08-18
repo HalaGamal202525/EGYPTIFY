@@ -11,7 +11,7 @@
       </div>
       <div class="flex justify-center">
         <BaseButton @click="goToDetails(blog.id)">
-          Read More
+          View more
         </BaseButton>
       </div>
     </div>

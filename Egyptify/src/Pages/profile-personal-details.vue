@@ -3,20 +3,19 @@
   <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
       <div class="flex items-center mb-8">
-          <div class="px-3">
+          <div class="px-3 ">
     <img
       :src="selectedImage || '/about-us/girl-4.png'"
       alt="main"
-      class="w-25 h-25 rounded-full object-contain cursor-pointer "
+      class="w-24 h-24 rounded-full object-contain cursor-pointer"
       @click="openModal"
     />
-
     <div
       v-if="isModalOpen"
       class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
     >
-      <div class="bg-white p-6 rounded-lg shadow-lg w-96">
-        <h2 class="text-lg font-bold mb-4">Choose image</h2>
+      <div class="bg-white p-6 rounded-xl shadow-lg w-96 border border-gray-300">
+        <h2 class="text-lg font-bold mb-6">Choose image</h2>
 
         <div class="grid grid-cols-3 gap-3">
           <img
@@ -27,6 +26,10 @@
             :class="{ 'border-[#ffc340]': selectedTemp === img }"
             @click="selectedTemp = img"
           />
+          <label class="w-25 h-25 rounded-full object-contain cursor-pointer border-2 border-dashed flex items-center justify-center text-gray-400 hover:border-solid hover:border-gray-500">
+            <input type="file" @change="handleFileUpload" class="hidden" accept="image/*" />
+            <i class="fas fa-plus text-2xl"></i>
+          </label>
         </div>
 
         <div class="mt-4 flex justify-between">
@@ -34,13 +37,13 @@
             @click="closeModal"
             class="px-4 py-2 !bg-white !border !border-[#ffc340] !text-[#ffc340] rounded "
           >
-            cansel
+            Cancel
           </BaseButton>
           <BaseButton
             @click="saveImage"
             class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
-            save
+            Save
           </BaseButton>
         </div>
       </div>
@@ -267,14 +270,14 @@
             <div class="ml-4 flex-shrink-0">
               <img
                :src="selectedImage || '/about-us/girl-10.png'"
-     alt="main"
-
-                class="w-24 h-24 object-cover rounded-md"
+               alt="main"
+               class="w-24 h-24 object-cover rounded-md"
               />
             </div>
           </div>
         </div>
       </div>
+
       <div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
         <favorite />
@@ -464,6 +467,18 @@ function saveImage() {
   store.setSelectedImage(selectedImage.value); 
   isModalOpen.value = false;
 }
+
+function handleFileUpload(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      selectedTemp.value = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
 console.log(store.selectedImage)
 /////////////
 const activeTab = ref("personal");
