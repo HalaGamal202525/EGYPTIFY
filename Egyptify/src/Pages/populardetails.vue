@@ -2,10 +2,10 @@
   <div class="font-sans text-gray-800 bg-[#FAFAFA]">
     <Navbar />
 
-    <section v-if="place" class="max-w-7xl mx-auto px-6 py-12 mt-16">
+    <section v-if="place" class="max-w-7xl mx-auto px-6 py-8 mt-20">
       <!-- Title and Rating -->
-       <router-link :to="`/`">Home</router-link>
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+       <router-link :to="`/`" class="underline text-blue-600">Home</router-link>
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center my-6">
         <h1 class="text-4xl font-bold mb-2">{{ place.title }}</h1>
         <div class="flex items-center gap-2 text-yellow-500 text-lg">
           <i class="fa-solid fa-star"></i>
@@ -44,10 +44,10 @@
         </div>
 
         <!-- Booking -->
-        <div class="bg-white shadow-md rounded-xl p-6 space-y-4">
+        <div class="bg-white shadow-md rounded-xl h-55 p-6 space-y-7">
           <h3 class="text-xl font-bold text-gray-900">Plan Your Visit</h3>
           <p class="text-gray-800 text-lg">From <span class="font-semibold">{{ place.price }} EGP</span></p>
-          <BaseButton class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg transition"   @click="bookNow">
+          <BaseButton class="w-full  font-bold py-2 rounded-lg transition"   @click="bookNow">
             Book Now
           </BaseButton>
         </div>
