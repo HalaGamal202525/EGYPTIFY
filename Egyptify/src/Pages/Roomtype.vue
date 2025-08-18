@@ -3,7 +3,7 @@
   <Navbar />
 
   <div class="p-14">
-    <div class="flex flex-row mt-4 justify-around items-center cursor-pointer">
+    <div class="flex flex-row mt-4 justify-between items-center cursor-pointer">
       <div class="flex flex-row gap-3 items-center justify-center">
         <i class="fa-solid fa-arrow-left text-2xl " @click="goback"></i>
       <h3 class="font-bold text-xl d-inline">Filtered By:</h3>
@@ -11,7 +11,7 @@
       <RoomFilter @filter-price="setPrice" @filter-guest="setGuests"  class="flex justify-center my-4 items-center"/>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
 <RoomCard
   v-for="room in filteredRooms"
   :key="room.id"
