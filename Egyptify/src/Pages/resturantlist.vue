@@ -68,6 +68,44 @@ const applyOverlayFilters = () => {
 }
 
 const router = useRouter()
+
+
+
+
+
+
+
+
+
+// import { useRoute } from "vue-router";
+
+
+
+// // 🟡 نقرأ location من اللينك ونطبقها كـ filter
+// const route = useRoute()
+// const selectedLocation = ref(route.query.location || "")
+
+// // أول مرة تفتح الصفحة
+// if (selectedLocation.value) {
+//   appliedFilters.value.governorate = [selectedLocation.value]
+// }
+
+// // ولو تغير الـ query.location (من لينك جديد)
+// watch(
+//   () => route.query.location,
+//   (newLocation) => {
+//     if (newLocation) {
+//       appliedFilters.value.governorate = [newLocation]
+//       currentPage.value = 1
+//     }
+//   },
+
+// )
+
+
+
+
+
 </script>
 
 <template>

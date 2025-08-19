@@ -16,7 +16,7 @@
       <button
         v-if="showHeart"
         @click="toggleFavorite"
-        class="absolute top-2 right-2 w-9 h-9 rounded-full bg-white flex justify-end items-center shadow-md transition"
+        class="absolute top-2 right-2 w-9 h-9 rounded-full bg-white flex justify-end items-center shadow-md transition cursor-pointer"
       >
         <i
           :class="[

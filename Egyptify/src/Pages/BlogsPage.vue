@@ -43,15 +43,15 @@ function goToDetails(id) {
       <div
         v-for="blog in paginatedBlogs"
         :key="blog.id"
-        class="flex flex-col rounded-lg shadow-lg overflow-hidden bg-white transition duration-300 transform hover:scale-105 cursor-pointer"
+        class="flex flex-col rounded-2xl shadow-lg overflow-hidden bg-white transition duration-300 transform hover:scale-105 cursor-pointer"
         @click="() => goToDetails(blog.id)"
       >
         <img :src="blog.image" alt="blog image" class="w-full h-50 object-cover" />
         <div class="p-6 flex flex-col flex-grow">
           <h2 class="text-xl font-bold text-gray-800 mb-2">{{ blog.title }}</h2>
-          <p class="text-gray-500 text-sm mb-4">{{ blog.summary }}</p>
+          <p class="text-gray-500 text-sm flex-grow">{{ blog.summary }}</p>
           <div class="mt-4">
-            <BaseButton class="w-1/2 text-center">View offer</BaseButton>
+            <BaseButton class="w-1/2 mx-auto text-center">View offer</BaseButton>
           </div>
         </div>
       </div>

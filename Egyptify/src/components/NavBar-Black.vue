@@ -104,4 +104,5 @@ function goTodestinations(){
     router.push("/tripplanner")}
         function goTotripreviews(){
     router.push("/user-review")}
+    
 </script>
