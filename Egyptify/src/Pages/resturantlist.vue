@@ -15,6 +15,16 @@ const appliedFilters = ref({
   rating: [],
   cuisine: []
 })
+import { useReservationStore } from "../data/Storeresturant"; // ✅ صححي المسار لو مختلف
+const reservationStore = useReservationStore(); 
+const handleRestaurantClick = (restaurant) => {
+  // ✅ نخزن بيانات المطعم المختار
+  reservationStore.setRestaurant(restaurant);
+
+  // ✅ نروح لصفحة التفاصيل
+  router.push(`/restaurants/${restaurant.slug}`);
+};
+
 
 const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
@@ -68,39 +78,6 @@ const applyOverlayFilters = () => {
 }
 
 const router = useRouter()
-
-
-
-
-
-
-
-
-
-// import { useRoute } from "vue-router";
-
-
-
-// // 🟡 نقرأ location من اللينك ونطبقها كـ filter
-// const route = useRoute()
-// const selectedLocation = ref(route.query.location || "")
-
-// // أول مرة تفتح الصفحة
-// if (selectedLocation.value) {
-//   appliedFilters.value.governorate = [selectedLocation.value]
-// }
-
-// // ولو تغير الـ query.location (من لينك جديد)
-// watch(
-//   () => route.query.location,
-//   (newLocation) => {
-//     if (newLocation) {
-//       appliedFilters.value.governorate = [newLocation]
-//       currentPage.value = 1
-//     }
-//   },
-
-// )
 
 
 
@@ -193,8 +170,7 @@ const router = useRouter()
       <div class="pt-4 flex justify-center">
         <BaseButton
           class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white rounded-xl px-4 py-2"
-          @click="() => router.push(`/restaurants/${restaurant.slug}`)"
-        >
+  @click="() => handleRestaurantClick(restaurant)"        >
           🍽 Show Details
         </BaseButton>
       </div>

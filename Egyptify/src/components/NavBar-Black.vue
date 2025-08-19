@@ -55,6 +55,8 @@
       Login
     </BaseButton>
   </template>
+        <div id="google_translate_element" class="text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"></div>
+
 </div>
 
     </nav>

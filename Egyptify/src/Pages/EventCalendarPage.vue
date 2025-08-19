@@ -134,8 +134,8 @@ const filters = ref({
   city: "",
   type: "",
 });
-import { useBookingStore } from "../data/store.js";
-const bookingStore = useBookingStore();
+import { useCardStore } from "../data/store.js";
+const bookingStore = useCardStore();
 
 function handleCardClick(card) {
   bookingStore.setCardData({

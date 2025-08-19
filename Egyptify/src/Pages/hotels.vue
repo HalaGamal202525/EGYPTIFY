@@ -124,8 +124,8 @@ import SideFilter from "./hotelsfilters.vue";
 import PaginationComponent from "../components/PaginationComponent.vue";
 import hotles from "../data/hotels.json"; 
 
-import { useBookingStore } from '../data/store'
-const bookingStore = useBookingStore()
+import { useHotelStore } from "../data/storehotel"; // صححي المسار حسب مشروعك
+const hotelStore = useHotelStore();
 
 const hotlesdata = ref([]);
 onMounted(() => {
@@ -133,8 +133,9 @@ onMounted(() => {
 });
 
 function selectHotel(selectedHotel) {
-  bookingStore.setHotel(selectedHotel);
+  hotelStore.setHotel(selectedHotel);
 }
+
 
 // Pagination & filters
 const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);

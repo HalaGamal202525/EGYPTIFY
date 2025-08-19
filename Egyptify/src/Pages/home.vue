@@ -418,8 +418,8 @@ const userInput = ref("");
 import rawData from "../data/packages_data.json";
 
 const categories = Object.values(rawData.packageCategories);
-import { useBookingStore } from '../data/store.js'
-const bookingStore = useBookingStore()
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
 
 function handleCardClick(card) {
   bookingStore.setCardData({

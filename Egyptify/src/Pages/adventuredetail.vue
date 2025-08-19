@@ -100,9 +100,8 @@ const places = [
 }
 
 ]
-import { useBookingStore } from '../data/store'
-
-const bookingStore = useBookingStore()
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
 
 function bookNow() {
   if (!place) return;

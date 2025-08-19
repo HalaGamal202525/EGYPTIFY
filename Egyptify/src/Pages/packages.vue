@@ -70,9 +70,10 @@ const setCategoryFromQuery = () => {
 
 onMounted(setCategoryFromQuery);
 watch(() => route.query.category, setCategoryFromQuery);
-import { useBookingStore } from '../data/store.js'
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
+
 import BaseButton from '../components/BaseButton.vue';
-const bookingStore = useBookingStore()
 
 function handleCardClick(card) {
   bookingStore.setCardData({
