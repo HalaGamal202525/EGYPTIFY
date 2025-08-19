@@ -1,8 +1,9 @@
 <template>
-  <Navbar />
+  <NavBarBlack />
+<div class="pt-20">
 
-  <div class="flex px-6 my-20 py-4 gap-6 flex-col sm:flex-row">
-    <div class="flex-1 rounded-md border border-black">
+  <div class="flex px-6 py-4 gap-6 flex-col sm:flex-row">
+    <div class="flex-1 rounded-lg border border-gray-400">
       <div class="px-6 py-4 space-y-6">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
@@ -11,14 +12,14 @@
                 @click="$router.back()"
                 class="text-gray-900 hover:text-black text-xl"
               >
-                <i class="fa-solid fa-arrow-left !text-black"></i>
+                <i class="fa-solid fa-arrow-left !text-gray-800"></i>
               </button>
             </div>
-            <h1 class="text-2xl font-bold text-black">
+            <h1 class="text-2xl font-bold text-gray-800">
               {{ place?.name || "Place not found" }}
             </h1>
           </div>
-          <p class="text-lg text-gray-500 font-medium">
+          <p class="text-lg text-yellow-500 font-bold">
             {{ place?.category || "" }}
           </p>
         </div>
@@ -88,7 +89,7 @@
                   <div class="flex gap-4">
                     <BaseButton
                       @click="bookNow"
-                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
+                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 shadow"
                     >
                       Book Now
                     </BaseButton>
@@ -255,7 +256,7 @@
                   :disabled="addedActivities.includes(act.name)"
                   @click="addToPackage(act)"
                   :class="[
-                    'font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0',
+                    'font-bold py-2 px-6  shadow w-full md:w-auto mt-4 md:mt-0',
                     addedActivities.includes(act.name)
                       ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-[#FFC340] hover:bg-[#eab308] text-white',
@@ -326,6 +327,7 @@
       </div>
     </div>
   </div>
+</div> 
   <foot />
 </template>
 
@@ -333,7 +335,7 @@
 import { ref, computed, watch, nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-import Navbar from "../components/NavBar-Black.vue";
+import NavBarBlack from "../components/NavBar-Black.vue";
 import sidecard from "../components/activity detail/sidecard.vue";
 import foot from "../components/footer.vue";
 
