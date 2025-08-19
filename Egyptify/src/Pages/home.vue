@@ -131,7 +131,7 @@
         </p>
         <basebutton
           @click="gotoplanner"
-          class="py-6 rounded-[16px] cursor-pointer transition"
+          class="py-6 rounded-lg cursor-pointer transition"
         >
           Start planning
         </basebutton>
@@ -306,7 +306,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8 cursor-pointer"
       >
         <div
           v-for="card in recommended"
@@ -335,7 +335,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8"
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20 cursor-pointer"
       >
         <div
           v-for="card in offer"
@@ -418,8 +418,8 @@ const userInput = ref("");
 import rawData from "../data/packages_data.json";
 
 const categories = Object.values(rawData.packageCategories);
-import { useBookingStore } from '../data/store.js'
-const bookingStore = useBookingStore()
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
 
 function handleCardClick(card) {
   bookingStore.setCardData({

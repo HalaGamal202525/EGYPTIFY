@@ -5,7 +5,8 @@ import Navbar from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import { generateRestaurantDetails } from "../data/fakedata";
 import BaseButton from "../components/BaseButton.vue";
-import { useBookingStore } from "../data/store.js"; 
+import { useReservationStore } from "../stores/reservation"; 
+const reservationStore = useReservationStore();
 
 
 const router = useRouter()
@@ -26,23 +27,24 @@ const reservation = ref({
 });
 
 const submitReservation = () => {
-  console.log("Reservation Details:", reservation.value);
-   bookingStore.setReservation(reservation.value)
+  // ✅ حفظ تفاصيل الحجز
+  reservationStore.setReservation(reservation.value);
 
+  // ✅ حفظ بيانات المطعم
+  reservationStore.setRestaurant(restaurant.value);
 
-
-   // إضافة الحجز لقائمة الحجوزات
-  bookingStore.addBooking({
-    type: 'Restaurant',
+  // ✅ إضافة الحجز لقائمة الحجوزات
+  reservationStore.addBooking({
+    type: "Restaurant",
     name: restaurant.value.name,
-    price: restaurant.value.priceRange ? parseInt(restaurant.value.priceRange.replace(/\D/g, '')) : 0
+    price: restaurant.value.price
+      ? parseInt(restaurant.value.price.toString().replace(/\D/g, ""))
+      : 0,
   });
 
-
-
-  router.push('/form') 
+  // ✅ تحويل المستخدم لصفحة الفورم
+  router.push("/form");
 };
-
 
 
 

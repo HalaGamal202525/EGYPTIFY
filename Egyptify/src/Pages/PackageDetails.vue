@@ -211,9 +211,9 @@ router.replace(`/packages/${categorySlug}`);
 
 
 
-import { useBookingStore } from '../data/store'
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
 import BaseButton from "../components/BaseButton.vue";
-const bookingStore = useBookingStore()
 function bookNow() {
   if (!pkg.value) return;
 

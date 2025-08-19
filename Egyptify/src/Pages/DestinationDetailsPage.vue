@@ -341,8 +341,8 @@ import data from "../data/Destaintion.json";
 import BaseButton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 
-import { useBookingStore } from "../data/store";
-const bookingStore = useBookingStore();
+import { useCardStore } from "../data/store.js";
+const bookingStore = useCardStore();
 function bookNow() {
   if (!place.value) return;
 

@@ -4,7 +4,7 @@
            bg-transparent absolute top-0 left-0 z-50"
   >
     <div class="flex items-center">
-      <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-30 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
+      <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-36 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
     </div>
     <div class="hidden md:flex space-x-8 items-center text-[16px]">
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400" @click="goTodestinations">Destinations</a>
@@ -28,13 +28,10 @@
           </div>
         </transition>
       </div>
-
     </div>
 
     <div class="flex items-center space-x-4">
-      <span class="text-yellow-400 text-xl">
-        <i class="fa-solid fa-earth-asia"></i>
-      </span>
+      
 
       <template v-if="user">
         <img
@@ -45,17 +42,19 @@
         />
       </template>
 
-
       <template v-else>
         <BaseButton
           @click="gologin"
-          class="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"
+          class="bg-yellow-400 text-black font-bold px-4 py-2  rounded hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"
         >
           Login
         </BaseButton>
       </template>
-    </div>
+      
 
+      <!-- ✅ Google Translate Dropdown -->
+      <div id="google_translate_element" class="text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"></div>
+    </div>
   </nav>
 </template>
 
@@ -131,6 +130,7 @@ function goTotripreviews(){
   router.push("/user-review")
 }
 </script>
+
 <style scoped>
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s;

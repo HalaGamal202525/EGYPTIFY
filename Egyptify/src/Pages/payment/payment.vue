@@ -346,7 +346,6 @@
             >
           </div>
 
-          <!-- Step 2: OTP Section -->
           <div v-else class="flex flex-col gap-4">
             <p class="text-base font-medium mt-2">Enter OTP sent via Fawry:</p>
             <otp @otp-verified="goToStepThree" />
@@ -368,7 +367,6 @@
               Didn’t receive a code?
             </p>
 
-            <!-- أزرار التنقل -->
             <div class="flex justify-between gap-4 mt-4">
               <BaseButton
                 @click="previous"
@@ -636,9 +634,9 @@ import otp from "../../components/OtpInput.vue";
 // localStorage.setItem('tripDetails', JSON.stringify(trip));
 
 import { computed } from "vue";
-import { useBookingStore } from "../../data/store";
+// import { useBookingStore } from "../../data/store";
 
-const bookingStore = useBookingStore();
+// const bookingStore = useBookingStore();
 
 const cardData = computed(() => bookingStore.card);
 const hotel = computed(() => bookingStore.hotel);

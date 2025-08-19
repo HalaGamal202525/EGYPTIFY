@@ -371,16 +371,12 @@ const emit = defineEmits(['book-now'])
 
 
 import { useRouter } from "vue-router";
-import { useBookingStore } from "../data/Store";
-
-const bookingStore = useBookingStore();
+ import { useTransportationStore } from "../data/storetransport";
+const transportationStore = useTransportationStore();
 const router = useRouter();
 
 const handleBookNow = (item) => {
-  // حفظ بيانات وسيلة المواصلات في store
-  bookingStore.setTransportation(item);
-
-  // الانتقال لصفحة الفورم
+transportationStore.setTransportation(item);
   router.push("/form");
 };
 
