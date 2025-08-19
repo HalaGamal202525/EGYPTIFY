@@ -191,10 +191,11 @@ import Navbar from '../components/navbar-black.vue'
 import Footer from '../components/footer.vue'
 import reviews from '../components/reviews.vue'
 import BaseButton from '../components/BaseButton.vue'
+
 </script>
 
 <style scoped>
 .container {
   max-width: 1200px;
 }
-</style> 
+</style>

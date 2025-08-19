@@ -43,7 +43,7 @@ import Footer from "../components/footer.vue";
       </div>
       <div class="flex justify-end">
         <router-link to="/destination">
-        <BaseButton>Book Now</BaseButton>
+        <BaseButton>Explore</BaseButton>
         </router-link>
       </div>
     </div>
@@ -77,7 +77,7 @@ import Footer from "../components/footer.vue";
       </div>
       <div class="flex justify-end">
         <router-link to="/resturant">
-        <BaseButton>Book Now</BaseButton>
+        <BaseButton>Explore</BaseButton>
         </router-link>
       </div>
     </div>
@@ -148,8 +148,8 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
-        <router-link to="/activity">
-        <BaseButton>Book Now</BaseButton>
+        <router-link to="/adventures">
+        <BaseButton>Explore</BaseButton>
         </router-link>
       </div>
     </div>
@@ -183,7 +183,7 @@ import Footer from "../components/footer.vue";
       </div>
       <div class="flex justify-end">
         <router-link to="/events">
-        <BaseButton>Book Tickets</BaseButton>
+        <BaseButton>Explore</BaseButton>
         </router-link>
       </div>
     </div>

@@ -78,7 +78,7 @@
         :date="event.date"
         :location="event.location"
         :showButton="true"
-        :buttonText="'Book Now'"
+        :buttonText="'Show Details'"
         :showHeart="true"
         @click="
           () => {
@@ -146,7 +146,7 @@ function handleCardClick(card) {
   });
 }
 
-const viewMode = ref("monthly");
+const viewMode = ref("annual");
 const events = ref(bookingEvents.bookings || []);
 
 const currentMonthYear = computed(() => {
