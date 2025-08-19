@@ -14,7 +14,8 @@
     "express": "^5.1.0",
     "firebase": "^12.1.0",
     "tailwindcss": "^4.1.11",
-    "vue": "^3.5.18"
+    "vue": "^3.5.18",
+    "vue-i18n": "^11.1.11"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
