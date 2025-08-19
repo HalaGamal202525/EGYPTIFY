@@ -1,6 +1,6 @@
 <template>
   <div class="font-sans text-gray-800 bg-[#FAFAFA]">
-    <Navbar />
+    <Navbar /> 
     <section v-if="place" class="max-w-7xl mx-auto px-6 py-8 mt-20">
       <!-- Title and Rating -->
        <router-link :to="`/`" class="underline text-blue-600">Home</router-link>
