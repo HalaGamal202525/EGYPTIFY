@@ -110,8 +110,8 @@ import Footer from "../components/footer.vue";
         />
       </div>
       <div class="flex justify-end">
-        <router-link to="/tripplanner">
-        <BaseButton>Add To Trip</BaseButton>
+        <router-link to="/events">
+        <BaseButton>Explore</BaseButton>
         </router-link>
       </div>
     </div>
