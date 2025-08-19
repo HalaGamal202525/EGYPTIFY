@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full flex items-center justify-between px-[137px] py-4 h-20
-        bg-transparent absolute top-0 left-0 z-50 shadow-sm">
+        bg-transparent absolute top-0 left-0 z-50 shadow-sm mt-0">
         <!-- Logo -->
         <div class="flex items-center">
             <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-36 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
@@ -55,7 +55,9 @@
       Login
     </BaseButton>
   </template>
-        <div id="google_translate_element" class="text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"></div>
+  <div class=" text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer" id="google_translate_element">
+
+  </div>
 
 </div>
 
@@ -135,3 +137,13 @@ function goTotripreviews() {
   router.push("/user-review");
 }
 </script>
+<style scoped>
+nav {
+  position: fixed; /* أو absolute حسب تصميمك */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* أعلى حاجة */
+}
+
+</style>
