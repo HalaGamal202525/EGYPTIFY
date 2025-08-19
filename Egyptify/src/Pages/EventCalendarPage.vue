@@ -12,7 +12,7 @@
 
     <!-- Month Navigation -->
     <section class="text-center py-6 bg-gray-100">
-      <div class="flex justify-center items-center gap-100">
+      <div class="flex justify-center items-center gap-90">
         <div @click="prevMonth">
           <ButtonComponent>< Previous</ButtonComponent>
         </div>
@@ -72,7 +72,8 @@
         v-for="event in filteredEvents"
         :key="event.id"
         :image="event.image"
-        :type="event.type"
+        :showBadge="true"
+        :badgeText="event.type"
         :title="event.title"
         :description="event.description"
         :date="event.date"
@@ -87,6 +88,8 @@
           }
         "
       />
+
+     
     </section>
 
     <Footer />
@@ -219,4 +222,12 @@ const typeOptions = [
   { label: "Sports", value: "Sports" },
 ];
 </script>
-<style scoped></style>
+<style scoped>
+
+:deep(.card-title) {
+  height: 35px; /* أو اللي يناسبك */
+  margin-bottom: 20px;
+}
+
+
+</style>
