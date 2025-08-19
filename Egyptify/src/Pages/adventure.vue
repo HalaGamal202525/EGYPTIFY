@@ -10,7 +10,7 @@
   <div class="p-8 ">
     <h1 class="text-3xl font-bold mb-6">Adventure Activities</h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20 cursor-pointer">
 <Card
   v-for="place in adventurePlaces"
   :key="place.id"
