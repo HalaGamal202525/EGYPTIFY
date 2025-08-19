@@ -306,7 +306,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8"
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8 cursor-pointer"
       >
         <div
           v-for="card in recommended"
@@ -335,7 +335,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20"
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20 cursor-pointer"
       >
         <div
           v-for="card in offer"
