@@ -107,10 +107,10 @@ const filteredPlaces = computed(() => {
   });
 });
 import { useRouter } from 'vue-router';
-import { useBookingStore } from '../../data/store.js';
+import { useCardStore } from '../../data/store.js';
 
 const router = useRouter();
-const bookingStore = useBookingStore();
+const bookingStore = useCardStore();
 
 function handleBook(place) {
   bookingStore.setCardData({

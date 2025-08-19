@@ -203,9 +203,9 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-import { useBookingStore } from "../data/store";
+import { useHotelStore } from "../data/storehotel"; // صححي المسار حسب مشروعك
+const hotelStore = useHotelStore();
 
-const bookingStore = useBookingStore();
 const dateSection = ref(null);
 
 const checkIn = ref(null);
@@ -221,11 +221,18 @@ const scrollToDates = () => {
 };
 
 const goToRoomType = () => {
-  bookingStore.setHotel(destination.value);
-  bookingStore.setDates(checkIn.value, checkOut.value);
-  console.log("Booking Store Data:", bookingStore.hotel, bookingStore.dates);
-  router.push("/roomtype");
-};
+  if (!checkIn.value || !checkOut.value) {
+    alert("Please select check-in and check-out dates");
+    return;
+  }
+
+  hotelStore.setHotel(destination.value);
+
+  hotelStore.setDates(checkIn.value, checkOut.value);
+
+  console.log("Hotel Store Data:", hotelStore.hotel, hotelStore.bookingDetails);
+
+  router.push("/roomtype"); }
 
 console.log(hoteldetails);
 

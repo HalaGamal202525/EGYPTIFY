@@ -116,9 +116,8 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-import { useBookingStore } from '../data/store'
-
-const bookingStore = useBookingStore()
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
 
 function bookNow() {
   if (!place) return;

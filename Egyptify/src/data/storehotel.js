@@ -20,6 +20,7 @@ export const useHotelStore = defineStore("hotel", {
       checkIn: null,
       checkOut: null,
       price: 0,
+      roomImage: "", // ✅ جديد: صورة الغرفة
     },
   }),
 
@@ -30,10 +31,11 @@ export const useHotelStore = defineStore("hotel", {
     },
 
     // حفظ تفاصيل الحجز (غرفة - ضيوف - سعر - صورة الغرفة)
-    setRoomDetails(roomType, guests, price) {
+    setRoomDetails(roomType, guests, price, roomImage) {
       this.bookingDetails.roomType = roomType;
       this.bookingDetails.guests = guests;
       this.bookingDetails.price = price;
+      this.bookingDetails.roomImage = roomImage; // ✅ نخزن الصورة
     },
 
     // تحديد مواعيد الوصول والمغادرة
@@ -64,6 +66,7 @@ export const useHotelStore = defineStore("hotel", {
         checkIn: null,
         checkOut: null,
         price: 0,
+        roomImage: "", // ✅ reset كمان
       };
     },
   },

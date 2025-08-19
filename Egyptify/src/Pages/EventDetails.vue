@@ -126,8 +126,9 @@ const router = useRouter()
 const eventId = route.params.id
 
 const event = ref(null)
-import { useBookingStore } from '../data/store'
-const bookingStore = useBookingStore()
+import { useCardStore } from '../data/store.js'
+const bookingStore = useCardStore()
+
 function bookNow() {
   if (!event.value) return;
 

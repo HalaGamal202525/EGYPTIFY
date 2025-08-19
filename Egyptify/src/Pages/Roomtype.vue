@@ -51,21 +51,17 @@ const goback=()=>{
   router.back()
 }
 
-import { useBookingStore } from '../data/store' // إذا عندك ستور للحجز
-
-const bookingStore = useBookingStore()
+import { useHotelStore } from "../data/storehotel"; // صححي المسار حسب مشروعك
+const hotelStore = useHotelStore();
 
 const handleBookRoom = (room) => {
-  bookingStore.setRoomDetails(room.name, room.guestno, room.price,room.image)
+  hotelStore.setRoomDetails(room.name, room.guestno, room.price, room.image);
 
-  bookingStore.addBooking({
-    type: 'Hotel',
-    name: room.name,
-    price: room.price
-  });
+  console.log("تفاصيل الغرفة المختارة:", hotelStore.bookingDetails);
 
-  router.push('/form')
-}
+  router.push("/form");
+};
+
 
 import roomsData from "../data/room.json"; 
 

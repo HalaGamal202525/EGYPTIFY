@@ -28,8 +28,7 @@
 import Navbar from '../components/NavBar-Black.vue';
 import Footer from '../components/Footer.vue';
 import Card from '../components/Card.vue';
-import { useBookingStore } from '../data/store.js'
-
+import { useCardStore } from '../data/store.js'
 export default {
   name: "FoodCategory",
   components: {
@@ -64,7 +63,7 @@ export default {
   },
   methods: {
      handleCardClick(card) {
-        const bookingStore = useBookingStore();
+const bookingStore = useCardStore()
         bookingStore.setCardData({
           image: card.image,
           title: card.title,
