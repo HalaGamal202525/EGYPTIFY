@@ -1,13 +1,14 @@
 <template>
     <nav class="w-full flex items-center justify-between px-[137px] py-4 h-20
            bg-transparent  z-50 shadow-sm">
+        bg-transparent absolute top-0 left-0 z-50 shadow-sm mt-0">
         <!-- Logo -->
         <div class="flex items-center">
-            <img src="../assets/logo.png" alt="Logo"   @click="goTohome" class="w-30 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
+            <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-36 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
         </div>
 
         <!-- Links -->
-        <div class="hidden md:flex space-x-8 items-center text-[16px]">
+        <div class="hidden md:flex space-x-8 items-center text-[z16px]">
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goTodestinations">Destinations</a>
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400" @click="goTotripplaner">Trips</a>
             <a href="#" class="px-4 text-gray-800 font-bold hover:text-yellow-400"  @click="goTotripreviews">Reviews</a>
@@ -55,56 +56,95 @@
       Login
     </BaseButton>
   </template>
-        <div id="google_translate_element" class="text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"></div>
+  <div class=" text-black bg-yellow-400 px-4 mt-15 py-2 rounded  hover:bg-yellow-500 hover:scale-105 transition cursor-pointer" id="google_translate_element">
+
+  </div>
 
 </div>
 
     </nav>
 </template>
-
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from "vue-router";
-
 import BaseButton from './BaseButton.vue';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useImageStore } from '../data/imagepicker'
-const imageStore = useImageStore()
+import { useImageStore } from '../data/imagepicker';
+import Menubar from "./NavBarMenu.vue";
+
+const imageStore = useImageStore();
 const router = useRouter();
 
-// حالة المستخدم
+// User state and authentication watcher
 const user = ref(null);
-
-function goToProfile() {
-  router.push("/profile");
-}
-// متابعة حالة تسجيل الدخول
 const auth = getAuth();
 onAuthStateChanged(auth, (currentUser) => {
   user.value = currentUser;
 });
-import Menubar from "./NavBarMenu.vue"
 
-const isMenuOpen = ref(false)
+// Dropdown menu state
+const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 const closeMenu = () => {
-  isMenuOpen.value = false
+  isMenuOpen.value = false;
+};
+
+// Function to handle clicks outside the menu
+const handleClickOutside = (event) => {
+  const menuButton = event.target.closest('button');
+  const menuContainer = event.target.closest('.absolute.top-full');
+
+  // If the click is not on the menu button or inside the dropdown, close the menu
+  if (isMenuOpen.value && menuButton?.textContent.trim() !== 'More' && !menuContainer) {
+    closeMenu();
+  }
+};
+
+// Lifecycle hooks to add and remove the event listener
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
+
+// Router navigation functions
+function goToProfile() {
+  router.push("/profile");
 }
+
 function gologin() {
-router.push("../../../login")}
-function goTohome(){
-    router.push("/")}
+  router.push("/login");
+}
 
-function goTodestinations(){
-    router.push("/destination")}
+function goTohome() {
+  router.push("/");
+}
 
-    function goTotripplaner(){
-    router.push("/tripplanner")}
-        function goTotripreviews(){
-    router.push("/user-review")}
-    
+function goTodestinations() {
+  router.push("/destination");
+}
+
+function goTotripplaner() {
+  router.push("/tripplanner");
+}
+
+function goTotripreviews() {
+  router.push("/user-review");
+}
 </script>
+<style scoped>
+nav {
+  position: fixed; /* أو absolute حسب تصميمك */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* أعلى حاجة */
+}
+
+</style>

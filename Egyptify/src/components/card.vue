@@ -12,6 +12,20 @@
         class="h-48 w-full object-cover rounded-t-xl"
       />
 
+
+
+      <!-- Badge -->
+      <div
+        v-if="showBadge && badgeText"
+        class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md"
+      >
+        {{ badgeText }}
+      </div>
+
+
+
+
+
       <!-- زر القلب -->
       <button
         v-if="showHeart"
@@ -41,7 +55,7 @@
     <div class="p-4 flex flex-col justify-between flex-1">
       <div>
         <div class="flex items-center gap-2 flex-wrap">
-          <h2 class="text-lg font-bold text-gray-800">{{ title }}</h2>
+          <h2 class="card-title text-lg font-bold text-gray-800">{{ title }}</h2>
 
           <div
             v-if="type"
@@ -78,9 +92,12 @@
           v-if="location || date || duration || people"
         >
           <span v-if="location"
-            ><i class="fa-solid fa-location-dot" style="color: #ffc340"></i>
+            ><i class="fa-solid fa-location-dot mb-2" style="color: #ffc340"></i>
             {{ location }}</span
           >
+          </div>
+    
+         <div>
           <span v-if="date"
             ><i class="fa-solid fa-calendar" style="color: #ffc340"></i>
             {{ date }}</span
@@ -154,6 +171,14 @@ const props = defineProps({
   },
   defaultFavorite: Boolean,
   onClick: Function,
+
+
+
+  /* Props جديدة للـ badge */
+  showBadge: { type: Boolean, default: false },
+  badgeText: { type: String, default: "" },
+
+
 });
 
 const slots = useSlots();

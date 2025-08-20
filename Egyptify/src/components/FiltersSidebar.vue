@@ -1,6 +1,6 @@
 <template>
   <div class="filters-sidebar text-black">
-    <h3 class="text-lg font-bold mb-2">Filter by</h3>
+    <h3 class="text-lg font-bold mb-2 ">Filter by</h3>
 
     <div v-for="(group, groupName) in filters" :key="groupName" class="filter-group">
       <h4 class="text-base font-semibold mb-1">{{ groupName }}</h4>

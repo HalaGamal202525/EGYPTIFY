@@ -4,7 +4,7 @@
            bg-transparent absolute top-0 left-0 z-50"
   >
     <div class="flex items-center">
-      <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-30 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
+      <img src="../assets/logo.png" alt="Logo" @click="goTohome" class="w-36 h-30 object-contain  hover:scale-105 transition cursor-pointer" />
     </div>
     <div class="hidden md:flex space-x-8 items-center text-[16px]">
       <a href="#" class="px-4 text-white font-bold hover:text-yellow-400" @click="goTodestinations">Destinations</a>
