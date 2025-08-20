@@ -234,7 +234,7 @@ import foot from "../../components/footer.vue";
   <NavBarBlack/>
 
   <!-- ✅ Steps Bar -->
-  <div class="w-full bg-white shadow-md py-6 px-10">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-20">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <div class="flex-1 text-center">
         <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold">1</div>
@@ -256,7 +256,7 @@ import foot from "../../components/footer.vue";
   </div>
 
   <!-- ✅ Form + Card Layout -->
-<div class="max-w-6xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="max-w-6xl mx-auto mt-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
   <!-- ✅ Card Section (الشمال - 1/3) -->
 <div class="space-y-6 lg:col-span-1">
