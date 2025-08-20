@@ -5,12 +5,11 @@ import Navbar from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import { generateRestaurantDetails } from "../data/fakedata";
 import BaseButton from "../components/BaseButton.vue";
-import { useReservationStore } from "../stores/reservation"; 
+import { useReservationStore } from "../data/Storeresturant"; 
 const reservationStore = useReservationStore();
 
 
 const router = useRouter()
-const bookingStore = useBookingStore()
 const route = useRoute();
 const restaurant = ref(null);
 
@@ -59,7 +58,7 @@ const submitReservation = () => {
     <!-- Back Link -->
     <router-link
       to="/resturant"
-      class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100 mb-6"
+      class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100 mb-6 mx-15"
     >
       <i class="fas fa-arrow-left mr-2 text-lg"></i>
       <span class="font-medium">Back</span>

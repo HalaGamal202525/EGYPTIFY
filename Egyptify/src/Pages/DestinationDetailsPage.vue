@@ -1,8 +1,9 @@
 <template>
-  <Navbar />
+  <NavBarBlack />
+<div class="pt-20">
 
-  <div class="flex px-6 my-20 py-4 gap-6 flex-col sm:flex-row">
-    <div class="flex-1 rounded-md border border-black">
+  <div class="flex px-6 py-4 gap-6 flex-col sm:flex-row">
+    <div class="flex-1 rounded-lg border border-gray-400">
       <div class="px-6 py-4 space-y-6">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">
@@ -11,14 +12,14 @@
                 @click="$router.back()"
                 class="text-gray-900 hover:text-black text-xl"
               >
-                <i class="fa-solid fa-arrow-left !text-black"></i>
+                <i class="fa-solid fa-arrow-left !text-gray-800"></i>
               </button>
             </div>
-            <h1 class="text-2xl font-bold text-black">
+            <h1 class="text-2xl font-bold text-gray-800">
               {{ place?.name || "Place not found" }}
             </h1>
           </div>
-          <p class="text-lg text-gray-500 font-medium">
+          <p class="text-lg text-yellow-500 font-bold">
             {{ place?.category || "" }}
           </p>
         </div>
@@ -88,7 +89,7 @@
                   <div class="flex gap-4">
                     <BaseButton
                       @click="bookNow"
-                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 rounded-xl shadow"
+                      class="bg-[#FFC340] hover:bg-[#eab308] text-white font-bold py-2 px-4 shadow"
                     >
                       Book Now
                     </BaseButton>
@@ -255,7 +256,7 @@
                   :disabled="addedActivities.includes(act.name)"
                   @click="addToPackage(act)"
                   :class="[
-                    'font-bold py-2 px-6 rounded-xl shadow w-full md:w-auto mt-4 md:mt-0',
+                    'font-bold py-2 px-6  shadow w-full md:w-auto mt-4 md:mt-0',
                     addedActivities.includes(act.name)
                       ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-[#FFC340] hover:bg-[#eab308] text-white',
@@ -269,24 +270,6 @@
                 </BaseButton>
 
               </div>
-
-
-
-              
-              <!-- 
-               <p class="mt-6 text-gray-700 font-medium mb-6">
-               <div>Discover and book more in this destination :<br></div>
-               <div class="mt-4">
-                <RouterLink :to="{ path: '/hotels', query: { location: destination } }" class="text-yellow-600 hover:underline pr-2">Hotels</RouterLink>  |   
-                <RouterLink :to="{ path: '/resturant', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Restaurants</RouterLink>  |
-                <RouterLink :to="{ path: '/events', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Events</RouterLink>  |
-                <RouterLink :to="{ path: '/transportiondetails', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Transportation</RouterLink>
-                </div>
-              </p> -->
-
-
-
-
 
                               <BaseButton @click="goToForm">Go to check-out</BaseButton>
 
@@ -326,6 +309,7 @@
       </div>
     </div>
   </div>
+</div> 
   <foot />
 </template>
 
@@ -333,7 +317,7 @@
 import { ref, computed, watch, nextTick } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-import Navbar from "../components/NavBar-Black.vue";
+import NavBarBlack from "../components/NavBar-Black.vue";
 import sidecard from "../components/activity detail/sidecard.vue";
 import foot from "../components/footer.vue";
 
@@ -347,15 +331,16 @@ function bookNow() {
   if (!place.value) return;
 
   bookingStore.setCardData({
-      image: place.value.images?.[0] || "",
+    image: place.value.images?.[0] || "",
     title: place.value.name,
     rate: place.value.rate,
     price: place.value.price,
+    description: place.value.category, 
   });
 
-  // بدل ما نوديه فوراً → نفتح المودل
   showModal.value = true;
 }
+
 
 const addedActivities = ref([])
 
@@ -368,6 +353,7 @@ function addToPackage(activity) {
       name: activity.name,
       image: activity.image,
       price: activity.price,
+      description:activity.description,
       duration: activity.duration
     })
 

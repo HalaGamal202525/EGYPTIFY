@@ -1,11 +1,10 @@
-<template>
-  <div>
-    <Navbar />
-
-    <div
+<template> 
+   <NavBarBlack/>
+    <div class="pt-20"> 
+      <div
       v-if="event"
-      class="max-w-6xl mx-auto px-4 py-10 text-black space-y-8 mt-20"
-    >
+      class="max-w-6xl mx-auto px-4 py-10 text-black space-y-8"
+      >
       <!-- Hero Image + Map Side by Side -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Image Box -->
@@ -51,7 +50,7 @@
 
       <!-- Visit Hours -->
       <div>
-        <h2 class="text-xl font-semibold mb-2"><i class="fa-solid fa-clock"></i> Visit Hours</h2>
+        <h2 class="text-xl font-semibold mb-2 text-yellow-400"><i class="fa-solid fa-clock"></i> Visit Hours</h2>
         <p>{{ event.visit_hours }}</p>
       </div>
 
@@ -117,7 +116,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRoute ,useRouter} from 'vue-router'
-import Navbar from '../components/NavBar-Black.vue'
+import NavBarBlack from '../components/NavBar-Black.vue'
 import Footer from '../components/footer.vue'
 import bookingEvents from '../data/bookingEvents.json'
 import BookButton from '../components/BaseButton.vue'
@@ -150,5 +149,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add any additional styles if needed */
+  h2{
+    color: var(--color-yellow-500);
+  }
 </style>

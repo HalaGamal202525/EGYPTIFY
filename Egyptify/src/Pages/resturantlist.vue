@@ -15,10 +15,9 @@ const appliedFilters = ref({
   rating: [],
   cuisine: []
 })
-import { useReservationStore } from "../data/Storeresturant"; // ✅ صححي المسار لو مختلف
+import { useReservationStore } from "../data/Storeresturant"; 
 const reservationStore = useReservationStore(); 
 const handleRestaurantClick = (restaurant) => {
-  // ✅ نخزن بيانات المطعم المختار
   reservationStore.setRestaurant(restaurant);
 
   // ✅ نروح لصفحة التفاصيل

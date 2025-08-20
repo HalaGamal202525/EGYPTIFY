@@ -14,62 +14,57 @@
 
     <div class="p-4 md:p-9">
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-<div class="w-full lg:w-64 mt-0 bg-gray-100 p-4 rounded shadow space-y-4">
+        <div class="w-full lg:w-64 mt-0 bg-gray-100 p-4 rounded shadow space-y-4">
+          <button
+            @click="openOverlay"
+            class="lg:hidden bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow w-full"
+          >
+            Filter
+          </button>
 
-  <!-- زر الفلتر للموبايل -->
-  <button
-    @click="openOverlay"
-    class="lg:hidden bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow w-full"
-  >
-    Filter
-  </button>
+          <div class="hidden lg:block">
+            <SideFilter
+              :destinationdata="destinationdata"
+              @update:filters="applyFilters"
+              class="text-black"
+            />
+          </div>
 
-  <!-- فلتر جانبي للشاشات الكبيرة -->
-  <div class="hidden lg:block">
-    <SideFilter
-      :destinationdata="destinationdata"
-      @update:filters="applyFilters"
-      class="text-black"
-    />
-  </div>
-
-  <!-- Overlay للموبايل -->
-<transition name="fade">
- <div
-  v-if="isOverlayOpen"
-  class="fixed inset-0 bg-gray-300 bg-opacity-50 z-50 flex justify-center mt-0 items-start pt-20 overflow-y-auto"
->
-  <div class=" rounded-lg bg-white w-11/12 max-w-md p-6 shadow-lg mb-20">
-    <SideFilter :destinationdata="destinationdata" @update:filters="updateTempFilters" :isMobile="true"/>
-    <div class="flex justify-end mt-4 space-x-2">
-      <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] !text-[#ffc340] rounded hover:bg-yellow-700">Cancel</button>
-      <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">Apply</button>
-    </div>
-  </div>
-</div>
-</transition>
-</div>
+          <transition name="fade">
+            <div
+              v-if="isOverlayOpen"
+              class="fixed inset-0 bg-gray-300 bg-opacity-50 z-50 flex justify-center mt-0 items-start pt-20 overflow-y-auto"
+            >
+              <div class="rounded-lg bg-white w-11/12 max-w-md p-6 shadow-lg mb-20">
+                <SideFilter :destinationdata="destinationdata" @update:filters="updateTempFilters" :isMobile="true" />
+                <div class="flex justify-end mt-4 space-x-2">
+                  <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] !text-[#ffc340] rounded hover:bg-yellow-700">Cancel</button>
+                  <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">Apply</button>
+                </div>
+              </div>
+            </div>
+          </transition>
+        </div>
 
         <div class="flex-1 space-y-6">
           <section
-            class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 mb-6 cursor-pointer"
+            class="flex flex-wrap items-stretch gap-6 px-8 mb-6 cursor-pointer"
           >
-     <CardComponent
-  v-for="item in paginatedDestinations"
-  :key="item.id"
-  :title="item.name"
-  :description="item.description"
-  :image="item.image"
-  :rating="item.rate"
-  :showHeart="true"
-  :showButton="true"
-  buttonText="Show Details"
-  @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
-  class="transition transform hover:-translate-y-1"
-/>
+            <CardComponent
+              v-for="item in paginatedDestinations"
+              :key="item.id"
+              :title="item.name"
+              :description="item.description"
+              :image="item.image"
+              :rating="item.rate"
+              :showHeart="true"
+              :showButton="true"
+              buttonText="Show Details"
+              @click="() => { router.push(`/destination/${item.id}`); handleCardClick(item); }"
+              class="w-full sm:w-[calc(50%-0.75rem)] md:w-[calc(33.333%-1rem)] transition transform hover:-translate-y-1"
+            />
           </section>
 
-          <!-- Pagination -->
           <div class="flex justify-center mb-16">
             <PaginationComponent
               :currentPage="currentPage"
@@ -86,7 +81,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted ,watch} from "vue";
+import { ref, computed, onMounted, watch } from "vue";
 import navbar from "../components/navbar.vue";
 import Footer from "../components/footer.vue";
 import SideFilter from "./filterdestaination.vue";
@@ -96,7 +91,6 @@ import destination from "../data/Destaintion.json";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-
 const destinationdata = ref([]);
 
 onMounted(() => {
@@ -106,7 +100,6 @@ onMounted(() => {
 const currentPage = ref(Number(localStorage.getItem("currentPage")) || 1);
 const itemsPerPage = 6;
 
-// كل ما الصفحة تتغير نخزنها
 watch(currentPage, (newPage) => {
   localStorage.setItem("currentPage", newPage);
 });
@@ -116,7 +109,6 @@ const filters = ref({
   category: [],
   rate: [],
 });
- 
 
 import { useCardStore } from "../data/store.js";
 const bookingStore = useCardStore();
@@ -126,13 +118,13 @@ function handleCardClick(card) {
     image: card.image,
     title: card.title,
     rate: card.rate,
-    price: card.price
-  })
+    price: card.price,
+  });
 }
 
 function applyFilters(newFilters) {
   filters.value = newFilters;
-  currentPage.value = 1;  
+  currentPage.value = 1;
 }
 
 const filteredDestinations = computed(() => {
@@ -140,11 +132,9 @@ const filteredDestinations = computed(() => {
     const matchLocation = filters.value.location.length
       ? filters.value.location.includes(item.location)
       : true;
-
     const matchCategory = filters.value.category.length
       ? filters.value.category.includes(item.category)
       : true;
-
     const matchRate = filters.value.rate.length
       ? filters.value.rate.includes(String(item.rate))
       : true;
@@ -165,29 +155,30 @@ const totalPages = computed(() => {
 
 function handlePageChange(newPage) {
   currentPage.value = newPage;
-    window.scrollTo({ top: 0, behavior: 'smooth' }); 
-
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
-const isOverlayOpen = ref(false)
-const tempFilters = ref({ location: [], category: [], rate: [] })
+
+const isOverlayOpen = ref(false);
+const tempFilters = ref({ location: [], category: [], rate: [] });
 
 function openOverlay() {
-  tempFilters.value = JSON.parse(JSON.stringify(filters.value)) // نسخ الفلاتر الحالية
-  isOverlayOpen.value = true
+  tempFilters.value = JSON.parse(JSON.stringify(filters.value));
+  isOverlayOpen.value = true;
 }
 
 function closeOverlay() {
-  isOverlayOpen.value = false
+  isOverlayOpen.value = false;
 }
 
 function updateTempFilters(newFilters) {
-  tempFilters.value = newFilters
+  tempFilters.value = newFilters;
 }
 
 function applyOverlayFilters() {
-  filters.value = tempFilters.value
-  currentPage.value = 1
-  isOverlayOpen.value = false
+  filters.value = tempFilters.value;
+  currentPage.value = 1;
+  isOverlayOpen.value = false;
 }
-
 </script>
+<br>
+This video explains the difference between `align-items` and `align-content` in CSS Flexbox, both of which are useful for controlling alignment.

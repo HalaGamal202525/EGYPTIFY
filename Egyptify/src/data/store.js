@@ -113,8 +113,18 @@
 //   }
 // })
 
-
 // stores/card.js
+
+
+
+
+
+
+
+
+
+
+
 import { defineStore } from "pinia";
 
 export const useCardStore = defineStore("card", {
@@ -123,20 +133,55 @@ export const useCardStore = defineStore("card", {
       image: null,
       title: null,
       rate: null,
-      price: null,
+      price: 0,
+      description: null,
       activities: [],
     },
+    total: 0, // 🟢 المجموع الكلي
   }),
 
   actions: {
-    setCardData({ image, title, rate, price }) {
-      this.card = { image, title, rate, price, activities: [] };
+    setCardData({ image, title, rate, price, description }) {
+      this.card = { 
+        image, 
+        title, 
+        description, 
+        rate, 
+        price: price || 0, 
+        activities: [] 
+      };
+      this.calculateTotal();
     },
-    addActivity(activity) {
-      this.card.activities.push(activity);
+
+    addActivityToCard(activity) {
+      this.card.activities.push({
+        name: activity.name,
+        image: activity.image,
+        price: activity.price || 0,
+        description: activity.description || "",
+        duration: activity.duration || "",
+      });
+      this.calculateTotal();
     },
+
     resetCard() {
-      this.card = { image: null, title: null, rate: null, price: null, activities: [] };
+      this.card = {
+        image: null,
+        title: null,
+        rate: null,
+        description: null,
+        price: 0,
+        activities: [],
+      };
+      this.total = 0;
+    },
+
+    calculateTotal() {
+      const activitiesTotal = this.card.activities.reduce(
+        (sum, activity) => sum + (activity.price || 0),
+        0
+      );
+      this.total = (this.card.price || 0) + activitiesTotal;
     },
   },
 });
