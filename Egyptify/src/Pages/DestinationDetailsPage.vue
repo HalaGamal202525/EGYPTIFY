@@ -270,24 +270,6 @@
 
               </div>
 
-
-
-              
-              <!-- 
-               <p class="mt-6 text-gray-700 font-medium mb-6">
-               <div>Discover and book more in this destination :<br></div>
-               <div class="mt-4">
-                <RouterLink :to="{ path: '/hotels', query: { location: destination } }" class="text-yellow-600 hover:underline pr-2">Hotels</RouterLink>  |   
-                <RouterLink :to="{ path: '/resturant', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Restaurants</RouterLink>  |
-                <RouterLink :to="{ path: '/events', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Events</RouterLink>  |
-                <RouterLink :to="{ path: '/transportiondetails', query: { location: destination } }" class="text-yellow-600 hover:underline pl-2 pr-2">Transportation</RouterLink>
-                </div>
-              </p> -->
-
-
-
-
-
                               <BaseButton @click="goToForm">Go to check-out</BaseButton>
 
             </div>
@@ -347,15 +329,16 @@ function bookNow() {
   if (!place.value) return;
 
   bookingStore.setCardData({
-      image: place.value.images?.[0] || "",
+    image: place.value.images?.[0] || "",
     title: place.value.name,
     rate: place.value.rate,
     price: place.value.price,
+    description: place.value.category, 
   });
 
-  // بدل ما نوديه فوراً → نفتح المودل
   showModal.value = true;
 }
+
 
 const addedActivities = ref([])
 
@@ -368,6 +351,7 @@ function addToPackage(activity) {
       name: activity.name,
       image: activity.image,
       price: activity.price,
+      description:activity.description,
       duration: activity.duration
     })
 

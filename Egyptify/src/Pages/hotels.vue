@@ -124,7 +124,7 @@ import SideFilter from "./hotelsfilters.vue";
 import PaginationComponent from "../components/PaginationComponent.vue";
 import hotles from "../data/hotels.json"; 
 
-import { useHotelStore } from "../data/storehotel"; // صححي المسار حسب مشروعك
+import { useHotelStore } from "../data/storehotel"; 
 const hotelStore = useHotelStore();
 
 const hotlesdata = ref([]);
@@ -205,32 +205,6 @@ function applyOverlayFilters() {
   currentPage.value = 1;
   isOverlayOpen.value = false;
 }
-
-
-
-
-
-// import { useRoute } from "vue-router";
-
-
-
-// // 📌 نقرأ قيمة location من الرابط
-// const route = useRoute();
-// const selectedLocation = ref(route.query.location || "");
-
-// // 📌 أول ما الصفحة تفتح نحط البيانات
-// onMounted(() => {
-//   hotlesdata.value = hotles;
-//   if (selectedLocation.value) {
-//     // نخلي الفلتر يشتغل أوتوماتيك
-//     filters.value.location = [selectedLocation.value];
-//   }
-// });
-
-
-
-
-
 </script>
 
 <style scoped>

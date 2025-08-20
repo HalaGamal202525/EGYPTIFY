@@ -9,7 +9,7 @@ export const useHotelStore = defineStore("hotel", {
       name: "",
       image: "",
       address: "",
-      rate: 0,
+      stars: 0,
       description: "",
     },
 
@@ -19,10 +19,29 @@ export const useHotelStore = defineStore("hotel", {
       guests: 1,
       checkIn: null,
       checkOut: null,
-      price: 0,
-      roomImage: "", // ✅ جديد: صورة الغرفة
+      price: 0,     // سعر الليلة الواحدة للغرفة
+      roomImage: "", 
     },
   }),
+
+  getters: {
+    // ✅ حساب المدة
+    totalNights: (state) => {
+      if (!state.bookingDetails.checkIn || !state.bookingDetails.checkOut) return 0;
+      const checkInDate = new Date(state.bookingDetails.checkIn);
+      const checkOutDate = new Date(state.bookingDetails.checkOut);
+      const diffTime = checkOutDate - checkInDate;
+      const nights = diffTime / (1000 * 60 * 60 * 24);
+      return nights > 0 ? nights : 0; // ماينفعش يكون بالسالب
+    },
+
+    // ✅ المجموع الكلي = عدد الليالي × سعر الغرفة
+    totalPrice: (state) => {
+      return state.bookingDetails.price * (state.bookingDetails.checkOut && state.bookingDetails.checkIn
+        ? (new Date(state.bookingDetails.checkOut) - new Date(state.bookingDetails.checkIn)) / (1000 * 60 * 60 * 24)
+        : 0);
+    },
+  },
 
   actions: {
     // حفظ بيانات الفندق
@@ -35,7 +54,7 @@ export const useHotelStore = defineStore("hotel", {
       this.bookingDetails.roomType = roomType;
       this.bookingDetails.guests = guests;
       this.bookingDetails.price = price;
-      this.bookingDetails.roomImage = roomImage; // ✅ نخزن الصورة
+      this.bookingDetails.roomImage = roomImage;
     },
 
     // تحديد مواعيد الوصول والمغادرة
@@ -56,7 +75,7 @@ export const useHotelStore = defineStore("hotel", {
         name: "",
         image: "",
         address: "",
-        rate: 0,
+        stars: 0,
         description: "",
       };
 
@@ -66,7 +85,7 @@ export const useHotelStore = defineStore("hotel", {
         checkIn: null,
         checkOut: null,
         price: 0,
-        roomImage: "", // ✅ reset كمان
+        roomImage: "",
       };
     },
   },

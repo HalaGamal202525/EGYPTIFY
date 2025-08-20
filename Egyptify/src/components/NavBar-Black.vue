@@ -1,6 +1,6 @@
 <template>
     <nav class="w-full flex items-center justify-between px-[137px] py-4 h-20
-           bg-transparent absolute top-0 left-0 z-50 shadow-sm">
+           bg-transparent  z-50 shadow-sm">
         <!-- Logo -->
         <div class="flex items-center">
             <img src="../assets/logo.png" alt="Logo"   @click="goTohome" class="w-30 h-30 object-contain  hover:scale-105 transition cursor-pointer" />

@@ -39,7 +39,7 @@ export const useReservationStore = defineStore("reservation", {
 
     resetReservation() {
       this.reservation = { name: "", phone: "", guests: "", date: "", time: "", comment: "" };
-      this.restaurant = null; // ✅ نرجع المطعم فاضي
+  this.restaurant = {};// ✅ نرجع المطعم فاضي
       this.bookings = [];
       this.totalPrice = 0;
     },
