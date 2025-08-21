@@ -660,220 +660,281 @@ input[type="checkbox"] {
 }
 </style> -->
 
-
 <template>
-    <NavBarBlack/>
+  <NavBarBlack />
 
   <!-- 🔹 Stepper -->
-<div class="w-full bg-white shadow-md py-6 px-10 mt-2">
-  <div class="flex justify-between items-center max-w-5xl mx-auto">
-    <!-- Step 1 -->
-    <div class="flex-1 text-center">
-      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold">
-        1
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-2">
+    <div class="flex justify-between items-center max-w-5xl mx-auto">
+      <!-- Step 1 -->
+      <div class="flex-1 text-center">
+        <div
+          class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold"
+        >
+          1
+        </div>
+        <p class="mt-2 text-sm font-medium text-gray-700">Guest Info</p>
       </div>
-      <p class="mt-2 text-sm font-medium text-gray-700">Guest Info</p>
-    </div>
 
-    <div class="flex-1 h-1 bg-gray-200 mx-2 relative">
-      <div class="h-1 bg-[#ffc340] absolute left-0 top-0 w-full"></div>
-    </div>
-
-    <!-- Step 2 (active) -->
-    <div class="flex-1 text-center">
-      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold">
-        2
+      <div class="flex-1 h-1 bg-gray-200 mx-2 relative">
+        <div class="h-1 bg-[#ffc340] absolute left-0 top-0 w-full"></div>
       </div>
-      <p class="mt-2 text-sm font-medium text-gray-700">Payment</p>
-    </div>
 
-    <div class="flex-1 h-1 bg-gray-200 mx-2 relative"></div>
-
-    <!-- Step 3 -->
-    <div class="flex-1 text-center">
-      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold">
-        3
+      <!-- Step 2 (active) -->
+      <div class="flex-1 text-center">
+        <div
+          class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold"
+        >
+          2
+        </div>
+        <p class="mt-2 text-sm font-medium text-gray-700">Payment</p>
       </div>
-      <p class="mt-2 text-sm font-medium text-gray-700">Confirmation</p>
+
+      <div class="flex-1 h-1 bg-gray-200 mx-2 relative"></div>
+
+      <!-- Step 3 -->
+      <div class="flex-1 text-center">
+        <div
+          class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold"
+        >
+          3
+        </div>
+        <p class="mt-2 text-sm font-medium text-gray-700">Confirmation</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- 🔹 Payment Form -->
-<div class="max-w-5xl mx-auto mt-10 bg-white p-10 rounded-2xl shadow-lg">
-  <h2 class="text-2xl font-bold text-gray-800 text-center mb-10">
-    Choose Payment Method
-  </h2>
+  <!-- 🔹 Payment Form -->
+  <div class="max-w-5xl mx-auto mt-10 bg-white p-10 rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-bold text-gray-800 text-center mb-10">
+      Choose Payment Method
+    </h2>
 
-  <!-- ✅ 3 كروت جنب بعض -->
- <div class="max-w-5xl mx-auto">
-  <!-- ✅ Payment Tabs -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Credit Card -->
-    <div
-      @click="activeTab = 'credit'"
-      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
-      :class="activeTab === 'credit' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
-    >
-      <div
-        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
-        :class="activeTab === 'credit' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
-      >
-        💳
-      </div>
-      <p class="font-semibold text-gray-800">Credit / Debit Card</p>
-      <p class="text-sm text-gray-600">Visa / MasterCard / AMEX</p>
-    </div>
-
-    <!-- Vodafone Cash -->
-    <div
-      @click="activeTab = 'vodafone'"
-      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
-      :class="activeTab === 'vodafone' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
-    >
-      <div
-        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
-        :class="activeTab === 'vodafone' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
-      >
-        📱
-      </div>
-      <p class="font-semibold text-gray-800">Vodafone Cash</p>
-      <p class="text-sm text-gray-600">Instant mobile wallet transfer</p>
-    </div>
-
-    <!-- Fawry -->
-    <div
-      @click="activeTab = 'fawry'"
-      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
-      :class="activeTab === 'fawry' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
-    >
-      <div
-        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
-        :class="activeTab === 'fawry' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
-      >
-        🏧
-      </div>
-      <p class="font-semibold text-gray-800">Fawry</p>
-      <p class="text-sm text-gray-600">Pay at any Fawry outlet</p>
-    </div>
-  </div>
- 
-  <!-- ✅ Tabs Content -->
-  <div class="mt-10">
-    <!-- 💳 Credit Card -->
-    <div
-      v-if="activeTab === 'credit'"
-      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
-    >
-      <h3 class="text-xl font-semibold text-gray-800">Card Details</h3>
-
-      <div class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
-          <InputField type="text" placeholder="Enter Cardholder Name" />
-        </div>
-
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
-          <InputField type="text" placeholder="1234 5678 9012 3456" />
-        </div>
-
-        <div class="flex gap-4">
-          <div class="w-1/2">
-            <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
-            <InputField type="text" placeholder="MM/YY" />
+    <!-- ✅ 3 كروت جنب بعض -->
+    <div class="max-w-5xl mx-auto">
+      <!-- ✅ Payment Tabs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Credit Card -->
+        <div
+          @click="activeTab = 'credit'"
+          class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+          :class="
+            activeTab === 'credit'
+              ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg'
+              : 'border-gray-200 hover:border-[#ffc340]'
+          "
+        >
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+            :class="
+              activeTab === 'credit'
+                ? 'bg-[#ffc340] text-white'
+                : 'bg-gray-100 text-gray-600'
+            "
+          >
+            💳
           </div>
-          <div class="w-1/2">
-            <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
-            <InputField type="text" placeholder="123" />
+          <p class="font-semibold text-gray-800">Credit / Debit Card</p>
+          <p class="text-sm text-gray-600">Visa / MasterCard / AMEX</p>
+        </div>
+
+        <!-- Vodafone Cash -->
+        <div
+          @click="activeTab = 'vodafone'"
+          class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+          :class="
+            activeTab === 'vodafone'
+              ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg'
+              : 'border-gray-200 hover:border-[#ffc340]'
+          "
+        >
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+            :class="
+              activeTab === 'vodafone'
+                ? 'bg-[#ffc340] text-white'
+                : 'bg-gray-100 text-gray-600'
+            "
+          >
+            📱
+          </div>
+          <p class="font-semibold text-gray-800">Vodafone Cash</p>
+          <p class="text-sm text-gray-600">Instant mobile wallet transfer</p>
+        </div>
+
+        <!-- Fawry -->
+        <div
+          @click="activeTab = 'fawry'"
+          class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+          :class="
+            activeTab === 'fawry'
+              ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg'
+              : 'border-gray-200 hover:border-[#ffc340]'
+          "
+        >
+          <div
+            class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+            :class="
+              activeTab === 'fawry'
+                ? 'bg-[#ffc340] text-white'
+                : 'bg-gray-100 text-gray-600'
+            "
+          >
+            🏧
+          </div>
+          <p class="font-semibold text-gray-800">Fawry</p>
+          <p class="text-sm text-gray-600">Pay at any Fawry outlet</p>
+        </div>
+      </div>
+
+      <!-- ✅ Tabs Content -->
+      <div class="mt-10">
+        <!-- 💳 Credit Card -->
+        <div
+          v-if="activeTab === 'credit'"
+          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+        >
+          <h3 class="text-xl font-semibold text-gray-800">Card Details</h3>
+
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Cardholder Name</label
+              >
+              <InputField type="text" placeholder="Enter Cardholder Name" />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Card Number</label
+              >
+              <InputField type="text" placeholder="1234 5678 9012 3456" />
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-1/2">
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >Expiry Date</label
+                >
+                <InputField type="text" placeholder="MM/YY" />
+              </div>
+              <div class="w-1/2">
+                <label class="block text-sm font-medium text-gray-700 mb-1"
+                  >CVV</label
+                >
+                <InputField type="text" placeholder="123" />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+          >
+            <!-- <span>Total:</span> -->
+            <span> Total: </span>
+            <span> {{ grandTotal }} EGP</span>
+          </div>
+
+          <BaseButton @click="nextStep" class="w-full mt-4"
+            >Pay Securely</BaseButton
+          >
+        </div>
+
+        <!-- 📱 Vodafone -->
+        <div
+          v-if="activeTab === 'vodafone'"
+          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+        >
+          <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
+          <p class="text-sm text-gray-600">
+            Enter your phone number to receive an OTP.
+          </p>
+
+          <InputField placeholder="Enter Phone Number" />
+
+          <div
+            class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+          >
+            <span> Total: </span>
+            <span> {{ grandTotal }} EGP </span>
+          </div>
+
+          <BaseButton @click="goToOtpSection" class="w-full mt-4"
+            >Continue</BaseButton
+          >
+
+          <div v-if="showOtpSection" class="mt-6 space-y-4">
+            <p class="text-base font-medium">Enter OTP:</p>
+            <otp @otp-verified="goToStepThree" />
+
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="agree"
+                v-model="isChecked"
+                class="!bg-gray-100"
+              />
+              <label for="agree" class="text-sm text-gray-700"
+                >I agree to the terms.</label
+              >
+            </div>
+
+            <div class="flex gap-3 justify-between">
+              <BaseButton
+                @click="previous"
+                class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
+                >Back</BaseButton
+              >
+              <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
+                >Confirm</BaseButton
+              >
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <!-- <span>Total:</span> -->
-         <span>  Total: </span>
-        <span>  {{ grandTotal }} EGP</span>
-      </div>
+        <!-- 🏧 Fawry -->
+        <div
+          v-if="activeTab === 'fawry'"
+          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+        >
+          <h3 class="text-xl font-semibold text-gray-800">Fawry Payment</h3>
+          <p class="text-sm text-gray-600">
+            Enter your phone number to receive an OTP.
+          </p>
 
-      <BaseButton @click="nextStep" class="w-full mt-4">Pay Securely</BaseButton>
-    </div>
+          <InputField placeholder="Enter Phone Number" />
 
-    <!-- 📱 Vodafone -->
-    <div
-      v-if="activeTab === 'vodafone'"
-      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
-    >
-      <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
-      <p class="text-sm text-gray-600">Enter your phone number to receive an OTP.</p>
+          <div
+            class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+          >
+            <!-- <span>Total:</span> -->
+            <span> Total: </span>
+            <span> {{ grandTotal }} EGP </span>
+          </div>
 
-      <InputField placeholder="Enter Phone Number" />
-
-      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <span>   Total: </span>
-        <span>    {{ grandTotal }} EGP
- </span>
-      </div>
-
-      <BaseButton @click="goToOtpSection" class="w-full mt-4">Continue</BaseButton>
-
-      <div v-if="showOtpSection" class="mt-6 space-y-4">
-        <p class="text-base font-medium">Enter OTP:</p>
-        <otp @otp-verified="goToStepThree" />
-
-        <div class="flex items-center gap-2">
-          <input type="checkbox" id="agree" v-model="isChecked" />
-          <label for="agree" class="text-sm text-gray-700">I agree to the terms.</label>
-        </div>
-
-        <div class="flex gap-3">
-          <BaseButton @click="previous" class="w-1/2 bg-gray-200 text-gray-800 hover:bg-gray-300">Back</BaseButton>
-          <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked">Confirm</BaseButton>
+          <BaseButton @click="nextStep" class="w-full mt-4"
+            >Get Fawry Code</BaseButton
+          >
         </div>
       </div>
-    </div>
-
-    <!-- 🏧 Fawry -->
-    <div
-      v-if="activeTab === 'fawry'"
-      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
-    >
-      <h3 class="text-xl font-semibold text-gray-800">Fawry Payment</h3>
-            <p class="text-sm text-gray-600">Enter your phone number to receive an OTP.</p>
-
-      <InputField placeholder="Enter Phone Number" />
-
-
-      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <!-- <span>Total:</span> -->
-         <span>     Total: </span>
-        <span >    {{ grandTotal }} EGP
-</span>
-      </div>
-
-      <BaseButton @click="nextStep" class="w-full mt-4">Get Fawry Code</BaseButton>
+      <BaseButton
+        @click="goBack"
+        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
+      >
+        Back
+      </BaseButton>
     </div>
   </div>
-    <BaseButton @click="goBack" class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]">
-    Back
-  </BaseButton>
-</div>
 
-
- 
-</div>
-
-
-
-<foot/>
+  <foot />
 </template>
 <script setup>
-import NavBarBlack from '../../components/NavBar-Black.vue';
-import foot from "../../components/footer.vue"
-import BaseButton from '../../components/BaseButton.vue';
+import NavBarBlack from "../../components/NavBar-Black.vue";
+import foot from "../../components/footer.vue";
+import BaseButton from "../../components/BaseButton.vue";
 import InputField from "../../components/InputField.vue";
-import otp from "../../components/OtpInput.vue"
-import { ref,computed } from "vue";
+import otp from "../../components/OtpInput.vue";
+import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -885,8 +946,6 @@ const goBack = () => {
 const activeTab = ref("credit");
 const showOtpSection = ref(false);
 const isChecked = ref(false);
-
-
 
 const nextStep = () => {
   console.log("Next step");
