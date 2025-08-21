@@ -66,6 +66,8 @@ import Transportiondatils from '../Pages/transportiondatils.vue'
 import hotelsform from "../Pages/payment/paymenthotelform.vue"
 import resturantform from "../Pages/payment/paymentresturantform.vue"
 import transportfrom from "../Pages/payment/paymenttransport.vue"
+import Confirmation from '../Pages/payment/Confirmation.vue'
+
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
   { path: '/login', component: Login },
@@ -75,6 +77,7 @@ const routes = [
   { path: '/OTP', component: OTPPage },
     { path: '/form', component: form }, {path:"/hotelform",component:hotelsform},{path:"/resturantform",component:resturantform},{path:"/transportform",component:transportfrom},
       { path: '/payment', component: payment },
+      {path:"/confirm",component:Confirmation},
       {
         path:"/transportiondetails",component:Transportiondatils
       },

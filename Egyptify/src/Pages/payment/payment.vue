@@ -841,81 +841,122 @@ input[type="checkbox"] {
         </div>
 
         <!-- 📱 Vodafone -->
-        <div
-          v-if="activeTab === 'vodafone'"
-          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
-        >
-          <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
-          <p class="text-sm text-gray-600">
-            Enter your phone number to receive an OTP.
-          </p>
+ <div
+  v-if="activeTab === 'vodafone'"
+  class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+>
+  <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
 
-          <InputField placeholder="Enter Phone Number" />
+  <div v-if="!showOtpSection" class="space-y-5">
+    <p class="text-sm text-gray-600 ">
+      Enter your phone number to receive an OTP.
+    </p>
 
-          <div
-            class="text-lg font-bold flex justify-between items-center pt-4 border-t"
-          >
-            <span> Total: </span>
-            <span> {{ grandTotal }} EGP </span>
-          </div>
+    <InputField placeholder="Enter Phone Number" />
 
-          <BaseButton @click="goToOtpSection" class="w-full mt-4"
-            >Continue</BaseButton
-          >
+    <div
+      class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+    >
+      <span> Total: </span>
+      <span> {{ grandTotal }} EGP </span>
+    </div>
 
-          <div v-if="showOtpSection" class="mt-6 space-y-4">
-            <p class="text-base font-medium">Enter OTP:</p>
-            <otp @otp-verified="goToStepThree" />
+    <BaseButton @click="goToOtpSection" class="w-full mt-4"
+      >Continue</BaseButton
+    >
+  </div>
 
-            <div class="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="agree"
-                v-model="isChecked"
-                class="!bg-gray-100"
-              />
-              <label for="agree" class="text-sm text-gray-700"
-                >I agree to the terms.</label
-              >
-            </div>
+  <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
+  <div v-else class="mt-6 space-y-4">
+    <p class="text-base font-medium">Enter OTP:</p>
+    <otp @otp-verified="goToStepThree" />
 
-            <div class="flex gap-3 justify-between">
-              <BaseButton
-                @click="previous"
-                class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
-                >Back</BaseButton
-              >
-              <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
-                >Confirm</BaseButton
-              >
-            </div>
-          </div>
-        </div>
+    <div class="flex items-center gap-2">
+      <input
+        type="checkbox"
+        id="agree"
+        v-model="isChecked"
+        class="!bg-gray-100"
+      />
+      <label for="agree" class="text-sm text-gray-700"
+        >I agree to the terms.</label
+      >
+    </div>
 
-        <!-- 🏧 Fawry -->
-        <div
-          v-if="activeTab === 'fawry'"
-          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
-        >
-          <h3 class="text-xl font-semibold text-gray-800">Fawry Payment</h3>
-          <p class="text-sm text-gray-600">
-            Enter your phone number to receive an OTP.
-          </p>
+    <div class="flex gap-3 justify-between">
+      <BaseButton
+        @click="previous"
+        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
+        >Back</BaseButton
+      >
+      <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
+        >Confirm</BaseButton
+      >
+    </div>
+  </div>
+</div>
 
-          <InputField placeholder="Enter Phone Number" />
 
-          <div
-            class="text-lg font-bold flex justify-between items-center pt-4 border-t"
-          >
-            <!-- <span>Total:</span> -->
-            <span> Total: </span>
-            <span> {{ grandTotal }} EGP </span>
-          </div>
+ <!-- Fawry Payment -->
+<div
+  v-if="activeTab === 'fawry'"
+  class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+>
+  <!-- العنوان -->
+  <h3 class="text-xl font-semibold text-gray-800 flex items-center gap-2">
+    Fawry Payment
+  </h3>
 
-          <BaseButton @click="nextStep" class="w-full mt-4"
-            >Get Fawry Code</BaseButton
-          >
-        </div>
+
+  <div v-if="!showOtpSection" class="space-y-5">
+    <p class="text-sm text-gray-600 ">
+      Enter your phone number to receive an OTP.
+    </p>
+
+    <InputField placeholder="Enter Phone Number" />
+
+    <div
+      class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+    >
+      <span> Total: </span>
+      <span> {{ grandTotal }} EGP </span>
+    </div>
+
+    <BaseButton @click="goToOtpSection" class="w-full mt-4"
+      >Continue</BaseButton
+    >
+  </div>
+
+  <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
+  <div v-else class="mt-6 space-y-4">
+    <p class="text-base font-medium">Enter OTP:</p>
+    <otp @otp-verified="goToStepThree" />
+
+    <div class="flex items-center gap-2">
+      <input
+        type="checkbox"
+        id="agree"
+        v-model="isChecked"
+        class="!bg-gray-100"
+      />
+      <label for="agree" class="text-sm text-gray-700"
+        >I agree to the terms.</label
+      >
+    </div>
+
+    <div class="flex gap-3 justify-between">
+      <BaseButton
+        @click="previous"
+        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
+        >Back</BaseButton
+      >
+      <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
+        >Confirm</BaseButton
+      >
+    </div>
+  </div>
+</div>
+
       </div>
       <BaseButton
         @click="goBack"
@@ -949,6 +990,7 @@ const isChecked = ref(false);
 
 const nextStep = () => {
   console.log("Next step");
+  router.push("/confirm")
 };
 
 const previous = () => {
