@@ -2,7 +2,7 @@
 <template>
   <Navbar />
 
-  <div class="p-14">
+  <div class="px-14 mb-12">
     <div class="flex flex-row mt-4 justify-between items-center cursor-pointer">
       <div class="flex flex-row gap-3 items-center justify-center">
         <i class="fa-solid fa-arrow-left text-2xl " @click="goback"></i>

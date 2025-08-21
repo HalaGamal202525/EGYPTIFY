@@ -1,6 +1,6 @@
 <template> 
    <NavBarBlack/>
-    <div class="pt-20"> 
+    <div class="pt-2"> 
       <div
       v-if="event"
       class="max-w-6xl mx-auto px-4 py-10 text-black space-y-8"

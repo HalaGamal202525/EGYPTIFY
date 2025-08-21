@@ -54,7 +54,7 @@ const submitReservation = () => {
 <template>
   <Navbar />
 
-  <div class="container mx-auto px-4 mt-28">
+  <div class="container mx-auto px-4 mt-12">
     <!-- Back Link -->
     <router-link
       to="/resturant"

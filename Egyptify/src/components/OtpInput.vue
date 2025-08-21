@@ -14,7 +14,7 @@
       />
     </div>
 
-    <div class="resend-section">
+    <!-- <div class="resend-section">
       <input type="checkbox" id="remember" class="resend-checkbox" />
       <label for="remember" class="resend-label">
         Don't receive a code?
@@ -22,7 +22,7 @@
       </label>
     </div>
 
-    <BaseButton @click="continueVerification" class="continue-button">Continue</BaseButton>
+    <BaseButton @click="continueVerification" class="continue-button">Continue</BaseButton> -->
   </div>
 </template>
 
