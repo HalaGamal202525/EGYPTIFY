@@ -180,7 +180,9 @@ import { useCardStore } from '../../data/store'
 import { useHotelStore } from '../../data/storehotel' 
 import { useReservationStore } from "../../data/Storeresturant"; 
  import { useTransportationStore } from "../../data/storetransport";
+import { useGuestStore } from "../../data//storeguset"; 
 
+const guestStore = useGuestStore();
 const transportationStore = useTransportationStore();
 const reservationStore = useReservationStore(); 
 const cardStore = useCardStore() // ✅ نستخدمه هنا
@@ -215,6 +217,7 @@ const validateForm = () => {
 
 const goToNext = () => {
   if (validateForm()) {
+        guestStore.setGuest(formData.value); 
     localStorage.setItem('formData', JSON.stringify(formData.value)) 
     router.push('/payment')
   }
@@ -315,113 +318,6 @@ import foot from "../../components/footer.vue";
   Total: {{ cardStore.total }} EGP
 </div>
 
-  
-<!-- ✅ لو فيه مطعم -->
-<div 
-  v-if="reservationStore.restaurant" 
-  class="bg-white p-6 my-6 rounded-2xl shadow-lg border-t-4 border-[#ffc340]"
->
-  <img
-    v-if="reservationStore.restaurant.image"
-    :src="reservationStore.restaurant.image"
-    alt="Restaurant Image"
-    class="w-full h-40 object-cover rounded-lg mb-4"
-  />
-  <h3 class="text-lg font-bold text-gray-800">
-    🍴 Restaurant: {{ reservationStore.restaurant.name }}
-  </h3>
-  <p class="text-gray-600">{{ reservationStore.restaurant.address }}</p>
-  <p class="text-gray-600">⭐ {{ reservationStore.restaurant.rate }}</p>
-  <p v-if="reservationStore.restaurant.description" class="text-gray-600 mt-2">
-    {{ reservationStore.restaurant.description }}
-  </p>
-
-  <!-- ✅ تفاصيل الحجز -->
-  <div 
-    v-if="reservationStore.reservation.name" 
-    class="mt-4 p-4 bg-gray-50 rounded-lg"
-  >
-    <h4 class="font-semibold text-gray-800">Reservation Details:</h4>
-    <p>Name: {{ reservationStore.reservation.name }}</p>
-    <p>Phone: {{ reservationStore.reservation.phone }}</p>
-    <p>Guests: {{ reservationStore.reservation.guests }}</p>
-    <p>Date: {{ reservationStore.reservation.date }}</p>
-    <p>Time: {{ reservationStore.reservation.time }}</p>
-    <p v-if="reservationStore.reservation.comment">Comment: {{ reservationStore.reservation.comment }}</p>
-    
-    <div v-if="reservationStore.bookings.length" class="mt-3">
-      <h4 class="font-semibold">Your Orders:</h4>
-      <ul class="list-disc list-inside text-gray-700">
-        <li 
-          v-for="(booking, i) in reservationStore.bookings" 
-          :key="i"
-        >
-          {{ booking.name }} - {{ booking.price }} EGP
-        </li>
-      </ul>
-      <p class="mt-2 font-bold">Total: {{ reservationStore.totalPrice }} EGP</p>
-    </div>
-  </div>
-</div>
-
-  <!-- ✅ لو فيه وسيلة مواصلات -->
-  <div 
-    v-if="transportationStore.transportation" 
-    class="bg-white p-6 my-6 rounded-2xl shadow-lg border-t-4 border-[#ffc340]"
-  >
-    <img
-      v-if="transportationStore.transportation.image"
-      :src="transportationStore.transportation.image"
-      alt="Transportation Image"
-      class="w-full h-40 object-cover rounded-lg mb-4"
-    />
-    <h3 class="text-lg font-bold text-gray-800">
-      🚖 Transportation: {{ transportationStore.transportation.type }}
-    </h3>
-    <p class="text-gray-600">From: {{ transportationStore.transportation.from }}</p>
-    <p class="text-gray-600">To: {{ transportationStore.transportation.to }}</p>
-    <p class="text-gray-600">Date: {{ transportationStore.transportation.date }}</p>
-    <p class="text-gray-600">Time: {{ transportationStore.transportation.time }}</p>
-    <p class="font-semibold mt-2">Price: {{ transportationStore.transportation.price }} EGP</p>
-  </div>
-  <!-- ✅ لو فيه فندق (هنا يختفي الكارت والأنشطة) -->
-  <div 
-    v-if="hotelStore.hotel.name" 
-    class="bg-white p-6 my-6 rounded-2xl shadow-lg border-t-4 border-[#ffc340]"
-  >
-    <img
-      v-if="hotelStore.hotel.image"
-      :src="hotelStore.hotel.image"
-      alt="Hotel Image"
-      class="w-full h-40 object-cover rounded-lg mb-4"
-    />
-    <h3 class="text-lg font-bold text-gray-800">
-      Hotel: {{ hotelStore.hotel.name }}
-    </h3>
-    <p class="text-gray-600">⭐ {{ hotelStore.hotel.rate }}</p>
-    <p class="text-gray-600">{{ hotelStore.hotel.address }}</p>
-    <p v-if="hotelStore.hotel.description" class="text-gray-600 mt-2">
-      {{ hotelStore.hotel.description }}
-    </p>
-
-    <!-- ✅ تفاصيل الحجز -->
-    <div v-if="hotelStore.bookingDetails.roomType" class="mt-4 p-4 bg-gray-50 rounded-lg">
-      <h4 class="font-semibold text-gray-800">Booking Details:</h4>
-      <p>Room Type: {{ hotelStore.bookingDetails.roomType }}</p>
-      <p>Guests: {{ hotelStore.bookingDetails.guests }}</p>
-      <p>Check-in: {{ hotelStore.bookingDetails.checkIn }}</p>
-      <p>Check-out: {{ hotelStore.bookingDetails.checkOut }}</p>
-      <p class="font-semibold">Price/Night: {{ hotelStore.bookingDetails.price }} EGP</p>
-      <img
-        v-if="hotelStore.bookingDetails.roomImage"
-        :src="hotelStore.bookingDetails.roomImage"
-        alt="Room Image"
-        class="w-full h-32 object-cover rounded-lg mt-3"
-      />
-      <p>Num of Night:  {{ hotelStore.totalNights }}</p>
-      <p> Total: {{ hotelStore.totalPrice }} EGP</p>
-    </div>
-  </div>
 </div>
 
   <!-- ✅ Form Section (اليمين - 2/3) -->
