@@ -261,46 +261,57 @@ import foot from "../../components/footer.vue";
   <!-- ✅ Card Section (الشمال - 1/3) -->
 <div class="space-y-6 lg:col-span-1">
 
-  <!-- ✅ لو فيه كارت بس -->
-  <div 
-    v-if="cardStore.card.title && !hotelStore.hotel.name" 
-    class="bg-white p-6 rounded-2xl shadow-lg"
+<!-- ✅ تفاصيل الرحلة -->
+<div 
+  v-if="cardStore.card.title && !hotelStore.hotel.name" 
+  class="bg-white p-6 rounded-2xl shadow-lg"
+>
+  <img
+    v-if="cardStore.card.image"
+    :src="cardStore.card.image"
+    alt="Card Image"
+    class="w-full h-40 object-cover rounded-lg mb-4"
+  />
+  <h3 class="text-lg font-bold text-gray-800">Trip: {{ cardStore.card.title }}</h3>
+  <p class="text-gray-600">Rate: ⭐ {{ cardStore.card.rate }}</p>
+  <p class="text-gray-800 font-semibold mt-2">Price: {{ cardStore.card.price }}<span> EGP</span> </p>
+  <p v-if="cardStore.card.description" class="text-gray-600 mt-2">
+    Category: {{ cardStore.card.description }}
+  </p>
+  <p>Total: {{ cardStore.total }} </p>
+
+</div>
+
+<!-- ✅ لو فيه أنشطة -->
+<div 
+  v-if="cardStore.card.activities && cardStore.card.activities.length && !hotelStore.hotel.name" 
+  class="space-y-4 mb-10"
+>
+  <h3 class="text-xl font-bold">Activities:</h3>
+  <div
+    v-for="(activity, index) in cardStore.card.activities"
+    :key="index"
+    class="bg-white rounded-2xl shadow-md p-4 space-y-5"
   >
     <img
-      v-if="cardStore.card.image"
-      :src="cardStore.card.image"
-      alt="Card Image"
-      class="w-full h-40 object-cover rounded-lg mb-4"
+      :src="activity.image"
+      alt="Activity Image"
+      class="w-full h-48 object-cover rounded-md"
     />
-    <h3 class="text-lg font-bold text-gray-800">Trip: {{ cardStore.card.title }}</h3>
-    <p class="text-gray-600">Rate: ⭐ {{ cardStore.card.rate }}</p>
-    <p class="text-gray-800 font-semibold mt-2">Price: {{ cardStore.card.price }} EGP</p>
-    <p v-if="cardStore.card.description" class="text-gray-600 mt-2">
-      Category: {{ cardStore.card.description }}
-    </p>
+    <h3 class="text-md font-semibold mt-2">Activity: {{ activity.name }}</h3>
+    <p class="text-gray-600">{{ activity.duration }}</p>
+    <p class="text-gray-800 font-semibold mt-1">Price: {{ activity.price }} EGP</p>
   </div>
+</div>
 
-  <!-- ✅ لو فيه أنشطة (مرتبطة بالكارت) -->
-  <div 
-    v-if="cardStore.card.activities && cardStore.card.activities.length && !hotelStore.hotel.name" 
-    class="space-y-4 mb-10"
-  >
-    <h3 class="text-xl font-bold">Activities:</h3>
-    <div
-      v-for="(activity, index) in cardStore.card.activities"
-      :key="index"
-      class="bg-white rounded-2xl shadow-md p-4 space-y-5"
-    >
-      <img
-        :src="activity.image"
-        alt="Activity Image"
-        class="w-full h-48 object-cover rounded-md"
-      />
-      <h3 class="text-md font-semibold mt-2">Activity: {{ activity.name }}</h3>
-      <p class="text-gray-600">{{ activity.duration }}</p>
-      <p class="text-gray-800 font-semibold mt-1">Price: {{ activity.price }} EGP</p>
-    </div>
-  </div>
+<!-- ✅ عرض التوتال برا الشرط -->
+<div 
+  v-if="cardStore.total > 0 " 
+  class="mt-6 p-4 bg-yellow-50 border border-yellow-300 rounded-lg text-lg font-bold"
+>
+  Total: {{ cardStore.total }} EGP
+</div>
+
   
 <!-- ✅ لو فيه مطعم -->
 <div 

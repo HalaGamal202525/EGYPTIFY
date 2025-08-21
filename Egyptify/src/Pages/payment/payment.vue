@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <NavBarBlack />
 
   <div class="flex justify-center items-center gap-8 mt-29">
@@ -7,7 +7,6 @@
       :key="index"
       class="flex flex-col items-center"
     >
-      <!-- الدائرة -->
       <div
         class="w-10 h-10 flex items-center justify-center rounded-full border-2 transition-all duration-300"
         :class="{
@@ -36,47 +35,6 @@
     <div v-if="currentStep === 1">
       <div class="h-1 w-full bg-[#ffc340]"></div>
       <div class="flex flex-wrap gap-6 justify-center my-4">
-        <!-- <div
-          class="bg-gray-50 rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
-        >
-          <img
-            :src="transport.image"
-            alt="Transport Image"
-            class="w-full h-48 rounded-2xl object-cover"
-          />
-          <div class="py-4 space-y-2">
-            <h2 class="text-xl font-bold text-gray-800">
-              {{ transport.company }}
-            </h2>
-            <p class="text-gray-600">
-              <span class="font-semibold">Type:</span> {{ transport.type }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">From:</span>
-              {{ transport.from }} &nbsp;
-              <span class="font-semibold">To:</span> {{ transport.to }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Departure:</span>
-              {{ transport.departureTime }} &nbsp;
-              <span class="font-semibold">Arrival:</span>
-              {{ transport.arrivalTime }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Duration:</span>
-              {{ transport.duration }}
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Bags:</span> {{ transport.bags }} bags
-            </p>
-            <p class="text-gray-600">
-              <span class="font-semibold">Seat No:</span> {{ transport.seatno }}
-            </p>
-            <p class="text-gray-900 font-bold text-lg">
-              <span class="font-bold">Price:</span> {{ transport.price }} EGP
-            </p>
-          </div>
-        </div> -->
 
         <div
           class="rounded-2xl shadow-lg p-6 overflow-hidden flex flex-col w-full md:w-[48%]"
@@ -114,7 +72,6 @@
             </div>
           </div>
 
-          <!-- بيانات وسيلة المواصلات -->
           <div v-if="bookingStore.transportation" class="mb-10">
             <h2 class="text-xl font-bold text-gray-800 mb-4">
               Transportation Booking
@@ -147,7 +104,6 @@
             </p>
           </div>
 
-          <!-- بيانات حجز المطعم من الفورم -->
           <div v-if="bookingStore.reservation.name" class="mt-6">
             <h2 class="text-xl font-bold text-gray-800 mb-4">
               Reservation Details
@@ -177,7 +133,6 @@
   <div
     class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden  mb-6"
   >
-    <!-- كارت المكان -->
     <img
       :src="cardData.image"
       alt="place image"
@@ -190,7 +145,6 @@
         {{ cardData.price }}
       </p>
 
-    <!-- كروت الـ Activities جوا المكان -->
 <h3 class="text-lg font-semibold mb-2">Activities:</h3>
 
 <div v-if="cardData.activities && cardData.activities.length">
@@ -221,7 +175,6 @@
           </div>
         </div>
 
-        <!-- كارت المسافر (مكرر فقط مرة واحدة) -->
         <div class="p-6 bg-white rounded-xl shadow-md md:col-span-2 w-full">
           <h2 class="text-2xl font-bold mb-4">Traveller Details</h2>
           <ul class="space-y-2">
@@ -270,12 +223,9 @@
         </div>
       </div>
 
-      <!-- خط -->
       <div class="h-1 w-full bg-[#ffc340] my-6"></div>
 
-      <!-- كروت المسافر والرحلة -->
 
-      <!-- checkbox -->
       <div class="flex items-center justify-start py-6 px-6 mt-4">
         <input
           type="checkbox"
@@ -303,7 +253,6 @@
         >
       </div>
     </div>
-    <!-- step 2 -->
     <div v-else-if="currentStep === 2">
       <div class="flex space-x-4 justify-center mb-4">
         <BaseButton @click="activeTab = 'fawry'" :class="tabClass('fawry')"
@@ -323,7 +272,6 @@
         <div
           class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md transition-all gap-6 duration-300"
         >
-          <!-- Step 1: Phone number -->
           <div v-if="!showOtpSection" class="flex flex-col gap-4">
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
@@ -350,7 +298,6 @@
             <p class="text-base font-medium mt-2">Enter OTP sent via Fawry:</p>
             <otp @otp-verified="goToStepThree" />
 
-            <!-- زر الرجوع -->
             <div class="flex items-center justify-center mb-2 mt-1">
               <input
                 type="checkbox"
@@ -438,38 +385,6 @@
               </div>
             </div>
 
-            <!-- <div class="flex justify-between gap-3">
-              <div class="w-1/3">
-                <label class="block text-sm font-medium text-gray-700 mb-1"
-                  >Exp. Month</label
-                >
-                <InputField
-                  type="number"
-                  placeholder="MM"
-                  class="w-full px-2 py-2 rounded-md"
-                />
-              </div>
-              <div class="w-1/3">
-                <label class="block text-sm font-medium text-gray-700 mb-1"
-                  >Exp. Year</label
-                >
-                <InputField
-                  type="number"
-                  placeholder="YY"
-                  class="w-full px-2 py-2 rounded-md"
-                />
-              </div>
-              <div class="w-1/3">
-                <label class="block text-sm font-medium text-gray-700 mb-1"
-                  >CVV</label
-                >
-                <InputField
-                  type="number"
-                  placeholder="CVV"
-                  class="w-full px-2 py-2 rounded-md"
-                />
-              </div>
-            </div> -->
 
             <div class="flex justify-between gap-3">
               <div class="w-1/2">
@@ -515,7 +430,6 @@
         <div
           class="w-full max-w-md bg-white p-6 rounded-2xl shadow-md transition-all gap-6 duration-300"
         >
-          <!-- Step 1: Phone number -->
           <div v-if="!showOtpSection" class="flex flex-col gap-4">
             <h3 class="text-lg font-semibold mb-2 text-gray-800">
               Fawry Number
@@ -538,12 +452,10 @@
             >
           </div>
 
-          <!-- Step 2: OTP Section -->
           <div v-else class="flex flex-col gap-4">
             <p class="text-base font-medium mt-2">Enter OTP sent via Fawry:</p>
             <otp @otp-verified="goToStepThree" />
 
-            <!-- زر الرجوع -->
             <div class="flex items-center justify-center mb-2 mt-1">
               <input
                 type="checkbox"
@@ -560,7 +472,6 @@
               Didn’t receive a code?
             </p>
 
-            <!-- أزرار التنقل -->
             <div class="flex justify-between gap-4 mt-4">
               <BaseButton
                 @click="previous"
@@ -629,14 +540,11 @@ import BaseButton from "../../components/BaseButton.vue";
 import foot from "../../components/footer.vue";
 import InputField from "../../components/InputField.vue";
 import otp from "../../components/OtpInput.vue";
-// localStorage.setItem('selectedTransport', JSON.stringify(transport));
-// localStorage.setItem('selectedHotel', JSON.stringify(hotel));
-// localStorage.setItem('tripDetails', JSON.stringify(trip));
 
 import { computed } from "vue";
-// import { useBookingStore } from "../../data/store";
+import { useBookingStore } from "../../data/store";
 
-// const bookingStore = useBookingStore();
+const bookingStore = useBookingStore();
 
 const cardData = computed(() => bookingStore.card);
 const hotel = computed(() => bookingStore.hotel);
@@ -691,7 +599,6 @@ const goToHome = () => {
 const continueVerification = () => {
   const fullOtp = otpDigits.value.join("");
   if (fullOtp.length === 4 && /^\d{4}$/.test(fullOtp)) {
-    // إبعتي حدث للكومبوننت الأب
     emit("otp-verified");
   } else {
     alert("Please enter the 4-digit code.");
@@ -699,7 +606,6 @@ const continueVerification = () => {
 };
 const emit = defineEmits(["otp-verified"]);
 const goToStepThree = () => {
-  // كود نقلك للخطوة الثالثة، ممكن تغيري قيمة step مثلاً
   currentStep.value = 3;
 };
 import { watchEffect } from "vue";
@@ -720,30 +626,7 @@ onMounted(() => {
 const resetSteps = () => {
   currentStep.value = 1;
 };
-// const transport = {
-//   image: "/sara/R (8).jpeg",
-//   company: "GoBus",
-//   type: "Bus",
-//   from: "Cairo",
-//   to: "Hurghada",
-//   departureTime: "08:00 AM",
-//   arrivalTime: "01:30 PM",
-//   duration: "5h 30m",
-//   bags: 2,
-//   price: 220,
-// };
-// const hotel = {
-//   image: "/sara/wood-hotel-house-1001965.jpg",
-//   name: "Grand Nile Hotel",
-//   location: "Garden City, Cairo",
-//   checkin: "12 Jul 2025  12:00PM",
-//   checkout: "15 Jul 2025  3:00PM",
-//   rating: 4.5,
-//   roomType: "Deluxe Room",
-//   guests: 2,
-//   facilities: ["Wi-Fi", "Breakfast", "Pool", "Gym"],
-//   price: 1200,
-// };
+
 const trip = {
   transport: {
     name: "GoBus",
@@ -763,13 +646,6 @@ const trip = {
   tourprice: 400,
   seatno: "14A",
 };
-// const totalPrice =
-//   trip.transport.price +
-//   trip.hotel.price +
-//   trip.mealPrice +
-//   trip.servicePrice +
-//   trip.placeprice +
-//   trip.tourprice;
 
 
 const totalPrice = computed(() => {
@@ -782,4 +658,241 @@ const totalPrice = computed(() => {
 input[type="checkbox"] {
   border: 1px solid black !important;
 }
-</style>
+</style> -->
+
+
+<template>
+    <NavBarBlack/>
+
+  <!-- 🔹 Stepper -->
+<div class="w-full bg-white shadow-md py-6 px-10 mt-20">
+  <div class="flex justify-between items-center max-w-5xl mx-auto">
+    <!-- Step 1 -->
+    <div class="flex-1 text-center">
+      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold">
+        1
+      </div>
+      <p class="mt-2 text-sm font-medium text-gray-700">Guest Info</p>
+    </div>
+
+    <div class="flex-1 h-1 bg-gray-200 mx-2 relative">
+      <div class="h-1 bg-[#ffc340] absolute left-0 top-0 w-full"></div>
+    </div>
+
+    <!-- Step 2 (active) -->
+    <div class="flex-1 text-center">
+      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold">
+        2
+      </div>
+      <p class="mt-2 text-sm font-medium text-gray-700">Payment</p>
+    </div>
+
+    <div class="flex-1 h-1 bg-gray-200 mx-2 relative"></div>
+
+    <!-- Step 3 -->
+    <div class="flex-1 text-center">
+      <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-gray-200 text-gray-500 font-bold">
+        3
+      </div>
+      <p class="mt-2 text-sm font-medium text-gray-700">Confirmation</p>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 Payment Form -->
+<div class="max-w-5xl mx-auto mt-10 bg-white p-10 rounded-2xl shadow-lg">
+  <h2 class="text-2xl font-bold text-gray-800 text-center mb-10">
+    Choose Payment Method
+  </h2>
+
+  <!-- ✅ 3 كروت جنب بعض -->
+ <div class="max-w-5xl mx-auto">
+  <!-- ✅ Payment Tabs -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Credit Card -->
+    <div
+      @click="activeTab = 'credit'"
+      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+      :class="activeTab === 'credit' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
+    >
+      <div
+        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+        :class="activeTab === 'credit' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
+      >
+        💳
+      </div>
+      <p class="font-semibold text-gray-800">Credit / Debit Card</p>
+      <p class="text-sm text-gray-600">Visa / MasterCard / AMEX</p>
+    </div>
+
+    <!-- Vodafone Cash -->
+    <div
+      @click="activeTab = 'vodafone'"
+      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+      :class="activeTab === 'vodafone' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
+    >
+      <div
+        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+        :class="activeTab === 'vodafone' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
+      >
+        📱
+      </div>
+      <p class="font-semibold text-gray-800">Vodafone Cash</p>
+      <p class="text-sm text-gray-600">Instant mobile wallet transfer</p>
+    </div>
+
+    <!-- Fawry -->
+    <div
+      @click="activeTab = 'fawry'"
+      class="flex flex-col items-center text-center p-6 rounded-2xl cursor-pointer transition border-2"
+      :class="activeTab === 'fawry' ? 'border-[#ffc340] bg-[#fff9e6] shadow-lg' : 'border-gray-200 hover:border-[#ffc340]'"
+    >
+      <div
+        class="w-14 h-14 flex items-center justify-center rounded-full text-2xl mb-4 transition"
+        :class="activeTab === 'fawry' ? 'bg-[#ffc340] text-white' : 'bg-gray-100 text-gray-600'"
+      >
+        🏧
+      </div>
+      <p class="font-semibold text-gray-800">Fawry</p>
+      <p class="text-sm text-gray-600">Pay at any Fawry outlet</p>
+    </div>
+  </div>
+
+  <!-- ✅ Tabs Content -->
+  <div class="mt-10">
+    <!-- 💳 Credit Card -->
+    <div
+      v-if="activeTab === 'credit'"
+      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+    >
+      <h3 class="text-xl font-semibold text-gray-800">Card Details</h3>
+
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Cardholder Name</label>
+          <InputField type="text" placeholder="Enter Cardholder Name" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+          <InputField type="text" placeholder="1234 5678 9012 3456" />
+        </div>
+
+        <div class="flex gap-4">
+          <div class="w-1/2">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+            <InputField type="text" placeholder="MM/YY" />
+          </div>
+          <div class="w-1/2">
+            <label class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
+            <InputField type="text" placeholder="123" />
+          </div>
+        </div>
+      </div>
+
+      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
+        <span>Total:</span>
+        <span>{{ bookingStore.totalPrice }} EGP</span>
+      </div>
+
+      <BaseButton @click="nextStep" class="w-full mt-4">Pay Securely</BaseButton>
+    </div>
+
+    <!-- 📱 Vodafone -->
+    <div
+      v-if="activeTab === 'vodafone'"
+      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+    >
+      <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
+      <p class="text-sm text-gray-600">Enter your phone number to receive an OTP.</p>
+
+      <InputField placeholder="Enter Phone Number" />
+
+      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
+        <span>Total:</span>
+        <span>{{ bookingStore.totalPrice }} EGP</span>
+      </div>
+
+      <BaseButton @click="goToOtpSection" class="w-full mt-4">Continue</BaseButton>
+
+      <div v-if="showOtpSection" class="mt-6 space-y-4">
+        <p class="text-base font-medium">Enter OTP:</p>
+        <otp @otp-verified="goToStepThree" />
+
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="agree" v-model="isChecked" />
+          <label for="agree" class="text-sm text-gray-700">I agree to the terms.</label>
+        </div>
+
+        <div class="flex gap-3">
+          <BaseButton @click="previous" class="w-1/2 bg-gray-200 text-gray-800 hover:bg-gray-300">Back</BaseButton>
+          <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked">Confirm</BaseButton>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🏧 Fawry -->
+    <div
+      v-if="activeTab === 'fawry'"
+      class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+    >
+      <h3 class="text-xl font-semibold text-gray-800">Fawry Payment</h3>
+      <InputField placeholder="Enter Phone Number" />
+
+
+      <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
+        <span>Total:</span>
+        <span>{{ bookingStore.totalPrice }} EGP</span>
+      </div>
+
+      <BaseButton @click="nextStep" class="w-full mt-4">Get Fawry Code</BaseButton>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ✅ زر المتابعة -->
+  <div class="mt-10 flex justify-end">
+    <button
+      class="bg-[#ffc340] hover:bg-yellow-500 text-white px-10 py-3 rounded-xl font-semibold shadow-md transition"
+    >
+      Continue to Confirmation
+    </button>
+  </div>
+</div>
+
+
+
+<foot/>
+</template>
+<script setup>
+import NavBarBlack from '../../components/NavBar-Black.vue';
+import foot from "../../components/footer.vue"
+import BaseButton from '../../components/BaseButton.vue';
+import InputField from "../../components/InputField.vue"
+import { ref } from "vue";
+
+const activeTab = ref("credit");
+const showOtpSection = ref(false);
+const isChecked = ref(false);
+
+const bookingStore = {
+  totalPrice: 400,
+};
+
+const nextStep = () => {
+  console.log("Next step");
+};
+
+const previous = () => {
+  showOtpSection.value = false;
+};
+
+const goToOtpSection = () => {
+  showOtpSection.value = true;
+};
+
+const goToStepThree = () => {
+  console.log("OTP verified -> go to step 3");
+};
+</script>
