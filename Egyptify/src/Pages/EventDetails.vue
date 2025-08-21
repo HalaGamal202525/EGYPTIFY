@@ -98,15 +98,16 @@
     <div
       v-for="(review, index) in event.reviews"
       :key="index"
-      class="bg-gray-100 border border-gray-300 rounded-lg p-6 shadow-sm flex items-start gap-4"
+      class="bg-[#FFFDF9] border border-gray-300 rounded-lg p-6 shadow-sm flex items-start gap-4"
     >
-      <div class="text-xl mt-1"><i class="fa-solid fa-comment"></i></div>
+      <div class="text-xl"><i class="fa-solid fa-comment"></i></div>
       <p class="text-base">{{ review }}</p>
     </div>
   </div>
 </div>
 
     </div>
+    
 
     <Footer />
   </div>

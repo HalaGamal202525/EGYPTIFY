@@ -32,8 +32,25 @@
       "amenities": ["Meals", "Bedding", "Private Cabin"],
       "icon": "train"
     },
-    {
+
+    
+{
       "id": 3,
+      "provider": "Budget Rent a Car",
+      "type": "Car",
+      "kind": "Economy",
+      "subClass": "Economy",
+      "capacity": "5 passengers",
+      "fuel": "Petrol",
+      "gear": "Manual",
+      "price": "1500/day",
+      "per": "Per night",
+      "amenities": ["GPS", "Insurance", "Fuel Efficient"],
+      "icon": "car"
+    },
+
+    {
+      "id": 4,
       "provider": "Egyptian Railways",
       "type": "Train",
       "kind": "First Class",
@@ -50,7 +67,7 @@
     },
     
     {
-      "id": 4,
+      "id": 5,
       "provider": "Egyptian Railways",
       "type": "Train",
       "kind": "Second Class",
@@ -66,7 +83,7 @@
       "icon": "train"
     },
     {
-      "id": 5,
+      "id": 6,
       "provider": "Super Jet",
       "type": "Bus",
       "kind": "Premium",
@@ -82,7 +99,7 @@
       "icon": "bus"
     },
     {
-      "id": 6,
+      "id": 7,
       "provider": "West Delta",
       "type": "Bus",
       "kind": "Standard",
@@ -98,7 +115,7 @@
       "icon": "bus"
     },
     {
-      "id": 7,
+      "id": 8,
       "provider": "VIP Train",
       "type": "Train",
       "kind": "VIP",
@@ -115,7 +132,7 @@
     },
     
     {
-      "id": 8,
+      "id": 9,
       "provider": "Europcar",
       "type": "Car",
       "kind": "Standard",
@@ -129,7 +146,7 @@
       "icon": "car"
     },
       {
-    "id": 9,
+    "id": 10,
     "provider": "Everyday Bus / Middle Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -147,7 +164,7 @@
     "source": "rome2rio.com"
   },
   {
-    "id": 10,
+    "id": 11,
     "provider": "West Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -164,8 +181,24 @@
     "icon": "bus",
     "source": "siwawi.com"
   },
+
   {
-    "id": 11,
+      "id": 12,
+      "provider": "Avis",
+      "type": "Car",
+      "kind": "Premium",
+      "subClass": "Premium",
+      "capacity": "5 passengers",
+      "fuel": "Petrol",
+      "gear": "Automatic",
+      "price": "2500/day",
+      "per": "Per night",
+      "amenities": ["GPS", "Bluetooth", "Premium Insurance"],
+      "icon": "car"
+    },
+
+  {
+    "id": 13,
     "provider": "East Delta",
     "type": "Bus",
     "kind": "Premium",
@@ -187,7 +220,7 @@
     "source": "eastdelta.com.eg"
   },
   {
-    "id": 12,
+    "id": 14,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -209,7 +242,7 @@
     "source": "gobus.com.eg"
   },
   {
-    "id": 13,
+    "id": 15,
     "provider": "Super Jet",
     "type": "Bus",
     "kind": "Standard",
@@ -229,7 +262,7 @@
     "source": "superjet.com.eg"
   },
   {
-    "id": 14,
+    "id": 16,
     "provider": "Private Tour",
     "type": "4x4 Jeep",
     "kind": "Adventure",
@@ -251,7 +284,7 @@
     "source": "local-tour-operator"
   },
   {
-    "id": 15,
+    "id": 17,
     "provider": "Egyptian Railways",
     "type": "Train",
     "kind": "VIP",
@@ -271,8 +304,28 @@
     "icon": "train",
     "source": "enr.gov.eg"
   },
+
+
+{
+    "id": 18,
+    "provider": "Private Minivan",
+    "type": "Minivan",
+    "kind": "Premium",
+    "from": "Cairo",
+    "to": "Fayoum",
+    "departure": "Flexible",
+    "arrival": "Flexible",
+    "duration": "2h",
+    "stops": "Direct",
+    "price": 600,
+    "currency": "EGP",
+    "per": "Per trip",
+    "amenities": ["AC", "Snacks"],
+    "icon":"van"
+},
+
   {
-    "id": 16,
+    "id": 19,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -295,7 +348,7 @@
   },
   
   {
-    "id": 17,
+    "id": 20,
     "provider": "West Bus",
     "type": "Bus",
     "kind": "Standard",
@@ -312,7 +365,7 @@
     "icon": "bus"
   },
   {
-    "id": 18,
+    "id": 21,
     "provider": "Siwa Safari Jeep",
     "type": "4x4 Jeep",
     "kind": "Adventure",
@@ -329,7 +382,7 @@
     "icon": "jeep"
   },
   {
-    "id": 19,
+    "id": 22,
     "provider": "Private Minivan",
     "type": "Minivan",
     "kind": "Premium",
@@ -347,7 +400,7 @@
   },
 
   {
-    "id": 20,
+    "id": 23,
     "provider": "East Delta",
     "type": "Bus",
     "kind": "Premium",
@@ -364,7 +417,7 @@
     "icon": "bus"
   },
   {
-    "id": 21,
+    "id": 24,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "VIP",
@@ -382,7 +435,7 @@
   },
   
   {
-    "id": 24,
+    "id": 25,
     "provider": "Private Taxi",
     "type": "Car",
     "kind": "Private",
@@ -400,7 +453,7 @@
   },
 
   {
-    "id": 22,
+    "id": 26,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Standard",
@@ -417,7 +470,7 @@
     "icon": "bus"
   },
   {
-    "id": 23,
+    "id": 27,
     "provider": "Super Jet",
     "type": "Bus",
     "kind": "Premium",
@@ -434,7 +487,7 @@
     "icon": "bus"
   },
   {
-    "id": 24,
+    "id": 28,
     "provider": "EgyptAir",
     "type": "Flight",
     "kind": "Economy",
@@ -452,7 +505,7 @@
   },
 
   {
-    "id": 25,
+    "id": 29,
     "provider": "Super Jet",
     "type": "Bus",
     "kind": "Standard",
@@ -470,7 +523,7 @@
   },
   
   {
-    "id": 26,
+    "id": 30,
     "provider": "Tour Bus",
     "type": "Bus",
     "kind": "Group",
@@ -488,7 +541,7 @@
   },
 
   {
-    "id": 27,
+    "id": 31,
     "provider": "Local Safari Tour",
     "type": "4x4 Jeep",
     "kind": "Adventure",
@@ -504,8 +557,29 @@
     "amenities": ["Camping Gear", "Guide"],
     "icon": "jeep"
   },
+
+
   {
-    "id": 28,
+    "id": 32,
+    "provider": "Private Taxi",
+    "type": "Car",
+    "kind": "Private",
+    "from": "Sharm El Sheikh",
+    "to": "Dahab",
+    "departure": "Flexible",
+    "arrival": "Flexible",
+    "duration": "1h 30m",
+    "stops": "Direct",
+    "price": 1500,
+    "currency": "EGP",
+    "per": "Per trip",
+    "amenities": ["AC"],
+    "icon": "car"
+  },
+
+
+  {
+    "id": 33,
     "provider": "Desert Adventures",
     "type": "4x4 Jeep",
     "kind": "Premium",
@@ -523,7 +597,7 @@
   },
 
   {
-    "id": 29,
+    "id": 34,
     "provider": "Egyptian Railways",
     "type": "Train",
     "kind": "Standard",
@@ -542,7 +616,7 @@
  
 
   {
-    "id": 30,
+    "id": 35,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -559,7 +633,7 @@
     "icon": "bus"
   },
   {
-    "id": 31,
+    "id": 36,
     "provider": "Super Jet",
     "type": "Bus",
     "kind": "VIP",
@@ -576,7 +650,7 @@
     "icon": "bus"
   },
    {
-    "id": 32,
+    "id": 37,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -593,7 +667,7 @@
   },
 
   {
-    "id": 33,
+    "id": 38,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -609,7 +683,7 @@
     "icon": "bus"
   },
   {
-    "id": 34,
+    "id": 39,
     "provider": "Super Jet",
     "type": "Bus",
     "kind": "Premium",
@@ -624,8 +698,29 @@
     "amenities": ["AC", "Snacks", "Entertainment"],
     "icon": "bus"
   },
+
+
+   {
+    "id": 40,
+    "provider": "Ride Share",
+    "type": "Car",
+    "kind": "Private",
+    "from": "Cairo",
+    "to": "Giza Pyramids",
+    "departure": "Flexible",
+    "arrival": "Flexible",
+    "duration": "45m",
+    "stops": "Direct",
+    "price": 250,
+    "currency": "EGP",
+    "per": "Per trip",
+    "amenities": ["AC"],
+    "icon": "car"
+  },
+
+
   {
-    "id": 35,
+    "id": 41,
     "provider": "West Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -641,7 +736,7 @@
     "icon": "bus"
   },
   {
-    "id": 36,
+    "id": 42,
     "provider": "Go Bus",
     "type": "Bus",
     "kind": "Premium",
@@ -657,7 +752,7 @@
     "icon": "bus"
   },
   {
-    "id": 37,
+    "id": 43,
     "provider": "East Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -673,7 +768,7 @@
     "icon": "bus"
   },
   {
-    "id": 38,
+    "id": 44,
     "provider": "East Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -689,7 +784,7 @@
     "icon": "bus"
   },
   {
-    "id": 39,
+    "id": 45,
     "provider": "West Delta",
     "type": "Bus",
     "kind": "Standard",
@@ -704,9 +799,6 @@
     "amenities": ["AC"],
     "icon": "bus"
   }
-
-  
-
 
 ],
 
@@ -733,3 +825,17 @@
     }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
