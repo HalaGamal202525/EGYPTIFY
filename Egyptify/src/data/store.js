@@ -31,16 +31,20 @@ export const useCardStore = defineStore("card", {
         title, 
         description, 
         rate, 
-        price: price || 0, 
+        // price: price || 0, 
+        price: Number(price) || 0,   // ✅ نحول السعر لرقم
         activities: [] 
       };
     },
 
     addActivityToCard(activity) {
+       // استخرج أول رقم يظهر في النص (مثلاً 200 من "From EGP 200 per ride")
+      const priceMatch = activity.price?.match(/\d+/);
+      const cleanPrice = priceMatch ? Number(priceMatch[0]) : 0;
       this.card.activities.push({
         name: activity.name,
         image: activity.image,
-        price: activity.price || 0,
+        price: cleanPrice,   // ← هي دي اللي هتتخزن كرقم
         description: activity.description || "",
         duration: activity.duration || "",
       });
