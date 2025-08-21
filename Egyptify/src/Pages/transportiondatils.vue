@@ -404,6 +404,7 @@ const emit = defineEmits(['book-now'])
 
 import { useRouter } from "vue-router";
  import { useTransportationStore } from "../data/storetransport";
+// import { Script } from "vm";
 const transportationStore = useTransportationStore();
 const router = useRouter();
 
@@ -458,10 +459,48 @@ const scrollToCards = () => {
 
 
 
+// const handleBookNow = (item) => {
+//   transportationStore.setTransportation(item);
+//   router.push("/form");
+
+//    if (item.type === "Car") {
+//     bookingData = {
+//       ...item,
+//       from: filters.value.from,
+//       to: filters.value.to
+//     }
+// };
+// }
+
+
+
+
+
+
+
 const handleBookNow = (item) => {
-  transportationStore.setTransportation(item);
+  let bookingData = { ...item };
+
+  // لو النوع "Car" ضيف from/to من الفلاتر
+  if (item.type === "Car") {
+    bookingData = {
+      ...item,
+      from: filters.value.from,
+      to: filters.value.to
+    };
+  }
+
+  // خزّني الداتا في الستور
+  transportationStore.setTransportation(bookingData);
+
+  // روح للفورم
   router.push("/form");
 };
+
+
+
+
+
 
 // كل الداتا
 const transportation = ref(transportationData);
@@ -485,9 +524,6 @@ const filteredTransportation = computed(() => {
     return matchesFilters;
   });
 });
-
-
-
 
 
 
