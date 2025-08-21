@@ -26,9 +26,13 @@ export const useReservationStore = defineStore("reservation", {
     },
 
     addBooking(booking) {
+       const guests = parseInt(this.reservation.guests) || 1; // 👈 ناخد عدد الأشخاص من الحجز
+  const totalForBooking = booking.price * guests;  
       this.bookings.push({
         ...booking,
-        restaurant: this.restaurant, // ✅ ربط الحجز بالمطعم
+        restaurant: this.restaurant,
+            guests, // نخزن العدد كمان
+    total: totalForBooking,  // ✅ ربط الحجز بالمطعم
       });
       this.totalPrice += booking.price;
     },
