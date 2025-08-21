@@ -307,7 +307,7 @@ import foot from "../../components/footer.vue";
 <!-- ✅ عرض التوتال برا الشرط -->
 <div 
   v-if="cardStore.total > 0 " 
-  class="mt-6 p-4 bg-yellow-50 border border-yellow-300 rounded-lg text-lg font-bold"
+  class="mt-6 p-4 bg-yellow-50 border border-yellow-300 rounded-lg text-lg font-bold mb-4"
 >
   Total: {{ cardStore.total }} EGP
 </div>
