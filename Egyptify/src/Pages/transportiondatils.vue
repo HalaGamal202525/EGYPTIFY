@@ -26,7 +26,7 @@
     <div
       class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl"
     >
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-left text-white">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-left text-white">
         <!-- From -->
         <div>
           <label class="block text-sm font-semibold mb-1">From</label>
@@ -89,7 +89,7 @@
         </div>
 
         <!-- Passengers -->
-        <div>
+        <!-- <div>
           <label class="block text-sm font-semibold mb-1">Passengers</label>
         <select v-model="filters.passengers" 
         class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
@@ -100,7 +100,25 @@
             <option>4 Passengers</option>
             <option>5+ Passengers</option>
           </select>
-        </div>
+        </div> -->
+
+
+
+
+
+        <!--Travel time-->
+        <div>
+              <label class="block text-sm font-semibold mb-1">Time</label>
+              <input
+                type="time"
+                class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                v-model="filters.time"
+                required
+              />
+            </div>
+
+
+
 
 
 
@@ -118,9 +136,6 @@
       </div>
 
         
-
-
-
 
       <!-- Search Button -->
 <div class="mt-6 flex justify-center">
@@ -490,8 +505,27 @@ const handleBookNow = (item) => {
     };
   }
 
+
+
+  // في كل الحالات ضيف travel date و time (حتى لو مش Car)
+  bookingData = {
+    ...bookingData,
+    date: filters.value.date,
+    time: filters.value.time,
+  };
+
+
+  
   // خزّني الداتا في الستور
-  transportationStore.setTransportation(bookingData);
+  // transportationStore.setTransportation(bookingData);
+
+
+
+
+  transportationStore.setTransportation({
+  ...bookingData,
+  price: Number(bookingData.price) || 0   // ✅ نحول السعر لرقم
+});
 
   // روح للفورم
   router.push("/transportform");
