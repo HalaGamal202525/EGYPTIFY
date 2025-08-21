@@ -42,7 +42,7 @@ const submitReservation = () => {
   });
 
   // ✅ تحويل المستخدم لصفحة الفورم
-  router.push("/form");
+  router.push("/resturantform");
 };
 
 

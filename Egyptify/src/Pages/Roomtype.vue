@@ -59,7 +59,7 @@ const handleBookRoom = (room) => {
 
   console.log("تفاصيل الغرفة المختارة:", hotelStore.bookingDetails);
 
-  router.push("/form");
+  router.push("/hotelform");
 };
 
 

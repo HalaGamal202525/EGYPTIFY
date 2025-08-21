@@ -665,7 +665,7 @@ input[type="checkbox"] {
     <NavBarBlack/>
 
   <!-- 🔹 Stepper -->
-<div class="w-full bg-white shadow-md py-6 px-10 mt-20">
+<div class="w-full bg-white shadow-md py-6 px-10 mt-24">
   <div class="flex justify-between items-center max-w-5xl mx-auto">
     <!-- Step 1 -->
     <div class="flex-1 text-center">
@@ -757,7 +757,7 @@ input[type="checkbox"] {
       <p class="text-sm text-gray-600">Pay at any Fawry outlet</p>
     </div>
   </div>
-
+ 
   <!-- ✅ Tabs Content -->
   <div class="mt-10">
     <!-- 💳 Credit Card -->
@@ -791,8 +791,9 @@ input[type="checkbox"] {
       </div>
 
       <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <span>Total:</span>
-        <span>{{ bookingStore.totalPrice }} EGP</span>
+        <!-- <span>Total:</span> -->
+         <span>  Total: </span>
+        <span>  {{ grandTotal }} EGP</span>
       </div>
 
       <BaseButton @click="nextStep" class="w-full mt-4">Pay Securely</BaseButton>
@@ -809,8 +810,9 @@ input[type="checkbox"] {
       <InputField placeholder="Enter Phone Number" />
 
       <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <span>Total:</span>
-        <span>{{ bookingStore.totalPrice }} EGP</span>
+        <span>   Total: </span>
+        <span>    {{ grandTotal }} EGP
+ </span>
       </div>
 
       <BaseButton @click="goToOtpSection" class="w-full mt-4">Continue</BaseButton>
@@ -837,28 +839,28 @@ input[type="checkbox"] {
       class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
     >
       <h3 class="text-xl font-semibold text-gray-800">Fawry Payment</h3>
+            <p class="text-sm text-gray-600">Enter your phone number to receive an OTP.</p>
+
       <InputField placeholder="Enter Phone Number" />
 
 
       <div class="text-lg font-bold flex justify-between items-center pt-4 border-t">
-        <span>Total:</span>
-        <span>{{ bookingStore.totalPrice }} EGP</span>
+        <!-- <span>Total:</span> -->
+         <span>     Total: </span>
+        <span >    {{ grandTotal }} EGP
+</span>
       </div>
 
       <BaseButton @click="nextStep" class="w-full mt-4">Get Fawry Code</BaseButton>
     </div>
   </div>
+    <BaseButton @click="goBack" class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]">
+    Back
+  </BaseButton>
 </div>
 
 
-  <!-- ✅ زر المتابعة -->
-  <div class="mt-10 flex justify-end">
-    <button
-      class="bg-[#ffc340] hover:bg-yellow-500 text-white px-10 py-3 rounded-xl font-semibold shadow-md transition"
-    >
-      Continue to Confirmation
-    </button>
-  </div>
+ 
 </div>
 
 
@@ -869,16 +871,22 @@ input[type="checkbox"] {
 import NavBarBlack from '../../components/NavBar-Black.vue';
 import foot from "../../components/footer.vue"
 import BaseButton from '../../components/BaseButton.vue';
-import InputField from "../../components/InputField.vue"
-import { ref } from "vue";
+import InputField from "../../components/InputField.vue";
+import otp from "../../components/OtpInput.vue"
+import { ref,computed } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goBack = () => {
+  router.back(); // بيرجع للصفحة اللي قبلها
+};
 
 const activeTab = ref("credit");
 const showOtpSection = ref(false);
 const isChecked = ref(false);
 
-const bookingStore = {
-  totalPrice: 400,
-};
+
 
 const nextStep = () => {
   console.log("Next step");
@@ -895,4 +903,23 @@ const goToOtpSection = () => {
 const goToStepThree = () => {
   console.log("OTP verified -> go to step 3");
 };
+import { useCardStore } from "../../data/store";
+import { useReservationStore } from "../../data/Storeresturant";
+import { useTransportationStore } from "../../data/storetransport";
+import { useHotelStore } from "../../data/storehotel";
+
+const cardStore = useCardStore();
+const reservationStore = useReservationStore();
+const transportationStore = useTransportationStore();
+const hotelStore = useHotelStore();
+
+// 🟢 Total from all stores
+const grandTotal = computed(() => {
+  return (
+    (cardStore.total || 0) +
+    (reservationStore.totalPrice || 0) +
+    (transportationStore.transportation?.price || 0) +
+    (hotelStore.totalPrice || 0)
+  );
+});
 </script>

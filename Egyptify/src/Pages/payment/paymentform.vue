@@ -176,7 +176,6 @@ import foot from "../../components/footer.vue";
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { useCardStore } from '../../data/store' 
 import { useHotelStore } from '../../data/storehotel' 
 import { useReservationStore } from "../../data/Storeresturant"; 
@@ -184,7 +183,6 @@ import { useReservationStore } from "../../data/Storeresturant";
 
 const transportationStore = useTransportationStore();
 const reservationStore = useReservationStore(); 
-const router = useRouter()
 const cardStore = useCardStore() // ✅ نستخدمه هنا
 const hotelStore = useHotelStore();
 const formData = ref({
@@ -222,9 +220,14 @@ const goToNext = () => {
   }
 }
 
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
 const goBack = () => {
-  router.push('/booking')
-}
+  router.back(); // بيرجع للصفحة اللي قبلها
+};
+
 
 import NavBarBlack from '../../components/NavBar-Black.vue'
 import foot from "../../components/footer.vue";
@@ -234,7 +237,7 @@ import foot from "../../components/footer.vue";
   <NavBarBlack/>
 
   <!-- ✅ Steps Bar -->
-  <div class="w-full bg-white shadow-md py-6 px-10 mt-20">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-24">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <div class="flex-1 text-center">
         <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold">1</div>

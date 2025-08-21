@@ -494,7 +494,7 @@ const handleBookNow = (item) => {
   transportationStore.setTransportation(bookingData);
 
   // روح للفورم
-  router.push("/form");
+  router.push("/transportform");
 };
 
 
