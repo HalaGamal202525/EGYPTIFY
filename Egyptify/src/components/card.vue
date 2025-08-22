@@ -12,8 +12,6 @@
         class="h-48 w-full object-cover rounded-t-xl"
       />
 
-
-
       <!-- Badge -->
       <div
         v-if="showBadge && badgeText"
@@ -21,9 +19,6 @@
       >
         {{ badgeText }}
       </div>
-
-
-
 
 
       <!-- زر القلب -->
