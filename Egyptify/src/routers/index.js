@@ -67,6 +67,7 @@ import hotelsform from "../Pages/payment/paymenthotelform.vue"
 import resturantform from "../Pages/payment/paymentresturantform.vue"
 import transportfrom from "../Pages/payment/paymenttransport.vue"
 import Confirmation from '../Pages/payment/Confirmation.vue'
+import history from '../Pages/history.vue'
 
 const routes = [
   { path: '/', component: Home },{path:"/search-results",component:searchresult},
@@ -277,6 +278,8 @@ component:FoodDetail
     name: 'BookingProcessInfo',
     component: BookingProcessInfo
   },
+        {path:'/history',component :()=> import('../Pages/history.vue')},
+
 
 ]
 

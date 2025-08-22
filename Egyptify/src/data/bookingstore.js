@@ -1,27 +1,16 @@
-// bookingStore.js
 import { defineStore } from "pinia";
 
-export const useBookingStore = defineStore("booking", {
+export const useBookingStore = defineStore("bookingStore", {
   state: () => ({
-    placeType: null, // نوع المكان (Hotel, Restaurant, Transport...)
-    placeName: null, // اسم المكان
-    dates: { checkIn: null, checkOut: null },
-    userData: null,
+    history: [], // هنا هيتخزن كل الحجوزات
   }),
-
   actions: {
-    setBookingData({ type, name, dates, userData }) {
-      this.placeType = type
-      this.placeName = name
-      this.dates = dates
-      this.userData = userData
+    addBooking(booking) {
+      this.history.push({
+        ...booking,
+        id: Date.now(), // id فريد
+        status: "Confirmed",
+      });
     },
-
-    clearBooking() {
-      this.placeType = null
-      this.placeName = null
-      this.dates = { checkIn: null, checkOut: null }
-      this.userData = null
-    }
-  }
-})
+  },
+});

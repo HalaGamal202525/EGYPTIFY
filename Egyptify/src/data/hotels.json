@@ -564,14 +564,14 @@
     "location": "Giza",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/marriott1.jpg",
-      "img1": "/Destination/marriott2.jpg",
-      "img2": "/Destination/marriott3.jpg",
+      "main": "/Destination/Marriott Mena House.webp",
+      "img1": "/Destination/Marriott Mena House2.webp",
+      "img2": "/Destination/Marriott Mena House3.webp",
       "thumbs": [
-        "/Destination/marriott4.jpg",
-        "/Destination/marriott5.jpg",
-        "/Destination/marriott6.jpg",
-        "/Destination/marriott7.jpg"
+        "/Destination/Marriott Mena House4.webp",
+        "/Destination/Marriott Mena House5.webp",
+        "/Destination/Marriott Mena House6.webp",
+        "/Destination/Marriott Mena House7.webp"
       ]
     },
     "description": "Set in a historic palace with breathtaking views of the Pyramids, Marriott Mena House offers a unique blend of heritage and luxury with modern facilities including a spa, multiple pools, and fine dining.",
@@ -622,7 +622,7 @@
         "/Destination/pyramids4.jpg",
         "/Destination/pyramids5.jpg",
         "/Destination/pyramids6.jpg",
-        "/Destination/pyramids7.jpg"
+        "/Destination/Pyramids Hotel.webp"
       ]
     },
     "description": "A conveniently located hotel just minutes from the pyramids, offering comfortable accommodations with modern amenities including a pool and restaurant.",
@@ -666,14 +666,14 @@
     "location": "Sharm El Sheikh",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/cleopatra1.jpg",
-      "img1": "/Destination/cleopatra2.jpg",
-      "img2": "/Destination/cleopatra3.jpg",
+      "main": "/Destination/Cleopatra Luxury Resort.webp",
+      "img1": "/Destination/Cleopatra Luxury Resort2.webp",
+      "img2": "/Destination/Cleopatra Luxury Resort3.webp",
       "thumbs": [
-        "/Destination/cleopatra4.jpg",
-        "/Destination/cleopatra5.jpg",
-        "/Destination/cleopatra6.jpg",
-        "/Destination/cleopatra7.jpg"
+        "/Destination/Cleopatra Luxury Resort4.webp",
+        "/Destination/Cleopatra Luxury Resort5.webp",
+        "/Destination/Cleopatra Luxury Resort6.webp",
+        "/Destination/Cleopatra Luxury Resort7.jpeg"
       ]
     },
     "description": "Set along pristine beaches, Cleopatra Luxury Resort provides a combination of comfort and luxury with numerous pools, restaurants, and wellness options.",
@@ -718,14 +718,14 @@
     "location": "Sahl Hasheesh",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/v-resort1.jpg",
-      "img1": "/Destination/v-resort2.jpg",
-      "img2": "/Destination/v-resort3.jpg",
+      "main": "/Destination/The V Luxury Resort Sahl Hasheesh.webp",
+      "img1": "/Destination/The V Luxury Resort Sahl Hasheesh2.webp",
+      "img2": "/Destination/The V Luxury Resort Sahl Hasheesh3.webp",
       "thumbs": [
-        "/Destination/v-resort4.jpg",
-        "/Destination/v-resort5.jpg",
-        "/Destination/v-resort6.jpg",
-        "/Destination/v-resort7.jpg"
+        "/Destination/The V Luxury Resort Sahl Hasheesh4.webp",
+        "/Destination/The V Luxury Resort Sahl Hasheesh5.webp",
+        "/Destination/The V Luxury Resort Sahl Hasheesh6.webp",
+        "/Destination/The V Luxury Resort Sahl Hasheesh7.webp"
       ]
     },
     "description": "Nestled along the Red Sea coast, The V Luxury Resort combines refined luxury with relaxing spa treatments and exciting water activities, perfect for a peaceful getaway.",
@@ -770,14 +770,14 @@
     "location": "Alexandria",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/fourseasons1.jpg",
-      "img1": "/Destination/fourseasons2.jpg",
-      "img2": "/Destination/fourseasons3.jpg",
+      "main": "/Destination/Four Seasons Alexandria at San Stefano.webp",
+      "img1": "/Destination/Four Seasons Alexandria at San Stefano2.webp",
+      "img2": "/Destination/Four Seasons Alexandria at San Stefano3.webp",
       "thumbs": [
-        "/Destination/fourseasons4.jpg",
-        "/Destination/fourseasons5.jpg",
-        "/Destination/fourseasons6.jpg",
-        "/Destination/fourseasons7.jpg"
+        "/Destination/Four Seasons Alexandria at San Stefano4.webp",
+        "/Destination/Four Seasons Alexandria at San Stefano5.webp",
+        "/Destination/Four Seasons Alexandria at San Stefano6.webp",
+        "/Destination/Four Seasons Alexandria at San Stefano7.jpeg"
       ]
     },
     "description": "Overlooking the Mediterranean Sea, this hotel blends contemporary luxury with historic charm, featuring exquisite dining, a private beach, and a full-service spa.",
@@ -822,14 +822,14 @@
     "location": "Hurghada",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/jazmirabel1.jpg",
-      "img1": "/Destination/jazmirabel2.jpg",
-      "img2": "/Destination/jazmirabel3.jpg",
+      "main": "/Destination/Jaz Mirabel Resort.webp",
+      "img1": "/Destination/Jaz Mirabel Resort2.webp",
+      "img2": "/Destination/Jaz Mirabel Resort3.webp",
       "thumbs": [
-        "/Destination/jazmirabel4.jpg",
-        "/Destination/jazmirabel5.jpg",
-        "/Destination/jazmirabel6.jpg",
-        "/Destination/jazmirabel7.jpg"
+        "/Destination/Jaz Mirabel Resort4.webp",
+        "/Destination/Jaz Mirabel Resort5.webp",
+        "/Destination/Jaz Mirabel Resort6.webp",
+        "/Destination/Jaz Mirabel Resort7.webp"
       ]
     },
     "description": "Located on the Red Sea coast, Jaz Mirabel Resort offers a family-friendly atmosphere, luxury amenities, and a variety of recreational activities suitable for all ages.",
@@ -853,14 +853,14 @@
     "location": "Alexandria",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/tolip1.jpg",
-      "img1": "/Destination/tolip2.jpg",
-      "img2": "/Destination/tolip3.jpg",
+      "main": "/Destination/Tolip Hotel Alexandria.webp",
+      "img1": "/Destination/Tolip Hotel Alexandria2.webp",
+      "img2": "/Destination/Tolip Hotel Alexandria3.webp",
       "thumbs": [
-        "/Destination/tolip4.jpg",
-        "/Destination/tolip5.jpg",
-        "/Destination/tolip6.jpg",
-        "/Destination/tolip7.jpg"
+        "/Destination/Tolip Hotel Alexandria4.jpeg",
+        "/Destination/Tolip Hotel Alexandria5.jpeg",
+        "/Destination/Tolip Hotel Alexandria6.webp",
+        "/Destination/Tolip Hotel Alexandria7.webp"
       ]
     },
     "description": "Located on the Mediterranean coast, Tolip Hotel Alexandria combines comfort with modern amenities, perfect for both business and leisure travelers.",
