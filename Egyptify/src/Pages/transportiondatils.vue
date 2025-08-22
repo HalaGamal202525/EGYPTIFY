@@ -24,6 +24,7 @@
 
     <!-- Search Box -->
     <div
+      ref="filterBox"
       class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl"
     >
       <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-left text-white">
@@ -73,7 +74,6 @@
             <option>Fayoum</option>
             <option>Sinai</option>
             
-
           </select>
         </div>
 
@@ -136,6 +136,11 @@
       </div>
 
         
+      <!-- Error Message -->
+<div v-if="errorMessage" class="mt-3 text-red-500 font-semibold">
+  {{ errorMessage }}
+</div>
+
 
       <!-- Search Button -->
 <div class="mt-6 flex justify-center">
@@ -310,11 +315,21 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, nextTick } from "vue";
 import DropdownMenu from "../components/DropdownMenu.vue";
 import CardComponent from "../components/card.vue";
 import BookingCalendar from "../components/bookingCalendar.vue";
 import PaginationComponent from "../components/PaginationComponent.vue";
+
+
+
+
+import { useRouter } from "vue-router";
+ import { useTransportationStore } from "../data/storetransport";
+// import { Script } from "vm";
+const transportationStore = useTransportationStore();
+const router = useRouter();
+
 
 const currentPage = ref(1); // الصفحة الحالية
 const itemsPerPage = ref(6); // عدد العناصر في كل صفحة
@@ -416,13 +431,6 @@ const emit = defineEmits(['book-now'])
 
 
 
-
-import { useRouter } from "vue-router";
- import { useTransportationStore } from "../data/storetransport";
-// import { Script } from "vm";
-const transportationStore = useTransportationStore();
-const router = useRouter();
-
 // const handleBookNow = (item) => {
 // transportationStore.setTransportation(item);
 //   router.push("/form");
@@ -440,9 +448,26 @@ const filters = ref({
   from: "",
   to: "",
   date: "",
+  time: "",
   // passengers: "",
   type:""
 });
+
+
+
+
+// رسالة الخطأ
+const errorMessage = ref("");
+const filterBox = ref(null);
+
+
+// صلاحية الفلاتر
+const isFilterValid = computed(() =>
+  ["from", "to", "date", "time"].every(
+    (k) => (filters.value[k] ?? "").toString().trim() !== ""
+  )
+);
+
 
 // كل الداتا
 // const transportation = ref(transportationData);
@@ -493,7 +518,29 @@ const scrollToCards = () => {
 
 
 
-const handleBookNow = (item) => {
+const handleBookNow = (item, e) => {
+
+
+
+// لو الزر جوه router-link امنعي التنقّل الافتراضي
+  if (e?.preventDefault) e.preventDefault();
+  if (e?.stopPropagation) e.stopPropagation();
+
+  if (!isFilterValid.value) {
+    errorMessage.value = "⚠️ Please fill in From, To, Date, and Time.";
+    // سكرول لجزء الفلاتر
+    nextTick(() => {
+      filterBox.value?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    return;
+  }
+
+  // لو مفيش مشكلة امسح الرسالة
+  errorMessage.value = "";
+
+
+
+
   let bookingData = { ...item };
 
   // لو النوع "Car" ضيف from/to من الفلاتر
