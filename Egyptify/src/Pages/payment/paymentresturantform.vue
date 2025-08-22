@@ -34,6 +34,8 @@ const validateForm = () => {
 
 const goToNext = () => {
   if (validateForm()) {
+            guestStore.setGuest(formData.value); 
+
     localStorage.setItem('formData', JSON.stringify(formData.value)) 
     router.push('/payment')
   }
