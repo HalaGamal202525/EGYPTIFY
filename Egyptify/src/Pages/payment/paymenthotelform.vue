@@ -47,6 +47,9 @@ const goBack = () => {
 
 import NavBarBlack from '../../components/NavBar-Black.vue'
 import foot from "../../components/footer.vue";
+import { useGuestStore } from "../../data//storeguset"; 
+
+const guestStore = useGuestStore();
 </script>
 
 <template>

@@ -73,7 +73,7 @@
     <h3 class="text-2xl font-bold text-center mb-4  gap-2 text-gray-800">
        Guest Info
     </h3>
-    <ul class="text-gray-700 space-y-4">
+    <ul class="text-gray-700 space-y-5">
       <li><span class="font-medium">Name:</span> {{ guestStore.guest.name }}</li>
       <li><span class="font-medium">Nationality:</span> {{ guestStore.guest.nationality }}</li>
       <li><span class="font-medium">Phone:</span> {{ guestStore.guest.phone }}</li>
