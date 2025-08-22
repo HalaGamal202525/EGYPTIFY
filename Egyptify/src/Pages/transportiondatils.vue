@@ -440,7 +440,7 @@ const filters = ref({
   from: "",
   to: "",
   date: "",
-  passengers: "",
+  // passengers: "",
   type:""
 });
 
@@ -510,8 +510,8 @@ const handleBookNow = (item) => {
   // في كل الحالات ضيف travel date و time (حتى لو مش Car)
   bookingData = {
     ...bookingData,
-    date: filters.value.date,
-    time: filters.value.time,
+    date: filters.value.date || null,
+    time: filters.value.time || null,
   };
 
 
@@ -524,7 +524,7 @@ const handleBookNow = (item) => {
 
   transportationStore.setTransportation({
   ...bookingData,
-  price: Number(bookingData.price) || 0   // ✅ نحول السعر لرقم
+price: Number(String(bookingData.price).replace(/\D/g, "")) || 0
 });
 
   // روح للفورم
@@ -542,10 +542,21 @@ const transportation = ref(transportationData);
 // فلترة الداتا بناءً على الفلاتر
 const filteredTransportation = computed(() => {
   return transportation.value.filter(item => {
+
+
+
+    if (filters.value.type) {
+      return item.type === filters.value.type &&
+        (!filters.value.from || item.from === filters.value.from) &&
+        (!filters.value.to || item.to === filters.value.to)
+    }
+
+
+
     const matchesFilters =
       (!filters.value.from || item.from === filters.value.from) &&
       (!filters.value.to || item.to === filters.value.to) &&
-      (!filters.value.date || item.date === filters.value.date) &&
+      // (!filters.value.date || item.date === filters.value.date) &&
       (!filters.value.passengers || item.passengers >= Number(filters.value.passengers)) &&
       (!filters.value.type || item.type === filters.value.type);
 
