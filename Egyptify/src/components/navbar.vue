@@ -105,15 +105,31 @@
         </transition>
       </div>
 
-      <template v-if="user">
+      <div class="relative" v-if="user">
         <img
           :src="imageStore.selectedImage || '/about-us/girl-4.png'"
           :alt="user.displayName || 'User'"
-          @click="goToProfile"
+          @click="toggleProfileMenu"
           class="w-15 h-15 rounded-full object-contain border-2 border-yellow-400 
                   dark:border-yellow-300 hover:scale-105 transition cursor-pointer"
         />
-      </template>
+        <transition name="fade">
+          <ul 
+            v-if="isProfileMenuOpen"
+            class="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden z-50 text-black dark:text-gray-200"
+          >
+            <li>
+              <a @click="goToProfile" class="block px-4 py-2 hover:bg-yellow-200 dark:hover:bg-gray-700 cursor-pointer">Profile</a>
+            </li>
+            <li>
+              <a @click="goToHistory" class="block px-4 py-2 hover:bg-yellow-200 dark:hover:bg-gray-700 cursor-pointer">History</a>
+            </li>
+            <li class="border-t border-gray-200 dark:border-gray-700">
+              <a @click="logout" class="block px-4 py-2 hover:bg-red-200 dark:hover:bg-red-700 cursor-pointer text-red-500 dark:text-red-400">Logout</a>
+            </li>
+          </ul>
+        </transition>
+      </div>
 
       <template v-else>
         <BaseButton
@@ -136,7 +152,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import BaseButton from "./BaseButton.vue";
 import { useUserStore } from "../data/signupstore";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useImageStore } from "../data/imagepicker";
 import Menubar from "./NavBarMenu.vue";
 import { useThemeStore } from "../data/themeStore";
@@ -153,10 +169,15 @@ onAuthStateChanged(auth, (currentUser) => {
 });
 
 const isMenuOpen = ref(false);
+const isProfileMenuOpen = ref(false); // New state for profile dropdown
 const moreButtonRef = ref(null);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
+};
+
+const toggleProfileMenu = () => {
+  isProfileMenuOpen.value = !isProfileMenuOpen.value;
 };
 
 const handleClickOutside = (event) => {
@@ -201,6 +222,15 @@ const handleClickOutsideLang = (event) => {
   }
 };
 
+const handleClickOutsideProfile = (event) => {
+  const profileButton = event.target.closest('img');
+  const profileMenu = event.target.closest('ul');
+  
+  if (!profileButton && !profileMenu) {
+    isProfileMenuOpen.value = false;
+  }
+};
+
 function translatePage(lang) {
   const select = document.querySelector(".goog-te-combo");
   if (select) {
@@ -217,6 +247,7 @@ const toggleTheme = () => {
 onMounted(() => {
   document.addEventListener("click", handleClickOutside);
   document.addEventListener("click", handleClickOutsideLang);
+  document.addEventListener("click", handleClickOutsideProfile);
 
   window.googleTranslateElementInit = function () {
     new window.google.translate.TranslateElement(
@@ -233,6 +264,7 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
   document.removeEventListener("click", handleClickOutsideLang);
+  document.removeEventListener("click", handleClickOutsideProfile);
 });
 
 function gologin() {
@@ -252,6 +284,20 @@ function goTotripreviews() {
 }
 function goToProfile() {
   router.push("/profile");
+  isProfileMenuOpen.value = false;
+}
+function goToHistory() {
+  router.push("/history");
+  isProfileMenuOpen.value = false;
+}
+async function logout() {
+  try {
+    await signOut(auth);
+    isProfileMenuOpen.value = false;
+    router.push("/login");
+  } catch (error) {
+    console.error("Logout failed:", error.message);
+  }
 }
 </script>
 

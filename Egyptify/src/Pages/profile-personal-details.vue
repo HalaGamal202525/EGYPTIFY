@@ -1,56 +1,60 @@
 <template>
   <NavBarBlack />
   <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300">
-      <div class="flex items-center mb-8">
-          <div class="px-3 ">
-    <img
-      :src="selectedImage || '/about-us/girl-4.png'"
-      alt="main"
-      class="w-24 h-24 rounded-full object-contain cursor-pointer"
-      @click="openModal"
-    />
     <div
-      v-if="isModalOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
+      class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300"
     >
-      <div class="bg-white p-6 rounded-xl shadow-lg w-96 border border-gray-300">
-        <h2 class="text-lg font-bold mb-6">Choose image</h2>
-
-        <div class="grid grid-cols-3 gap-3">
+      <div class="flex items-center mb-8">
+        <div class="px-3">
           <img
-            v-for="(img, index) in images"
-            :key="index"
-            :src="img"
-            class="w-25 h-25 rounded-full object-contain cursor-pointer border-2"
-            :class="{ 'border-[#ffc340]': selectedTemp === img }"
-            @click="selectedTemp = img"
+            :src="selectedImage || '/about-us/girl-4.png'"
+            alt="main"
+            class="w-24 h-24 rounded-full object-contain cursor-pointer"
+            @click="openModal"
           />
-          <label class="w-25 h-25 rounded-full object-contain cursor-pointer border-2 border-dashed flex items-center justify-center text-gray-400 hover:border-solid hover:border-gray-500">
-            <input type="file" @change="handleFileUpload" class="hidden" accept="image/*" />
-            <i class="fas fa-plus text-2xl"></i>
-          </label>
-        </div>
+          <div
+            v-if="isModalOpen"
+            class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
+          >
+            <div class="bg-white p-6 rounded-xl shadow-lg w-96 border border-gray-300">
+              <h2 class="text-lg font-bold mb-6">Choose image</h2>
 
-        <div class="mt-4 flex justify-between">
-          <BaseButton
-            @click="closeModal"
-            class="px-4 py-2 !bg-white !border !border-[#ffc340] !text-[#ffc340] rounded "
-          >
-            Cancel
-          </BaseButton>
-          <BaseButton
-            @click="saveImage"
-            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-            Save
-          </BaseButton>
+              <div class="grid grid-cols-3 gap-3">
+                <img
+                  v-for="(img, index) in images"
+                  :key="index"
+                  :src="img"
+                  class="w-25 h-25 rounded-full object-contain cursor-pointer border-2"
+                  :class="{ 'border-[#ffc340]': selectedTemp === img }"
+                  @click="selectedTemp = img"
+                />
+                <label
+                  class="w-25 h-25 rounded-full object-contain cursor-pointer border-2 border-dashed flex items-center justify-center text-gray-400 hover:border-solid hover:border-gray-500"
+                >
+                  <input type="file" @change="handleFileUpload" class="hidden" accept="image/*" />
+                  <i class="fas fa-plus text-2xl"></i>
+                </label>
+              </div>
+
+              <div class="mt-4 flex justify-between">
+                <BaseButton
+                  @click="closeModal"
+                  class="px-4 py-2 !bg-white !border !border-[#ffc340] !text-[#ffc340] rounded"
+                >
+                  Cancel
+                </BaseButton>
+                <BaseButton
+                  @click="saveImage"
+                  class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                >
+                  Save
+                </BaseButton>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
         <div>
-          <h1 class="text-2xl font-bold text-gray-800">{{ userStore.name }}</h1>
+          <h1 class="text-2xl font-bold text-gray-800">{{ personalDetails.username }}</h1>
           <p class="text-gray-600">Joined in 2025</p>
         </div>
       </div>
@@ -77,16 +81,14 @@
       <div v-if="activeTab === 'personal'">
         <form @submit.prevent="saveChanges">
           <div class="mb-4">
-            <label
-              for="username"
-              class="mb-1"
-              style="font-weight: 500; font-size: medium"
-            >User Name</label>
+            <label for="username" class="mb-1" style="font-weight: 500; font-size: medium"
+              >User Name</label
+            >
             <InputField
               id="username"
               type="text"
               placeholder="User Name"
-              v-model= "userStore.name "
+              v-model="personalDetails.username"
               required
             >
               <template #icon>
@@ -95,16 +97,14 @@
             </InputField>
           </div>
           <div class="mb-4">
-            <label
-              for="email"
-              class="mb-1"
-              style="font-weight: 500; font-size: medium"
-            >E-mail</label>
+            <label for="email" class="mb-1" style="font-weight: 500; font-size: medium"
+              >E-mail</label
+            >
             <InputField
               id="email"
               type="email"
               placeholder="Email"
-              v-model= "userStore.email"
+              v-model="personalDetails.email"
               required
             >
               <template #icon>
@@ -117,27 +117,26 @@
               for="currentPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Current Password</label>
+              >Current Password</label
+            >
             <InputField
               id="currentPassword"
               type="password"
               placeholder="Enter current password if changing"
-              v-model="userStore.password"
+              v-model="passwordFields.currentPassword"
             >
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              </InputField>
+            </InputField>
             <p class="text-sm text-gray-500 mt-1">
               Required only if you are changing your password.
             </p>
           </div>
           <div class="mb-4">
-            <label
-              for="newPassword"
-              class="mb-1"
-              style="font-weight: 500; font-size: medium"
-            >New Password</label>
+            <label for="newPassword" class="mb-1" style="font-weight: 500; font-size: medium"
+              >New Password</label
+            >
             <InputField
               id="newPassword"
               type="password"
@@ -147,7 +146,7 @@
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              </InputField>
+            </InputField>
             <p class="text-sm text-gray-500 mt-1">
               Leave blank to keep current password.
             </p>
@@ -157,7 +156,8 @@
               for="confirmPassword"
               class="mb-1"
               style="font-weight: 500; font-size: medium"
-            >Confirm New Password</label>
+              >Confirm New Password</label
+            >
             <InputField
               id="confirmPassword"
               type="password"
@@ -167,7 +167,7 @@
               <template #icon>
                 <i class="fas fa-lock" />
               </template>
-              </InputField>
+            </InputField>
           </div>
           <div class="mt-8 flex justify-end">
             <BaseButton type="submit" :disabled="isSaving">
@@ -252,26 +252,28 @@
           >
             <div class="flex-grow">
               <p class="text-gray-700 font-semibold mb-1">{{ review.location }}</p>
-              <p class="text-sm text-gray-500 mb-1">{{ new Date(review.date.toDate()).toLocaleDateString() }}</p>
-              
+              <p class="text-sm text-gray-500 mb-1">
+                {{ new Date(review.date.toDate()).toLocaleDateString() }}
+              </p>
+
               <div class="flex items-center mb-2">
                 <i
                   v-for="n in 5"
                   :key="n"
-                  :class="{ 
-                    'fas fa-star text-yellow-400': n <= review.rating, 
-                    'far fa-star text-gray-400': n > review.rating 
+                  :class="{
+                    'fas fa-star text-yellow-400': n <= review.rating,
+                    'far fa-star text-gray-400': n > review.rating,
                   }"
                 ></i>
               </div>
-              
+
               <p class="text-gray-700 text-sm">{{ review.text }}</p>
             </div>
             <div class="ml-4 flex-shrink-0">
               <img
-               :src="selectedImage || '/about-us/girl-10.png'"
-               alt="main"
-               class="w-24 h-24 object-cover rounded-md"
+                :src="selectedImage || '/about-us/girl-10.png'"
+                alt="main"
+                class="w-24 h-24 object-cover rounded-md"
               />
             </div>
           </div>
@@ -291,7 +293,8 @@
               for="language-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Language</label>
+              >Language</label
+            >
             <select
               id="language-select"
               v-model="settings.language"
@@ -306,7 +309,8 @@
               for="currency-select"
               class="text-gray-700"
               style="color: #364153; font-size: medium; font-weight: normal"
-            >Currency</label>
+              >Currency</label
+            >
             <select
               id="currency-select"
               v-model="settings.currency"
@@ -346,74 +350,75 @@
             </label>
           </div>
         </div>
-      <div>
-        <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
+        <div>
+          <h3 class="text-xl font-bold text-yellow-500 mb-4">Account</h3>
 
-        <a
-          href="profile-change-password"
-          @click.prevent="activeTab = 'personal'"
-          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
-        >
-          <span class="text-gray-700 font-medium">Change Password</span>
-          <i class="fas fa-arrow-right text-gray-400"></i>
-        </a>
+          <a
+            href="profile-change-password"
+            @click.prevent="activeTab = 'personal'"
+            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+          >
+            <span class="text-gray-700 font-medium">Change Password</span>
+            <i class="fas fa-arrow-right text-gray-400"></i>
+          </a>
 
-        <a
-          href="#"
-          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
-        >
-          <span class="text-gray-700 font-medium">Update Contact Information</span>
-          <i class="fas fa-arrow-right text-gray-400"></i>
-        </a>
+          <a
+            href="#"
+            @click.prevent="showUpdateContact = true"
+            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
+          >
+            <span class="text-gray-700 font-medium">Update Contact Information</span>
+            <i class="fas fa-arrow-right text-gray-400"></i>
+          </a>
 
-        <a
-          href="#"
-          @click.prevent="showDeleteModal = true"
-          class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
-        >
-          <span class="font-medium">Delete Account</span>
-          <i class="fas fa-arrow-right text-gray-400"></i>
-        </a>
+          <a
+            href="#"
+            @click.prevent="showDeleteModal = true"
+            class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
+          >
+            <span class="font-medium">Delete Account</span>
+            <i class="fas fa-xmark text-red-600"></i>
+          </a>
 
-        <div class="flex justify-end mt-6">
-          <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
-            Logout
-          </BaseButton>
-        </div>
+          <div class="flex justify-end mt-6">
+            <BaseButton @click="logout" class="bg-red-500 hover:bg-red-600">
+              Logout
+            </BaseButton>
+          </div>
 
-        <div
-          v-if="showDeleteModal"
-          class="fixed inset-0 bg-black model flex items-center justify-center z-50"
-        >
-          <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
-            <p class="text-gray-600 mb-6">
-              Are you sure you want to delete your account? This action cannot be undone.
-            </p>
-            <div class="flex justify-end space-x-3">
-              <button
-                @click="showDeleteModal = false"
-                class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-              >
-                Cancel
-              </button>
-              <button
-                @click="confirmDelete"
-                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-              >
-                Yes, Delete
-              </button>
+          <div
+            v-if="showDeleteModal"
+            class="fixed inset-0 bg-black model flex items-center justify-center z-50"
+          >
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+              <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
+              <p class="text-gray-600 mb-6">
+                Are you sure you want to delete your account? This action cannot be undone.
+              </p>
+              <div class="flex justify-end space-x-3">
+                <button
+                  @click="showDeleteModal = false"
+                  class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+                >
+                  Cancel
+                </button>
+                <button
+                  @click="confirmDelete"
+                  class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                >
+                  Yes, Delete
+                </button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          v-if="showSuccessMessage"
-          class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
-        >
-          Account deleted successfully.
+          <div
+            v-if="showSuccessMessage"
+            class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg"
+          >
+            Account deleted successfully.
+          </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -429,17 +434,31 @@ import InputField from "../components/InputField.vue";
 import favorite from "./favorite.vue";
 
 // Firebase imports
-import { getAuth, signOut, deleteUser, reauthenticateWithCredential, EmailAuthProvider, updatePassword } from "firebase/auth";
+import {
+  getAuth,
+  signOut,
+  deleteUser,
+  reauthenticateWithCredential,
+  EmailAuthProvider,
+  updatePassword,
+  updateProfile,
+  updateEmail,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { db } from '../firebase';
 import { useRouter } from "vue-router";
-import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore'; 
+import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
 
 ///////////////////
-import { useImageStore } from "../data/imagepicker"; 
+import { useImageStore } from "../data/imagepicker";
+import { useUserStore } from '../data/signupstore';
 
 const store = useImageStore();
+const userStore = useUserStore();
+const router = useRouter();
+const auth = getAuth();
 
-// المتغيرات
+// Variables for image modal
 const isModalOpen = ref(false);
 const selectedImage = ref(store.selectedImage || null);
 const selectedTemp = ref(null);
@@ -452,7 +471,7 @@ const images = [
   '/about-us/girl-10.png'
 ];
 
-// الدوال
+// Functions for image modal
 function openModal() {
   isModalOpen.value = true;
   selectedTemp.value = selectedImage.value;
@@ -463,8 +482,8 @@ function closeModal() {
 }
 
 function saveImage() {
- selectedImage.value = selectedTemp.value;
-  store.setSelectedImage(selectedImage.value); 
+  selectedImage.value = selectedTemp.value;
+  store.setSelectedImage(selectedImage.value);
   isModalOpen.value = false;
 }
 
@@ -496,24 +515,11 @@ const personalDetails = ref({
   phone: "",
 });
 
-
-async function logout() {
-  await signOut(auth);
-  userStore.clearUserData();
-  router.push("/login");
-}
-
-
 const passwordFields = reactive({
   currentPassword: '',
   newPassword: '',
   confirmPassword: ''
 });
-
-// State for password visibility
-const currentPasswordVisible = ref(false);
-const newPasswordVisible = ref(false);
-const confirmPasswordVisible = ref(false);
 
 const settings = reactive({
   language: "english",
@@ -525,47 +531,8 @@ const settings = reactive({
 const isSaving = ref(false);
 const saveMessage = ref('');
 const saveSuccess = ref(false);
-
-const router = useRouter();
-const auth = getAuth();
-
-const currentFirebaseUser = auth.currentUser;
-let userDocRef = null;
-
-if (currentFirebaseUser) {
-  userDocRef = doc(db, "users", currentFirebaseUser.uid);
-} else {
-  console.warn("No authenticated user found. Using dummy ID 'devUser1' for Firestore operations.");
-  userDocRef = doc(db, "users", "devUser1");
-}
-
-async function fetchPersonalDetails() {
-  if (!userDocRef) {
-    saveMessage.value = "Error: User not identified for data loading.";
-    saveSuccess.value = false;
-    return;
-  }
-  try {
-    const docSnap = await getDoc(userDocRef);
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      personalDetails.value.username = data.username || '';
-      personalDetails.value.email = data.email || '';
-      personalDetails.value.phone = data.phone || '';
-    } else {
-      console.log("No personal details found. Starting with default values.");
-      personalDetails.value = {
-        username: "Yasmine Emad",
-        email: "yasmineemad2023@gmail.com",
-        phone: "01289373141",
-      };
-    }
-  } catch (error) {
-    console.error("Error fetching personal details:", error);
-    saveMessage.value = "Error loading details. Please check console.";
-    saveSuccess.value = false;
-  }
-}
+const showDeleteModal = ref(false);
+const showSuccessMessage = ref(false);
 
 const upcomingTrips = [
   { id: 1, title: 'Cairo Adventure', date: 'Oct 20 - Oct 25, 2024', bookingId: '123456', imageUrl: '../../public/profile/Pyramids2.jpeg' },
@@ -577,7 +544,6 @@ const pastTrips = [
   { id: 4, title: 'Luxor Exploration', date: 'Feb 2 - Feb 2, 2024', bookingId: '901234', imageUrl: '../../public/profile/luxor-vally of the kings.jpg' },
 ];
 
-// New reactive object for the review form
 const newReview = reactive({
   text: '',
   rating: 0,
@@ -585,25 +551,19 @@ const newReview = reactive({
   location: 'User\'s Review',
 });
 
-// New ref for storing fetched reviews
-const reviews = ref([]); 
+const reviews = ref([]);
 
-// New async function to fetch user reviews
 const fetchUserReviews = async () => {
-  const auth = getAuth();
-  const currentFirebaseUser = auth.currentUser;
-
-  if (!currentFirebaseUser) {
+  const user = auth.currentUser;
+  if (!user) {
     console.error("User not authenticated, cannot fetch reviews.");
     reviews.value = [];
     return;
   }
-
   try {
-    const reviewsCollectionRef = collection(db, `users/${currentFirebaseUser.uid}/reviews`);
+    const reviewsCollectionRef = collection(db, `users/${user.uid}/reviews`);
     const q = query(reviewsCollectionRef, orderBy('date', 'desc'));
     const querySnapshot = await getDocs(q);
-
     const fetchedReviews = [];
     querySnapshot.forEach((doc) => {
       fetchedReviews.push({ id: doc.id, ...doc.data() });
@@ -614,82 +574,43 @@ const fetchUserReviews = async () => {
   }
 };
 
-// New async function to handle review submission
-const submitReview = async () => {
-  const auth = getAuth();
-  const user = auth.currentUser;
-
-  if (!user) {
-    console.error("No authenticated user, cannot submit review.");
-    return;
-  }
-  
-  if (!newReview.text || newReview.rating === 0) {
-      alert("Please provide a review and a rating.");
-      return;
-  }
-  
-  try {
-    const reviewsCollectionRef = collection(db, `users/${user.uid}/reviews`);
-    await addDoc(reviewsCollectionRef, {
-      ...newReview,
-      date: serverTimestamp(),
-      userId: user.uid,
-    });
-
-    console.log("Review submitted successfully!");
-    // Reset the form
-    newReview.text = '';
-    newReview.rating = 0;
-    
-    // Refresh the list of reviews to show the new one
-    await fetchUserReviews();
-    
-  } catch (error) {
-    console.error("Error submitting review: ", error);
-  }
-};
-
-// New function to handle star rating clicks
-const setRating = (rating) => {
-    newReview.rating = rating;
-};
-
 const favoritePlaces = ref([]);
 
 function syncFavorites() {
   favoritePlaces.value = JSON.parse(localStorage.getItem("favorites")) || [];
 }
 
-const togglePasswordVisibility = (field) => {
-  if (field === 'current') {
-    currentPasswordVisible.value = !currentPasswordVisible.value;
-  } else if (field === 'new') {
-    newPasswordVisible.value = !newPasswordVisible.value;
-  } else if (field === 'confirm') {
-    confirmPasswordVisible.value = !confirmPasswordVisible.value;
-  }
-};
+async function logout() {
+  await signOut(auth);
+  userStore.clearUserData();
+  router.push("/login");
+}
 
-const saveChanges = async () => {
+async function saveChanges() {
   isSaving.value = true;
   saveMessage.value = '';
+  const user = auth.currentUser;
 
-  if (!userDocRef) {
-    saveMessage.value = "Error: Cannot save changes. User not identified.";
+  if (!user) {
+    saveMessage.value = "Error: Cannot save changes. User not authenticated.";
     saveSuccess.value = false;
     isSaving.value = false;
     return;
   }
 
   try {
-    const dataToSave = {
-      username: personalDetails.value.username,
-      email: personalDetails.value.email,
-      phone: personalDetails.value.phone,
-    };
-    await setDoc(userDocRef, dataToSave, { merge: true });
+    // 1. Update Username and Profile Image
+    await updateProfile(user, {
+      displayName: personalDetails.value.username,
+    });
 
+    // 2. Update Email (if changed)
+    const newEmail = personalDetails.value.email;
+    if (user.email !== newEmail) {
+      await updateEmail(user, newEmail);
+    }
+
+    // 3. Update Password (if new password is provided)
     const currentPass = passwordFields.currentPassword;
     const newPass = passwordFields.newPassword;
     const confirmPass = passwordFields.confirmPassword;
@@ -714,24 +635,26 @@ const saveChanges = async () => {
         return;
       }
 
-      const user = auth.currentUser;
-      if (user && user.email) {
-        const credential = EmailAuthProvider.credential(user.email, currentPass);
-        await reauthenticateWithCredential(user, credential);
-        await updatePassword(user, newPass);
-        passwordFields.currentPassword = '';
-        passwordFields.newPassword = '';
-        passwordFields.confirmPassword = '';
-        saveMessage.value = "Profile and password updated successfully!";
-        saveSuccess.value = true;
-      } else {
-        saveMessage.value = "Error: Could not re-authenticate. User email not available.";
-        saveSuccess.value = false;
-      }
-    } else {
-      saveMessage.value = "Profile updated successfully!";
-      saveSuccess.value = true;
+      // Re-authenticate before updating password
+      const credential = EmailAuthProvider.credential(user.email, currentPass);
+      await reauthenticateWithCredential(user, credential);
+      await updatePassword(user, newPass);
+      // Clear password fields on success
+      passwordFields.currentPassword = '';
+      passwordFields.newPassword = '';
+      passwordFields.confirmPassword = '';
     }
+
+    // 4. Update Firestore
+    const userDocRef = doc(db, "users", user.uid);
+    const dataToSave = {
+      username: personalDetails.value.username,
+      email: personalDetails.value.email,
+    };
+    await setDoc(userDocRef, dataToSave, { merge: true });
+
+    saveMessage.value = "Profile updated successfully!";
+    saveSuccess.value = true;
   } catch (error) {
     console.error("Error saving changes:", error);
     if (error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
@@ -749,83 +672,54 @@ const saveChanges = async () => {
       saveMessage.value = '';
     }, 5000);
   }
-};
-
-
-
-const showDeleteModal = ref(false);
-const showSuccessMessage = ref(false);
-//////////////////////////////////////////////////
-import { useUserStore } from '../data/signupstore'
-const userStore = useUserStore()
-///////////////////////////////////////////////////////////
-function confirmDelete() {
-  showDeleteModal.value = false;
-  showSuccessMessage.value = true;
-
-  setTimeout(() => {
-    showSuccessMessage.value = false;
-    console.log("Account deleted from backend");
-  }, 2000);
-      router.push("/login")
-
 }
-async function deleteAccount() {
+
+async function confirmDelete() {
   const user = auth.currentUser;
+  showDeleteModal.value = false;
 
   if (user) {
-    if (!confirm("Are you sure you want to delete your account? This action is irreversible.")) {
-      return;
-    }
-    const currentPassword = prompt("Please enter your password to confirm account deletion:");
-    if (!currentPassword) {
-      alert("Password is required to delete your account.");
-      return;
-    }
-
     try {
-      const credential = EmailAuthProvider.credential(user.email, currentPassword);
-      await reauthenticateWithCredential(user, credential);
       await deleteUser(user);
-      alert("Account deleted successfully.");
-      router.push("/signup");
+      showSuccessMessage.value = true;
+      setTimeout(() => {
+        showSuccessMessage.value = false;
+        router.push("/signup");
+      }, 2000);
     } catch (error) {
       console.error("Error deleting user:", error);
       if (error.code === 'auth/requires-recent-login') {
         alert("Please log in again to delete your account.");
         router.push("/login");
-      } else if (error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
-        alert("Incorrect password. Account deletion failed.");
       } else {
         alert(`Error deleting account: ${error.message}`);
       }
     }
-  } else {
-    alert("No user is currently logged in.");
-    router.push("/login");
   }
 }
 
 onMounted(() => {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      personalDetails.value.username = user.displayName || '';
+      personalDetails.value.email = user.email || '';
+    }
+  });
   window.addEventListener("storage", syncFavorites);
   syncFavorites();
+  fetchUserReviews();
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("storage", syncFavorites);
 });
-
-onMounted(async () => {
-  await fetchPersonalDetails();
-  await fetchUserReviews();
-});
 </script>
 
 <style scoped>
-.model{
+.model {
   background-color: #cccccc8c;
 }
-a{
+a {
   cursor: pointer;
 }
 .fas.fa-star {
