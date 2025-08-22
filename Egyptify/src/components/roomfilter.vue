@@ -1,20 +1,27 @@
 <template>
   <div class="flex gap-4 mb-6">
     <DropdownMenu
-      label="Guests"
+      :label="selectedGuestLabel"
       :options="guestOptions"
-      @select="(item) => emit('filter-guest', item.value)"
+      @select="(item) => { 
+        emit('filter-guest', item.value) 
+        selectedGuestLabel = item.label
+      }"
     />
 
     <DropdownMenu
-      label="Price"
+      :label="selectedPriceLabel"
       :options="priceOptions"
-      @select="(item) => emit('filter-price', item.value)"
+      @select="(item) => { 
+        emit('filter-price', item.value) 
+        selectedPriceLabel = item.label
+      }"
     />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import DropdownMenu from './DropdownMenu.vue'
 
 const emit = defineEmits(['filter-price', 'filter-guest'])
@@ -35,4 +42,9 @@ const priceOptions = [
   { label: 'Under 2000', value: 2000 },
   { label: 'Under 3000', value: 3000 }
 ]
+
+// قيم بتتغير مع الاختيار
+const selectedGuestLabel = ref('Guests')
+const selectedPriceLabel = ref('Price')
+
 </script>

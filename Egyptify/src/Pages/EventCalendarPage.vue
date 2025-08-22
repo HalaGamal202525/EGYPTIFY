@@ -225,7 +225,7 @@ const typeOptions = [
 <style scoped>
 
 :deep(.card-title) {
-  height: 35px; /* أو اللي يناسبك */
+  height: 35px;
   margin-bottom: 20px;
 }
 

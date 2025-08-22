@@ -1,120 +1,3 @@
-// import { defineStore } from "pinia";
-
-// export const useBookingStore = defineStore("booking", {
-//   state: () => ({
-//     hotel: null,
-//     roomType: null,
-//     dates: { checkIn: null, checkOut: null },
-//     userData: null,
-//     card: {
-//       image: null,
-//       title: null,
-//       rate: null,
-//       price: null,
-//       activities: [],
-//     },
-
-//     totalPrice: 0,
-//     bookings: [],
-
-//     transportation: null,
-
-//     reservation: {
-//       name: "",
-//       phone: "",
-//       guests: "",
-//       date: "",
-//       time: "",
-//       comment: "",
-//     },
-//   }),
-
-//   actions: {
-//     setHotel(hotel) {
-//       this.hotel = hotel;
-//       if (hotel.checkin && hotel.checkout) {
-//         this.dates.checkIn = hotel.checkin;
-//         this.dates.checkOut = hotel.checkout;
-//       }
-//     },
-
-//     setRoomDetails(roomType, guests, price, image) {
-//       this.roomType = roomType;
-//       this.guests = guests;
-//       this.price = price;
-//       this.image = image;
-//     },
-
-//     setDates(checkIn, checkOut) {
-//       this.dates = { checkIn, checkOut };
-//     },
-
-//     setUserData(data) {
-//       this.userData = data;
-//     },
-
-//     setCardData({ image, title, rate, price }) {
-//       this.card.image = image;
-//       this.card.title = title;
-//       this.card.rate = rate;
-//       this.card.price = price;
-//       this.card.activities = [];
-//     },
-
-//     addActivityToCard(activity) {
-//       this.card.activities.push({
-//         name: activity.name,
-//         image: activity.image,
-//         price: activity.price,
-//       });
-//     },
-
-//     resetBooking() {
-//       this.hotel = null;
-//       this.roomType = null;
-//       this.dates = { checkIn: null, checkOut: null };
-//       this.userData = null;
-//       this.card = {
-//         image: null,
-//         title: null,
-//         rate: null,
-//         price: null,
-//         activities: [],
-//       };
-//       this.transportation = null;
-//       this.reservation = {
-//         name: "",
-//         phone: "",
-//         guests: "",
-//         date: "",
-//         time: "",
-//         comment: "",
-//       };
-//       this.totalPrice = 0;
-//       this.bookings = [];
-//     },
-
-//     setTransportation(transportData) {
-//       this.transportation = transportData;
-//     },
-
-//     setReservation(data) {
-//       this.reservation = { ...data };
-//     },
-
-//     addBooking(booking) {
-//       this.bookings.push(booking);
-//       this.totalPrice += booking.price;
-//     },
-
-//     setTotal(total) {
-//       this.totalPrice = total;
-//     }
-//   }
-// })
-
-
-// stores/card.js
 import { defineStore } from "pinia";
 
 export const useCardStore = defineStore("card", {
@@ -123,20 +6,59 @@ export const useCardStore = defineStore("card", {
       image: null,
       title: null,
       rate: null,
-      price: null,
+      price: 0,
+      description: null,
       activities: [],
     },
   }),
 
+  getters: {
+    total: (state) => {
+      let base = state.card.price || 0;
+
+      let activitiesTotal = state.card.activities?.length
+        ? state.card.activities.reduce((sum, a) => sum + (a.price || 0), 0)
+        : 0;
+
+      return base + activitiesTotal;
+    },
+  },
+
   actions: {
-    setCardData({ image, title, rate, price }) {
-      this.card = { image, title, rate, price, activities: [] };
+    setCardData({ image, title, rate, price, description }) {
+      this.card = { 
+        image, 
+        title, 
+        description, 
+        rate, 
+        // price: price || 0, 
+        price: Number(price) || 0,   // ✅ نحول السعر لرقم
+        activities: [] 
+      };
     },
-    addActivity(activity) {
-      this.card.activities.push(activity);
+
+    addActivityToCard(activity) {
+       // استخرج أول رقم يظهر في النص (مثلاً 200 من "From EGP 200 per ride")
+      const priceMatch = activity.price?.match(/\d+/);
+      const cleanPrice = priceMatch ? Number(priceMatch[0]) : 0;
+      this.card.activities.push({
+        name: activity.name,
+        image: activity.image,
+        price: cleanPrice,   // ← هي دي اللي هتتخزن كرقم
+        description: activity.description || "",
+        duration: activity.duration || "",
+      });
     },
+
     resetCard() {
-      this.card = { image: null, title: null, rate: null, price: null, activities: [] };
+      this.card = {
+        image: null,
+        title: null,
+        rate: null,
+        description: null,
+        price: 0,
+        activities: [],
+      };
     },
   },
 });

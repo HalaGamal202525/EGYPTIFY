@@ -442,19 +442,19 @@
       "name": "Wildlife Safari",
       "description": "Explore the rare wildlife and unique flora of Gebel Elba with an experienced guide.",
       "image": "/Destination/Gebel Elbawilde.webp",
-      "price": "$30"
+      "price": "EGP 100-200 "
     },
     {
       "name": "Bird Watching",
       "description": "Spot endemic and migratory bird species in their natural habitat.",
       "image": "/Destination/Bird Watching.webp",
-      "price": "$20"
+      "price": "EGP 250   "
     },
     {
       "name": "Eco-Hiking Tour",
       "description": "Trek through scenic trails, mountains, and valleys while learning about the ecosystem.",
       "image": "/Destination/Eco-Hiking Tour.webp",
-      "price": "$25"
+      "price": "EGP 100  "
     }
   ],
   "review": {
@@ -510,19 +510,19 @@
       "name": "Bird Watching",
       "description": "Spot and photograph a variety of migratory and native bird species around the lakes.",
       "image": "/Destination/Bird Watching.webp",
-      "price": "$15"
+      "price": "EGP 100 "
     },
     {
       "name": "Pottery Workshop",
       "description": "Visit Tunis Village and participate in traditional pottery making sessions.",
       "image": "/Destination/Pottery Workshop.webp",
-      "price": "$20"
+      "price": "EGP 200 "
     },
     {
       "name": "Lake Boat Tour",
       "description": "Enjoy a relaxing boat ride on the oasis lakes, exploring the scenic surroundings.",
       "image": "/Destination/Lake Boat Tour.webp",
-      "price": "$25"
+      "price": "EGP 250"
     }
   ],
   "review": {
@@ -578,19 +578,19 @@
       "name": "Fossil Tour",
       "description": "Guided tour exploring fossilized remains of ancient whales and other prehistoric creatures.",
       "image": "/Destination/Fossil Tour.webp",
-      "price": "$10"
+      "price": "EGP 250"
     },
     {
       "name": "Hiking & Photography",
       "description": "Walk along scenic trails, capture the desert landscapes and unique fossil formations.",
       "image": "/Destination/Hiking & Photography.webp",
-      "price": "$0"
+      "price": "EGP 100  "
     },
     {
       "name": "Eco-Guided Tour",
       "description": "Learn about the geological and ecological significance of Wadi Al-Hitan with an expert guide.",
       "image": "/Destination/Eco-Hiking Tour.webp",
-      "price": "$15"
+      "price": "EGP 150"
     }
   ],
   "review": {
@@ -646,19 +646,19 @@
       "name": "Snorkeling",
       "description": "Explore the clear waters and vibrant marine life of the lagoon.",
       "image": "/Destination/Snorkeling.webp",
-      "price": "$0"
+      "price": " EGP 500  "
     },
     {
       "name": "Kite Surfing",
       "description": "Enjoy the winds of Dahab for an exciting kite surfing experience.",
       "image": "/Destination/Kite Surfing.webp",
-      "price": "$25 per hour"
+      "price": "EGP 250   "
     },
     {
       "name": "Relaxing & Sunbathing",
       "description": "Relax on the beach, take in the scenery, and enjoy the peaceful environment.",
       "image": "/Destination/Relaxing & Sunbathing.webp",
-      "price": "$0"
+      "price": "EGP 100  "
     }
   ],
   "review": {
@@ -714,7 +714,7 @@
       "name": "Desert Safari",
       "description": "Explore the surrounding Black and White Deserts in a 4x4 vehicle.",
       "image": "/Destination/Desert Safari.webp",
-      "price": "$40 per person"
+      "price": "EGP 400 "
     },
     {
       "name": "Hot Spring Bathing",
@@ -726,7 +726,7 @@
       "name": "Stargazing",
       "description": "Experience the crystal-clear desert night sky away from city lights.",
       "image": "/Destination/Stargazing.webp",
-      "price": "$15 per person"
+      "price": "EGP 150 "
     }
   ],
   "review": {
@@ -782,7 +782,7 @@
       "name": "Monastery Tour",
       "description": "Guided tour inside the monastery to explore its ancient library, icons, and chapels.",
       "image": "/Destination/Monastery Tour.webp",
-      "price": "$10 per person"
+      "price": "EGP 250   "
     },
     {
       "name": "Icon Gallery Visit",
@@ -794,7 +794,7 @@
       "name": "Mount Sinai Sunrise Hike",
       "description": "Climb Mount Sinai early in the morning to witness a breathtaking sunrise.",
       "image": "/Destination/Mount Sinai Sunrise Hike.webp",
-      "price": "$20 per person"
+      "price": "EGP 1000 "
     }
   ],
   "review": {
@@ -856,13 +856,13 @@
       "name": "Guided Pyramid Tour",
       "description": "Learn about the history and construction of the pyramids with a professional Egyptologist.",
       "image": "/Destination/Guided Pyramid Tour.webp",
-      "price": "From EGP 500 per person"
+      "price": " EGP 500  "
     },
     {
       "name": "Sound and Light Show",
       "description": "Watch the pyramids illuminated at night with a narrated light show.",
       "image": "/Destination/Sound and Light Show.webp",
-      "price": "From EGP 300 per ticket"
+      "price": " EGP 300  "
     }
   ],
   "review": {
@@ -987,19 +987,19 @@
       "name": "Guided Tomb Tours",
       "description": "Explore the intricate tombs with an Egyptologist who explains the history and meaning of the wall paintings.",
       "image": "/historical/valley.jpg",
-      "price": "From EGP 300 per person"
+      "price": " EGP 300  "
     },
     {
       "name": "Luxor West Bank Day Trip",
       "description": "Combine your visit with other sites such as Hatshepsut Temple and the Colossi of Memnon.",
       "image": "/historical/Luxor-trip.webp",
-      "price": "From EGP 800 per person"
+      "price": " EGP 800  "
     },
     {
       "name": "Nile Felucca Ride at Sunset",
       "description": "Relax on a traditional felucca boat ride along the Nile after exploring the Valley.",
       "image": "/historical/egyptian-felucca-ride.jpg",
-      "price": "From EGP 250 per person"
+      "price": "EGP 250  "
     }
   ],
   "review": {
@@ -1124,13 +1124,13 @@
       "name": "Boat Ride to Agilkia Island",
       "description": "Enjoy a scenic boat trip on the Nile to reach the temple while admiring the surrounding islands.",
       "image": "/historical/boat.jpg",
-      "price": "EGP 50-100 per person (negotiable)"
+      "price": "EGP 100 "
     },
     {
       "name": "Sound and Light Show",
       "description": "Experience the magical night-time illumination of the temple with stories of ancient Egypt narrated dramatically.",
       "image": "/historical/sound&light.jpg",
-      "price": "EGP 100 for Egyptians, EGP 250 for foreigners"
+      "price": " EGP 250 "
     },
     {
       "name": "Photography Tour",
@@ -1199,13 +1199,13 @@
       "name": "Mummy Room Visit",
       "description": "See the preserved mummies of ancient pharaohs up close for a fascinating look at history.",
       "image": "/historical/mummy-room.jpg",
-      "price": "EGP 150 for foreigners, EGP 30 for Egyptians"
+      "price": "EGP 150 "
     },
     {
       "name": "Guided Museum Tour",
       "description": "Join an expert Egyptologist for a deeper understanding of the museum’s highlights.",
       "image": "/historical/egyptian-museum.jpg",
-      "price": "EGP 200-400 depending on duration"
+      "price": "EGP 400   "
     }
   ],
   "review": {
@@ -1267,7 +1267,7 @@
       "name": "Guided History Tour",
       "description": "Learn the fascinating story of the temples' construction and relocation from an expert guide.",
       "image": "/historical/tour.jpg",
-      "price": "EGP 200-400 depending on guide"
+      "price": "EGP 400   "
     },
     {
       "name": "Photography Session at Sunrise",
@@ -1329,7 +1329,7 @@
       "name": "Historical Walking Tour",
       "description": "Explore centuries-old mosques, madrasas, and sabils with a knowledgeable guide who brings history to life.",
       "image": "/historical/almoez.jpg",
-      "price": "EGP 200-350 per person"
+      "price": "EGP 350  "
     },
     {
       "name": "Souvenir Shopping",
@@ -1397,13 +1397,13 @@
       "name": "Historical & Religious Tour",
       "description": "Join a guided tour to learn about the church’s history, Coptic traditions, and its role in the Holy Family’s journey.",
       "image": "/historical/abu-serga.jpg",
-      "price": "EGP 150-250 per person"
+      "price": "EGP 250  "
     },
     {
       "name": "Old Cairo Heritage Walk",
       "description": "Explore the surrounding area including the Hanging Church, Ben Ezra Synagogue, and Coptic Museum.",
       "image": "/historical/old-cairo.jpg",
-      "price": "EGP 100-200 per person"
+      "price": "EGP 200  "
     },
     {
       "name": "Religious Icon Viewing",
@@ -1465,7 +1465,7 @@
       "name": "Guided Historical Tour",
       "description": "Discover the mosque’s 1,000-year history, architecture, and role in Islamic education with a knowledgeable guide.",
       "image": "/Destination/alazhar-mosque1.jpg",
-      "price": "EGP 200-300 per person"
+      "price": "EGP 300  "
     },
     {
       "name": "Islamic Architecture Photography",
@@ -1477,7 +1477,7 @@
       "name": "Old Cairo Cultural Walk",
       "description": "Combine your visit with nearby attractions like Khan El Khalili, El-Hussein Mosque, and Al-Muizz Street.",
       "image": "/historical/old-cairo.jpg",
-      "price": "EGP 150-250 per person"
+      "price": "EGP 250  "
     }
   ],
   "review": {
@@ -1533,7 +1533,7 @@
       "name": "Guided Historical Tour",
       "description": "Learn about Queen Hatshepsut’s reign, the temple’s architecture, and its religious significance from an expert Egyptologist.",
       "image": "/historical/hatshepsut.jpg",
-      "price": "EGP 250-400 per person"
+      "price": "EGP 400  "
     },
     {
       "name": "Photography from the Cliffs",
@@ -1545,7 +1545,7 @@
       "name": "West Bank Day Tour",
       "description": "Combine your visit with nearby attractions like the Valley of the Kings, Medinet Habu, and Colossi of Memnon.",
       "image": "/historical/hatshepsut2.jpg",
-      "price": "EGP 500-800 per person"
+      "price": "EGP 800  "
     }
   ],
   "review": {
@@ -1600,7 +1600,7 @@
       "name": "Guided Pyramid Tour",
       "description": "Explore the history and architecture of the Step Pyramid with an Egyptologist guide.",
       "image": "/historical/saqqara.jpg",
-      "price": "EGP 250-400 per person"
+      "price": "EGP 400  "
     },
     {
       "name": "Visit the Serapeum of Saqqara",
@@ -1612,7 +1612,7 @@
       "name": "Camel Ride Around the Necropolis",
       "description": "Enjoy a camel ride for a unique view of the Step Pyramid and surrounding desert landscape.",
       "image": "/historical/saqqara3.jpg",
-      "price": "EGP 150-300 per person"
+      "price": "EGP 300  "
     }
   ],
   "review": {
@@ -1738,13 +1738,13 @@
       "name": "Snorkeling Adventure",
       "description": "Discover stunning coral reefs and tropical fish in crystal-clear waters.",
       "image": "/entertainment/snorkeling.jpg",
-      "price": "EGP 400-600 per person"
+      "price": "EGP 600  "
     },
     {
       "name": "Scuba Diving Experience",
       "description": "Dive with a certified guide to explore Ras Mohammed’s most famous underwater spots.",
       "image": "/entertainment/ras-mohamed.jpg",
-      "price": "EGP 1000-1500 per person"
+      "price": "EGP 500  "
     },
     {
       "name": "Shark Observatory Viewpoint",
@@ -1881,7 +1881,7 @@
       "name": "Street Food Sampling",
       "description": "Try local delicacies like kebabs, falafel, and Egyptian sweets.",
       "image": "/entertainment/oldmarket.webp",
-      "price": "EGP 20–80"
+      "price": "EGP 80"
     },
     {
       "name": "Cultural Stroll",
@@ -1949,7 +1949,7 @@
       "name": "Geology Exploration",
       "description": "Learn about the geological history of the crystal formations with a guide.",
       "image": "/Destination/crystal-mountain.jpg",
-      "price": "EGP 200-400 per person"
+      "price": "EGP 400 "
     }
   ],
   "review": {
@@ -2004,13 +2004,13 @@
       "name": "Walking Tour",
       "description": "Explore the maze-like alleys and historic sites of the village.",
       "image": "/Destination/elqasr-village.jpeg",
-      "price": "EGP 100-200 per person"
+      "price": "EGP 200  "
     },
     {
       "name": "Cultural Photography",
       "description": "Capture the beauty of mudbrick architecture and Islamic heritage.",
       "image": "/Destination/elqasr-village3.webp",
-      "price": "EGP 50-100 per person"
+      "price": "EGP 100  "
     }
   ],
   "review": {
@@ -2065,13 +2065,13 @@
       "name": "Sandboarding",
       "description": "Ride down the giant dunes on a sandboard for an adrenaline rush.",
       "image": "/imagesdatabase/activities/sandboarding.webp",
-      "price": "EGP 300-500 per person"
+      "price": "EGP 500"
     },
     {
       "name": "4x4 Safari",
       "description": "Experience the thrill of driving across massive dunes in a 4x4 vehicle.",
       "image": "/imagesdatabase/activities/4x4_safari.webp",
-      "price": "EGP 600-900 per person"
+      "price": "EGP 900 "
     }
   ],
   "review": {
@@ -2126,13 +2126,13 @@
       "name": "Camel Ride by the Sea",
       "description": "Travel along the scenic coastline to Abu Galum on a traditional camel.",
       "image": "/imagesdatabase/activities/camel_ride.webp",
-      "price": "EGP 300-500"
+      "price": "EGP 500"
     },
     {
       "name": "Snorkeling Adventure",
       "description": "Explore the untouched coral reefs and vibrant marine life.",
       "image": "/imagesdatabase/activities/snorkeling_abu.webp",
-      "price": "EGP 150-300 per person"
+      "price": "EGP 300 "
     }
   ],
   "review": {
@@ -2187,7 +2187,7 @@
       "name": "Rock Climbing",
       "description": "Test your skills on various climbing routes with different difficulty levels.",
       "image": "/Destination/wadi-gnai4.jpg",
-      "price": "EGP 200-500 per person"
+      "price": "EGP 500 "
     },
     {
       "name": "Hiking",
@@ -2248,7 +2248,7 @@
       "name": "Historical Tour",
       "description": "Guided tour explaining the history of the temple and its significance in ancient times.",
       "image": "/Destination/oracle-temple4.jpg",
-      "price": "EGP 100-200 per person"
+      "price": "EGP 200 "
     },
     {
       "name": "Photography",
@@ -2315,7 +2315,7 @@
       "name": "Relax at the Café",
       "description": "Sip fresh juice or tea at one of the shaded cafes surrounding the spring.",
       "image": "/Destination/cleopatra-spring5.jpg",
-      "price": "EGP 30-60"
+      "price": "EGP 60"
     }
   ],
   "review": {
@@ -2510,19 +2510,19 @@
       "title": "Arcade Zone",
       "description": "Play a variety of classic and modern arcade games for all ages.",
       "duration": "Flexible",
-      "price": "EGP 10–50 per game"
+      "price": "EGP 50"
     },
     {
       "title": "Bumper Cars",
       "description": "Enjoy a fun ride bumping into friends and family in safe bumper cars.",
       "duration": "5 minutes",
-      "price": "EGP 30 per ride"
+      "price": "EGP 30 "
     },
     {
       "title": "7D Cinema",
       "description": "Experience immersive short movies with motion seats, wind, and special effects.",
       "duration": "10 minutes",
-      "price": "EGP 50 per ticket"
+      "price": "EGP 50 "
     }
   ],
   "review": {
@@ -2578,13 +2578,13 @@
       "title": "Watch Latest Movies",
       "description": "Enjoy blockbuster films from Hollywood, Arabic cinema, and international releases.",
       "duration": "1.5 – 3 hours",
-      "price": "EGP 100–250 depending on format"
+      "price": "EGP 250 depending on format"
     },
     {
       "title": "IMAX Experience",
       "description": "Immerse yourself in larger-than-life visuals and powerful sound with IMAX technology.",
       "duration": "Same as movie runtime",
-      "price": "EGP 200–250"
+      "price": "EGP 250"
     },
     {
       "title": "VIP Lounge",
@@ -2652,13 +2652,13 @@
       "title": "Ski Egypt",
       "description": "Enjoy Africa's first indoor ski slope with skiing, snowboarding, and snow play areas.",
       "duration": "1–2 hours",
-      "price": "EGP 300–500 depending on package"
+      "price": "EGP 500 "
     },
     {
       "title": "Dining",
       "description": "Choose from a wide selection of cafes, fast food, and fine dining restaurants.",
       "duration": "Flexible",
-      "price": "EGP 50–300 per meal"
+      "price": "EGP 300 "
     },
     {
       "title": "Entertainment Zones",
@@ -2738,7 +2738,7 @@
       "title": "Dining",
       "description": "A variety of food stalls and restaurants serving snacks, fast food, and gourmet meals.",
       "duration": "Flexible",
-      "price": "EGP 50–300 per meal"
+      "price": "EGP 50–300 "
     }
   ],
   "review": {
@@ -2794,7 +2794,7 @@
       "title": "Kids' Train Ride",
       "description": "A fun scenic train ride around the park for kids and families.",
       "duration": "10–15 minutes",
-      "price": "$1 per ride"
+      "price": "50 EGP"
     },
     {
       "title": "Water Play Area",
@@ -3237,7 +3237,7 @@
       "name": "Historical Exploration",
       "description": "Discover ancient tombs and learn about Siwa’s burial traditions.",
       "image": "/Destination/mountain.jpg",
-      "price": "EGP 100-200 for guided tour"
+      "price": "EGP 100-200 "
     },
     {
       "name": "Panoramic View Photography",

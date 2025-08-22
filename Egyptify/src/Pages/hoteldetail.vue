@@ -2,7 +2,7 @@
   <div class="font-sans">
     <Navbar />
 
-    <div class="container mx-auto px-4 mt-28">
+    <div class="container mx-auto px-4 mt-12">
       <router-link
         to="/hotels"
         class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"
@@ -203,7 +203,7 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-import { useHotelStore } from "../data/storehotel"; // صححي المسار حسب مشروعك
+import { useHotelStore } from "../data/storehotel"; 
 const hotelStore = useHotelStore();
 
 const dateSection = ref(null);
@@ -226,8 +226,10 @@ const goToRoomType = () => {
     return;
   }
 
-  hotelStore.setHotel(destination.value);
-
+  hotelStore.setHotel({
+    ...destination.value,
+    image: destination.value.images.main, 
+  });
   hotelStore.setDates(checkIn.value, checkOut.value);
 
   console.log("Hotel Store Data:", hotelStore.hotel, hotelStore.bookingDetails);

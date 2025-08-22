@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <main class="flex-grow pt-20">
+  <main class="flex-grow pt-2">
     <div class="pt-20 container mx-auto px-4 max-w-6xl">
       <div class="grid grid-cols-12 gap-8">
         <div class="col-span-12 md:col-span-4">

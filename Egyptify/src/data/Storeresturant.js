@@ -26,9 +26,13 @@ export const useReservationStore = defineStore("reservation", {
     },
 
     addBooking(booking) {
+       const guests = parseInt(this.reservation.guests) || 1; // 👈 ناخد عدد الأشخاص من الحجز
+  const totalForBooking = booking.price * guests;  
       this.bookings.push({
         ...booking,
-        restaurant: this.restaurant, // ✅ ربط الحجز بالمطعم
+        restaurant: this.restaurant,
+            guests, // نخزن العدد كمان
+    total: totalForBooking,  // ✅ ربط الحجز بالمطعم
       });
       this.totalPrice += booking.price;
     },
@@ -39,7 +43,7 @@ export const useReservationStore = defineStore("reservation", {
 
     resetReservation() {
       this.reservation = { name: "", phone: "", guests: "", date: "", time: "", comment: "" };
-      this.restaurant = null; // ✅ نرجع المطعم فاضي
+  this.restaurant = {};// ✅ نرجع المطعم فاضي
       this.bookings = [];
       this.totalPrice = 0;
     },

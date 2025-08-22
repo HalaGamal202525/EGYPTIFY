@@ -14,7 +14,7 @@
 
   <div class="relative z-10 max-w-5xl mx-auto text-center">
     <!-- Title and Description -->
-    <h1 class="text-4xl md:text-5xl font-extrabold">
+    <h1 class="text-4xl md:text-5xl font-extrabold mt-14">
       Explore Egypt <span class="text-yellow-400">Every Way</span>
     </h1>
     <p class="mt-4 text-lg max-w-3xl mx-auto text-white">
@@ -26,13 +26,14 @@
     <div
       class="mt-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl"
     >
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-left text-white">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-2 text-left text-white">
         <!-- From -->
         <div>
           <label class="block text-sm font-semibold mb-1">From</label>
           <select v-model="filters.from" 
           class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <option value="">Choose city</option>
+            <option value="">All cities</option>
             <option>Cairo</option>
             <option>Giza</option>
             <option>Alexandria</option>
@@ -56,6 +57,7 @@
          <select v-model="filters.to" 
          class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
             <option value="">Choose destination</option>
+            <option value="">All destinations</option>
             <option>Cairo</option>
             <option>Giza</option>
             <option>Luxor</option>
@@ -87,7 +89,7 @@
         </div>
 
         <!-- Passengers -->
-        <div>
+        <!-- <div>
           <label class="block text-sm font-semibold mb-1">Passengers</label>
         <select v-model="filters.passengers" 
         class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
@@ -98,8 +100,42 @@
             <option>4 Passengers</option>
             <option>5+ Passengers</option>
           </select>
+        </div> -->
+
+
+
+
+
+        <!--Travel time-->
+        <div>
+              <label class="block text-sm font-semibold mb-1">Time</label>
+              <input
+                type="time"
+                class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                v-model="filters.time"
+                required
+              />
+            </div>
+
+
+
+
+
+
+       <div>
+          <label class="block text-sm font-semibold mb-1">Types</label>
+        <select v-model="filters.type" 
+        class="w-full rounded px-3 py-2 bg-gray-100 text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Select type</option>
+            <option value="">All types</option>
+            <option>Train</option>
+            <option>Bus</option>
+            <option>Car</option>
+          </select>
         </div>
       </div>
+
+        
 
       <!-- Search Button -->
 <div class="mt-6 flex justify-center">
@@ -173,14 +209,25 @@
     :showButton="true"
     :buttonText="'Book Now'"
     :showImage="false"
-    :departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
-    :arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
-    :duration="item.type === 'Car' ? 'Duration: Based on distance' : `${item.duration}`"
-    :location="item.type === 'Car' ? 'From: Flexible → To: As requested' : `From: ${item.from} → To: ${item.to}`"
+    :departure="item.departure"
+    :arrival="item.arrival"
+    :duration="item.duration"
+    :location="item.type !== 'Car' ? `From: ${item.from} → To: ${item.to}` : ''"
     :onClick="() => handleBookNow(item)"
     class="!w-full min-w-[380px] min-h-[260px] flex flex-col bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-transform hover:scale-[1.03]"
   />
 </section>
+
+
+<!-- 
+:departure="item.type === 'Car' ? 'Departure: Upon request' : `${item.departure}`"
+:arrival="item.type === 'Car' ? 'Arrival: Upon request' : `${item.arrival}`"
+:duration="item.type === 'Car' ? 'Duration: Based on distance' : `${item.duration}`"
+:location="item.type === 'Car' ? 'From: Flexible → To: As requested' : `From: ${item.from} → To: ${item.to}`" -->
+    
+
+
+
 <div class="flex justify-center mb-16">
             <PaginationComponent
               :currentPage="currentPage"
@@ -372,13 +419,14 @@ const emit = defineEmits(['book-now'])
 
 import { useRouter } from "vue-router";
  import { useTransportationStore } from "../data/storetransport";
+// import { Script } from "vm";
 const transportationStore = useTransportationStore();
 const router = useRouter();
 
-const handleBookNow = (item) => {
-transportationStore.setTransportation(item);
-  router.push("/form");
-};
+// const handleBookNow = (item) => {
+// transportationStore.setTransportation(item);
+//   router.push("/form");
+// };
 
 
 
@@ -392,23 +440,26 @@ const filters = ref({
   from: "",
   to: "",
   date: "",
-  passengers: ""
+  // passengers: "",
+  type:""
 });
 
 // كل الداتا
-const transportation = ref(transportationData);
+// const transportation = ref(transportationData);
 
 // فلترة الداتا بناءً على الفلاتر
-const filteredTransportation = computed(() => {
-  return transportation.value.filter(item => {
-    return (
-      (!filters.value.from || item.from === filters.value.from) &&
-      (!filters.value.to || item.to === filters.value.to) &&
-      (!filters.value.date || item.date === filters.value.date) &&
-      (!filters.value.passengers || item.passengers >= Number(filters.value.passengers))
-    );
-  });
-});
+// const filteredTransportation = computed(() => {
+//   return transportation.value.filter(item => {
+//     return (
+//       (!filters.value.from || item.from === filters.value.from) &&
+//       (!filters.value.to || item.to === filters.value.to) &&
+//       (!filters.value.date || item.date === filters.value.date) &&
+//       (!filters.value.passengers || item.passengers >= Number(filters.value.passengers))&&
+//       (!filters.value.type || item.type === filters.value.type)
+
+//   );
+//   });
+// });
 
 
 
@@ -420,6 +471,109 @@ const scrollToCards = () => {
   cardsSection.value?.scrollIntoView({ behavior: "smooth" })
 
 };
+
+
+
+// const handleBookNow = (item) => {
+//   transportationStore.setTransportation(item);
+//   router.push("/form");
+
+//    if (item.type === "Car") {
+//     bookingData = {
+//       ...item,
+//       from: filters.value.from,
+//       to: filters.value.to
+//     }
+// };
+// }
+
+
+
+
+
+
+
+const handleBookNow = (item) => {
+  let bookingData = { ...item };
+
+  // لو النوع "Car" ضيف from/to من الفلاتر
+  if (item.type === "Car") {
+    bookingData = {
+      ...item,
+      from: filters.value.from,
+      to: filters.value.to
+    };
+  }
+
+
+
+  // في كل الحالات ضيف travel date و time (حتى لو مش Car)
+  bookingData = {
+    ...bookingData,
+    date: filters.value.date || null,
+    time: filters.value.time || null,
+  };
+
+
+  
+  // خزّني الداتا في الستور
+  // transportationStore.setTransportation(bookingData);
+
+
+
+
+  transportationStore.setTransportation({
+  ...bookingData,
+price: Number(String(bookingData.price).replace(/\D/g, "")) || 0
+});
+
+  // روح للفورم
+  router.push("/transportform");
+};
+
+
+
+
+
+
+// كل الداتا
+const transportation = ref(transportationData);
+
+// فلترة الداتا بناءً على الفلاتر
+const filteredTransportation = computed(() => {
+  return transportation.value.filter(item => {
+
+
+
+    if (filters.value.type) {
+      return item.type === filters.value.type &&
+        (!filters.value.from || item.from === filters.value.from) &&
+        (!filters.value.to || item.to === filters.value.to)
+    }
+
+
+
+    const matchesFilters =
+      (!filters.value.from || item.from === filters.value.from) &&
+      (!filters.value.to || item.to === filters.value.to) &&
+      // (!filters.value.date || item.date === filters.value.date) &&
+      (!filters.value.passengers || item.passengers >= Number(filters.value.passengers)) &&
+      (!filters.value.type || item.type === filters.value.type);
+
+    // العربيات تظهر دايمًا لو المستخدم اختار أي وجهة
+    if (item.type === "Car") {
+      return filters.value.from || filters.value.to ? true : matchesFilters;
+    }
+
+    // باقي الأنواع تخضع للفلاتر كلها
+    return matchesFilters;
+  });
+});
+
+
+
+
+
 
 
 </script>
