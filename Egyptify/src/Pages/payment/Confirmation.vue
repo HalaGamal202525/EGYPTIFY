@@ -100,7 +100,24 @@
 import NavBarBlack from "../../components/NavBar-Black.vue";
 import foot from "../../components/footer.vue";
 import { useGuestStore } from "../../data/storeguset";
+import { useBookingStore } from "../../data/bookingstore";
+import { useRouter } from "vue-router";
 
+const bookingStore = useBookingStore();
+const router = useRouter();
+import { useHistoryStore } from "../../data/history";
+
+const historyStore = useHistoryStore();
+
+const confirmBooking = (bookingData, type) => {
+  historyStore.addHistoryItem({
+    ...bookingData,
+    type // "hotel" | "transportation" | "restaurant" | "event"
+  });
+
+  router.push("/history");}
+
+ 
 import BaseButton from "../../components/BaseButton.vue";
 const guestStore = useGuestStore();
 
