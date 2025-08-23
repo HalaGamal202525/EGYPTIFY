@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col md:flex-row h-full bg-[#fefaf2]">
 
-   
     <div class="w-full md:w-1/2 h-1/2 md:h-full bg-white flex justify-center items-center p-6 md:p-8">
       <AuthForm
         title="Sign up"
@@ -39,34 +38,35 @@
         </BaseButton>
       </div>
     </div>
- <div v-if="showErrorModal" class="fixed inset-0 model flex items-center justify-center bg-black bg-opacity-50 z-50">
-  <div class="bg-white border-l-4 border-red-500 text-red-700 px-6 py-4 rounded-lg shadow-lg w-96 animate-fade-in">
-    <div class="flex justify-between items-center mb-3">
-      <h3 class="font-bold text-lg flex items-center gap-2">
-        <i class="fas fa-exclamation-circle text-red-500"></i>
-        Failed to Login
-      </h3>
-      <button 
-        @click="showErrorModal = false" 
-        class="text-red-500 text-xl font-bold hover:text-red-700 transition"
-      >
-        &times;
-      </button>
+    <div v-if="showErrorModal" class="fixed inset-0 model flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white border-l-4 border-red-500 text-red-700 px-6 py-4 rounded-lg shadow-lg w-96 animate-fade-in">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="font-bold text-lg flex items-center gap-2">
+            <i class="fas fa-exclamation-circle text-red-500"></i>
+            Failed to Login
+          </h3>
+          <button
+            @click="showErrorModal = false"
+            class="text-red-500 text-xl font-bold hover:text-red-700 transition"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="text-sm">Email already exists. Please try another one.</p>
+      </div>
     </div>
-    <p class="text-sm">Email already exists. Please try another one.</p>
-  </div>
-</div>
 
   </div>
 </template>
+
 <script setup>
 import AuthForm from '../../components/AuthForm.vue'
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import BaseButton from '../../components/BaseButton.vue';
 import { auth } from "../../firebase";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { useUserStore } from '../../data/signupstore' // استدعاء الـ store
+import { useUserStore } from '../../data/signupstore'
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
@@ -76,7 +76,7 @@ const router = useRouter();
 const userStore = useUserStore()
 
 const gotohome = () => {
-  router.push("/") 
+  router.push("/")
 }
 
 async function handleSignUp({ username, email, password }) {
@@ -84,28 +84,29 @@ async function handleSignUp({ username, email, password }) {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
+    // Corrected code: Use updateProfile to set the user's displayName
+    await updateProfile(user, {
+      displayName: username,
+    });
+
+    // Save user data to Firestore
     await setDoc(doc(db, "users", user.uid), {
-      name: username,
-      email: email, 
-      password:password
+      username: username,
+      email: email,
     });
 
     userStore.setUserData({
-      name: username,
+      username: username,
       email: email,
-            password:password
-
     });
 
     showModal.value = true;
   } catch (error) {
+    console.error("Signup error:", error); // Log the error for debugging
     showErrorModal.value = true;
   }
 }
-
 </script>
-
-
 
 <style scoped>
 .model {

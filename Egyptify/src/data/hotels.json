@@ -557,21 +557,21 @@
   "bestTime": "Winter",
   "suitableFor": ["Couples", "Families"],
   "description": "A historic luxury hotel located near the Pyramids of Giza, combining classic elegance with modern amenities and stunning views of the pyramids.",
-  "image": "/hotel/Marriott Mena House.webp",
+  "image": "/hotel/marriot1.jpg",
   "details": {
     "slug": "marriott-mena-house",
     "name": "Marriott Mena House",
     "location": "Giza",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/Marriott Mena House.webp",
-      "img1": "/Destination/Marriott Mena House2.webp",
-      "img2": "/Destination/Marriott Mena House3.webp",
+      "main": "/hotel/marriot1.jpg",
+      "img1": "/hotel/marriott.jpg",
+      "img2": "/hotel/marriot2.jpg",
       "thumbs": [
-        "/Destination/Marriott Mena House4.webp",
-        "/Destination/Marriott Mena House5.webp",
-        "/Destination/Marriott Mena House6.webp",
-        "/Destination/Marriott Mena House7.webp"
+        "/hotel/marriot3.jpg",
+        "/hotel/marriot4.jpg",
+        "/hotel/marriot5.jpg",
+        "/hotel/marriot6.jpg"
       ]
     },
     "description": "Set in a historic palace with breathtaking views of the Pyramids, Marriott Mena House offers a unique blend of heritage and luxury with modern facilities including a spa, multiple pools, and fine dining.",
@@ -608,7 +608,7 @@
   "bestTime": "Winter",
   "suitableFor": ["Families", "Couples"],
   "description": "Comfortable hotel located near the Pyramids of Giza, offering cozy rooms, a swimming pool, and easy access to the main attractions.",
-  "image": "/hotel/Pyramids Hotel.webp",
+  "image": "/hotel/pyramids-hotel.jpg",
   "details": {
     "slug": "pyramids-hotel",
     "name": "Pyramids Hotel",
@@ -659,21 +659,21 @@
   "bestTime": "Winter",
   "suitableFor": ["Families", "Couples"],
   "description": "An upscale beachfront resort offering private beaches, extensive recreational facilities, and relaxing spa treatments in the heart of Sharm El Sheikh.",
-  "image": "/hotel/Cleopatra Luxury Resort.webp",
+  "image": "/hotel/cleopatra.jpg",
   "details": {
     "slug": "cleopatra-luxury-resort",
     "name": "Cleopatra Luxury Resort",
     "location": "Sharm El Sheikh",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/Cleopatra Luxury Resort.webp",
-      "img1": "/Destination/Cleopatra Luxury Resort2.webp",
-      "img2": "/Destination/Cleopatra Luxury Resort3.webp",
+      "main": "/hotel/cleopatra.jpg",
+      "img1": "/hotel/cleopatra1.jpg",
+      "img2": "/hotel/cleopatra2.jpg",
       "thumbs": [
-        "/Destination/Cleopatra Luxury Resort4.webp",
-        "/Destination/Cleopatra Luxury Resort5.webp",
-        "/Destination/Cleopatra Luxury Resort6.webp",
-        "/Destination/Cleopatra Luxury Resort7.jpeg"
+        "/hotel/cleopatra3.jpg",
+        "/hotel/cleopatra4.jpg",
+        "/hotel/cleopatra5.jpg",
+        "/hotel/cleopatra6.jpg"
       ]
     },
     "description": "Set along pristine beaches, Cleopatra Luxury Resort provides a combination of comfort and luxury with numerous pools, restaurants, and wellness options.",
@@ -711,21 +711,21 @@
   "bestTime": "Winter",
   "suitableFor": ["Families", "Couples"],
   "description": "A premium resort offering elegant beachfront villas, world-class spa facilities, and a variety of water sports in the tranquil Sahl Hasheesh bay.",
-  "image": "/hotel/The V Luxury Resort Sahl Hasheesh.webp",
+  "image": "/hotel/v-resort3.avif",
   "details": {
     "slug": "the-v-luxury-resort-sahl-hasheesh",
     "name": "The V Luxury Resort Sahl Hasheesh",
     "location": "Sahl Hasheesh",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/The V Luxury Resort Sahl Hasheesh.webp",
-      "img1": "/Destination/The V Luxury Resort Sahl Hasheesh2.webp",
-      "img2": "/Destination/The V Luxury Resort Sahl Hasheesh3.webp",
+      "main": "/hotel/v-resort.jpg",
+      "img1": "/hotel/v-resort1.jpg",
+      "img2": "/hotel/v-resort2.jpg",
       "thumbs": [
-        "/Destination/The V Luxury Resort Sahl Hasheesh4.webp",
-        "/Destination/The V Luxury Resort Sahl Hasheesh5.webp",
-        "/Destination/The V Luxury Resort Sahl Hasheesh6.webp",
-        "/Destination/The V Luxury Resort Sahl Hasheesh7.webp"
+        "/hotel/v-resort3.avif",
+        "/hotel/v-resort4.avif",
+        "/hotel/v-resort5.jpg",
+        "/hotel/v-resort6.webp"
       ]
     },
     "description": "Nestled along the Red Sea coast, The V Luxury Resort combines refined luxury with relaxing spa treatments and exciting water activities, perfect for a peaceful getaway.",
@@ -763,21 +763,21 @@
   "bestTime": "Spring",
   "suitableFor": ["Couples", "Families"],
   "description": "A luxurious hotel situated on the Mediterranean coast, offering elegant rooms, private beach access, and world-class dining experiences.",
-  "image": "/hotel/Four Seasons Alexandria at San Stefano.webp",
+  "image": "/hotel/four-seasons2.jpg",
   "details": {
     "slug": "four-seasons-alexandria-san-stefano",
     "name": "Four Seasons Alexandria at San Stefano",
     "location": "Alexandria",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/Four Seasons Alexandria at San Stefano.webp",
-      "img1": "/Destination/Four Seasons Alexandria at San Stefano2.webp",
-      "img2": "/Destination/Four Seasons Alexandria at San Stefano3.webp",
+      "main": "/hotel/four-seasons.jpg",
+      "img1": "/hotel/four-seasons2.jpg",
+      "img2": "/hotel/four-seasons3.jpg",
       "thumbs": [
-        "/Destination/Four Seasons Alexandria at San Stefano4.webp",
-        "/Destination/Four Seasons Alexandria at San Stefano5.webp",
-        "/Destination/Four Seasons Alexandria at San Stefano6.webp",
-        "/Destination/Four Seasons Alexandria at San Stefano7.jpeg"
+        "/hotel/four-seasons4.jpg",
+        "/hotel/four-seasons5.jpg",
+        "/hotel/four-seasons6.jpg",
+        "/hotel/four-seasons7.jpg"
       ]
     },
     "description": "Overlooking the Mediterranean Sea, this hotel blends contemporary luxury with historic charm, featuring exquisite dining, a private beach, and a full-service spa.",
@@ -815,21 +815,21 @@
   "bestTime": "Summer",
   "suitableFor": ["Families", "Couples"],
   "description": "A premium all-inclusive resort on the Red Sea, featuring pristine beaches, multiple pools, diverse dining options, and extensive wellness facilities.",
-  "image": "/hotel/Jaz Mirabel Resort.webp",
+  "image": "/hotel/jaz-resort6.jpg",
   "details": {
     "slug": "jaz-mirabel-resort",
     "name": "Jaz Mirabel Resort",
     "location": "Hurghada",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/Jaz Mirabel Resort.webp",
-      "img1": "/Destination/Jaz Mirabel Resort2.webp",
-      "img2": "/Destination/Jaz Mirabel Resort3.webp",
+      "main": "/hotel/jaz-resort3.jpg",
+      "img1": "/hotel/jaz-resort2.jpg",
+      "img2": "/hotel/jaz-resort1.webp",
       "thumbs": [
-        "/Destination/Jaz Mirabel Resort4.webp",
-        "/Destination/Jaz Mirabel Resort5.webp",
-        "/Destination/Jaz Mirabel Resort6.webp",
-        "/Destination/Jaz Mirabel Resort7.webp"
+        "/hotel/jaz-resort4.jpg",
+        "/hotel/jaz-resort.jpg",
+        "/hotel/jaz-resort5.jpg",
+        "/hotel/jaz-resort.jpg"
       ]
     },
     "description": "Located on the Red Sea coast, Jaz Mirabel Resort offers a family-friendly atmosphere, luxury amenities, and a variety of recreational activities suitable for all ages.",
@@ -846,16 +846,16 @@
   "bestTime": "Spring",
   "suitableFor": ["Business Travelers", "Families"],
   "description": "Tolip Hotel Alexandria offers comfortable accommodation with stunning sea views, modern conference facilities, and several dining options in the heart of Alexandria.",
-  "image": "/hotel/Tolip Hotel Alexandria.webp",
+  "image": "/hotel/tolip3.jpg",
   "details": {
     "slug": "tolip-hotel-alexandria",
     "name": "Tolip Hotel Alexandria",
     "location": "Alexandria",
     "type": "Hotel",
     "images": {
-      "main": "/Destination/Tolip Hotel Alexandria.webp",
-      "img1": "/Destination/Tolip Hotel Alexandria2.webp",
-      "img2": "/Destination/Tolip Hotel Alexandria3.webp",
+      "main": "/hotel/tolip1.jpg",
+      "img1": "/hotel/tolip2.jpg",
+      "img2": "/hotel/tolip.jpg",
       "thumbs": [
         "/Destination/Tolip Hotel Alexandria4.jpeg",
         "/Destination/Tolip Hotel Alexandria5.jpeg",
