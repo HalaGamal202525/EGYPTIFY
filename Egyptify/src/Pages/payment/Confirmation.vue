@@ -85,10 +85,10 @@
 
   <!-- 🔘 زر العودة -->
   <BaseButton
-    @click="$router.push('/')"
+    @click="$router.push('/history')"
     class="w-full py-3 bg-[#ffc340] text-white text-lg font-bold rounded-xl shadow-md hover:scale-105 transition"
   >
-    ⬅ Back to Home
+    ⬅ Go to History
   </BaseButton>
 </div>
 
@@ -99,26 +99,35 @@
 <script setup>
 import NavBarBlack from "../../components/NavBar-Black.vue";
 import foot from "../../components/footer.vue";
-import { useGuestStore } from "../../data/storeguset";
-import { useBookingStore } from "../../data/bookingstore";
-import { useRouter } from "vue-router";
-
-const bookingStore = useBookingStore();
 const router = useRouter();
 import { useHistoryStore } from "../../data/history";
 
 const historyStore = useHistoryStore();
 
-const confirmBooking = (bookingData, type) => {
-  historyStore.addHistoryItem({
-    ...bookingData,
-    type // "hotel" | "transportation" | "restaurant" | "event"
-  });
+import { useGuestStore } from "../../data/storeguset";
+import { useBookingStore } from "../../data/bookingstore";
+import { useRoute,useRouter } from "vue-router";
+import { onMounted } from "vue";
 
-  router.push("/history");}
+const guestStore = useGuestStore();
+const bookingStore = useBookingStore();
+const route = useRoute();
+
+onMounted(() => {
+  let placeType = "destination";
+  if (route.path.includes("hotel")) placeType = "Hotel";
+  else if (route.path.includes("restaurant")) placeType = "Restaurant";
+  else if (route.path.includes("transport")) placeType = "Transport";
+
+  bookingStore.addBooking({
+    placeName: placeType,
+    date: new Date().toLocaleString(),
+    userData: guestStore.guest,
+  });
+});
+
 
  
 import BaseButton from "../../components/BaseButton.vue";
-const guestStore = useGuestStore();
 
 </script>
