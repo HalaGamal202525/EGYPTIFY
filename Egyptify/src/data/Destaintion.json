@@ -9,7 +9,7 @@
   "rate": 4,
   "description": "Located in Egypt’s Western Desert, Siwa is known for its salt lakes, hot springs, palm groves.",
   "images": [
-    "/imagesdatabase/natural/Siwa Oasis1.webp",
+    "/natural/siwa.jpg",
     "/imagesdatabase/natural/Siwa Oasis2.webp",
     "/imagesdatabase/natural/Siwa Oasis3.webp",
     "/imagesdatabase/natural/Siwa Oasis4.jpg"
@@ -77,7 +77,7 @@
   "rate": 5,
   "description": "A protected area in Farafra featuring stunning white rock formations. A surreal landscape perfect for camping and stargazing.",
   "images": [
-    "/imagesdatabase/natural/White Desert1.webp",
+    "/natural/white.jpg",
     "/imagesdatabase/natural/White Desert2.jpeg",
     "/imagesdatabase/natural/White Desert3.webp",
     "/imagesdatabase/natural/White Desert4.jpg"
@@ -213,7 +213,7 @@
   "rate": 4,
   "description": "A world-famous diving site on the Red Sea, ideal for experienced divers and underwater photography lovers.",
   "images": [
-    "/imagesdatabase/natural/Blue Hole1.webp",
+    "/natural/blue hole.jpg",
     "/imagesdatabase/natural/Blue Hole2.webp",
     "/imagesdatabase/natural/Blue Hole3.webp",
     "/imagesdatabase/natural/Blue Hole4.webp"
@@ -281,7 +281,7 @@
   "rate": 4,
   "description": "A natural reserve with Egypt’s only waterfalls, large lakes, and surrounding sand dunes great for swimming and sandboarding.",
   "images": [
-    "/imagesdatabase/natural/Wadi El Rayan1.webp",
+    "/natural/wadi alrayan.jpg",
     "/imagesdatabase/natural/Wadi El Rayan2.webp",
     "/imagesdatabase/natural/Wadi El Rayan3.webp",
     "/imagesdatabase/natural/Wadi El Rayan4.webp"
@@ -350,7 +350,7 @@
   "rate": 5,
   "description": "A sacred mountain with religious significance, popular for sunrise hikes and panoramic desert views.",
   "images": [
-    "/imagesdatabase/natural/Mount Sinai1.webp",
+    "/natural/سانت كاترين.jpg",
     "/imagesdatabase/natural/Mount Sinai2.webp",
     "/imagesdatabase/natural/Mount Sinai3.webp",
     "/imagesdatabase/natural/Mount Sinai4.jpeg"
@@ -418,7 +418,7 @@
   "rate": 3.5,
   "description": "A remote mountain range in southeastern Egypt, rich in biodiversity and home to rare wildlife.",
   "images": [
-    "/imagesdatabase/natural/Gebel Elba1.webp",
+    "/natural/elba.jpg",
     "/imagesdatabase/natural/Gebel Elba2.webp",
     "/imagesdatabase/natural/Gebel Elba3.webp",
     "/imagesdatabase/natural/4.webp"
@@ -486,7 +486,7 @@
   "rate": 4,
   "description": "Famous for its lakes, bird-watching, and traditional pottery villages like Tunis Village.",
   "images": [
-    "/imagesdatabase/natural/Fayoum Oasis1.webp",
+    "/Destination/fayoum-oasis.jpg",
     "/imagesdatabase/natural/Fayoum Oasis2.webp",
     "/imagesdatabase/natural/Fayoum Oasis3.webp",
     "/imagesdatabase/natural/Fayoum Oasis4.webp"
@@ -554,7 +554,7 @@
   "rate": 5,
   "description": "A UNESCO World Heritage site in Wadi Al-Hitan featuring fossilized remains of ancient whales.",
   "images": [
-    "/imagesdatabase/natural/Valley of the Whales1.webp",
+    "/Destination/whales-valley.jpg",
     "/imagesdatabase/natural/Valley of the Whales2.webp",
     "/imagesdatabase/natural/Valley of the Whales3.webp",
     "/imagesdatabase/natural/Valley of the Whales4.webp"
@@ -622,7 +622,7 @@
   "rate": 4.5,
   "description": "A tranquil, clear-water beach in Dahab ideal for relaxing, kite surfing, and snorkeling.",
   "images": [
-    "/imagesdatabase/natural/Dahab Blue Lagoon.webp",
+    "/natural/logoon.jpg",
     "/imagesdatabase/natural/Dahab Blue Lagoon2.webp",
     "/imagesdatabase/natural/Dahab Blue Lagoon3.webp",
     "/imagesdatabase/natural/Dahab Blue Lagoon4.webp"
@@ -690,7 +690,7 @@
   "rate": 4,
   "description": "A lush oasis in the desert surrounded by black desert hills and ancient tombs.",
   "images": [
-    "/imagesdatabase/natural/Bahariya Oasis.webp",
+    "/Destination/bahariya-oasis.jpg",
     "/imagesdatabase/natural/Bahariya Oasis2.webp",
     "/imagesdatabase/natural/Bahariya Oasis3.webp",
     "/imagesdatabase/natural/Bahariya Oasis4.webp"
@@ -758,7 +758,7 @@
   "rate": 5,
   "description": "One of the oldest working Christian monasteries, located at the foot of Mount Sinai.",
   "images": [
-    "/imagesdatabase/natural/St. Catherine’s Monastery.webp",
+    "/natural/St. Catherine’s Monastery.jpg",
     "/imagesdatabase/natural/St. Catherine’s Monastery2.webp",
     "/imagesdatabase/natural/St. Catherine’s Monastery3.webp",
     "/imagesdatabase/natural/St. Catherine’s Monastery4.webp"
@@ -1169,7 +1169,7 @@
   "rate": 4.3,
   "description": "Home to thousands of ancient artifacts including the treasures of King Tutankhamun.",
   "images": [
-    "/imagesdatabase/historical/Egyptian Museum2.avif",
+    "/Destination/egyptian-museum.jpg",
     "/imagesdatabase/historical/Egyptian Museum1.jpeg",
     "/imagesdatabase/historical/Egyptian Museum3.avif",
     "/imagesdatabase/historical/Egyptian Museum4.avif"
