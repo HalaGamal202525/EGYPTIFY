@@ -377,7 +377,7 @@
             class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
           >
             <span class="font-medium">Delete Account</span>
-            <i class="fas fa-xmark text-red-600"></i>
+            <i class="fas fa-xmark" style="color: red;"></i>
           </a>
 
           <div class="flex justify-end mt-6">
