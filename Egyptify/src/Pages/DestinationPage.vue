@@ -53,6 +53,7 @@
             <CardComponent
               v-for="item in paginatedDestinations"
               :key="item.id"
+              :id="item.id"
               :title="item.name"
               :description="item.description"
               :image="item.image"

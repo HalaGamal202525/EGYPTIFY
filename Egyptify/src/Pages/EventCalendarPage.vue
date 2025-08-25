@@ -68,26 +68,27 @@
     <section
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 max-w-6xl mx-auto"
     >
-      <CardComponent
-        v-for="event in filteredEvents"
-        :key="event.id"
-        :image="event.image"
-        :showBadge="true"
-        :badgeText="event.type"
-        :title="event.title"
-        :description="event.description"
-        :date="event.date"
-        :location="event.location"
-        :showButton="true"
-        :buttonText="'Show Details'"
-        :showHeart="true"
-        @click="
-          () => {
-            goToEvent(event.id);
-            handleCardClick(event);
-          }
-        "
-      />
+<Card
+  v-for="event in filteredEvents"
+  :key="event.id"
+  :id="event.id" 
+  :image="event.image"
+  :showBadge="true"
+  :badgeText="event.type"
+  :title="event.title"
+  :description="event.description"
+  :date="event.date"
+  :location="event.location"
+  :showButton="true"
+  :buttonText="'Show Details'"
+  :showHeart="true"
+  @click="
+    () => {
+      goToEvent(event.id);
+      handleCardClick(event);
+    }
+  "
+/>
 
      
     </section>
@@ -102,7 +103,7 @@ import Navbar from "../components/navbar.vue";
 import Hero from "../components/Hero.vue";
 import Footer from "../components/footer.vue";
 import DropdownComponent from "../components/DropdownMenu.vue";
-import CardComponent from "../components/card.vue";
+import Card from "../components/card.vue";
 import heroImage from "../assets/eventCalendar.jpg";
 import bookingEvents from "../data/bookingEvents.json";
 import ButtonComponent from "../components/BaseButton.vue";

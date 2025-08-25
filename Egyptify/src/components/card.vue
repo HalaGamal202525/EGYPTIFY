@@ -3,7 +3,6 @@
     @click="$emit('click')"
     class="w-full max-w-[300px] bg-white rounded-2xl shadow-md overflow-hidden flex flex-col relative hover:shadow-xl transition transform hover:-translate-y-1"
   >
-    <!-- الصورة -->
     <div class="w-full relative">
       <img
         v-if="showImage"
@@ -12,7 +11,6 @@
         class="h-48 w-full object-cover rounded-t-xl"
       />
 
-      <!-- Badge -->
       <div
         v-if="showBadge && badgeText"
         class="absolute top-2 left-2 bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-md"
@@ -20,8 +18,6 @@
         {{ badgeText }}
       </div>
 
-
-      <!-- زر القلب -->
       <button
         v-if="showHeart"
         @click="toggleFavorite"
@@ -33,13 +29,12 @@
             isFavorite ? 'fa-solid text-red-500' : 'fa-regular text-gray-400',
           ]"
           class="text-lg transition-all duration-300 ease-in-out transform"
-          :style="{ color: '#ffc340', scale: isFavorite ? '1.2' : '1' }"
+          :style="{ color: isFavorite ? '#ffc340' : 'gray', scale: isFavorite ? '1.2' : '1' }"
         >
         </i>
       </button>
     </div>
 
-    <!-- رسالة overlay -->
     <div
       v-if="showOverlay"
       class="absolute top-16 right-4 bg-black bg-opacity-80 text-white text-sm px-3 py-1 rounded shadow-lg transition-opacity duration-300 z-10"
@@ -90,9 +85,9 @@
             ><i class="fa-solid fa-location-dot mb-2" style="color: #ffc340"></i>
             {{ location }}</span
           >
-          </div>
-    
-         <div>
+        </div>
+
+        <div>
           <span v-if="date"
             ><i class="fa-solid fa-calendar" style="color: #ffc340"></i>
             {{ date }}</span
@@ -119,7 +114,7 @@
         <span class="text-yellow-600 font-bold text-md" v-if="price">
           {{ price }} EGP</span
         >
-        <div class=" flex justify-center items-center">
+        <div class="flex justify-center items-center">
           <slot name="action" v-if="hasActionSlot" />
           <BaseButton v-else-if="showButton" @click="handleClick">{{
             buttonText
@@ -129,9 +124,16 @@
     </div>
   </div>
 </template>
+
 <script setup>
-import { useSlots, ref, watchEffect, onMounted, onBeforeUnmount } from "vue";
+import { useSlots, ref, onMounted, onBeforeUnmount, watch } from "vue";
 import BaseButton from "./BaseButton.vue";
+
+// Firebase imports
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { db } from "../firebase";
+import { doc, setDoc, getDoc, deleteDoc } from "firebase/firestore";
+
 const props = defineProps({
   id: [String, Number],
   image: String,
@@ -148,40 +150,28 @@ const props = defineProps({
   price: String,
   rating: Number,
   type: String,
-  showButton: {
-    type: Boolean,
-    default: false,
-  },
-  buttonText: {
-    type: String,
-    default: "Book Now",
-  },
-  showHeart: {
-    type: Boolean,
-    default: false,
-  },
-  showImage: {
-    type: Boolean,
-    default: true,
-  },
+  showButton: { type: Boolean, default: false },
+  buttonText: { type: String, default: "Book Now" },
+  showHeart: { type: Boolean, default: false },
+  showImage: { type: Boolean, default: true },
   defaultFavorite: Boolean,
   onClick: Function,
-
-
-
-  /* Props جديدة للـ badge */
   showBadge: { type: Boolean, default: false },
   badgeText: { type: String, default: "" },
-
-
 });
 
+const emit = defineEmits(['favorite-changed']);
 const slots = useSlots();
 const hasActionSlot = !!slots.action;
-
-const isFavorite = ref(props.defaultFavorite || false);
+const isFavorite = ref(props.defaultFavorite);
 const showOverlay = ref(false);
-const overlayMessage = ref("");
+let authListener = null;
+let currentUser = null;
+
+// Watch for changes to the defaultFavorite prop
+watch(() => props.defaultFavorite, (newVal) => {
+  isFavorite.value = newVal;
+});
 
 function handleClick() {
   if (props.onClick) {
@@ -189,59 +179,139 @@ function handleClick() {
   }
 }
 
-// Sync favorite state from local storage
-function syncFavoriteState() {
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  isFavorite.value = favorites.some((p) => p.id === props.id);
-}
-
-// Toggle favorite and show overlay
-function toggleFavorite(event) {
-  event.stopPropagation(); // Prevents card click event from firing
-
-  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  const exists = favorites.find((p) => p.id === props.id);
-  let updatedFavorites;
-
-  if (exists) {
-    updatedFavorites = favorites.filter((p) => p.id !== props.id);
-    overlayMessage.value = "Removed from Favorites";
-  } else {
-    const newFavorite = {
-      id: props.id,
-      title: props.title,
-      image: props.image,
-      description: props.description,
-      location: props.location,
-      date: props.date,
-      duration: props.duration,
-      people: props.people,
-      price: props.price,
-      rating: props.rating,
-      type: props.type,
-    };
-    updatedFavorites = [...favorites, newFavorite];
-    overlayMessage.value = "Added to Favorites";
+const toggleFavorite = async (event) => {
+  event.stopPropagation();
+  
+  if (!currentUser) {
+    alert("Please log in to save favorites.");
+    return;
   }
 
-  localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-
-  // Update the local state
-  isFavorite.value = !exists;
-
-  // Show the overlay with the correct message
-  showOverlay.value = true;
-  setTimeout(() => {
-    showOverlay.value = false;
-  }, 2000);
-}
+  const favoriteDocRef = doc(db, `users/${currentUser.uid}/favorites/${props.id}`);
+  
+  try {
+    const docSnap = await getDoc(favoriteDocRef);
+    
+    if (docSnap.exists()) {
+      // It's already a favorite, so remove it
+      await deleteDoc(favoriteDocRef);
+      // Only change local state AFTER successful delete
+      isFavorite.value = false;
+      showOverlay.value = true;
+    } else {
+      // It's not a favorite, so add it
+      const newFavorite = {
+        id: props.id,
+        image: props.image || '',
+        title: props.title || '',
+        description: props.description || '',
+        location: props.location || '',
+        date: props.date || '',
+        duration: props.duration || '',
+        people: props.people || '',
+        price: props.price || '',
+        rating: props.rating || 0,
+        type: props.type || '',
+      };
+      await setDoc(favoriteDocRef, newFavorite);
+      // Only change local state AFTER successful set
+      isFavorite.value = true;
+      showOverlay.value = true;
+    }
+    
+    emit('favorite-changed');
+    
+  } catch (error) {
+    console.error("Error toggling favorite status:", error);
+    // If there's an error, don't change the local state
+    alert("An error occurred. Please try again.");
+  } finally {
+    setTimeout(() => {
+      showOverlay.value = false;
+    }, 2000);
+  }
+};
 
 onMounted(() => {
-  syncFavoriteState();
-  window.addEventListener("storage", syncFavoriteState);
+  const auth = getAuth();
+  authListener = onAuthStateChanged(auth, async (user) => {
+    currentUser = user;
+    if (user && props.id) {
+      // Check if this card is a favorite when the user logs in
+      const docSnap = await getDoc(doc(db, `users/${user.uid}/favorites/${props.id}`));
+      isFavorite.value = docSnap.exists();
+    } else {
+      isFavorite.value = false;
+    }
+  });
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener("storage", syncFavoriteState);
+  if (authListener) {
+    authListener();
+  }
 });
 </script>
+
+<style scoped>
+.model {
+  background-color: rgba(128, 128, 128, 0.329);
+}
+a {
+  cursor: pointer;
+}
+.fas.fa-star {
+  font-size: 0.9em;
+  margin-right: 2px;
+}
+/* Hide the default checkbox for the toggle switches */
+.sr-only:checked + div::after {
+  content: "";
+  transform: translateX(100%);
+}
+/* Base styles for the toggle switch container */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+/* Hide the default HTML checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider/track of the switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+/* The white circle/handle */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+/* Change background color when checked */
+input:checked + .slider {
+  background-color: #fbbd42;
+}
+/* Move the circle to the right when checked */
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+</style>

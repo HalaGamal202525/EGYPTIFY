@@ -16,7 +16,9 @@
             v-if="isModalOpen"
             class="fixed inset-0 bg-black bg-opacity-50 model flex justify-center items-center z-50"
           >
-            <div class="bg-white p-6 rounded-xl shadow-lg w-96 border border-gray-300">
+            <div
+              class="bg-white p-6 rounded-xl shadow-lg w-96 border border-gray-300"
+            >
               <h2 class="text-lg font-bold mb-6">Choose image</h2>
 
               <div class="grid grid-cols-3 gap-3">
@@ -31,7 +33,12 @@
                 <label
                   class="w-25 h-25 rounded-full object-contain cursor-pointer border-2 border-dashed flex items-center justify-center text-gray-400 hover:border-solid hover:border-gray-500"
                 >
-                  <input type="file" @change="handleFileUpload" class="hidden" accept="image/*" />
+                  <input
+                    type="file"
+                    @change="handleFileUpload"
+                    class="hidden"
+                    accept="image/*"
+                  />
                   <i class="fas fa-plus text-2xl"></i>
                 </label>
               </div>
@@ -54,7 +61,9 @@
           </div>
         </div>
         <div>
-          <h1 class="text-2xl font-bold text-gray-800">{{ personalDetails.username }}</h1>
+          <h1 class="text-2xl font-bold text-gray-800">
+            {{ personalDetails.username }}
+          </h1>
           <p class="text-gray-600">Joined in 2025</p>
         </div>
       </div>
@@ -71,7 +80,7 @@
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300',
               'whitespace-nowrap py-4 px-1 border-b-2 font-bold text-sm',
             ]"
-            @click.prevent="activeTab = tab.id"
+            @click.prevent="handleTabChange(tab.id)"
           >
             {{ tab.name }}
           </a>
@@ -81,7 +90,10 @@
       <div v-if="activeTab === 'personal'">
         <form @submit.prevent="saveChanges">
           <div class="mb-4">
-            <label for="username" class="mb-1" style="font-weight: 500; font-size: medium"
+            <label
+              for="username"
+              class="mb-1"
+              style="font-weight: 500; font-size: medium"
               >User Name</label
             >
             <InputField
@@ -97,7 +109,10 @@
             </InputField>
           </div>
           <div class="mb-4">
-            <label for="email" class="mb-1" style="font-weight: 500; font-size: medium"
+            <label
+              for="email"
+              class="mb-1"
+              style="font-weight: 500; font-size: medium"
               >E-mail</label
             >
             <InputField
@@ -134,7 +149,10 @@
             </p>
           </div>
           <div class="mb-4">
-            <label for="newPassword" class="mb-1" style="font-weight: 500; font-size: medium"
+            <label
+              for="newPassword"
+              class="mb-1"
+              style="font-weight: 500; font-size: medium"
               >New Password</label
             >
             <InputField
@@ -186,7 +204,9 @@
       </div>
 
       <div v-else-if="activeTab === 'saved'">
-        <h2 class="text-xl font-bold text-yellow-500 mb-6">Saved Trips/Bookings</h2>
+        <h2 class="text-xl font-bold text-yellow-500 mb-6">
+          Saved Trips/Bookings
+        </h2>
         <h3 class="text-lg font-semibold text-gray-800">Upcoming trips</h3>
         <div class="space-y-6 mt-4">
           <div
@@ -195,8 +215,12 @@
             class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
           >
             <div class="flex-grow">
-              <p class="text-sm text-gray-500 mb-1">Booking ID: {{ trip.bookingId }}</p>
-              <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ trip.title }}</h4>
+              <p class="text-sm text-gray-500 mb-1">
+                Booking ID: {{ trip.bookingId }}
+              </p>
+              <h4 class="text-lg font-semibold text-gray-800 mb-1">
+                {{ trip.title }}
+              </h4>
               <p class="text-gray-600 text-sm">{{ trip.date }}</p>
               <button
                 class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm"
@@ -221,8 +245,12 @@
             class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
           >
             <div class="flex-grow">
-              <p class="text-sm text-gray-500 mb-1">Booking ID: {{ trip.bookingId }}</p>
-              <h4 class="text-lg font-semibold text-gray-800 mb-1">{{ trip.title }}</h4>
+              <p class="text-sm text-gray-500 mb-1">
+                Booking ID: {{ trip.bookingId }}
+              </p>
+              <h4 class="text-lg font-semibold text-gray-800 mb-1">
+                {{ trip.title }}
+              </h4>
               <p class="text-gray-600 text-sm">{{ trip.date }}</p>
               <button
                 class="mt-2 text-yellow-600 hover:text-yellow-700 font-medium text-sm"
@@ -242,7 +270,10 @@
       </div>
 
       <div v-else-if="activeTab === 'reviews'">
-        <UserReview :location-name="locationName" :user-name="personalDetails.username" />
+        <UserReview
+          :location-name="locationName"
+          :user-name="personalDetails.username"
+        />
         <h2 class="text-xl font-bold text-yellow-500 mb-6 mt-8">Reviews Left</h2>
         <div class="space-y-6">
           <div
@@ -251,7 +282,9 @@
             class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
           >
             <div class="flex-grow">
-              <p class="text-gray-700 font-semibold mb-1">{{ review.location }}</p>
+              <p class="text-gray-700 font-semibold mb-1">
+                {{ review.location }}
+              </p>
               <p class="text-sm text-gray-500 mb-1">
                 {{ new Date(review.date.toDate()).toLocaleDateString() }}
               </p>
@@ -282,7 +315,31 @@
 
       <div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
-        <favorite />
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
+          <Card
+            v-for="place in favoritePlaces"
+            :key="place.id"
+            :id="place.id"
+            :image="place.image"
+            :title="place.title"
+            :description="place.description"
+            :location="place.location"
+            :date="place.date"
+            :duration="place.duration"
+            :people="place.people"
+            :price="place.price"
+            :rating="place.rating"
+            :type="place.type"
+            :showHeart="true"
+            :defaultFavorite="true"
+            @favorite-changed="fetchUserFavorites(auth.currentUser)"
+          />
+        </div>
+        <p v-if="favoritePlaces.length === 0" class="text-center text-gray-500 mt-8">
+            You have not added any favorite places yet.
+        </p>
       </div>
 
       <div v-else-if="activeTab === 'settings'">
@@ -367,7 +424,9 @@
             @click.prevent="showUpdateContact = true"
             class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150"
           >
-            <span class="text-gray-700 font-medium">Update Contact Information</span>
+            <span class="text-gray-700 font-medium"
+              >Update Contact Information</span
+            >
             <i class="fas fa-arrow-right text-gray-400"></i>
           </a>
 
@@ -377,7 +436,7 @@
             class="flex items-center justify-between py-3 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 px-2 -mx-2 rounded-md transition-colors duration-150 text-red-600"
           >
             <span class="font-medium">Delete Account</span>
-            <i class="fas fa-xmark" style="color: red;"></i>
+            <i class="fas fa-xmark" style="color: red"></i>
           </a>
 
           <div class="flex justify-end mt-6">
@@ -393,7 +452,8 @@
             <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
               <h2 class="text-lg font-bold mb-4">Confirm Delete</h2>
               <p class="text-gray-600 mb-6">
-                Are you sure you want to delete your account? This action cannot be undone.
+                Are you sure you want to delete your account? This action cannot be
+                undone.
               </p>
               <div class="flex justify-end space-x-3">
                 <button
@@ -431,7 +491,7 @@ import NavBarBlack from "../components/NavBar-Black.vue";
 import Footer from "../components/footer.vue";
 import BaseButton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
-import favorite from "./favorite.vue";
+import Card from "../components/Card.vue"; // Import the Card component
 
 // Firebase imports
 import {
@@ -445,13 +505,23 @@ import {
   updateEmail,
   onAuthStateChanged,
 } from "firebase/auth";
-import { db } from '../firebase';
+import { db } from "../firebase";
 import { useRouter } from "vue-router";
-import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, addDoc, serverTimestamp } from 'firebase/firestore';
+import {
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
 
 ///////////////////
 import { useImageStore } from "../data/imagepicker";
-import { useUserStore } from '../data/signupstore';
+import { useUserStore } from "../data/signupstore";
 
 const store = useImageStore();
 const userStore = useUserStore();
@@ -468,7 +538,7 @@ const images = [
   "/about-us/girl-4.png",
   "/about-us/girl-6.png",
   "/about-us/girl-7.png",
-  '/about-us/girl-10.png'
+  "/about-us/girl-10.png",
 ];
 
 // Functions for image modal
@@ -498,15 +568,15 @@ function handleFileUpload(event) {
   }
 }
 
-console.log(store.selectedImage)
+console.log(store.selectedImage);
 /////////////
 const activeTab = ref("personal");
 const tabs = [
-  { id: 'personal', name: 'Personal Details' },
-  { id: 'saved', name: 'Saved trips/Bookings' },
-  { id: 'reviews', name: 'Reviews Left' },
-  { id: 'favorite', name: 'Favorite Places' },
-  { id: 'settings', name: 'Settings' },
+  { id: "personal", name: "Personal Details" },
+  { id: "saved", name: "Saved trips/Bookings" },
+  { id: "reviews", name: "Reviews Left" },
+  { id: "favorite", name: "Favorite Places" },
+  { id: "settings", name: "Settings" },
 ];
 
 const personalDetails = ref({
@@ -516,9 +586,9 @@ const personalDetails = ref({
 });
 
 const passwordFields = reactive({
-  currentPassword: '',
-  newPassword: '',
-  confirmPassword: ''
+  currentPassword: "",
+  newPassword: "",
+  confirmPassword: "",
 });
 
 const settings = reactive({
@@ -529,26 +599,50 @@ const settings = reactive({
 });
 
 const isSaving = ref(false);
-const saveMessage = ref('');
+const saveMessage = ref("");
 const saveSuccess = ref(false);
 const showDeleteModal = ref(false);
 const showSuccessMessage = ref(false);
 
 const upcomingTrips = [
-  { id: 1, title: 'Cairo Adventure', date: 'Oct 20 - Oct 25, 2024', bookingId: '123456', imageUrl: '../../public/profile/Pyramids2.jpeg' },
-  { id: 2, title: 'Nile Cruise', date: 'Nov 5 - Nov 12, 2024', bookingId: '789012', imageUrl: '../../public/profile/Nile-River.jpg' },
+  {
+    id: 1,
+    title: "Cairo Adventure",
+    date: "Oct 20 - Oct 25, 2024",
+    bookingId: "123456",
+    imageUrl: "../../public/profile/Pyramids2.jpeg",
+  },
+  {
+    id: 2,
+    title: "Nile Cruise",
+    date: "Nov 5 - Nov 12, 2024",
+    bookingId: "789012",
+    imageUrl: "../../public/profile/Nile-River.jpg",
+  },
 ];
 
 const pastTrips = [
-  { id: 3, title: 'Alexandria Getaway', date: 'May 15 - May 18, 2024', bookingId: '345678', imageUrl: '../../public/profile/Alex.jpg' },
-  { id: 4, title: 'Luxor Exploration', date: 'Feb 2 - Feb 2, 2024', bookingId: '901234', imageUrl: '../../public/profile/luxor-vally of the kings.jpg' },
+  {
+    id: 3,
+    title: "Alexandria Getaway",
+    date: "May 15 - May 18, 2024",
+    bookingId: "345678",
+    imageUrl: "../../public/profile/Alex.jpg",
+  },
+  {
+    id: 4,
+    title: "Luxor Exploration",
+    date: "Feb 2 - Feb 2, 2024",
+    bookingId: "901234",
+    imageUrl: "../../public/profile/luxor-vally of the kings.jpg",
+  },
 ];
 
 const newReview = reactive({
-  text: '',
+  text: "",
   rating: 0,
-  imageUrl: '../../public/profile/unnamed.png',
-  location: 'User\'s Review',
+  imageUrl: "../../public/profile/unnamed.png",
+  location: "User's Review",
 });
 
 const reviews = ref([]);
@@ -562,7 +656,7 @@ const fetchUserReviews = async () => {
   }
   try {
     const reviewsCollectionRef = collection(db, `users/${user.uid}/reviews`);
-    const q = query(reviewsCollectionRef, orderBy('date', 'desc'));
+    const q = query(reviewsCollectionRef, orderBy("date", "desc"));
     const querySnapshot = await getDocs(q);
     const fetchedReviews = [];
     querySnapshot.forEach((doc) => {
@@ -576,9 +670,25 @@ const fetchUserReviews = async () => {
 
 const favoritePlaces = ref([]);
 
-function syncFavorites() {
-  favoritePlaces.value = JSON.parse(localStorage.getItem("favorites")) || [];
-}
+// New function to fetch favorite places from Firestore
+const fetchUserFavorites = async (user) => {
+  if (!user) {
+    favoritePlaces.value = [];
+    return;
+  }
+
+  const favoritesCollection = collection(db, `users/${user.uid}/favorites`);
+  const favoritesSnapshot = await getDocs(favoritesCollection);
+
+  favoritePlaces.value = favoritesSnapshot.docs.map((doc) => doc.data());
+};
+
+const handleTabChange = async (tab) => {
+  activeTab.value = tab;
+  if (tab === "favorite" && auth.currentUser) {
+    await fetchUserFavorites(auth.currentUser);
+  }
+};
 
 async function logout() {
   await signOut(auth);
@@ -588,7 +698,7 @@ async function logout() {
 
 async function saveChanges() {
   isSaving.value = true;
-  saveMessage.value = '';
+  saveMessage.value = "";
   const user = auth.currentUser;
 
   if (!user) {
@@ -640,9 +750,9 @@ async function saveChanges() {
       await reauthenticateWithCredential(user, credential);
       await updatePassword(user, newPass);
       // Clear password fields on success
-      passwordFields.currentPassword = '';
-      passwordFields.newPassword = '';
-      passwordFields.confirmPassword = '';
+      passwordFields.currentPassword = "";
+      passwordFields.newPassword = "";
+      passwordFields.confirmPassword = "";
     }
 
     // 4. Update Firestore
@@ -657,9 +767,9 @@ async function saveChanges() {
     saveSuccess.value = true;
   } catch (error) {
     console.error("Error saving changes:", error);
-    if (error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
+    if (error.code === "auth/wrong-password" || error.code === "auth/invalid-credential") {
       saveMessage.value = "Incorrect current password.";
-    } else if (error.code === 'auth/requires-recent-login') {
+    } else if (error.code === "auth/requires-recent-login") {
       saveMessage.value = "Please log in again to update your password.";
       router.push("/login");
     } else {
@@ -669,7 +779,7 @@ async function saveChanges() {
   } finally {
     isSaving.value = false;
     setTimeout(() => {
-      saveMessage.value = '';
+      saveMessage.value = "";
     }, 5000);
   }
 }
@@ -688,7 +798,7 @@ async function confirmDelete() {
       }, 2000);
     } catch (error) {
       console.error("Error deleting user:", error);
-      if (error.code === 'auth/requires-recent-login') {
+      if (error.code === "auth/requires-recent-login") {
         alert("Please log in again to delete your account.");
         router.push("/login");
       } else {
@@ -701,17 +811,17 @@ async function confirmDelete() {
 onMounted(() => {
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      personalDetails.value.username = user.displayName || '';
-      personalDetails.value.email = user.email || '';
+      personalDetails.value.username = user.displayName || "";
+      personalDetails.value.email = user.email || "";
+      // Fetch favorites when the component mounts and the user is authenticated
+      fetchUserFavorites(user);
     }
   });
-  window.addEventListener("storage", syncFavorites);
-  syncFavorites();
   fetchUserReviews();
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener("storage", syncFavorites);
+  // No need for a storage listener since we are now using Firebase
 });
 </script>
 
@@ -729,7 +839,7 @@ a {
 
 /* Hide the default checkbox for the toggle switches */
 .sr-only:checked + div::after {
-  content: '';
+  content: "";
   transform: translateX(100%);
 }
 /* Base styles for the toggle switch container */
@@ -756,7 +866,7 @@ a {
   right: 0;
   bottom: 0;
   background-color: #ccc; /* Default grey color */
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -769,13 +879,13 @@ a {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 /* Change background color when checked */
 input:checked + .slider {
-  background-color: #FBBF24; /* Tailwind yellow-400 */
+  background-color: #fbbd42; /* Tailwind yellow-400 */
 }
 
 /* Move the circle to the right when checked */

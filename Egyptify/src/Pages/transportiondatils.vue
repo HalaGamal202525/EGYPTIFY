@@ -616,11 +616,5 @@ const filteredTransportation = computed(() => {
     return matchesFilters;
   });
 });
-
-
-
-
-
-
-
+ 
 </script>
