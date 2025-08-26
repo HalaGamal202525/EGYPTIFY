@@ -217,11 +217,20 @@ component:FoodDetail
   {
     path:"/offerpage",component:offergrid
   },
-  {
-  path: '/user-review',
-  name: 'User Review',
-  component: UserReview
+//   {
+//   path: '/user-review',
+//   name: 'User Review',
+//   component: UserReview
+// },
+{
+  path: '/hotel/:slug/review',
+  name: 'HotelReview',
+  component: () => import('../Pages/UserReview.vue'),
+  props: true
 },
+
+
+
 {
   path: '/destination',
   name: 'Destination Page',

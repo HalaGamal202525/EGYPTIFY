@@ -169,9 +169,10 @@
           />
         </div>
         <div class="mt-4">
-          <router-link to="/user-review">
-            <BaseButton class="text-white">Write a review</BaseButton>
-          </router-link>
+         <router-link :to="{ name: 'HotelReview', params: { slug: destination.slug } }">
+  <BaseButton class="text-white">Write a review</BaseButton>
+</router-link>
+
         </div>
       </div>
     </section>
