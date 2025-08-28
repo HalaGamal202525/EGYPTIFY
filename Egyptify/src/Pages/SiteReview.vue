@@ -27,7 +27,7 @@ import UserReview from "../components/UserReview.vue";
         Share Your Experience With Our Services      
       </h1>
       <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-        Your review helps us improve and guide others to make the best choice 🌟
+        Your feedback helps us improve and guide others to make the best choice 🌟
       </p>
 
       <!-- Tabs -->
@@ -36,7 +36,7 @@ import UserReview from "../components/UserReview.vue";
           v-for="tab in tabs"
           :key="tab"
           @click="activeTab = tab"
-          class="px-4 py-2 rounded-lg font-semibold"
+          class="px-4 py-2 rounded-lg font-semibold cursor-pointer"
           :class="activeTab === tab 
             ? 'bg-yellow-400 text-white' 
             : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
@@ -46,7 +46,7 @@ import UserReview from "../components/UserReview.vue";
       </div>
 
       <!-- Search Dropdown -->
-      <div class="mb-6">
+      <div class="mb-6 relative">
         <label class="block text-gray-700 dark:text-gray-200 mb-2">
           Select {{ activeTab }}
         </label>
@@ -55,23 +55,22 @@ import UserReview from "../components/UserReview.vue";
           v-model="searchQuery"
           placeholder="Search..."
           class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+          @focus="showDropdown = true"
+          @blur="hideDropdown"
         />
         <ul
-          v-if="filteredOptions.length"
-          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto"
+          v-if="showDropdown && filteredOptions.length"
+          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto absolute w-full z-10"
         >
           <li
             v-for="(item, index) in filteredOptions"
             :key="index"
-            @click="selectItem(item)"
-            class="px-4 py-2 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-500">
+            @mousedown.prevent="selectItem(item)" 
+            class="px-4 py-2 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-500"
+          >
             {{ item.name || item.title || item.provider }}
-
           </li>
         </ul>
-        <p v-if="review.selected" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          Selected: <span class="font-semibold">{{ review.selected }}</span>
-        </p>
       </div>
 
       <!-- Review Form -->
@@ -158,6 +157,14 @@ const review = ref({
 const submitted = ref(false);
 const store = useReservationStore();
 
+// Dropdown visibility
+const showDropdown = ref(false);
+function hideDropdown() {
+  setTimeout(() => {
+    showDropdown.value = false;
+  }, 100);
+}
+
 // Options based on active tab
 const getOptions = computed(() => {
   let data = [];
@@ -169,7 +176,7 @@ const getOptions = computed(() => {
       data = store.restaurants || [];
       break;
     case "Transportation":
-      data = transportation.transportation || []; // Array جوا Object
+      data = transportation.transportation || [];
       break;
     case "Events":
       data = events.bookings || [];
@@ -177,8 +184,6 @@ const getOptions = computed(() => {
     default:
       data = destinations;
   }
-    console.log(activeTab.value, data); // هنا تقدرِ تشوفي البيانات
-
   return Array.isArray(data) ? data : [];
 });
 
@@ -194,7 +199,6 @@ function selectItem(item) {
   review.value.selected = item.name || item.title || item.provider || "";
   searchQuery.value = review.value.selected;
 }
-
 
 // Submit review
 function submitReview() {
