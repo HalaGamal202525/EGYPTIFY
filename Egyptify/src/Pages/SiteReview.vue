@@ -20,7 +20,8 @@ import UserReview from "../components/UserReview.vue";
 
 
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-6">
+  <NavBarBlack/>
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 mt-12 px-6">
     <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
       <!-- Title -->
       <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
@@ -131,11 +132,13 @@ import UserReview from "../components/UserReview.vue";
       </p>
     </div>
   </div>
+  <foot/>
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
-
+import NavBarBlack from "../components/NavBar-Black.vue";
+import foot  from "../components/footer.vue"
 // Tabs
 const tabs = ["Destinations", "Hotels", "Restaurants", "Transportation", "Events"];
 const activeTab = ref("Destinations");
@@ -143,7 +146,7 @@ const activeTab = ref("Destinations");
 // JSON Data
 import destinations from "../data/Destaintion.json";
 import hotels from "../data/hotels.json";
-import { useReservationStore } from "../data/Storeresturant"; 
+import { generateEgyptGovernorates } from "../data/fakedata"; 
 import transportation from "../data/bookingTransportation.json";
 import events from "../data/bookingEvents.json";
 
@@ -156,7 +159,7 @@ const review = ref({
   selected: ""
 });
 const submitted = ref(false);
-const store = useReservationStore();
+const allRestaurants = ref(generateEgyptGovernorates(50))
 
 // Options based on active tab
 const getOptions = computed(() => {
@@ -166,7 +169,7 @@ const getOptions = computed(() => {
       data = hotels;
       break;
     case "Restaurants":
-      data = store.restaurants || [];
+      data =  allRestaurants.value || [];
       break;
     case "Transportation":
       data = transportation.transportation || []; // Array جوا Object
