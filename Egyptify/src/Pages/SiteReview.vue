@@ -17,8 +17,6 @@ import UserReview from "../components/UserReview.vue";
 }
 </style> -->
 
-
-
 <template>
   <NavBarBlack/>
   <div class="min-h-screen bg-gradient-to-br from-gray-50 via-yellow-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 mt-12 px-6">
@@ -33,6 +31,7 @@ import UserReview from "../components/UserReview.vue";
       </p>
 
       <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
       <div class="flex justify-center gap-4 mb-8">
         <button
           v-for="tab in tabs"
@@ -40,8 +39,11 @@ import UserReview from "../components/UserReview.vue";
           @click="activeTab = tab"
           class="px-5 py-2 rounded-xl font-semibold cursor-pointer transition transform hover:scale-105 shadow-sm"
           :class="activeTab === tab 
-            ? 'bg-yellow-400 text-white shadow-md' 
-            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'"
+            ? 'bg-yellow-400 text-white' 
+            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
+            :style="(index >= 3 && window.innerWidth < 640) ? 'flex-basis: 100%; text-align: center;' : ''"
+
+
         >
           {{ tab }}
         </button>
@@ -142,22 +144,27 @@ import UserReview from "../components/UserReview.vue";
       </p>
     </div>
   </div>
-  <foot/>
+  <foot />
 </template>
-
 
 <script setup>
 import { ref, computed } from "vue";
 import NavBarBlack from "../components/NavBar-Black.vue";
-import foot  from "../components/footer.vue"
+import foot from "../components/footer.vue";
 // Tabs
-const tabs = ["Destinations", "Hotels", "Restaurants", "Transportation", "Events"];
+const tabs = [
+  "Destinations",
+  "Hotels",
+  "Restaurants",
+  "Transportation",
+  "Events",
+];
 const activeTab = ref("Destinations");
 
 // JSON Data
 import destinations from "../data/Destaintion.json";
 import hotels from "../data/hotels.json";
-import { generateEgyptGovernorates } from "../data/fakedata"; 
+import { generateEgyptGovernorates } from "../data/fakedata";
 import transportation from "../data/bookingTransportation.json";
 import events from "../data/bookingEvents.json";
 
@@ -167,10 +174,10 @@ const review = ref({
   name: "",
   rating: 0,
   comment: "",
-  selected: ""
+  selected: "",
 });
 const submitted = ref(false);
-const allRestaurants = ref(generateEgyptGovernorates(50))
+const allRestaurants = ref(generateEgyptGovernorates(50));
 
 // Dropdown visibility
 const showDropdown = ref(false);
@@ -188,7 +195,7 @@ const getOptions = computed(() => {
       data = hotels;
       break;
     case "Restaurants":
-      data =  allRestaurants.value || [];
+      data = allRestaurants.value || [];
       break;
     case "Transportation":
       data = transportation.transportation || [];
@@ -205,7 +212,9 @@ const getOptions = computed(() => {
 // Filtered search
 const filteredOptions = computed(() =>
   getOptions.value.filter((item) =>
-    (item?.name || item?.title || item?.provider || "").toLowerCase().includes(searchQuery.value.toLowerCase())
+    (item?.name || item?.title || item?.provider || "")
+      .toLowerCase()
+      .includes(searchQuery.value.toLowerCase())
   )
 );
 
@@ -217,7 +226,12 @@ function selectItem(item) {
 
 // Submit review
 function submitReview() {
-  if (!review.value.name || !review.value.rating || !review.value.comment || !review.value.selected) {
+  if (
+    !review.value.name ||
+    !review.value.rating ||
+    !review.value.comment ||
+    !review.value.selected
+  ) {
     alert("Please fill in all fields ✍️");
     return;
   }
