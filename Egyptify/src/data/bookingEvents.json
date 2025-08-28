@@ -1,7 +1,7 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {
   "bookings": [
     {
-      "id": "1",
+      "id": "event-1",
       "title": "Music Concert",
       "location": "Opera House, Cairo",
       "date": "2025-02-15",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": "event-2",
       "title": "Abu Simbel Sun Festival",
       "location": "Abu Simbel, Aswan",
       "date": "2025-01-22",
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": "event-3",
       "title": "Alexandria Lighthouse Tour",
       "location": "Alexandria",
       "date": "2025-04-09",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "event-4",
       "title": "Sound & Light at the Pyramids",
       "location": "Giza",
       "date": "2025-01-14",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": "event-5",
       "title": "Nile Sunset Cruise",
       "location": "Luxor",
       "date": "2025-01-19",
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": "event-6",
       "title": "Aswan Spice Market Experience",
       "location": "Aswan",
       "date": "2025-05-31",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": "event-7",
       "title": "Siwa Oasis Safari",
       "location": "Siwa",
       "date": "2025-06-25",
@@ -141,7 +141,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": "event-8",
       "title": "Khan El Khalili Bazaar Walk",
       "location": "Cairo",
       "date": "2025-07-23",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": "event-9",
       "title": "Camel Ride by the Pyramids",
       "location": "Giza",
       "date": "2025-08-01",
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "event-10",
       "title": "Egyptian Museum Guided Tour",
       "location": "Cairo",
       "date": "2025-08-20",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": "event-11",
       "title": "Red Sea Snorkeling Adventure",
       "location": "Hurghada",
       "date": "2025-08-10",
@@ -221,7 +221,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": "event-12",
       "title": "Luxor Temple Night Visit",
       "location": "Luxor",
       "date": "2025-09-30",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "id": "13",
+      "id": "event-13",
       "title": "Saint Catherine Hiking Trip",
       "location": "South Sinai",
       "date": "2025-10-05",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "id": "14",
+      "id": "event-14",
       "title": "Philae Temple Sound & Light",
       "location": "Aswan",
       "date": "2025-11-12",
@@ -281,7 +281,7 @@
       ]
     },
     {
-      "id": "15",
+      "id": "event-15",
       "title": "Cairo International Book Fair",
       "location": "Cairo",
       "date": "2025-12-23",
@@ -301,7 +301,7 @@
       ]
     },
     {
-      "id": "18",
+      "id": "event-18",
       "title": "Downtown Contemporary Arts Festival",
       "location": "Downtown Cairo",
       "date": "2025-03-25",
@@ -321,7 +321,7 @@
       ]
     },
     {
-      "id": "19",
+      "id": "event-19",
       "title": "Tour d’Égypte (Cycling Race)",
       "location": "Across Egypt",
       "date": "2025-04-15",

@@ -279,7 +279,7 @@ function goTotripplaner() {
   router.push("/tripplanner");
 }
 function goTotripreviews() {
-  router.push("/user-review");
+  router.push("/site-review");
 }
 function goToProfile() {
   router.push("/profile");

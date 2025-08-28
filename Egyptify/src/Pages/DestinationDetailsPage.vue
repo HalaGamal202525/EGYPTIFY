@@ -365,9 +365,10 @@ console.log("activities:", bookingStore.card.activities)
 const route = useRoute();
 const router = useRouter();
 
-const placeId = Number(route.params.id);
+const placeId = route.params.id; 
 
 const place = computed(() => data.find((p) => p.id === placeId) || {});
+
 
 const overviewData = computed(() => place.value?.overview || {});
 const detailsData = computed(() => place.value?.detail || {});

@@ -1,6 +1,6 @@
 [
  {
-  "id": 1,
+  "id": "dest-1",
   "price": 1200,
   "name": "Siwa Oasis",
   "image": "/natural/siwa.jpg",
@@ -68,7 +68,7 @@
 
   ,
 {
-  "id": 2,
+  "id": "dest-2",
   "price": 1200,
   "name": "White Desert",
   "image": "/natural/white.jpg",
@@ -136,7 +136,7 @@
 
 ,
 {
-  "id": 3,
+  "id": "dest-3",
   "price": 1200,
   "name": "Ras Mohammed National Park",
   "image": "/natural/Rasmohamed.jpg",
@@ -204,7 +204,7 @@
 
 ,
 {
-  "id": 4,
+  "id": "dest-4",
   "price": 1200,
   "name": "Blue Hole",
   "image": "/natural/blue hole.jpg",
@@ -272,7 +272,7 @@
 
 ,
 {
-  "id": 5,
+  "id": "dest-5",
   "price": 1200,
   "name": "Wadi El Rayan",
   "image": "/natural/wadi alrayan.jpg",
@@ -341,7 +341,7 @@
 
 ,
 {
-  "id": 6,
+  "id": "dest-6",
   "price": 1200,
   "name": "Mount Sinai",
   "image": "/natural/سانت كاترين.jpg",
@@ -409,7 +409,7 @@
 
 ,
 {
-  "id": 7,
+  "id": "dest-7",
   "price": 1200,
   "name": "Gebel Elba",
   "image": "/natural/elba.jpg",
@@ -477,7 +477,7 @@
 
 ,
 {
-  "id": 8,
+  "id": "dest-8",
   "price": 1200,
   "name": "Fayoum Oasis",
   "image": "/natural/fayom.jpg",
@@ -545,7 +545,7 @@
 
 ,
 {
-  "id": 9,
+  "id": "dest-9",
   "price": 1200,
   "name": "Valley of the Whales",
   "image": "/natural/vally.jpg",
@@ -613,7 +613,7 @@
 
 ,
 {
-  "id": 10,
+  "id": "dest-10",
   "price": 1200,
   "name": "Dahab Blue Lagoon",
   "image": "/natural/logoon.jpg",
@@ -681,7 +681,7 @@
 
 ,
 {
-  "id": 11,
+  "id": "dest-11",
   "price": 1200,
   "name": "Bahariya Oasis",
   "image": "/natural/Bahariya Oasis.jpg",
@@ -749,7 +749,7 @@
 
 ,
 {
-  "id": 12,
+  "id": "dest-12",
   "price": 1200,
   "name": "St. Catherine’s Monastery",
   "image": "/natural/St. Catherine’s Monastery.jpg",
@@ -817,7 +817,7 @@
 
 ,
  {
-  "id": 13,
+  "id": "dest-13",
   "price": 900,
   "name": "Pyramids of Giza",
   "category": "Historical",
@@ -885,7 +885,7 @@
 
   ,
   {
-  "id": 14,
+  "id": "dest-14",
   "price": 1200,
   "name": "Karnak Temple",
   "category": "Historical",
@@ -954,7 +954,7 @@
   ,
 
  {
-  "id": 15,
+  "id": "dest-15",
   "price": 1500,
   "name": "Valley of the Kings",
   "category": "Historical",
@@ -1023,7 +1023,7 @@
   ,
 
   {
-  "id": 16,
+  "id": "dest-16",
   "price": 800,
   "name": "Citadel of Saladin",
   "category": "Historical",
@@ -1091,7 +1091,7 @@
 
   ,
 {
-  "id": 17,
+  "id": "dest-17",
   "price": 1700,
   "name": "Philae Temple",
   "category": "Historical",
@@ -1160,7 +1160,7 @@
   ,
 
  {
-  "id": 18,
+  "id": "dest-18",
   "price": 1200,
   "name": "Egyptian Museum",
   "category": "Historical",
@@ -1228,7 +1228,7 @@
 
   ,
  {
-  "id": 19,
+  "id": "dest-19",
   "price": 1900,
   "name": "Abu Simbel Temples",
   "category": "Historical",
@@ -1296,7 +1296,7 @@
 
   ,
 {
-  "id": 20,
+  "id": "dest-20",
   "price": 300,
   "name": "Al-Muizz Street",
   "category": "Historical",
@@ -1364,7 +1364,7 @@
 
   ,
  {
-  "id": 21,
+  "id": "dest-21",
   "price": 200,
   "name": "Abu Serga",
   "category": "Historical",
@@ -1432,7 +1432,7 @@
 
   ,
  {
-  "id": 22,
+  "id": "dest-22",
   "price": 200,
   "name": "Al-Azhar Mosque",
   "category": "Historical",
@@ -1500,7 +1500,7 @@
 
   ,
  {
-  "id": 23,
+  "id": "dest-23",
   "price": 2000,
   "name": "Hatshepsut Temple",
   "category": "Historical",
@@ -1567,7 +1567,7 @@
 }
   ,
  {
-  "id": 24,
+  "id": "dest-24",
   "price": 700,
   "name": "Saqqara Step Pyramid",
   "category": "Historical",
@@ -1621,14 +1621,14 @@
       "date": "March 2025",
       "content": "A must-see if you're interested in ancient history. The site is less crowded and gives a raw, authentic feel.",
       "rating": 4.5,
-      "avatar": "/sara/person23.jpeg"
+      "avatar": "/sara/person2.jpeg"
     },
     "review2": {
       "name": "Salma H.",
       "date": "February 2025",
       "content": "The oldest pyramid in Egypt is impressive and full of hidden history. Highly recommend a guide.",
       "rating": 4.7,
-      "avatar": "/sara/person24.jpeg"
+      "avatar": "/sara/person.jpeg"
     }
   }
 }
@@ -1638,7 +1638,7 @@
 
 
   {
-  "id": 25,
+  "id": "dest-25",
   "price": 1200,
   "name": "SOHO Square",
   "image": "/Destination/soho2.jpg",
@@ -1705,7 +1705,7 @@
 }
 ,
   {
-  "id": 26,
+  "id": "dest-26",
   "price": 800,
   "name": "Ras Mohammed National Park",
   "image": "/Destination/rasmohamed-park.jpg",
@@ -1774,7 +1774,7 @@
 
   ,
  {
-  "id": 27,
+  "id": "dest-27",
   "price": 0,
   "name": "Naama Bay",
   "image": "/Destination/neama-bay.png",
@@ -1842,7 +1842,7 @@
 
   ,
 {
-  "id": 28,
+  "id": "dest-28",
   "price": 0,
   "name": "Old Market (Sharm El Sheikh)",
   "image": "/Destination/old-market.jpg",
@@ -1910,7 +1910,7 @@
 
   ,
  {
-  "id": 29,
+  "id": "dest-29",
   "price": 0,
   "name": "Crystal Mountain",
   "image": "/Destination/crystal-mountain1.jpg",
@@ -1971,7 +1971,7 @@
 },
 
   {
-  "id": 31,
+  "id": "dest-31",
   "price": 0,
   "name": "Al Qasr Village",
   "image": "/Destination/elqasr-village.jpeg",
@@ -2032,7 +2032,7 @@
 }
 ,
  {
-  "id": 32,
+  "id": "dest-32",
   "price": 0,
   "name": "Great Sand Sea",
   "image": "/Destination/great-sand-sea.jpg",
@@ -2093,7 +2093,7 @@
 }
 ,
 {
-  "id": 33,
+  "id": "dest-33",
    "price": 50,
   "name": "Abu Galum Protectorate",
   "image": "/Destination/abu-galum1.jpg",
@@ -2154,7 +2154,7 @@
 }
 ,
   {
-    "id": 34,
+    "id": "dest-34",
   "price": 0,
   "name": "Wadi Gnai",
   "image": "/Destination/wadi-gnai.jpg",
@@ -2215,7 +2215,7 @@
 }
 ,
 {
-  "id": 35,
+  "id": "dest-35",
   "price": 40,
   "name": "Oracle Temple",
   "image": "/Destination/oracle-temple.jpg",
@@ -2276,7 +2276,7 @@
 }
 ,
 {
-  "id": 36,
+  "id": "dest-36",
   "price": 0,
   "name": "Cleopatra’s Spring",
   "image": "/Destination/cleopatra-spring.jpg",
@@ -2341,7 +2341,7 @@
 
 
  {
-  "id": 37,
+  "id": "dest-37",
   "price": 300,
   "name": "Dream Park",
   "image": "/entertainment/dream.jpg",
@@ -2409,7 +2409,7 @@
 
   ,
 {
-  "id": 38,
+  "id": "dest-38",
   "price": 400,
   "name": "KidZania",
   "image": "/entertainment/kidzaina.jpg",
@@ -2477,7 +2477,7 @@
 
   ,
 {
-  "id": 39,
+  "id": "dest-39",
   "price": 300,
   "name": "Magic Planet",
   "image": "/entertainment/magic.jpg",
@@ -2545,7 +2545,7 @@
 
   ,
 {
-  "id": 40,
+  "id": "dest-40",
   "price": 250,
   "name": "Vox Cinemas",
   "image": "/entertainment/vox.webp",
@@ -2613,7 +2613,7 @@
 
   ,
 {
-  "id": 41,
+  "id": "dest-41",
   "price": 150,
   "name": "Mall of Egypt",
   "image": "/entertainment/mallegypt.webp",
@@ -2687,7 +2687,7 @@
 
   ,
 {
-  "id": 42,
+  "id": "dest-42",
   "price": 200,
   "name": "ZED Park",
   "image": "/entertainment/zed.webp",
@@ -2761,7 +2761,7 @@
 
   ,
  {
-  "id": 43,
+  "id": "dest-43",
   "price": 150,
   "name": "Family Park",
   "image": "/entertainment/family.webp",
@@ -2835,7 +2835,7 @@
 
   ,
 {
-  "id": 44,
+  "id": "dest-44",
   "price": 150,
   "name": "Al-Azhar Park",
   "image": "/entertainment/alazhar.webp",
@@ -2909,7 +2909,7 @@
 
   ,
 {
-  "id": 45,
+  "id": "dest-45",
   "price": 150,
   "name": "Giza Zoo",
   "image": "/entertainment/zoo.webp",
@@ -2983,7 +2983,7 @@
 
   ,
 {
-  "id": 46,
+  "id": "dest-46",
   "price": 150,
   "name": "Butterfly Garden",
   "image": "/entertainment/buttterfly.jpeg",
@@ -3058,7 +3058,7 @@
   ,
 
   {
-  "id": 47,
+  "id": "dest-47",
   "price": 1200,
   "name": "Africa Safari Park",
   "image": "/entertainment/afrcaina.jpg",
@@ -3132,7 +3132,7 @@
 
   ,
   {
-  "id": 48,
+  "id": "dest-48",
   "price": 1200,
   "name": "Aqua Park Cairo",
   "image": "/entertainment/Aqua Park Cairo.webp",
@@ -3204,7 +3204,7 @@
   }
 },
 {
-  "id": 49,
+  "id": "dest-49",
   "price": 60,
   "name": "Mountain of the Dead",
   "image": "/Destination/mountain5.jpg",
