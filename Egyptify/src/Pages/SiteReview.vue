@@ -32,7 +32,7 @@ import UserReview from "../components/UserReview.vue";
       </p>
 
       <!-- Tabs -->
-      <div class="flex justify-center gap-4 mb-6">
+        <div class="flex flex-wrap justify-center gap-4 mb-6">
         <button
           v-for="tab in tabs"
           :key="tab"
@@ -41,6 +41,8 @@ import UserReview from "../components/UserReview.vue";
           :class="activeTab === tab 
             ? 'bg-yellow-400 text-white' 
             : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
+            :style="(index >= 3 && window.innerWidth < 640) ? 'flex-basis: 100%; text-align: center;' : ''"
+
         >
           {{ tab }}
         </button>
