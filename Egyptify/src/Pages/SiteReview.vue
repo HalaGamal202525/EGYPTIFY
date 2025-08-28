@@ -21,53 +21,63 @@ import UserReview from "../components/UserReview.vue";
 
 <template>
   <NavBarBlack/>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 mt-12 px-6">
-    <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-yellow-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 mt-12 px-6">
+    <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-10 transition">
+      
       <!-- Title -->
-      <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
-        Share Your Experience With Our Services      
+      <h1 class="text-4xl font-extrabold text-center bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-6">
+        Share Your Experience With Our Services
       </h1>
-      <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+      <p class="text-center text-gray-600 dark:text-gray-300 mb-10 text-lg">
         Your feedback helps us improve and guide others to make the best choice 🌟
       </p>
 
       <!-- Tabs -->
-      <div class="flex justify-center gap-4 mb-6">
+      <div class="flex justify-center gap-4 mb-8">
         <button
           v-for="tab in tabs"
           :key="tab"
           @click="activeTab = tab"
-          class="px-4 py-2 rounded-lg font-semibold cursor-pointer"
+          class="px-5 py-2 rounded-xl font-semibold cursor-pointer transition transform hover:scale-105 shadow-sm"
           :class="activeTab === tab 
-            ? 'bg-yellow-400 text-white' 
-            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
+            ? 'bg-yellow-400 text-white shadow-md' 
+            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'"
         >
           {{ tab }}
         </button>
       </div>
 
       <!-- Search Dropdown -->
-      <div class="mb-6 relative">
-        <label class="block text-gray-700 dark:text-gray-200 mb-2">
+      <div class="mb-8 relative">
+        <label class="block text-gray-700 dark:text-gray-200 mb-2 font-medium">
           Select {{ activeTab }}
         </label>
-        <input
-          type="text"
-          v-model="searchQuery"
-          placeholder="Search..."
-          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:outline-none"
-          @focus="showDropdown = true"
-          @blur="hideDropdown"
-        />
+
+        <div class="relative">
+          <!-- Input مع أيقونة بحث -->
+          <input
+            type="text"
+            v-model="searchQuery"
+            placeholder="Search..."
+            class="w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            @focus="showDropdown = true"
+            @blur="hideDropdown"
+          />
+          <!-- Search Icon -->
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
+
         <ul
           v-if="showDropdown && filteredOptions.length"
-          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto absolute w-full z-10"
+          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto absolute w-full z-10 shadow-lg"
         >
           <li
             v-for="(item, index) in filteredOptions"
             :key="index"
             @mousedown.prevent="selectItem(item)" 
-            class="px-4 py-2 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-500"
+            class="px-4 py-2 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-500 transition"
           >
             {{ item.name || item.title || item.provider }}
           </li>
@@ -76,26 +86,27 @@ import UserReview from "../components/UserReview.vue";
 
       <!-- Review Form -->
       <form @submit.prevent="submitReview" class="space-y-6">
+        
         <!-- Name -->
         <div>
-          <label class="block text-gray-700 dark:text-gray-200 mb-2">Your Name</label>
+          <label class="block text-gray-700 dark:text-gray-200 mb-2 font-medium">Your Name</label>
           <input
             v-model="review.name"
             type="text"
             placeholder="Enter your name"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+            class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           />
         </div>
 
         <!-- Rating -->
         <div>
-          <label class="block text-gray-700 dark:text-gray-200 mb-2">Rating</label>
+          <label class="block text-gray-700 dark:text-gray-200 mb-2 font-medium">Rating</label>
           <div class="flex items-center gap-2">
             <span
               v-for="star in 5"
               :key="star"
               @click="review.rating = star"
-              class="cursor-pointer text-3xl"
+              class="cursor-pointer text-3xl transition transform hover:scale-125"
               :class="star <= review.rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-500'"
             >
               ★
@@ -105,12 +116,12 @@ import UserReview from "../components/UserReview.vue";
 
         <!-- Comment -->
         <div>
-          <label class="block text-gray-700 dark:text-gray-200 mb-2">Your Review</label>
+          <label class="block text-gray-700 dark:text-gray-200 mb-2 font-medium">Your Review</label>
           <textarea
             v-model="review.comment"
             placeholder="Write your feedback..."
             rows="4"
-            class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+            class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           ></textarea>
         </div>
 
@@ -118,7 +129,7 @@ import UserReview from "../components/UserReview.vue";
         <div class="text-center">
           <button
             type="submit"
-            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-6 py-3 rounded-lg transition"
+            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-full shadow-lg transition transform hover:scale-105"
           >
             Submit Review
           </button>
@@ -126,13 +137,14 @@ import UserReview from "../components/UserReview.vue";
       </form>
 
       <!-- Success Message -->
-      <p v-if="submitted" class="mt-6 text-center text-green-600 dark:text-green-400 font-semibold">
+      <p v-if="submitted" class="mt-8 text-center text-green-600 dark:text-green-400 font-semibold text-lg">
         Thank you for your feedback! 🌟
       </p>
     </div>
   </div>
   <foot/>
 </template>
+
 
 <script setup>
 import { ref, computed } from "vue";
