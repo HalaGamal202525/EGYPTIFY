@@ -249,7 +249,7 @@ import foot from "../../components/footer.vue";
   <NavBarBlack />
 
   <!-- ✅ Steps Bar -->
-  <div class="w-full bg-white shadow-md py-6 px-10 mt-2">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-22">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <div class="flex-1 text-center">
         <div
