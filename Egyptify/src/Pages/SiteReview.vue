@@ -16,16 +16,63 @@ import UserReview from "../components/UserReview.vue";
   max-width: 800px;
 }
 </style> -->
+
+
+
 <template>
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-6">
     <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
       <!-- Title -->
       <h1 class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
-        Share Your Feedback About Our Website
+        Share Your Experience With Our Services      
       </h1>
       <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-        Your review helps us improve and provide a better experience 🌟
+        Your review helps us improve and guide others to make the best choice 🌟
       </p>
+
+      <!-- Tabs -->
+      <div class="flex justify-center gap-4 mb-6">
+        <button
+          v-for="tab in tabs"
+          :key="tab"
+          @click="activeTab = tab"
+          class="px-4 py-2 rounded-lg font-semibold"
+          :class="activeTab === tab 
+            ? 'bg-yellow-400 text-white' 
+            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
+        >
+          {{ tab }}
+        </button>
+      </div>
+
+      <!-- Search Dropdown -->
+      <div class="mb-6">
+        <label class="block text-gray-700 dark:text-gray-200 mb-2">
+          Select {{ activeTab }}
+        </label>
+        <input
+          type="text"
+          v-model="searchQuery"
+          placeholder="Search..."
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-400 focus:outline-none"
+        />
+        <ul
+          v-if="filteredOptions.length"
+          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto"
+        >
+          <li
+            v-for="(item, index) in filteredOptions"
+            :key="index"
+            @click="selectItem(item)"
+            class="px-4 py-2 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-500">
+            {{ item.name || item.title || item.provider }}
+
+          </li>
+        </ul>
+        <p v-if="review.selected" class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          Selected: <span class="font-semibold">{{ review.selected }}</span>
+        </p>
+      </div>
 
       <!-- Review Form -->
       <form @submit.prevent="submitReview" class="space-y-6">
@@ -87,32 +134,79 @@ import UserReview from "../components/UserReview.vue";
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
+// Tabs
+const tabs = ["Destinations", "Hotels", "Restaurants", "Transportation", "Events"];
+const activeTab = ref("Destinations");
+
+// JSON Data
+import destinations from "../data/Destaintion.json";
+import hotels from "../data/hotels.json";
+import { useReservationStore } from "../data/Storeresturant"; 
+import transportation from "../data/bookingTransportation.json";
+import events from "../data/bookingEvents.json";
+
+// Search & Review
+const searchQuery = ref("");
 const review = ref({
   name: "",
   rating: 0,
   comment: "",
+  selected: ""
+});
+const submitted = ref(false);
+const store = useReservationStore();
+
+// Options based on active tab
+const getOptions = computed(() => {
+  let data = [];
+  switch (activeTab.value) {
+    case "Hotels":
+      data = hotels;
+      break;
+    case "Restaurants":
+      data = store.restaurants || [];
+      break;
+    case "Transportation":
+      data = transportation.transportation || []; // Array جوا Object
+      break;
+    case "Events":
+      data = events.bookings || [];
+      break;
+    default:
+      data = destinations;
+  }
+    console.log(activeTab.value, data); // هنا تقدرِ تشوفي البيانات
+
+  return Array.isArray(data) ? data : [];
 });
 
-const submitted = ref(false);
+// Filtered search
+const filteredOptions = computed(() =>
+  getOptions.value.filter((item) =>
+    (item?.name || item?.title || item?.provider || "").toLowerCase().includes(searchQuery.value.toLowerCase())
+  )
+);
 
+// Select item from dropdown
+function selectItem(item) {
+  review.value.selected = item.name || item.title || item.provider || "";
+  searchQuery.value = review.value.selected;
+}
+
+
+// Submit review
 function submitReview() {
-  if (!review.value.name || !review.value.rating || !review.value.comment) {
+  if (!review.value.name || !review.value.rating || !review.value.comment || !review.value.selected) {
     alert("Please fill in all fields ✍️");
     return;
   }
-  // Here you can send the review to your database
   console.log("Review submitted:", review.value);
-
   submitted.value = true;
 
-  // Reset the form
-  review.value = { name: "", rating: 0, comment: "" };
+  // Reset
+  review.value = { name: "", rating: 0, comment: "", selected: "" };
+  searchQuery.value = "";
 }
 </script>
-
-<style scoped>
-/* Add extra styling if you want */
-</style>
-
