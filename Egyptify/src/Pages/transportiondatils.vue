@@ -18,7 +18,7 @@
       Explore Egypt <span class="text-yellow-400">Every Way</span>
     </h1>
     <p class="mt-4 text-lg max-w-3xl mx-auto text-white">
-      From high-speed trains to enchanting Nile cruises, choose the perfect
+      From high-speed trains to comfortable buses and private cars, choose the perfect
       transportation for your journey through the land of the Pharaohs
     </p>
 
