@@ -17,7 +17,7 @@
       />
     </div>
 
-    <div class="hidden md:flex space-x-8 items-center text-[16px]">
+    <div class="hidden md:flex space-x-4 items-center text-[16px]">
       <a
         href="#"
         class="px-4 text-white dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
