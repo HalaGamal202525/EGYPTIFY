@@ -31,23 +31,24 @@ import UserReview from "../components/UserReview.vue";
       </p>
 
       <!-- Tabs -->
-        <div class="flex flex-wrap justify-center gap-4 mb-6">
-      <div class="flex justify-center gap-4 mb-8">
-        <button
-          v-for="tab in tabs"
-          :key="tab"
-          @click="activeTab = tab"
-          class="px-5 py-2 rounded-xl font-semibold cursor-pointer transition transform hover:scale-105 shadow-sm"
-          :class="activeTab === tab 
-            ? 'bg-yellow-400 text-white' 
-            : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'"
-            :style="(index >= 3 && window.innerWidth < 640) ? 'flex-basis: 100%; text-align: center;' : ''"
+       <div class="flex flex-wrap justify-center gap-4 mb-6">
+  <div class="flex justify-center gap-4 mb-8 flex-wrap">
+    <button
+      v-for="(tab, index) in tabs"
+      :key="tab"
+      @click="activeTab = tab"
+      class="px-5 py-2 rounded-xl font-semibold cursor-pointer transition transform hover:scale-105 shadow-sm 
+             bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300
+             sm:flex-1 sm:text-center"
+      :class="activeTab === tab 
+        ? 'bg-yellow-400 text-white' 
+        : ''"
+    >
+      {{ tab }}
+    </button>
+  </div>
+</div>
 
-
-        >
-          {{ tab }}
-        </button>
-      </div>
 
       <!-- Search Dropdown -->
       <div class="mb-8 relative">
