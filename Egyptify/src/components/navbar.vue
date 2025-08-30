@@ -3,10 +3,86 @@
     class="w-full flex items-center justify-between px-[137px] py-4 h-20 bg-transparent dark:bg-gray-900/80 absolute top-0 left-0 z-50 transition-colors duration-300"
   >
     <div class="flex items-center md:hidden">
-      <button @click="toggleMenu" class="text-white text-2xl">
+      <button    @click="isOpen = !isOpen" class="text-white text-2xl">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
+<div
+  :class="[ 
+    'fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-900 shadow-xl transform transition-transform duration-300 z-50 md:hidden',
+    isOpen ? 'translate-x-0' : '-translate-x-full'
+  ]"
+>
+  <!-- Header -->
+  <div class="flex items-center justify-between px-5 py-4 border-b dark:border-gray-700">
+    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 tracking-wide">Menu</h2>
+    <button 
+      @click="isOpen = false" 
+      class="md:hidden text-gray-500 dark:text-gray-400 hover:text-red-500 transition text-lg"
+    >
+      ✖
+    </button>
+  </div>
+
+  <!-- Links -->
+  <nav class="mt-6 px-5 space-y-6">
+
+    <!-- Main Links -->
+    <div class="space-y-1">
+      <h3 class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Main</h3>
+
+      <RouterLink 
+        to="/destination" 
+        class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition"
+      >
+        Destinations
+      </RouterLink>
+
+      <RouterLink 
+        to="/site-review" 
+        class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition"
+      >
+        Reviews
+      </RouterLink>
+
+      <RouterLink 
+        to="/tripplanner" 
+        class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition"
+      >
+        Trips
+      </RouterLink>
+    </div>
+
+    <!-- Explore Links -->
+    <div class="space-y-1 pt-4 border-t border-gray-400">
+      <h3 class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Explore</h3>
+
+      <a href="#" @click="gotoexplore" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Explore Egypt
+      </a>
+      <a href="#" @click="goToresturant" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Restaurants
+      </a>
+      <a href="#" @click="goToblogs" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Travel Blog
+      </a>
+      <a href="#" @click="goTooffers" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Offers
+      </a>
+      <a href="#" @click="goTohotel" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Hotels
+      </a>
+      <a href="#" @click="gotoevents" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Event Calendar
+      </a>
+      <a href="#" @click="gototransportaion" class="block px-3 py-2 rounded-lg font-bold text-gray-600 dark:text-gray-300 hover:bg-yellow-500 hover:text-white transition">
+        Transportation
+      </a>
+    </div>
+  </nav>
+</div>
+
+
 
     <div class="flex items-center ">
       <img
@@ -30,12 +106,10 @@
         @click="goTotripplaner"
         >Trips</a
       >
-      <a
-        href="#"
-        class="px-4 text-white dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
-        @click="goTotripreviews"
-        >Reviews</a
-      >
+<router-link
+  to="/site-review"
+  class="px-4 text-white dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
+>Review</router-link>
 
       <div class="relative px-4" ref="moreButtonRef">
         <button
@@ -57,9 +131,9 @@
     </div>
 
     <div class="flex items-center space-x-4">
-      <button
+      <!-- <button
         @click="themeStore.toggleDarkMode"
-        class="p-2 rounded-full bg-yellow-400 dark:bg-yellow-500 hover:bg-yellow-500 dark:hover:bg-yellow-400 transition-all duration-300 hover:scale-105"
+        class="p-2 rounded-full bg-yellow-500 dark:bg-yellow-500 hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 hover:scale-105"
         :title="
           themeStore.isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
         "
@@ -84,9 +158,9 @@
             clip-rule="evenodd"
           />
         </svg>
-      </button>
+      </button> -->
 
-      <div class="relative" ref="langMenuRef">
+      <div class="relative " ref="langMenuRef">
         <button
           @click="toggleLangMenu"
           class="rounded hover:scale-105 transition cursor-pointer flex items-center gap-2"
@@ -154,7 +228,7 @@
       <template v-else>
         <BaseButton
           @click="gologin"
-          class="bg-yellow-400 dark:bg-yellow-500 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 dark:hover:bg-yellow-400 hover:scale-105 transition cursor-pointer"
+          class="bg-yellow-500 dark:bg-yellow-500 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 dark:hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"
         >
           Login
         </BaseButton>
@@ -174,6 +248,12 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useImageStore } from "../data/imagepicker";
 import Menubar from "./NavBarMenu.vue";
 import { useThemeStore } from "../data/themeStore";
+
+
+
+import { RouterLink } from "vue-router";
+
+const isOpen = ref(false);
 
 const router = useRouter();
 const userStore = useUserStore();
@@ -303,6 +383,28 @@ function goTotripreviews() {
 function goToProfile() {
   router.push("/profile");
   isProfileMenuOpen.value = false;
+}
+function gotoevents() {
+  router.push("/events");
+}
+function gototransportaion(){
+  router.push("/transportiondetails")
+}
+function goToresturant(){
+  router.push("/resturant")
+}
+function gotoexplore() {
+  router.push("/explore");
+}
+function goTooffers() {
+  router.push("/offerpage");
+}
+function goTohotel() {
+  router.push("/hotels");
+}
+
+function goToblogs() {
+  router.push("/blogs");
 }
 function goToHistory() {
   router.push("/history");

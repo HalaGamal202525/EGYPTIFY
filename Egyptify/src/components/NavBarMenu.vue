@@ -105,9 +105,7 @@ function goTooffers() {
 function goTohotel() {
   router.push("/hotels");
 }
-function goTodestination() {
-  router.push("/destination");
-}
+
 function goToblogs() {
   router.push("/blogs");
 }
