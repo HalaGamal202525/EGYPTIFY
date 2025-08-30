@@ -44,7 +44,7 @@
             type="text"
             v-model="searchQuery"
             placeholder="Search..."
-            class="w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full pl-10 pr-4 py-3 border border-yellow-400 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
             @focus="showDropdown = true"
             @blur="hideDropdown"
           />
@@ -82,7 +82,7 @@
             v-model="review.name"
             type="text"
             placeholder="Enter your name"
-            class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full px-4 py-3 border border-yellow-400  rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           />
         </div>
 
@@ -117,7 +117,7 @@
             v-model="review.comment"
             placeholder="Write your feedback..."
             rows="4"
-            class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full px-4 py-3 border border-yellow-400  rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           ></textarea>
         </div>
 
