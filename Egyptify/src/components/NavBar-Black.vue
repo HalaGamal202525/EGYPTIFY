@@ -147,7 +147,7 @@
       >
       <router-link
         to="/site-review"
-        class="px-4 text-white dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
+        class="px-4 text-black dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
         >Review</router-link
       >
 
