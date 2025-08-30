@@ -1,8 +1,8 @@
 <template>
   <nav
-    class="w-full flex items-center justify-between px-[137px] py-4 h-20 bg-white fixed top-0 left-0 z-50 shadow-sm"
+    class="w-full flex items-center justify-between px-[137px] py-4 h-20 bg-white fixed top-0 left-0 z-50 shadow-sm sm:space-x-3"
   >
-    <div class="flex items-center md:hidden">
+    <div class="flex items-center md:hidden px-4">
       <button @click="isOpen = !isOpen" class="!text-black text-2xl">
         <i class="fa-solid fa-bars !text-black"></i>
       </button>
