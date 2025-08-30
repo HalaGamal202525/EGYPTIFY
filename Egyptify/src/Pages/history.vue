@@ -29,7 +29,7 @@ const hotelStore = useHotelStore();
   <div
     v-for="booking in bookingStore.history"
     :key="booking.id"
-    class="border p-4 rounded shadow"
+    class="border border-gray-300 p-4 rounded shadow"
   >
     <h3 class="text-lg font-semibold">{{ booking.title }}</h3>
     <p>Date: {{ booking.date }}</p>
