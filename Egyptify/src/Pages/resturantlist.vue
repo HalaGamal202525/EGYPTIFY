@@ -103,7 +103,7 @@ const router = useRouter()
     <div class="lg:hidden w-full mb-4 flex justify-center">
       <button
         @click="isOverlayOpen = true"
-        class="bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow w-full max-w-md"
+        class="bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full max-w-md"
       >
         Filter
       </button>
