@@ -18,10 +18,10 @@ const hotelStore = useHotelStore();
 
 <template>
   <NavBarBlack />
-  <div class="p-6 mt-18">
+  <div class="p-6 mt-8">
     <h2 class="text-2xl font-bold mb-4">Booking History</h2>
 
-    <div v-if="bookingStore.history.length === 0" class="h-70">
+    <div v-if="bookingStore.history.length === 0" class="h-65">
       <p class="text-gray-500">No bookings yet.</p>
     </div>
 
