@@ -6,7 +6,7 @@
     <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 
     <!-- Location -->
-    <h2 class="font-bold my-2">Location</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Location</h2>
     <div class="filter-group">
       <div v-if="isMobile" class="flex flex-wrap">
         <button
@@ -37,7 +37,7 @@
 
     <!-- Category -->
 
-    <h2 class="font-bold my-2">Category</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Category</h2>
 
     <div v-if="isMobile" class="flex flex-wrap">
       <button
@@ -66,7 +66,7 @@
       </div>
     <!-- Rate -->
 
-    <h2 class="font-bold my-2">Rate</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Rate</h2>
     <div v-if="isMobile" class="flex flex-wrap">
       <button
         v-for="rate in uniqueRate"
@@ -77,7 +77,7 @@
           filters.rate.includes(rate) ? 'bg-yellow-200' : 'bg-white',
         ]"
       >
-        {{ rate }}
+        ⭐ {{ rate }}
       </button>
     </div>
      <div v-else>
@@ -89,7 +89,7 @@
             v-model="filters.rate"
             class="mx-3"
           />
-          <label :for="`rate-${rate}`">{{ rate }}</label>
+          <label :for="`rate-${rate}`">⭐ {{ rate }}</label>
         </div>
       </div>
   </div>

@@ -48,7 +48,7 @@
     <div
       @click="viewMode = 'annual'"
       :class="viewMode === 'annual'
-          ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
+          ? ' rounded-[16px] scale-100'
           : 'opacity-90'"
     >
       <ButtonComponent>Annual</ButtonComponent>

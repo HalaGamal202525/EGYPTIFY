@@ -3,7 +3,7 @@
     <h3 class="text-xl font-semibold text-yellow-500 mb-4">Filter by:</h3>
 
     <!-- Governorate -->
-    <h2 class="font-bold mb-2">Governorate</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Governorate</h2>
     <div v-if="isMobile" class="flex flex-wrap">
       <button
         v-for="gov in uniqueGovernorates"
@@ -26,7 +26,7 @@
 
 
     <!-- Rating -->
-    <h2 class="font-bold my-2">Rating</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Rating</h2>
     <div v-if="isMobile" class="flex flex-wrap">
       <button
         v-for="rate in uniqueRatings"
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Cuisine -->
-    <h2 class="font-bold my-2">Cuisine</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Cuisine</h2>
     <div v-if="isMobile" class="flex flex-wrap">
       <button
         v-for="cuisine in uniqueCuisines"
