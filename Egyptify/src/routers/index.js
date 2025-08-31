@@ -4,7 +4,7 @@ import Hala from '../Pages/Hala.vue';
 import Tabs from '../Pages/auth/tabs.vue';
 import DropdownMenu from '../Pages/auth/DropdownDemo.vue';
 import Signup from '../Pages/auth/signup.vue';
-import Home from '../Pages/Home.vue';
+import Home from '../Pages/home.vue';
 import ForgotPassword from '../Pages/auth/ForgotPassword.vue';
 import OTPPage from '../Pages/OTP.vue';
 import ExplorePage from '../Pages/ExplorePage.vue';
