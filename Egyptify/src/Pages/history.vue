@@ -39,7 +39,7 @@ if (props.source === "Dest") {
 <template>
   <NavBarBlack />
   <div class="p-6 mt-4 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">📖 Booking History</h2>
+    <h2 class="text-2xl font-bold mb-6 text-gray-800"> Booking History</h2>
 
     <!-- لو مفيش حجوزات -->
     <div
@@ -59,12 +59,14 @@ if (props.source === "Dest") {
         <!-- عنوان الحجز -->
         <div class="flex justify-between items-center border-b pb-3 mb-4">
           <h3 class="text-xl font-semibold text-gray-800">
-            ✨     <span v-if="booking.trip?.title">Trip</span>
-  <span v-else-if="booking.hotel?.name">Hotel</span>
-  <span v-else-if="booking.restaurant?.name">Restaurant</span>
-  <span v-else-if="booking.transportation?.type">Transportation</span>
+            ✨ <span v-if="booking.trip?.title">Trip</span>
+            <span v-else-if="booking.hotel?.name">Hotel</span>
+            <span v-else-if="booking.restaurant?.name">Restaurant</span>
+            <span v-else-if="booking.transportation?.type">Transportation</span>
           </h3>
-          <p class="text-sm text-gray-500"><span class="text-lg text-gray-900">Date :</span> {{ booking.date }}</p>
+          <p class="text-sm text-gray-500">
+            <span class="text-lg text-gray-900">Date :</span> {{ booking.date }}
+          </p>
         </div>
 
         <!-- ✅ تفاصيل الرحلة -->
@@ -142,8 +144,12 @@ if (props.source === "Dest") {
               <h3 class="text-lg font-bold text-gray-800">
                 🍴 {{ booking.restaurant.name }}
               </h3>
-              <p class="text-gray-600 text-sm">{{ booking.restaurant.address }}</p>
-              <p class="text-yellow-500 text-sm">⭐ {{ booking.restaurant.rate }}</p>
+              <p class="text-gray-600 text-sm">
+                {{ booking.restaurant.address }}
+              </p>
+              <p class="text-yellow-500 text-sm">
+                ⭐ {{ booking.restaurant.rate }}
+              </p>
             </div>
           </div>
 
@@ -151,7 +157,9 @@ if (props.source === "Dest") {
             v-if="booking.restaurant.reservation?.name"
             class="mt-4 bg-white p-4 rounded-lg shadow-sm"
           >
-            <h4 class="font-semibold text-gray-800 mb-2">Reservation Details:</h4>
+            <h4 class="font-semibold text-gray-800 mb-2">
+              Reservation Details:
+            </h4>
             <p><b>Name:</b> {{ booking.restaurant.reservation.name }}</p>
             <p><b>Phone:</b> {{ booking.restaurant.reservation.phone }}</p>
             <p><b>Guests:</b> {{ booking.restaurant.reservation.guests }}</p>
@@ -171,10 +179,15 @@ if (props.source === "Dest") {
           <h3 class="text-lg font-bold text-gray-800 mb-2">
             🚖 {{ booking.transportation.type }}
           </h3>
-          <p class="text-sm text-gray-600">From: {{ booking.transportation.from }}</p>
-          <p class="text-sm text-gray-600">To: {{ booking.transportation.to }}</p>
           <p class="text-sm text-gray-600">
-            {{ booking.transportation.date }} - {{ booking.transportation.time }}
+            From: {{ booking.transportation.from }}
+          </p>
+          <p class="text-sm text-gray-600">
+            To: {{ booking.transportation.to }}
+          </p>
+          <p class="text-sm text-gray-600">
+            {{ booking.transportation.date }} -
+            {{ booking.transportation.time }}
           </p>
           <p class="font-semibold mt-2">
             Price: {{ booking.transportation.price }} EGP
@@ -215,7 +228,11 @@ if (props.source === "Dest") {
           <p class="text-lg">
             Status:
             <span
-              :class="booking.status === 'Confirmed' ? 'text-green-600 font-bold' : 'text-red-500 font-bold'"
+              :class="
+                booking.status === 'Confirmed'
+                  ? 'text-green-600 font-bold'
+                  : 'text-red-500 font-bold'
+              "
             >
               {{ booking.status }}
             </span>
@@ -226,4 +243,3 @@ if (props.source === "Dest") {
   </div>
   <foot />
 </template>
-
