@@ -6,8 +6,10 @@ const bookingStore = useBookingStore();
 import { useCardStore } from "../data/store";
 import { useHotelStore } from "../data/storehotel";
 import { useReservationStore } from "../data/Storeresturant";
+import { useeventStore } from "../data/storeevent";
 import { useTransportationStore } from "../data/storetransport";
 import { useGuestStore } from "../data/storeguset";
+
 const guestStore = useGuestStore();
 const transportationStore = useTransportationStore();
 const reservationStore = useReservationStore();
@@ -34,11 +36,12 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
         <!-- عنوان الحجز -->
         <div class="flex justify-between items-center border-b pb-3 mb-4">
           <h3 class="text-xl font-semibold text-gray-800">
-            ✨ 
-              <span v-if="booking.trip?.title">Trip</span>
-  <span v-else-if="booking.hotel?.name">Hotel</span>
-  <span v-else-if="booking.restaurant?.name">Restaurant</span>
-  <span v-else-if="booking.transportation?.type">Transportation</span>
+            ✨
+            <span v-if="booking.trip?.title">Trip</span>
+            <span v-else-if="booking.hotel?.name">Hotel</span>
+            <span v-else-if="booking.restaurant?.name">Restaurant</span>
+            <span v-else-if="booking.transportation?.type">Transportation</span>
+            <span v-else-if="booking.event?.name">Events</span>
           </h3>
           <p class="text-sm text-gray-500">{{ booking.date }}</p>
         </div>
@@ -188,6 +191,40 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
             <p>Total: {{ booking.hotel.totalPrice }} EGP</p>
           </div>
         </div>
+        <!-- ✅ الـ Event -->
+        <div
+          v-if="booking.event"
+          class="bg-white rounded-2xl shadow-md overflow-hidden"
+        >
+          <img
+            :src="booking.event.image"
+            alt="event image"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4 space-y-2">
+            <h3 class="text-xl font-bold text-gray-800">
+              {{ booking.event.name }}
+            </h3>
+            <p class="text-gray-600">
+              <span class="font-medium">Date:</span> {{ booking.event.date }}
+            </p>
+            <p class="text-gray-600">
+              <span class="font-medium">Location:</span>
+              {{ booking.event.location }}
+            </p>
+            <p v-if="booking.event.type" class="text-gray-600">
+              <span class="font-medium">Type:</span> {{ booking.event.type }}
+            </p>
+            <p class="text-gray-800 font-semibold text-lg">
+              Price: {{ booking.event.totalPrice }} EGP
+            </p>
+            <p>
+              <span class="font-medium">Guests:</span>
+              {{ booking.event.people }}
+            </p>
+          </div>
+        </div>
+
         <!-- ✅ الحالة -->
         <div class="pt-4 border-t mt-4 flex justify-between items-center">
           <p class="text-sm">
@@ -202,11 +239,6 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
               {{ booking.status }}
             </span>
           </p>
-          <button
-            class="bg-yellow-400 hover:bg-yellow-500 text-white px-4 py-1.5 rounded-lg shadow text-sm"
-          >
-            View Details
-          </button>
         </div>
       </div>
     </div>

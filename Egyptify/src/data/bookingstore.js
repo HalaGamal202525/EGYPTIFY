@@ -3,10 +3,11 @@ import { useCardStore } from "./store";
 import { useHotelStore } from "./storehotel";
 import { useReservationStore } from "./Storeresturant";
 import { useTransportationStore } from "./storetransport";
+import { useeventStore } from "./storeevent";
 
 export const useBookingStore = defineStore("bookingStore", {
   state: () => ({
-    history: JSON.parse(localStorage.getItem("bookingHistory")) || [], 
+    history: JSON.parse(localStorage.getItem("bookingHistory")) || [],
   }),
 
   actions: {
@@ -15,6 +16,7 @@ export const useBookingStore = defineStore("bookingStore", {
       const hotelStore = useHotelStore();
       const reservationStore = useReservationStore();
       const transportationStore = useTransportationStore();
+      const eventdata = useeventStore();
 
       const newBooking = {
         ...baseBooking,
@@ -30,13 +32,16 @@ export const useBookingStore = defineStore("bookingStore", {
           orders: JSON.parse(JSON.stringify(reservationStore.bookings)),
           totalPrice: reservationStore.totalPrice,
         },
-        transportation: JSON.parse(JSON.stringify(transportationStore.transportation)),
+        transportation: JSON.parse(
+          JSON.stringify(transportationStore.transportation)
+        ),
         hotel: {
           ...JSON.parse(JSON.stringify(hotelStore.hotel)),
           bookingDetails: JSON.parse(JSON.stringify(hotelStore.bookingDetails)),
           totalNights: hotelStore.totalNights,
           totalPrice: hotelStore.totalPrice,
         },
+        event: JSON.parse(JSON.stringify(eventdata.booking)),
       };
 
       this.history.push(newBooking);
