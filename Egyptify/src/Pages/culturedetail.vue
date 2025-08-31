@@ -1,14 +1,14 @@
 <template>
   <div class="min-h-screen bg-white">
     <Navbar />
-<div class="px-8 py-6 text-base text-gray-600 mt-20">
+<div class="px-26 py-6 text-base text-gray-600 ">
     <router-link to="/" class="text-blue-600 hover:underline">Home</router-link>
     <span> &gt; </span>
     <router-link to="/culture" class="text-blue-600 hover:underline">Culture</router-link>
     <span> &gt; </span>
     <span class="text-gray-800 font-semibold">{{ place.title }}</span>
   </div>
-    <div class="max-w-6xl mx-auto px-4 py-8 mt-10">
+    <div class="max-w-6xl mx-auto px-4 py-8 ">
       <div class="grid md:grid-cols-2 gap-8">
         <img :src="place.image" alt="Main Image" class="w-full h-96 object-cover rounded-xl" />
 

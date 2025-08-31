@@ -1,7 +1,6 @@
 <template>
-  <div class="font-sans text-gray-800 bg-[#FAFAFA]">
     <Navbar /> 
-    <section v-if="place" class="max-w-7xl mx-auto px-6 py-8 mt-20">
+    <section v-if="place" class="max-w-7xl mx-auto px-6 py-8 mt-0">
       <!-- Title and Rating -->
        <router-link :to="`/`" class="underline text-blue-600">Home</router-link>
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center my-6">
@@ -93,7 +92,6 @@
 
     <p v-else class="text-center text-gray-500 mt-20">Loading...</p>
     <Footer />
-  </div>
 </template>
 
 <script setup>

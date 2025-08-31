@@ -1,6 +1,6 @@
 <template>
     <NavBarBlack />
-    <div class="min-h-screen bg-[#FFFDF9] py-16 px-4 sm:px-6 lg:px-8" id="start">
+    <div class="min-h-screen bg-[#FFFDF9] mb-8 px-4 sm:px-6 lg:px-8" id="start">
         <div class="max-w-6xl mx-auto">
             <h1 class="text-3xl sm:text-4xl font-bold text-center text-yellow-500 mb-12 mt-15">About Us</h1>
 

@@ -7,7 +7,7 @@
     <NavBar />
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-4xl mx-auto px-6 py-12 w-full mt-16">
+    <main class="flex-grow max-w-4xl mx-auto px-6 mb-8 w-full">
       <!-- Page Header -->
       <section class="text-center mb-12">
         <h1 class="text-4xl font-bold text-yellow-500 mb-4 mt-4">Terms of Use</h1>

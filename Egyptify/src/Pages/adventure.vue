@@ -2,7 +2,7 @@
 <template>
   <Navbar />
 
-  <div class="px-8 py-6 text-base text-gray-600 mt-20">
+  <div class="px-8 py-6 text-base text-gray-600 mt-0">
     <router-link to="/" class="text-blue-600 hover:underline">Home</router-link>
     <span> &gt; </span>
     <span class="text-gray-800 font-semibold">Adventure</span>
