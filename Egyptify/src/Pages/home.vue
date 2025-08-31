@@ -80,7 +80,7 @@
     </div> -->
 
     <!-- Destination Section -->
- <section class="py-16 ">
+ <section class="py-16 bg-[#FFFDF9]">
     <div class="text-center mb-18">
       <h2 class="special-heading">Destination</h2>
       <p class="text-xl text-gray-700">Popular Destination</p>
@@ -139,7 +139,7 @@
     </div>
 
     <!-- discover -->
-    <section class="py-16 ">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-18">
         <h2 class="special-heading">Discover</h2>
         <p class="text-xl text-gray-700">Things to Do</p>
@@ -171,7 +171,7 @@
     </section>
 
     <!-- top rated -->
-    <section class="py-16 relative" style="height: 650px">
+    <section class="py-16 bg-[#FFFDF9] relative" style="height: 650px">
       <div class="text-center mb-18">
         <h2 class="special-heading">Top rated</h2>
         <p class="text-xl text-gray-700">Chosen by explorers like you</p>
@@ -222,7 +222,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16  relative" style="height: 600px">
+    <section class="py-16 bg-[#FFFDF9] relative" style="height: 600px">
       <div class="text-center mb-18">
         <h2 class="special-heading">Testimonials</h2>
         <p class="text-xl text-gray-700">What Travelers Say</p>
@@ -299,7 +299,7 @@
     </section>
 
     <!-- recommended -->
-    <section class="py-16 ">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-18">
         <h2 class="special-heading">Recommended</h2>
         <p class="text-xl text-gray-700">Discover top-rated adventures</p>
@@ -328,7 +328,7 @@
       </div>
     </section>
     <!-- offer -->
-    <section class="py-16 ">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-18">
         <h2 class="special-heading">offers</h2>
         <p class="text-xl text-gray-700">special offers</p>
@@ -356,7 +356,7 @@
       </div>
     </section>
     <!-- package -->
-    <section class="py-16 ">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-18">
         <h2 class="special-heading">Packages</h2>
         <p class="text-xl text-gray-700">Explore Packages</p>
