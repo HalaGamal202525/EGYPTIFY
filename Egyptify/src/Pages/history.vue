@@ -41,7 +41,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
             <span v-else-if="booking.hotel?.name">Hotel</span>
             <span v-else-if="booking.restaurant?.name">Restaurant</span>
             <span v-else-if="booking.transportation?.type">Transportation</span>
-            <span v-else-if="booking.event?.name">Events</span>
+            <span v-else-if="booking.event?.name">Event</span>
           </h3>
           <p class="text-sm text-gray-500">{{ booking.date }}</p>
         </div>
