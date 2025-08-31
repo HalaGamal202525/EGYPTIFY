@@ -21,7 +21,8 @@
       <div v-else>
         <div v-for="cat in categories" :key="cat" class="font-light">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="cat" v-model="filters.type" class="mr-1" />
+            <input type="checkbox" :value="cat" v-model="filters.type"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
             {{ cat }}
           </label>
         </div>
@@ -49,7 +50,8 @@
       <div v-else>
         <div v-for="loc in locations" :key="loc">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="loc" v-model="filters.location" class="mr-1" />
+            <input type="checkbox" :value="loc" v-model="filters.location"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+/>
             {{ loc }}
           </label>
         </div>
@@ -77,7 +79,7 @@
       <div v-else>
         <div v-for="rate in rates" :key="rate">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="rate" v-model="filters.review" class="mr-1" />
+            <input type="checkbox" :value="rate" v-model="filters.review"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2" />
            ⭐ {{ rate }}+
           </label>
         </div>

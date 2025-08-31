@@ -19,7 +19,8 @@
     </div>
     <div v-else>
       <div v-for="loc in uniqueLocations" :key="loc" class="flex items-center mb-1">
-        <input type="checkbox" :id="`loc-${loc}`" :value="loc" v-model="filters.location" class="mx-2" />
+        <input type="checkbox" :id="`loc-${loc}`" :value="loc" v-model="filters.location"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
         <label :for="`loc-${loc}`">{{ loc }}</label>
       </div>
     </div>
@@ -41,7 +42,8 @@
     </div>
     <div v-else>
       <div v-for="budget in uniqueBudget" :key="budget" class="flex items-center mb-1">
-        <input type="checkbox" :id="`budget-${budget}`" :value="budget" v-model="filters.budget" class="mx-2" />
+        <input type="checkbox" :id="`budget-${budget}`" :value="budget" v-model="filters.budget"   class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+/>
         <label :for="`budget-${budget}`">{{ budget }}</label>
       </div>
     </div>
@@ -63,7 +65,8 @@
     </div>
     <div v-else>
       <div v-for="time in uniqueBestTime" :key="time" class="flex items-center mb-1">
-        <input type="checkbox" :id="`time-${time}`" :value="time" v-model="filters.bestTime" class="mx-2" />
+        <input type="checkbox" :id="`time-${time}`" :value="time" v-model="filters.bestTime" class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
         <label :for="`time-${time}`">{{ time }}</label>
       </div>
     </div>

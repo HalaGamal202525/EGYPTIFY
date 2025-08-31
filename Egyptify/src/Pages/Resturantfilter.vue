@@ -19,7 +19,8 @@
     </div>
 <div v-else>
   <div v-for="gov in uniqueGovernorates" :key="gov" class="flex items-center mb-1">
-    <input type="checkbox" :id="`gov-${gov}`" :value="gov" v-model="filters.governorate" class="mx-2" />
+    <input type="checkbox" :id="`gov-${gov}`" :value="gov" v-model="filters.governorate"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
     <label :for="`gov-${gov}`">{{ gov }}</label>
   </div>
 </div>
@@ -42,7 +43,8 @@
     </div>
     <div v-else>
       <div v-for="rate in uniqueRatings" :key="rate" class="flex items-center mb-1">
-        <input type="checkbox" :id="`rate-${rate}`" :value="rate" v-model="filters.rating" class="mx-2" />
+        <input type="checkbox" :id="`rate-${rate}`" :value="rate" v-model="filters.rating"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
         <label :for="`rate-${rate}`">⭐ {{ rate }}+</label>
       </div>
     </div>
@@ -64,7 +66,8 @@
     </div>
     <div v-else>
       <div v-for="cuisine in uniqueCuisines" :key="cuisine" class="flex items-center mb-1">
-        <input type="checkbox" :id="`cuisine-${cuisine}`" :value="cuisine" v-model="filters.cuisine" class="mx-2" />
+        <input type="checkbox" :id="`cuisine-${cuisine}`" :value="cuisine" v-model="filters.cuisine"                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+ />
         <label :for="`cuisine-${cuisine}`">{{ cuisine }}</label>
       </div>
     </div>

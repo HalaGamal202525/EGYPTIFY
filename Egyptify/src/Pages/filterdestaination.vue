@@ -28,7 +28,7 @@
             :id="`loc-${loc}`"
             :value="loc"
             v-model="filters.location"
-            class="mx-3"
+                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
           />
           <label :for="`loc-${loc}`">{{ loc }}</label>
         </div>
@@ -59,7 +59,7 @@
             :id="`type-${type}`"
             :value="type"
             v-model="filters.category"
-            class="mx-3"
+                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
           />
           <label :for="`type-${type}`">{{ type }}</label>
         </div>
@@ -75,7 +75,7 @@
         :class="[
           'px-4 py-2 rounded-2xl m-1',
           filters.rate.includes(rate) ? 'bg-yellow-200' : 'bg-white',
-        ]"
+        ]" 
       >
         ⭐ {{ rate }}
       </button>
@@ -87,7 +87,7 @@
             :id="`rate-${rate}`"
             :value="rate"
             v-model="filters.rate"
-            class="mx-3"
+                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
           />
           <label :for="`rate-${rate}`">⭐ {{ rate }}</label>
         </div>
