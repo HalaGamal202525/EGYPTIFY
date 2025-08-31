@@ -45,29 +45,34 @@
       @select="(val) => (filters.type = val)"
     />
 
-    <div
-  @click="viewMode = 'annual'"
-  :class="[
-    'cursor-pointer transition duration-200',
-    viewMode === 'annual'
-      ? 'bg-blue-500 text-white rounded-[16px] scale-105'
-      : 'bg-gray-200 border-yellow-700 text-gray-700 opacity-80'
-  ]"
->
-  <ButtonComponent>Annual</ButtonComponent>
+   <div class="flex flex-wrap justify-center gap-4">
+  <!-- Yearly -->
+  <div
+    @click="viewMode = 'annual'"
+    :class="[ 
+      'cursor-pointer px-6 py-2 rounded font-medium shadow-md transition duration-200',
+      viewMode === 'annual'
+        ? 'bg-yellow-400 text-white scale-105'
+        : 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200'
+    ]"
+  >
+    Yearly
+  </div>
+
+  <!-- Monthly -->
+  <div
+    @click="viewMode = 'monthly'"
+    :class="[ 
+      'cursor-pointer px-6 py-2 rounded font-medium shadow-md transition duration-200',
+      viewMode === 'monthly'
+        ? 'bg-yellow-400 text-white scale-105'
+        : 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200'
+    ]"
+  >
+    Monthly
+  </div>
 </div>
 
-<div
-  @click="viewMode = 'monthly'"
-  :class="[
-    'cursor-pointer transition duration-200',
-    viewMode === 'monthly'
-      ? 'bg-blue-500 text-white rounded-[16px] scale-105'
-      : 'bg-gray-200 border-yellow-700 text-gray-700 opacity-80'
-  ]"
->
-  <ButtonComponent>Monthly</ButtonComponent>
-</div>
 
   </div>
 </section>
