@@ -310,7 +310,7 @@ const generateItinerary = async () => {
 </script>
 
 <style scoped>
-a {
+a, button {
   cursor: pointer;
 }
 .calendar .grid-cols-7>span:nth-child(n+8):hover {

@@ -23,7 +23,7 @@ import TermsOfUse from '../Pages/Terms-of-use.vue'
 import FoodDetail from '../Pages/activity/place details/food/place detailspage.vue'
 import Booking from '../Pages/Booking.vue'
 import EventCalendarPage from '../Pages/EventCalendarPage.vue' 
-import profilePersonalDetails from "../Pages/profile-personal-details.vue"
+import profile from "../Pages/profile.vue"
 import aboutUs from '../Pages/About-Us.vue'
 import Map from '../Pages/Map.vue'
 import HistoricalDetail from '../Pages/activity/place details/historical/place detailspage.vue'
@@ -124,8 +124,8 @@ const routes = [
 
   {
     path: '/profile',
-    name: 'ProfilePersonalDetails',
-    component: profilePersonalDetails
+    name: 'Profile',
+    component: profile
   },
   
   { path: '/about-us', component: aboutUs},

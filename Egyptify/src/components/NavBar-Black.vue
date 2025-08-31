@@ -1,7 +1,8 @@
 <template>
   <nav
-    class="w-full flex items-center justify-between px-[137px] py-4 h-20
-      bg-white fixed top-0 left-0 z-50 shadow-sm"
+  class="w-full flex items-center justify-between px-[137px] py-4 h-20 
+        bg-[#FFFDF9] dark:bg-gray-900/80 absolute top-0 left-0 z-50 
+        transition-colors duration-300 shadow-sm"
   >
     <div class="flex items-center">
       <img
