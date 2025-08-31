@@ -2,7 +2,7 @@
   <NavBarBlack />
 
   <!-- 🔹 Stepper -->
-<div class="w-full bg-white shadow-md py-6 px-10 mt-22">
+<div class="w-full bg-white shadow-md py-6 px-10 mt-8">
   <div class="flex justify-between items-center max-w-5xl mx-auto">
     <!-- Step 1 -->
     <div class="flex-1 text-center">

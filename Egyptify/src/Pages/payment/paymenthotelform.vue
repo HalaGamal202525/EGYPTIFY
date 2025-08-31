@@ -58,7 +58,7 @@ const guestStore = useGuestStore();
   <NavBarBlack/>
 
   <!-- ✅ Steps Bar -->
-  <div class="w-full bg-white shadow-md py-6 px-10 mt-22">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-8">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <div class="flex-1 text-center">
         <div class="w-10 h-10 flex items-center justify-center mx-auto rounded-full bg-[#ffc340] text-white font-bold">1</div>

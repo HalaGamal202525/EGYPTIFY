@@ -18,7 +18,7 @@ function goToDetails(id) {
 <template>
   <div class="text-black">
     <navbar />
-    <div class="container mx-auto px-14 mt-26">
+    <div class="container mx-auto px-14 mt-12">
       <router-link
         to="/blogs"
         class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"

@@ -2,7 +2,7 @@
   <div class="font-sans">
     <Navbar />
 
-    <div class="container mx-auto px-4 mt-26">
+    <div class="container mx-auto px-4 mt-12">
       <router-link
         to="/hotels"
         class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"

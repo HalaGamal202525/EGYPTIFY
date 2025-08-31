@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
   <div
-    class="min-h-screen  bg-[#FFFDF9] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-6 mt-6"
+    class="min-h-screen  bg-[#FFFDF9] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-6 mt-6"
   >
     <div
       class="max-w-3xl mx-auto bg-white rounded-lg border border-gray-300 shadow-2xl p-10  transition"

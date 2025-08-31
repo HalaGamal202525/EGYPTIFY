@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <div class="flex flex-col lg:flex-row gap-6 px-6 my-22">
+  <div class="flex flex-col lg:flex-row gap-6 px-6 my-12">
     <!-- Sidebar Filters -->
     <div class="w-full lg:w-64 mt-10 bg-white p-4 rounded shadow space-y-4">
       <!-- زرار يظهر بس في الموبايل -->
