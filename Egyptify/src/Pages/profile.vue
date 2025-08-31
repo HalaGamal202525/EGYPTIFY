@@ -1,6 +1,6 @@
 <template>
   <NavBarBlack />
-  <div class="min-h-screen bg-[#fdfcf9] py-20 px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen bg-[#fdfcf9] mb-12  px-4 sm:px-6 lg:px-8">
     <div
       class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300"
     >
