@@ -10,88 +10,89 @@
       :image="heroImage"
     />
 
-    <!-- Month Navigation -->
-    <section class="text-center py-6 bg-gray-100">
-      <div class="flex justify-center items-center gap-90">
-        <div @click="prevMonth">
-          <ButtonComponent>< Previous</ButtonComponent>
-        </div>
+<!-- Month Navigation -->
+<section class="text-center py-6 bg-gray-100">
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-12 lg:gap-20">
+    <!-- Prev -->
+    <div @click="prevMonth" class="order-2 sm:order-1">
+      <ButtonComponent>< Previous</ButtonComponent>
+    </div>
 
-        <h2 class="text-2xl font-semibold mx-8">{{ currentMonthYear }}</h2>
+    <!-- Title -->
+    <h2 class="text-xl sm:text-2xl font-semibold my-4 sm:my-0 order-1 sm:order-2">
+      {{ currentMonthYear }}
+    </h2>
 
-        <div @click="nextMonth">
-          <ButtonComponent>Next > </ButtonComponent>
-        </div>
-      </div>
-    </section>
+    <!-- Next -->
+    <div @click="nextMonth" class="order-3">
+      <ButtonComponent>Next > </ButtonComponent>
+    </div>
+  </div>
+</section>
 
-    <!-- Filters -->
-    <section class="bg-white shadow p-4 my-4 max-w-6xl mx-auto rounded-lg">
-      <div class="flex flex-wrap justify-center gap-4">
-        <DropdownComponent
-          :label="filters.city?.label || 'All Cities'"
-          :options="cityOptions"
-          @select="(val) => (filters.city = val)"
-        />
+<!-- Filters -->
+<section class="bg-white shadow p-4 my-4 max-w-6xl mx-auto rounded-lg">
+  <div class="flex flex-wrap justify-center gap-4">
+    <DropdownComponent
+      :label="filters.city?.label || 'All Cities'"
+      :options="cityOptions"
+      @select="(val) => (filters.city = val)"
+    />
 
-        <DropdownComponent
-          :label="filters.type?.label || 'All Types'"
-          :options="typeOptions"
-          @select="(val) => (filters.type = val)"
-        />
+    <DropdownComponent
+      :label="filters.type?.label || 'All Types'"
+      :options="typeOptions"
+      @select="(val) => (filters.type = val)"
+    />
 
-        <div
-          @click="viewMode = 'annual'"
-          :class="
-            viewMode === 'annual'
-              ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
-              : 'opacity-90'
-          "
-        >
-          <ButtonComponent>Annual</ButtonComponent>
-        </div>
-
-        <div
-          @click="viewMode = 'monthly'"
-          :class="
-            viewMode === 'monthly'
-              ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
-              : 'opacity-90'
-          "
-        >
-          <ButtonComponent>Monthly</ButtonComponent>
-        </div>
-      </div>
-    </section>
-
-    <!-- Event Cards -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4 max-w-6xl mx-auto"
+    <div
+      @click="viewMode = 'annual'"
+      :class="viewMode === 'annual'
+          ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
+          : 'opacity-90'"
     >
-<Card
-  v-for="event in filteredEvents"
-  :key="event.id"
-  :id="event.id" 
-  :image="event.image"
-  :showBadge="true"
-  :badgeText="event.type"
-  :title="event.title"
-  :description="event.description"
-  :date="event.date"
-  :location="event.location"
-  :showButton="true"
-  :buttonText="'Show Details'"
-  :showHeart="true"
-  @click="
-    () => {
-      goToEvent(event.id);
-      handleCardClick(event);
-    }
-  "
-/>
+      <ButtonComponent>Annual</ButtonComponent>
+    </div>
 
-     
-    </section>
+    <div
+      @click="viewMode = 'monthly'"
+      :class="viewMode === 'monthly'
+          ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
+          : 'opacity-90'"
+    >
+      <ButtonComponent>Monthly</ButtonComponent>
+    </div>
+  </div>
+</section>
+
+
+<!-- Event Cards -->
+<section
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 container mx-auto justify-items-center"
+>
+  <Card
+    v-for="event in filteredEvents"
+    :key="event.id"
+    :id="event.id"
+    :image="event.image"
+    :showBadge="true"
+    :badgeText="event.type"
+    :title="event.title"
+    :description="event.description"
+    :date="event.date"
+    :location="event.location"
+    :showButton="true"
+    :buttonText="'Show Details'"
+    :showHeart="true"
+    class="w-full"
+    @click="
+      () => {
+        goToEvent(event.id);
+        handleCardClick(event);
+      }
+    "
+  />
+</section>
 
     <Footer />
   </div>

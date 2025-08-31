@@ -12,27 +12,31 @@
     />
 
     <!-- Contact Types Section -->
-    <section class="py-10 bg-white text-center">
-      <div class="container mx-auto max-w-6xl flex justify-between gap-8 ">
-        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
-          <i class="fa-solid fa-clock text-3xl text-[#FFC340] mb-4 mt-4"></i>
-          <h3 class="font-bold h-8">24/7 Support</h3>
-          <p>Available around the clock for your <br> convenience.</p>
-        </div>
-        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
-          <i class="fa-solid fa-users text-3xl text-[#FFC340] mb-4 mt-4"></i>
-          <h3 class="font-bold h-8">Expert Team</h3>
-          <p>Experienced professionals ready to <br> assist.</p>
-        </div>
-        <div class="border border-[#FFC340] rounded-xl h-40 w-74 shadow p-4 flex flex-col items-center justify-center">
-          <i class="fas fa-headset text-3xl text-[#FFC340] mb-4 mt-4"></i>
-          <h3 class="font-bold h-8">Quick Response</h3>
-          <p>Fast replies within 2 hours <br> guaranteed.</p>
-        </div>
-      </div>
-    </section>
-
+<section class="py-10 bg-white text-center">
+  <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between gap-8 px-4">
     
+    <div class="border border-[#FFC340] rounded-xl h-40 w-full md:w-1/3 shadow p-4 flex flex-col items-center justify-center">
+      <i class="fa-solid fa-clock text-3xl text-[#FFC340] mb-4 mt-4"></i>
+      <h3 class="font-bold h-8">24/7 Support</h3>
+      <p>Available around the clock for your <br> convenience.</p>
+    </div>
+
+    <div class="border border-[#FFC340] rounded-xl h-40 w-full md:w-1/3 shadow p-4 flex flex-col items-center justify-center">
+      <i class="fa-solid fa-users text-3xl text-[#FFC340] mb-4 mt-4"></i>
+      <h3 class="font-bold h-8">Expert Team</h3>
+      <p>Experienced professionals ready to <br> assist.</p>
+    </div>
+
+    <div class="border border-[#FFC340] rounded-xl h-40 w-full md:w-1/3 shadow p-4 flex flex-col items-center justify-center">
+      <i class="fas fa-headset text-3xl text-[#FFC340] mb-4 mt-4"></i>
+      <h3 class="font-bold h-8">Quick Response</h3>
+      <p>Fast replies within 2 hours <br> guaranteed.</p>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- form -->
 <section class="bg-gray-50 py-10">
   <div class="container mx-auto border border-[#FFC340] rounded-lg max-w-6xl">

@@ -17,7 +17,7 @@
         <div class="w-full lg:w-64 mt-0 bg-gray-100 p-4 rounded shadow space-y-4">
           <button
             @click="openOverlay"
-            class="lg:hidden bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow w-full"
+            class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full"
           >
             Filter
           </button>
@@ -48,7 +48,7 @@
 
         <div class="flex-1 space-y-6">
           <section
-            class="flex flex-wrap items-stretch gap-6 px-8 mb-6 cursor-pointer"
+            class="flex flex-wrap justify-center items-stretch gap-6 px-8 mb-6 cursor-pointer"
           >
             <CardComponent
               v-for="item in paginatedDestinations"

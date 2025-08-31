@@ -125,7 +125,7 @@
         <div class="text-center">
           <button
             type="submit"
-            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition transform hover:scale-105"
+            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition transform hover:scale-105 cursor-pointer"
           >
             Submit Review
           </button>
