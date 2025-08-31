@@ -664,7 +664,7 @@ input[type="checkbox"] {
   <NavBarBlack />
 
   <!-- 🔹 Stepper -->
-  <div class="w-full bg-white shadow-md py-6 px-10 mt-2">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-22">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <!-- Step 1 -->
       <div class="flex-1 text-center">
@@ -835,132 +835,141 @@ input[type="checkbox"] {
             <span> {{ grandTotal }} EGP</span>
           </div>
 
-          <BaseButton @click="nextStep" class="w-full mt-4"
+          <BaseButton @click="nextStep" class="w-full cursor-pointer mt-4"
             >Pay Securely</BaseButton
           >
         </div>
 
         <!-- 📱 Vodafone -->
- <div
-  v-if="activeTab === 'vodafone'"
-  class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
->
-  <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
+        <div
+          v-if="activeTab === 'vodafone'"
+          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+        >
+          <h3 class="text-xl font-semibold text-gray-800">Vodafone Cash</h3>
 
-  <div v-if="!showOtpSection" class="space-y-5">
-    <p class="text-sm text-gray-600 ">
-      Enter your phone number to receive an OTP.
-    </p>
+          <div v-if="!showOtpSection" class="space-y-5">
+            <p class="text-sm text-gray-600">
+              Enter your phone number to receive an OTP.
+            </p>
 
-    <InputField placeholder="Enter Phone Number" />
+            <InputField placeholder="Enter Phone Number" />
 
-    <div
-      class="text-lg font-bold flex justify-between items-center pt-4 border-t"
-    >
-      <span> Total: </span>
-      <span> {{ grandTotal }} EGP </span>
-    </div>
+            <div
+              class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+            >
+              <span> Total: </span>
+              <span> {{ grandTotal }} EGP </span>
+            </div>
 
-    <BaseButton @click="goToOtpSection" class="w-full mt-4"
-      >Continue</BaseButton
-    >
-  </div>
+            <BaseButton
+              @click="goToOtpSection"
+              class="w-full cursor-pointer mt-4"
+              >Continue</BaseButton
+            >
+          </div>
 
-  <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
-  <div v-else class="mt-6 space-y-4">
-    <p class="text-base font-medium">Enter OTP:</p>
-    <otp @otp-verified="goToStepThree" />
+          <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
+          <div v-else class="mt-6 space-y-4">
+            <p class="text-base font-medium">Enter OTP:</p>
+            <otp @otp-verified="goToStepThree" />
 
-    <div class="flex items-center gap-2">
-      <input
-        type="checkbox"
-        id="agree"
-        v-model="isChecked"
-        class="!bg-gray-100"
-      />
-      <label for="agree" class="text-sm text-gray-700"
-        >I agree to the terms.</label
-      >
-    </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="agree"
+                v-model="isChecked"
+                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer"
+              />
+              <label for="agree" class="text-sm text-gray-700"
+                >I agree to the terms.</label
+              >
+            </div>
 
-    <div class="flex gap-3 justify-between">
-      <BaseButton
-        @click="previous"
-        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
-        >Back</BaseButton
-      >
-      <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
-        >Confirm</BaseButton
-      >
-    </div>
-  </div>
-</div>
+            <div class="flex gap-3 justify-between">
+              <BaseButton
+                @click="previous"
+                class="w-1/2 !bg-white !text-[#ffc340] !border cursor-pointer !border-[#ffc340] !hover:bg-[#ffc340]"
+                >Back</BaseButton
+              >
+              <BaseButton
+                @click="nextStep"
+                class="w-1/2 cursor-pointer"
+                :disabled="!isChecked"
+                >Confirm</BaseButton
+              >
+            </div>
+          </div>
+        </div>
 
+        <!-- Fawry Payment -->
+        <div
+          v-if="activeTab === 'fawry'"
+          class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
+        >
+          <!-- العنوان -->
+          <h3
+            class="text-xl font-semibold text-gray-800 flex items-center gap-2"
+          >
+            Fawry Payment
+          </h3>
 
- <!-- Fawry Payment -->
-<div
-  v-if="activeTab === 'fawry'"
-  class="w-full max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 space-y-5"
->
-  <!-- العنوان -->
-  <h3 class="text-xl font-semibold text-gray-800 flex items-center gap-2">
-    Fawry Payment
-  </h3>
+          <div v-if="!showOtpSection" class="space-y-5">
+            <p class="text-sm text-gray-600">
+              Enter your phone number to receive an OTP.
+            </p>
 
+            <InputField placeholder="Enter Phone Number" />
 
-  <div v-if="!showOtpSection" class="space-y-5">
-    <p class="text-sm text-gray-600 ">
-      Enter your phone number to receive an OTP.
-    </p>
+            <div
+              class="text-lg font-bold flex justify-between items-center pt-4 border-t"
+            >
+              <span> Total: </span>
+              <span> {{ grandTotal }} EGP </span>
+            </div>
 
-    <InputField placeholder="Enter Phone Number" />
+            <BaseButton
+              @click="goToOtpSection"
+              class="w-full cursor-pointer mt-4"
+              >Continue</BaseButton
+            >
+          </div>
 
-    <div
-      class="text-lg font-bold flex justify-between items-center pt-4 border-t"
-    >
-      <span> Total: </span>
-      <span> {{ grandTotal }} EGP </span>
-    </div>
+          <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
+          <div v-else class="mt-6 space-y-4">
+            <p class="text-base font-medium">Enter OTP:</p>
+            <otp @otp-verified="goToStepThree" />
 
-    <BaseButton @click="goToOtpSection" class="w-full mt-4"
-      >Continue</BaseButton
-    >
-  </div>
+            <div class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="agree"
+                v-model="isChecked"
+                class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer"
+              />
+              <label for="agree" class="text-sm text-gray-700"
+                >I agree to the terms.</label
+              >
+            </div>
 
-  <!-- ✅ بعد ما يضغط Continue يظهر الـ OTP -->
-  <div v-else class="mt-6 space-y-4">
-    <p class="text-base font-medium">Enter OTP:</p>
-    <otp @otp-verified="goToStepThree" />
-
-    <div class="flex items-center gap-2">
-      <input
-        type="checkbox"
-        id="agree"
-        v-model="isChecked"
-        class="!bg-gray-100"
-      />
-      <label for="agree" class="text-sm text-gray-700"
-        >I agree to the terms.</label
-      >
-    </div>
-
-    <div class="flex gap-3 justify-between">
-      <BaseButton
-        @click="previous"
-        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
-        >Back</BaseButton
-      >
-      <BaseButton @click="nextStep" class="w-1/2" :disabled="!isChecked"
-        >Confirm</BaseButton
-      >
-    </div>
-  </div>
-</div>
-
+            <div class="flex gap-3 justify-between">
+              <BaseButton
+                @click="previous"
+                class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] cursor-pointer !hover:bg-[#ffc340]"
+                >Back</BaseButton
+              >
+              <BaseButton
+                @click="nextStep"
+                class="w-1/2 cursor-pointer"
+                :disabled="!isChecked"
+                >Confirm</BaseButton
+              >
+            </div>
+          </div>
+        </div>
       </div>
       <BaseButton
         @click="goBack"
-        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] !hover:bg-[#ffc340]"
+        class="w-1/2 !bg-white !text-[#ffc340] !border !border-[#ffc340] cursor-pointer !hover:bg-[#ffc340]"
       >
         Back
       </BaseButton>
@@ -990,7 +999,7 @@ const isChecked = ref(false);
 
 const nextStep = () => {
   console.log("Next step");
-  router.push("/confirm")
+  router.push("/confirm");
 };
 
 const previous = () => {

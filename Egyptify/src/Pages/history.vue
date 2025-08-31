@@ -18,7 +18,7 @@ const hotelStore = useHotelStore();
 
 <template>
   <NavBarBlack />
-  <div class="p-6">
+  <div class="p-6 mt-18">
     <h2 class="text-2xl font-bold mb-4">Booking History</h2>
 
     <div v-if="bookingStore.history.length === 0">
@@ -29,7 +29,7 @@ const hotelStore = useHotelStore();
   <div
     v-for="booking in bookingStore.history"
     :key="booking.id"
-    class="border p-4 rounded shadow"
+    class="border border-gray-300 p-4 rounded shadow"
   >
     <h3 class="text-lg font-semibold">{{ booking.title }}</h3>
     <p>Date: {{ booking.date }}</p>

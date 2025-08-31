@@ -49,7 +49,7 @@
 
 <!-- Reviews -->
 <div class="mt-6">
-  <p class="text-[24px] font-semibold mb-2">Reviews</p>
+  <p class="text-[24px] font-semibold mb-2">Rate</p>
   <div v-for="rate in [4.5, 4.0, 3.5, 3.0]" :key="rate">
     <label class="!text-[16px] !font-normal">
       <input

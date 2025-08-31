@@ -30,7 +30,7 @@
     <div class="footer-section links">
       <h4 @click="gotocontact">Contact Us</h4>
       <ul>
-        <li><a href="#" @click="gotocontact">Contact</a></li>
+        <li><a href="#" @click="gotocontact" >Contact</a></li>
         <li><router-link :to="{ path: '/contact', hash: '#form' }">Form</router-link></li>
         <li><router-link :to="{path: '/contact',hash:'#email'}">Email</router-link></li>
         <li><router-link :to="{path: '/contact',hash:'#contactway'}">Social</router-link></li>
@@ -86,7 +86,8 @@ const gotohome=()=>{
 .footer-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* لينكات عالشمال */
+  align-items: flex-start;
+  cursor: pointer;
 }
 
 .logo-img {

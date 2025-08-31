@@ -14,7 +14,7 @@
                 'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
                 'bg-yellow-400 text-black border-yellow-500': selectedInterests.includes(interest),
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': !selectedInterests.includes(interest)
-              }">
+              }" class="cursor-pointer">
               {{ interest }}
             </button>
           </div>
@@ -28,7 +28,7 @@
                 'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
                 'bg-yellow-400 text-black border-yellow-500': selectedBudget === budget.value,
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': selectedBudget !== budget.value
-              }">
+              }" class="cursor-pointer">
               {{ budget.label }}
             </button>
           </div>
@@ -42,7 +42,7 @@
                 'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
                 'bg-yellow-400 text-black border-yellow-500': selectedTransportation === transport,
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': selectedTransportation !== transport
-              }">
+              }" class="cursor-pointer">
               {{ transport }}
             </button>
           </div>

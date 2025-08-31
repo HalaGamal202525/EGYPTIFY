@@ -249,7 +249,7 @@ import foot from "../../components/footer.vue";
   <NavBarBlack />
 
   <!-- ✅ Steps Bar -->
-  <div class="w-full bg-white shadow-md py-6 px-10 mt-2">
+  <div class="w-full bg-white shadow-md py-6 px-10 mt-22">
     <div class="flex justify-between items-center max-w-5xl mx-auto">
       <div class="flex-1 text-center">
         <div
@@ -462,13 +462,13 @@ import foot from "../../components/footer.vue";
       <div class="flex justify-between mt-10">
         <button
           @click="goBack"
-          class="px-6 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium"
+          class="px-6 py-2 rounded-lg bg-gray-200 cursor-pointer hover:bg-gray-300 text-gray-700 font-medium"
         >
           Back
         </button>
         <button
           @click="goToNext"
-          class="px-6 py-2 rounded-lg bg-[#ffc340] hover:bg-[#e6ac20] text-white font-medium"
+          class="px-6 py-2 rounded-lg bg-[#ffc340] cursor-pointer hover:bg-[#e6ac20] text-white font-medium"
         >
           Next
         </button>

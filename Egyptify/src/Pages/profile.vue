@@ -277,17 +277,17 @@
         <h2 class="text-xl font-bold text-yellow-500 mb-6 mt-8">Reviews Left</h2>
         <div class="space-y-6">
           <div
-            v-for="review in reviews"
+           v-for="review in reviewStore.reviews"
             :key="review.id"
             class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
           >
             <div class="flex-grow">
               <p class="text-gray-700 font-semibold mb-1">
-                {{ review.location }}
+                {{ review.name }}
               </p>
-              <p class="text-sm text-gray-500 mb-1">
+              <!-- <p class="text-sm text-gray-500 mb-1">
                 {{ new Date(review.date.toDate()).toLocaleDateString() }}
-              </p>
+              </p> -->
 
               <div class="flex items-center mb-2">
                 <i
@@ -300,7 +300,13 @@
                 ></i>
               </div>
 
-              <p class="text-gray-700 text-sm">{{ review.text }}</p>
+<p class="text-gray-700 font-semibold mb-1">
+  {{ review.selected }}
+</p>
+<p class="text-sm text-gray-500 mb-1">
+  {{ new Date(review.date).toLocaleDateString() }}
+</p>
+<p class="text-gray-700 text-sm">{{ review.comment }}</p>
             </div>
             <div class="ml-4 flex-shrink-0">
               <img
@@ -522,6 +528,12 @@ import {
 ///////////////////
 import { useImageStore } from "../data/imagepicker";
 import { useUserStore } from "../data/signupstore";
+import { useReviewStore } from "../data/reviewstore";
+
+
+const reviewStore = useReviewStore();
+const reviews = reviewStore.reviews;
+
 
 const store = useImageStore();
 const userStore = useUserStore();
@@ -645,7 +657,7 @@ const newReview = reactive({
   location: "User's Review",
 });
 
-const reviews = ref([]);
+// const reviews = ref([]);
 
 const fetchUserReviews = async () => {
   const user = auth.currentUser;

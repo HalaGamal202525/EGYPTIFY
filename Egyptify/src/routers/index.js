@@ -228,6 +228,11 @@ component:FoodDetail
   component: () => import('../Pages/UserReview.vue'),
   props: true
 },
+{
+  path: '/site-review',
+  name: 'SiteReview',
+  component: () => import('../Pages/SiteReview.vue'),
+},
 
 
 

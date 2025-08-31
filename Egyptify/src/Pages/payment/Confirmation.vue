@@ -2,7 +2,7 @@
   <NavBarBlack />
 
   <!-- 🔹 Stepper -->
-<div class="w-full bg-white shadow-md py-6 px-10 mt-2">
+<div class="w-full bg-white shadow-md py-6 px-10 mt-22">
   <div class="flex justify-between items-center max-w-5xl mx-auto">
     <!-- Step 1 -->
     <div class="flex-1 text-center">
@@ -86,7 +86,7 @@
   <!-- 🔘 زر العودة -->
   <BaseButton
     @click="$router.push('/history')"
-    class="w-full py-3 bg-[#ffc340] text-white text-lg font-bold rounded-xl shadow-md hover:scale-105 transition"
+    class="w-full py-3 bg-[#ffc340] text-white text-lg font-bold cursor-pointer rounded-xl shadow-md hover:scale-105 transition"
   >
     ⬅ Go to History
   </BaseButton>
