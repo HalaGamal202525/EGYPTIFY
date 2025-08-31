@@ -46,22 +46,29 @@
     />
 
     <div
-      @click="viewMode = 'annual'"
-      :class="viewMode === 'annual'
-          ? ' rounded-[16px] scale-100'
-          : 'opacity-90'"
-    >
-      <ButtonComponent>Annual</ButtonComponent>
-    </div>
+  @click="viewMode = 'annual'"
+  :class="[
+    'cursor-pointer transition duration-200',
+    viewMode === 'annual'
+      ? 'bg-blue-500 text-white rounded-[16px] scale-105'
+      : 'bg-gray-200 text-gray-700 opacity-80'
+  ]"
+>
+  <ButtonComponent>Annual</ButtonComponent>
+</div>
 
-    <div
-      @click="viewMode = 'monthly'"
-      :class="viewMode === 'monthly'
-          ? 'ring-2 ring-yellow-500 rounded-[16px] scale-100'
-          : 'opacity-90'"
-    >
-      <ButtonComponent>Monthly</ButtonComponent>
-    </div>
+<div
+  @click="viewMode = 'monthly'"
+  :class="[
+    'cursor-pointer transition duration-200',
+    viewMode === 'monthly'
+      ? 'bg-blue-500 text-white rounded-[16px] scale-105'
+      : 'bg-gray-200 text-gray-700 opacity-80'
+  ]"
+>
+  <ButtonComponent>Monthly</ButtonComponent>
+</div>
+
   </div>
 </section>
 
