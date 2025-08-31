@@ -145,12 +145,12 @@
         <p class="text-xl text-gray-700">Things to Do</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-9 px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-8">
         <div
           v-for="card in discover"
           :key="card.id"
           @click="goToCategory(card.title)"
-          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 discover cursor-pointer"
+          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 hover:z-100 discover cursor-pointer"
         >
           <img
             :src="card.image"
@@ -356,7 +356,7 @@
       </div>
     </section>
     <!-- package -->
-    <section class="py-16 bg-[#F9FAFB]">
+    <section class="py-16 bg-[#FFFDF9]">
       <div class="text-center mb-18">
         <h2 class="special-heading">Packages</h2>
         <p class="text-xl text-gray-700">Explore Packages</p>
