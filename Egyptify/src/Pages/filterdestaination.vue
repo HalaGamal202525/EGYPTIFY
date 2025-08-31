@@ -77,7 +77,7 @@
           filters.rate.includes(rate) ? 'bg-yellow-200' : 'bg-white',
         ]"
       >
-        {{ rate }}
+        ⭐ {{ rate }}
       </button>
     </div>
      <div v-else>
@@ -89,7 +89,7 @@
             v-model="filters.rate"
             class="mx-3"
           />
-          <label :for="`rate-${rate}`">{{ rate }}</label>
+          <label :for="`rate-${rate}`">⭐ {{ rate }}</label>
         </div>
       </div>
   </div>

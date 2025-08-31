@@ -70,7 +70,7 @@
             filters.review.includes(rate) ? 'bg-yellow-200' : 'bg-white'
           ]"
         >
-          {{ rate }} & up
+         ⭐ {{ rate }}+
         </button>
       </div>
 
@@ -78,7 +78,7 @@
         <div v-for="rate in rates" :key="rate">
           <label class="!text-[16px] !font-normal">
             <input type="checkbox" :value="rate" v-model="filters.review" class="mr-1" />
-            {{ rate }} & up
+           ⭐ {{ rate }}+
           </label>
         </div>
       </div>

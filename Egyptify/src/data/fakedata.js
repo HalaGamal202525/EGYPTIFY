@@ -67,12 +67,12 @@ export function generateEgyptGovernorates(count = 10) {
       id: i + 1,
       name: `${gov} Restaurant ${companyName}`,
       governorate: gov,
-      rating: Number((Math.random() * 2 + 3).toFixed(1)),
+      rating: [3, 3.5, 4, 4.5][Math.floor(Math.random() * 4)],
       reviewsCount: faker.number.int({ min: 50, max: 5000 }),
       rank: `#${faker.number.int({ min: 1, max: 1500 })} of 1500 Restaurants`,
       cuisine,
-    price: faker.number.int({ min: 100, max: 500 }),
-          image: img,
+      price: faker.number.int({ min: 100, max: 500 }),
+      image: img,
       slug,
     };
   });
