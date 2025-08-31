@@ -51,7 +51,7 @@
     'cursor-pointer transition duration-200',
     viewMode === 'annual'
       ? 'bg-blue-500 text-white rounded-[16px] scale-105'
-      : 'bg-gray-200 text-gray-700 opacity-80'
+      : 'bg-gray-200 border-yellow-700 text-gray-700 opacity-80'
   ]"
 >
   <ButtonComponent>Annual</ButtonComponent>
@@ -63,7 +63,7 @@
     'cursor-pointer transition duration-200',
     viewMode === 'monthly'
       ? 'bg-blue-500 text-white rounded-[16px] scale-105'
-      : 'bg-gray-200 text-gray-700 opacity-80'
+      : 'bg-gray-200 border-yellow-700 text-gray-700 opacity-80'
   ]"
 >
   <ButtonComponent>Monthly</ButtonComponent>
