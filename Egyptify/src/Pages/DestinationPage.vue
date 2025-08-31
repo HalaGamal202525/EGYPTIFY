@@ -14,7 +14,7 @@
 
     <div class="p-4 md:p-9">
       <div class="flex flex-col lg:flex-row gap-6 items-start">
-        <div class="w-full lg:w-64 mt-0 bg-gray-100 p-4 rounded shadow space-y-4">
+        <div class="w-full lg:w-64 mt-0 bg-white p-4 rounded shadow space-y-4">
           <button
             @click="openOverlay"
             class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full"
@@ -182,4 +182,3 @@ function applyOverlayFilters() {
 }
 </script>
 <br>
-This video explains the difference between `align-items` and `align-content` in CSS Flexbox, both of which are useful for controlling alignment.

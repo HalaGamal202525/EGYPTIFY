@@ -28,7 +28,7 @@
         <p class="text-green-700 font-bold text-base">{{ data.afterdesc }}</p>
         <p class="line-through text-sm text-gray-400">{{ data.beforedesc }}</p>
       </div>
-        <p class="text-gray-800 text-base h-4">spot left: {{ data.numoflocation }}</p>
+        <p class="text-gray-800 text-base h-8">spot left: {{ data.numoflocation }}</p>
         <p class="text-gray-800 text-base h-6">Type: {{ data.type }}</p>
 
         <div
