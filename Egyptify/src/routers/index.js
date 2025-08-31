@@ -303,11 +303,15 @@ component:FoodDetail
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior() {
-  return { top: 0 }
-}
-
-})
-
+scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      // If a saved position exists (from a back button), use it.
+      return savedPosition;
+    } else {
+      // Otherwise, scroll to the top of the page.
+      return { top: 0 };
+    }
+  },
+});
 
 export default router
