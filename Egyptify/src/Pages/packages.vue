@@ -1,9 +1,9 @@
 <template>
   <Navbar/>
-  <section class="py-0 mb-8 bg-[#FFFDF9] px-4 md:px-12">
-    <div class="text-center my-12">
-      <h2 class="text-4xl font-bold text-gray-800 mb-2">All Packages</h2>
-      <p class="text-gray-600 text-lg">Choose the right trip for you</p>
+  <section class=" mb-8 bg-[#FFFDF9] px-4 md:px-12">
+    <div class="text-center ">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">All Packages</h2>
+      <p class="text-gray-600 text-lg mb-4">Choose the right trip for you</p>
     </div>
 
     <!-- Tabs -->

@@ -35,8 +35,8 @@
             <li><strong>Entry Fees:</strong> {{ place.entryFees }}</li>
             <li><strong>Visiting Hours:</strong> {{ place.visitingHours }}</li>
             <li>
-              <strong>Map:</strong>
-              <a :href="place.mapLink" target="_blank" class="text-blue-600 underline">View on Google Maps</a>
+              <strong>Map: </strong>
+              <a :href="place.mapLink" target="_blank" class="text-blue-600 underline">Open on Google Maps</a>
             </li>
           </ul>
         </div>
@@ -118,7 +118,7 @@ const places = [
   location: "Al-Azhar St., Islamic Cairo, Egypt",
   entryFees: "Free Entry",
   visitingHours: "9:00 AM – 6:00 PM",
-  mapLink: "https://maps.app.goo.gl/QrZHUcYxKMZ2",
+  mapLink: "https://maps.app.goo.gl/BZ96LqkBLKRcneyo8",
   price: 100 ,
   rating: 4.8,
   reviews: [
@@ -141,7 +141,7 @@ const places = [
   location: "Agilkia Island, Aswan, Egypt",
   entryFees: "150 EGP (Adults), 75 EGP (Students)",
   visitingHours: "7:00 AM – 5:00 PM",
-  mapLink: "https://maps.app.goo.gl/4oUQDAZUz6x9Vjv87",
+  mapLink: "https://maps.app.goo.gl/BwPEBrVkpAqkF8GM8",
   price: 250,
   rating: 4.8,
   reviews: [
@@ -165,7 +165,7 @@ const places = [
   location: "Blue Hole, Dahab, South Sinai, Egypt",
   entryFees: "Free access (diving tours extra)",
   visitingHours: "6:00 AM – 6:00 PM",
-  mapLink: "https://maps.app.goo.gl/dahab-blue-hole",
+  mapLink: "https://maps.app.goo.gl/WW7eu3B5QbQ9cTFj8",
   price: 220,
   rating: 4.7,
   reviews: [
@@ -184,7 +184,7 @@ const places = [
     location: "Alexandria, Egypt",
     entryFees: "70 EGP (Adults), 35 EGP (Students)",
     visitingHours: "9:00 AM – 4:00 PM",
-    mapLink: "https://maps.app.goo.gl/alexandria-library",
+    mapLink: "https://maps.app.goo.gl/1xmRpM64jttFqrdm6",
     price: 150,
     rating: 4.3,
     reviews: [
