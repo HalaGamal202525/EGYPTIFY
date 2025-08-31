@@ -64,7 +64,7 @@ if (props.source === "Dest") {
   <span v-else-if="booking.restaurant?.name">Restaurant</span>
   <span v-else-if="booking.transportation?.type">Transportation</span>
           </h3>
-          <p class="text-sm text-gray-500">{{ booking.date }}</p>
+          <p class="text-sm text-gray-500"><span class="text-lg text-gray-900">Date :</span> {{ booking.date }}</p>
         </div>
 
         <!-- ✅ تفاصيل الرحلة -->
