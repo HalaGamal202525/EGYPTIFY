@@ -18,8 +18,17 @@ function goToDetails(id) {
 <template>
   <div class="text-black">
     <navbar />
+    <div class="container mx-auto px-14 mt-26">
+      <router-link
+        to="/blogs"
+        class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100"
+      >
+        <i class="fas fa-arrow-left mr-2 text-lg"></i>
+        <span class="font-medium">Back</span>
+      </router-link>
+    </div>
 
-   <div class="max-w-4xl mx-auto mt-24 px-4">
+   <div class="max-w-4xl mx-auto mt-8 px-4">
   <div class="w-full max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg">
     <img
       :src="blog.image"
