@@ -11,7 +11,7 @@
           @click="toggleOption('type', cat)"
           :class="[
             'px-4 py-2 rounded-2xl m-1',
-            filters.type.includes(cat) ? 'bg-yellow-200' : 'bg-white'
+            filters.type.includes(cat) ? 'bg-yellow-200' : 'bg-white',
           ]"
         >
           {{ cat }}
@@ -21,8 +21,12 @@
       <div v-else>
         <div v-for="cat in categories" :key="cat" class="font-light">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="cat" v-model="filters.type"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
- />
+            <input
+              type="checkbox"
+              :value="cat"
+              v-model="filters.type"
+              class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+            />
             {{ cat }}
           </label>
         </div>
@@ -40,7 +44,7 @@
           @click="toggleOption('location', loc)"
           :class="[
             'px-4 py-2 rounded-2xl m-1',
-            filters.location.includes(loc) ? 'bg-yellow-200' : 'bg-white'
+            filters.location.includes(loc) ? 'bg-yellow-200' : 'bg-white',
           ]"
         >
           {{ loc }}
@@ -50,8 +54,12 @@
       <div v-else>
         <div v-for="loc in locations" :key="loc">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="loc" v-model="filters.location"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
-/>
+            <input
+              type="checkbox"
+              :value="loc"
+              v-model="filters.location"
+              class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+            />
             {{ loc }}
           </label>
         </div>
@@ -69,18 +77,23 @@
           @click="toggleOption('review', rate)"
           :class="[
             'px-4 py-2 rounded-2xl m-1',
-            filters.review.includes(rate) ? 'bg-yellow-200' : 'bg-white'
+            filters.review.includes(rate) ? 'bg-yellow-200' : 'bg-white',
           ]"
         >
-         ⭐ {{ rate }}+
+          ⭐ {{ rate }}+
         </button>
       </div>
 
       <div v-else>
         <div v-for="rate in rates" :key="rate">
           <label class="!text-[16px] !font-normal">
-            <input type="checkbox" :value="rate" v-model="filters.review"                 class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2" />
-           ⭐ {{ rate }}+
+            <input
+              type="checkbox"
+              :value="rate"
+              v-model="filters.review"
+              class="accent-[#ffc340] !bg-gray-100 rounded cursor-pointer mx-2"
+            />
+            ⭐ {{ rate }}+
           </label>
         </div>
       </div>
@@ -95,8 +108,8 @@ const props = defineProps({
   allPlaces: Array,
   isMobile: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 const emit = defineEmits(["update:filters"]);
 
@@ -106,7 +119,7 @@ const categories = [
   "Entertainment location",
   "Historical location",
   "Restaurant",
-  "Hotel"
+  "Hotel",
 ];
 
 const locations = [
@@ -118,7 +131,7 @@ const locations = [
   "Dahab",
   "Siwa",
   "Giza",
-  "Sinai"
+  "Sinai",
 ];
 
 const rates = [4.5, 4.0, 3.5, 3.0];
@@ -127,7 +140,7 @@ const rates = [4.5, 4.0, 3.5, 3.0];
 const filters = reactive({
   type: [],
   location: [],
-  review: []
+  review: [],
 });
 
 watch(
