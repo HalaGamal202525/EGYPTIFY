@@ -18,7 +18,6 @@
           <button
             @click="openOverlay"
 
-            class="lg:hidden bg-yellow-400 text-gray-800 font-bold px-4 py-2 rounded shadow w-full"
             class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full"
           >
             Filter
