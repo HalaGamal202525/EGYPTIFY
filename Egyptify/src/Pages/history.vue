@@ -18,7 +18,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
 <template>
   <NavBarBlack />
   <div class="p-6 mt-4 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800">📖 Booking History</h2>
+    <h2 class="text-2xl font-bold mb-6 text-gray-800"> Booking History</h2>
     <!-- لو مفيش حجوزات -->
     <div
       v-if="bookingStore.history.length === 0"
