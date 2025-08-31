@@ -203,11 +203,12 @@
         </form>
       </div>
 
-      <div v-else-if="activeTab === 'saved'">
-        <h2 class="text-xl font-bold text-yellow-500 mb-6">
+      <div v-else-if="activeTab === 'history'">
+        <history />
+        <!-- <h2 class="text-xl font-bold text-yellow-500 mb-6">
           Saved Trips/Bookings
-        </h2>
-        <h3 class="text-lg font-semibold text-gray-800">Upcoming trips</h3>
+        </h2> -->
+        <!-- <h3 class="text-lg font-semibold text-gray-800">Upcoming trips</h3>
         <div class="space-y-6 mt-4">
           <div
             v-for="trip in upcomingTrips"
@@ -266,7 +267,7 @@
               />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div v-else-if="activeTab === 'reviews'">
@@ -498,7 +499,7 @@ import Footer from "../components/footer.vue";
 import BaseButton from "../components/BaseButton.vue";
 import InputField from "../components/InputField.vue";
 import Card from "../components/Card.vue"; // Import the Card component
-
+import history from "../Pages/history.vue";
 // Firebase imports
 import {
   getAuth,
@@ -585,7 +586,7 @@ console.log(store.selectedImage);
 const activeTab = ref("personal");
 const tabs = [
   { id: "personal", name: "Personal Details" },
-  { id: "saved", name: "Saved trips/Bookings" },
+  { id: "history", name: "Booking History" },
   { id: "reviews", name: "Reviews Left" },
   { id: "favorite", name: "Favorite Places" },
   { id: "settings", name: "Settings" },

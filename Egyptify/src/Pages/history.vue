@@ -17,7 +17,7 @@ const hotelStore = useHotelStore();
 </script>
 
 <template>
-  <NavBarBlack />
+
   <div class="p-6 mt-4">
     <h2 class="text-2xl font-bold mb-4">Booking History</h2>
 
@@ -181,5 +181,5 @@ const hotelStore = useHotelStore();
 </div>
 
   </div>
-  <foot/>
+
 </template>
