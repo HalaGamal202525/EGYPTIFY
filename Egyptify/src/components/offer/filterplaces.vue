@@ -2,7 +2,7 @@
   <div class="flex flex-wrap gap-4 my-6 bg-gray-200 p-3 rounded-2xl">
     <!-- Category -->
     <div>
-      <p class="text-[24px] font-semibold mb-2">Category</p>
+      <p class="text-[20px] font-semibold mb-2">Category</p>
 
       <div v-if="isMobile" class="flex flex-wrap">
         <button
@@ -30,7 +30,7 @@
 
     <!-- Location -->
     <div class="mt-6">
-      <p class="text-[24px] font-semibold mb-2">Location</p>
+      <p class="text-[20px] font-semibold mb-2">Location</p>
 
       <div v-if="isMobile" class="flex flex-wrap">
         <button
@@ -58,7 +58,7 @@
 
     <!-- Reviews -->
     <div class="mt-6">
-      <p class="text-[24px] font-semibold mb-2">Rate</p>
+      <p class="text-[20px] font-semibold mb-2">Rate</p>
 
       <div v-if="isMobile" class="flex flex-wrap">
         <button

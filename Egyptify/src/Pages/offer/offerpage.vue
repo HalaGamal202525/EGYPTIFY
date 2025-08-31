@@ -2,7 +2,7 @@
   <Navbar />
   <div class="flex flex-col lg:flex-row gap-6 px-6 my-22">
     <!-- Sidebar Filters -->
-    <div class="w-full lg:w-64 mt-10 bg-gray-100 p-4 rounded shadow space-y-4">
+    <div class="w-full lg:w-64 mt-10 bg-white p-4 rounded shadow space-y-4">
       <!-- زرار يظهر بس في الموبايل -->
       <button
         @click="openOverlay"

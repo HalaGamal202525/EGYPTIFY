@@ -6,7 +6,7 @@
     <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 
     <!-- Location -->
-    <h2 class="font-bold my-2">Location</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Location</h2>
     <div class="filter-group">
       <div v-if="isMobile" class="flex flex-wrap">
         <button
@@ -37,7 +37,7 @@
 
     <!-- Category -->
 
-    <h2 class="font-bold my-2">Category</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Category</h2>
 
     <div v-if="isMobile" class="flex flex-wrap">
       <button
@@ -66,7 +66,7 @@
       </div>
     <!-- Rate -->
 
-    <h2 class="font-bold my-2">Rate</h2>
+    <h2 class="text-[20px] font-semibold mb-2">Rate</h2>
     <div v-if="isMobile" class="flex flex-wrap">
       <button
         v-for="rate in uniqueRate"
