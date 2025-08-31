@@ -1,10 +1,10 @@
 <template>
   <nav
-    class="w-full flex items-center justify-between px-[137px] py-4 h-20 bg-white fixed top-0 left-0 z-50 shadow-sm"
+    class="bg-[#FFFDF9]  w-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-[137px] py-4 h-20  top-0 left-0 z-50 transition-colors duration-300 sm:space-x-3 shadow-sm"
   >
-    <div class="flex items-center md:hidden">
-      <button @click="isOpen = !isOpen" class="!text-black text-2xl">
-        <i class="fa-solid fa-bars !text-black"></i>
+    <div class="flex items-center md:hidden px-4">
+      <button @click="isOpen = !isOpen" class="text-white text-2xl">
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
     <div
@@ -132,7 +132,7 @@
       />
     </div>
 
-    <div class="hidden md:flex space-x-8 items-center text-[16px]">
+    <div class="hidden md:flex space-x-4 items-center text-[16px]">
       <a
         href="#"
         class="px-4 text-gray-800 dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
@@ -147,7 +147,7 @@
       >
       <router-link
         to="/site-review"
-        class="px-4 text-black dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
+        class="px-4 text-gray-800 dark:text-gray-200 font-bold hover:text-yellow-400 dark:hover:text-yellow-300 transition-colors"
         >Review</router-link
       >
 
@@ -172,20 +172,31 @@
 
     <div class="flex items-center space-x-4">
       <!-- <button
-        @click="themeStore.toggleDarkMode" 
-        class="p-2 rounded-full bg-yellow-400 dark:bg-yellow-500 
-               hover:bg-yellow-500 dark:hover:bg-yellow-400 
-               transition-all duration-300 hover:scale-105"
-        :title="themeStore.isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+        @click="themeStore.toggleDarkMode"
+        class="p-2 rounded-full bg-yellow-500 dark:bg-yellow-500 hover:bg-yellow-500 dark:hover:bg-yellow-500 transition-all duration-300 hover:scale-105"
+        :title="
+          themeStore.isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+        "
       >
-        <svg 
-          :class="['w-5 h-5 transition-transform', themeStore.isDarkMode ? 'rotate-180 text-black' : 'text-black']"
-          fill="currentColor" 
+        <svg
+          :class="[
+            'w-5 h-5 transition-transform',
+            themeStore.isDarkMode ? 'rotate-180 text-black' : 'text-black',
+          ]"
+          fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path v-if="themeStore.isDarkMode" d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          <path v-else fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+          <path
+            v-if="themeStore.isDarkMode"
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          />
+          <path
+            v-else
+            fill-rule="evenodd"
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            clip-rule="evenodd"
+          />
         </svg>
       </button> -->
 
@@ -257,7 +268,7 @@
       <template v-else>
         <BaseButton
           @click="gologin"
-          class="bg-yellow-400 dark:bg-yellow-500 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 dark:hover:bg-yellow-400 hover:scale-105 transition cursor-pointer"
+          class="bg-yellow-500 dark:bg-yellow-500 text-black font-bold px-4 py-2 rounded hover:bg-yellow-500 dark:hover:bg-yellow-500 hover:scale-105 transition cursor-pointer"
         >
           Login
         </BaseButton>
@@ -277,6 +288,7 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useImageStore } from "../data/imagepicker";
 import Menubar from "./NavBarMenu.vue";
 import { useThemeStore } from "../data/themeStore";
+
 import { RouterLink } from "vue-router";
 
 const isOpen = ref(false);

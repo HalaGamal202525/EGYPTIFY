@@ -17,6 +17,7 @@
         <div class="w-full lg:w-64 mt-0 bg-white p-4 rounded shadow space-y-4">
           <button
             @click="openOverlay"
+
             class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full"
           >
             Filter

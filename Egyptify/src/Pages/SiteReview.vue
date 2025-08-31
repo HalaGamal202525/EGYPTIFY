@@ -1,16 +1,17 @@
 <template>
   <NavBarBlack />
   <div
-    class="min-h-screen bg-gradient-to-br from-gray-50 via-yellow-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 mt-12 px-6"
+    class="min-h-screen  bg-[#FFFDF9] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-6 mt-6"
   >
     <div
-      class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-10 transition"
+      class="max-w-3xl mx-auto bg-white rounded-lg border border-gray-300 shadow-2xl p-10  transition"
     >
       <!-- Title -->
       <h1
-        class="text-4xl font-extrabold text-center bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-6"
+        class="text-3xl font-bold text-yellow-500 text-center mb-6"
       >
-        Share Your Experience With Our Services
+        Share Your Experience With Our 
+        <br> Services
       </h1>
       <p class="text-center text-gray-600 dark:text-gray-300 mb-10 text-lg">
         Your feedback helps us improve and guide others to make the best choice
