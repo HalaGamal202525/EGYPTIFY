@@ -280,7 +280,7 @@
           <div
            v-for="review in reviewStore.reviews"
             :key="review.id"
-            class="flex items-center bg-gray-50 p-4 rounded-lg shadow-sm"
+            class="flex items-center bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm"
           >
             <div class="flex-grow">
               <p class="text-gray-700 font-semibold mb-1">
@@ -313,7 +313,7 @@
               <img
                 :src="selectedImage || '/about-us/girl-10.png'"
                 alt="main"
-                class="w-24 h-24 object-cover rounded-md"
+                class="w-24 h-24 object-contain rounded-md"
               />
             </div>
           </div>

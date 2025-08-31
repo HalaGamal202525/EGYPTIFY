@@ -1,9 +1,9 @@
 <template>
   <NavBarBlack />
-<div class="pt-2">
+<div class="pt-2 bg-[#FFFDF9] min-h-screen mb-10">
 
   <div class="flex px-6 py-4 gap-6 flex-col sm:flex-row">
-    <div class="flex-1 rounded-lg border border-gray-400">
+    <div class="flex-1 rounded-lg border border-gray-300 shadow-lg">
       <div class="px-6 py-4 space-y-6">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-4">

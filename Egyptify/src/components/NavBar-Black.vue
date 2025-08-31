@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-[#FFFDF9]  w-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-[137px] py-4 h-20  top-0 left-0 z-50 transition-colors duration-300 sm:space-x-3 shadow-sm"
+    class="bg-[#FFFDF9]  w-full mb-1 flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-[137px] py-4 h-20  top-0 left-0 z-50 transition-colors duration-300 sm:space-x-3 shadow-sm"
   >
     <div class="flex items-center md:hidden px-4">
       <button @click="isOpen = !isOpen" class="!text-black text-2xl">

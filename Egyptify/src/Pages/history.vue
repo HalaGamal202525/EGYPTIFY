@@ -19,7 +19,7 @@ const hotelStore = useHotelStore();
 <template>
 
   <div class="p-6 mt-4">
-    <h2 class="text-2xl font-bold mb-4">Booking History</h2>
+    <h2 class="text-xl font-bold text-yellow-500 mb-6">Booking History</h2>
 
     <div v-if="bookingStore.history.length === 0" class="h-68">
       <p class="text-gray-500">No bookings yet.</p>
@@ -29,13 +29,13 @@ const hotelStore = useHotelStore();
   <div
     v-for="booking in bookingStore.history"
     :key="booking.id"
-    class="border border-gray-300 p-4 rounded shadow"
+    class="border border-gray-300 p-4 rounded-lg shadow-md"
   >
     <h3 class="text-lg font-semibold">{{ booking.title }}</h3>
-    <p>Date: {{ booking.date }}</p>
+    <p class="text-gray-400">Date: {{ booking.date }}</p>
 
     <!-- ✅ تفاصيل الرحلة -->
-<div v-if="booking.trip?.title" class="bg-white p-6 rounded-2xl shadow-lg">
+<div v-if="booking.trip?.title" class="bg-white p-6 mt-4 rounded-lg border border-gray-200 shadow-lg">
   <!-- صورة الرحلة -->
   <div class="relative">
     <img
