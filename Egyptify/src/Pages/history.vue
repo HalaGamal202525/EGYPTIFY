@@ -193,7 +193,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
         </div>
         <!-- ✅ الـ Event -->
         <div
-          v-if="booking.event"
+          v-if="booking.event?.name"
           class="bg-white rounded-2xl shadow-md overflow-hidden"
         >
           <img
