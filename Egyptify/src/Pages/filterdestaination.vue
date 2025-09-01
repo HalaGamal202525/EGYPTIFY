@@ -1,7 +1,7 @@
 
 <template>
   <div
-    class="sidebar bg-gray-200 rounded-lg border border-gray-300 p-6 shadow-lg"
+    class="sidebar bg-gray-200 rounded-lg border border-gray-300 p-6 mt-20 shadow-lg"
   >
     <h3 class="text-xl font-semibold text-yellow-500">Filter by:</h3>
 

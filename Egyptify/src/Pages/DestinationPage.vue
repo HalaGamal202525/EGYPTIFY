@@ -32,10 +32,12 @@
           </div>
 
           <transition name="fade">
-            <div
-              v-if="isOverlayOpen"
-              class="fixed inset-0 bg-gray-300 bg-opacity-50 z-50 flex justify-center mt-0 items-start pt-20 overflow-y-auto"
-            >
+  <div
+  v-if="isOverlayOpen"
+  class="fixed inset-0 bg-gray-300 bg-opacity-50 z-[99999] flex justify-center items-start pt-20 overflow-y-auto"
+>
+
+
               <div class="rounded-lg bg-white w-11/12 max-w-md p-6 shadow-lg mb-20">
                 <SideFilter :destinationdata="destinationdata" @update:filters="updateTempFilters" :isMobile="true" />
                 <div class="flex justify-end mt-4 space-x-2">
