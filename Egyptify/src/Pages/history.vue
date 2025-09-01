@@ -3,17 +3,10 @@ import { useBookingStore } from "../data/bookingstore";
 import NavBarBlack from "../components/NavBar-Black.vue";
 import foot from "../components/footer.vue";
 const bookingStore = useBookingStore();
-import { useCardStore } from "../data/store";
-import { useHotelStore } from "../data/storehotel";
-import { useReservationStore } from "../data/Storeresturant";
-import { useeventStore } from "../data/storeevent";
-import { useTransportationStore } from "../data/storetransport";
-import { useGuestStore } from "../data/storeguset";
+import { onMounted } from "vue";
 
-const guestStore = useGuestStore();
-const transportationStore = useTransportationStore();
-const reservationStore = useReservationStore();
-const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore = useHotelStore(); import { ref } from "vue"; const props = defineProps({ source: { type: String, required: true, }, }); const title = ref(""); if (props.source === "Dest") { title.value = "Trip"; } else if (props.source === "Hotel") { title.value = "Hotel"; } else if (props.source === "Restaurant") { title.value = "Resturant"; } else { title.value = "Transportion"; }
+console.log(localStorage.getItem("bookingHistory"));
+
 </script>
 <template>
 
@@ -62,7 +55,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
           </div>
           <div>
             <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-               {{ booking.trip.title }}
+             Place:  {{ booking.trip.title }}
             </h3>
             <p class="text-gray-600 mt-1">
               Category:
@@ -73,7 +66,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
               </span>
             </p>
             <p class="text-gray-900 font-semibold mt-2 text-lg">
-               {{ booking.trip.price }} <span class="text-sm">EGP</span>
+             Price  {{ booking.trip.price }} <span class="text-sm">EGP</span>
             </p>
           </div>
         </div>

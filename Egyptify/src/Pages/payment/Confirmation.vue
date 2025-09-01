@@ -114,17 +114,23 @@ const bookingStore = useBookingStore();
 const route = useRoute();
 
 onMounted(() => {
+  // تحديد نوع المكان
   let placeType = "destination";
   if (route.path.includes("hotel")) placeType = "Hotel";
   else if (route.path.includes("restaurant")) placeType = "Restaurant";
   else if (route.path.includes("transport")) placeType = "Transport";
 
-  bookingStore.addBooking({
+  // بناء بيانات الحجز
+  const baseBooking = {
     placeName: placeType,
     date: new Date().toLocaleString(),
     userData: guestStore.guest,
-  });
+  };
+
+  // إضافة الحجز
+  bookingStore.addBooking(baseBooking);
 });
+
 
 
  
