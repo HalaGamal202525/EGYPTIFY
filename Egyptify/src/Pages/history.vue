@@ -16,7 +16,7 @@ const reservationStore = useReservationStore();
 const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore = useHotelStore(); import { ref } from "vue"; const props = defineProps({ source: { type: String, required: true, }, }); const title = ref(""); if (props.source === "Dest") { title.value = "Trip"; } else if (props.source === "Hotel") { title.value = "Hotel"; } else if (props.source === "Restaurant") { title.value = "Resturant"; } else { title.value = "Transportion"; }
 </script>
 <template>
-  <NavBarBlack />
+
   <div class="p-6 mt-4 max-w-6xl mx-auto">
     <h2 class="text-2xl font-bold mb-6 text-gray-800"> Booking History</h2>
     <!-- لو مفيش حجوزات -->
@@ -243,5 +243,5 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
       </div>
     </div>
   </div>
-  <foot />
+
 </template>
