@@ -171,11 +171,13 @@ const router = useRouter();
 const bookingStore = useCardStore();
 
 function handleBook(place) {
+    const price = parseInt(place.afterdesc.replace(/\D/g, "")) || 0;
   bookingStore.setCardData({
     image: place.img,
     title: place.name,
     rate: place.review || place.rating || 0,
-    price: place.afterdesc
+    price:  price,
+    total:price
   });
   router.push("/form");
 }
