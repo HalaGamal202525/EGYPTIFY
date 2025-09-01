@@ -24,25 +24,24 @@ export const useHotelStore = defineStore("hotel", {
     },
   }),
 
-  getters: {
-    // ✅ حساب المدة
-    totalNights: (state) => {
-      if (!state.bookingDetails.checkIn || !state.bookingDetails.checkOut) return 0;
-      const checkInDate = new Date(state.bookingDetails.checkIn);
-      const checkOutDate = new Date(state.bookingDetails.checkOut);
-      const diffTime = checkOutDate - checkInDate;
-      const nights = diffTime / (1000 * 60 * 60 * 24);
-      return nights > 0 ? nights : 0; // ماينفعش يكون بالسالب
-    },
-
-    // ✅ المجموع الكلي = عدد الليالي × سعر الغرفة
-    totalPrice: (state) => {
-      return state.bookingDetails.price * (state.bookingDetails.checkOut && state.bookingDetails.checkIn
-        ? (new Date(state.bookingDetails.checkOut) - new Date(state.bookingDetails.checkIn)) / (1000 * 60 * 60 * 24)
-        : 0);
-    },
+getters: {
+  totalNights: (state) => {
+    if (!state.bookingDetails.checkIn || !state.bookingDetails.checkOut) return 0;
+    const checkInDate = new Date(state.bookingDetails.checkIn);
+    const checkOutDate = new Date(state.bookingDetails.checkOut);
+    const diffTime = checkOutDate - checkInDate;
+    const nights = diffTime / (1000 * 60 * 60 * 24);
+    return nights > 0 ? Math.round(nights) : 0; // استخدام Math.round لتجنب الكسور
   },
 
+  totalPrice: (state) => {
+    const nights = state.bookingDetails.checkIn && state.bookingDetails.checkOut
+      ? Math.round((new Date(state.bookingDetails.checkOut) - new Date(state.bookingDetails.checkIn)) / (1000*60*60*24))
+      : 0;
+    return nights * state.bookingDetails.price;
+  },
+}
+,
   actions: {
     // حفظ بيانات الفندق
     setHotel(hotel) {

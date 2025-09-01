@@ -11,7 +11,16 @@ console.log(localStorage.getItem("bookingHistory"));
 <template>
 
   <div class="p-6 mt-4 max-w-6xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-gray-800"> Booking History</h2>
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-gray-800">Booking History</h2>
+      <!-- زرار مسح الكل -->
+      <button
+        @click="bookingStore.clearHistory"
+        class="px-4 py-2 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-red-600 transition"
+      >
+        🗑 Clear All
+      </button>
+    </div>
     <!-- لو مفيش حجوزات -->
     <div
       v-if="bookingStore.history.length === 0"
