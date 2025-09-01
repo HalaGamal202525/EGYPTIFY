@@ -37,7 +37,7 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
   <Hero
     title="Explore the Best of Egypt"
     description="Choose your next adventure from unique cultural experiences to thrilling outdoor activities."
-    :image="HeroImage"
+    :image="HeroImage" loading="lazy"
   />
 
   <section class="py-6 px-6 bg-[#FFFCF6]">
@@ -45,10 +45,10 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Experiences</h2>
       <p class="text-gray-600 mb-6">Camel rides, Felucca trips, city tours</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img :src="exp1" alt="Felucca" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="exp2" alt="Camel ride" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="exp3" alt="Camel tour" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="exp4" alt="Desert safari" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp1" alt="Felucca" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp2" alt="Camel ride" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp3" alt="Camel tour" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp4" alt="Desert safari" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/destination">
@@ -63,10 +63,10 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Local Food Tours</h2>
       <p class="text-gray-600 mb-6">Taste Egypt’s flavors like a local!</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img :src="food1" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="food2" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="food3" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="food4" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food1" alt="Food tour" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food2" alt="Food tour" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food3" alt="Food tour" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food4" alt="Food tour" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/resturant">
@@ -81,10 +81,10 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Shopping Spots</h2>
       <p class="text-gray-600 mb-6">Colorful bazaars and traditional markets</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img :src="shop1" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="shop2" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="shop3" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="shop4" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop1" alt="Shopping" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop2" alt="Shopping" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop3" alt="Shopping" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop4" alt="Shopping" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/events">
@@ -103,10 +103,10 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
         For thrill seekers – desert safaris and more
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img :src="adv1" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="adv2" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="adv3" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="adv4" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv1" alt="Adventure" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv2" alt="Adventure" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv3" alt="Adventure" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv4" alt="Adventure" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/adventures">
@@ -121,10 +121,10 @@ import event4 from "../assets/ExplorePage/Events/img4.webp";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Events & Festivals</h2>
       <p class="text-gray-600 mb-6">Live the moment in Egypt’s top events</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img :src="event1" alt="Events" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="event2" alt="Events" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="event3" alt="Events" class="rounded-xl w-full h-40 object-cover" />
-        <img :src="event4" alt="Events" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event1" alt="Events" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event2" alt="Events" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event3" alt="Events" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event4" alt="Events" loading="lazy" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/events">
