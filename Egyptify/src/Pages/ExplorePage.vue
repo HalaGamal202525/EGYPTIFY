@@ -5,6 +5,31 @@ import HeroImage from "../assets/ExplorePageHero.jpg";
 import BaseButton from "../components/BaseButton.vue";
 import CTAImage from "../assets/ExplorePage/CTA.jpg";
 import Footer from "../components/footer.vue";
+
+import exp1 from "../assets/ExplorePage/experience/img1.jpg";
+import exp2 from "../assets/ExplorePage/experience/img2.jpg";
+import exp3 from "../assets/ExplorePage/experience/img3.jpg";
+import exp4 from "../assets/ExplorePage/experience/img4.jpg";
+
+import food1 from "../assets/ExplorePage/food/img1.jpg";
+import food2 from "../assets/ExplorePage/food/img2.jpg";
+import food3 from "../assets/ExplorePage/food/img3.jpg";
+import food4 from "../assets/ExplorePage/food/img4.jpg";
+
+import shop1 from "../assets/ExplorePage/shopping/img1.jpg";
+import shop2 from "../assets/ExplorePage/shopping/img2.jpg";
+import shop3 from "../assets/ExplorePage/shopping/img3.jpg";
+import shop4 from "../assets/ExplorePage/shopping/img4.jpg";
+
+import adv1 from "../assets/ExplorePage/adv&act/img1.jpg";
+import adv2 from "../assets/ExplorePage/adv&act/img2.jpg";
+import adv3 from "../assets/ExplorePage/adv&act/img3.jpg";
+import adv4 from "../assets/ExplorePage/adv&act/img4.jpg";
+
+import event1 from "../assets/ExplorePage/Events/img1.jpg";
+import event2 from "../assets/ExplorePage/Events/img2.jpg";
+import event3 from "../assets/ExplorePage/Events/img3.jpg";
+import event4 from "../assets/ExplorePage/Events/img4.webp";
 </script>
 
 <template>
@@ -20,26 +45,10 @@ import Footer from "../components/footer.vue";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Experiences</h2>
       <p class="text-gray-600 mb-6">Camel rides, Felucca trips, city tours</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img
-          src="..\assets\ExplorePage\experience\img1.jpg"
-          alt="Felucca"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\experience\img2.jpg"
-          alt="Camel ride"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\experience\img3.jpg"
-          alt="Camel tour"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\experience\img4.jpg"
-          alt="Desert safari"
-          class="rounded-xl w-full h-40 object-cover"
-        />
+        <img :src="exp1" alt="Felucca" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp2" alt="Camel ride" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp3" alt="Camel tour" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="exp4" alt="Desert safari" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/destination">
@@ -54,26 +63,10 @@ import Footer from "../components/footer.vue";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Local Food Tours</h2>
       <p class="text-gray-600 mb-6">Taste Egypt’s flavors like a local!</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img
-          src="..\assets\ExplorePage\food\img1.jpg"
-          alt="Food tour"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\food\img2.jpg"
-          alt="Food tour"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\food\img3.jpg"
-          alt="Food tour"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\food\img4.jpg"
-          alt="Food tour"
-          class="rounded-xl w-full h-40 object-cover"
-        />
+        <img :src="food1" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food2" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food3" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="food4" alt="Food tour" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/resturant">
@@ -88,26 +81,10 @@ import Footer from "../components/footer.vue";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Shopping Spots</h2>
       <p class="text-gray-600 mb-6">Colorful bazaars and traditional markets</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img
-          src="..\assets\ExplorePage\shopping\img1.jpg"
-          alt="Shopping"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\shopping\img2.jpg"
-          alt="Shopping"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\shopping\img3.jpg"
-          alt="Shopping"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\shopping\img4.jpg"
-          alt="Shopping"
-          class="rounded-xl w-full h-40 object-cover"
-        />
+        <img :src="shop1" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop2" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop3" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="shop4" alt="Shopping" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/events">
@@ -126,26 +103,10 @@ import Footer from "../components/footer.vue";
         For thrill seekers – desert safaris and more
       </p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img
-          src="..\assets\ExplorePage\adv&act\img1.jpg"
-          alt="Adventure"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\adv&act\img2.jpg"
-          alt="Adventure"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\adv&act\img3.jpg"
-          alt="Adventure"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\adv&act\img4.jpg"
-          alt="Adventure"
-          class="rounded-xl w-full h-40 object-cover"
-        />
+        <img :src="adv1" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv2" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv3" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="adv4" alt="Adventure" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/adventures">
@@ -160,26 +121,10 @@ import Footer from "../components/footer.vue";
       <h2 class="text-2xl font-bold text-gray-900 mb-2">Events & Festivals</h2>
       <p class="text-gray-600 mb-6">Live the moment in Egypt’s top events</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-        <img
-          src="..\assets\ExplorePage\Events\img1.jpg"
-          alt="Events"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\Events\img2.jpg"
-          alt="Events"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\Events\img3.jpg"
-          alt="Events"
-          class="rounded-xl w-full h-40 object-cover"
-        />
-        <img
-          src="..\assets\ExplorePage\Events\img4.webp"
-          alt="Events"
-          class="rounded-xl w-full h-40 object-cover"
-        />
+        <img :src="event1" alt="Events" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event2" alt="Events" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event3" alt="Events" class="rounded-xl w-full h-40 object-cover" />
+        <img :src="event4" alt="Events" class="rounded-xl w-full h-40 object-cover" />
       </div>
       <div class="flex justify-end">
         <router-link to="/events">
