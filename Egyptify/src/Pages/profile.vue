@@ -1,10 +1,10 @@
 <template>
   <NavBarBlack />
-  <div class="min-h-screen bg-[#fdfcf9] mb-12  px-4 sm:px-6 lg:px-8">
+  <div class="bg-[#fdfcf9] mb-12 px-4 sm:px-6 lg:px-8">
     <div
-      class="max-w-3xl mx-auto mt-10 bg-white p-8 rounded-lg shadow-xl border border-gray-300"
+      class="max-w-3xl mx-auto bg-white mt-8 p-8 rounded-lg shadow-xl border border-gray-300"
     >
-      <div class="flex items-center mb-8">
+      <div class="flex items-center mb-8 space-x-4">
         <div class="px-3">
           <img
             :src="selectedImage || '/about-us/girl-4.png'"
@@ -67,7 +67,7 @@
           <p class="text-gray-600">Joined in 2025</p>
         </div>
       </div>
-
+<!-- Tabs -->
       <div class="border-b border-gray-300 mb-8">
         <nav class="-mb-px flex space-x-8" aria-label="Tabs">
           <a
@@ -323,7 +323,7 @@
       <div v-else-if="activeTab === 'favorite'">
         <h2 class="text-xl font-bold text-yellow-500 mb-6">My Favorite Places</h2>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4"
         >
           <Card
             v-for="place in favoritePlaces"
@@ -489,6 +489,7 @@
       </div>
     </div>
   </div>
+
   <Footer />
 </template>
 

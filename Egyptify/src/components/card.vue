@@ -26,10 +26,10 @@
         <i
           :class="[
             'fa-heart',
-            isFavorite ? 'fa-solid text-red-500' : 'fa-regular text-gray-400',
+            isFavorite ? 'fa-solid text-red-500' : 'fa-regular text-yellow-400',
           ]"
           class="text-lg transition-all duration-300 ease-in-out transform"
-          :style="{ color: isFavorite ? '#ffc340' : 'gray', scale: isFavorite ? '1.2' : '1' }"
+          :style="{ color: isFavorite ? '#ffc240' : '#ffc240', scale: isFavorite ? '1.2' : '1' }"
         >
         </i>
       </button>

@@ -1,10 +1,10 @@
 <template>
   <NavBarBlack />
   <div
-    class="min-h-screen  bg-[#FFFDF9] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-6 mt-6"
+    class="min-h-screen  bg-[#FFFDF9] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-6 "
   >
     <div
-      class="max-w-3xl mx-auto bg-white rounded-lg border border-gray-300 shadow-2xl p-10  transition"
+      class="max-w-3xl mx-auto mt-8 bg-white rounded-lg border  border-gray-300 shadow-2xl p-10  transition"
     >
       <!-- Title -->
       <h1
@@ -13,19 +13,19 @@
         Share Your Experience With Our 
         <br> Services
       </h1>
-      <p class="text-center text-gray-600 dark:text-gray-300 mb-10 text-lg">
+      <p class="text-center text-gray-500 dark:text-gray-300 mb-10 text-md">
         Your feedback helps us improve and guide others to make the best choice
         🌟
       </p>
 
       <!-- Tabs -->
-      <div class="flex flex-wrap justify-center gap-4 mb-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-4 mt-16">
         <div class="flex justify-center gap-4 mb-8 flex-wrap">
           <button
             v-for="(tab, index) in tabs"
             :key="tab"
             @click="activeTab = tab"
-            class="px-5 py-2 rounded-xl font-semibold cursor-pointer transition transform hover:scale-105 shadow-sm bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 sm:flex-1 sm:text-center"
+            class="px-5 py-2 rounded-lg font-semibold cursor-pointer transition transform hover:scale-105  bg-gray-100 border border-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-300 sm:flex-1 sm:text-center"
             :class="activeTab === tab ? 'bg-yellow-400 text-white' : ''"
           >
             {{ tab }}
@@ -45,7 +45,7 @@
             type="text"
             v-model="searchQuery"
             placeholder="Search..."
-            class="w-full pl-10 pr-4 py-3 border border-yellow-400 rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full pl-10 pr-4 py-3 border border-yellow-400 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
             @focus="showDropdown = true"
             @blur="hideDropdown"
           />
@@ -83,7 +83,7 @@
             v-model="review.name"
             type="text"
             placeholder="Enter your name"
-            class="w-full px-4 py-3 border border-yellow-400  rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full px-4 py-3 border border-yellow-400  rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           />
         </div>
 
@@ -118,18 +118,18 @@
             v-model="review.comment"
             placeholder="Write your feedback..."
             rows="4"
-            class="w-full px-4 py-3 border border-yellow-400  rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
+            class="w-full px-4 py-3 border border-yellow-400  rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 focus:outline-none transition"
           ></textarea>
         </div>
 
         <!-- Button -->
         <div class="text-center">
-          <button
+          <BaseButton
             type="submit"
-            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition transform hover:scale-105 cursor-pointer"
+            class=" cursor-pointer m-auto"
           >
             Submit Review
-          </button>
+          </BaseButton>
         </div>
       </form>
 
@@ -149,6 +149,7 @@
 import { ref, computed } from "vue";
 import NavBarBlack from "../components/NavBar-Black.vue";
 import { useReviewStore } from "../data/reviewstore";
+import BaseButton from "../components/BaseButton.vue";
 import foot from "../components/footer.vue";
 // Tabs
 const tabs = [

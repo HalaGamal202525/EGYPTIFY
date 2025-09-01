@@ -1,7 +1,7 @@
 <template>
   <NavBarBlack />
-  <div class="min-h-screen bg-[#FFFDF9] py-12 px-4 sm:px-6 lg:px-8 mt-6">
-    <div class="max-w-4xl mx-auto  bg-white rounded-lg border border-gray-300 shadow-2xl p-8">
+  <div class="min-h-screen bg-[#FFFDF9] py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto  bg-white rounded-lg border border-gray-300 shadow-2xl p-8  mt-6">
       <h1 class="text-3xl font-bold text-center text-yellow-500 mb-16">Trip Planner</h1>
 
       <div class="mb-10 text-center">
@@ -11,8 +11,8 @@
           <h3 class="text-m font-medium text-yellow-500 mb-3">Step 1: Select Your Interests</h3>
           <div class="flex flex-wrap gap-2">
             <button v-for="interest in interests" :key="interest" @click="toggleInterest(interest)" :class="{
-                'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
-                'bg-yellow-400 text-black border-yellow-500': selectedInterests.includes(interest),
+                'px-4 py-2 rounded-lg border text-xs font-medium transition-colors duration-200': true,
+                'bg-yellow-400 text-white border-yellow-500': selectedInterests.includes(interest),
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200' : !selectedInterests.includes(interest)
               }" class="cursor-pointer">
               {{ interest }}
@@ -25,8 +25,8 @@
           <div class="flex gap-2">
             <button v-for="budget in budgets" :key="budget.value" @click="selectedBudget = budget.value"
               :class="{
-                'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
-                'bg-yellow-400 text-black border-yellow-500': selectedBudget === budget.value,
+                'px-4 py-2 rounded-lg border text-xs font-medium transition-colors duration-200': true,
+                'bg-yellow-400 text-white border-yellow-500': selectedBudget === budget.value,
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': selectedBudget !== budget.value
               }" class="cursor-pointer">
               {{ budget.label }}
@@ -39,8 +39,8 @@
           <div class="flex gap-2">
             <button v-for="transport in transportation" :key="transport"
               @click="selectedTransportation = transport" :class="{
-                'px-4 py-2 rounded-xl border text-xs font-medium transition-colors duration-200': true,
-                'bg-yellow-400 text-black border-yellow-500': selectedTransportation === transport,
+                'px-4 py-2 rounded-lg border text-xs font-medium transition-colors duration-200': true,
+                'bg-yellow-400 text-white border-yellow-500': selectedTransportation === transport,
                 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200': selectedTransportation !== transport
               }" class="cursor-pointer">
               {{ transport }}
@@ -119,7 +119,7 @@
         </div>
 
         <div class="text-center">
-          <BaseButton @click="generateItinerary" :disabled="isLoading" class="ml-auto mr-auto w-[180px] ">
+          <BaseButton @click="generateItinerary" :disabled="isLoading" class="ml-auto mr-auto w-[180px] h-[50px] ">
             <span v-if="!isLoading">Generate Itinerary</span>
             <span v-else>Generating...</span>
           </BaseButton>
