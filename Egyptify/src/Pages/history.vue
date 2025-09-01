@@ -12,7 +12,7 @@ console.log(localStorage.getItem("bookingHistory"));
 
   <div class="p-6 mt-4 max-w-6xl mx-auto">
     <div class="flex justify-between items-center mb-6">
-      <h2 class="text-2xl font-bold text-gray-800">Booking History</h2>
+      <h2 class="text-xl font-bold text-yellow-500">Booking History</h2>
       <!-- زرار مسح الكل -->
       <button
         @click="showConfirmModal = true"
@@ -50,7 +50,7 @@ console.log(localStorage.getItem("bookingHistory"));
     <!-- لو مفيش حجوزات -->
     <div
       v-if="bookingStore.history.length === 0"
-      class="h-64 flex items-center justify-center"
+      class="flex items-center justify-center"
     >
       <p class="text-gray-400 text-lg">No bookings yet...</p>
     </div>
