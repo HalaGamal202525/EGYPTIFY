@@ -151,17 +151,20 @@ const filters = ref({
   city: "",
   type: "",
 });
-import { useCardStore } from "../data/store.js";
-const bookingStore = useCardStore();
+import { useeventStore } from "../data/storeevent";
+const bookingStore = useeventStore();
 
 function handleCardClick(card) {
-  bookingStore.setCardData({
+  bookingStore.setBookingData({
     image: card.image,
-    title: card.title,
-    rate: card.rate,
-    price: card.price,
+    name: card.title,
+    location: card.location,
+    date: card.date,
   });
 }
+
+
+
 
 const viewMode = ref("annual");
 const events = ref(bookingEvents.bookings || []);
@@ -235,6 +238,10 @@ const typeOptions = [
   { label: "Arts", value: "Arts" },
   { label: "Sports", value: "Sports" },
 ];
+
+
+
+
 </script>
 <style scoped>
 

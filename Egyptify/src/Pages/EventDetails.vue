@@ -136,21 +136,18 @@ const router = useRouter()
 const eventId = route.params.id
 
 const event = ref(null)
-import { useCardStore } from '../data/store.js'
-const bookingStore = useCardStore()
+import { useeventStore } from '../data/storeevent'
+const bookingStore = useeventStore()
 
 function bookNow() {
   if (!event.value) return;
 
-  bookingStore.setCardData({
-    image: event.value.image,
-    title: event.value.title,
-    rate: event.value.date,
+  bookingStore.updateDetails({
     price: event.value.price,
   });
-
-  router.push('/form');
+  router.push("/eventform");
 }
+
 
 
 onMounted(() => {

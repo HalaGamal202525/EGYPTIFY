@@ -1017,11 +1017,14 @@ import { useCardStore } from "../../data/store";
 import { useReservationStore } from "../../data/Storeresturant";
 import { useTransportationStore } from "../../data/storetransport";
 import { useHotelStore } from "../../data/storehotel";
+import {useeventStore} from "../../data/storeevent"
 
 const cardStore = useCardStore();
 const reservationStore = useReservationStore();
 const transportationStore = useTransportationStore();
 const hotelStore = useHotelStore();
+const eventdata = useeventStore();
+
 
 // 🟢 Total from all stores
 const grandTotal = computed(() => {
@@ -1029,7 +1032,8 @@ const grandTotal = computed(() => {
     (cardStore.total || 0) +
     (reservationStore.totalPrice || 0) +
     (transportationStore.transportation?.price || 0) +
-    (hotelStore.totalPrice || 0)
+    (hotelStore.totalPrice || 0)+
+    ( eventdata.booking.totalPrice || 0)
   );
 });
 </script>

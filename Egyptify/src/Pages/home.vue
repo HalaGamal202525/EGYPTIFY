@@ -150,7 +150,7 @@
           v-for="card in discover"
           :key="card.id"
           @click="goToCategory(card.title)"
-          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-120 hover:z-100 discover cursor-pointer"
+          class="relative rounded-xl overflow-hidden h-64 group shadow-lg transition-transform duration-300 hover:scale-116 hover:z-100 discover cursor-pointer"
         >
           <img
             :src="card.image"
@@ -311,7 +311,7 @@
         <div
           v-for="card in recommended"
           :key="card.id"
-          class="group py-2 transition-transform duration-300 hover:scale-110 flex justify-center items-center overflow-hidden"
+      class="group py-2 transition-transform duration-300 hover:-translate-y-6 flex justify-center items-center overflow-hidden"
         >
           <!-- Card -->
           <Card

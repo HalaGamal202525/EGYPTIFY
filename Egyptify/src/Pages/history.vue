@@ -6,41 +6,19 @@ const bookingStore = useBookingStore();
 import { useCardStore } from "../data/store";
 import { useHotelStore } from "../data/storehotel";
 import { useReservationStore } from "../data/Storeresturant";
+import { useeventStore } from "../data/storeevent";
 import { useTransportationStore } from "../data/storetransport";
 import { useGuestStore } from "../data/storeguset";
 
 const guestStore = useGuestStore();
 const transportationStore = useTransportationStore();
 const reservationStore = useReservationStore();
-const cardStore = useCardStore(); // ✅ نستخدمه هنا
-const hotelStore = useHotelStore();
-import { ref } from "vue";
-
-const props = defineProps({
-  source: {
-    type: String,
-    required: true,
-  },
-});
-
-const title = ref("");
-
-if (props.source === "Dest") {
-  title.value = "Trip";
-} else if (props.source === "Hotel") {
-  title.value = "Hotel";
-} else if (props.source === "Restaurant") {
-  title.value = "Resturant";
-} else {
-  title.value = "Transportion";
-}
+const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore = useHotelStore(); import { ref } from "vue"; const props = defineProps({ source: { type: String, required: true, }, }); const title = ref(""); if (props.source === "Dest") { title.value = "Trip"; } else if (props.source === "Hotel") { title.value = "Hotel"; } else if (props.source === "Restaurant") { title.value = "Resturant"; } else { title.value = "Transportion"; }
 </script>
-
 <template>
-
-  <div class="p-6 mt-4">
-    <h2 class="text-2xl font-bold mb-4">Booking History</h2>
-
+  <NavBarBlack />
+  <div class="p-6 mt-4 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-gray-800"> Booking History</h2>
     <!-- لو مفيش حجوزات -->
     <div
       v-if="bookingStore.history.length === 0"
@@ -48,34 +26,40 @@ if (props.source === "Dest") {
     >
       <p class="text-gray-400 text-lg">No bookings yet...</p>
     </div>
-
-<div v-else class="space-y-4">
-  <div
-    v-for="booking in bookingStore.history"
-    :key="booking.id"
-    class="border border-gray-300 p-4 rounded shadow"
-  >
-    <h3 class="text-lg font-semibold">{{ booking.title }}</h3>
-    <p>Date: {{ booking.date }}</p>
-
-    <!-- ✅ تفاصيل الرحلة -->
-<div v-if="booking.trip?.title" class="bg-white p-6 rounded-2xl shadow-lg">
-  <!-- صورة الرحلة -->
-  <div class="relative">
-    <img
-      v-if="booking.trip.image"
-      :src="booking.trip.image"
-      alt="Trip Image"
-      class="w-full h-48 object-cover rounded-xl shadow-sm hover:scale-105 transition-transform"
-    />
-    <!-- ⭐ التقييم -->
-    <span
-      class="absolute top-3 right-3 bg-yellow-400 text-white text-sm font-bold px-2 py-1 rounded-lg shadow"
-    >
-      ⭐ {{ booking.trip.rate }}
-    </span>
-  </div>
-
+    <!-- لو فيه حجوزات -->
+    <div v-else class="space-y-8">
+      <div
+        v-for="booking in bookingStore.history"
+        :key="booking.id"
+        class="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition p-6"
+      >
+        <!-- عنوان الحجز -->
+        <div class="flex justify-between items-center border-b pb-3 mb-4">
+          <h3 class="text-xl font-semibold text-gray-800">
+            ✨
+            <span v-if="booking.trip?.title">Trip</span>
+            <span v-else-if="booking.hotel?.name">Hotel</span>
+            <span v-else-if="booking.restaurant?.name">Restaurant</span>
+            <span v-else-if="booking.transportation?.type">Transportation</span>
+            <span v-else-if="booking.event?.name">Event</span>
+          </h3>
+          <p class="text-sm text-gray-500">{{ booking.date }}</p>
+        </div>
+        <!-- ✅ تفاصيل الرحلة -->
+        <div v-if="booking.trip?.title" class="space-y-4">
+          <div class="relative">
+            <img
+              v-if="booking.trip.image"
+              :src="booking.trip.image"
+              alt="Trip Image"
+              class="w-full h-52 object-cover rounded-xl shadow"
+            />
+            <span
+              class="absolute top-3 right-3 bg-yellow-400 text-white text-sm font-bold px-2 py-1 rounded-lg shadow"
+            >
+              ⭐ {{ booking.trip.rate }}
+            </span>
+          </div>
           <div>
             <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
               🗺️ {{ booking.trip.title }}
@@ -93,7 +77,6 @@ if (props.source === "Dest") {
             </p>
           </div>
         </div>
-
         <!-- ✅ الأنشطة -->
         <div v-if="booking.activities?.length" class="mt-6">
           <h3 class="text-lg font-bold mb-3 text-gray-800">🎯 Activities</h3>
@@ -118,7 +101,6 @@ if (props.source === "Dest") {
             </div>
           </div>
         </div>
-
         <!-- ✅ المطعم -->
         <div
           v-if="booking.restaurant?.name"
@@ -143,7 +125,6 @@ if (props.source === "Dest") {
               </p>
             </div>
           </div>
-
           <div
             v-if="booking.restaurant.reservation?.name"
             class="mt-4 bg-white p-4 rounded-lg shadow-sm"
@@ -161,7 +142,6 @@ if (props.source === "Dest") {
             </p>
           </div>
         </div>
-
         <!-- ✅ المواصلات -->
         <div
           v-if="booking.transportation?.type"
@@ -184,7 +164,6 @@ if (props.source === "Dest") {
             Price: {{ booking.transportation.price }} EGP
           </p>
         </div>
-
         <!-- ✅ الفندق -->
         <div
           v-if="booking.hotel?.name"
@@ -195,7 +174,6 @@ if (props.source === "Dest") {
           </h3>
           <p class="text-yellow-500">⭐ {{ booking.hotel.rate }}</p>
           <p class="text-gray-600">{{ booking.hotel.address }}</p>
-
           <div
             v-if="booking.hotel.bookingDetails?.roomType"
             class="mt-3 bg-gray-50 p-4 rounded-lg"
@@ -213,10 +191,43 @@ if (props.source === "Dest") {
             <p>Total: {{ booking.hotel.totalPrice }} EGP</p>
           </div>
         </div>
+        <!-- ✅ الـ Event -->
+        <div
+          v-if="booking.event"
+          class="bg-white rounded-2xl shadow-md overflow-hidden"
+        >
+          <img
+            :src="booking.event.image"
+            alt="event image"
+            class="w-full h-40 object-cover"
+          />
+          <div class="p-4 space-y-2">
+            <h3 class="text-xl font-bold text-gray-800">
+              {{ booking.event.name }}
+            </h3>
+            <p class="text-gray-600">
+              <span class="font-medium">Date:</span> {{ booking.event.date }}
+            </p>
+            <p class="text-gray-600">
+              <span class="font-medium">Location:</span>
+              {{ booking.event.location }}
+            </p>
+            <p v-if="booking.event.type" class="text-gray-600">
+              <span class="font-medium">Type:</span> {{ booking.event.type }}
+            </p>
+            <p class="text-gray-800 font-semibold text-lg">
+              Price: {{ booking.event.totalPrice }} EGP
+            </p>
+            <p>
+              <span class="font-medium">Guests:</span>
+              {{ booking.event.people }}
+            </p>
+          </div>
+        </div>
 
         <!-- ✅ الحالة -->
         <div class="pt-4 border-t mt-4 flex justify-between items-center">
-          <p class="text-lg">
+          <p class="text-sm">
             Status:
             <span
               :class="

@@ -63,6 +63,7 @@ import Resturantlist from '../Pages/resturantlist.vue';
 import Transportiondatils from '../Pages/transportiondatils.vue';
 import hotelsform from "../Pages/payment/paymenthotelform.vue";
 import resturantform from "../Pages/payment/paymentresturantform.vue";
+import Eventform from "../Pages/payment/paymentformevent.vue"
 import transportfrom from "../Pages/payment/paymenttransport.vue";
 import Confirmation from '../Pages/payment/Confirmation.vue';
 import history from '../Pages/history.vue';
@@ -78,6 +79,7 @@ const routes = [
   { path:"/hotelform", component:hotelsform },
   { path:"/resturantform", component:resturantform },
   { path:"/transportform", component:transportfrom },
+  {path:"/eventform",component:Eventform},
   { path: '/payment', component: payment },
   { path:"/confirm", component:Confirmation },
   { path:"/transportiondetails", component:Transportiondatils },
