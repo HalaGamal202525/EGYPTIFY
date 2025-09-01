@@ -36,7 +36,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
         <!-- عنوان الحجز -->
         <div class="flex justify-between items-center border-b pb-3 mb-4">
           <h3 class="text-xl font-semibold text-gray-800">
-            ✨
+            
             <span v-if="booking.trip?.title">Trip</span>
             <span v-else-if="booking.hotel?.name">Hotel</span>
             <span v-else-if="booking.restaurant?.name">Restaurant</span>
@@ -62,7 +62,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
           </div>
           <div>
             <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-              🗺️ {{ booking.trip.title }}
+               {{ booking.trip.title }}
             </h3>
             <p class="text-gray-600 mt-1">
               Category:
@@ -73,13 +73,13 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
               </span>
             </p>
             <p class="text-gray-900 font-semibold mt-2 text-lg">
-              💰 {{ booking.trip.price }} <span class="text-sm">EGP</span>
+               {{ booking.trip.price }} <span class="text-sm">EGP</span>
             </p>
           </div>
         </div>
         <!-- ✅ الأنشطة -->
         <div v-if="booking.activities?.length" class="mt-6">
-          <h3 class="text-lg font-bold mb-3 text-gray-800">🎯 Activities</h3>
+          <h3 class="text-lg font-bold mb-3 text-gray-800"> Activities</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div
               v-for="(activity, index) in booking.activities"
@@ -120,8 +120,8 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
               <p class="text-gray-600 text-sm">
                 {{ booking.restaurant.address }}
               </p>
-              <p class="text-yellow-500 text-sm">
-                ⭐ {{ booking.restaurant.rate }}
+              <p class="text-yellow-900 text-sm">
+                 {{ booking.restaurant.rating }} ⭐
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
           class="bg-white p-5 my-6 rounded-xl shadow border-l-4 border-yellow-400"
         >
           <h3 class="text-lg font-bold text-gray-800 mb-2">
-            🏨 {{ booking.hotel.name }}
+             {{ booking.hotel.name }}
           </h3>
           <p class="text-yellow-500">⭐ {{ booking.hotel.rate }}</p>
           <p class="text-gray-600">{{ booking.hotel.address }}</p>
