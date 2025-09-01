@@ -51,7 +51,7 @@ function goToDetails(id) {
           <h2 class="text-xl font-bold text-gray-800 mb-2">{{ blog.title }}</h2>
           <p class="text-gray-500 text-sm flex-grow">{{ blog.summary }}</p>
           <div class="mt-4">
-            <BaseButton class="w-1/2 mx-auto text-center">View offer</BaseButton>
+            <BaseButton class="w-1/2 mx-auto text-center">View Details</BaseButton>
           </div>
         </div>
       </div>
