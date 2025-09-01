@@ -85,10 +85,10 @@
 
   <!-- 🔘 زر العودة -->
   <BaseButton
-    @click="$router.push('/history')"
+    @click="$router.push('/')"
     class="w-full py-3 bg-[#ffc340] text-white text-lg font-bold cursor-pointer rounded-xl shadow-md hover:scale-105 transition"
   >
-    ⬅ Go to History
+    ⬅ Go to Home
   </BaseButton>
 </div>
 

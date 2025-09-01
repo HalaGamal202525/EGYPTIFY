@@ -247,7 +247,7 @@
                 >Profile</a
               >
             </li>
-            <li>
+          <li>
               <a
                 @click="goToHistory"
                 class="block px-4 py-2 hover:bg-yellow-200 dark:hover:bg-gray-700 cursor-pointer"

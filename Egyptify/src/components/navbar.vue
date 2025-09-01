@@ -247,13 +247,7 @@
                 >Profile</a
               >
             </li>
-            <li>
-              <a
-                @click="goToHistory"
-                class="block px-4 py-2 hover:bg-yellow-200 dark:hover:bg-gray-700 cursor-pointer"
-                >History</a
-              >
-            </li>
+          
             <li class="border-t border-gray-200 dark:border-gray-700">
               <a
                 @click="logout"
