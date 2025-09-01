@@ -216,11 +216,14 @@ const cardStore = useCardStore(); // ✅ نستخدمه هنا const hotelStore 
               <span class="font-medium">Type:</span> {{ booking.event.type }}
             </p>
             <p class="text-gray-800 font-semibold text-lg">
-              Price: {{ booking.event.totalPrice }} EGP
+               Price: {{ booking.event.price }} EGP
             </p>
             <p>
               <span class="font-medium">Guests:</span>
               {{ booking.event.people }}
+            </p>
+               <p class="text-gray-800 font-semibold text-lg">
+              Total Price: {{ booking.event.totalPrice }} EGP
             </p>
           </div>
         </div>
