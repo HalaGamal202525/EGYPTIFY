@@ -3,23 +3,49 @@ import { useBookingStore } from "../data/bookingstore";
 import NavBarBlack from "../components/NavBar-Black.vue";
 import foot from "../components/footer.vue";
 const bookingStore = useBookingStore();
-import { onMounted } from "vue";
-
+import { onMounted,ref } from "vue";
+const showConfirmModal = ref(false); 
 console.log(localStorage.getItem("bookingHistory"));
 
 </script>
 <template>
 
   <div class="p-6 mt-4 max-w-6xl mx-auto">
-     <div class="flex justify-between items-center mb-6">
+    <div class="flex justify-between items-center mb-6">
       <h2 class="text-2xl font-bold text-gray-800">Booking History</h2>
       <!-- زرار مسح الكل -->
       <button
-        @click="bookingStore.clearHistory"
+        @click="showConfirmModal = true"
         class="px-4 py-2 bg-red-500 text-white text-sm font-semibold rounded-lg hover:bg-red-600 transition"
       >
-        🗑 Clear All
+         Clear All
       </button>
+    </div>
+
+    <!-- ✅ المودال -->
+    <div
+      v-if="showConfirmModal"
+      class="model fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    >
+      <div class="bg-white p-6 rounded-xl shadow-lg w-96 text-center">
+        <h3 class="text-lg font-bold mb-4 text-gray-800">
+          Are you sure you want to delete all bookings?
+        </h3>
+        <div class="flex justify-center gap-4">
+          <button
+            @click="bookingStore.clearHistory(); showConfirmModal = false"
+            class="px-4 py-2 bg-yellow-400 text-white rounded-lg hover:bg-red-600 transition"
+          >
+            Yes, Delete
+          </button>
+          <button
+            @click="showConfirmModal = false"
+            class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
     </div>
     <!-- لو مفيش حجوزات -->
     <div
@@ -250,3 +276,8 @@ console.log(localStorage.getItem("bookingHistory"));
   </div>
 
 </template>
+<style scoped>
+.model{
+  background-color: rgba(164, 165, 165, 0.384);
+}
+</style>
