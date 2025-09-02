@@ -109,7 +109,7 @@
     <span
       v-for="amenity in amenities"
       :key="amenity"
-      class="bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full text-xs border border-yellow-200"
+      class="bg-yellow-50 text-yellow-900 px-3 py-1 rounded-full text-sm border border-yellow-200"
     >
       {{ amenity }}
     </span>
