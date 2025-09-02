@@ -21,20 +21,36 @@
         <span>{{ duration }}</span>
       </div>
     </div>
+<!-- Amenities -->
+<div v-if="amenities?.length" class="mb-5">
+  <p class="text-gray-900 font-semibold mb-2">Amenities</p>
+  <div class="flex flex-wrap gap-2">
+    <span
+      v-for="amenity in amenities"
+      :key="amenity"
+      class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs border border-green-200"
+    >
+      {{ amenity }}
+    </span>
+  </div>
+</div>
 
-    <!-- Features -->
-    <div v-if="features?.length" class="mb-5 h-20">
-      <p class="text-gray-900 font-semibold mb-2">Features</p>
-      <div class="flex flex-wrap gap-2">
-        <span
-          v-for="feature in features"
-          :key="feature"
-          class="bg-yellow-50 text-yellow-800 px-3 py-1 rounded-full text-xs border border-yellow-200"
-        >
-          {{ feature }}
-        </span>
-      </div>
+ <!-- Features with icons -->
+<div v-if="features?.length" class="mb-5">
+  <p class="text-gray-900 font-semibold mb-2">Features</p>
+  <div class="flex flex-wrap gap-3">
+    <div 
+      v-for="feature in features"
+      :key="feature"
+      class="flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs border border-blue-200"
+    >
+      <i v-if="feature === 'WiFi'" class="fas fa-wifi"></i>
+      <i v-else-if="feature === 'Rest Stops'" class="fas fa-chair"></i>
+      <i v-else class="fas fa-check-circle"></i>
+      {{ feature }}
     </div>
+  </div>
+</div>
 
     <!-- Routes -->
     <div v-if="routes?.length" class="mb-6">
@@ -61,7 +77,8 @@ defineProps({
   price: String,
   duration: String,
   features: Array,
-  routes: Array
+  routes: Array,
+    amenities: Array,  
 })
 import BaseButton from './BaseButton.vue'
 </script>

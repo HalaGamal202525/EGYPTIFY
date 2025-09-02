@@ -103,12 +103,18 @@
         </div>
       </div>
 
-      <div
-        v-if="amenities"
-        class="grid grid-col gap-3 text-sm text-gray-600 mt-3"
-      >
-        Features: {{ amenities }}
-      </div>
+    <div v-if="amenities?.length" class="my-5">
+  <p class="text-gray-900 font-semibold mb-2">Features : </p>
+  <div class="flex flex-wrap gap-2">
+    <span
+      v-for="amenity in amenities"
+      :key="amenity"
+      class="bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full text-xs border border-yellow-200"
+    >
+      {{ amenity }}
+    </span>
+  </div>
+</div>
 
       <div class="flex items-center justify-between mt-4">
         <span class="text-yellow-600 font-bold text-md" v-if="price">
