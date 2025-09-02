@@ -455,7 +455,7 @@ async function logout() {
 
 <style scoped>
 nav {
-  z-index: 999999 !important;
+  z-index: 100 !important;
 }
 
 .fade-enter-active,

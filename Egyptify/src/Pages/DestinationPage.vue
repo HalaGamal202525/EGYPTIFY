@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <navbar class="sm:hidden"/>
     <div
       class="relative h-64 md:h-125 bg-cover bg-center"
       style="background-image: url('/Destination/background.jpg')"
