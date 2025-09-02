@@ -59,7 +59,7 @@
 
         <ul
           v-if="showDropdown && filteredOptions.length"
-          class="border mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto absolute w-full z-10 shadow-lg"
+          class="border border-[#ffc340] mt-2 rounded-lg bg-white dark:bg-gray-700 max-h-40 overflow-y-auto absolute w-full z-10 shadow-lg"
         >
           <li
             v-for="(item, index) in filteredOptions"

@@ -104,17 +104,17 @@
             class="bg-white shadow-2xl rounded-xl w-full"
           />
         </router-link>
-
+<!-- 
         <router-link
           to="/destination"
-          class="absolute bottom-4 right-4 opacity-0  group-hover:opacity-100 transition-opacity duration-300 z-10"
+          class="absolute bottom-4 right-3 opacity-0  group-hover:opacity-100 transition-opacity duration-300 z-10"
         >
           <div
             class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg hover:bg-yellow-500"
           >
             <i class="fa-solid fa-arrow-right !text-white"></i>
           </div>
-        </router-link>
+        </router-link> -->
       </div>
     </div>
     
@@ -206,7 +206,7 @@
       <button
         v-if="canScrollLeft"
         @click="scrollLeft"
-        class="absolute top-1/2 -translate-y-1/2 left-4 z-10 w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 transition flex items-center justify-center shadow-lg"
+        class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 left-4 z-10 w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 transition flex items-center justify-center shadow-lg"
       >
         <i class="fa-solid fa-arrow-left text-white"></i>
       </button>
@@ -215,7 +215,7 @@
       <button
         v-if="canScrollRight"
         @click="scrollRight"
-        class="absolute top-1/2 -translate-y-1/2 right-4 z-10 w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 transition flex items-center justify-center shadow-lg"
+        class="absolute top-1/2 -translate-y-1/2 right-3 z-10 w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 transition flex items-center justify-center shadow-lg"
       >
         <i class="fa-solid fa-arrow-right text-white"></i>
       </button>

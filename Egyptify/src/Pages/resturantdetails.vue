@@ -58,7 +58,7 @@ const submitReservation = () => {
     <!-- Back Link -->
     <router-link
       to="/resturant"
-      class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100 mb-6 mx-15"
+      class="inline-flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-100 mb-6 mx-20 px-22"
     >
       <i class="fas fa-arrow-left mr-2 text-lg"></i>
       <span class="font-medium">Back</span>
