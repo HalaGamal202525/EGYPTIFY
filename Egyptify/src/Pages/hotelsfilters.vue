@@ -10,7 +10,7 @@
         :key="loc"
         @click="toggleOption('location', loc)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.location.includes(loc) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >
@@ -33,7 +33,7 @@
         :key="budget"
         @click="toggleOption('budget', budget)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.budget.includes(budget) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >
@@ -56,7 +56,7 @@
         :key="time"
         @click="toggleOption('bestTime', time)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.bestTime.includes(time) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >

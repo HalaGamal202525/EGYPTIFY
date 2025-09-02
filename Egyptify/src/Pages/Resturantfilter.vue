@@ -10,7 +10,7 @@
         :key="gov"
         @click="toggleOption('governorate', gov)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.governorate.includes(gov) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >
@@ -34,7 +34,7 @@
         :key="rate"
         @click="toggleOption('rating', rate)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.rating.includes(rate) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >
@@ -57,7 +57,7 @@
         :key="cuisine"
         @click="toggleOption('cuisine', cuisine)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer',
           filters.cuisine.includes(cuisine) ? 'bg-yellow-200' : 'bg-white'
         ]"
       >

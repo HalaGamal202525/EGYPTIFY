@@ -20,7 +20,7 @@
         <div class="lg:hidden w-full mb-4 flex justify-center">
           <button
             @click="isOverlayOpen = true"
-            class="bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full max-w-md"
+            class="bg-yellow-400 text-white font-bold px-4 py-2  cursor-pointer rounded shadow w-full max-w-md"
           >
             Filter
           </button>
@@ -92,7 +92,7 @@
   <transition name="fade">
     <div
       v-if="isOverlayOpen"
-      class="fixed inset-0 bg-gray-300 bg-opacity-50 z-50 flex justify-center mt-0 items-start pt-20 overflow-y-auto"
+      class="fixed inset-0 bg-gray-300 z-1000 bg-opacity-50 z-50 flex justify-center mt-0 items-start pt-20 overflow-y-auto"
     >
       <div class="rounded-lg bg-white w-11/12 max-w-md p-6 shadow-lg mb-20">
         <SideFilter 
@@ -102,10 +102,10 @@
 />
 
         <div class="flex justify-end mt-4 space-x-2">
-          <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] text-[#ffc340] rounded hover:bg-yellow-700">
+          <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] text-[#ffc340] rounded hover:bg-yellow-400 hover:!text-yellow-900  cursor-pointer">
             Cancel
           </button>
-          <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">
+          <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500  cursor-pointer">
             Apply
           </button>
         </div>

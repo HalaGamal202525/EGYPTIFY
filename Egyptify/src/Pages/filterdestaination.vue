@@ -14,7 +14,7 @@
           :key="loc"
           @click="toggleOption('location', loc)"
           :class="[
-            'px-4 py-2 rounded-2xl m-1',
+            'px-4 py-2 rounded-2xl m-1  cursor-pointer',
             filters.location.includes(loc) ? 'bg-yellow-200' : 'bg-white',
           ]"
         >
@@ -45,7 +45,7 @@
         :key="type"
         @click="toggleOption('category', type)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1  cursor-pointer  ',
           filters.category.includes(type) ? 'bg-yellow-200' : 'bg-white',
         ]"
       >
@@ -73,7 +73,7 @@
         :key="rate"
         @click="toggleOption('rate', rate)"
         :class="[
-          'px-4 py-2 rounded-2xl m-1',
+          'px-4 py-2 rounded-2xl m-1 cursor-pointer',
           filters.rate.includes(rate) ? 'bg-yellow-200' : 'bg-white',
         ]" 
       >

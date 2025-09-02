@@ -18,7 +18,7 @@
           <button
             @click="openOverlay"
 
-            class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full"
+            class="lg:hidden bg-yellow-400 text-white font-bold px-4 py-2 rounded shadow w-full  cursor-pointer"
           >
             Filter
           </button>
@@ -41,8 +41,8 @@
               <div class="rounded-lg bg-white w-11/12 max-w-md p-6 shadow-lg mb-20">
                 <SideFilter :destinationdata="destinationdata" @update:filters="updateTempFilters" :isMobile="true" />
                 <div class="flex justify-end mt-4 space-x-2">
-                  <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] !text-[#ffc340] rounded hover:bg-yellow-700">Cancel</button>
-                  <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded hover:bg-yellow-500">Apply</button>
+                  <button @click="closeOverlay" class="px-4 py-2 bg-white border border-[#ffc30] !text-[#ffc340]  cursor-pointer rounded hover:bg-yellow-400 hover:!text-yellow-900">Cancel</button>
+                  <button @click="applyOverlayFilters" class="px-4 py-2 bg-yellow-400 text-black rounded  cursor-pointer hover:bg-yellow-500">Apply</button>
                 </div>
               </div>
             </div>
