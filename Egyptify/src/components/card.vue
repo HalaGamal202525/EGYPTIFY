@@ -104,7 +104,7 @@
       </div>
 
     <div v-if="amenities?.length" class="my-5">
-  <p class="text-gray-900 font-semibold mb-2">Features : </p>
+  <p class="text-gray-900 font-semibold mb-2">Features: </p>
   <div class="flex flex-wrap gap-2">
     <span
       v-for="amenity in amenities"
