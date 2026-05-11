@@ -1,16 +1,8 @@
 <template>
   <section class="slider-section">
-    <Carousel
-      :autoplay="true"
-      :loop="true"
-      :autoplayTimeout="15000"
-      :transition="2000"
-      :pauseAutoplayOnHover="false"
-      :wrapAround="true"
-      class="carousel"
-    >
+    <Carousel :autoplay="3000" :loop="true" :wrapAround="true">
       <Slide v-for="(img, index) in images" :key="index">
-        <img :src="img.default" class="slide-img" />
+        <img :src="img" class="slide-img" />
       </Slide>
     </Carousel>
 
@@ -26,19 +18,27 @@
 </template>
 
 <script setup>
-import { Carousel, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
 
-const images = Object.values(
-  import.meta.glob('../assets/slider/*.jpg', { eager: true })
-)
+const images = [
+ 
+  "/hero/alazhar-mosque1.jpg",
+  "/hero/hero1.jpg",
+  "/bookingRestaurants/ExplorePageHero.jpg",
+  "/slider4.jpg",
+  "/hero/hero6.webp",
+];
+// const images = Object.values(
+//   import.meta.glob('../assets/slider/*.jpg', { eager: true })
+// )
 </script>
 
 <style scoped>
 .slider-section {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -50,6 +50,7 @@ const images = Object.values(
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .overlay {
@@ -59,7 +60,7 @@ const images = Object.values(
   z-index: 10;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;

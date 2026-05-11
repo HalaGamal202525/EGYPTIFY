@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-section">
+  <section class="hero-section" :style="backgroundStyle">
     <div class="overlay">
       <div class="hero-content">
         <div class="text-wrapper">
@@ -12,18 +12,24 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue' // ✅ لازم تضيفي السطر ده
+
+const props = defineProps({
   title: String,
-  description: String
+  description: String,
+  image: String
 })
+
+const backgroundStyle = computed(() => ({
+  backgroundImage: `url(${props.image})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+}))
 </script>
 
 <style scoped>
 .hero-section {
-  background-image: url('@/assets/hero-bg.jpg'); /* غيريها لو حابة */
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -31,7 +37,7 @@ defineProps({
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;

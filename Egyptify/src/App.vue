@@ -1,13 +1,9 @@
-<script setup lang="ts">
-import { RouterView } from 'vue-router';
-
-</script>
-
-
 <template>
-  <div id="App">
-      <Navbar/>
-    <RouterView/>
+  <div class="bg-white dark:bg-gray-900 min-h-screen">
+    <router-view />
   </div>
-  
 </template>
+
+<script setup>
+import { RouterView } from "vue-router";
+</script>
